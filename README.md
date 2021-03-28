@@ -10,6 +10,6 @@ python main.py -f config.yaml -o out.csv
 ```
 
 ## references
-**Quasimodo**: https://quasimodo.r2.enst.fr/
-**qa-srl**: http://qasrl.org/
-**hayadata-lab**: http://www.hyadatalab.com/
+**Quasimodo**: https://quasimodo.r2.enst.fr/  
+**qa-srl**: http://qasrl.org/  
+**hayadata-lab**: http://www.hyadatalab.com/  
