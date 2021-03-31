@@ -23,6 +23,11 @@ quasimodo = Quasimodo()
 matches = quasimodo.get_subject_predicates('horse', 'cow')
 print(matches)
 
+# so the output will be:
+{'help:us', 'eat:grass', 'has_property:useful'}
+```
+
+```bash
 # if you dont need the oredered entries, use the contructor like this:
 quasimodo = Quasimodo(save_ordered=False)
 
