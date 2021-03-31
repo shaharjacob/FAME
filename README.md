@@ -2,7 +2,7 @@
 
 ## Goal
 Our main goal is to understand analogy, for example:  
-windscreen wiper is used to remove water for the window like ...  
+windscreen wiper is used to remove water from the window like ...  
 So first we need to understand the windscreen wiper rule.  
   
 **The goal: understading nouns rules.**  
