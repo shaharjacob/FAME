@@ -8,14 +8,15 @@ from click import secho
 
 class Quasimodo:
 
-    def __init__(self, path: str = 'quasimodo43.tsv', score_threshold: float = 0.9):
+    def __init__(self, path: str = 'quasimodo43.tsv', score_threshold: float = 0.9, save_ordered: bool = True):
         self.data = self.init_data(path, score_threshold)
         self.predicates = set()
         self.subjects = set()
         self.objects = set()
         # self.pairs = {}
         # self.save_paris()
-        self.save_ordered_entries()
+        if save_ordered:
+            self.save_ordered_entries()
     
 
     def init_data(self, path: str, score_threshold: str):

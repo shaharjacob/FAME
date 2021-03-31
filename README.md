@@ -1,12 +1,12 @@
 # commonsense-analogy
 
-## usage
+## google engine
 ```bash
 # using default example.yaml file without saving the results into a file
-python main.py
+python google_engine.py
 
 # using a config.yaml as a config file, and saving the results into out.csv
-python main.py -f config.yaml -o out.csv
+python google_engine.py -f config.yaml -o out.csv
 ```
 
 ## quasimodo
@@ -16,8 +16,18 @@ https://nextcloud.mpi-klsb.mpg.de/index.php/s/Sioq6rKP8LmjMDQ/download?path=%2FL
 
 # usage
 from quasimodo import Quasimodo
-quasimodo = Quasimodo(path_to_tsv)
-quasimodo.some_filter_method()...
+
+# this will take time for saving all the oredered entries
+# it will take time only on the first time, after that it will use the saved files
+quasimodo = Quasimodo()
+matches = quasimodo.get_subject_predicates('horse', 'cow')
+print(matches)
+
+# if you dont need the oredered entries, use the contructor like this:
+quasimodo = Quasimodo(save_ordered=False)
+
+# threshold (score that quasimodo gave) is by default 0.9, for change it use:
+quasimodo = Quasimodo(score_threshold={new_threshold})
 ```
 
 
