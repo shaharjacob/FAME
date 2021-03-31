@@ -1,5 +1,29 @@
 # commonsense-analogy
 
+## Goal
+Our main goal is to understand analogy, for example:  
+windscreen wiper is used to remove water for the window like ...  
+So first we need to understand the windscreen wiper rule.  
+  
+**The goal: understading nouns rules.**  
+For example: a windscreen wiper is used to remove rain, snow and so.  
+How to do it?  
+  
+**option 1: Wikifier**  
+Accessing the first paragraph of the object in wikipedia.  
+Give it to Wikifier.  
+Looking for key-words like 'used to', and extract the relevant information from that area.  
+  
+**option 2: google-autocomplete**  
+Using templates like:  
+why do horses "*" stables  
+The problem is there are no much information, and the results are not always what we looking for.  
+  
+**option 3: quasimodo**  
+A lot of information, so we can extract the relevent for us.  
+But also here, the information is not always what we looking for, sinse they worked with specific questions.  
+
+
 ## google engine
 ```bash
 # using default example.yaml file without saving the results into a file
