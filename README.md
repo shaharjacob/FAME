@@ -64,3 +64,6 @@ quasimodo = Quasimodo(score_threshold={new_threshold})
 **Quasimodo**: https://quasimodo.r2.enst.fr/  
 **qa-srl**: http://qasrl.org/  
 **hayadata-lab**: http://www.hyadatalab.com/  
+
+## Analogy datasets
+**metamia**: http://www.metamia.com/
