@@ -1,4 +1,6 @@
-fake_useragent
+bs4
+csv
 click
 pyyaml
 pandas
+fake_useragent
