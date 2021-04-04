@@ -2,27 +2,17 @@
 
 ## Goal
 Our main goal is to understand analogy, for example:  
-windscreen wiper is used to remove water from the window like ...  
-So first we need to understand the windscreen wiper rule.  
   
-**The goal: understading nouns rules.**  
-For example: a windscreen wiper is used to remove rain, snow and so.  
-How to do it?  
+**1) DNA replication ~ a train track**  
+The DNA is like a train track that gets pulled apart by the train.  
+http://www.metamia.com/critique-dna-replication-like-a-train-track-1345  
   
-**option 1: Wikifier**  
-Accessing the first paragraph of the object in wikipedia.  
-Give it to Wikifier.  
-Looking for key-words like 'used to', and extract the relevant information from that area.  
+**2) paragraph ~ a family**  
+A paragraph is like a family. In a family, all the members are related. In a paragraph, all the sentences are related.  
+http://www.metamia.com/critique-paragraph-like-family-6055  
   
-**option 2: google-autocomplete**  
-Using templates like:  
-why do horses "*" stables  
-The problem is there are no much information, and the results are not always what we looking for.  
-  
-**option 3: quasimodo**  
-A lot of information, so we can extract the relevent for us.  
-But also here, the information is not always what we looking for, sinse they worked with specific questions.  
-
+## Why ?
+Because sometimes it's much easier to explain something using an analogy.  
 
 ## google engine
 ```bash
@@ -57,6 +47,17 @@ quasimodo = Quasimodo(save_ordered=False)
 
 # threshold (score that quasimodo gave) is by default 0.9, for change it use:
 quasimodo = Quasimodo(score_threshold={new_threshold})
+```
+
+## metamia randomizer
+```bash
+# this site has a lot of complex analogy (http://www.metamia.com)
+# a list of all the analogy isn't available (or dataset), but there is a page which
+# return a random analogy (http://www.metamia.com/randomly-sample-the-analogy-database).
+# so the script is iterate this page and parsing the analogy.
+
+# usage (-i is the number of iteration)
+python metamia.py -i 100 -o out.csv
 ```
 
 
