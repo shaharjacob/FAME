@@ -74,7 +74,7 @@ python metamia.py -i 100 -o out.csv
 https://dspace.mit.edu/handle/1721.1/87342  
   
 **Reasoning and Learning by Analogy**:  
-- https://psycnet.apa.org/doiLanding?doi=10.1037%2F0003-066X.52.1.32  
+https://psycnet.apa.org/doiLanding?doi=10.1037%2F0003-066X.52.1.32  
   
 **The Analogical Mind**:  
 https://books.google.co.il/books?hl=iw&lr=&id=RfQX9wuf-2cC&oi=fnd&pg=PA23&dq=commonsense+analogy&ots=MvkNlPPSyo&sig=fsznpCd12ZuybvtaJnpqPzzvHk4&redir_esc=y#v=onepage&q=commonsense%20analogy&f=false   
