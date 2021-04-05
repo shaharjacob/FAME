@@ -39,7 +39,7 @@ def read_page():
 
 @click.command()
 @click.option('-i', '--iterations', default=5, help="How many iterations to do")
-@click.option('-o', '--output', default="outputs/out.csv", help="Path for the output file")
+@click.option('-o', '--output', default="out.csv", help="Path for the output file")
 def run(iterations: int, output: str):
     entries = []
     for i in range(iterations):

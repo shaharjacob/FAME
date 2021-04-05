@@ -1,6 +1,6 @@
-bs4
-csv
 click
 pyyaml
 pandas
+requests
+beautifulsoup4
 fake_useragent
