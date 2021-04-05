@@ -3,3 +3,4 @@
 *.json
 *.tsv
 .DS_Store
+*.pdf
