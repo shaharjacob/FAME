@@ -79,6 +79,9 @@ python metamia.py -i 100 -o out.csv
 - **Vecto**: https://vecto.space/
   
 ## PDFs
+**Analogy-based Detection of Morphological and Semantic Relations With Word Embeddings: What Works and What Doesn’t**:  
+- https://www.aclweb.org/anthology/N16-2002.pdf
+
 **Using Analogy To Acquire CommonsenseKnowledge from Human Contributors**:  
 - https://dspace.mit.edu/handle/1721.1/87342  
   
