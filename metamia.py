@@ -52,21 +52,14 @@ def run(iterations: int, output: str):
         b = extract_subject(soup, "analogyB_wrapper", "b:  ")
         what = extract_explaination(soup)
 
-        # remove escape character
-        escapes = ''.join([chr(char) for char in range(1, 32)])
-        translator = str.maketrans('', '', escapes)
-
         for j in range(len(a)):
-            a[j] = a[j].translate(translator)
-            b[j] = b[j].translate(translator)
-            what[j] = what[j].translate(translator)
             entries.append({
                 "a": a[j],
                 "b": b[j],
                 "reason": what[j],
             })
 
-    with open(output, "w") as f:
+    with open(output, "w", newline='') as f:
         dict_writer = csv.DictWriter(f, entries[0].keys())
         dict_writer.writeheader()
         for entry in entries:
