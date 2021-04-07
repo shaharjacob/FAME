@@ -2,12 +2,20 @@
 
 ## Goal
 Our main goal is to understand analogy, for example:  
+
+**1) Finding a good man is like finding a needle in a haystack:**  
+As Dusty Springfield knows, finding a small needle in a pile of hay takes a long time, so the task at hand is likely to be hard and tedious.  
+https://examples.yourdictionary.com/analogy-ex.html  
   
-**1) DNA replication ~ a train track**  
+**2) That's as useful as rearranging deck chairs on the Titanic:**
+ It looks like you're doing something helpful but really it will make no difference in the end.  
+ https://examples.yourdictionary.com/analogy-ex.html  
+  
+**3) DNA replication ~ a train track**  
 The DNA is like a train track that gets pulled apart by the train.  
 http://www.metamia.com/critique-dna-replication-like-a-train-track-1345  
   
-**2) paragraph ~ a family**  
+**4) paragraph ~ a family**  
 A paragraph is like a family. In a family, all the members are related. In a paragraph, all the sentences are related.  
 http://www.metamia.com/critique-paragraph-like-family-6055  
   
@@ -62,20 +70,23 @@ python metamia.py -i 100 -o out.csv
 
 
 ## references
-**Quasimodo**: https://quasimodo.r2.enst.fr/  
-**qa-srl**: http://qasrl.org/  
-**hayadata-lab**: http://www.hyadatalab.com/  
+- **Quasimodo**: https://quasimodo.r2.enst.fr/  
+- **qa-srl**: http://qasrl.org/  
+- **hayadata-lab**: http://www.hyadatalab.com/  
 
 ## Analogy datasets
-**metamia**: http://www.metamia.com/
+- **metamia**: http://www.metamia.com/
   
 ## PDFs
 **Using Analogy To Acquire CommonsenseKnowledge from Human Contributors**:  
-https://dspace.mit.edu/handle/1721.1/87342  
+- https://dspace.mit.edu/handle/1721.1/87342  
   
 **Reasoning and Learning by Analogy**:  
-https://psycnet.apa.org/doiLanding?doi=10.1037%2F0003-066X.52.1.32  
+- https://psycnet.apa.org/doiLanding?doi=10.1037%2F0003-066X.52.1.32  
   
 **The Analogical Mind**:  
-https://books.google.co.il/books?hl=iw&lr=&id=RfQX9wuf-2cC&oi=fnd&pg=PA23&dq=commonsense+analogy&ots=MvkNlPPSyo&sig=fsznpCd12ZuybvtaJnpqPzzvHk4&redir_esc=y#v=onepage&q=commonsense%20analogy&f=false   
+- https://books.google.co.il/books?hl=iw&lr=&id=RfQX9wuf-2cC&oi=fnd&pg=PA23&dq=commonsense+analogy&ots=MvkNlPPSyo&sig=fsznpCd12ZuybvtaJnpqPzzvHk4&redir_esc=y#v=onepage&q=commonsense%20analogy&f=false   
 
+
+**Additions**:
+- https://examples.yourdictionary.com/analogy-ex.html  
