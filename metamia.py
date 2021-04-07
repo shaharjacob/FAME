@@ -5,6 +5,7 @@ from pathlib import Path
 from bs4 import BeautifulSoup
 
 import click
+import pandas as pd
 from click import secho
 
 
@@ -68,6 +69,10 @@ def run(iterations: int, output: str):
             except:
                 secho(f"[ERROR] can't write {entry['a']} ~ {entry['b']}")
 
+    if Path(output).exists():
+        df = pd.read_csv(output)
+        df = df.drop_duplicates(subset=list(df.columns))
+        df.to_csv(output, index=False)
 
 
 if __name__ == "__main__":

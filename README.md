@@ -76,6 +76,7 @@ python metamia.py -i 100 -o out.csv
 
 ## Analogy datasets
 - **metamia**: http://www.metamia.com/
+- **Vecto**: https://vecto.space/
   
 ## PDFs
 **Using Analogy To Acquire CommonsenseKnowledge from Human Contributors**:  
