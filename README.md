@@ -88,5 +88,5 @@ python metamia.py -i 100 -o out.csv
 - https://books.google.co.il/books?hl=iw&lr=&id=RfQX9wuf-2cC&oi=fnd&pg=PA23&dq=commonsense+analogy&ots=MvkNlPPSyo&sig=fsznpCd12ZuybvtaJnpqPzzvHk4&redir_esc=y#v=onepage&q=commonsense%20analogy&f=false   
 
 
-**Additions**:
+## Additions
 - https://examples.yourdictionary.com/analogy-ex.html  
