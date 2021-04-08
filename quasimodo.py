@@ -110,7 +110,7 @@ class Quasimodo:
         return matches
     
 if __name__ == '__main__':
-    quasimodo = Quasimodo(score_threshold=0.9)
+    quasimodo = Quasimodo(score_threshold=0.9, save_ordered=False)
     matches = quasimodo.get_subject_predicates('horse', 'cow')
     print(matches)
 

@@ -94,3 +94,5 @@ python metamia.py -i 100 -o out.csv
 
 ## Additions
 - https://examples.yourdictionary.com/analogy-ex.html  
+- https://songmeanings.com
+- https://www.songfacts.com
