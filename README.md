@@ -45,10 +45,10 @@ from quasimodo import Quasimodo
 # it will take time only on the first time, after that it will use the saved files
 quasimodo = Quasimodo(score_threshold=0.8)
 quasimodo.get_connections(["sharp", "needle", "knife"], soft=True)
-```
-so the output will be:  
-![alt text](https://github.com/shaharjacob/commonsense-analogy/blob/main/images/get_connections_soft.png?raw=true)
 
+# so the output will be:  
+![alt text](https://github.com/shaharjacob/commonsense-analogy/blob/main/images/get_connections_soft.png?raw=true)
+```
 
 ```bash
 # if you dont need the oredered entries, use the contructor like this:
