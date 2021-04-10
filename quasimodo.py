@@ -13,8 +13,6 @@ class Quasimodo:
         self.predicates = set()
         self.subjects = set()
         self.objects = set()
-        # self.pairs = {}
-        # self.save_paris()
         if save_ordered:
             self.save_ordered_entries()
     
@@ -41,33 +39,10 @@ class Quasimodo:
 
     def filter_by_predicate_object(self, predicate: str, obj: str):
         return self.data.loc[(self.data['predicate'] == predicate) & (self.data['object'] == obj)]
-    
-
-    # def save_paris(self, path: str = 'pairs.json'):
-    #     if not Path(path).exists():
-    #         secho(f"[INFO] Saving pairs into {path}", fg='blue')
-    #         percent = 1
-    #         for idx, val in self.data.iterrows():
-    #             if (idx / len(self.data)) * 100 > percent:
-    #                 secho(f"{percent}% complete", fg='blue')
-    #                 percent += 1
-    #             if f"{val['predicate']}:{val['object']}" not in self.pairs:
-    #                 self.pairs[f"{val['predicate']}:{val['object']}"] = set()
-    #             self.pairs[f"{val['predicate']}:{val['object']}"].add(val['subject'])
-                
-    #         for key, value in self.pairs.items():
-    #             self.pairs[key] = list(value) # set is not serializable
-    #         with open(path, 'w') as fp:
-    #             json.dump(self.pairs, fp)
-    #     else:
-    #         secho(f"[INFO] Loading pairs from {path}", fg='blue')
-    #         self.pairs = json.loads(Path(path).read_text())
 
 
     def save_ordered_entries(self, predicates_path: str = 'predicates.json', subjects_path: str = 'subjects.json', objects_path: str = 'objects.json'):
-        if not Path(predicates_path).exists or \
-            not Path(subjects_path).exists or \
-            not Path(objects_path).exists:
+        if not Path(predicates_path).exists() or not Path(subjects_path).exists() or not Path(objects_path).exists():
             self.predicates = set()
             self.subjects = set()
             self.objects = set()
@@ -110,7 +85,7 @@ class Quasimodo:
         return matches
     
 if __name__ == '__main__':
-    quasimodo = Quasimodo(score_threshold=0.9, save_ordered=False)
-    matches = quasimodo.get_subject_predicates('horse', 'cow')
-    print(matches)
+    quasimodo = Quasimodo(score_threshold=0.8, save_ordered=True)
+    # matches = quasimodo.get_subject_predicates('horse', 'cow')
+    # print(matches)
 

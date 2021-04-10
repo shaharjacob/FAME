@@ -4,3 +4,5 @@
 *.tsv
 .DS_Store
 *.pdf
+.vscode
+*.pyc

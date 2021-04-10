@@ -18,6 +18,8 @@ http://www.metamia.com/critique-dna-replication-like-a-train-track-1345
 **4) paragraph ~ a family**  
 A paragraph is like a family. In a family, all the members are related. In a paragraph, all the sentences are related.  
 http://www.metamia.com/critique-paragraph-like-family-6055  
+
+**5) Sunscreen protects against the sun just as a tarpaulin protects against rain**
   
 ## Why ?
 Because sometimes it's much easier to explain something using an analogy.  
@@ -96,3 +98,4 @@ python metamia.py -i 100 -o out.csv
 - https://examples.yourdictionary.com/analogy-ex.html  
 - https://songmeanings.com
 - https://www.songfacts.com
+
