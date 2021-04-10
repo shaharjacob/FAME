@@ -76,7 +76,12 @@ quasimodo.get_connections_between_subjects(["horse", "cow", "chicken"])
 ```bash
 # also here you can allow flexiable name by adding soft=True
 quasimodo.get_connections_between_subjects(["horse", "cow", "chicken"], soft=True)
+# so the output will be:  
 ```
+![alt text](https://github.com/shaharjacob/commonsense-analogy/blob/main/images/get_connections_between_subjects_soft_1.png?raw=true)
+![alt text](https://github.com/shaharjacob/commonsense-analogy/blob/main/images/get_connections_between_subjects_soft_2.png?raw=true)
+![alt text](https://github.com/shaharjacob/commonsense-analogy/blob/main/images/get_connections_between_subjects_soft_3.png?raw=true)
+![alt text](https://github.com/shaharjacob/commonsense-analogy/blob/main/images/get_connections_between_subjects_soft_4.png?raw=true)  
 
 ## metamia randomizer
 ```bash
