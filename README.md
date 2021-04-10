@@ -43,13 +43,12 @@ from quasimodo import Quasimodo
 
 # this will take time for saving all the oredered entries
 # it will take time only on the first time, after that it will use the saved files
-quasimodo = Quasimodo()
-matches = quasimodo.get_subject_predicates('horse', 'cow')
-print(matches)
-
-# so the output will be:
-{'help:us', 'eat:grass', 'has_property:useful'}
+quasimodo = Quasimodo(score_threshold=0.8)
+quasimodo.get_connections(["sharp", "needle", "knife"], soft=True)
 ```
+so the output will be:  
+![alt text](https://github.com/shaharjacob/commonsense-analogy/blob/main/images/get_connections_soft.png?raw=true)
+
 
 ```bash
 # if you dont need the oredered entries, use the contructor like this:
