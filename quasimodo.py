@@ -117,9 +117,11 @@ class Quasimodo:
             print()
         
         matches = set()
+        init = True
         for key, value in results.items():
-            if not matches:
+            if init:
                 matches = set(value)
+                init = False
             else:
                 matches = matches & set(value)
         secho("Common:", fg="blue", bold=True)
@@ -177,9 +179,9 @@ class Quasimodo:
 
     
 if __name__ == '__main__':
-    quasimodo = Quasimodo(score_threshold=0.8)
+    quasimodo = Quasimodo(score_threshold=0.9)
     # quasimodo.get_connections(["sharp", "needle", "knife"], soft=True)
-    quasimodo.get_connections(["sharp", "needle", "knife"])
-    # quasimodo.get_connections_between_subjects(["horse", "cow", "chicken"])
+    # quasimodo.get_connections(["sharp", "needle", "knife"])
+    quasimodo.get_connections_between_subjects(["horse", "cow", "chicken"])
     # quasimodo.get_connections_between_subjects(["horse", "cow", "chicken"], soft=True)
 
