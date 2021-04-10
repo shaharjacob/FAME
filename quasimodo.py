@@ -11,7 +11,7 @@ from itertools import combinations
 
 class Quasimodo:
 
-    def __init__(self, path: str = 'quasimodo43.tsv', score_threshold: float = 0.9, save_ordered: bool = True):
+    def __init__(self, path: str = 'quasimodo43.tsv', score_threshold: float = 0.9, save_ordered: bool = False):
         self.data = self.init_data(path, score_threshold)
         self.predicates = set()
         self.subjects = set()
@@ -147,7 +147,7 @@ class Quasimodo:
         }
     
 
-    def get_connections(self, arr: list, soft: bool = True):
+    def get_connections(self, arr: list, soft: bool = False):
         combs = list(combinations(arr, 2))
         results = []
         for comb in combs:
@@ -177,7 +177,9 @@ class Quasimodo:
 
     
 if __name__ == '__main__':
-    quasimodo = Quasimodo(score_threshold=0.8, save_ordered=True)
-    a = quasimodo.get_connections(["sharp", "needle", "knife"], soft=True)
-    # a = quasimodo.get_connections_between_subjects(["horse", "cow", "chicken"], soft=True)
+    quasimodo = Quasimodo(score_threshold=0.8)
+    # quasimodo.get_connections(["sharp", "needle", "knife"], soft=True)
+    quasimodo.get_connections(["sharp", "needle", "knife"])
+    # quasimodo.get_connections_between_subjects(["horse", "cow", "chicken"])
+    # quasimodo.get_connections_between_subjects(["horse", "cow", "chicken"], soft=True)
 

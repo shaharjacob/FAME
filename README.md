@@ -41,21 +41,41 @@ https://nextcloud.mpi-klsb.mpg.de/index.php/s/Sioq6rKP8LmjMDQ/download?path=%2FL
 # usage
 from quasimodo import Quasimodo
 
-# this will take time for saving all the oredered entries
-# it will take time only on the first time, after that it will use the saved files
+# heigher score_threshold -> more accurate results, but less amount.
 quasimodo = Quasimodo(score_threshold=0.8)
-quasimodo.get_connections(["sharp", "needle", "knife"], soft=True)
 
-# so the output will be:  
-![alt text](https://github.com/shaharjacob/commonsense-analogy/blob/main/images/get_connections_soft.png?raw=true)
+# if for some reason you need the values of the subjects, predicates or objects, as an ordered list
+# notice that it will take time only on the first time, after that it will use the saved files
+# quasimodo = Quasimodo(score_threshold=0.8, save_ordered=True)
 ```
 
 ```bash
-# if you dont need the oredered entries, use the contructor like this:
-quasimodo = Quasimodo(save_ordered=False)
+# get all the connections between each pair (connection is subject-object relationship)
+quasimodo.get_connections(["sharp", "needle", "knife"])
+# so the output will be:  
+```
+![alt text](https://github.com/shaharjacob/commonsense-analogy/blob/main/images/get_connections.png?raw=true)  
 
-# threshold (score that quasimodo gave) is by default 0.9, for change it use:
-quasimodo = Quasimodo(score_threshold={new_threshold})
+```bash
+# you can also allow it to be more flexiable with the name by adding soft=True
+quasimodo.get_connections(["sharp", "needle", "knife"], soft=True)
+# so the output will be:  
+```
+![alt text](https://github.com/shaharjacob/commonsense-analogy/blob/main/images/get_connections_soft.png?raw=true)  
+
+```bash
+# get all the common features between few subjects
+quasimodo.get_connections_between_subjects(["horse", "cow", "chicken"])
+# so the output will be:  
+```
+![alt text](https://github.com/shaharjacob/commonsense-analogy/blob/main/images/get_connections_between_subjects_1.png?raw=true)
+![alt text](https://github.com/shaharjacob/commonsense-analogy/blob/main/images/get_connections_between_subjects_2.png?raw=true)
+![alt text](https://github.com/shaharjacob/commonsense-analogy/blob/main/images/get_connections_between_subjects_3.png?raw=true)
+![alt text](https://github.com/shaharjacob/commonsense-analogy/blob/main/images/get_connections_between_subjects_4.png?raw=true)  
+
+```bash
+# also here you can allow flexiable name by adding soft=True
+quasimodo.get_connections_between_subjects(["horse", "cow", "chicken"], soft=True)
 ```
 
 ## metamia randomizer
