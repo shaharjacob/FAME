@@ -99,6 +99,7 @@ python metamia.py -i 100 -o out.csv
 - **Quasimodo**: https://quasimodo.r2.enst.fr/  
 - **qa-srl**: http://qasrl.org/  
 - **hayadata-lab**: http://www.hyadatalab.com/  
+- **Wikifier**: http://wikifier.org/info.html/  
 
 ## Analogy datasets
 - **metamia**: http://www.metamia.com/
