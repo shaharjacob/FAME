@@ -6,3 +6,4 @@
 *.pdf
 .vscode
 *.pyc
+test/
