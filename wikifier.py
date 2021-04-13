@@ -1,5 +1,6 @@
 import re
 import json
+from typing import List, Dict
 
 import requests
 from click import secho
@@ -31,7 +32,7 @@ class Wikifier:
         self.part_of_speech = self.init_part_of_speech()
 
 
-    def init_text(self, text: str):
+    def init_text(self, text: str) -> str:
         s = re.sub('[^A-Za-z0-9 ,]+', '', text)
         if s != text:
             secho(f"[WARNING] Special character where found, proccesing the following text:", fg="yellow", bold=True)
@@ -39,7 +40,7 @@ class Wikifier:
         return re.sub(r"\s+", ' ', s)
 
 
-    def init_data(self):
+    def init_data(self) -> Dict:
         url = f'{BASE_URL}?userKey={KEY}&text={self.text}&lang={LANG}&partsOfSpeech=true'
         try:
             response = requests.get(url)
@@ -49,7 +50,7 @@ class Wikifier:
         return json.loads(response.text)
 
 
-    def init_words(self):
+    def init_words(self) -> List[Dict]:
         words = []
         current_word = []
         for i, char in enumerate(self.text):
@@ -87,7 +88,7 @@ class Wikifier:
 
 
 
-    def init_part_of_speech(self):
+    def init_part_of_speech(self) -> List[Dict]:
         types = ['verbs', 'nouns', 'adjectives', 'adverbs']
         part_of_speech = []
         for t in types:
@@ -101,7 +102,7 @@ class Wikifier:
         return sorted(part_of_speech, key=lambda x: x['start'])
 
 
-    def get_part_of_speech(self, colorized_print=True):
+    def get_part_of_speech(self, colorized_print: bool = True) -> List[Dict]:
         for part in self.part_of_speech:
             # if part["value"] == self.text[part["start"]:part["end"]]:
             for i, word in enumerate(self.words):

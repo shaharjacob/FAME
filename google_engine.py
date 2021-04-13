@@ -1,5 +1,6 @@
 import json
 from pathlib import Path
+from typing import List, Dict
 
 import yaml
 import click
@@ -8,23 +9,23 @@ from click import secho
 from fake_useragent import UserAgent
 
 
-def get_url(keyword: str, browser: str = "chrome"):
+def get_url(keyword: str, browser: str = "chrome") -> str:
     keyword.replace(" ", "+")
     return f"http://suggestqueries.google.com/complete/search?output={browser}&q={keyword}"
 
 
-def get_suggestions(keyword: str):
+def get_suggestions(keyword: str) -> List[str]:
     headers = {"user-agent": UserAgent().chrome}
     response = requests.get(get_url(keyword), headers=headers, verify=False)
     suggestions = json.loads(response.text)
     return suggestions[1]
 
 
-def get_query(question: str, obj1: str, obj2: str):
+def get_query(question: str, obj1: str, obj2: str) -> str:
     return f'{question} {obj1} "*" {obj2}'
 
 
-def read_yaml(path: Path):
+def read_yaml(path: Path) -> Dict[str, List[List[str]]]:
     if not path.exists():
         secho(f"[ERROR] file {path} is not exists!", fg="red", bold=True)
         exit(1)
@@ -37,7 +38,7 @@ def read_yaml(path: Path):
             exit(1)
 
 
-def verify_question(question: str, objects: dict):
+def verify_question(question: str, objects: List[str]):
     valid_questions = [
         'why do',
         'how do',
@@ -52,7 +53,7 @@ def verify_question(question: str, objects: dict):
         exit(1)
 
 
-def process(d: dict):
+def process(d: Dict[str, List[List[str]]]) -> Dict[str, List[str]]:
     suggestions = {}
     for question, objects in d.items():
         for entry in objects:
@@ -62,7 +63,7 @@ def process(d: dict):
     return suggestions
 
 
-def print_results(suggestions: dict):
+def print_results(suggestions: Dict[str, List[str]]):
     for k, v in suggestions.items():
         secho(f"{k}", fg="blue", bold=True)
         for suggestion in v:
@@ -70,7 +71,7 @@ def print_results(suggestions: dict):
         print() # new line
 
 
-def save_results(output: Path, suggestions: dict):
+def save_results(output: Path, suggestions: Dict[str, List[str]]):
     if output.suffix == '.json':
         secho(f"[INFO] Saving results json file under {str(output)}", fg="blue", bold=True)
         with open(output, 'w') as fp:

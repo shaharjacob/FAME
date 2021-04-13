@@ -1,6 +1,7 @@
 import re
 import csv
 from pathlib import Path
+from typing import List, Dict
 
 import click
 import requests
@@ -9,7 +10,7 @@ from click import secho
 from bs4 import BeautifulSoup
 
 
-def beautify_text(text: str, prefix: str, remove: str):
+def beautify_text(text: str, prefix: str, remove: str) -> str:
     # removing prefix (a, b or what) and removing html tags
     text = re.sub("<[/A-Za-z]*>", "", text)
     text = re.sub(remove, "", text)
@@ -21,16 +22,16 @@ def beautify_text(text: str, prefix: str, remove: str):
 #     return [beautify_text(match, prefix) for match in matches]
 
 
-def extract_subject(soup: BeautifulSoup, class_name: str, prefix: str, remove: str = ""):
+def extract_subject(soup: BeautifulSoup, class_name: str, prefix: str, remove: str = "") -> List[str]:
     all_instances = soup.find_all("span", attrs={"class": class_name})
     return [beautify_text(instance.string, prefix, remove) for instance in all_instances]
 
-def extract_explaination(soup: BeautifulSoup):
+def extract_explaination(soup: BeautifulSoup) -> List[str]:
     all_instances = soup.find_all("div", attrs={"class": "concept_1_wrapper"})
     return [beautify_text(instance.text, "What:  ", "") for instance in all_instances]
 
 
-def read_page():
+def read_page() -> str:
     try:
         response = requests.get('http://www.metamia.com/randomly-sample-the-analogy-database')
         return response.text
