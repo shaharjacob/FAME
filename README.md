@@ -96,7 +96,7 @@ wikifier.get_part_of_speech()
 
 # output:  
 ```
-![alt text](https://github.com/shaharjacob/commonsense-analogy/blob/main/images/wikifier_get_part_of_speech1.png?raw=true)  
+![alt text](https://github.com/shaharjacob/commonsense-analogy/blob/main/images/wikifier_get_part_of_speech2.png?raw=true)  
 
 ```bash
 text_to_analyze = "sunscreen protects against the sun as a tarpaulin protects against rain"
@@ -105,7 +105,7 @@ wikifier.get_part_of_speech()
 
 # output:  
 ```
-![alt text](https://github.com/shaharjacob/commonsense-analogy/blob/main/images/wikifier_get_part_of_speech2.png?raw=true)  
+![alt text](https://github.com/shaharjacob/commonsense-analogy/blob/main/images/wikifier_get_part_of_speech1.png?raw=true)  
 
 
 **Notice**: The tool is ignoring special character inside the text, expect ','  
