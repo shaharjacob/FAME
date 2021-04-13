@@ -103,13 +103,13 @@ class Wikifier:
 
     def get_part_of_speech(self, colorized_print=True):
         for part in self.part_of_speech:
-            if part["value"] == self.text[part["start"]:part["end"]]:
-                for i, word in enumerate(self.words):
-                    if part["start"] == word["start"] and part["end"] == word["end"]:
-                        self.words[i].update({
-                            'type': part['type'],
-                        })
-                        break
+            # if part["value"] == self.text[part["start"]:part["end"]]:
+            for i, word in enumerate(self.words):
+                if part["start"] == word["start"] and part["end"] == word["end"]:
+                    self.words[i].update({
+                        'type': part['type'],
+                    })
+                    break
 
         if colorized_print:
             for i, word in enumerate(self.words):
@@ -142,7 +142,10 @@ class Wikifier:
 
 if __name__ == "__main__":
     text = "I love coding but sometimes coding is very boring"
+    # text = "sunscreen protects against the sun as a tarpaulin protects against rain"
     w = Wikifier(text)
-    for a in w.data["annotations"]:
-        print(a["title"])
-    # a = w.get_part_of_speech()
+
+    w.get_part_of_speech()
+    # for a in w.data["annotations"]:
+    #     print(a["title"])
+
