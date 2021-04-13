@@ -1,9 +1,9 @@
 import json
-import requests
 from pathlib import Path
 
 import yaml
 import click
+import requests
 from click import secho
 from fake_useragent import UserAgent
 

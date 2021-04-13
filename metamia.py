@@ -1,12 +1,12 @@
 import re
 import csv
-import requests
 from pathlib import Path
-from bs4 import BeautifulSoup
 
 import click
+import requests
 import pandas as pd
 from click import secho
+from bs4 import BeautifulSoup
 
 
 def beautify_text(text: str, prefix: str, remove: str):

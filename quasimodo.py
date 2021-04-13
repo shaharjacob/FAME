@@ -1,12 +1,11 @@
 import json
 import copy
 from pathlib import Path
+from itertools import combinations
 
 import pandas as pd
-from tqdm import tqdm
 from click import secho
 from pandas import DataFrame
-from itertools import combinations
 
 
 class Quasimodo:
@@ -51,7 +50,7 @@ class Quasimodo:
         df = copy.deepcopy(self.data) if df.empty else df
         df.dropna(subset=["object"], inplace=True)
         if soft:
-            return df[df['object'].str.contains(obj)]
+            return df[df['object'].str.contains(obj)] # TODO: using difflib.get_close_matches
         else:
             return df.loc[df['object'] == obj]
     

@@ -1,7 +1,7 @@
 import re
 import json
-import requests
 
+import requests
 from click import secho
 
 BASE_URL = 'http://www.wikifier.org/annotate-article'
