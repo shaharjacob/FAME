@@ -83,6 +83,25 @@ quasimodo.get_connections_between_subjects(["horse", "cow", "chicken"], soft=Tru
 ![alt text](https://github.com/shaharjacob/commonsense-analogy/blob/main/images/get_connections_between_subjects_soft_3.png?raw=true)
 ![alt text](https://github.com/shaharjacob/commonsense-analogy/blob/main/images/get_connections_between_subjects_soft_4.png?raw=true)  
 
+## Wikifier
+```bash
+# using for extract inforamtion from text (like part-of-speech)
+
+# usage
+from wikifier import Wikifier
+
+text_to_analyze = "I love coding but sometimes coding is very boring"
+wikifier = Wikifier(text_to_analyze)
+wikifier.get_part_of_speech()
+
+# so the output will be:  
+```
+![alt text](https://github.com/shaharjacob/commonsense-analogy/blob/main/images/wikifier_get_part_of_speech.png?raw=true)  
+
+**Notice**: The tool is ignoring special character inside the text, expect ','  
+i.e. the output of "I lo!ve coding??" and "I love coding" will be the same.
+
+
 ## metamia randomizer
 ```bash
 # this site has a lot of complex analogy (http://www.metamia.com)
