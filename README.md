@@ -94,9 +94,19 @@ text_to_analyze = "I love coding but sometimes coding is very boring"
 wikifier = Wikifier(text_to_analyze)
 wikifier.get_part_of_speech()
 
-# so the output will be:  
+# output:  
 ```
-![alt text](https://github.com/shaharjacob/commonsense-analogy/blob/main/images/wikifier_get_part_of_speech.png?raw=true)  
+![alt text](https://github.com/shaharjacob/commonsense-analogy/blob/main/images/wikifier_get_part_of_speech1.png?raw=true)  
+
+```bash
+text_to_analyze = "sunscreen protects against the sun as a tarpaulin protects against rain"
+wikifier = Wikifier(text_to_analyze)
+wikifier.get_part_of_speech()
+
+# output:  
+```
+![alt text](https://github.com/shaharjacob/commonsense-analogy/blob/main/images/wikifier_get_part_of_speech2.png?raw=true)  
+
 
 **Notice**: The tool is ignoring special character inside the text, expect ','  
 i.e. the output of "I lo!ve coding??" and "I love coding" will be the same.
