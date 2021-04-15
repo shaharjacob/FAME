@@ -102,7 +102,7 @@ class Wikifier:
         return sorted(part_of_speech, key=lambda x: x['start'])
 
 
-    def get_part_of_speech(self, colorized_print: bool = True) -> List[Dict]:
+    def get_part_of_speech(self, verbose: bool = True) -> List[Dict]:
         for part in self.part_of_speech:
             # if part["value"] == self.text[part["start"]:part["end"]]:
             for i, word in enumerate(self.words):
@@ -112,16 +112,23 @@ class Wikifier:
                     })
                     break
 
-        if colorized_print:
+        if verbose:
             for i, word in enumerate(self.words):
                 secho(f"{word['value']}", fg=FG_COLORS[word['type']], bg=BG_COLORS[word['type']], nl=False)
                 if i < len(self.words) - 1:
                     if self.words[i + 1]["value"] != ',':
                         secho(f" ", nl=False)
-            print()
-            print()
+            secho("")
+            secho("")
             Wikifier.print_color_key()
         return self.words
+
+
+    def get_specific_part_of_speech(self, which: str, normForm: bool = True) -> List[str]:
+        if normForm:
+            return [v['normForm'] for v in self.data.get(which, [])]
+        else:
+            return [self.text[v['iFrom']:v['iTo'] + 1] for v in self.data.get(which, [])]
 
 
     @staticmethod
@@ -142,8 +149,9 @@ class Wikifier:
         
 
 if __name__ == "__main__":
-    text = "I love coding but sometimes coding is very boring"
+    # text = "I love coding but sometimes coding is very boring"
     # text = "sunscreen protects against the sun as a tarpaulin protects against rain"
+    text = 'sunscreen protects against the sun'
     w = Wikifier(text)
 
     w.get_part_of_speech()

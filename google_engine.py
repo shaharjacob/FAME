@@ -91,6 +91,8 @@ def save_results(output: Path, suggestions: Dict[str, List[str]]):
         secho(f"          You should specify suffix (.json or .csv)", bold=True)
 
 
+
+
 @click.command()
 @click.option('-f', 'config_file', default="example.yaml", help="configuration file")
 @click.option('-o', 'output', help="output file fot the results (optional)")
