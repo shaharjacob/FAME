@@ -4,60 +4,6 @@ from click import secho
 from PyDictionary import PyDictionary
 
 
-class Dictionary(PyDictionary):
-    def __init__(self, *args):
-        super().__init__(*args)
-    
-    def getMeanings(self, verbose: bool = True) -> Dict[str, Dict[str, List[str]]]:
-        meanings = super().getMeanings()
-        if verbose:
-            for word, parts_of_speech in meanings.items():
-                secho(f"{word}", fg="blue", bold=True)
-                if parts_of_speech:
-                    for part_of_speech, explainations in parts_of_speech.items():
-                        secho(f"  - {part_of_speech.lower()}:", fg="blue", bold=True)
-                        for explaination in explainations:
-                            secho(f"    - {explaination}", fg="blue")
-                        secho("")
-                else:
-                    secho(f"  - No meaning found - skipping...", fg="blue")
-        return meanings
-    
-    def getAntonyms(self, n: int = 0, verbose: bool = True) -> List[Dict[str, List[str]]]:
-        all_antonyms = super().getAntonyms()
-        catoff = len(all_antonyms)
-        if n > 0 and n <= len(all_antonyms):
-            catoff = n
-        all_antonyms = all_antonyms[:catoff]
-        if verbose:
-            for antonyms in all_antonyms:
-                for word, antonyms_words in antonyms.items():
-                    secho(f"{word}", fg="blue", bold=True)
-                    secho(f"  - ", fg="blue", nl=False)
-                    for antonym in antonyms_words:
-                        secho(f"{antonym}, ", fg="blue", nl=False)
-                    secho("")
-                secho("")
-        return all_antonyms
-    
-    def getSynonyms(self, n: int = 0, verbose: bool = True) -> List[Dict[str, List[str]]]:
-        all_synonyms = super().getSynonyms()
-        catoff = len(all_synonyms)
-        if n > 0 and n <= len(all_synonyms):
-            catoff = n
-        all_synonyms = all_synonyms[:catoff]
-        if verbose:
-            for synonyms in all_synonyms:
-                for word, synonyms_words in synonyms.items():
-                    secho(f"{word}", fg="blue", bold=True)
-                    secho(f"  - ", fg="blue", nl=False)
-                    for synonym in synonyms_words:
-                        secho(f"{synonym}, ", fg="blue", nl=False)
-                    secho("")
-                secho("")
-        return all_synonyms
-
-
 class WordNet():
     def __init__(self, word: str):
         self.word = word
@@ -132,17 +78,74 @@ class WordNet():
         return examples
 
 
+class Dictionary(PyDictionary):
+    def __init__(self, *args):
+        super().__init__(*args)
+    
+    def getMeanings(self, verbose: bool = True) -> Dict[str, Dict[str, List[str]]]:
+        meanings = super().getMeanings()
+        if verbose:
+            secho(f"Meaning:", fg="blue", bold=True)
+            for word, parts_of_speech in meanings.items():
+                secho(f"  - {word}", fg="blue", bold=True)
+                if parts_of_speech:
+                    for part_of_speech, explainations in parts_of_speech.items():
+                        secho(f"    - {part_of_speech.lower()}:", fg="blue", bold=True)
+                        for explaination in explainations:
+                            secho(f"      - {explaination}", fg="blue")
+                        secho("")
+                else:
+                    secho(f"    - No meaning found - skipping...", fg="blue")
+        return meanings
+    
+    def getAntonyms(self, n: int = 0, verbose: bool = True) -> List[Dict[str, List[str]]]:
+        all_antonyms = super().getAntonyms()
+        catoff = len(all_antonyms)
+        if n > 0 and n <= len(all_antonyms):
+            catoff = n
+        all_antonyms = all_antonyms[:catoff]
+        if verbose:
+            secho(f"Antonyms:", fg="blue", bold=True)
+            for antonyms in all_antonyms:
+                for word, antonyms_words in antonyms.items():
+                    secho(f"  - {word}", fg="blue", bold=True)
+                    secho(f"    - ", fg="blue", nl=False)
+                    for antonym in antonyms_words:
+                        secho(f"{antonym}, ", fg="blue", nl=False)
+                    secho("")
+                secho("")
+        return all_antonyms
+    
+    def getSynonyms(self, n: int = 0, verbose: bool = True) -> List[Dict[str, List[str]]]:
+        all_synonyms = super().getSynonyms()
+        catoff = len(all_synonyms)
+        if n > 0 and n <= len(all_synonyms):
+            catoff = n
+        all_synonyms = all_synonyms[:catoff]
+        if verbose:
+            secho(f"Synonyms:", fg="blue", bold=True)
+            for synonyms in all_synonyms:
+                for word, synonyms_words in synonyms.items():
+                    secho(f"  - {word}", fg="blue", bold=True)
+                    secho(f"    - ", fg="blue", nl=False)
+                    for synonym in synonyms_words:
+                        secho(f"{synonym}, ", fg="blue", nl=False)
+                    secho("")
+                secho("")
+        return all_synonyms
+
+
 if __name__ == "__main__":
 
 
-    word = WordNet('horse')
-    word.getDefinitions()
-    word.getExamples()
-    word.getAntonyms()
-    word.getSynonyms()
+    # word = WordNet('increase')
+    # print(word.getDefinitions())
+    # print(word.getExamples())
+    # print(word.getAntonyms())
+    # print(word.getSynonyms())
 
 
-    # dictionary = Dictionary("horse")
+    dictionary = Dictionary("increase")
     # dictionary.getMeanings()
-    # dictionary.getAntonyms()
-    # dictionary.getSynonyms()
+    print(dictionary.getAntonyms())
+    print(dictionary.getSynonyms())

@@ -112,6 +112,71 @@ wikifier.get_part_of_speech()
 i.e. the output of "I lo!ve coding??" and "I love coding" will be the same.
 
 
+## Synonyms and Antonyms
+```bash
+# you can use dictionary.py for getting information on a specific word, such as synonyms, antonyms, meanings and examples.  
+# there are two classes (WordNet, Dictionary) which are quite similar.
+
+# usage
+from dictionary import WordNet
+
+# example 1 
+word = WordNet('horse')
+
+word.getSynonyms()
+# the output will be:
+['gymnastic_horse', 'horse_cavalry', 'knight', 'sawhorse', 'cavalry', 'sawbuck', 'horse', 'Equus_caballus', 'buck']
+
+word.getAntonyms()
+# the output will be:
+[]
+
+# example 2
+word = WordNet('increase')
+
+word.getSynonyms()
+# the output will be:
+['gain', 'addition', 'increase', 'increment', 'growth', 'step-up']
+
+word.getAntonyms()
+# the output will be:
+['decrement', 'decrease']
+
+# you can also you  word.getDefinitions() and word.getExamples() for getting more information about the word.
+```
+
+```bash
+from dictionary import Dictionary
+
+    # # 
+    # dictionary.getAntonyms()
+    # dictionary.getSynonyms()
+# example 1 
+dictionary = Dictionary("horse")
+
+dictionary.getSynonyms()
+# the output will be:
+[{'horse': ['bay', 'pony', 'stablemate', 'mount', 'dawn horse', 'roan', 'Equus', 'equid', "horse's foot", 'plug', 'Equus caballus', 'poster', 'polo pony', 'gee-gee', 'palomino', 'withers', 'nag', 'female horse', 'chestnut', 'riding horse', 'steeplechaser', 'workhorse', 'encolure', 'post horse', 'race horse', 'male horse', 'mare', 'racehorse', 'bangtail', 'stable companion', 'eohippus', 'stalking-horse', 'mesohippus', 'horseback', 'jade', 'high stepper', 'harness horse', 'foal', 'pinto', 'stepper', 'protohippus', 'liver chestnut', 'horsemeat', 'horseflesh', 'poll', 'genus Equus', 'sorrel', 'post-horse', 'saddle horse', 'gaskin', 'pacer', 'hack', 'wild horse', 'equine']}]
+
+dictionary.getAntonyms()
+# the output will be:
+[{'horse': ['uncolored', 'fall', 'natural depression', 'stand still', 'hop out']}]
+
+# example 2
+dictionary = Dictionary('increase')
+
+dictionary.getSynonyms()
+# the output will be:
+[{'increase': ['spike', 'explode', 'mount', 'compound', 'heighten', 'shoot up', 'accrue', 'pullulate', 'swell', 'grow', 'conglomerate', 'rise', 'accumulate', 'revalue', 'cumulate', 'wax', 'apprize', 'gather', 'crescendo', 'pyramid', 'climb', 'widen', 'irrupt', 'intensify', 'deepen', 'pile up', 'change magnitude', 'amass', 'snowball', 'broaden', 'add', 'gain', 'full', 'add to', 'apprise', 'appreciate']}]
+
+dictionary.getAntonyms()
+# the output will be:
+[{'increase': ['decrescendo', 'decrease', 'wane', 'take away', 'depreciate', 'narrow']}]
+
+# you can also you dictionary.getMeanings() for getting more information about the word.  
+# you can also provide multiple words in the constructor. for example: dictionary = Dictionary("horse", "increase")
+```
+
 ## metamia randomizer
 ```bash
 # this site has a lot of complex analogy (http://www.metamia.com)

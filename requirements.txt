@@ -2,5 +2,6 @@ click
 pyyaml
 pandas
 requests
+PyDictionary
 beautifulsoup4
 fake_useragent
