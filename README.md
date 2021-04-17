@@ -20,8 +20,6 @@ A paragraph is like a family. In a family, all the members are related. In a par
 http://www.metamia.com/critique-paragraph-like-family-6055  
 
 **5) Sunscreen protects against the sun just as a tarpaulin protects against rain**  
-
-&nbsp;  
 &nbsp;  
 
 ## Table of content
@@ -31,7 +29,6 @@ http://www.metamia.com/critique-paragraph-like-family-6055
 - **dictionary.py**: Extracting information on a word such as synonyms, antonyms, meanings and examples.  
 - **metamia.py**: Building a database of analogies using http://www.metamia.com  
     
-&nbsp;  
 &nbsp;  
 
 ## google engine
@@ -43,7 +40,6 @@ python google_engine.py
 python google_engine.py -f config.yaml -o out.csv
 ```  
     
-&nbsp;  
 &nbsp;  
 
 ## quasimodo
@@ -96,8 +92,6 @@ quasimodo.get_connections_between_subjects(["horse", "cow", "chicken"], soft=Tru
 ![alt text](https://github.com/shaharjacob/commonsense-analogy/blob/main/images/get_connections_between_subjects_soft_3.png?raw=true)
 ![alt text](https://github.com/shaharjacob/commonsense-analogy/blob/main/images/get_connections_between_subjects_soft_4.png?raw=true)  
     
-
-&nbsp;  
 &nbsp;  
 
 ## Wikifier
@@ -128,8 +122,7 @@ wikifier.get_part_of_speech()
 **Notice**: The tool is ignoring special character inside the text, expect ','  
 i.e. the output of "I lo!ve coding??" and "I love coding" will be the same.  
     
-&nbsp;  
-&nbsp;  
+&nbsp;   
 
 ## Synonyms and Antonyms
 ```bash
@@ -194,10 +187,8 @@ dictionary.getAntonyms()
 
 # you can also you dictionary.getMeanings() for getting more information about the word.  
 # you can also provide multiple words in the constructor. for example: dictionary = Dictionary("horse", "increase")
-```  
-    
-&nbsp;  
-&nbsp;  
+```
+&nbsp;    
 
 ## metamia randomizer
 ```bash
@@ -211,7 +202,6 @@ python metamia.py -i 100 -o out.csv
 ```  
     
 &nbsp;  
-&nbsp;  
 
 ## references
 - **Quasimodo**: https://quasimodo.r2.enst.fr/  
@@ -224,7 +214,6 @@ python metamia.py -i 100 -o out.csv
 - **metamia**: http://www.metamia.com/
 - **Vecto**: https://vecto.space/  
     
-&nbsp;  
 &nbsp;  
 
 ## PDFs
@@ -240,8 +229,7 @@ python metamia.py -i 100 -o out.csv
 **The Analogical Mind**:  
 - https://books.google.co.il/books?hl=iw&lr=&id=RfQX9wuf-2cC&oi=fnd&pg=PA23&dq=commonsense+analogy&ots=MvkNlPPSyo&sig=fsznpCd12ZuybvtaJnpqPzzvHk4&redir_esc=y#v=onepage&q=commonsense%20analogy&f=false   
 
-&nbsp;  
-&nbsp;      
+&nbsp;     
 
 ## Additions
 - https://examples.yourdictionary.com/analogy-ex.html  
