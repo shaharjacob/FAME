@@ -19,11 +19,15 @@ http://www.metamia.com/critique-dna-replication-like-a-train-track-1345
 A paragraph is like a family. In a family, all the members are related. In a paragraph, all the sentences are related.  
 http://www.metamia.com/critique-paragraph-like-family-6055  
 
-**5) Sunscreen protects against the sun just as a tarpaulin protects against rain**
-  
-## Why ?
-Because sometimes it's much easier to explain something using an analogy.  
-
+**5) Sunscreen protects against the sun just as a tarpaulin protects against rain**  
+    
+## Table of content
+- **google_engine.py**: Extracting information from google auto-complete.  
+- **quasimodo.py**: Using quasimodo database for extracting information about connections between objects.  
+- **wikifier.py**: Extracting information about the part-of-speech of the given text.  
+- **dictionary.py**: Extracting information on a word such as synonyms, antonyms, meanings and examples.  
+- **metamia.py**: Building a database of analogies using http://www.metamia.com  
+    
 ## google engine
 ```bash
 # using default example.yaml file without saving the results into a file
@@ -31,8 +35,9 @@ python google_engine.py
 
 # using a config.yaml as a config file, and saving the results into out.csv
 python google_engine.py -f config.yaml -o out.csv
-```
-
+```  
+    
+    
 ## quasimodo
 ```bash
 # Download the .tsv file in necessary: 
@@ -82,6 +87,7 @@ quasimodo.get_connections_between_subjects(["horse", "cow", "chicken"], soft=Tru
 ![alt text](https://github.com/shaharjacob/commonsense-analogy/blob/main/images/get_connections_between_subjects_soft_2.png?raw=true)
 ![alt text](https://github.com/shaharjacob/commonsense-analogy/blob/main/images/get_connections_between_subjects_soft_3.png?raw=true)
 ![alt text](https://github.com/shaharjacob/commonsense-analogy/blob/main/images/get_connections_between_subjects_soft_4.png?raw=true)  
+    
 
 ## Wikifier
 ```bash
@@ -109,8 +115,8 @@ wikifier.get_part_of_speech()
 
 
 **Notice**: The tool is ignoring special character inside the text, expect ','  
-i.e. the output of "I lo!ve coding??" and "I love coding" will be the same.
-
+i.e. the output of "I lo!ve coding??" and "I love coding" will be the same.  
+    
 
 ## Synonyms and Antonyms
 ```bash
@@ -175,7 +181,8 @@ dictionary.getAntonyms()
 
 # you can also you dictionary.getMeanings() for getting more information about the word.  
 # you can also provide multiple words in the constructor. for example: dictionary = Dictionary("horse", "increase")
-```
+```  
+    
 
 ## metamia randomizer
 ```bash
@@ -186,19 +193,21 @@ dictionary.getAntonyms()
 
 # usage (-i is the number of iteration)
 python metamia.py -i 100 -o out.csv
-```
-
+```  
+    
 
 ## references
 - **Quasimodo**: https://quasimodo.r2.enst.fr/  
 - **qa-srl**: http://qasrl.org/  
 - **hayadata-lab**: http://www.hyadatalab.com/  
 - **Wikifier**: http://wikifier.org/info.html/  
+    
 
 ## Analogy datasets
 - **metamia**: http://www.metamia.com/
-- **Vecto**: https://vecto.space/
-  
+- **Vecto**: https://vecto.space/  
+    
+
 ## PDFs
 **Analogy-based Detection of Morphological and Semantic Relations With Word Embeddings: What Works and What Doesn’t**:  
 - https://www.aclweb.org/anthology/N16-2002.pdf
@@ -211,7 +220,7 @@ python metamia.py -i 100 -o out.csv
   
 **The Analogical Mind**:  
 - https://books.google.co.il/books?hl=iw&lr=&id=RfQX9wuf-2cC&oi=fnd&pg=PA23&dq=commonsense+analogy&ots=MvkNlPPSyo&sig=fsznpCd12ZuybvtaJnpqPzzvHk4&redir_esc=y#v=onepage&q=commonsense%20analogy&f=false   
-
+    
 
 ## Additions
 - https://examples.yourdictionary.com/analogy-ex.html  
