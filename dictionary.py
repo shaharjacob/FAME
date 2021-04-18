@@ -3,11 +3,13 @@ from typing import List, Dict
 from click import secho
 from PyDictionary import PyDictionary
 
+from nltk_import import download_package
+download_package('wordnet', 'corpora')
+from nltk.corpus import wordnet
 
 class WordNet():
     def __init__(self, word: str):
         self.word = word
-        from nltk.corpus import wordnet
         self.synsets = wordnet.synsets(word)
 
     def getAntonyms(self, verbose: bool = True) -> List[str]:
@@ -138,14 +140,14 @@ class Dictionary(PyDictionary):
 if __name__ == "__main__":
 
 
-    # word = WordNet('increase')
-    # print(word.getDefinitions())
-    # print(word.getExamples())
-    # print(word.getAntonyms())
-    # print(word.getSynonyms())
+    word = WordNet('increase')
+    print(word.getDefinitions())
+    print(word.getExamples())
+    print(word.getAntonyms())
+    print(word.getSynonyms())
 
 
-    dictionary = Dictionary("increase")
+    # dictionary = Dictionary("increase")
     # dictionary.getMeanings()
-    print(dictionary.getAntonyms())
-    print(dictionary.getSynonyms())
+    # print(dictionary.getAntonyms())
+    # print(dictionary.getSynonyms())
