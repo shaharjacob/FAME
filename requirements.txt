@@ -2,6 +2,7 @@ nltk
 click
 pyyaml
 pandas
+gensim
 requests
 PyDictionary
 beautifulsoup4

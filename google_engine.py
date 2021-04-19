@@ -1,12 +1,16 @@
+import re
 import json
 from pathlib import Path
 from typing import List, Dict
 
 import yaml
 import click
+import inflect
 import requests
 from click import secho
 from fake_useragent import UserAgent
+
+from dictionary import Mixed
 
 
 def get_url(keyword: str, browser: str = "chrome") -> str:
@@ -22,6 +26,7 @@ def get_suggestions(keyword: str) -> List[str]:
 
 
 def get_query(question: str, obj1: str, obj2: str) -> str:
+    # return f'"{question} {obj1} * {obj2}"'
     return f'{question} {obj1} "*" {obj2}'
 
 
@@ -53,22 +58,106 @@ def verify_question(question: str, objects: List[str]):
         exit(1)
 
 
-def process(d: Dict[str, List[List[str]]]) -> Dict[str, List[str]]:
+def extend_to_plural_and_singular(engine: inflect.engine, entry: List[str], question: str, suggestions: Dict[str, str]):
+    plural = engine.plural(entry[0])
+    singular = engine.singular_noun(entry[0])
+    if plural:
+        s = get_query(question, plural, entry[1])
+        suggestions[f"{plural}:{entry[1]}:{question}"] = get_suggestions(s)
+    if singular:
+        s = get_query(question, singular, entry[1])
+        suggestions[f"{singular}:{entry[1]}:{question}"] = get_suggestions(s)
+    
+    plural = engine.plural(entry[1])
+    singular = engine.singular_noun(entry[1])
+    if plural:
+        s = get_query(question, entry[0], plural)
+        suggestions[f"{entry[0]}:{plural}:{question}"] = get_suggestions(s)
+    if singular:
+        s = get_query(question, entry[0], singular)
+        suggestions[f"{entry[0]}:{singular}:{question}"] = get_suggestions(s)
+
+
+def extend_synonyms(entry: List[str], question: str, suggestions: Dict[str, str]):
+    mixed = Mixed(entry[0])
+    synonyms = mixed.getSynonyms()
+    for synonym in synonyms:
+        s = get_query(question, synonym, entry[1])
+        suggestions[f"{synonym}:{entry[1]}:{question}"] = get_suggestions(s)
+
+    mixed = Mixed(entry[1])
+    synonyms = mixed.getSynonyms()
+    for synonym in synonyms:
+        s = get_query(question, entry[0], synonym)
+        suggestions[f"{entry[0]}:{synonym}:{question}"] = get_suggestions(s)
+
+
+def get_elements_indecies(engine: inflect.engine, parts: List[str], suggestion: str):
+    indecies = [(), (), ()]
+    for i in range(3):
+        res = re.search(parts[i], suggestion)
+        if not res:
+            plural = engine.plural(parts[i])
+            if plural:
+                res = re.search(plural, suggestion)
+            if not res:
+                singular = engine.singular_noun(parts[i])
+                if singular:
+                    res = re.search(singular, suggestion)
+        if res:
+            indecies[i] = res.span()
+    return indecies
+
+
+def process(d: Dict[str, List[List[str]]], plural_and_singular: bool = True, synonyms: bool = True) -> Dict[str, List[str]]:
+    engine = inflect.engine()
     suggestions = {}
     for question, objects in d.items():
         for entry in objects:
             verify_question(question, entry)
             s = get_query(question, entry[0], entry[1])
             suggestions[f"{entry[0]}:{entry[1]}:{question}"] = get_suggestions(s)
+            if plural_and_singular:
+                extend_to_plural_and_singular(engine, entry, question, suggestions)
+            if synonyms:
+                extend_synonyms(entry, question, suggestions)
+            
     return suggestions
 
 
 def print_results(suggestions: Dict[str, List[str]]):
+    already_seen = set()
     for k, v in suggestions.items():
         secho(f"{k}", fg="blue", bold=True)
         for suggestion in v:
+            if suggestion in already_seen:
+                continue
+            already_seen.add(suggestion)
             secho(f"- {suggestion}", fg="blue")
         print() # new line
+
+
+def print_results2(suggestions: Dict[str, List[str]]):
+    engine = inflect.engine()
+    already_seen = set()
+    for k, v in suggestions.items():
+        parts = k.split(':')
+        for suggestion in v:
+            if suggestion in already_seen:
+                continue
+            already_seen.add(suggestion)
+            secho(f"- ", nl=False)
+            indecies = get_elements_indecies(engine, parts, suggestion)
+            for j, char in enumerate(suggestion):
+                if indecies[0] and (indecies[0][0] <= j <= indecies[0][1]):
+                    secho(f"{char}", fg="blue", nl=False)
+                elif indecies[1] and (indecies[1][0] <= j <= indecies[1][1]):
+                    secho(f"{char}", fg="green", nl=False)
+                elif indecies[2] and (indecies[2][0] <= j <= indecies[2][1]):
+                    secho(f"{char}", fg="cyan", nl=False)
+                else:
+                    secho(f"{char}", nl=False)
+            print() # new line
 
 
 def save_results(output: Path, suggestions: Dict[str, List[str]]):
@@ -99,7 +188,7 @@ def save_results(output: Path, suggestions: Dict[str, List[str]]):
 def main(config_file, output):
     d = read_yaml(Path(config_file))
     suggestions = process(d)
-    print_results(suggestions)
+    print_results2(suggestions)
     if output:
         save_results(Path(output), suggestions)        
 

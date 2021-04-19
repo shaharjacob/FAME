@@ -115,9 +115,13 @@ quasimodo.get_connections_between_subjects(["horse", "cow", "chicken"], soft=Tru
 &nbsp;  
 
 ## Wikifier
-```bash
-# using for extract inforamtion from text (like part-of-speech)
+This script is extracting information from a text, such as part-of-speech.  
+It using wikifier API for that purpose.  
 
+**Notice**: The tool is ignoring special character inside the text, expect ','  
+i.e. the output of "I lo!ve coding??" and "I love coding" will be the same.  
+
+```bash
 # usage
 from wikifier import Wikifier
 
@@ -137,85 +141,51 @@ wikifier.get_part_of_speech()
 # output:  
 ```
 ![alt text](https://github.com/shaharjacob/commonsense-analogy/blob/main/images/wikifier_get_part_of_speech1.png?raw=true)  
-
-
-**Notice**: The tool is ignoring special character inside the text, expect ','  
-i.e. the output of "I lo!ve coding??" and "I love coding" will be the same.  
 &nbsp;   
 
 ## Synonyms and Antonyms
-```bash
-# you can use dictionary.py for getting information on a specific word, such as synonyms, antonyms, meanings and examples.  
-# there are two classes (WordNet, Dictionary) which are quite similar.
+The script is getting information on a specific word,s such as **synonyms**, **antonyms**, meanings and examples.  
+The main use is for synonyms. There are two classes that getting synonyms, *WordNet* and *Dictionary*. And a third class called *Mixed*, which combained both together and taking the best results.
+&nbsp;  
 
+The best results are calculate with distance function based on word-vector, using gensim package (https://radimrehurek.com/gensim).  
+Because of the use of this package, script that using this file (including google_engine.py) have a long pre-loaing time (aroung 10-20 seconds).
+&nbsp;
+
+**notice**: words such as "Equus caballus" or "stalking-horse" that are not contains inside the gensim corups will be ignored.  
+
+```bash
 # usage
-from dictionary import WordNet
+from dictionary import Mixed
 
 # example 1 
-word = WordNet('horse')
+mixed = Mixed('horse')
+mixed.getSynonyms()
 
-word.getSynonyms()
-# the output will be:
-['gymnastic_horse', 'horse_cavalry', 'knight', 'sawhorse', 'cavalry', 'sawbuck', 'horse', 'Equus_caballus', 'buck']
-
-word.getAntonyms()
-# the output will be:
-[]
-
-# example 2
-word = WordNet('increase')
-
-word.getSynonyms()
-# the output will be:
-['gain', 'addition', 'increase', 'increment', 'growth', 'step-up']
-
-word.getAntonyms()
-# the output will be:
-['decrement', 'decrease']
-
-# you can also you  word.getDefinitions() and word.getExamples() for getting more information about the word.
+# output of WordNet: horse, cavalry, knight, buck, sawbuck
+# output of Dictionary: horseback, racehorse, pony, chestnut, mare
+# and the mixed output:
 ```
+![alt text](https://github.com/shaharjacob/commonsense-analogy/blob/main/images/dictionary_best_5_for_horse.png?raw=true)  
+&nbsp;   
 
 ```bash
-from dictionary import Dictionary
+# example 2 
+mixed = Mixed('increase')
+mixed.getSynonyms()
 
-    # # 
-    # dictionary.getAntonyms()
-    # dictionary.getSynonyms()
-# example 1 
-dictionary = Dictionary("horse")
-
-dictionary.getSynonyms()
-# the output will be:
-[{'horse': ['bay', 'pony', 'stablemate', 'mount', 'dawn horse', 'roan', 'Equus', 'equid', "horse's foot", 'plug', 'Equus caballus', 'poster', 'polo pony', 'gee-gee', 'palomino', 'withers', 'nag', 'female horse', 'chestnut', 'riding horse', 'steeplechaser', 'workhorse', 'encolure', 'post horse', 'race horse', 'male horse', 'mare', 'racehorse', 'bangtail', 'stable companion', 'eohippus', 'stalking-horse', 'mesohippus', 'horseback', 'jade', 'high stepper', 'harness horse', 'foal', 'pinto', 'stepper', 'protohippus', 'liver chestnut', 'horsemeat', 'horseflesh', 'poll', 'genus Equus', 'sorrel', 'post-horse', 'saddle horse', 'gaskin', 'pacer', 'hack', 'wild horse', 'equine']}]
-
-dictionary.getAntonyms()
-# the output will be:
-[{'horse': ['uncolored', 'fall', 'natural depression', 'stand still', 'hop out']}]
-
-# example 2
-dictionary = Dictionary('increase')
-
-dictionary.getSynonyms()
-# the output will be:
-[{'increase': ['spike', 'explode', 'mount', 'compound', 'heighten', 'shoot up', 'accrue', 'pullulate', 'swell', 'grow', 'conglomerate', 'rise', 'accumulate', 'revalue', 'cumulate', 'wax', 'apprize', 'gather', 'crescendo', 'pyramid', 'climb', 'widen', 'irrupt', 'intensify', 'deepen', 'pile up', 'change magnitude', 'amass', 'snowball', 'broaden', 'add', 'gain', 'full', 'add to', 'apprise', 'appreciate']}]
-
-dictionary.getAntonyms()
-# the output will be:
-[{'increase': ['decrescendo', 'decrease', 'wane', 'take away', 'depreciate', 'narrow']}]
-
-# you can also you dictionary.getMeanings() for getting more information about the word.  
-# you can also provide multiple words in the constructor. for example: dictionary = Dictionary("horse", "increase")
+# output of WordNet: decrease, narrow, wane, depreciate
+# output of Dictionary: increase, growth, gain, addition, increment
+# and the mixed output:
 ```
-&nbsp;    
+![alt text](https://github.com/shaharjacob/commonsense-analogy/blob/main/images/dictionary_best_5_for_increase.png?raw=true)  
+&nbsp;  
 
 ## metamia randomizer
-```bash
-# this site has a lot of complex analogy (http://www.metamia.com)
-# a list of all the analogy isn't available (or dataset), but there is a page which
-# return a random analogy (http://www.metamia.com/randomly-sample-the-analogy-database).
-# so the script is iterate this page and parsing the analogy.
+This site (http://www.metamia.com) has a lot of complex analogy, but a list of all the analogy isn't available (or dataset), but there is a page which return a random analogy (http://www.metamia.com/randomly-sample-the-analogy-database).  
+So the script is iterate this page and parsing the analogy, and by that creates a big dataset.  
 
+```bash
 # usage (-i is the number of iteration)
 python metamia.py -i 100 -o out.csv
 ```  
@@ -226,8 +196,9 @@ python metamia.py -i 100 -o out.csv
 - **qa-srl**: http://qasrl.org/  
 - **hayadata-lab**: http://www.hyadatalab.com/  
 - **Wikifier**: http://wikifier.org/info.html/  
-    
-
+- **gensim**: https://radimrehurek.com/gensim/  
+&nbsp;  
+  
 ## Analogy datasets
 - **metamia**: http://www.metamia.com/
 - **Vecto**: https://vecto.space/  
