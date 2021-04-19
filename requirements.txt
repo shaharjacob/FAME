@@ -3,7 +3,9 @@ click
 pyyaml
 pandas
 gensim
+inflect
 requests
 PyDictionary
 beautifulsoup4
 fake_useragent
+python-Levenshtein

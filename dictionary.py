@@ -1,15 +1,16 @@
 from typing import List, Dict
 
 from click import secho
-from PyDictionary import PyDictionary
-
 import gensim.downloader as api
-# word_vectors = api.load("glove-twitter-25")
-word_vectors = api.load("glove-wiki-gigaword-100")
+from PyDictionary import PyDictionary
 
 from nltk_import import download_package
 download_package('wordnet', 'corpora')
 from nltk.corpus import wordnet
+
+# word_vectors = api.load("glove-twitter-25")
+word_vectors = api.load("glove-wiki-gigaword-100")
+
 
 class WordNet():
     def __init__(self, word: str):
@@ -263,6 +264,6 @@ if __name__ == "__main__":
     # print(dictionary.getAntonyms())
     # print(dictionary.getSynonyms(n=5))
 
-    mixed = Mixed('increase')
+    mixed = Mixed('horse')
     mixed.getSynonyms()
     # pass
