@@ -23,7 +23,7 @@ http://www.metamia.com/critique-paragraph-like-family-6055
 &nbsp;  
 
 ## Table of content
-- **google_engine.py**: Extracting information from google auto-complete.  
+- **google_autocomplete.py**: Extracting information from google auto-complete.  
 - **quasimodo.py**: Using quasimodo database for extracting information about connections between objects.  
 - **wikifier.py**: Extracting information about the part-of-speech of the given text.  
 - **dictionary.py**: Extracting information on a word such as synonyms, antonyms, meanings and examples.  
@@ -45,7 +45,7 @@ It's taking the **best 5** results according to the word vector comparison.
 more information in dictionary.py section.
 ```bash
 # using default example.yaml file without saving the results into a file
-python google_engine.py
+python google_autocomplete.py
 
 # for the following yaml file content:
 why do:
@@ -149,7 +149,7 @@ The main use is for synonyms. There are two classes that getting synonyms, *Word
 &nbsp;  
 
 The best results are calculate with distance function based on word-vector, using gensim package (https://radimrehurek.com/gensim).  
-Because of the use of this package, script that using this file (including google_engine.py) have a long pre-loaing time (aroung 10-20 seconds).
+Because of the use of this package, script that using this file (including google_autocomplete.py) have a long pre-loaing time (aroung 10-20 seconds).
 &nbsp;
 
 **notice**: words such as "Equus caballus" or "stalking-horse" that are not contains inside the gensim corups will be ignored.  
