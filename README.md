@@ -31,16 +31,39 @@ http://www.metamia.com/critique-paragraph-like-family-6055
 &nbsp;  
 
 ## google engine
+This script using the API of google auto-complete the extract information.  
+We are using question, subject and object which make the results more detailed.
+By default (determine in get_query()) the forms is:  
+**{question} {subject} "*" {object}**  
+for example: why do horses "*" stables  
+&nbsp;  
+by default, the script is looking also for the plural and singular forms of the inputs.  
+For example, **horses** will convert into **horse** (in addition) and **stables** into **stable**.  
+&nbsp;  
+in addition, by default, the script is looking for **synonyms**.  
+It's taking the **best 5** results according to the word vector comparison.  
+more information in dictionary.py section.
 ```bash
 # using default example.yaml file without saving the results into a file
 python google_engine.py
 
-# using a config.yaml as a config file, and saving the results into out.csv
-python google_engine.py -f config.yaml -o out.csv
+# for the following yaml file content:
+why do:
+  - [horses, stables]
+
+how do:
+  - [horses, stables]
+
+# the output will be:
 ```  
+![alt text](https://github.com/shaharjacob/commonsense-analogy/blob/main/images/google_engine_horses.png?raw=true)  
 &nbsp;  
 
 ## quasimodo
+This script using quasimodo database, which contains semantic information.  
+We are intersting in the following fields: **subject**, **predicate**, **object**, and **score**.  
+First, the script cleaning rows with low score. Then, it allow to get information about connections between object.  
+
 ```bash
 # Download the .tsv file in necessary: 
 https://nextcloud.mpi-klsb.mpg.de/index.php/s/Sioq6rKP8LmjMDQ/download?path=%2FLatest&files=quasimodo43.tsv
@@ -51,14 +74,9 @@ from quasimodo import Quasimodo
 # heigher score_threshold -> more accurate results, but less amount.
 quasimodo = Quasimodo(score_threshold=0.8)
 
-# if for some reason you need the values of the subjects, predicates or objects, as an ordered list
-# notice that it will take time only on the first time, after that it will use the saved files
-# quasimodo = Quasimodo(score_threshold=0.8, save_ordered=True)
-```
-
-```bash
 # get all the connections between each pair (connection is subject-object relationship)
 quasimodo.get_connections(["sharp", "needle", "knife"])
+
 # so the output will be:  
 ```
 ![alt text](https://github.com/shaharjacob/commonsense-analogy/blob/main/images/get_connections.png?raw=true)  
@@ -66,6 +84,7 @@ quasimodo.get_connections(["sharp", "needle", "knife"])
 ```bash
 # you can also allow it to be more flexiable with the name by adding soft=True
 quasimodo.get_connections(["sharp", "needle", "knife"], soft=True)
+
 # so the output will be:  
 ```
 ![alt text](https://github.com/shaharjacob/commonsense-analogy/blob/main/images/get_connections_soft.png?raw=true)  
@@ -73,6 +92,7 @@ quasimodo.get_connections(["sharp", "needle", "knife"], soft=True)
 ```bash
 # get all the common features between few subjects
 quasimodo.get_connections_between_subjects(["horse", "cow", "chicken"])
+
 # so the output will be:  
 ```
 ![alt text](https://github.com/shaharjacob/commonsense-analogy/blob/main/images/get_connections_between_subjects_1.png?raw=true)
@@ -83,12 +103,15 @@ quasimodo.get_connections_between_subjects(["horse", "cow", "chicken"])
 ```bash
 # also here you can allow flexiable name by adding soft=True
 quasimodo.get_connections_between_subjects(["horse", "cow", "chicken"], soft=True)
+
 # so the output will be:  
 ```
 ![alt text](https://github.com/shaharjacob/commonsense-analogy/blob/main/images/get_connections_between_subjects_soft_1.png?raw=true)
 ![alt text](https://github.com/shaharjacob/commonsense-analogy/blob/main/images/get_connections_between_subjects_soft_2.png?raw=true)
 ![alt text](https://github.com/shaharjacob/commonsense-analogy/blob/main/images/get_connections_between_subjects_soft_3.png?raw=true)
 ![alt text](https://github.com/shaharjacob/commonsense-analogy/blob/main/images/get_connections_between_subjects_soft_4.png?raw=true)  
+ 
+**Note**: by using *soft=True*, the script is just looking for containing word (horse is contain in horse race) and **NOT** looking for synonyms.  
 &nbsp;  
 
 ## Wikifier
