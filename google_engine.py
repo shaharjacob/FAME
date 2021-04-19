@@ -15,12 +15,13 @@ from dictionary import Mixed
 
 def get_url(keyword: str, browser: str = "chrome") -> str:
     keyword.replace(" ", "+")
-    return f"http://suggestqueries.google.com/complete/search?output={browser}&q={keyword}"
+    return f"http://suggestqueries.google.com/complete/search?client={browser}&q={keyword}&hl=en"
 
 
 def get_suggestions(keyword: str) -> List[str]:
-    headers = {"user-agent": UserAgent().chrome}
-    response = requests.get(get_url(keyword), headers=headers, verify=False)
+    # headers = {"user-agent": UserAgent().chrome}
+    # response = requests.get(get_url(keyword), headers=headers, verify=False)
+    response = requests.get(get_url(keyword))
     suggestions = json.loads(response.text)
     return suggestions[1]
 
