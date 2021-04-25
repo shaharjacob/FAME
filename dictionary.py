@@ -32,7 +32,8 @@ class WordNet():
                     word_vectors.get_vector(antonym)
                     new_antonyms.append(antonym)
                 except:
-                    secho(f"[WARNING] word ({antonym}) not appear in the vocabulary", fg="yellow")
+                    if verbose:
+                        secho(f"[WARNING] word ({antonym}) not appear in the vocabulary", fg="yellow")
             new_antonyms = sorted(new_antonyms, key=lambda s: word_vectors.distance(s, self.word))
             antonyms = new_antonyms[:n]
 
@@ -61,7 +62,8 @@ class WordNet():
                     word_vectors.get_vector(synonym)
                     new_synonyms.append(synonym)
                 except:
-                    secho(f"[WARNING] word ({synonym}) not appear in the vocabulary", fg="yellow")
+                    if verbose:
+                        secho(f"[WARNING] word ({synonym}) not appear in the vocabulary", fg="yellow")
             new_synonyms = sorted(new_synonyms, key=lambda s: word_vectors.distance(s, self.word))
             synonyms = new_synonyms[:n]
         
@@ -142,7 +144,8 @@ class Dictionary(PyDictionary):
                             word_vectors.get_vector(antonyms_word)
                             new_antonyms_words.append(antonyms_word)
                         except:
-                            secho(f"[WARNING] word ({antonyms_word}) not appear in the vocabulary", fg="yellow")
+                            if verbose:
+                                secho(f"[WARNING] word ({antonyms_word}) not appear in the vocabulary", fg="yellow")
                     new_antonyms_words = sorted(new_antonyms_words, key=lambda s: word_vectors.distance(s, word))
                     all_antonyms[i][word] = new_antonyms_words[:n]
 
@@ -170,7 +173,8 @@ class Dictionary(PyDictionary):
                             word_vectors.get_vector(synonyms_word)
                             new_synonyms_words.append(synonyms_word)
                         except:
-                            secho(f"[WARNING] word ({synonyms_word}) not appear in the vocabulary", fg="yellow")
+                            if verbose:
+                                secho(f"[WARNING] word ({synonyms_word}) not appear in the vocabulary", fg="yellow")
                     new_synonyms_words = sorted(new_synonyms_words, key=lambda s: word_vectors.distance(s, word))
                     all_synonyms[i][word] = new_synonyms_words[:n]
 
@@ -207,16 +211,18 @@ class Mixed:
                 word_vectors.get_vector(synonym)
                 new_synonyms.add(synonym)
             except:
-                secho(f"[WARNING] word ({synonym}) not appear in the vocabulary", fg="yellow")
+                if verbose:
+                    secho(f"[WARNING] word ({synonym}) not appear in the vocabulary", fg="yellow")
 
         new_synonyms = list(new_synonyms)
         new_synonyms = sorted(new_synonyms, key=lambda s: word_vectors.distance(s, self.word))
         synonyms = new_synonyms[:n]
-        secho(f"Best {n} synonyms for {self.word}", fg="blue", bold=True)
-        secho(f" - ", fg="green", nl=False)
-        for synonym in synonyms:
-            secho(f"{synonym}, ", fg="green", nl=False)
-        print('\n')
+        if verbose:
+            secho(f"Best {n} synonyms for {self.word}", fg="blue", bold=True)
+            secho(f" - ", fg="green", nl=False)
+            for synonym in synonyms:
+                secho(f"{synonym}, ", fg="green", nl=False)
+            print('\n')
         return synonyms
     
     def getAntonyms(self, verbose: bool = True, n: int = 5):
