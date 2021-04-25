@@ -1,4 +1,5 @@
 .bashrc
+test.py
 *.csv
 *.json
 *.tsv
@@ -9,3 +10,6 @@
 test/
 pdf/
 .idea/
+txt_sentoken/
+movie_review/
+test-output/
