@@ -108,19 +108,39 @@ class Quasimodo:
 
     def get_similarity_between_subjects(self,
                                         subject1: str,
-                                        subject2: str) -> List[Tuple[str]]:
+                                        subject2: str,
+                                        plural_and_singular: bool = False) -> List[Tuple[str]]:
 
-        data_of_subject1 = self.filter_by('subject', subject1)
-        data_of_subject2 = self.filter_by('subject', subject2)
-        predicate_obj_of_subject1 = set()
+        def extend_list(string: str, list_to_add: List[str]):
+            plural = self.engine.plural(string)
+            if plural and (plural not in list_to_add):
+                list_to_add.append(plural)
+
+            singular = self.engine.singular_noun(string)
+            if singular and (singular not in list_to_add):
+                list_to_add.append(singular)
+        
         matches = set()
-        for _, val1 in data_of_subject1.iterrows():
-            if val1['predicate'] and val1['object']:
-                predicate_obj_of_subject1.add((val1['predicate'], val1['object']))
-        for _, val2 in data_of_subject2.iterrows():
-            if (val2['predicate'], val2['object']) in predicate_obj_of_subject1:
-                matches.add((val2['predicate'].replace('_', ' '), val2['object']))
+        subjects1 = [subject1]
+        subjects2 = [subject2]
 
+        if plural_and_singular:
+            extend_list(subject1, subjects1)
+            extend_list(subject2, subjects2)
+            
+        for sub1 in subjects1:
+            for sub2 in subjects2:
+                data_of_subject1 = self.filter_by('subject', sub1)
+                data_of_subject2 = self.filter_by('subject', sub2)
+                predicate_obj_of_subject1 = set()
+                matches_ = set()
+                for _, val1 in data_of_subject1.iterrows():
+                    if val1['predicate'] and val1['object']:
+                        predicate_obj_of_subject1.add((val1['predicate'], val1['object']))
+                for _, val2 in data_of_subject2.iterrows():
+                    if (val2['predicate'], val2['object']) in predicate_obj_of_subject1:
+                        matches_.add((val2['predicate'].replace('_', ' '), val2['object']))
+            matches.update(matches_)
         return list(matches)
 
     
