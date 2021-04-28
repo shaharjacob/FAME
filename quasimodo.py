@@ -34,6 +34,7 @@ class Quasimodo:
     def get_subject_props(self, 
                           subject: str, 
                           n_largest: int = 0,
+                          verbose: bool = False,
                           plural_and_singular: bool = False) -> List[Tuple[str]]:
 
         def add_to_set(subject_: str, set_to_add: Set[Tuple]):
@@ -41,6 +42,7 @@ class Quasimodo:
             for _, val in df.iterrows():
                 set_to_add.add((str(val['predicate']).replace('_', ' '), 
                                str(val['object']), 
+                               str(val['subject']),
                                val['score']))
 
         props_set = set()
@@ -57,8 +59,15 @@ class Quasimodo:
 
         props_list = list(props_set)
         if n_largest > 0:
-            props_list = sorted(props_list, key=lambda x: -x[2])
+            props_list = sorted(props_list, key=lambda x: -x[3])
             props_list = props_list[:n_largest]
+
+        if verbose:
+            for prop in props_list:
+                secho(f"{prop[2]} ", fg="blue", bold=True, nl=False)
+                secho(f"{prop[0]} ", fg="green", bold=True, nl=False)
+                secho(prop[1], fg="cyan", bold=True)
+
 
         return [(prop[0], prop[1]) for prop in props_list]
 
@@ -67,6 +76,7 @@ class Quasimodo:
                                  subject: str,
                                  obj: str,
                                  n_largest: int = 0,
+                                 verbose: bool = False,
                                  plural_and_singular: bool = False) -> List[Tuple[str]]:
         
         def add_to_set(subject_: str, obj_: str, set_to_add: Set[Tuple]):
@@ -75,6 +85,8 @@ class Quasimodo:
 
             for _, val in df.iterrows():
                 set_to_add.add((str(val['predicate']).replace('_', ' '),
+                                str(val['subject']),
+                                str(val['object']),
                                val['score']))
 
         def extend_list(string: str, list_to_add: List[str]):
@@ -100,8 +112,14 @@ class Quasimodo:
         
         props_list = list(props_set)
         if n_largest > 0:
-            props_list = sorted(props_list, key=lambda x: -x[1])
+            props_list = sorted(props_list, key=lambda x: -x[3])
             props_list = props_list[:n_largest]
+        
+        if verbose:
+            for prop in props_list:
+                secho(f"{prop[1]} ", fg="blue", bold=True, nl=False)
+                secho(f"{prop[0]} ", fg="green", bold=True, nl=False)
+                secho(prop[2], fg="cyan", bold=True)
 
         return [prop[0] for prop in props_list]
 
@@ -110,6 +128,7 @@ class Quasimodo:
                                         subject1: str,
                                         subject2: str,
                                         n_largest: int = 0,
+                                        verbose: bool = False,
                                         plural_and_singular: bool = False) -> List[Tuple[str]]:
 
         def extend_list(string: str, list_to_add: List[str]):
@@ -135,20 +154,38 @@ class Quasimodo:
                 data_of_subject2 = self.filter_by('subject', sub2)
                 predicate_obj_of_subject1 = set()
                 matches_ = set()
+
                 for _, val1 in data_of_subject1.iterrows():
                     if val1['predicate'] and val1['object']:
-                        predicate_obj_of_subject1.add((val1['predicate'], val1['object'], val1['score']))
+                        predicate_obj_of_subject1.add((val1['predicate'], 
+                                                       val1['object'], 
+                                                       val1['subject'],
+                                                       val1['score']))
+
                 for _, val2 in data_of_subject2.iterrows():
                     for v in predicate_obj_of_subject1:
                         if (val2['predicate'] == v[0]) and (val2['object'] == v[1]):
-                            matches_.add((val2['predicate'].replace('_', ' '), val2['object'], (val2['score'] + v[2]) / 2))
+                            matches_.add((val2['predicate'].replace('_', ' '), 
+                                          val2['object'], 
+                                          val2['subject'],
+                                          v[2],
+                                          (val2['score'] + v[3]) / 2))
                             break
                 matches.update(matches_)
         
         matches = list(matches)
         if n_largest > 0:
-            matches = sorted(matches, key=lambda x: -x[2])
+            matches = sorted(matches, key=lambda x: -x[4])
             matches = matches[:n_largest]
+
+        if verbose:
+            for match in matches:
+                secho(f"{match[2]} ", fg="blue", bold=True, nl=False)
+                secho(f"and ", nl=False)
+                secho(f"{match[3]} ", fg="blue", bold=True, nl=False)
+                secho("are both ", nl=False)
+                secho(f"{match[0]} ", fg="green", bold=True, nl=False)
+                secho(f"{match[1]}", fg="cyan", bold=True)
 
         return matches
 
@@ -175,9 +212,9 @@ class Quasimodo:
     
 if __name__ == '__main__':
     quasimodo = Quasimodo(path='quasimodo_0.5.tsv', score_threshold=0.5)
-    res1 = quasimodo.get_subject_props('horses', n_largest=10)
-    res2 = quasimodo.get_subject_object_props('horses', 'stables', n_largest=10)
-    res3 = quasimodo.get_similarity_between_subjects('horse', 'cow')
+    # res1 = quasimodo.get_subject_props('horses', n_largest=10, verbose=True, plural_and_singular=True)
+    # res2 = quasimodo.get_subject_object_props('sun', 'stars', n_largest=10, verbose=True, plural_and_singular=True)
+    # res3 = quasimodo.get_similarity_between_subjects('horse', 'cow', n_largest=10, verbose=True, plural_and_singular=True)
 
 
 

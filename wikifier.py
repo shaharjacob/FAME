@@ -162,10 +162,10 @@ class Wikifier:
         
 
 if __name__ == "__main__":
-    # text = "I love coding but sometimes coding is very boring"
+    text = "I love coding but sometimes coding is very boring"
     # text = "sunscreen protects against the sun as a tarpaulin protects against rain"
     # text = 'sunscreen protects against the sun'
-    text = 'why do horses kick stable doors'
+    # text = 'why do horses kick stable doors'
     w = Wikifier(text)
     w.get_part_of_speech()
 

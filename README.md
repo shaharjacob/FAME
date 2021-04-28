@@ -23,6 +23,7 @@ http://www.metamia.com/critique-paragraph-like-family-6055
 &nbsp;  
 
 ## Table of content
+- **main.py**: main script which is combine all the script and plot a graph.  
 - **google_autocomplete.py**: Extracting information from google auto-complete.  
 - **quasimodo.py**: Using quasimodo database for extracting information about connections between objects.  
 - **wikifier.py**: Extracting information about the part-of-speech of the given text.  
@@ -30,29 +31,60 @@ http://www.metamia.com/critique-paragraph-like-family-6055
 - **metamia.py**: Building a database of analogies using http://www.metamia.com  
 &nbsp;  
 
+## main.py
+1) Taking a text and extract the **nouns** using wikifier part-of-speech.  
+2) For each noun, which will be a **node in our graph**, extract the information from quasimodo (single subject information).  
+3) For each pair of nouns, extract inforamtion from google auto-complete, with a question ('why do', 'how do'). This will be on the edges.  
+4) For each pair, extract information from quasimodo. This is also will be on the edges.  
+
+```bash
+python main.py
+
+# text for example:
+'electrons revolve around the nucleus as the stars revolve around the sun'
+
+# the output graph can be found here:
+```  
+[Click here!](https://github.com/shaharjacob/commonsense-analogy/blob/main/MyGraph.gv.pdf)  
+&nbsp;  
+
 ## google engine
 This script using the API of google auto-complete the extract information.  
 We are using question, subject and object which make the results more detailed.
-By default (determine in get_query()) the forms is:  
-**{question} {subject} "*" {object}**  
+By default the forms is: **{question} {subject} "*" {object}**  
 for example: why do horses "*" stables  
 &nbsp;  
 by default, the script is looking also for the plural and singular forms of the inputs.  
 For example, **horses** will convert into **horse** (in addition) and **stables** into **stable**.  
 &nbsp;  
-in addition, by default, the script is looking for **synonyms**.  
+in addition, the script is able to looking for **synonyms**.  
 It's taking the **best 5** results according to the word vector comparison.  
-more information in dictionary.py section.
+more information in dictionary.py section.  
+Notice that this is a very heavy to load dictionary.py.  
 ```bash
 # using default example.yaml file without saving the results into a file
 python google_autocomplete.py
 
-# for the following yaml file content:
+# define a yaml file:
 why do:
   - [horses, stables]
 
 how do:
   - [horses, stables]
+
+
+# You can use it outside the script by define a dictionary:
+from google_autocomplete import process
+
+d = {
+  "why do": [
+    ['horses', 'stables']
+  ],
+  "how do": [
+    ['horses', 'stables']
+  ]
+}
+suggestions = process(d)
 
 # the output will be:
 ```  
@@ -74,44 +106,28 @@ from quasimodo import Quasimodo
 # heigher score_threshold -> more accurate results, but less amount.
 quasimodo = Quasimodo(score_threshold=0.8)
 
+# get information on a single subject. n_largest will take the best matches according to quasimodo score.
+quasimodo.get_subject_props('horses', n_largest=10, verbose=True, plural_and_singular=True)
+
+# so the output will be:  
+```
+![alt text](https://github.com/shaharjacob/commonsense-analogy/blob/main/images/quasimodo_get_subject_props.png?raw=true)  
+
+```bash
 # get all the connections between each pair (connection is subject-object relationship)
-quasimodo.get_connections(["sharp", "needle", "knife"])
+quasimodo.get_subject_object_props('horses', 'stables', n_largest=10, verbose=True, plural_and_singular=True)
 
 # so the output will be:  
 ```
-![alt text](https://github.com/shaharjacob/commonsense-analogy/blob/main/images/get_connections.png?raw=true)  
+![alt text](https://github.com/shaharjacob/commonsense-analogy/blob/main/images/quasimodo_get_subject_object_props.png?raw=true)  
 
 ```bash
-# you can also allow it to be more flexiable with the name by adding soft=True
-quasimodo.get_connections(["sharp", "needle", "knife"], soft=True)
+# get all the similiar properties between two subjects
+quasimodo.get_similarity_between_subjects('horse', 'cow', n_largest=10, verbose=True, plural_and_singular=True)
 
 # so the output will be:  
 ```
-![alt text](https://github.com/shaharjacob/commonsense-analogy/blob/main/images/get_connections_soft.png?raw=true)  
-
-```bash
-# get all the common features between few subjects
-quasimodo.get_connections_between_subjects(["horse", "cow", "chicken"])
-
-# so the output will be:  
-```
-![alt text](https://github.com/shaharjacob/commonsense-analogy/blob/main/images/get_connections_between_subjects_1.png?raw=true)
-![alt text](https://github.com/shaharjacob/commonsense-analogy/blob/main/images/get_connections_between_subjects_2.png?raw=true)
-![alt text](https://github.com/shaharjacob/commonsense-analogy/blob/main/images/get_connections_between_subjects_3.png?raw=true)
-![alt text](https://github.com/shaharjacob/commonsense-analogy/blob/main/images/get_connections_between_subjects_4_.png?raw=true)  
-
-```bash
-# also here you can allow flexiable name by adding soft=True
-quasimodo.get_connections_between_subjects(["horse", "cow", "chicken"], soft=True)
-
-# so the output will be:  
-```
-![alt text](https://github.com/shaharjacob/commonsense-analogy/blob/main/images/get_connections_between_subjects_soft_1.png?raw=true)
-![alt text](https://github.com/shaharjacob/commonsense-analogy/blob/main/images/get_connections_between_subjects_soft_2.png?raw=true)
-![alt text](https://github.com/shaharjacob/commonsense-analogy/blob/main/images/get_connections_between_subjects_soft_3.png?raw=true)
-![alt text](https://github.com/shaharjacob/commonsense-analogy/blob/main/images/get_connections_between_subjects_soft_4.png?raw=true)  
- 
-**Note**: by using *soft=True*, the script is just looking for containing word (horse is contain in horse race) and **NOT** looking for synonyms.  
+![alt text](https://github.com/shaharjacob/commonsense-analogy/blob/main/images/quasimodo_get_similarity_between_subjects.png?raw=true)  
 &nbsp;  
 
 ## Wikifier

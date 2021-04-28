@@ -66,16 +66,3 @@ class MyGraph(Digraph):
     def view(self):
         super().view()        
 
-
-
-# graph = MyGraph()
-# graph.add_node("horse", labels=['first', 'second', 'third', 'first', 'second', 'third'], font_color='blue')
-# graph.add_node("cow")
-# graph.add_node("chicken")
-# graph.add_edge('horse', 'cow', labels=['first', 'second', 'third'], font_color='green')
-# graph.add_edge('cow', 'horse', labels=['first', 'second', 'third'])
-# graph.add_edge('horse', 'chicken', labels=['first', 'second', 'third'])
-# graph.add_edge('chicken', 'horse', labels=['first', 'second', 'third'])
-# graph.add_edge('cow', 'chicken', labels=['first', 'second', 'third'])
-# graph.add_edge('chicken', 'cow', labels=['first', 'second', 'third'])
-# graph.view()

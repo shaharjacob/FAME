@@ -9,18 +9,12 @@ import google_autocomplete
 from wikifier import Wikifier
 from quasimodo import Quasimodo
 
-def main():
-    text1 = "putting a band aid on a wound is like putting a flag in the code"
-    text2 = "horses in stables behave like cows in byre"
-    text3 = "peanut butter has a strong taste that causes a feeling of suffocation"
-    text4 = "electrons revolve around the nucleus as the stars revolve around the sun"
-    
-
+def main(text: str):
     graph = MyGraph()
     quasimodo = Quasimodo(path='quasimodo_0.5.tsv', score_threshold=0.8)
 
     # part of speech
-    w = Wikifier(text4)
+    w = Wikifier(text)
     nouns = w.get_specific_part_of_speech("nouns", normForm=False)
     Wikifier.remove_parts_of_compound_nouns(nouns)
 
@@ -73,8 +67,14 @@ def main():
 
 
 if __name__ == "__main__":
+
+    text1 = "putting a band aid on a wound is like putting a flag in the code"
+    text2 = "horses in stables behave like cows in byre"
+    text3 = "peanut butter has a strong taste that causes a feeling of suffocation"
+    text4 = "electrons revolve around the nucleus as the stars revolve around the sun"
+
     start = time.time()
-    main()
+    main(text4)
     secho(f"\nTotal running time: ", fg='blue', nl=False)
     secho(str(time.time() - start), fg='blue', bold=True)
 
