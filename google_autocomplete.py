@@ -32,7 +32,7 @@ class GoogleAutocomplete(object):
     def init_suggestions(self) -> List[Tuple[str]]:
         sugges: List[Tuple[str]] = []
         keyword = self.keyword.replace(" ", "+")
-        url = f"http://suggestqueries.google.com/complete/search?client={self.browser}&q={keyword}&hl=en"
+        url = f"http://suggestqueries.google.com/complete/search?client={self.browser}&q={keyword}&hl=us"
         response = requests.get(url)
         suggestions = json.loads(response.text)[1]
         for suggestion in suggestions:
