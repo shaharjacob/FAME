@@ -13,13 +13,14 @@ def main():
     text1 = "putting a band aid on a wound is like putting a flag in the code"
     text2 = "horses in stables behave like cows in byre"
     text3 = "peanut butter has a strong taste that causes a feeling of suffocation"
+    text4 = "electrons revolve around the nucleus as the stars revolve around the sun"
     
 
     graph = MyGraph()
-    quasimodo = Quasimodo(path='quasimodo_0.5.tsv', score_threshold=0.5)
+    quasimodo = Quasimodo(path='quasimodo_0.5.tsv', score_threshold=0.8)
 
     # part of speech
-    w = Wikifier(text2)
+    w = Wikifier(text4)
     nouns = w.get_specific_part_of_speech("nouns", normForm=False)
     Wikifier.remove_parts_of_compound_nouns(nouns)
 
