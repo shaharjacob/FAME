@@ -37,11 +37,11 @@ class MyGraph(Digraph):
         self.edges.append({
             "head": head,
             "tail": tail,
-            "labels": labels,
+            "labels": labels if labels else [""],
             "font_color": font_color,
             "font_size": font_size,
         })
-        props_in_html = MyGraph.get_labels_as_html(labels, font_color, font_size, "")
+        props_in_html = MyGraph.get_labels_as_html(labels if labels else [""], font_color, font_size, "")
         self.edge(head, tail, props_in_html)
 
     @staticmethod
@@ -49,10 +49,17 @@ class MyGraph(Digraph):
         parts = ['<']
         parts.append(f'<font color="{font_color}" point-size="{font_size}px">')
         parts.append('<table border="0" cellspacing="0" cellpadding="0">')
-        if name:
+        if name: # node
             parts.append(f'<tr><td><u><b>{name}</b></u></td></tr>')
-        for label in labels:
-            parts.append(f'<tr><td>{label}</td></tr>')
+        if isinstance(labels, dict):  # edge
+            for title, labels_ in labels.items():
+                parts.append(f'<tr><td><u><b>{title}</b></u></td></tr>')
+                for label in labels_:
+                    parts.append(f'<tr><td>{label}</td></tr>')
+                parts.append(f'<tr><td> </td></tr>')
+        else: # node
+            for label in labels:
+                parts.append(f'<tr><td>{label}</td></tr>')
         parts.append('</table></font>>')
         return ''.join(parts)
     

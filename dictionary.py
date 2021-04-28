@@ -195,7 +195,7 @@ class Mixed:
         self.wordnet = WordNet(word)
         self.dictionary = Dictionary(word)
     
-    def getSynonyms(self, verbose: bool = True, n: int = 5):
+    def getSynonyms(self, verbose: bool = True, n: int = 3):
         wordnet_synonyms = self.wordnet.getSynonyms(verbose, n)
         dictionary_synonyms = self.dictionary.getSynonyms(verbose, n)
         if dictionary_synonyms:
