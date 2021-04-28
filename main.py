@@ -1,3 +1,4 @@
+import time
 from itertools import combinations
 
 from tqdm import tqdm
@@ -5,21 +6,22 @@ from click import secho
 
 from graph import MyGraph
 import google_autocomplete
+from wikifier import Wikifier
 from quasimodo import Quasimodo
 
-
-if __name__ == "__main__":
+def main():
+    text1 = "putting a band aid on a wound is like putting a flag in the code"
+    text2 = "horses in stables behave like cows in byre"
+    text3 = "peanut butter has a strong taste that causes a feeling of suffocation"
+    
 
     graph = MyGraph()
-    quasimodo = Quasimodo(path='quasimodo_0.5.tsv', score_threshold=0.8)
-
+    quasimodo = Quasimodo(path='quasimodo_0.5.tsv', score_threshold=0.5)
 
     # part of speech
-    # extract the nouns...
-    # let assume this is:
-    # horses, stables, pigs, sty
-    nouns = ['horses', 'stables', 'pigs', 'sty']
-
+    w = Wikifier(text2)
+    nouns = w.get_specific_part_of_speech("nouns", normForm=False)
+    Wikifier.remove_parts_of_compound_nouns(nouns)
 
     #########
     # nodes #
@@ -60,11 +62,18 @@ if __name__ == "__main__":
         if quasimodo_subject_object_connection:
             labels["from quasimido"] = [f"{comb[0]} {prop} {comb[1]}" for prop in quasimodo_subject_object_connection]
 
-        qusimodo_subjects_similarity = quasimodo.get_similarity_between_subjects(comb[0], comb[1])
+        qusimodo_subjects_similarity = quasimodo.get_similarity_between_subjects(comb[0], comb[1], n_largest=10, plural_and_singular=True)
         if qusimodo_subjects_similarity:
             labels["they are both..."] = [f"{val[0]} {val[1]}" for val in qusimodo_subjects_similarity]
 
         graph.add_edge(comb[0], comb[1], labels=labels)
 
     graph.view()  # plot the graph
+
+
+if __name__ == "__main__":
+    start = time.time()
+    main()
+    secho(f"\nTotal running time: ", fg='blue', nl=False)
+    secho(str(time.time() - start), fg='blue', bold=True)
 

@@ -109,6 +109,7 @@ class Quasimodo:
     def get_similarity_between_subjects(self,
                                         subject1: str,
                                         subject2: str,
+                                        n_largest: int = 0,
                                         plural_and_singular: bool = False) -> List[Tuple[str]]:
 
         def extend_list(string: str, list_to_add: List[str]):
@@ -136,12 +137,20 @@ class Quasimodo:
                 matches_ = set()
                 for _, val1 in data_of_subject1.iterrows():
                     if val1['predicate'] and val1['object']:
-                        predicate_obj_of_subject1.add((val1['predicate'], val1['object']))
+                        predicate_obj_of_subject1.add((val1['predicate'], val1['object'], val1['score']))
                 for _, val2 in data_of_subject2.iterrows():
-                    if (val2['predicate'], val2['object']) in predicate_obj_of_subject1:
-                        matches_.add((val2['predicate'].replace('_', ' '), val2['object']))
-            matches.update(matches_)
-        return list(matches)
+                    for v in predicate_obj_of_subject1:
+                        if (val2['predicate'] == v[0]) and (val2['object'] == v[1]):
+                            matches_.add((val2['predicate'].replace('_', ' '), val2['object'], (val2['score'] + v[2]) / 2))
+                            break
+                matches.update(matches_)
+        
+        matches = list(matches)
+        if n_largest > 0:
+            matches = sorted(matches, key=lambda x: -x[2])
+            matches = matches[:n_largest]
+
+        return matches
 
     
     def filter_by(self, 

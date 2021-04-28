@@ -129,7 +129,20 @@ class Wikifier:
             return [v['normForm'] for v in self.data.get(which, [])]
         else:
             return [self.text[v['iFrom']:v['iTo'] + 1] for v in self.data.get(which, [])]
+    
 
+    @staticmethod
+    def remove_parts_of_compound_nouns(nouns: List[str]):
+        to_remove = set()
+        for noun in nouns:
+            parts = noun.split()
+            if len(parts) > 1:
+                for noun_ in nouns:
+                    if noun_ == parts[0] or noun_ == parts[1]:
+                        to_remove.add(noun_)
+        for noun_to_remove in to_remove:
+            nouns.remove(noun_to_remove)
+        return nouns
 
     @staticmethod
     def print_color_key():
