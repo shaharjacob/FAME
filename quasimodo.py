@@ -119,7 +119,7 @@ class Quasimodo:
                 predicate_obj_of_subject1.add((val1['predicate'], val1['object']))
         for _, val2 in data_of_subject2.iterrows():
             if (val2['predicate'], val2['object']) in predicate_obj_of_subject1:
-                matches.add((val1['predicate'].replace('_', ' '), val1['object']))
+                matches.add((val2['predicate'].replace('_', ' '), val2['object']))
 
         return list(matches)
 
