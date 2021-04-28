@@ -5,6 +5,7 @@ test.py
 *.tsv
 .DS_Store
 *.pdf
+*.gv
 .vscode
 *.pyc
 test/
