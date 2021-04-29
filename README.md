@@ -93,41 +93,35 @@ suggestions = process(d)
 
 ## quasimodo
 This script using quasimodo database, which contains semantic information.  
-We are intersting in the following fields: **subject**, **predicate**, **object**, and **score**.  
-First, the script cleaning rows with low score. Then, it allow to get information about connections between object.  
+We are intersting in the following fields: **subject**, **predicate**, **object**, and **plausibility**.  
+We are using quasimodo API to extract the data. 
 
 ```bash
-# Download the .tsv file in necessary: 
-https://nextcloud.mpi-klsb.mpg.de/index.php/s/Sioq6rKP8LmjMDQ/download?path=%2FLatest&files=quasimodo43.tsv
-
 # usage
-from quasimodo import Quasimodo
-
-# heigher score_threshold -> more accurate results, but less amount.
-quasimodo = Quasimodo(score_threshold=0.8)
+import quasimodo
 
 # get information on a single subject. n_largest will take the best matches according to quasimodo score.
-quasimodo.get_subject_props('horses', n_largest=10, verbose=True, plural_and_singular=True)
+quasimodo.get_subject_props('horse', n_largest=20, verbose=True, plural_and_singular=True)
 
 # so the output will be:  
 ```
-![alt text](https://github.com/shaharjacob/commonsense-analogy/blob/main/images/quasimodo_get_subject_props.png?raw=true)  
+![alt text](https://github.com/shaharjacob/commonsense-analogy/blob/main/images/get_subject_object_props_quasimodo_api.png?raw=true)  
 
 ```bash
 # get all the connections between each pair (connection is subject-object relationship)
-quasimodo.get_subject_object_props('horses', 'stables', n_largest=10, verbose=True, plural_and_singular=True)
+quasimodo.get_subject_object_props('sun', 'earth', n_largest=20, verbose=True, plural_and_singular=True)
 
 # so the output will be:  
 ```
-![alt text](https://github.com/shaharjacob/commonsense-analogy/blob/main/images/quasimodo_get_subject_object_props.png?raw=true)  
+![alt text](https://github.com/shaharjacob/commonsense-analogy/blob/main/images/get_subject_object_props_quasimodo_api.png?raw=true)  
 
 ```bash
 # get all the similiar properties between two subjects
-quasimodo.get_similarity_between_subjects('horse', 'cow', n_largest=10, verbose=True, plural_and_singular=True)
+quasimodo.get_similarity_between_subjects('sun', 'earth', n_largest=20, verbose=True, plural_and_singular=True)
 
 # so the output will be:  
 ```
-![alt text](https://github.com/shaharjacob/commonsense-analogy/blob/main/images/quasimodo_get_similarity_between_subjects.png?raw=true)  
+![alt text](https://github.com/shaharjacob/commonsense-analogy/blob/main/images/get_similarity_between_subjects_quasimodo_api.png?raw=true)  
 &nbsp;  
 
 ## Wikifier
