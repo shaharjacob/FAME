@@ -4,14 +4,13 @@ from itertools import combinations
 from tqdm import tqdm
 from click import secho
 
+import quasimodo
 from graph import MyGraph
 import google_autocomplete
 from wikifier import Wikifier
-from quasimodo import Quasimodo
 
 def main(text: str):
     graph = MyGraph()
-    quasimodo = Quasimodo(path='quasimodo_0.5.tsv', score_threshold=0.8)
 
     # part of speech
     w = Wikifier(text)
