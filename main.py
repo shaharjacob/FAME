@@ -3,13 +3,16 @@ from itertools import combinations
 
 from tqdm import tqdm
 from click import secho
+from pathlib import Path
 
 import quasimodo
 from graph import MyGraph
 import google_autocomplete
 from wikifier import Wikifier
+from quasimodo import Quasimodo
 
-def main(text: str):
+
+def main(text: str, quasimodo: Quasimodo):
     graph = MyGraph()
 
     # part of speech
@@ -72,8 +75,13 @@ if __name__ == "__main__":
     text3 = "peanut butter has a strong taste that causes a feeling of suffocation"
     text4 = "electrons revolve around the nucleus as the stars revolve around the sun"
 
+    tsv_to_load = Path('tsv/quasimodo.tsv')
+    if not tsv_to_load.exists():
+        quasimodo.merge_tsvs(tsv_to_load.name)  # will be created under /tsv
+    quasimodo = Quasimodo(path=str(tsv_to_load))
+
     start = time.time()
-    main(text4)
+    main(text3, quasimodo)
     secho(f"\nTotal running time: ", fg='blue', nl=False)
     secho(str(time.time() - start), fg='blue', bold=True)
 

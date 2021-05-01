@@ -94,11 +94,16 @@ suggestions = process(d)
 ## quasimodo
 This script using quasimodo database, which contains semantic information.  
 We are intersting in the following fields: **subject**, **predicate**, **object**, and **plausibility**.  
-We are using quasimodo API to extract the data. 
 
 ```bash
 # usage
-import quasimodo
+from quasimodo import Quasimodo
+
+quasimodo = Quasimodo(path='tsv/quasimodo.tsv')
+
+# in case that the tsv not exists, you should run:
+# import quasimodo
+# quasimodo.merge_tsvs('quasimodo.tsv)
 
 # get information on a single subject. n_largest will take the best matches according to quasimodo score.
 quasimodo.get_subject_props('horse', n_largest=20, verbose=True, plural_and_singular=True)

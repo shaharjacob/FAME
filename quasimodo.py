@@ -1,215 +1,251 @@
-import math
+import json
+import copy
+from pathlib import Path
 from typing import List, Dict, Tuple, Set
+from itertools import combinations
 
 import inflect
-import requests
+import pandas as pd
 from click import secho
-from bs4 import BeautifulSoup
+from pandas import DataFrame
 
 
-def read_page(filter_by: Dict[str, str], page: int = 1) -> str:
-    try:
-        keywords = []
-        for k, v in filter_by.items():
-            keywords.extend([k.replace(' ', '+'), '=', v.replace(' ', '+'), '&'])
-        keywords = "".join(keywords)
-        response = requests.get(f'https://quasimodo.r2.enst.fr/explorer/?{keywords}page={page}&order=pd')
-        return response.text
-    except:
-        return ""
+class Quasimodo:
 
+    def __init__(self, 
+                 path: str = 'merged.tsv'):
 
-def extend_plural_and_singular(string: str,
-                               engine: inflect.engine, 
-                               list_to_update: Set[str]):
-    plural = engine.plural(string)
-    if plural and plural not in list_to_update:
-        list_to_update.append(plural)
+        self.data = self.init_data(path)
+        self.engine = inflect.engine()
+    
 
-    singular = engine.singular_noun(string)
-    if singular and singular not in list_to_update:
-        list_to_update.append(singular)
+    def extend_plural_and_singular(self,
+                                   string: str,
+                                   list_to_update: List[str]):
 
+        plural = self.engine.plural(string)
+        if plural and plural not in list_to_update:
+            list_to_update.append(plural)
 
-def get_subject_props(subject: str, 
-                      n_largest: int = 0,
-                      verbose: bool = False,
-                      plural_and_singular: bool = False) -> List[Tuple[str]]:
-    subjects = [subject]
-    if plural_and_singular:
-        engine = inflect.engine()
-        extend_plural_and_singular(subject, engine, subjects)
+        singular = self.engine.singular_noun(string)
+        if singular and singular not in list_to_update:
+            list_to_update.append(singular)
+    
 
-    matches = []
-    matches_for_check = set()
-    for sub in subjects:
-        content = read_page({'subject': sub})
-        soup = BeautifulSoup(content, 'html.parser')
-        table = soup.find_all("table")
-        if table:
-            table = table[0] # assuming only one table in the page
-        else:
+    def init_data(self, 
+                  path: str) -> DataFrame:
+
+        secho(f"[INFO] init Quasimodo data", fg='blue')
+        return pd.read_csv(path, sep='\t', low_memory=False)
+    
+
+    def get_subject_props(self, 
+                          subject: str, 
+                          n_largest: int = 0,
+                          verbose: bool = False,
+                          plural_and_singular: bool = False) -> List[Tuple[str]]:
+        
+        subjects = [subject]
+        if plural_and_singular:
+            self.extend_plural_and_singular(subject, subjects)
+        
+        dataframes = [self.filter_by('subject', s) for s in subjects]
+        concat_df = pd.concat(dataframes)
+        concat_df = concat_df.drop_duplicates(subset=['predicate', 'object'])
+
+        if n_largest:
+            concat_df = concat_df.nlargest(n_largest, 'plausibility')
+
+        props_list = []
+        for _, val in concat_df.iterrows():
+            props_list.append((val['predicate'].replace('_', ' '), val['object']))
             if verbose:
-                secho(f"[WARNING] no match found for subject ({sub})", fg="yellow", bold=True)
+                secho(f"{val['subject']} ", fg="blue", bold=True, nl=False)
+                secho(f"{val['predicate'].replace('_', ' ')} ", fg="green", bold=True, nl=False)
+                secho(f"{val['object']} ", fg="cyan", bold=True, nl=False)
+                current_length = len(val['subject']) + len(val['predicate']) + len(val['object']) + 2
+                max_length = 40
+                spaces = ' '.join([""] * max(1, (max_length - current_length)))
+                secho(f"{spaces}score: ", nl=False)
+                secho(f"{val['plausibility']}", fg="magenta")
+
+        return props_list
+
+    
+    def get_subject_object_props(self, 
+                                 subject: str, 
+                                 obj: str,
+                                 n_largest: int = 0,
+                                 verbose: bool = False,
+                                 plural_and_singular: bool = False) -> List[Tuple[str]]:
+        
+        subjects = [subject]
+        objects = [obj]
+        if plural_and_singular:
+            self.extend_plural_and_singular(subject, subjects)
+            self.extend_plural_and_singular(obj, objects)
+        
+        subject_dataframes = [self.filter_by('subject', s) for s in subjects]
+        concat_subject_df = pd.concat(subject_dataframes)
+        concat_subject_df = concat_subject_df.drop_duplicates(subset=['predicate', 'object'])
+
+        filtered_dataframes = [self.filter_by('object', o, use_outside_df=True, df=concat_subject_df) for o in objects]
+        concat_filtered_df = pd.concat(filtered_dataframes)
+        concat_filtered_df = concat_filtered_df.drop_duplicates(subset=['predicate', 'object'])
+
+        if n_largest:
+            concat_filtered_df = concat_filtered_df.nlargest(n_largest, 'plausibility')
+
+        props_list = []
+        for _, val in concat_filtered_df.iterrows():
+            props_list.append(val['predicate'].replace('_', ' '))
+            if verbose:
+                secho(f"{val['subject']} ", fg="blue", bold=True, nl=False)
+                secho(f"{val['predicate'].replace('_', ' ')} ", fg="green", bold=True, nl=False)
+                secho(f"{val['object']} ", fg="cyan", bold=True, nl=False)
+                current_length = len(val['subject']) + len(val['predicate']) + len(val['object']) + 2
+                max_length = 40
+                spaces = ' '.join([""] * max(1, (max_length - current_length)))
+                secho(f"{spaces}score: ", nl=False)
+                secho(f"{val['plausibility']}", fg="magenta")
+
+        return props_list
+
+
+    def get_similarity_between_subjects(self,
+                                        subject1: str,
+                                        subject2: str,
+                                        n_largest: int = 0,
+                                        verbose: bool = False,
+                                        plural_and_singular: bool = False) -> List[Tuple[str]]:
+        
+        subjects1 = [subject1]
+        subjects2 = [subject2]
+
+        if plural_and_singular:
+            self.extend_plural_and_singular(subject1, subjects1)
+            self.extend_plural_and_singular(subject2, subjects2)
+        
+        subject1_dataframes = [self.filter_by('subject', s) for s in subjects1]
+        concat_subject1_df = pd.concat(subject1_dataframes)
+        concat_subject1_df = concat_subject1_df.drop_duplicates(subset=['predicate', 'object'])
+
+        subject2_dataframes = [self.filter_by('subject', s) for s in subjects2]
+        concat_subject2_df = pd.concat(subject2_dataframes)
+        concat_subject2_df = concat_subject2_df.drop_duplicates(subset=['predicate', 'object'])
+
+        concat_df = pd.concat([concat_subject1_df, concat_subject2_df])
+        df = concat_df[['predicate','object']]
+        df = df[df.duplicated(keep=False)]
+        indexies = df.groupby(list(df)).apply(lambda x: tuple(x.index)).tolist()
+        matches = []
+        for index in indexies:
+            sub1_row = concat_df.loc[index[0]]
+            sub2_row = concat_df.loc[index[1]]
+            matches.append({
+                "predicate": sub1_row['predicate'],
+                "object": sub1_row['object'],
+                "plausibility": (sub1_row['plausibility'] + sub2_row['plausibility']) / 2,
+            })
+
+        new_df = DataFrame(matches)
+        new_df = new_df.drop_duplicates(subset=['predicate', 'object'])
+
+        if n_largest:
+            new_df = new_df.nlargest(n_largest, 'plausibility')
+
+        props_list = []
+        for _, val in new_df.iterrows():
+            props_list.append((val['predicate'].replace('_', ' '), val['object']))
+            if verbose:
+                secho(f"{subject1} ", fg="blue", bold=True, nl=False)
+                secho(f"and ", nl=False)
+                secho(f"{subject2} ", fg="blue", bold=True, nl=False)
+                secho("are both ", nl=False)
+                secho(f"{val['predicate'].replace('_', ' ')} ", fg="green", bold=True, nl=False)
+                secho(f"{val['object']}", fg="cyan", bold=True, nl=False)
+                current_length = len(f"{subject1} ") + len("and ") + len(f"{subject2} ") + len("are both ") + len(f"{val['predicate']} ") + len(val['object'])
+                max_length = 50
+                spaces = ' '.join([""] * max(1, (max_length - current_length)))
+                secho(f"{spaces}avg. score: ", nl=False)
+                secho(f"{val['plausibility']}", fg="magenta")
+
+        return props_list
+
+    
+    def filter_by(self, 
+                  col: str,
+                  obj: str, 
+                  inplace: bool = False,
+                  use_outside_df: bool = False,
+                  df: DataFrame = DataFrame(), 
+                  n_largest: int = 0) -> DataFrame:
+
+        if not use_outside_df:
+            df = self.data if inplace else copy.deepcopy(self.data)
+        df = df.dropna(subset=[col])
+        df = df.loc[df[col] == obj]
+        if n_largest > 0:
+            df = df.nlargest(n_largest, 'plausibility')
+        return df
+
+
+def read_all_data(from_page: int = 1, to_page: int = 0):
+    rows_list = []
+    number_of_results = 3_845_266
+    to_page = min(to_page, math.ceil(number_of_results / 20))
+    for page in tqdm(range(from_page, to_page)):
+
+        try:
+            response = requests.get(f'https://quasimodo.r2.enst.fr/explorer/?page={page}')
+            content = response.text
+        except:
+            secho(f"skipping page {page}")
             continue
+
+        soup = BeautifulSoup(content, 'html.parser')
+        table = soup.find_all("table")[0]  # assuming only one table in the page
         trs = table.find_all("tr")[1:]  # first row is the titles
         for tr in trs:
             tds = tr.find_all("td")
-            if (tds[1].text, tds[2].text) not in matches_for_check:
-                matches_for_check.add((tds[1].text, tds[2].text))
-                matches.append((tds[0].text, tds[1].text.replace('_', ' '), tds[2].text, float(tds[5].text)))
-    
-    if n_largest > 0:
-            matches = sorted(matches, key=lambda x: -x[3])
-            matches = matches[:n_largest]
-
-    if verbose:
-        for match in matches:
-            secho(f"{match[0]} ", fg="blue", bold=True, nl=False)
-            secho(f"{match[1]} ", fg="green", bold=True, nl=False)
-            secho(f"{match[2]}", fg="cyan", bold=True)
-
-    return [(match[1], match[2]) for match in matches]
+            rows_list.append({
+                "subject": tds[0].text,
+                "predicate": tds[1].text,
+                "object": tds[2].text,
+                "plausibility": float(tds[5].text),
+                "neighborhood_sigma": float(tds[6].text),
+                "local_sigma": float(tds[7].text)
+            })
+    return rows_list
 
 
-def get_subject_object_props(subject: str,
-                             obj: str,
-                             n_largest: int = 0,
-                             verbose: bool = False,
-                             plural_and_singular: bool = False) -> List[Tuple[str]]:
+def write_tsv(from_page: int = 1, to_page: int = 0):
+    info: List[Dict[str, str]] = read_all_data(from_page, to_page)
+    df = DataFrame(info)
 
-    subjects = [subject]
-    objects = [obj]
-
-    if plural_and_singular:
-        engine = inflect.engine()
-        extend_plural_and_singular(subject, engine, subjects)
-        extend_plural_and_singular(obj, engine, objects)
-    
-    matches = []
-    matches_for_check = set()
-    for sub in subjects:
-        for obj in objects:
-            content = read_page({'subject': sub, 'object': obj})
-            soup = BeautifulSoup(content, 'html.parser')
-            table = soup.find_all("table")
-            if table:
-                table = table[0] # assuming only one table in the page
-            else:
-                if verbose:
-                    secho(f"[WARNING] no match found for subject ({sub}) and object ({obj})", fg="yellow", bold=True)
-                continue
-            trs = table.find_all("tr")[1:]  # first row is the titles
-            for tr in trs:
-                tds = tr.find_all("td")
-                if (tds[1].text, tds[2].text) not in matches_for_check:
-                    matches_for_check.add((tds[1].text, tds[2].text))
-                    matches.append((tds[0].text, tds[1].text.replace('_', ' '), tds[2].text, float(tds[5].text)))
-    
-    if n_largest > 0:
-            matches = sorted(matches, key=lambda x: -x[3])
-            matches = matches[:n_largest]
-
-    if verbose:
-        for match in matches:
-            secho(f"{match[0]} ", fg="blue", bold=True, nl=False)
-            secho(f"{match[1]} ", fg="green", bold=True, nl=False)
-            secho(f"{match[2]}", fg="cyan", bold=True)
-
-    return [match[1] for match in matches]
+    dir_parent = Path('tsv')
+    df.to_csv(dir_parent / f'{from_page}_{to_page}.tsv', sep="\t", index=False, encoding='utf-8')
 
 
-def get_number_of_results(soup: BeautifulSoup):
-    div = soup.find_all('div', attrs={'class': 'container'})[0]
-    p = div.find_all('p')
-    if p:
-        b = p[0].find_all('b') 
-        if b:
-            return int(b[0].text)
-    return 0
-
-
-def get_similarity_between_subjects(subject1: str,
-                                    subject2: str,
-                                    n_largest: int = 0,
-                                    verbose: bool = False,
-                                    plural_and_singular: bool = False) -> List[Tuple[str]]:
-
-    subjects1 = [subject1]
-    subjects2 = [subject2]
-
-    if plural_and_singular:
-        engine = inflect.engine()
-        extend_plural_and_singular(subject1, engine, subjects1)
-        extend_plural_and_singular(subject2, engine, subjects2)
-    
-    matches = []
-    matches_for_check = {}
-
-    for sub1 in subjects1:
-        content = read_page({'subject': sub1})
-        soup = BeautifulSoup(content, 'html.parser')
-        number_of_results = get_number_of_results(soup)
-        if number_of_results == 0:
-            if verbose:
-                secho(f"[WARNING] no match found for subject ({sub1})", fg="yellow", bold=True)
-            continue
-        
-        for page in range(1, math.ceil(number_of_results / 20)):
-            content = read_page({'subject': sub1}, page=page)
-            soup = BeautifulSoup(content, 'html.parser')
-            table = soup.find_all("table")[0]  # assuming only one table in the page
-            trs = table.find_all("tr")[1:]  # first row is the titles
-            for tr in trs:
-                tds = tr.find_all("td")
-                if (tds[1].text, tds[2].text) not in matches_for_check:
-                    matches_for_check[(tds[1].text, tds[2].text)] = (tds[0].text, float(tds[5].text))
-
-    for sub2 in subjects2:
-        content = read_page({'subject': sub2})
-        soup = BeautifulSoup(content, 'html.parser')
-        number_of_results = get_number_of_results(soup)
-        if number_of_results == 0:
-            if verbose:
-                secho(f"[WARNING] no match found for subject ({sub2})", fg="yellow", bold=True)
-            continue
-        
-        for page in range(1, math.ceil(number_of_results / 20)):
-            content = read_page({'subject': sub2}, page=page)
-            soup = BeautifulSoup(content, 'html.parser')
-            table = soup.find_all("table")[0]  # assuming only one table in the page
-            trs = table.find_all("tr")[1:]  # first row is the titles
-            for tr in trs:
-                tds = tr.find_all("td")
-                if (tds[1].text, tds[2].text) in matches_for_check:
-                    matches.append((matches_for_check[(tds[1].text, tds[2].text)][0],
-                                    tds[0].text,
-                                    tds[1].text,
-                                    tds[2].text,
-                                    (matches_for_check[(tds[1].text, tds[2].text)][1] + float(tds[5].text)) / 2))
-    
-    if n_largest > 0:
-            matches = sorted(matches, key=lambda x: -x[4])
-            matches = matches[:n_largest]
-
-    if verbose:
-        for match in matches:
-            secho(f"{match[0]} ", fg="blue", bold=True, nl=False)
-            secho(f"and ", nl=False)
-            secho(f"{match[1]} ", fg="blue", bold=True, nl=False)
-            secho("are both ", nl=False)
-            secho(f"{match[2]} ", fg="green", bold=True, nl=False)
-            secho(f"{match[3]}", fg="cyan", bold=True)
-
-    return [(match[2], match[3]) for match in matches]
+def merge_tsvs(output: str):
+    dir_parent = Path('tsv')
+    dataframes = [pd.read_csv(path, sep="\t") for path in dir_parent.iterdir()]
+    merged_df = pd.concat(dataframes)
+    merged_df.to_csv(dir_parent / output, sep="\t", index=False, encoding='utf-8')
 
 
 if __name__ == '__main__':
-    pass
-    # get_subject_props('horse', n_largest=20, verbose=True, plural_and_singular=True)
-    # get_subject_object_props('sun', 'earth', n_largest=20, verbose=True, plural_and_singular=True)
-    # get_similarity_between_subjects('sun', 'earth', n_largest=20, verbose=True, plural_and_singular=True)
+    # merge_tsvs('merged_df.tsv')
 
+    start_page = 46000
+    end_page = 50000
+    print(start_page, end_page)
+    write_tsv(start_page, end_page)
+
+    # quasimodo = Quasimodo(path='tsv/merged_df.tsv')
+    # quasimodo.get_subject_props('cow', 100, True, True)
+    # quasimodo.get_subject_object_props('cow', 'milk', 7, True, True)
+    # quasimodo.get_similarity_between_subjects('cow', 'chicken', 100, True, True)
 
 
 
