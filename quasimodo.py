@@ -1,13 +1,15 @@
-import json
+import math
 import copy
 from pathlib import Path
-from typing import List, Dict, Tuple, Set
-from itertools import combinations
+from typing import List, Dict, Tuple
 
 import inflect
+import requests
 import pandas as pd
+from tqdm import tqdm
 from click import secho
 from pandas import DataFrame
+from bs4 import BeautifulSoup
 
 
 class Quasimodo:
@@ -237,7 +239,7 @@ def merge_tsvs(output: str):
 if __name__ == '__main__':
     # merge_tsvs('merged_df.tsv')
 
-    start_page = 46000
+    start_page = 48000
     end_page = 50000
     print(start_page, end_page)
     write_tsv(start_page, end_page)
