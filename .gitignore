@@ -2,7 +2,7 @@
 test.py
 *.csv
 *.json
-*.tsv
+# *.tsv
 .DS_Store
 # *.pdf
 *.gv
