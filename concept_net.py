@@ -1,12 +1,15 @@
 from pathlib import Path
-from typing import List, Dict, Tuple
+from typing import List, Dict, Tuple, Set
 
+import inflect
 import requests
 from click import secho
 from bs4 import BeautifulSoup
 
 
-def read_page(subject: str, which: str, n: int = 20):
+def read_page(subject: str, 
+              which: str, 
+              n: int = 20):
     url = f'https://conceptnet.io/c/en/{subject}?rel=/r/{which}&limit={n}'
     try:
         response = requests.get(url)
@@ -16,7 +19,23 @@ def read_page(subject: str, which: str, n: int = 20):
         return ""
 
 
-def extract_props(content: str, subject: str, weight_thresh: int = 0):
+def extend_plural_and_singular(engine: inflect.engine,
+                               string: str,
+                               list_to_update: List[str]):
+
+    plural = engine.plural(string)
+    if plural and plural not in list_to_update:
+        list_to_update.append(plural)
+
+    singular = engine.singular_noun(string)
+    if singular and singular not in list_to_update:
+        list_to_update.append(singular)
+
+
+def extract_props(content: str, 
+                  subject: str, 
+                  matches: Set[str],
+                  weight_thresh: int = 0):
     soup = BeautifulSoup(content, 'html.parser')
     tds = soup.find_all('td', attrs={'class': 'edge-end'})
     weights = soup.find_all('div', attrs={'class': 'weight'})
@@ -29,28 +48,62 @@ def extract_props(content: str, subject: str, weight_thresh: int = 0):
             if w >= weight_thresh:
                 subject_ = td_subject.find('a').text.strip()
                 if subject in subject_:
-                    props.append(prop.text.strip())
+                    if prop.text.strip() not in matches:
+                        matches.add(prop.text.strip())
+                        props.append((prop.text.strip(), w))
     return props
 
 
-def capableOf(subject: str, n: int = 20, weight_thresh: int = 0):
-    content = read_page(subject, 'CapableOf', n)
-    return extract_props(content, subject, weight_thresh)
+def extend_and_extract_props(engine: inflect.engine, 
+                             which: str, 
+                             subject: str, 
+                             n: int = 20, 
+                             weight_thresh: int = 0,
+                             plural_and_singular: bool = False):
+    subjects = [subject]
+    if plural_and_singular:
+        extend_plural_and_singular(engine, subject, subjects)
+
+    to_return = []
+    matches = set()
+    for sub in subjects:
+        content = read_page(subject, which, n)
+        props = extract_props(content, subject, matches, weight_thresh)
+        to_return.extend(props)
+    to_return = sorted(to_return, key=lambda x: -x[1])
+    return [val[0] for val in to_return[:n]]
+
+
+def capableOf(engine: inflect.engine, 
+              subject: str, 
+              n: int = 20, 
+              weight_thresh: int = 0,
+              plural_and_singular: bool = False):
+    return extend_and_extract_props(engine, "CapableOf", subject, n, weight_thresh, plural_and_singular)
     
 
-def isA(subject: str, n: int = 20, weight_thresh: int = 0):
-    content = read_page(subject, 'IsA', n)
-    return extract_props(content, subject, weight_thresh)
+def isA(engine: inflect.engine, 
+        subject: str, 
+        n: int = 20, 
+        weight_thresh: int = 0,
+        plural_and_singular: bool = False):
+    return extend_and_extract_props(engine, "IsA", subject, n, weight_thresh, plural_and_singular)
 
 
-def usedFor(subject: str, n: int = 20, weight_thresh: int = 0):
-    content = read_page(subject, 'UsedFor', n)
-    return extract_props(content, subject, weight_thresh)
+def usedFor(engine: inflect.engine, 
+            subject: str, 
+            n: int = 20, 
+            weight_thresh: int = 0,
+            plural_and_singular: bool = False):
+    return extend_and_extract_props(engine, "UsedFor", subject, n, weight_thresh, plural_and_singular)
 
 
-def hasProperty(subject: str, n: int = 20, weight_thresh: int = 0):
-    content = read_page(subject, 'HasProperty', n)
-    return extract_props(content, subject, weight_thresh)
+def hasProperty(engine: inflect.engine, 
+                subject: str, 
+                n: int = 20, 
+                weight_thresh: int = 0,
+                plural_and_singular: bool = False):
+    return extend_and_extract_props(engine, "HasProperty", subject, n, weight_thresh, plural_and_singular)
 
 
 # print(capableOf('sun', 10, 1))
