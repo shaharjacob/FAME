@@ -55,7 +55,7 @@ class MyGraph(Digraph):
             for title, labels_ in labels.items():
                 parts.append(f'<TR><TD ALIGN="LEFT"><FONT POINT-SIZE="{font_size}" COLOR="#494949"><B>{title}</B></FONT></TD></TR>')
                 for label in labels_:
-                    parts.append(f'<TR><TD ALIGN="LEFT"><FONT POINT-SIZE="{font_size}" COLOR="#333333">{label}</FONT></TD></TR>')
+                    parts.append(f'<TR><TD ALIGN="LEFT"><FONT POINT-SIZE="{font_size}" COLOR="#333333">- {label}</FONT></TD></TR>')
                 parts.append(f'<TR><TD> </TD></TR>')
         else: # node
             for label in labels:

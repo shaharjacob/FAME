@@ -48,9 +48,10 @@ def extract_props(content: str,
             if w >= weight_thresh:
                 subject_ = td_subject.find('a').text.strip()
                 if subject in subject_:
-                    if prop.text.strip() not in matches:
-                        matches.add(prop.text.strip())
-                        props.append((prop.text.strip(), w))
+                    prop_to_add = prop.text.strip()
+                    if (prop_to_add not in matches) and (prop_to_add != subject):
+                        matches.add(prop_to_add)
+                        props.append((prop_to_add, w))
     return props
 
 
