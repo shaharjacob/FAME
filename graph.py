@@ -50,7 +50,7 @@ class MyGraph(Digraph):
         parts.append(f'<font color="{font_color}" point-size="{font_size}px">')
         parts.append('<table border="0" cellspacing="0" cellpadding="0">')
         if name: # node
-            parts.append(f'<tr><td><u><b>{name}</b></u></td></tr>')
+            parts.append(f'<tr><td><FONT POINT-SIZE="20"><u><b>{name}</b></u></FONT></td></tr>')
         if isinstance(labels, dict):  # edge
             for title, labels_ in labels.items():
                 parts.append(f'<tr><td><u><b>{title}</b></u></td></tr>')
