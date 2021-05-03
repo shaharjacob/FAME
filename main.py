@@ -39,7 +39,7 @@ def main(text: str, quasimodo: Quasimodo):
         if concept_net_props:
             labels["[conceptNet] has properties..."] = concept_net_props
         if concept_net_capable:
-            labels["[conceptNet] is caple of..."] = concept_net_capable
+            labels["[conceptNet] is capable of..."] = concept_net_capable
         if concept_net_type_of:
             labels["[conceptNet] is a type of..."] = concept_net_type_of
         if concept_net_used_for:
