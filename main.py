@@ -12,14 +12,14 @@ from wikifier import Wikifier
 from quasimodo import Quasimodo
 
 
-def main(text: str, quasimodo: Quasimodo):
+def main(text: str, quasimodo: Quasimodo, addition_nouns = []):
     graph = MyGraph()
 
     # part of speech
     w = Wikifier(text)
     nouns = w.get_specific_part_of_speech("nouns", normForm=False)
     Wikifier.remove_parts_of_compound_nouns(nouns)
-
+    nouns = list(set(nouns + addition_nouns))
     #########
     # nodes #
     #########
@@ -90,14 +90,17 @@ if __name__ == "__main__":
     text2 = "horses in stables behave like cows in byre"
     text3 = "peanut butter has a strong taste that causes a feeling of suffocation"
     text4 = "electrons revolve around the nucleus as the earth revolve around the sun"
+    text5 = "The nucleus, which is positively charged, and the electrons which are negatively charged, compose the atom"
+    text6 = "On earth, the atmosphere protects us from the sun, but not enough so we use sunscreen"
 
     tsv_to_load = Path('tsv/quasimodo.tsv')
     if not tsv_to_load.exists():
-        quasimodo.merge_tsvs(tsv_to_load.name)  # will be created under /tsv
+        import quasimodo as qs
+        qs.merge_tsvs(tsv_to_load.name)  # will be created under /tsv
     quasimodo = Quasimodo(path=str(tsv_to_load))
 
     start = time.time()
-    main(text4, quasimodo)
+    main(text6, quasimodo, addition_nouns=['sunscreen'])
     secho(f"\nTotal running time: ", fg='blue', nl=False)
     secho(str(time.time() - start), fg='blue', bold=True)
 
