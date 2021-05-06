@@ -166,7 +166,7 @@ def process(d: Dict[str, List[List[str]]], plural_and_singular: bool = True, syn
     engine = inflect.engine()
     suggestions = {}
     for question, objects in d.items():
-        secho(f"[INFO] collect information on question '{question}'", fg="blue")
+        secho(f"\n[INFO] collect information on question '{question}'", fg="blue")
         for entry in tqdm(objects):
             verify_question(question, entry)
             if (entry[0], entry[1]) not in suggestions:

@@ -1,11 +1,13 @@
+import glob
 from typing import List
 
 from click import secho
 from graphviz import Digraph
+# f"graphs/{len(glob.glob('graphs/*.pdf'))}"
 
 class MyGraph(Digraph):
-    def __init__(self):
-        super().__init__()
+    def __init__(self, name):
+        super().__init__(name=name)
         self.init_attr()
         self.nodes = []
         self.node_names = []

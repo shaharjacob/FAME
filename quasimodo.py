@@ -139,6 +139,9 @@ class Quasimodo:
         concat_df = pd.concat([concat_subject1_df, concat_subject2_df])
         df = concat_df[['predicate','object']]
         df = df[df.duplicated(keep=False)]
+        if df.empty:
+            return []
+            
         indexies = df.groupby(list(df)).apply(lambda x: tuple(x.index)).tolist()
         matches = []
         for index in indexies:
@@ -237,12 +240,13 @@ def merge_tsvs(output: str):
 
 
 if __name__ == '__main__':
-    # merge_tsvs('merged_df.tsv')
+    pass
+    # merge_tsvs('quasimodo.tsv')
 
-    start_page = 48000
-    end_page = 50000
-    print(start_page, end_page)
-    write_tsv(start_page, end_page)
+    # start_page = 48000
+    # end_page = 50000
+    # print(start_page, end_page)
+    # write_tsv(start_page, end_page)
 
     # quasimodo = Quasimodo(path='tsv/merged_df.tsv')
     # quasimodo.get_subject_props('cow', 100, True, True)

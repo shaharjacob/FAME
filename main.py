@@ -13,19 +13,23 @@ from quasimodo import Quasimodo
 
 
 def main(text: str, quasimodo: Quasimodo, addition_nouns = []):
-    graph = MyGraph()
 
+    secho(f"Text:", fg="blue", bold=True, nl=False)
+    secho(f"{text}", fg="blue")
     # part of speech
     w = Wikifier(text)
     nouns = w.get_specific_part_of_speech("nouns", normForm=False)
     Wikifier.remove_parts_of_compound_nouns(nouns)
     nouns = list(set(nouns + addition_nouns))
+    secho(f"Nouns:", fg="blue", bold=True, nl=False)
+    secho(f"{nouns}", fg="blue")
+    graph = MyGraph(name=f'graphs/{"_".join(nouns)}')
     #########
     # nodes #
     #########
 
     # single noun information - for nodes
-    secho("[INFO] collect nodes information", fg="blue")
+    secho("\n[INFO] collect nodes information", fg="blue")
     for noun in tqdm(nouns):
         labels = {}
         noun_props = quasimodo.get_subject_props(subject=noun, n_largest=10, plural_and_singular=True)
@@ -64,7 +68,7 @@ def main(text: str, quasimodo: Quasimodo, addition_nouns = []):
     google_autocomplete_edges_info = google_autocomplete.process(d, verbose=False)
     
     # create edge for every combination
-    secho("[INFO] collect edges information from Quasimodo", fg="blue")
+    secho("\n[INFO] collect edges information from Quasimodo", fg="blue")
     for comb in tqdm(combs):
         labels = {}
         autocomplete = google_autocomplete_edges_info.get((comb[0], comb[1]), [""])
@@ -86,10 +90,10 @@ def main(text: str, quasimodo: Quasimodo, addition_nouns = []):
 
 if __name__ == "__main__":
 
-    text1 = "putting a band aid on a wound is like putting a flag in the code"
-    text2 = "horses in stables behave like cows in byre"
-    text3 = "peanut butter has a strong taste that causes a feeling of suffocation"
-    text4 = "electrons revolve around the nucleus as the earth revolve around the sun"
+    # text1 = "putting a band aid on a wound is like putting a flag in the code"
+    # text2 = "horses in stables behave like cows in byre"
+    # text3 = "electrons revolve around the nucleus as the earth revolve around the sun"
+    text4 = "peanut butter has a strong taste that causes a feeling of suffocation"
     text5 = "The nucleus, which is positively charged, and the electrons which are negatively charged, compose the atom"
     text6 = "On earth, the atmosphere protects us from the sun, but not enough so we use sunscreen"
 
@@ -100,7 +104,7 @@ if __name__ == "__main__":
     quasimodo = Quasimodo(path=str(tsv_to_load))
 
     start = time.time()
-    main(text6, quasimodo, addition_nouns=['sunscreen'])
+    main(text4, quasimodo, addition_nouns=[])
     secho(f"\nTotal running time: ", fg='blue', nl=False)
     secho(str(time.time() - start), fg='blue', bold=True)
 
