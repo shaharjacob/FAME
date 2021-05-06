@@ -14,14 +14,14 @@ from quasimodo import Quasimodo
 
 def main(text: str, quasimodo: Quasimodo, addition_nouns = []):
 
-    secho(f"Text:", fg="blue", bold=True, nl=False)
+    secho(f"Text: ", fg="blue", bold=True, nl=False)
     secho(f"{text}", fg="blue")
     # part of speech
     w = Wikifier(text)
     nouns = w.get_specific_part_of_speech("nouns", normForm=False)
     Wikifier.remove_parts_of_compound_nouns(nouns)
-    nouns = list(set(nouns + addition_nouns))
-    secho(f"Nouns:", fg="blue", bold=True, nl=False)
+    nouns = sorted(list(set(nouns + addition_nouns)))
+    secho(f"Nouns: ", fg="blue", bold=True, nl=False)
     secho(f"{nouns}", fg="blue")
     graph = MyGraph(name=f'graphs/{"_".join(nouns)}')
     #########
@@ -90,9 +90,10 @@ def main(text: str, quasimodo: Quasimodo, addition_nouns = []):
 
 if __name__ == "__main__":
 
-    # text1 = "putting a band aid on a wound is like putting a flag in the code"
-    # text2 = "horses in stables behave like cows in byre"
-    # text3 = "electrons revolve around the nucleus as the earth revolve around the sun"
+    text1 = "putting a band aid on a wound is like putting a flag in the code"
+    text2 = "horses in stables behave like cows in byre"
+    text3 = "electrons revolve around the nucleus as the earth revolve around the sun"
+
     text4 = "peanut butter has a strong taste that causes a feeling of suffocation"
     text5 = "The nucleus, which is positively charged, and the electrons which are negatively charged, compose the atom"
     text6 = "On earth, the atmosphere protects us from the sun, but not enough so we use sunscreen"
@@ -103,8 +104,12 @@ if __name__ == "__main__":
         qs.merge_tsvs(tsv_to_load.name)  # will be created under /tsv
     quasimodo = Quasimodo(path=str(tsv_to_load))
 
-    start = time.time()
-    main(text4, quasimodo, addition_nouns=[])
-    secho(f"\nTotal running time: ", fg='blue', nl=False)
-    secho(str(time.time() - start), fg='blue', bold=True)
+    for text in [text1, text2, text3]:
+        addition_nouns = []
+        if 'sunscreen' in text:
+            addition_nouns.append('sunscreen')
+        start = time.time()
+        main(text, quasimodo, addition_nouns=addition_nouns)
+        secho(f"\nTotal running time: ", fg='blue', nl=False)
+        secho(str(time.time() - start), fg='blue', bold=True)
 

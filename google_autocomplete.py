@@ -10,8 +10,6 @@ import requests
 from tqdm import tqdm
 from click import secho
 
-# from dictionary import Mixed
-
 
 class GoogleAutocomplete(object):
     def __init__(self, 
@@ -39,6 +37,7 @@ class GoogleAutocomplete(object):
             if re.match(self.regex, suggestion):
                 parts = suggestion.split()
                 if all(elem in parts for elem in [self.obj1, self.obj2]):
+                # if all(elem in parts for elem in [self.obj1, self.obj2, self.question]):
                     sugges.append((suggestion, self.keyword))
         return list(set(sugges))
 
@@ -140,28 +139,6 @@ def extend_to_plural_and_singular(engine: inflect.engine, entry: List[str], ques
                 suggestions.append(suggestion[0])
 
 
-# def extend_synonyms(entry: List[str], question: str, suggestions: Dict[str, str], n: int = 3, verbose: bool = True):
-#     mixed = Mixed(entry[0])
-#     synonyms = mixed.getSynonyms(verbose=False, n=n)
-#     for synonym in synonyms:
-#         googleAC = GoogleAutocomplete(question, synonym, entry[1])
-#         for suggestion in googleAC.suggestions:
-#             if suggestion[0] not in suggestions:
-                # if verbose:
-                #     googleAC.render_single_suggestion(suggestion)
-#                 suggestions.append(suggestion[0])
-
-#     mixed = Mixed(entry[1])
-#     synonyms = mixed.getSynonyms(verbose=False, n=n)
-#     for synonym in synonyms:
-#         googleAC = GoogleAutocomplete(question, entry[0], synonym)
-#         for suggestion in googleAC.suggestions:
-            # if suggestion[0] not in suggestions:
-            #     if verbose:
-            #         googleAC.render_single_suggestion(suggestion)
-            #     suggestions.append(suggestion[0])
-
-
 def process(d: Dict[str, List[List[str]]], plural_and_singular: bool = True, synonyms: bool = True, verbose: bool = True) -> List[str]:
     engine = inflect.engine()
     suggestions = {}
@@ -179,8 +156,6 @@ def process(d: Dict[str, List[List[str]]], plural_and_singular: bool = True, syn
                     suggestions[(entry[0], entry[1])].append(suggestion[0])
             if plural_and_singular:
                 extend_to_plural_and_singular(engine, entry, question, suggestions[(entry[0], entry[1])], verbose=verbose)
-            # if synonyms:
-            #     extend_synonyms(entry, question, suggestions[(entry[0], entry[1])], verbose=verbose)
             suggestions[(entry[0], entry[1])] = list(set(suggestions[(entry[0], entry[1])]))
 
     return suggestions
