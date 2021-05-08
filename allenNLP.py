@@ -1,5 +1,6 @@
 import tempfile
 from pathlib import Path
+from collections import Counter, defaultdict
 from typing import Iterable, Dict, List, Tuple
 
 import torch
@@ -8,26 +9,27 @@ from click import secho
 from allennlp.models import Model
 from allennlp.predictors import Predictor
 from allennlp.common.util import JsonDict
-from allennlp.data.instance import Instance
-from allennlp.training.util import evaluate
-from allennlp.data.tokenizers import Tokenizer
-from allennlp.data import Vocabulary, DataLoader
 from allennlp.nn.util import get_text_field_mask
-from allennlp.data.tokenizers import SpacyTokenizer
-from allennlp.training.optimizers import AdamOptimizer
+
+from allennlp.data.instance import Instance
+from allennlp.data import Vocabulary, DataLoader
 from allennlp.data.data_loaders import SimpleDataLoader
-from allennlp.training.metrics import CategoricalAccuracy
 from allennlp.data.fields.text_field import TextFieldTensors
-from allennlp.modules.seq2vec_encoders import Seq2VecEncoder
 from allennlp.data.token_indexers import SingleIdTokenIndexer
-from allennlp.data.fields import Field, TextField, LabelField
-from allennlp.modules.token_embedders.embedding import Embedding
-from allennlp.modules.text_field_embedders import TextFieldEmbedder
 from allennlp.data.token_indexers.token_indexer import TokenIndexer
-from allennlp.modules.seq2vec_encoders import BagOfEmbeddingsEncoder
-from allennlp.training.trainer import GradientDescentTrainer, Trainer
+from allennlp.data.tokenizers import Tokenizer, Token, SpacyTokenizer
 from allennlp.data.dataset_readers.dataset_reader import DatasetReader
 from allennlp.data.tokenizers.whitespace_tokenizer import WhitespaceTokenizer
+from allennlp.data.fields import Field, TextField, LabelField, SequenceLabelField
+
+from allennlp.training.util import evaluate
+from allennlp.training.optimizers import AdamOptimizer
+from allennlp.training.metrics import CategoricalAccuracy
+from allennlp.training.trainer import GradientDescentTrainer, Trainer
+
+from allennlp.modules.token_embedders.embedding import Embedding
+from allennlp.modules.text_field_embedders import TextFieldEmbedder
+from allennlp.modules.seq2vec_encoders import BagOfEmbeddingsEncoder, Seq2VecEncoder
 from allennlp.modules.text_field_embedders.basic_text_field_embedder import BasicTextFieldEmbedder
 
 
@@ -177,25 +179,88 @@ if __name__ == "__main__":
     # results = run_test(model, dataset_reader)
     # print(results)
 
+    # model, dataset_reader = run_training_loop()
+    # vocab = model.vocab
+    # predictor = SentenceClassifierPredictor(model, dataset_reader)
 
-    model, dataset_reader = run_training_loop()
-    vocab = model.vocab
-    predictor = SentenceClassifierPredictor(model, dataset_reader)
-
-    output = predictor.predict("A good movie!")
-    print(
-        [
-            (vocab.get_token_from_index(label_id, "labels"), prob)
-            for label_id, prob in enumerate(output["probs"])
-        ]
-    )
-    output = predictor.predict("This was a monstrous waste of time.")
-    print(
-        [
-            (vocab.get_token_from_index(label_id, "labels"), prob)
-            for label_id, prob in enumerate(output["probs"])
-        ]
-    )
+    # output = predictor.predict("A good movie!")
 
 
+    # print(
+    #     [
+    #         (vocab.get_token_from_index(label_id, "labels"), prob)
+    #         for label_id, prob in enumerate(output["probs"])
+    #     ]
+    # )
+    # output = predictor.predict("This was a monstrous waste of time.")
+    # print(
+    #     [
+    #         (vocab.get_token_from_index(label_id, "labels"), prob)
+    #         for label_id, prob in enumerate(output["probs"])
+    #     ]
+    # )
 
+
+    # tokens = [Token("The"), Token("best"), Token("movie"), Token("ever"), Token("!")]
+    # token_indexers: Dict[str, TokenIndexer] = {"tokens": SingleIdTokenIndexer()}
+    # text_field = TextField(tokens, token_indexers=token_indexers)
+    # label_field = LabelField("pos")
+    # sequence_label_field = SequenceLabelField(["DET", "ADJ", "NOUN", "ADV", "PUNKT"], text_field)
+
+    # # Create an Instance
+    # fields: Dict[str, Field] = {
+    #     "tokens": text_field,
+    #     "label": label_field,
+    # }
+    # instance = Instance(fields)
+
+    # # You can add fields later
+    # instance.add_field("label_seq", sequence_label_field)
+
+    # # You can simply use print() to see the instance's content
+    # # print(instance)
+
+    # # Create a Vocabulary
+    # counter: Dict[str, Dict[str, int]] = defaultdict(Counter)
+    # instance.count_vocab_items(counter)
+    # vocab = Vocabulary(counter)
+
+    # # Convert all strings in all of the fields into integer IDs by calling index_fields()
+    # instance.index_fields(vocab)
+
+    # # Instances know how to turn themselves into a dict of tensors.  When we call this
+    # # method in our data code, we additionally give a `padding_lengths` argument.
+    # # We will pass this dictionary to the model as **tensors, so be sure the keys
+    # # match what the model expects.
+    # tensors = instance.as_tensor_dict()
+    # print(tensors)
+
+
+    # tokenizer = SpacyTokenizer()
+    # sentence = "We are learning about TextFields"
+    # tokens = tokenizer.tokenize(sentence)
+    # token_indexers = {"tokens": SingleIdTokenIndexer()}
+    # text_field = TextField(tokens, token_indexers)
+    # instance = Instance({"sentence": text_field})
+    # print(instance)
+
+
+    text = "This is some text with more words"
+
+    # split to words
+    tokenizer: Tokenizer = WhitespaceTokenizer()
+    # list of Token object
+    tokens = tokenizer.tokenize(text)
+
+    vocab = Vocabulary()
+    # add the strings of the text to the vocabulary
+    vocab.add_tokens_to_namespace([token.text for token in tokens], namespace="token_vocab")
+
+    text_field = TextField(tokens, {"tokens": SingleIdTokenIndexer(namespace="token_vocab")})
+    text_field.index(vocab)
+    padding_lengths = text_field.get_padding_lengths()
+    token_tensor = text_field.as_tensor(padding_lengths)
+
+    embedding = Embedding(num_embeddings=10, embedding_dim=3)
+    embedded_tokens = embedding(**token_tensor["tokens"])
+    print("Using the Embedding directly:", embedded_tokens)

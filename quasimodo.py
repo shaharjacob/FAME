@@ -1,6 +1,7 @@
 import math
 import copy
 from pathlib import Path
+from collections import Counter
 from typing import List, Dict, Tuple
 
 import inflect
@@ -193,6 +194,17 @@ class Quasimodo:
         if n_largest > 0:
             df = df.nlargest(n_largest, 'plausibility')
         return df
+    
+    def count_predicates(self):
+        return Counter(self.data["predicate"].tolist())
+        # return Counter(self.data["predicate"].tolist()).most_common(100)
+    
+    def count_pred_obj_paris(self):
+        predicates = self.data["predicate"].tolist()
+        objects = self.data["object"].tolist()
+        concat = [(predicate, obj) for predicate, obj in zip(predicates, objects)]
+        return Counter(concat)
+        # return Counter(concat).most_common(100)
 
 
 def read_all_data(from_page: int = 1, to_page: int = 0):
@@ -240,7 +252,7 @@ def merge_tsvs(output: str):
 
 
 if __name__ == '__main__':
-    pass
+    # pass
     # merge_tsvs('quasimodo.tsv')
 
     # start_page = 48000
@@ -248,7 +260,14 @@ if __name__ == '__main__':
     # print(start_page, end_page)
     # write_tsv(start_page, end_page)
 
-    # quasimodo = Quasimodo(path='tsv/merged_df.tsv')
+    quasimodo = Quasimodo(path='tsv/quasimodo.tsv')
+    counts = quasimodo.count_pred_obj_paris()
+    a = [('revolve around', 'sun'), ('rotate around', 'sun'), ('be pulled into', 'sun'), ('has_property', 'sun'), 
+        ('be attracted to', 'sun'), ('need', 'sun'), ('spin around', 'sun'), ('be to', 'sun'), ('be close to', 'sun'), 
+        ('turn around', 'sun')
+    ]
+    for k in a:
+        print(f"{k}: {counts[k]}")
     # quasimodo.get_subject_props('cow', 100, True, True)
     # quasimodo.get_subject_object_props('cow', 'milk', 7, True, True)
     # quasimodo.get_similarity_between_subjects('cow', 'chicken', 100, True, True)
