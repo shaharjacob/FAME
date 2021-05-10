@@ -1,3 +1,5 @@
+import itertools
+from itertools import combinations
 from typing import List, Dict, Tuple
 
 import numpy as np
@@ -75,8 +77,40 @@ class SentenceEmbedding(SentenceTransformer):
             for sentence in sentences:
                 SentenceEmbedding.print_sentence(sentence)
         return sentences
+    
+    def match_paris(self, nouns: List[str], verbose: bool = False):
+        if len(nouns) != 4:
+            secho(f"[ERROR] you should give excatly 4 nouns ({len(nouns)} was given)", fg='red', bold=True)
+            exit(1)
 
+        matches = []
+        # best_score = 0
+        combs = SentenceEmbedding.get_all_combs(nouns)
+        # best_match = None
+        for comb in combs:
+            res = self.get_matches_between_edges(comb[0], comb[1], n_best=5)
+            score = 0
+            if res:
+                score = sum([score[2] for score in res]) / len(res)
+            matches.append((comb, score))
+            # if score > best_score:
+            #     best_score = score
+            #     best_match = comb
 
+        matches = sorted(matches, key=lambda x: -x[1])
+        if verbose:
+            for match in matches:
+                secho(f"({match[0][0][0]} --> {match[0][0][1]})", fg='red', bold=True, nl=False)
+                secho(f", ", nl=False)
+                secho(f"({match[0][1][0]} --> {match[0][1][1]}) ", fg='green', bold=True, nl=False)
+                secho(f"----> ", nl=False)
+                secho(f"{match[1]}", fg='blue', bold=True)
+        
+        return {
+            "score": matches[0][1],
+            "match": matches[0][0],
+        }
+                
     @staticmethod
     def print_sentence(sentence: tuple):
         secho(f"{sentence[0][0]} ", fg='red', bold=True, nl=False)
@@ -99,50 +133,37 @@ class SentenceEmbedding(SentenceTransformer):
         props.extend(concept_net.usedFor(engine=quasimodo.engine, subject=noun, n=10, weight_thresh=1, plural_and_singular=True))
         return props
     
-
-
+    @staticmethod
+    def get_all_combs(nouns: List[str]) -> List[List[Tuple[str]]]:
+        return [
+            [(nouns[0], nouns[1]), (nouns[2], nouns[3])],
+            [(nouns[0], nouns[1]), (nouns[3], nouns[2])],
+            [(nouns[1], nouns[0]), (nouns[2], nouns[3])],
+            [(nouns[1], nouns[0]), (nouns[3], nouns[2])],
+            [(nouns[0], nouns[2]), (nouns[1], nouns[3])],
+            [(nouns[0], nouns[2]), (nouns[3], nouns[1])],
+            [(nouns[2], nouns[0]), (nouns[1], nouns[3])],
+            [(nouns[2], nouns[0]), (nouns[3], nouns[1])],
+            [(nouns[0], nouns[3]), (nouns[1], nouns[2])],
+            [(nouns[0], nouns[3]), (nouns[2], nouns[1])],
+            [(nouns[3], nouns[0]), (nouns[1], nouns[2])],
+            [(nouns[3], nouns[0]), (nouns[2], nouns[1])],
+        ]
 
 if __name__ == "__main__":
-    text1 = 'earth orbit sun'
-    text2 = 'earth revolve around sun'
-    text3 = 'earth spin around sun'
-    text4 = 'earth circle the sun'
-    text5 = 'earth smaller than the sun'
-    text6 = 'dog is the best friend of human'
-    text7 = "This is a red cat with a hat."
-    text8 = "Have you seen my red cat?"
-    sentences = [text1, text2, text3, text4, text5, text6]
-
-    # earth = quasimodo.get_subject_props(subject='earth', n_largest=10, plural_and_singular=True)
-    # earth = [f"{val[0]} {val[1]}" for val in earth]
-    # electrons = quasimodo.get_subject_props(subject='electrons', n_largest=10, plural_and_singular=True)
-    # electrons = [f"{val[0]} {val[1]}" for val in electrons]
-
+    text1 = 'earth revolve around the sun'
+    text2 = 'earth circle the sun'
+    text3 = 'dog is the best friend of human'
+    nouns1 = ['sun', 'earth', 'electrons', 'nucleus']
+    nouns2 = ['air conditioner', 'room', 'refrigerator', 'food']
 
     model = SentenceEmbedding()
-    # model.distance(text2, text3, verbose=True)
-    # model.distance(text2, text6, verbose=True)
-    # model.similarity(text2, text3, verbose=True)
-    # model.similarity(text2, text4, verbose=True)
-    # model.similarity(text4, text5, verbose=True)
-    # model.similarity(text1, text6, verbose=True)
-    # model.similarity(text1, text1, verbose=True)
+    # model.similarity(text2, text9, verbose=True)
 
     # model.get_matches_between_nodes('earth', 'electrons', verbose=True)
     # model.get_matches_between_nodes('sun', 'earth', n_best=20, verbose=True)
-    model.get_matches_between_edges(('sun', 'earth'), ('nucleus', 'electrons'), n_best=20, verbose=True)
-    print()
-    print()
-    model.get_matches_between_edges(('earth', 'sun'), ('electrons', 'nucleus'), n_best=20, verbose=True)
-    # res = quasimodo.get_subject_object_props('earth', 'sun', n_largest=10, plural_and_singular=True)
-    # aa = util.paraphrase_mining(model, res)
-    # for a in aa:
-    #     print(f"{a[0]}, {res[a[1]]}, {res[a[2]]}")
-    # arr = []
-    # for e in earth:
-    #     for electron in electrons:
-    #         arr.append((e, electron, model.similarity(e, electron)))
 
-    # sort_arr = sorted(arr, key=lambda x: -x[2])
-    # for a in sort_arr:
-    #     print(a)
+    # model.get_matches_between_edges(('sun', 'earth'), ('nucleus', 'electrons'), n_best=20, verbose=True)
+    # model.get_matches_between_edges(('earth', 'sun'), ('electrons', 'nucleus'), n_best=20, verbose=True)
+
+    model.match_paris(nouns=nouns2, verbose=True)
