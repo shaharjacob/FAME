@@ -108,14 +108,16 @@ class SentenceEmbedding(SentenceTransformer):
         }
                 
     @staticmethod
-    def print_sentence(sentence: tuple):
-        secho(f"{sentence[0][0]} ", fg='red', bold=True, nl=False)
-        secho(f"({sentence[0][1]}) ", fg='red', nl=False)
+    def print_sentence(sentence: tuple, show_nouns: bool = True):
+        secho(f"{sentence[0][0]} ", fg='red', bold=show_nouns, nl=False)
+        if show_nouns:
+            secho(f"({sentence[0][1]}) ", fg='red', nl=False)
         secho(f"~ ", nl=False)
-        secho(f"{sentence[1][0]} ", fg='green', bold=True, nl=False)
-        secho(f"({sentence[1][1]}) ", fg='green', nl=False)
+        secho(f"{sentence[1][0]} ", fg='green', bold=show_nouns, nl=False)
+        if show_nouns:
+            secho(f"({sentence[1][1]}) ", fg='green', nl=False)
         secho(f"--> ", nl=False)
-        secho(f"{sentence[2]}", fg='blue', bold=True)
+        secho(f"{sentence[2]}", fg='blue', bold=show_nouns)
 
     @staticmethod
     def get_noun_props(noun: str, quasimodo: Quasimodo):
@@ -147,7 +149,7 @@ class SentenceEmbedding(SentenceTransformer):
         ]
 
 
-def is_analogy(sentence1: str, sentence2: str, verbose: bool = False):
+def is_analogy(sentence1: str, sentence2: str, verbose: bool = False, full_details: bool = False):
 
     secho(f"- {sentence1}", fg="blue")
     secho(f"- {sentence2}", fg="blue")
@@ -179,17 +181,21 @@ def is_analogy(sentence1: str, sentence2: str, verbose: bool = False):
             res = model.get_matches_between_edges(comb1, comb2, n_best=5)
             score = 0
             if res:
-                score = sum([val[2] for val in res]) / len(res)
-            matches.append(((comb1, comb2), score))
+                score = round(sum([val[2] for val in res]) / len(res), 3)
+            matches.append(((comb1, comb2), score, res))
     
     matches = sorted(matches, key=lambda x: -x[1])
     if verbose:
         for match in matches:
-            secho(f"({match[0][0][0]} --> {match[0][0][1]})", fg='red', bold=True, nl=False)
-            secho(f", ", nl=False)
-            secho(f"({match[0][1][0]} --> {match[0][1][1]}) ", fg='green', bold=True, nl=False)
-            secho(f"----> ", nl=False)
-            secho(f"{match[1]}", fg='blue', bold=True)
+            secho(f"({match[0][0][0]} --> {match[0][0][1]})", fg='red', bold=True, underline=True, nl=False)
+            secho(f", ", underline=True, nl=False)
+            secho(f"({match[0][1][0]} --> {match[0][1][1]}) ", fg='green', bold=True, underline=True, nl=False)
+            secho(f"--avg--> ", underline=True, nl=False)
+            secho(f"{match[1]}", fg='blue', bold=True, underline=True)
+            if full_details:
+                for m in match[2]:
+                    SentenceEmbedding.print_sentence(m, show_nouns=False)
+                print()
     
     return {
         "score": matches[0][1],
@@ -206,7 +212,7 @@ if __name__ == "__main__":
     sentence1 = "The nucleus, which is positively charged, and the electrons which are negatively charged, compose the atom"
     sentence2 = "On earth, the atmosphere protects us from the sun, but not enough so we use sunscreen"
 
-    is_analogy(sentence1, sentence2, verbose=True)
+    is_analogy(sentence1, sentence2, verbose=True, full_details=True)
 
     # model = SentenceEmbedding()
     # model.similarity(text2, text9, verbose=True)
