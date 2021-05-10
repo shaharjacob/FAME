@@ -7,6 +7,7 @@ from click import secho
 from sentence_transformers import SentenceTransformer, util
 
 import concept_net
+from wikifier import Wikifier
 from quasimodo import Quasimodo
 
 
@@ -84,18 +85,13 @@ class SentenceEmbedding(SentenceTransformer):
             exit(1)
 
         matches = []
-        # best_score = 0
         combs = SentenceEmbedding.get_all_combs(nouns)
-        # best_match = None
         for comb in combs:
             res = self.get_matches_between_edges(comb[0], comb[1], n_best=5)
             score = 0
             if res:
-                score = sum([score[2] for score in res]) / len(res)
+                score = sum([val[2] for val in res]) / len(res)
             matches.append((comb, score))
-            # if score > best_score:
-            #     best_score = score
-            #     best_match = comb
 
         matches = sorted(matches, key=lambda x: -x[1])
         if verbose:
@@ -150,14 +146,69 @@ class SentenceEmbedding(SentenceTransformer):
             [(nouns[3], nouns[0]), (nouns[2], nouns[1])],
         ]
 
+
+def is_analogy(sentence1: str, sentence2: str, verbose: bool = False):
+
+    secho(f"- {sentence1}", fg="blue")
+    secho(f"- {sentence2}", fg="blue")
+
+    # part of speech
+    w = Wikifier(sentence1)
+    nouns1 = w.get_specific_part_of_speech("nouns", normForm=False)
+    Wikifier.remove_parts_of_compound_nouns(nouns1)
+    nouns1 = sorted(list(set(nouns1)))
+
+    w = Wikifier(sentence2)
+    nouns2 = w.get_specific_part_of_speech("nouns", normForm=False)
+    Wikifier.remove_parts_of_compound_nouns(nouns2)
+    nouns2 = sorted(list(set(nouns2)))
+
+    secho(f"\nNouns: ", fg="blue", bold=True)
+    secho(f"- {nouns1}", fg="blue")
+    secho(f"- {nouns2}\n", fg="blue")
+
+    secho(f"[INFO] create SentenceEmbedding object", fg="blue")
+    model = SentenceEmbedding(init_quasimodo=True)
+
+    combs1 = list(combinations(nouns1, 2))
+    combs2 = list(combinations(nouns2, 2))
+
+    matches = []
+    for comb1 in combs1:
+        for comb2 in combs2:
+            res = model.get_matches_between_edges(comb1, comb2, n_best=5)
+            score = 0
+            if res:
+                score = sum([val[2] for val in res]) / len(res)
+            matches.append(((comb1, comb2), score))
+    
+    matches = sorted(matches, key=lambda x: -x[1])
+    if verbose:
+        for match in matches:
+            secho(f"({match[0][0][0]} --> {match[0][0][1]})", fg='red', bold=True, nl=False)
+            secho(f", ", nl=False)
+            secho(f"({match[0][1][0]} --> {match[0][1][1]}) ", fg='green', bold=True, nl=False)
+            secho(f"----> ", nl=False)
+            secho(f"{match[1]}", fg='blue', bold=True)
+    
+    return {
+        "score": matches[0][1],
+        "match": matches[0][0],
+    }
+
+
 if __name__ == "__main__":
     text1 = 'earth revolve around the sun'
     text2 = 'earth circle the sun'
     text3 = 'dog is the best friend of human'
     nouns1 = ['sun', 'earth', 'electrons', 'nucleus']
     nouns2 = ['air conditioner', 'room', 'refrigerator', 'food']
+    sentence1 = "The nucleus, which is positively charged, and the electrons which are negatively charged, compose the atom"
+    sentence2 = "On earth, the atmosphere protects us from the sun, but not enough so we use sunscreen"
 
-    model = SentenceEmbedding()
+    is_analogy(sentence1, sentence2, verbose=True)
+
+    # model = SentenceEmbedding()
     # model.similarity(text2, text9, verbose=True)
 
     # model.get_matches_between_nodes('earth', 'electrons', verbose=True)
@@ -166,4 +217,4 @@ if __name__ == "__main__":
     # model.get_matches_between_edges(('sun', 'earth'), ('nucleus', 'electrons'), n_best=20, verbose=True)
     # model.get_matches_between_edges(('earth', 'sun'), ('electrons', 'nucleus'), n_best=20, verbose=True)
 
-    model.match_paris(nouns=nouns2, verbose=True)
+    # model.match_paris(nouns=nouns2, verbose=True)
