@@ -2,7 +2,6 @@ import itertools
 from itertools import combinations
 from typing import List, Dict, Tuple
 
-import numpy as np
 from click import secho
 from sentence_transformers import SentenceTransformer, util
 
@@ -24,7 +23,6 @@ class SentenceEmbedding(SentenceTransformer):
         for sentence, embedding in zip(sentences, embeddings):
             self.embaddings[sentence] = {
                 "sentence": sentence,
-                "norm": np.linalg.norm(embedding),
                 "embadding": embedding,
             }
     
@@ -32,7 +30,6 @@ class SentenceEmbedding(SentenceTransformer):
         embedding = super().encode(sentence)
         self.embaddings[sentence] = {
             "sentence": sentence,
-            "norm": np.linalg.norm(embedding),
             "embadding": embedding,
         }
     

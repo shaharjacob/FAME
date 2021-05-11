@@ -1,14 +1,22 @@
-nltk
-pydot
+tqdm
 click
 pyyaml
 pandas
-gensim
 inflect
 requests
-networkx
 graphviz
-PyDictionary
 beautifulsoup4
-fake_useragent
-python-Levenshtein
+sentence_transformers
+
+# # allennlp
+# torch
+# allennlp
+
+# # old
+# nltk
+# pydot
+# gensim
+# networkx
+# PyDictionary
+# fake_useragent
+# python-Levenshtein
