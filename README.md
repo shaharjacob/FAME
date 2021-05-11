@@ -14,8 +14,9 @@ Our main goal is to understand analogy, for example:
 
 &nbsp; 
 
-## Table of content
-- **graph.py**: Creating a graph which represent the nouns in the sentence.   
+# Table of content
+- **graph.py**: Creating a graph which represent the nouns in the sentence.  
+- **sentence_embadding.py**: Using sentence embadding to understand analogies.  
 - **google_autocomplete.py**: Extracting information from google auto-complete.  
 - **quasimodo.py**: Using quasimodo database for extracting information about connections between objects.  
 - **wikifier.py**: Extracting information about the part-of-speech of the given text.  
@@ -47,7 +48,12 @@ run(text, quasimodo)
 
 &nbsp;  
 
-## google engine
+## sentence_embadding.py
+TODO
+
+&nbsp;  
+
+## google_autocomplete.py
 This script using the API of google auto-complete the extract information.  
 We are using question, subject and object which make the results more detailed.
 By default the forms is: **{question} {subject} "*" {object}**  
@@ -55,11 +61,7 @@ for example: why do horses "*" stables
 &nbsp;  
 by default, the script is looking also for the plural and singular forms of the inputs.  
 For example, **horses** will convert into **horse** (in addition) and **stables** into **stable**.  
-&nbsp;  
-in addition, the script is able to looking for **synonyms**.  
-It's taking the **best 5** results according to the word vector comparison.  
-more information in dictionary.py section.  
-Notice that this is a very heavy to load dictionary.py.  
+ 
 ```bash
 # using default example.yaml file without saving the results into a file
 python google_autocomplete.py
@@ -90,7 +92,7 @@ suggestions = process(d)
 ![alt text](https://github.com/shaharjacob/commonsense-analogy/blob/main/images/google_engine_horses.png?raw=true)  
 &nbsp;  
 
-## quasimodo
+## quasimodo.py
 This script using quasimodo database, which contains semantic information.  
 We are intersting in the following fields: **subject**, **predicate**, **object**, and **plausibility**.  
 
@@ -128,7 +130,7 @@ quasimodo.get_similarity_between_subjects('sun', 'earth', n_largest=20, verbose=
 ![alt text](https://github.com/shaharjacob/commonsense-analogy/blob/main/images/get_similarity_between_subjects_quasimodo_api.png?raw=true)  
 &nbsp;  
 
-## Wikifier
+## wikifier.py
 This script is extracting information from a text, such as part-of-speech.  
 It using wikifier API for that purpose.  
 
@@ -155,33 +157,27 @@ wikifier.get_part_of_speech()
 # output:  
 ```
 ![alt text](https://github.com/shaharjacob/commonsense-analogy/blob/main/images/wikifier_get_part_of_speech1.png?raw=true)  
-&nbsp;   
+&nbsp;  
+&nbsp;  
 
-## references
+# References
 - **Quasimodo**: https://quasimodo.r2.enst.fr/  
 - **qa-srl**: http://qasrl.org/  
 - **hayadata-lab**: http://www.hyadatalab.com/  
 - **Wikifier**: http://wikifier.org/info.html/  
-- **gensim**: https://radimrehurek.com/gensim/  
+- **Sentence-Transformers**: https://sbert.net/
+- **metamia**: http://www.metamia.com/  
 &nbsp;  
   
-## Analogy datasets
-- **metamia**: http://www.metamia.com/
-- **Vecto**: https://vecto.space/  
-&nbsp;  
 
-## PDFs
-**Analogy-based Detection of Morphological and Semantic Relations With Word Embeddings: What Works and What Doesn’t**:  
-- https://www.aclweb.org/anthology/N16-2002.pdf
+# PDFs
+- [Analogy-based Detection of Morphological and Semantic Relations With Word Embeddings: What Works and What Doesn’t](https://github.com/shaharjacob/commonsense-analogy/blob/main/pdf/Analogy_based_Detection_of_Morphological_and_Semantic_Relations.pdf)  
+- [Using Analogy To Acquire CommonsenseKnowledge from Human Contributors](https://github.com/shaharjacob/commonsense-analogy/blob/main/pdf/Using_Analogy_To_Acquire_CommonsenseKnowledge_from_Human_Contributors.pdf)  
+- [Reasoning and Learning by Analogy](https://github.com/shaharjacob/commonsense-analogy/blob/main/pdf/UReasoning_and_Learning_by_Analogy.pdf)  
+- [The Analogical Mind](https://github.com/shaharjacob/commonsense-analogy/blob/main/pdf/The_Analogical_Mind.pdf)  
+- [The Structure-Mapping Engine: Algorithm and Examples](https://github.com/shaharjacob/commonsense-analogy/blob/main/pdf/structure_mapping_engine.pdf)  
+- [The Latent Relation Mapping Engine: Algorithm and Experiments](https://github.com/shaharjacob/commonsense-analogy/blob/main/pdf/The_Latent_Relation_Mapping_Engine.pdf)   
 
-**Using Analogy To Acquire CommonsenseKnowledge from Human Contributors**:  
-- https://dspace.mit.edu/handle/1721.1/87342  
-  
-**Reasoning and Learning by Analogy**:  
-- https://psycnet.apa.org/doiLanding?doi=10.1037%2F0003-066X.52.1.32  
-  
-**The Analogical Mind**:  
-- https://books.google.co.il/books?hl=iw&lr=&id=RfQX9wuf-2cC&oi=fnd&pg=PA23&dq=commonsense+analogy&ots=MvkNlPPSyo&sig=fsznpCd12ZuybvtaJnpqPzzvHk4&redir_esc=y#v=onepage&q=commonsense%20analogy&f=false   
 &nbsp;     
 
 ## Additions
