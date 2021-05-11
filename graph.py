@@ -3,6 +3,7 @@ from typing import List
 from pathlib import Path
 from itertools import combinations
 
+import click
 from tqdm import tqdm
 from click import secho
 from graphviz import Digraph
@@ -77,7 +78,7 @@ class MyGraph(Digraph):
         super().view()        
 
 
-def main(text: str, quasimodo: Quasimodo, addition_nouns = []):
+def run(text: str, quasimodo: Quasimodo, addition_nouns = []):
 
     secho(f"Text: ", fg="blue", bold=True, nl=False)
     secho(f"{text}", fg="blue")
@@ -156,27 +157,32 @@ def main(text: str, quasimodo: Quasimodo, addition_nouns = []):
     graph.view()  # plot the graph
 
 
-if __name__ == "__main__":
-
-    text1 = "putting a band aid on a wound is like putting a flag in the code"
-    text2 = "horses in stables behave like cows in byre"
-    text3 = "electrons revolve around the nucleus as the earth revolve around the sun"
-
-    text4 = "peanut butter has a strong taste that causes a feeling of suffocation"
-    text5 = "The nucleus, which is positively charged, and the electrons which are negatively charged, compose the atom"
-    text6 = "On earth, the atmosphere protects us from the sun, but not enough so we use sunscreen"
-
-    tsv_to_load = Path('tsv/quasimodo.tsv')
+@click.command()
+@click.option('-t', '--text', default="electrons revolve around the nucleus as the earth revolve around the sun", 
+                help="The text you want to visualize")
+@click.option('-a', '--addition-nouns', default=[], multiple=True, 
+                help="Addition nouns in case of Wikifier is failed to recognize (sunscreen)")
+@click.option('-q', '--quasimodo-path', default="tsv/quasimodo.tsv", 
+                help="Path to load quasimodo (the tsv file")
+def main(text, addition_nouns, quasimodo_path):
+    start = time.time()
+    tsv_to_load = Path(quasimodo_path)
     if not tsv_to_load.exists():
         import quasimodo as qs
         qs.merge_tsvs(tsv_to_load.name)  # will be created under /tsv
     quasimodo = Quasimodo(path=str(tsv_to_load))
+    run(text, quasimodo, addition_nouns=list(addition_nouns))
+    secho(f"\nTotal running time: ", fg='blue', nl=False)
+    secho(str(time.time() - start), fg='blue', bold=True)
 
-    for text in [text1, text2, text3]:
-        addition_nouns = []
-        if 'sunscreen' in text:
-            addition_nouns.append('sunscreen')
-        start = time.time()
-        main(text, quasimodo, addition_nouns=addition_nouns)
-        secho(f"\nTotal running time: ", fg='blue', nl=False)
-        secho(str(time.time() - start), fg='blue', bold=True)
+if __name__ == "__main__":
+    main()
+    # text1 = "putting a band aid on a wound is like putting a flag in the code"
+    # text2 = "horses in stables behave like cows in byre"
+    # text3 = "electrons revolve around the nucleus as the earth revolve around the sun"
+
+    # text4 = "peanut butter has a strong taste that causes a feeling of suffocation"
+    # text5 = "The nucleus, which is positively charged, and the electrons which are negatively charged, compose the atom"
+    # text6 = "On earth, the atmosphere protects us from the sun, but not enough so we use sunscreen"
+
+    
