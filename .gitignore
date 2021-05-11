@@ -2,14 +2,12 @@
 test.py
 *.csv
 *.json
-# *.tsv
+tsv/quasimodo.tsv
 .DS_Store
-# *.pdf
 *.gv
 .vscode
 *.pyc
 test/
-pdf/
 .idea/
 txt_sentoken/
 movie_review/
