@@ -49,8 +49,48 @@ run(text, quasimodo)
 &nbsp;  
 
 ## sentence_embadding.py
-TODO
+The main purpose of this script is to give score for the sentences, such that we can decide if this is an analogy or not.  
+But let start with simple use, just give similarity score for two sentences, base on SBERT model:  
+```bash
+from sentence_embadding import SentenceEmbedding
 
+text1 = 'earth revolve around the sun'
+text2 = 'earth circle the sun'
+text3 = 'dog is the best friend of human'
+
+model = SentenceEmbedding()
+similarity = model.similarity(text1, text2, verbose=True)
+similarity
+-- 0.889
+
+similarity = model.similarity(text1, text3, verbose=True)
+similarity
+-- 0.049
+
+similarity = model.similarity(text1, text1, verbose=True)
+similarity
+-- 1.000
+```  
+Now, given two sentences, we examine all possible pairs, and select the pair of pairs with the highest score:  
+```bash
+python sentence_embadding.py --sentence1 "The nucleus, which is positively charged, and the electrons which are negatively charged, compose the atom" --sentence2 "On earth, the atmosphere protects us from the sun, but not enough so we use sunscreen"  --verbose --full_details --threshold 0.5
+```
+Or using it from other scripts:  
+```bash
+from sentence_embadding import run
+
+sentence1 = "The nucleus, which is positively charged, and the electrons which are negatively charged, compose the atom"
+sentence2 = "On earth, the atmosphere protects us from the sun, but not enough so we use sunscreen"
+run(sentence1, sentence2, verbose=True, full_details=True, threshold=0.5)
+
+# the output:
+```
+![alt text](https://github.com/shaharjacob/commonsense-analogy/blob/main/images/sentence_embedding_1.png?raw=true)  
+&nbsp;  
+**Notice** that in the first sentence it found 3 nouns: ['atom', 'electrons', 'nucleus'], in the second sentence it found also 3 nouns: ['atmosphere', 'earth', 'sun'], and from all possible options it found that the best match is: earth --> sun, electrons --> nucleus.  
+&nbsp;  
+Using --verbose will show you the scores for all the options:  
+![alt text](https://github.com/shaharjacob/commonsense-analogy/blob/main/images/sentence_embedding_2.png?raw=true)  
 &nbsp;  
 
 ## google_autocomplete.py
