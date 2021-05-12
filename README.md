@@ -87,14 +87,11 @@ run(sentence1, sentence2, verbose=True, full_details=True, threshold=0.5)
 ```
 ![alt text](https://github.com/shaharjacob/commonsense-analogy/blob/main/images/sentence_embedding_1.png?raw=true)  
 &nbsp;  
-
 **Notice** that in the first sentence it found 3 nouns: ['atom', 'electrons', 'nucleus'], in the second sentence it found also 3 nouns: ['atmosphere', 'earth', 'sun'], and from all possible options it found that the best match is: earth --> sun, electrons --> nucleus.  
 &nbsp;  
-
 Using --verbose will show you the scores for all the options:  
 ![alt text](https://github.com/shaharjacob/commonsense-analogy/blob/main/images/sentence_embedding_2.png?raw=true)  
 &nbsp;  
-
 Using --verbose --full-details will show you also inside the edges. The score is the average of the 5 best match (or less). Here is the top scores:  
 ![alt text](https://github.com/shaharjacob/commonsense-analogy/blob/main/images/sentence_embedding_3.png?raw=true)  
 &nbsp;  
