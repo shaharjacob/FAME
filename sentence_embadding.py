@@ -11,8 +11,12 @@ from quasimodo import Quasimodo
 
 
 class SentenceEmbedding(SentenceTransformer):
-    def __init__(self, init_quasimodo: bool = True):
-        super().__init__('stsb-mpnet-base-v2')
+    def __init__(self, model: str = 'stsb-mpnet-base-v2', init_quasimodo: bool = True):
+        # avilable models can be found here: https://huggingface.co/models?sort=downloads&search=sentence-transformers&p=0
+        # paraphrase-xlm-r-multilingual-v1
+        # stsb-mpnet-base-v2
+        # stsb-roberta-large
+        super().__init__(model)
         self.embaddings = {}
         if init_quasimodo:
             self.quasimodo = Quasimodo(path='tsv/quasimodo.tsv')
@@ -146,16 +150,19 @@ class SentenceEmbedding(SentenceTransformer):
         ]
 
 
-def run(sentence1: str, sentence2: str, verbose: bool = False, full_details: bool = False):
+def run(sentence1: str, sentence2: str, verbose: bool = False, full_details: bool = False, model: str = "stsb-mpnet-base-v2", addition_nouns=[]):
 
     secho(f"- {sentence1}", fg="blue")
     secho(f"- {sentence2}", fg="blue")
+
+    # TODO
+    addition_nouns = [noun for noun in addition_nouns if noun in sentence1.split()]
 
     # part of speech
     w = Wikifier(sentence1)
     nouns1 = w.get_specific_part_of_speech("nouns", normForm=False)
     Wikifier.remove_parts_of_compound_nouns(nouns1)
-    nouns1 = sorted(list(set(nouns1)))
+    nouns1 = sorted(list(set(nouns1 + addition_nouns)))
 
     w = Wikifier(sentence2)
     nouns2 = w.get_specific_part_of_speech("nouns", normForm=False)
@@ -166,11 +173,16 @@ def run(sentence1: str, sentence2: str, verbose: bool = False, full_details: boo
     secho(f"- {nouns1}", fg="blue")
     secho(f"- {nouns2}\n", fg="blue")
 
-    secho(f"[INFO] create SentenceEmbedding object", fg="blue")
-    model = SentenceEmbedding(init_quasimodo=True)
-
     combs1 = list(combinations(nouns1, 2))
+    reverse_combs1 = [(comb[1], comb[0]) for comb in combs1]
+    combs1 += reverse_combs1
+
     combs2 = list(combinations(nouns2, 2))
+    reverse_combs2 = [(comb[1], comb[0]) for comb in combs2]
+    combs2 += reverse_combs2
+
+    secho(f"[INFO] create SentenceEmbedding object", fg="blue")
+    model = SentenceEmbedding(model=model)
 
     matches = []
     for comb1 in combs1:
@@ -211,8 +223,10 @@ def run(sentence1: str, sentence2: str, verbose: bool = False, full_details: boo
                 help="Print all the scores inside the edges (which lead to the edge score)")
 @click.option('--threshold', default=0.5,
                 help="Threshold to determine if this is analogy or not")
-def main(sentence1: str, sentence2: str, verbose: bool, full_details: bool, threshold: float) -> bool:
-    res = run(sentence1, sentence2, verbose, full_details)
+@click.option('-a', '--addition-nouns', default=[], multiple=True, 
+                help="Addition nouns in case of Wikifier is failed to recognize (sunscreen)")
+def main(sentence1: str, sentence2: str, verbose: bool, full_details: bool, threshold: float, addition_nouns: str) -> bool:
+    res = run(sentence1, sentence2, verbose, full_details, addition_nouns=addition_nouns)
     secho(f"\n--------------------------------------------------")
     secho(f"Match: ", fg="blue", nl=False)
     secho(f"{res['match'][0][0]} --> {res['match'][0][1]}  ~  {res['match'][1][0]} --> {res['match'][1][1]}", fg="blue", bold=True)
@@ -225,7 +239,7 @@ def main(sentence1: str, sentence2: str, verbose: bool, full_details: bool, thre
 
 
 if __name__ == "__main__":
-    main()
+    # main()
 
     # text1 = 'earth revolve around the sun'
     # text2 = 'earth circle the sun'
@@ -234,20 +248,11 @@ if __name__ == "__main__":
     # model = SentenceEmbedding()
     # model.similarity(text1, text3, verbose=True)
 
+    sentence1 = "On earth, the atmosphere protects us from the sun, but not enough so we use sunscreen"
+    sentence2 = "The nucleus, which is positively charged, and the electrons which are negatively charged, compose the atom"
 
-    # nouns1 = ['sun', 'earth', 'electrons', 'nucleus']
-    # nouns2 = ['air conditioner', 'room', 'refrigerator', 'food']
-    # sentence1 = "The nucleus, which is positively charged, and the electrons which are negatively charged, compose the atom"
-    # sentence2 = "On earth, the atmosphere protects us from the sun, but not enough so we use sunscreen"
+    sentence3= "A singer expresses what he thinks by songs"
+    sentence4 = "A programmer expresses what he thinks by writing code"
 
-    # run(sentence1, sentence2, verbose=True, full_details=True)
+    run(sentence3, sentence4, verbose=True, full_details=True, model='stsb-mpnet-base-v2', addition_nouns=['sunscreen'])
 
-    
-
-    # model.get_matches_between_nodes('earth', 'electrons', verbose=True)
-    # model.get_matches_between_nodes('sun', 'earth', n_best=20, verbose=True)
-
-    # model.get_matches_between_edges(('sun', 'earth'), ('nucleus', 'electrons'), n_best=20, verbose=True)
-    # model.get_matches_between_edges(('earth', 'sun'), ('electrons', 'nucleus'), n_best=20, verbose=True)
-
-    # model.match_paris(nouns=nouns2, verbose=True)
