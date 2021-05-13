@@ -150,7 +150,12 @@ class SentenceEmbedding(SentenceTransformer):
         ]
 
 
-def run(sentence1: str, sentence2: str, verbose: bool = False, full_details: bool = False, model: str = "stsb-mpnet-base-v2", addition_nouns=[]):
+def run(sentence1: str, 
+        sentence2: str, 
+        verbose: bool = False, 
+        full_details: bool = False, 
+        model: str = "stsb-mpnet-base-v2", 
+        addition_nouns=[]) -> dict:
 
     secho(f"- {sentence1}", fg="blue")
     secho(f"- {sentence2}", fg="blue")
@@ -212,6 +217,25 @@ def run(sentence1: str, sentence2: str, verbose: bool = False, full_details: boo
     }
 
 
+def main(sentence1: str, 
+         sentence2: str, 
+         verbose: bool = True, 
+         full_details: bool = False, 
+         threshold: float = 0.5, 
+         model: str = "stsb-mpnet-base-v2", 
+         addition_nouns: str = []) -> bool:
+    res = run(sentence1, sentence2, verbose, full_details, model, addition_nouns)
+    secho(f"\n--------------------------------------------------")
+    secho(f"Match: ", fg="blue", nl=False)
+    secho(f"{res['match'][0][0]} --> {res['match'][0][1]}  ~  {res['match'][1][0]} --> {res['match'][1][1]}", fg="blue", bold=True)
+    secho(f"Score: ", fg="blue", nl=False)
+    secho(f"{res['score']}", fg="blue", bold=True)
+    secho(f"Is analogy: ", fg="blue", nl=False)
+    secho(f"{res['score'] > threshold}", fg="blue", bold=True)
+    secho(f"--------------------------------------------------\n")
+    return res["score"] > threshold
+
+
 @click.command()
 @click.option('-s1', '--sentence1', default="The nucleus, which is positively charged, and the electrons which are negatively charged, compose the atom", 
                 help="First sentence")
@@ -225,17 +249,9 @@ def run(sentence1: str, sentence2: str, verbose: bool = False, full_details: boo
                 help="Threshold to determine if this is analogy or not")
 @click.option('-a', '--addition-nouns', default=[], multiple=True, 
                 help="Addition nouns in case of Wikifier is failed to recognize (sunscreen)")
-def main(sentence1: str, sentence2: str, verbose: bool, full_details: bool, threshold: float, addition_nouns: str) -> bool:
-    res = run(sentence1, sentence2, verbose, full_details, addition_nouns=addition_nouns)
-    secho(f"\n--------------------------------------------------")
-    secho(f"Match: ", fg="blue", nl=False)
-    secho(f"{res['match'][0][0]} --> {res['match'][0][1]}  ~  {res['match'][1][0]} --> {res['match'][1][1]}", fg="blue", bold=True)
-    secho(f"Score: ", fg="blue", nl=False)
-    secho(f"{res['score']}", fg="blue", bold=True)
-    secho(f"Is analogy: ", fg="blue", nl=False)
-    secho(f"{res['score'] > threshold}", fg="blue", bold=True)
-    secho(f"--------------------------------------------------\n")
-    return res["score"] > threshold
+def cli(sentence1: str, sentence2: str, verbose: bool, full_details: bool, threshold: float, addition_nouns: str) -> bool:
+    res = main(sentence1, sentence2, verbose, full_details, threshold, addition_nouns=addition_nouns)
+    return res
 
 
 if __name__ == "__main__":
@@ -254,5 +270,5 @@ if __name__ == "__main__":
     sentence3= "A singer expresses what he thinks by songs"
     sentence4 = "A programmer expresses what he thinks by writing code"
 
-    run(sentence3, sentence4, verbose=True, full_details=True, model='stsb-mpnet-base-v2', addition_nouns=['sunscreen'])
+    main(sentence3, sentence4, verbose=True, full_details=True, model='stsb-mpnet-base-v2', addition_nouns=['sunscreen'])
 
