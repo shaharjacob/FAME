@@ -18,7 +18,7 @@ class GoogleAutocomplete(object):
                 obj2: str, 
                 browser: str = 'chrome',
                 pattern: str = '%s %s "*" %s', 
-                regex: str = '^%s.* %s .* %s.*$'):
+                regex: str = '^%s %s (.*) %s$'):
         self.question = question
         self.obj1 = obj1
         self.obj2 = obj2
@@ -34,11 +34,12 @@ class GoogleAutocomplete(object):
         response = requests.get(url)
         suggestions = json.loads(response.text)[1]
         for suggestion in suggestions:
-            if re.match(self.regex, suggestion):
+            match = re.match(self.regex, suggestion)
+            if match:
                 parts = suggestion.split()
-                if all(elem in parts for elem in [self.obj1, self.obj2]):
-                # if all(elem in parts for elem in [self.obj1, self.obj2, self.question]):
-                    sugges.append((suggestion, self.keyword))
+                pairs = [f"{parts[i]} {parts[i+1]}" for i in range(len(parts) - 1)]
+                if all(elem in (parts + pairs) for elem in [self.obj1, self.obj2, self.question]):
+                    sugges.append((suggestion, match.group(1)))
         return list(set(sugges))
 
     def render_single_suggestion(self, suggestion: tuple):
@@ -66,7 +67,7 @@ class GoogleAutocomplete(object):
                 secho(f"{char}", nl=False)
 
         spaces = ''.join([' '] * max((50 - len(suggestion[0])), 1))
-        secho(f"{spaces}--> ({suggestion[1]})")
+        secho(f"{spaces}--> ({self.keyword})")
 
     def render(self):
         for suggestion in self.suggestions:
@@ -76,7 +77,9 @@ class GoogleAutocomplete(object):
 def verify_question(question: str, objects: List[str]):
     valid_questions = [
         'why do',
+        'why does',
         'how do',
+        'how does',
     ]
     if question not in valid_questions:
         secho(f"[ERROR] yaml file is not valid", fg="red", bold=True)
@@ -108,17 +111,19 @@ def extend_to_plural_and_singular(engine: inflect.engine, entry: List[str], ques
     if plural:
         googleAC = GoogleAutocomplete(question, plural, entry[1])
         for suggestion in googleAC.suggestions:
-            if suggestion[0] not in suggestions:
+            if suggestion[0] not in suggestions["suggestions"]:
                 if verbose:
                     googleAC.render_single_suggestion(suggestion)
-                suggestions.append(suggestion[0])
+                suggestions["suggestions"].append(suggestion[0])
+                suggestions["props"].append(suggestion[1])
     if singular:
         googleAC = GoogleAutocomplete(question, singular, entry[1])
         for suggestion in googleAC.suggestions:
-            if suggestion[0] not in suggestions:
+            if suggestion[0] not in suggestions["suggestions"]:
                 if verbose:
                     googleAC.render_single_suggestion(suggestion)
-                suggestions.append(suggestion[0])
+                suggestions["suggestions"].append(suggestion[0])
+                suggestions["props"].append(suggestion[1])
     
     plural = engine.plural(entry[1])
     singular = engine.singular_noun(entry[1])
@@ -126,37 +131,54 @@ def extend_to_plural_and_singular(engine: inflect.engine, entry: List[str], ques
     if plural:
         googleAC = GoogleAutocomplete(question, entry[0], plural)
         for suggestion in googleAC.suggestions:
-            if suggestion[0] not in suggestions:
+            if suggestion[0] not in suggestions["suggestions"]:
                 if verbose:
                     googleAC.render_single_suggestion(suggestion)
-                suggestions.append(suggestion[0])
+                suggestions["suggestions"].append(suggestion[0])
+                suggestions["props"].append(suggestion[1])
     if singular:
         googleAC = GoogleAutocomplete(question, entry[0], singular)
         for suggestion in googleAC.suggestions:
-            if suggestion[0] not in suggestions:
+            if suggestion[0] not in suggestions["suggestions"]:
                 if verbose:
                     googleAC.render_single_suggestion(suggestion)
-                suggestions.append(suggestion[0])
+                suggestions["suggestions"].append(suggestion[0])
+                suggestions["props"].append(suggestion[1])
 
 
-def process(d: Dict[str, List[List[str]]], plural_and_singular: bool = True, synonyms: bool = True, verbose: bool = True) -> List[str]:
+def outside_process(subject: str, obj: str) -> List[str]:
+    d = {
+        "why do": [[subject, obj]],
+        "why does": [[subject, obj]],
+        "how do": [[subject, obj]],
+        "how does": [[subject, obj]],
+    }
+    return process(d, verbose=False)
+
+
+def process(d: Dict[str, List[List[str]]], plural_and_singular: bool = True, verbose: bool = True) -> List[str]:
     engine = inflect.engine()
     suggestions = {}
     for question, objects in d.items():
-        secho(f"\n[INFO] collect information on question '{question}'", fg="blue")
-        for entry in tqdm(objects):
+        if verbose:
+            secho(f"\n[INFO] collect information on question '{question}'", fg="blue")
+        iterator = tqdm(objects) if verbose else objects
+        for entry in iterator:
             verify_question(question, entry)
             if (entry[0], entry[1]) not in suggestions:
-                suggestions[(entry[0], entry[1])] = []
+                suggestions[(entry[0], entry[1])] = {
+                    "suggestions": [],
+                    "props": [],
+                }
             googleAC = GoogleAutocomplete(question, entry[0], entry[1])
             for suggestion in googleAC.suggestions:
-                if suggestion[0] not in suggestions[(entry[0], entry[1])]:
+                if suggestion[0] not in suggestions[(entry[0], entry[1])]["suggestions"]:
                     if verbose:
                         googleAC.render_single_suggestion(suggestion)
-                    suggestions[(entry[0], entry[1])].append(suggestion[0])
+                    suggestions[(entry[0], entry[1])]["suggestions"].append(suggestion[0])
+                    suggestions[(entry[0], entry[1])]["props"].append(suggestion[1])
             if plural_and_singular:
                 extend_to_plural_and_singular(engine, entry, question, suggestions[(entry[0], entry[1])], verbose=verbose)
-            suggestions[(entry[0], entry[1])] = list(set(suggestions[(entry[0], entry[1])]))
 
     return suggestions
 

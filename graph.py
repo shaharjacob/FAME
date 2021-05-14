@@ -132,7 +132,9 @@ def run(text: str, quasimodo: Quasimodo, addition_nouns = []):
     # google autocomlete - for edges
     d = {
         "why do": [[comb[0], comb[1]] for comb in combs],
-        "how do": [[comb[0], comb[1]] for comb in combs]
+        "why does": [[comb[0], comb[1]] for comb in combs],
+        "how do": [[comb[0], comb[1]] for comb in combs],
+        "how does": [[comb[0], comb[1]] for comb in combs],
     }
     google_autocomplete_edges_info = google_autocomplete.process(d, verbose=False)
     
@@ -140,7 +142,7 @@ def run(text: str, quasimodo: Quasimodo, addition_nouns = []):
     secho("\n[INFO] collect edges information from Quasimodo", fg="blue")
     for comb in tqdm(combs):
         labels = {}
-        autocomplete = google_autocomplete_edges_info.get((comb[0], comb[1]), [""])
+        autocomplete = google_autocomplete_edges_info.get((comb[0], comb[1]), {"suggestions": [], "props": []}).get("props", [])
         if autocomplete:
             labels["google-autocomplete"] = autocomplete
         

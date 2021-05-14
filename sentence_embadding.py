@@ -1,52 +1,53 @@
-from itertools import combinations
+import json
 from typing import List, Tuple
+from itertools import combinations
 
 import click
+import numpy as np
 from click import secho
 from sentence_transformers import SentenceTransformer, util
 
 import concept_net
+import google_autocomplete
 from wikifier import Wikifier
 from quasimodo import Quasimodo
+
+# avilable models can be found here: https://huggingface.co/models?sort=downloads&search=sentence-transformers&p=0
+# paraphrase-xlm-r-multilingual-v1
+# stsb-mpnet-base-v2
+# stsb-roberta-large
 
 
 class SentenceEmbedding(SentenceTransformer):
     def __init__(self, model: str = 'stsb-mpnet-base-v2', init_quasimodo: bool = True):
-        # avilable models can be found here: https://huggingface.co/models?sort=downloads&search=sentence-transformers&p=0
-        # paraphrase-xlm-r-multilingual-v1
-        # stsb-mpnet-base-v2
-        # stsb-roberta-large
         super().__init__(model)
-        self.embaddings = {}
+        self.embaddings_db = read_json('database/embadding.json')
+        self.similarity_db = read_json('database/similarity.json')
         if init_quasimodo:
             self.quasimodo = Quasimodo(path='tsv/quasimodo.tsv')
     
     def encode_sentences(self, sentences: List[str]):
         embeddings = super().encode(sentences)
         for sentence, embedding in zip(sentences, embeddings):
-            self.embaddings[sentence] = {
-                "sentence": sentence,
-                "embadding": embedding,
-            }
+            self.embaddings_db[sentence] = embedding.tolist()
     
     def encode_sentence(self, sentence: str):
         embedding = super().encode(sentence)
-        self.embaddings[sentence] = {
-            "sentence": sentence,
-            "embadding": embedding,
-        }
+        self.embaddings_db[sentence] = embedding.tolist()
     
     def similarity(self, sentence1: str, sentence2: str, verbose: bool = False) -> float:
-        if sentence1 not in self.embaddings:
+        if sentence1 not in self.embaddings_db:
             self.encode_sentence(sentence1)
-        if sentence2 not in self.embaddings:
+        if sentence2 not in self.embaddings_db:
             self.encode_sentence(sentence2)
-        similarity = util.pytorch_cos_sim(self.embaddings[sentence1]["embadding"], self.embaddings[sentence2]["embadding"])
-        similarity = round(similarity.item(), 3)
+        if f"{sentence1}#{sentence2}" not in self.similarity_db:
+            similarity = round(util.pytorch_cos_sim(np.array(self.embaddings_db[sentence1]), np.array(self.embaddings_db[sentence2])).item(), 3)
+            self.similarity_db[f"{sentence1}#{sentence2}"] = similarity
+
         if verbose:
             secho(f"{sentence1} ~ {sentence2}", fg='blue')
-            secho(f"Similarity: {similarity}", fg='blue', bold=True)
-        return similarity
+            secho(f'Similarity: {self.similarity_db[f"{sentence1}#{sentence2}"]}', fg='blue', bold=True)
+        return self.similarity_db[f"{sentence1}#{sentence2}"]
     
     def get_matches_between_nodes(self, noun1: str, noun2: str, n_best: int = 0, verbose: bool = False) -> List[Tuple]:
         props_noun1 = SentenceEmbedding.get_noun_props(noun1, self.quasimodo)
@@ -65,9 +66,15 @@ class SentenceEmbedding(SentenceTransformer):
         return sentences
     
     def get_matches_between_edges(self, pair1: Tuple[str], pair2: Tuple[str], n_best: int = 0, verbose: bool = False):
-        props_pair1 = self.quasimodo.get_subject_object_props(pair1[0], pair1[1], n_largest=10, plural_and_singular=True)
-        props_pair2 = self.quasimodo.get_subject_object_props(pair2[0], pair2[1], n_largest=10, plural_and_singular=True)
+        quasimodo_props_pair1 = self.quasimodo.get_subject_object_props(pair1[0], pair1[1], n_largest=10, plural_and_singular=True)
+        quasimodo_props_pair2 = self.quasimodo.get_subject_object_props(pair2[0], pair2[1], n_largest=10, plural_and_singular=True)
+
+        autocomplete_props_pair1 = google_autocomplete.outside_process(pair1[0], pair1[1]).get((pair1[0], pair1[1]), {"suggestions": [], "props": []}).get("props", [])
+        autocomplete_props_pair2 = google_autocomplete.outside_process(pair2[0], pair2[1]).get((pair2[0], pair2[1]), {"suggestions": [], "props": []}).get("props", [])
         
+        props_pair1 = list(set(quasimodo_props_pair1 + autocomplete_props_pair1))
+        props_pair2 = list(set(quasimodo_props_pair2 + autocomplete_props_pair2))
+
         sentences = []
         for prop1 in props_pair1:
             for prop2 in props_pair2:
@@ -107,7 +114,13 @@ class SentenceEmbedding(SentenceTransformer):
             "score": matches[0][1],
             "match": matches[0][0],
         }
-                
+    
+    def save_db(self):
+        with open('database/embadding.json', 'w') as f1:
+            json.dump(self.embaddings_db, f1)
+        with open('database/similarity.json', 'w') as f2:
+            json.dump(self.similarity_db, f2)
+
     @staticmethod
     def print_sentence(sentence: tuple, show_nouns: bool = True):
         secho(f"{sentence[0][0]} ", fg='red', bold=show_nouns, nl=False)
@@ -150,6 +163,11 @@ class SentenceEmbedding(SentenceTransformer):
         ]
 
 
+def read_json(path: str):
+    with open(path) as f:
+        return json.load(f)
+
+
 def run(sentence1: str, 
         sentence2: str, 
         verbose: bool = False, 
@@ -190,14 +208,19 @@ def run(sentence1: str,
     model = SentenceEmbedding(model=model)
 
     matches = []
-    for comb1 in combs1:
-        for comb2 in combs2:
+    secho(f"[INFO] Total combinations to process: ", fg="blue", nl=False)
+    secho(f"{len(combs1) * len(combs2)}", fg="blue", bold=True)
+    for i, comb1 in enumerate(combs1):
+        for j, comb2 in enumerate(combs2):
+            secho(f"{(i * len(combs2)) + j}", fg="blue", bold=True, nl=False)
+            secho(f" out of ", fg="blue", nl=False)
+            secho(f"{len(combs1) * len(combs2)}", fg="blue", bold=True)
             res = model.get_matches_between_edges(comb1, comb2, n_best=5)
             score = 0
             if res:
                 score = round(sum([val[2] for val in res]) / len(res), 3)
             matches.append(((comb1, comb2), score, res))
-    
+    model.save_db()
     matches = sorted(matches, key=lambda x: -x[1])
     if verbose:
         for match in matches:
@@ -255,7 +278,7 @@ def cli(sentence1: str, sentence2: str, verbose: bool, full_details: bool, thres
 
 
 if __name__ == "__main__":
-    # main()
+    # cli()
 
     # text1 = 'earth revolve around the sun'
     # text2 = 'earth circle the sun'
@@ -267,8 +290,16 @@ if __name__ == "__main__":
     sentence1 = "On earth, the atmosphere protects us from the sun, but not enough so we use sunscreen"
     sentence2 = "The nucleus, which is positively charged, and the electrons which are negatively charged, compose the atom"
 
-    sentence3= "A singer expresses what he thinks by songs"
+    sentence3 = "A singer expresses what he thinks by songs"
     sentence4 = "A programmer expresses what he thinks by writing code"
 
-    main(sentence3, sentence4, verbose=True, full_details=True, model='stsb-mpnet-base-v2', addition_nouns=['sunscreen'])
+    sentence5 = "A road is where cars are"
+    sentence6 = "boats sail on the lake to get from place to place"
+
+    main(sentence5, sentence6, verbose=True, full_details=True, model='stsb-mpnet-base-v2', addition_nouns=['sunscreen'])
+
+    # model = SentenceEmbedding(model='stsb-mpnet-base-v2')
+
+    # start = time.time()
+    # model.
 
