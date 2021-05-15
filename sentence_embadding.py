@@ -1,4 +1,4 @@
-import json
+import time
 from typing import List, Tuple
 from itertools import combinations
 
@@ -21,33 +21,32 @@ from quasimodo import Quasimodo
 class SentenceEmbedding(SentenceTransformer):
     def __init__(self, model: str = 'stsb-mpnet-base-v2', init_quasimodo: bool = True):
         super().__init__(model)
-        self.embaddings_db = read_json('database/embadding.json')
-        self.similarity_db = read_json('database/similarity.json')
+        self.embaddings = {}
         if init_quasimodo:
             self.quasimodo = Quasimodo(path='tsv/quasimodo.tsv')
+        self.quasimodo_time = 0
+        self.google_time = 0
     
     def encode_sentences(self, sentences: List[str]):
         embeddings = super().encode(sentences)
         for sentence, embedding in zip(sentences, embeddings):
-            self.embaddings_db[sentence] = embedding.tolist()
+            self.embaddings[sentence] = embedding
     
     def encode_sentence(self, sentence: str):
         embedding = super().encode(sentence)
-        self.embaddings_db[sentence] = embedding.tolist()
+        self.embaddings[sentence] = embedding
     
     def similarity(self, sentence1: str, sentence2: str, verbose: bool = False) -> float:
-        if sentence1 not in self.embaddings_db:
+        if sentence1 not in self.embaddings:
             self.encode_sentence(sentence1)
-        if sentence2 not in self.embaddings_db:
+        if sentence2 not in self.embaddings:
             self.encode_sentence(sentence2)
-        if f"{sentence1}#{sentence2}" not in self.similarity_db:
-            similarity = round(util.pytorch_cos_sim(np.array(self.embaddings_db[sentence1]), np.array(self.embaddings_db[sentence2])).item(), 3)
-            self.similarity_db[f"{sentence1}#{sentence2}"] = similarity
 
+        similarity = round(util.pytorch_cos_sim(self.embaddings[sentence1], self.embaddings[sentence2]).item(), 3)
         if verbose:
             secho(f"{sentence1} ~ {sentence2}", fg='blue')
-            secho(f'Similarity: {self.similarity_db[f"{sentence1}#{sentence2}"]}', fg='blue', bold=True)
-        return self.similarity_db[f"{sentence1}#{sentence2}"]
+            secho(f'Similarity: {similarity}', fg='blue', bold=True)
+        return similarity
     
     def get_matches_between_nodes(self, noun1: str, noun2: str, n_best: int = 0, verbose: bool = False) -> List[Tuple]:
         props_noun1 = SentenceEmbedding.get_noun_props(noun1, self.quasimodo)
@@ -71,7 +70,7 @@ class SentenceEmbedding(SentenceTransformer):
 
         autocomplete_props_pair1 = google_autocomplete.outside_process(pair1[0], pair1[1]).get((pair1[0], pair1[1]), {"suggestions": [], "props": []}).get("props", [])
         autocomplete_props_pair2 = google_autocomplete.outside_process(pair2[0], pair2[1]).get((pair2[0], pair2[1]), {"suggestions": [], "props": []}).get("props", [])
-        
+
         props_pair1 = list(set(quasimodo_props_pair1 + autocomplete_props_pair1))
         props_pair2 = list(set(quasimodo_props_pair2 + autocomplete_props_pair2))
 
@@ -114,12 +113,6 @@ class SentenceEmbedding(SentenceTransformer):
             "score": matches[0][1],
             "match": matches[0][0],
         }
-    
-    def save_db(self):
-        with open('database/embadding.json', 'w') as f1:
-            json.dump(self.embaddings_db, f1)
-        with open('database/similarity.json', 'w') as f2:
-            json.dump(self.similarity_db, f2)
 
     @staticmethod
     def print_sentence(sentence: tuple, show_nouns: bool = True):
@@ -161,11 +154,6 @@ class SentenceEmbedding(SentenceTransformer):
             [(nouns[3], nouns[0]), (nouns[1], nouns[2])],
             [(nouns[3], nouns[0]), (nouns[2], nouns[1])],
         ]
-
-
-def read_json(path: str):
-    with open(path) as f:
-        return json.load(f)
 
 
 def run(sentence1: str, 
@@ -220,7 +208,7 @@ def run(sentence1: str,
             if res:
                 score = round(sum([val[2] for val in res]) / len(res), 3)
             matches.append(((comb1, comb2), score, res))
-    model.save_db()
+
     matches = sorted(matches, key=lambda x: -x[1])
     if verbose:
         for match in matches:
