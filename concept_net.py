@@ -60,54 +60,67 @@ def extend_and_extract_props(engine: inflect.engine,
                              subject: str, 
                              n: int = 20, 
                              weight_thresh: int = 0,
-                             plural_and_singular: bool = False):
+                             plural_and_singular: bool = False,
+                             obj: str = ""):
     subjects = [subject]
     if plural_and_singular:
         extend_plural_and_singular(engine, subject, subjects)
 
-    to_return = []
+    all_props = []
     matches = set()
     for sub in subjects:
-        content = read_page(subject, which, n)
-        props = extract_props(content, subject, matches, weight_thresh)
-        to_return.extend(props)
-    to_return = sorted(to_return, key=lambda x: -x[1])
-    return [val[0] for val in to_return[:n]]
+        content = read_page(sub, which, n)
+        props = extract_props(content, sub, matches, weight_thresh)
+        all_props.extend(props)
+    all_props = sorted(all_props, key=lambda x: -x[1])
+    all_props = [val[0] for val in all_props[:n]]
+
+    if obj:
+        new_props = []
+        for prop in all_props:
+            if prop.endswith(obj):
+                new_props.append(prop[:-len(obj)].strip())
+        all_props = new_props
+    return all_props
 
 
 def capableOf(engine: inflect.engine, 
               subject: str, 
               n: int = 20, 
               weight_thresh: int = 0,
-              plural_and_singular: bool = False):
-    return extend_and_extract_props(engine, "CapableOf", subject, n, weight_thresh, plural_and_singular)
+              plural_and_singular: bool = False,
+              obj: str = ""):
+    return extend_and_extract_props(engine, "CapableOf", subject, n, weight_thresh, plural_and_singular, obj)
     
 
 def isA(engine: inflect.engine, 
         subject: str, 
         n: int = 20, 
         weight_thresh: int = 0,
-        plural_and_singular: bool = False):
-    return extend_and_extract_props(engine, "IsA", subject, n, weight_thresh, plural_and_singular)
+        plural_and_singular: bool = False,
+        obj: str = ""):
+    return extend_and_extract_props(engine, "IsA", subject, n, weight_thresh, plural_and_singular, obj)
 
 
 def usedFor(engine: inflect.engine, 
             subject: str, 
             n: int = 20, 
             weight_thresh: int = 0,
-            plural_and_singular: bool = False):
-    return extend_and_extract_props(engine, "UsedFor", subject, n, weight_thresh, plural_and_singular)
+            plural_and_singular: bool = False,
+            obj: str = ""):
+    return extend_and_extract_props(engine, "UsedFor", subject, n, weight_thresh, plural_and_singular, obj)
 
 
 def hasProperty(engine: inflect.engine, 
                 subject: str, 
                 n: int = 20, 
                 weight_thresh: int = 0,
-                plural_and_singular: bool = False):
-    return extend_and_extract_props(engine, "HasProperty", subject, n, weight_thresh, plural_and_singular)
+                plural_and_singular: bool = False,
+                obj: str = ""):
+    return extend_and_extract_props(engine, "HasProperty", subject, n, weight_thresh, plural_and_singular, obj)
 
 
-# print(capableOf('sun', 10, 1))
-# print(isA('sun', 10, 1))
-# print(usedFor('sun', 10, 1))
-# print(hasProperty('sun', 10, 1))
+
+engine = inflect.engine()
+props = usedFor(engine=engine, subject='umbrella', n=1000, weight_thresh=1, plural_and_singular=True, obj='rain')
+print(props)
