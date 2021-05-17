@@ -120,6 +120,18 @@ def hasProperty(engine: inflect.engine,
     return extend_and_extract_props(engine, "HasProperty", subject, n, weight_thresh, plural_and_singular, obj)
 
 
+def get_edge_props(engine: inflect.engine, 
+                node1: str, 
+                node2: str,
+                n_best: int = 100, 
+                weight_thresh: int = 1,
+                plural_and_singular: bool = True):
+    has_props = hasProperty(engine=engine, node1=node1, node2=node2, n_best=n_best, weight_thresh=weight_thresh, plural_and_singular=plural_and_singular)
+    capable_of = capableOf(engine=engine, node1=node1, node2=node2, n_best=n_best, weight_thresh=weight_thresh, plural_and_singular=plural_and_singular)
+    type_of = isA(engine=engine, node1=node1, node2=node2, n_best=n_best, weight_thresh=weight_thresh, plural_and_singular=plural_and_singular)
+    used_for = usedFor(engine=engine, node1=node1, node2=node2, n_best=n_best, weight_thresh=weight_thresh, plural_and_singular=plural_and_singular)
+    return has_props + capable_of + type_of + used_for
+
 
 # engine = inflect.engine()
 # props = capableOf(engine=engine, subject='sun', n=1000, weight_thresh=1, plural_and_singular=True, obj='earth')

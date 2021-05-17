@@ -64,27 +64,17 @@ class SentenceEmbedding(SentenceTransformer):
                 SentenceEmbedding.print_sentence(sentence)
         return sentences
     
-    def get_matches_between_edges(self, pair1: Tuple[str], pair2: Tuple[str], n_best: int = 0, verbose: bool = False):
-        quasimodo_props_pair1 = self.quasimodo.get_edge_props(pair1[0], pair1[1], n_largest=10, plural_and_singular=True)
-        quasimodo_props_pair2 = self.quasimodo.get_edge_props(pair2[0], pair2[1], n_largest=10, plural_and_singular=True)
+    def get_edge_props(self, head: str, tail: str) -> List[str]:
+        quasimodo_props = self.quasimodo.get_edge_props(head, tail, n_largest=10, plural_and_singular=True)
+        autocomplete_props = google_autocomplete.get_edge_props(head, tail).get((head, tail), {"suggestions": [], "props": []}).get("props", [])
+        concept_new_props = concept_net.get_edge_props(self.engine, head, tail)
+        return list(set(quasimodo_props + autocomplete_props + concept_new_props))
 
-        autocomplete_props_pair1 = google_autocomplete.get_edge_props(pair1[0], pair1[1]).get((pair1[0], pair1[1]), {"suggestions": [], "props": []}).get("props", [])
-        autocomplete_props_pair2 = google_autocomplete.get_edge_props(pair2[0], pair2[1]).get((pair2[0], pair2[1]), {"suggestions": [], "props": []}).get("props", [])
-
-        concept_net_props_pair1 = concept_net.hasProperty(engine=self.engine, subject=pair1[0], n=1000, weight_thresh=1, plural_and_singular=True, obj=pair1[1])
-        concept_net_capable_pair1 = concept_net.capableOf(engine=self.engine, subject=pair1[0], n=1000, weight_thresh=1, plural_and_singular=True, obj=pair1[1])
-        concept_net_type_of_pair1 = concept_net.isA(engine=self.engine, subject=pair1[0], n=1000, weight_thresh=1, plural_and_singular=True, obj=pair1[1])
-        concept_net_used_for_pair1 = concept_net.usedFor(engine=self.engine, subject=pair1[0], n=1000, weight_thresh=1, plural_and_singular=True, obj=pair1[1])
-        all_concept_net_props_pair1 = concept_net_props_pair1 + concept_net_capable_pair1 + concept_net_type_of_pair1 + concept_net_used_for_pair1
-
-        concept_net_props_pair2 = concept_net.hasProperty(engine=self.engine, subject=pair2[0], n=1000, weight_thresh=1, plural_and_singular=True, obj=pair2[1])
-        concept_net_capable_pair2 = concept_net.capableOf(engine=self.engine, subject=pair2[0], n=1000, weight_thresh=1, plural_and_singular=True, obj=pair2[1])
-        concept_net_type_of_pair2 = concept_net.isA(engine=self.engine, subject=pair2[0], n=1000, weight_thresh=1, plural_and_singular=True, obj=pair2[1])
-        concept_net_used_for_pair2 = concept_net.usedFor(engine=self.engine, subject=pair2[0], n=1000, weight_thresh=1, plural_and_singular=True, obj=pair2[1])
-        all_concept_net_props_pair2 = concept_net_props_pair2 + concept_net_capable_pair2 + concept_net_type_of_pair2 + concept_net_used_for_pair2
-
-        props_pair1 = list(set(quasimodo_props_pair1 + autocomplete_props_pair1 + all_concept_net_props_pair1))
-        props_pair2 = list(set(quasimodo_props_pair2 + autocomplete_props_pair2 + all_concept_net_props_pair2))
+    
+    def get_score(self, pair1: Tuple[str], pair2: Tuple[str], n_best: int = 0, verbose: bool = False):
+        
+        props_pair1 = self.get_edge_props(pair1[0], pair1[1])
+        props_pair2 = self.get_edge_props(pair2[0], pair2[1])
 
         sentences = []
         for prop1 in props_pair1:
@@ -96,7 +86,15 @@ class SentenceEmbedding(SentenceTransformer):
         if verbose:
             for sentence in sentences:
                 SentenceEmbedding.print_sentence(sentence)
-        return sentences
+        
+        score = 0
+        if sentences:
+            score = round(sum([val[2] for val in sentences]) / len(sentences), 3)
+
+        return {
+            "sentences": sentences,
+            "score": score,
+        }
     
     def match_paris(self, nouns: List[str], verbose: bool = False):
         if len(nouns) != 4:
@@ -106,11 +104,8 @@ class SentenceEmbedding(SentenceTransformer):
         matches = []
         combs = SentenceEmbedding.get_all_combs(nouns)
         for comb in combs:
-            res = self.get_matches_between_edges(comb[0], comb[1], n_best=5)
-            score = 0
-            if res:
-                score = sum([val[2] for val in res]) / len(res)
-            matches.append((comb, score))
+            res = self.get_score(comb[0], comb[1], n_best=5)
+            matches.append((comb, res["score"]))
 
         matches = sorted(matches, key=lambda x: -x[1])
         if verbose:
@@ -215,11 +210,8 @@ def run(sentence1: str,
             secho(f"{(i * len(combs2)) + j}", fg="blue", bold=True, nl=False)
             secho(f" out of ", fg="blue", nl=False)
             secho(f"{len(combs1) * len(combs2)}", fg="blue", bold=True)
-            res = model.get_matches_between_edges(comb1, comb2, n_best=5)
-            score = 0
-            if res:
-                score = round(sum([val[2] for val in res]) / len(res), 3)
-            matches.append(((comb1, comb2), score, res))
+            res = model.get_score(comb1, comb2, n_best=5)
+            matches.append(((comb1, comb2), res["score"], res["sentences"]))
 
     matches = sorted(matches, key=lambda x: -x[1])
     if verbose:
