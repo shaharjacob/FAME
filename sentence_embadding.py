@@ -3,7 +3,7 @@ from typing import List, Tuple
 from itertools import combinations
 
 import click
-import numpy as np
+import inflect
 from click import secho
 from sentence_transformers import SentenceTransformer, util
 
@@ -19,13 +19,13 @@ from quasimodo import Quasimodo
 
 
 class SentenceEmbedding(SentenceTransformer):
-    def __init__(self, model: str = 'stsb-mpnet-base-v2', init_quasimodo: bool = True):
+    def __init__(self, model: str = 'stsb-mpnet-base-v2', init_quasimodo: bool = True, init_inflect: bool = False):
         super().__init__(model)
         self.embaddings = {}
         if init_quasimodo:
             self.quasimodo = Quasimodo(path='tsv/quasimodo.tsv')
-        self.quasimodo_time = 0
-        self.google_time = 0
+        if init_inflect:
+            self.engine = inflect.engine()
     
     def encode_sentences(self, sentences: List[str]):
         embeddings = super().encode(sentences)
@@ -71,8 +71,20 @@ class SentenceEmbedding(SentenceTransformer):
         autocomplete_props_pair1 = google_autocomplete.outside_process(pair1[0], pair1[1]).get((pair1[0], pair1[1]), {"suggestions": [], "props": []}).get("props", [])
         autocomplete_props_pair2 = google_autocomplete.outside_process(pair2[0], pair2[1]).get((pair2[0], pair2[1]), {"suggestions": [], "props": []}).get("props", [])
 
-        props_pair1 = list(set(quasimodo_props_pair1 + autocomplete_props_pair1))
-        props_pair2 = list(set(quasimodo_props_pair2 + autocomplete_props_pair2))
+        concept_net_props_pair1 = concept_net.hasProperty(engine=self.engine, subject=pair1[0], n=1000, weight_thresh=1, plural_and_singular=True, obj=pair1[1])
+        concept_net_capable_pair1 = concept_net.capableOf(engine=self.engine, subject=pair1[0], n=1000, weight_thresh=1, plural_and_singular=True, obj=pair1[1])
+        concept_net_type_of_pair1 = concept_net.isA(engine=self.engine, subject=pair1[0], n=1000, weight_thresh=1, plural_and_singular=True, obj=pair1[1])
+        concept_net_used_for_pair1 = concept_net.usedFor(engine=self.engine, subject=pair1[0], n=1000, weight_thresh=1, plural_and_singular=True, obj=pair1[1])
+        all_concept_net_props_pair1 = concept_net_props_pair1 + concept_net_capable_pair1 + concept_net_type_of_pair1 + concept_net_used_for_pair1
+
+        concept_net_props_pair2 = concept_net.hasProperty(engine=self.engine, subject=pair2[0], n=1000, weight_thresh=1, plural_and_singular=True, obj=pair2[1])
+        concept_net_capable_pair2 = concept_net.capableOf(engine=self.engine, subject=pair2[0], n=1000, weight_thresh=1, plural_and_singular=True, obj=pair2[1])
+        concept_net_type_of_pair2 = concept_net.isA(engine=self.engine, subject=pair2[0], n=1000, weight_thresh=1, plural_and_singular=True, obj=pair2[1])
+        concept_net_used_for_pair2 = concept_net.usedFor(engine=self.engine, subject=pair2[0], n=1000, weight_thresh=1, plural_and_singular=True, obj=pair2[1])
+        all_concept_net_props_pair2 = concept_net_props_pair2 + concept_net_capable_pair2 + concept_net_type_of_pair2 + concept_net_used_for_pair2
+
+        props_pair1 = list(set(quasimodo_props_pair1 + autocomplete_props_pair1 + all_concept_net_props_pair1))
+        props_pair2 = list(set(quasimodo_props_pair2 + autocomplete_props_pair2 + all_concept_net_props_pair2))
 
         sentences = []
         for prop1 in props_pair1:
@@ -193,7 +205,7 @@ def run(sentence1: str,
     combs2 += reverse_combs2
 
     secho(f"[INFO] create SentenceEmbedding object", fg="blue")
-    model = SentenceEmbedding(model=model)
+    model = SentenceEmbedding(model=model, init_quasimodo=True, init_inflect=True)
 
     matches = []
     secho(f"[INFO] Total combinations to process: ", fg="blue", nl=False)
@@ -268,26 +280,27 @@ def cli(sentence1: str, sentence2: str, verbose: bool, full_details: bool, thres
 if __name__ == "__main__":
     # cli()
 
-    # text1 = 'earth revolve around the sun'
-    # text2 = 'earth circle the sun'
-    # text3 = 'dog is the best friend of human'
+    sentences = [
+        "On earth, the atmosphere protects us from the sun, but not enough so we use sunscreen",  # 0
+        "The nucleus, which is positively charged, and the electrons which are negatively charged, compose the atom",  # 1
 
-    # model = SentenceEmbedding()
-    # model.similarity(text1, text3, verbose=True)
+        "A singer expresses what he thinks by songs",  # 2
+        "A programmer expresses what he thinks by writing code",  # 3
 
-    sentence1 = "On earth, the atmosphere protects us from the sun, but not enough so we use sunscreen"
-    sentence2 = "The nucleus, which is positively charged, and the electrons which are negatively charged, compose the atom"
+        "A road is where cars are",  # 4
+        "boats sail on the lake to get from place to place",  # 5
 
-    sentence3 = "A singer expresses what he thinks by songs"
-    sentence4 = "A programmer expresses what he thinks by writing code"
+        "In order to prevent illness, we use medicine",  # 6
+        "law is used to suppress anarchy",  # 7
 
-    sentence5 = "A road is where cars are"
-    sentence6 = "boats sail on the lake to get from place to place"
+        "His brain is full of thoughts",  # 8
+        "The astronaut is hovering in space",  # 9
 
-    main(sentence5, sentence6, verbose=True, full_details=True, model='stsb-mpnet-base-v2', addition_nouns=['sunscreen'])
+        "The plant manages to survive in the desert even though it does not have much water",  # 10
+        "The cat wanders the street and eats cans in order to survive",  # 11
 
-    # model = SentenceEmbedding(model='stsb-mpnet-base-v2')
+        "sunscreen protect our skin from the sun",  # 12
+        "umbrella protect our body from the rain"  # 13
+     ]
 
-    # start = time.time()
-    # model.
-
+    main(sentences[12], sentences[13], verbose=True, full_details=True, model='stsb-mpnet-base-v2', addition_nouns=['sunscreen'])

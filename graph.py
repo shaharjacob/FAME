@@ -153,6 +153,14 @@ def run(text: str, quasimodo: Quasimodo, addition_nouns = []):
         qusimodo_subjects_similarity = quasimodo.get_similarity_between_subjects(comb[0], comb[1], n_largest=10, plural_and_singular=True)
         if qusimodo_subjects_similarity:
             labels["they are both..."] = [f"{val[0]} {val[1]}" for val in qusimodo_subjects_similarity]
+        
+        concept_net_props = concept_net.hasProperty(engine=quasimodo.engine, subject=comb[0], n=1000, weight_thresh=1, plural_and_singular=True, obj=comb[1])
+        concept_net_capable = concept_net.capableOf(engine=quasimodo.engine, subject=comb[0], n=1000, weight_thresh=1, plural_and_singular=True, obj=comb[1])
+        concept_net_type_of = concept_net.isA(engine=quasimodo.engine, subject=comb[0], n=100, weight_thresh=1, plural_and_singular=True, obj=comb[1])
+        concept_net_used_for = concept_net.usedFor(engine=quasimodo.engine, subject=comb[0], n=1000, weight_thresh=1, plural_and_singular=True, obj=comb[1])
+        all_concept_net_props = concept_net_props + concept_net_capable + concept_net_type_of + concept_net_used_for
+        if all_concept_net_props:
+            labels["from conceptNet"] = all_concept_net_props
 
         graph.add_edge(comb[0], comb[1], labels=labels)
 

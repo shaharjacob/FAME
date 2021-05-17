@@ -121,6 +121,15 @@ def hasProperty(engine: inflect.engine,
 
 
 
-engine = inflect.engine()
-props = usedFor(engine=engine, subject='umbrella', n=1000, weight_thresh=1, plural_and_singular=True, obj='rain')
-print(props)
+# engine = inflect.engine()
+# props = capableOf(engine=engine, subject='sun', n=1000, weight_thresh=1, plural_and_singular=True, obj='earth')
+# print(props)
+
+# props = isA(engine=engine, subject='sun', n=1000, weight_thresh=1, plural_and_singular=True, obj='earth')
+# print(props)
+
+# props = usedFor(engine=engine, subject='sun', n=1000, weight_thresh=1, plural_and_singular=True, obj='earth')
+# print(props)
+
+# props = hasProperty(engine=engine, subject='sun', n=1000, weight_thresh=1, plural_and_singular=True, obj='earth')
+# print(props)
