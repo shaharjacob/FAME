@@ -65,8 +65,8 @@ class SentenceEmbedding(SentenceTransformer):
         return sentences
     
     def get_matches_between_edges(self, pair1: Tuple[str], pair2: Tuple[str], n_best: int = 0, verbose: bool = False):
-        quasimodo_props_pair1 = self.quasimodo.get_subject_object_props(pair1[0], pair1[1], n_largest=10, plural_and_singular=True)
-        quasimodo_props_pair2 = self.quasimodo.get_subject_object_props(pair2[0], pair2[1], n_largest=10, plural_and_singular=True)
+        quasimodo_props_pair1 = self.quasimodo.get_edge_props(pair1[0], pair1[1], n_largest=10, plural_and_singular=True)
+        quasimodo_props_pair2 = self.quasimodo.get_edge_props(pair2[0], pair2[1], n_largest=10, plural_and_singular=True)
 
         autocomplete_props_pair1 = google_autocomplete.outside_process(pair1[0], pair1[1]).get((pair1[0], pair1[1]), {"suggestions": [], "props": []}).get("props", [])
         autocomplete_props_pair2 = google_autocomplete.outside_process(pair2[0], pair2[1]).get((pair2[0], pair2[1]), {"suggestions": [], "props": []}).get("props", [])
@@ -141,7 +141,7 @@ class SentenceEmbedding(SentenceTransformer):
     @staticmethod
     def get_noun_props(noun: str, quasimodo: Quasimodo):
         props = []
-        quasimodo_props = quasimodo.get_subject_props(subject=noun, n_largest=10, plural_and_singular=True)
+        quasimodo_props = quasimodo.get_node_props(node=noun, n_largest=10, plural_and_singular=True)
         quasimodo_props = [f"{val[0]} {val[1]}" for val in quasimodo_props]
         props.extend(quasimodo_props)
         props.extend(concept_net.hasProperty(engine=quasimodo.engine, subject=noun, n=10, weight_thresh=1, plural_and_singular=True))

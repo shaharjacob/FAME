@@ -42,17 +42,17 @@ class Quasimodo:
         return pd.read_csv(path, sep='\t', low_memory=False)
     
 
-    def get_subject_props(self, 
-                          subject: str, 
-                          n_largest: int = 0,
-                          verbose: bool = False,
-                          plural_and_singular: bool = False) -> List[Tuple[str]]:
+    def get_node_props(self, 
+                       node: str, 
+                       n_largest: int = 0,
+                       verbose: bool = False,
+                       plural_and_singular: bool = False) -> List[Tuple[str]]:
         
-        subjects = [subject]
+        nodes = [node]
         if plural_and_singular:
-            self.extend_plural_and_singular(subject, subjects)
+            self.extend_plural_and_singular(node, nodes)
         
-        dataframes = [self.filter_by('subject', s) for s in subjects]
+        dataframes = [self.filter_by('subject', s) for s in nodes]
         concat_df = pd.concat(dataframes)
         concat_df = concat_df.drop_duplicates(subset=['predicate', 'object'])
 
@@ -75,24 +75,24 @@ class Quasimodo:
         return props_list
 
     
-    def get_subject_object_props(self, 
-                                 subject: str, 
-                                 obj: str,
-                                 n_largest: int = 0,
-                                 verbose: bool = False,
-                                 plural_and_singular: bool = False) -> List[Tuple[str]]:
+    def get_edge_props(self, 
+                       head: str, 
+                       tail: str,
+                       n_largest: int = 0,
+                       verbose: bool = False,
+                       plural_and_singular: bool = False) -> List[Tuple[str]]:
         
-        subjects = [subject]
-        objects = [obj]
+        heads = [head]
+        tails = [tail]
         if plural_and_singular:
-            self.extend_plural_and_singular(subject, subjects)
-            self.extend_plural_and_singular(obj, objects)
+            self.extend_plural_and_singular(head, heads)
+            self.extend_plural_and_singular(tail, tails)
         
-        subject_dataframes = [self.filter_by('subject', s) for s in subjects]
+        subject_dataframes = [self.filter_by('subject', h) for h in heads]
         concat_subject_df = pd.concat(subject_dataframes)
         concat_subject_df = concat_subject_df.drop_duplicates(subset=['predicate', 'object'])
 
-        filtered_dataframes = [self.filter_by('object', o, use_outside_df=True, df=concat_subject_df) for o in objects]
+        filtered_dataframes = [self.filter_by('object', t, use_outside_df=True, df=concat_subject_df) for t in tails]
         concat_filtered_df = pd.concat(filtered_dataframes)
         concat_filtered_df = concat_filtered_df.drop_duplicates(subset=['predicate', 'object'])
 
@@ -115,29 +115,29 @@ class Quasimodo:
         return props_list
 
 
-    def get_similarity_between_subjects(self,
-                                        subject1: str,
-                                        subject2: str,
-                                        n_largest: int = 0,
-                                        verbose: bool = False,
-                                        plural_and_singular: bool = False) -> List[Tuple[str]]:
+    def get_similarity_between_nodes(self,
+                                     node1: str,
+                                     node2: str,
+                                     n_largest: int = 0,
+                                     verbose: bool = False,
+                                     plural_and_singular: bool = False) -> List[Tuple[str]]:
         
-        subjects1 = [subject1]
-        subjects2 = [subject2]
+        nodes1 = [node1]
+        nodes2 = [node2]
 
         if plural_and_singular:
-            self.extend_plural_and_singular(subject1, subjects1)
-            self.extend_plural_and_singular(subject2, subjects2)
+            self.extend_plural_and_singular(node1, nodes1)
+            self.extend_plural_and_singular(node2, nodes2)
         
-        subject1_dataframes = [self.filter_by('subject', s) for s in subjects1]
-        concat_subject1_df = pd.concat(subject1_dataframes)
-        concat_subject1_df = concat_subject1_df.drop_duplicates(subset=['predicate', 'object'])
+        node1_dataframes = [self.filter_by('subject', n1) for n1 in nodes1]
+        concat_node1_df = pd.concat(node1_dataframes)
+        concat_node1_df = concat_node1_df.drop_duplicates(subset=['predicate', 'object'])
 
-        subject2_dataframes = [self.filter_by('subject', s) for s in subjects2]
-        concat_subject2_df = pd.concat(subject2_dataframes)
-        concat_subject2_df = concat_subject2_df.drop_duplicates(subset=['predicate', 'object'])
+        node2_dataframes = [self.filter_by('subject', n2) for n2 in nodes2]
+        concat_node2_df = pd.concat(node2_dataframes)
+        concat_node2_df = concat_node2_df.drop_duplicates(subset=['predicate', 'object'])
 
-        concat_df = pd.concat([concat_subject1_df, concat_subject2_df])
+        concat_df = pd.concat([concat_node1_df, concat_node2_df])
         df = concat_df[['predicate','object']]
         df = df[df.duplicated(keep=False)]
         if df.empty:
@@ -146,12 +146,12 @@ class Quasimodo:
         indexies = df.groupby(list(df)).apply(lambda x: tuple(x.index)).tolist()
         matches = []
         for index in indexies:
-            sub1_row = concat_df.loc[index[0]]
-            sub2_row = concat_df.loc[index[1]]
+            node1_row = concat_df.loc[index[0]]
+            node2_row = concat_df.loc[index[1]]
             matches.append({
-                "predicate": sub1_row['predicate'],
-                "object": sub1_row['object'],
-                "plausibility": (sub1_row['plausibility'] + sub2_row['plausibility']) / 2,
+                "predicate": node1_row['predicate'],
+                "object": node1_row['object'],
+                "plausibility": (node1_row['plausibility'] + node2_row['plausibility']) / 2,
             })
 
         new_df = DataFrame(matches)
@@ -164,13 +164,13 @@ class Quasimodo:
         for _, val in new_df.iterrows():
             props_list.append((val['predicate'].replace('_', ' '), val['object']))
             if verbose:
-                secho(f"{subject1} ", fg="blue", bold=True, nl=False)
+                secho(f"{node1} ", fg="blue", bold=True, nl=False)
                 secho(f"and ", nl=False)
-                secho(f"{subject2} ", fg="blue", bold=True, nl=False)
+                secho(f"{node2} ", fg="blue", bold=True, nl=False)
                 secho("are both ", nl=False)
                 secho(f"{val['predicate'].replace('_', ' ')} ", fg="green", bold=True, nl=False)
                 secho(f"{val['object']}", fg="cyan", bold=True, nl=False)
-                current_length = len(f"{subject1} ") + len("and ") + len(f"{subject2} ") + len("are both ") + len(f"{val['predicate']} ") + len(val['object'])
+                current_length = len(f"{node1} ") + len("and ") + len(f"{node2} ") + len("are both ") + len(f"{val['predicate']} ") + len(val['object'])
                 max_length = 50
                 spaces = ' '.join([""] * max(1, (max_length - current_length)))
                 secho(f"{spaces}avg. score: ", nl=False)
@@ -252,25 +252,7 @@ def merge_tsvs(output: str):
 
 
 if __name__ == '__main__':
-    # pass
-    # merge_tsvs('quasimodo.tsv')
-
-    # start_page = 48000
-    # end_page = 50000
-    # print(start_page, end_page)
-    # write_tsv(start_page, end_page)
-
-    quasimodo = Quasimodo(path='tsv/quasimodo.tsv')
-    counts = quasimodo.count_pred_obj_paris()
-    a = [('revolve around', 'sun'), ('rotate around', 'sun'), ('be pulled into', 'sun'), ('has_property', 'sun'), 
-        ('be attracted to', 'sun'), ('need', 'sun'), ('spin around', 'sun'), ('be to', 'sun'), ('be close to', 'sun'), 
-        ('turn around', 'sun')
-    ]
-    for k in a:
-        print(f"{k}: {counts[k]}")
-    # quasimodo.get_subject_props('cow', 100, True, True)
-    # quasimodo.get_subject_object_props('cow', 'milk', 7, True, True)
-    # quasimodo.get_similarity_between_subjects('cow', 'chicken', 100, True, True)
+    pass
 
 
 

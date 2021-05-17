@@ -150,27 +150,27 @@ quasimodo = Quasimodo(path='tsv/quasimodo.tsv')
 # quasimodo.merge_tsvs('quasimodo.tsv)
 
 # get information on a single subject. n_largest will take the best matches according to quasimodo score.
-quasimodo.get_subject_props('horse', n_largest=20, verbose=True, plural_and_singular=True)
+quasimodo.get_node_props('horse', n_largest=20, verbose=True, plural_and_singular=True)
 
 # so the output will be:  
 ```
-![alt text](https://github.com/shaharjacob/commonsense-analogy/blob/main/images/get_subject_object_props_quasimodo_api.png?raw=true)  
+![alt text](https://github.com/shaharjacob/commonsense-analogy/blob/main/images/get_subject_props_quasimodo_api.png?raw=true)  
 
 ```bash
 # get all the connections between each pair (connection is subject-object relationship)
-quasimodo.get_subject_object_props('sun', 'earth', n_largest=20, verbose=True, plural_and_singular=True)
+quasimodo.get_edge_props('sun', 'earth', n_largest=20, verbose=True, plural_and_singular=True)
 
 # so the output will be:  
 ```
-![alt text](https://github.com/shaharjacob/commonsense-analogy/blob/main/images/get_subject_object_props_quasimodo_api.png?raw=true)  
+![alt text](https://github.com/shaharjacob/commonsense-analogy/blob/main/images/get_edge_props_quasimodo_api.png?raw=true)  
 
 ```bash
 # get all the similiar properties between two subjects
-quasimodo.get_similarity_between_subjects('sun', 'earth', n_largest=20, verbose=True, plural_and_singular=True)
+quasimodo.get_similarity_between_nodes('sun', 'earth', n_largest=20, verbose=True, plural_and_singular=True)
 
 # so the output will be:  
 ```
-![alt text](https://github.com/shaharjacob/commonsense-analogy/blob/main/images/get_similarity_between_subjects_quasimodo_api.png?raw=true)  
+![alt text](https://github.com/shaharjacob/commonsense-analogy/blob/main/images/get_similarity_between_nodes_quasimodo_api.png?raw=true)  
 &nbsp;  
 
 ## wikifier.py

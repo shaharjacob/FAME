@@ -99,7 +99,7 @@ def run(text: str, quasimodo: Quasimodo, addition_nouns = []):
     secho("\n[INFO] collect nodes information", fg="blue")
     for noun in tqdm(nouns):
         labels = {}
-        noun_props = quasimodo.get_subject_props(subject=noun, n_largest=10, plural_and_singular=True)
+        noun_props = quasimodo.get_node_props(node=noun, n_largest=10, plural_and_singular=True)
         quasimodo_props = [f"{val[0]} {val[1]}" for val in noun_props]
         concept_net_props = concept_net.hasProperty(engine=quasimodo.engine, subject=noun, n=10, weight_thresh=1, plural_and_singular=True)
         concept_net_capable = concept_net.capableOf(engine=quasimodo.engine, subject=noun, n=10, weight_thresh=1, plural_and_singular=True)
@@ -146,11 +146,11 @@ def run(text: str, quasimodo: Quasimodo, addition_nouns = []):
         if autocomplete:
             labels["google-autocomplete"] = autocomplete
         
-        quasimodo_subject_object_connection = quasimodo.get_subject_object_props(comb[0], comb[1], n_largest=10, plural_and_singular=True)
+        quasimodo_subject_object_connection = quasimodo.get_edge_props(comb[0], comb[1], n_largest=10, plural_and_singular=True)
         if quasimodo_subject_object_connection:
             labels["from quasimido"] = [f"{comb[0]} {prop} {comb[1]}" for prop in quasimodo_subject_object_connection]
 
-        qusimodo_subjects_similarity = quasimodo.get_similarity_between_subjects(comb[0], comb[1], n_largest=10, plural_and_singular=True)
+        qusimodo_subjects_similarity = quasimodo.get_similarity_between_nodes(comb[0], comb[1], n_largest=10, plural_and_singular=True)
         if qusimodo_subjects_similarity:
             labels["they are both..."] = [f"{val[0]} {val[1]}" for val in qusimodo_subjects_similarity]
         
