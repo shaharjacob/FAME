@@ -68,8 +68,8 @@ class SentenceEmbedding(SentenceTransformer):
         quasimodo_props_pair1 = self.quasimodo.get_edge_props(pair1[0], pair1[1], n_largest=10, plural_and_singular=True)
         quasimodo_props_pair2 = self.quasimodo.get_edge_props(pair2[0], pair2[1], n_largest=10, plural_and_singular=True)
 
-        autocomplete_props_pair1 = google_autocomplete.outside_process(pair1[0], pair1[1]).get((pair1[0], pair1[1]), {"suggestions": [], "props": []}).get("props", [])
-        autocomplete_props_pair2 = google_autocomplete.outside_process(pair2[0], pair2[1]).get((pair2[0], pair2[1]), {"suggestions": [], "props": []}).get("props", [])
+        autocomplete_props_pair1 = google_autocomplete.get_edge_props(pair1[0], pair1[1]).get((pair1[0], pair1[1]), {"suggestions": [], "props": []}).get("props", [])
+        autocomplete_props_pair2 = google_autocomplete.get_edge_props(pair2[0], pair2[1]).get((pair2[0], pair2[1]), {"suggestions": [], "props": []}).get("props", [])
 
         concept_net_props_pair1 = concept_net.hasProperty(engine=self.engine, subject=pair1[0], n=1000, weight_thresh=1, plural_and_singular=True, obj=pair1[1])
         concept_net_capable_pair1 = concept_net.capableOf(engine=self.engine, subject=pair1[0], n=1000, weight_thresh=1, plural_and_singular=True, obj=pair1[1])

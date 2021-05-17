@@ -14,17 +14,17 @@ from click import secho
 class GoogleAutocomplete(object):
     def __init__(self, 
                 question: str, 
-                obj1: str, 
-                obj2: str, 
+                node1: str, 
+                node2: str, 
                 browser: str = 'chrome',
                 pattern: str = '%s %s "*" %s', 
                 regex: str = '^%s %s (.*) %s$'):
         self.question = question
-        self.obj1 = obj1
-        self.obj2 = obj2
+        self.node1 = node1
+        self.node2 = node2
         self.browser = browser
-        self.keyword = pattern % (question, obj1, obj2)
-        self.regex = regex % (question, obj1, obj2)
+        self.keyword = pattern % (question, node1, node2)
+        self.regex = regex % (question, node1, node2)
         self.suggestions: List[Tuple[str]] = self.init_suggestions()
 
     def init_suggestions(self) -> List[Tuple[str]]:
@@ -38,7 +38,7 @@ class GoogleAutocomplete(object):
             if match:
                 parts = suggestion.split()
                 pairs = [f"{parts[i]} {parts[i+1]}" for i in range(len(parts) - 1)]
-                if all(elem in (parts + pairs) for elem in [self.obj1, self.obj2, self.question]):
+                if all(elem in (parts + pairs) for elem in [self.node1, self.node2, self.question]):
                     sugges.append((suggestion, match.group(1)))
         return list(set(sugges))
 
@@ -47,21 +47,21 @@ class GoogleAutocomplete(object):
         if not res: return
         question_indecies = res.span()
 
-        res = re.search(self.obj1, suggestion[0])
+        res = re.search(self.node1, suggestion[0])
         if not res: return
-        obj1_indecies = res.span()
+        node1_indecies = res.span()
 
-        res = re.search(self.obj2, suggestion[0])
+        res = re.search(self.node2, suggestion[0])
         if not res: return
-        obj2_indecies = res.span()
+        node2_indecies = res.span()
 
         secho(f"- ", nl=False)
         for j, char in enumerate(suggestion[0]):
             if (question_indecies[0] <= j <= question_indecies[1]):
                 secho(f"{char}", fg="blue", nl=False)
-            elif (obj1_indecies[0] <= j <= obj1_indecies[1]):
+            elif (node1_indecies[0] <= j <= node1_indecies[1]):
                 secho(f"{char}", fg="green", nl=False)
-            elif (obj2_indecies[0] <= j <= obj2_indecies[1]):
+            elif (node2_indecies[0] <= j <= node2_indecies[1]):
                 secho(f"{char}", fg="cyan", nl=False)
             else:
                 secho(f"{char}", nl=False)
@@ -146,12 +146,12 @@ def extend_to_plural_and_singular(engine: inflect.engine, entry: List[str], ques
                 suggestions["props"].append(suggestion[1])
 
 
-def outside_process(subject: str, obj: str) -> List[str]:
+def get_edge_props(node1: str, node2: str) -> List[str]:
     d = {
-        "why do": [[subject, obj]],
-        "why does": [[subject, obj]],
-        "how do": [[subject, obj]],
-        "how does": [[subject, obj]],
+        "why do": [[node1, node2]],
+        "why does": [[node1, node2]],
+        "how do": [[node1, node2]],
+        "how does": [[node1, node2]],
     }
     return process(d, verbose=False)
 
