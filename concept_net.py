@@ -126,10 +126,10 @@ def get_edge_props(engine: inflect.engine,
                 n_best: int = 100, 
                 weight_thresh: int = 1,
                 plural_and_singular: bool = True):
-    has_props = hasProperty(engine=engine, node1=node1, node2=node2, n_best=n_best, weight_thresh=weight_thresh, plural_and_singular=plural_and_singular)
-    capable_of = capableOf(engine=engine, node1=node1, node2=node2, n_best=n_best, weight_thresh=weight_thresh, plural_and_singular=plural_and_singular)
-    type_of = isA(engine=engine, node1=node1, node2=node2, n_best=n_best, weight_thresh=weight_thresh, plural_and_singular=plural_and_singular)
-    used_for = usedFor(engine=engine, node1=node1, node2=node2, n_best=n_best, weight_thresh=weight_thresh, plural_and_singular=plural_and_singular)
+    has_props = hasProperty(engine=engine, subject=node1, n=n_best, weight_thresh=weight_thresh, plural_and_singular=plural_and_singular, obj=node2)
+    capable_of = capableOf(engine=engine, subject=node1, n=n_best, weight_thresh=weight_thresh, plural_and_singular=plural_and_singular, obj=node2)
+    type_of = isA(engine=engine, subject=node1, n=n_best, weight_thresh=weight_thresh, plural_and_singular=plural_and_singular, obj=node2)
+    used_for = usedFor(engine=engine, subject=node1, n=n_best, weight_thresh=weight_thresh, plural_and_singular=plural_and_singular, obj=node2)
     return has_props + capable_of + type_of + used_for
 
 

@@ -1,4 +1,4 @@
-import time
+import json
 from typing import List, Tuple
 from itertools import combinations
 
@@ -19,13 +19,17 @@ from quasimodo import Quasimodo
 
 
 class SentenceEmbedding(SentenceTransformer):
-    def __init__(self, model: str = 'stsb-mpnet-base-v2', init_quasimodo: bool = True, init_inflect: bool = False):
+    def __init__(self, model: str = 'stsb-mpnet-base-v2', init_quasimodo: bool = True, init_inflect: bool = True, save_database=True):
         super().__init__(model)
         self.embaddings = {}
         if init_quasimodo:
             self.quasimodo = Quasimodo(path='tsv/quasimodo.tsv')
         if init_inflect:
             self.engine = inflect.engine()
+        self.save_database = save_database
+        self.quasimodo_edges = read_json('database/quasimodo_edges.json') if save_database else {}
+        self.google_edges = read_json('database/google_edges.json') if save_database else {}
+        self.conceptnet_edges = read_json('database/conceptnet_edges.json') if save_database else {}
     
     def encode_sentences(self, sentences: List[str]):
         embeddings = super().encode(sentences)
@@ -66,9 +70,25 @@ class SentenceEmbedding(SentenceTransformer):
         return sentences
     
     def get_edge_props(self, head: str, tail: str) -> List[str]:
-        quasimodo_props = self.quasimodo.get_edge_props(head, tail, n_largest=10, plural_and_singular=True)
-        autocomplete_props = google_autocomplete.get_edge_props(head, tail).get((head, tail), {"suggestions": [], "props": []}).get("props", [])
-        concept_new_props = concept_net.get_edge_props(self.engine, head, tail)
+
+        if f"{head}#{tail}" in self.quasimodo_edges:
+            quasimodo_props = self.quasimodo_edges[f"{head}#{tail}"]
+        else:
+            quasimodo_props = self.quasimodo.get_edge_props(head, tail, n_largest=10, plural_and_singular=True)
+            self.quasimodo_edges[f"{head}#{tail}"] = quasimodo_props  
+
+        if f"{head}#{tail}" in self.google_edges:
+            autocomplete_props = self.google_edges[f"{head}#{tail}"]
+        else:
+            autocomplete_props = google_autocomplete.get_edge_props(head, tail).get((head, tail), {"suggestions": [], "props": []}).get("props", [])
+            self.google_edges[f"{head}#{tail}"] = autocomplete_props  
+
+        if f"{head}#{tail}" in self.conceptnet_edges:
+            concept_new_props = self.conceptnet_edges[f"{head}#{tail}"]
+        else:
+            concept_new_props = concept_net.get_edge_props(self.engine, head, tail)
+            self.conceptnet_edges[f"{head}#{tail}"] = concept_new_props                
+            
         return list(set(quasimodo_props + autocomplete_props + concept_new_props))
 
     def get_edges_score(self, edge1: Tuple[str], edge2: Tuple[str], n_best: int = 0, verbose: bool = False):
@@ -95,6 +115,14 @@ class SentenceEmbedding(SentenceTransformer):
             "sentences": sentences,
             "score": score,
         }
+    
+    def save_datebase(self):
+        with open('database/quasimodo_edges.json', 'w') as f1:
+            json.dump(self.quasimodo_edges, f1)
+        with open('database/google_edges.json', 'w') as f2:
+            json.dump(self.google_edges, f2)
+        with open('database/conceptnet_edges.json', 'w') as f3:
+            json.dump(self.conceptnet_edges, f3)
 
     @staticmethod
     def print_sentence(sentence: tuple, show_nouns: bool = True):
@@ -111,13 +139,13 @@ class SentenceEmbedding(SentenceTransformer):
     @staticmethod
     def get_node_props(node: str, quasimodo: Quasimodo):
         props = []
-        quasimodo_props = quasimodo.get_node_props(node=noun, n_largest=10, plural_and_singular=True)
+        quasimodo_props = quasimodo.get_node_props(node=node, n_largest=10, plural_and_singular=True)
         quasimodo_props = [f"{val[0]} {val[1]}" for val in quasimodo_props]
         props.extend(quasimodo_props)
-        props.extend(concept_net.hasProperty(engine=quasimodo.engine, subject=noun, n=10, weight_thresh=1, plural_and_singular=True))
-        props.extend(concept_net.capableOf(engine=quasimodo.engine, subject=noun, n=10, weight_thresh=1, plural_and_singular=True))
-        props.extend(concept_net.isA(engine=quasimodo.engine, subject=noun, n=10, weight_thresh=1, plural_and_singular=True))
-        props.extend(concept_net.usedFor(engine=quasimodo.engine, subject=noun, n=10, weight_thresh=1, plural_and_singular=True))
+        props.extend(concept_net.hasProperty(engine=quasimodo.engine, subject=node, n=10, weight_thresh=1, plural_and_singular=True))
+        props.extend(concept_net.capableOf(engine=quasimodo.engine, subject=node, n=10, weight_thresh=1, plural_and_singular=True))
+        props.extend(concept_net.isA(engine=quasimodo.engine, subject=node, n=10, weight_thresh=1, plural_and_singular=True))
+        props.extend(concept_net.usedFor(engine=quasimodo.engine, subject=node, n=10, weight_thresh=1, plural_and_singular=True))
         return props
     
     @staticmethod
@@ -136,6 +164,11 @@ class SentenceEmbedding(SentenceTransformer):
             [(nouns[3], nouns[0]), (nouns[1], nouns[2])],
             [(nouns[3], nouns[0]), (nouns[2], nouns[1])],
         ]
+
+
+def read_json(path: str) -> dict:
+    with open(path, 'r') as f:
+        return json.load(f)
 
 
 def run(sentence1: str, 
@@ -175,18 +208,21 @@ def run(sentence1: str,
     combs2 += reverse_combs2
 
     secho(f"[INFO] create SentenceEmbedding object", fg="blue")
-    model = SentenceEmbedding(model=model, init_quasimodo=True, init_inflect=True)
+    model = SentenceEmbedding(model=model)
 
     matches = []
     secho(f"[INFO] Total combinations to process: ", fg="blue", nl=False)
     secho(f"{len(combs1) * len(combs2)}", fg="blue", bold=True)
     for i, comb1 in enumerate(combs1):
         for j, comb2 in enumerate(combs2):
-            secho(f"{(i * len(combs2)) + j}", fg="blue", bold=True, nl=False)
+            secho(f"{(i * len(combs2)) + j + 1}", fg="blue", bold=True, nl=False)
             secho(f" out of ", fg="blue", nl=False)
             secho(f"{len(combs1) * len(combs2)}", fg="blue", bold=True)
             res = model.get_edges_score(comb1, comb2, n_best=5)
             matches.append(((comb1, comb2), res["score"], res["sentences"]))
+    
+    if model.save_database:
+        model.save_datebase()
 
     matches = sorted(matches, key=lambda x: -x[1])
     if verbose:
@@ -270,4 +306,4 @@ if __name__ == "__main__":
         "umbrella protect our body from the rain"  # 13
      ]
 
-    main(sentences[12], sentences[13], verbose=True, full_details=True, model='stsb-mpnet-base-v2', addition_nouns=['sunscreen'])
+    main(sentences[0], sentences[1], verbose=True, full_details=True, model='stsb-mpnet-base-v2', addition_nouns=['sunscreen'])
