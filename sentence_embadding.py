@@ -48,14 +48,15 @@ class SentenceEmbedding(SentenceTransformer):
             secho(f'Similarity: {similarity}', fg='blue', bold=True)
         return similarity
     
-    def get_matches_between_nodes(self, noun1: str, noun2: str, n_best: int = 0, verbose: bool = False) -> List[Tuple]:
-        props_noun1 = SentenceEmbedding.get_noun_props(noun1, self.quasimodo)
-        props_noun2 = SentenceEmbedding.get_noun_props(noun2, self.quasimodo)
+    def get_nodes_score(self, node1: str, node2: str, n_best: int = 0, verbose: bool = False) -> List[Tuple]:
+
+        props_node1 = SentenceEmbedding.get_node_props(node1, self.quasimodo)
+        props_node2 = SentenceEmbedding.get_node_props(node2, self.quasimodo)
 
         sentences = []
-        for prop1 in props_noun1:
-            for prop2 in props_noun2:
-                sentences.append(((prop1, noun1), (prop2, noun2), self.similarity(prop1, prop2)))
+        for prop1 in props_node1:
+            for prop2 in props_node2:
+                sentences.append(((prop1, node1), (prop2, node2), self.similarity(prop1, prop2)))
         sentences = sorted(sentences, key=lambda x: -x[2])
         if n_best > 0:
             sentences = sentences[:n_best]
@@ -70,16 +71,15 @@ class SentenceEmbedding(SentenceTransformer):
         concept_new_props = concept_net.get_edge_props(self.engine, head, tail)
         return list(set(quasimodo_props + autocomplete_props + concept_new_props))
 
-    
-    def get_score(self, pair1: Tuple[str], pair2: Tuple[str], n_best: int = 0, verbose: bool = False):
+    def get_edges_score(self, edge1: Tuple[str], edge2: Tuple[str], n_best: int = 0, verbose: bool = False):
         
-        props_pair1 = self.get_edge_props(pair1[0], pair1[1])
-        props_pair2 = self.get_edge_props(pair2[0], pair2[1])
+        props_edge1 = self.get_edge_props(edge1[0], edge1[1])
+        props_edge2 = self.get_edge_props(edge2[0], edge2[1])
 
         sentences = []
-        for prop1 in props_pair1:
-            for prop2 in props_pair2:
-                sentences.append(((prop1, f"{pair1[0]} -> {pair1[1]}"), (prop2, f"{pair2[0]} -> {pair2[1]}"), self.similarity(prop1, prop2)))
+        for prop1 in props_edge1:
+            for prop2 in props_edge2:
+                sentences.append(((prop1, f"{edge1[0]} -> {edge1[1]}"), (prop2, f"{edge2[0]} -> {edge2[1]}"), self.similarity(prop1, prop2)))
         sentences = sorted(sentences, key=lambda x: -x[2])
         if n_best > 0:
             sentences = sentences[:n_best]
@@ -95,31 +95,6 @@ class SentenceEmbedding(SentenceTransformer):
             "sentences": sentences,
             "score": score,
         }
-    
-    def match_paris(self, nouns: List[str], verbose: bool = False):
-        if len(nouns) != 4:
-            secho(f"[ERROR] you should give excatly 4 nouns ({len(nouns)} was given)", fg='red', bold=True)
-            exit(1)
-
-        matches = []
-        combs = SentenceEmbedding.get_all_combs(nouns)
-        for comb in combs:
-            res = self.get_score(comb[0], comb[1], n_best=5)
-            matches.append((comb, res["score"]))
-
-        matches = sorted(matches, key=lambda x: -x[1])
-        if verbose:
-            for match in matches:
-                secho(f"({match[0][0][0]} --> {match[0][0][1]})", fg='red', bold=True, nl=False)
-                secho(f", ", nl=False)
-                secho(f"({match[0][1][0]} --> {match[0][1][1]}) ", fg='green', bold=True, nl=False)
-                secho(f"----> ", nl=False)
-                secho(f"{match[1]}", fg='blue', bold=True)
-        
-        return {
-            "score": matches[0][1],
-            "match": matches[0][0],
-        }
 
     @staticmethod
     def print_sentence(sentence: tuple, show_nouns: bool = True):
@@ -134,7 +109,7 @@ class SentenceEmbedding(SentenceTransformer):
         secho(f"{sentence[2]}", fg='blue', bold=show_nouns)
 
     @staticmethod
-    def get_noun_props(noun: str, quasimodo: Quasimodo):
+    def get_node_props(node: str, quasimodo: Quasimodo):
         props = []
         quasimodo_props = quasimodo.get_node_props(node=noun, n_largest=10, plural_and_singular=True)
         quasimodo_props = [f"{val[0]} {val[1]}" for val in quasimodo_props]
@@ -210,7 +185,7 @@ def run(sentence1: str,
             secho(f"{(i * len(combs2)) + j}", fg="blue", bold=True, nl=False)
             secho(f" out of ", fg="blue", nl=False)
             secho(f"{len(combs1) * len(combs2)}", fg="blue", bold=True)
-            res = model.get_score(comb1, comb2, n_best=5)
+            res = model.get_edges_score(comb1, comb2, n_best=5)
             matches.append(((comb1, comb2), res["score"], res["sentences"]))
 
     matches = sorted(matches, key=lambda x: -x[1])
