@@ -1,4 +1,5 @@
 import time
+import json
 from typing import List
 from pathlib import Path
 from itertools import combinations
@@ -8,6 +9,7 @@ from tqdm import tqdm
 from click import secho
 from graphviz import Digraph
 
+import test
 import concept_net
 import google_autocomplete
 from wikifier import Wikifier
@@ -15,12 +17,19 @@ from quasimodo import Quasimodo
 
 
 class MyGraph(Digraph):
-    def __init__(self, name):
+    def __init__(self, name, save_database=True):
         super().__init__(name=name)
         self.init_attr()
         self.nodes = []
         self.node_names = []
         self.edges = []
+        self.save_database = save_database
+        self.quasimodo_edges = read_json('database/quasimodo_edges.json') if save_database else {}
+        self.google_edges = read_json('database/google_edges.json') if save_database else {}
+        self.conceptnet_edges = read_json('database/conceptnet_edges.json') if save_database else {}
+        self.conceptnet_nodes = read_json('database/conceptnet_nodes.json') if save_database else {}
+        self.quasimodo_nodes_similarity = read_json('database/quasimodo_nodes_similarity.json') if save_database else {}
+        self.quasimodo_nodes = read_json('database/quasimodo_nodes.json') if save_database else {}
     
     def init_attr(self):
         self.attr('graph', pad='1', ranksep='1', nodesep='1')
@@ -75,13 +84,35 @@ class MyGraph(Digraph):
         return ''.join(parts)
     
     def view(self):
-        super().view()        
+        super().view()    
+
+    def save_datebase(self):
+        with open('database/quasimodo_edges.json', 'w') as f1:
+            json.dump(self.quasimodo_edges, f1)
+        with open('database/google_edges.json', 'w') as f2:
+            json.dump(self.google_edges, f2)
+        with open('database/conceptnet_edges.json', 'w') as f3:
+            json.dump(self.conceptnet_edges, f3) 
+        with open('database/quasimodo_nodes_similarity.json', 'w') as f4:
+            json.dump(self.quasimodo_nodes_similarity, f4) 
+        with open('database/conceptnet_nodes.json', 'w') as f5:
+            json.dump(self.conceptnet_nodes, f5)  
+        with open('database/quasimodo_nodes.json', 'w') as f6:
+            json.dump(self.quasimodo_nodes, f6) 
+              
+
+def read_json(path: str) -> dict:
+    with open(path, 'r') as f:
+        return json.load(f)
 
 
 def run(text: str, quasimodo: Quasimodo, addition_nouns = []):
 
     secho(f"Text: ", fg="blue", bold=True, nl=False)
     secho(f"{text}", fg="blue")
+
+    # TODO
+    addition_nouns = [noun for noun in addition_nouns if noun in text.split()]
 
     # part of speech
     w = Wikifier(text)
@@ -98,22 +129,75 @@ def run(text: str, quasimodo: Quasimodo, addition_nouns = []):
 
     secho("\n[INFO] collect nodes information", fg="blue")
     for noun in tqdm(nouns):
+        quasimodo_props, concept_net_props, concept_net_capable, concept_net_type_of, concept_net_used_for = [], [], [], [], []
         labels = {}
-        noun_props = quasimodo.get_node_props(node=noun, n_largest=10, plural_and_singular=True)
-        quasimodo_props = [f"{val[0]} {val[1]}" for val in noun_props]
-        concept_net_props = concept_net.hasProperty(engine=quasimodo.engine, subject=noun, n=10, weight_thresh=1, plural_and_singular=True)
-        concept_net_capable = concept_net.capableOf(engine=quasimodo.engine, subject=noun, n=10, weight_thresh=1, plural_and_singular=True)
-        concept_net_type_of = concept_net.isA(engine=quasimodo.engine, subject=noun, n=10, weight_thresh=1, plural_and_singular=True)
-        concept_net_used_for = concept_net.usedFor(engine=quasimodo.engine, subject=noun, n=10, weight_thresh=1, plural_and_singular=True)
         
+        #############
+        # quasimodo #
+        #############
+
+        if noun in graph.quasimodo_nodes:
+            quasimodo_props = graph.quasimodo_nodes[noun]
+        else:
+            quasimodo_props = quasimodo.get_node_props(node=noun, n_largest=10, plural_and_singular=True)
+            graph.quasimodo_nodes[noun] = quasimodo_props 
+
         if quasimodo_props:
-            labels["[Quasimodo]"] = quasimodo_props
+            labels["[Quasimodo]"] = [f"{val[0]} {val[1]}" for val in quasimodo_props]
+
+
+        ###############
+        # concept net #
+        ###############
+
+        # has property
+        if noun in graph.conceptnet_nodes and "hasProperty" in graph.conceptnet_nodes[noun]:
+            concept_net_props = graph.conceptnet_nodes[noun]["hasProperty"]
+        else:
+            concept_net_props = concept_net.hasProperty(engine=quasimodo.engine, subject=noun, n=10, weight_thresh=1, plural_and_singular=True)
+            if noun not in graph.conceptnet_nodes:
+                graph.conceptnet_nodes[noun] = {}
+            graph.conceptnet_nodes[noun]["hasProperty"] = concept_net_props 
+        
         if concept_net_props:
             labels["[conceptNet] has properties..."] = concept_net_props
+
+
+        # capable of
+        if noun in graph.conceptnet_nodes and "capableOf" in graph.conceptnet_nodes[noun]:
+            concept_net_capable = graph.conceptnet_nodes[noun]["capableOf"]
+        else:
+            concept_net_capable = concept_net.capableOf(engine=quasimodo.engine, subject=noun, n=10, weight_thresh=1, plural_and_singular=True)
+            if noun not in graph.conceptnet_nodes:
+                graph.conceptnet_nodes[noun] = {}
+            graph.conceptnet_nodes[noun]["capableOf"] = concept_net_capable 
+        
         if concept_net_capable:
             labels["[conceptNet] is capable of..."] = concept_net_capable
+        
+
+        # is a type of
+        if noun in graph.conceptnet_nodes and "isA" in graph.conceptnet_nodes[noun]:
+            concept_net_type_of = graph.conceptnet_nodes[noun]["isA"]
+        else:
+            concept_net_type_of = concept_net.isA(engine=quasimodo.engine, subject=noun, n=10, weight_thresh=1, plural_and_singular=True)
+            if noun not in graph.conceptnet_nodes:
+                graph.conceptnet_nodes[noun] = {}
+            graph.conceptnet_nodes[noun]["isA"] = concept_net_type_of 
+        
         if concept_net_type_of:
             labels["[conceptNet] is a type of..."] = concept_net_type_of
+        
+
+        # user for
+        if noun in graph.conceptnet_nodes and "usedFor" in graph.conceptnet_nodes[noun]:
+            concept_net_used_for = graph.conceptnet_nodes[noun]["usedFor"]
+        else:
+            concept_net_used_for = concept_net.usedFor(engine=quasimodo.engine, subject=noun, n=10, weight_thresh=1, plural_and_singular=True)
+            if noun not in graph.conceptnet_nodes:
+                graph.conceptnet_nodes[noun] = {}
+            graph.conceptnet_nodes[noun]["usedFor"] = concept_net_used_for 
+        
         if concept_net_used_for:
             labels["[conceptNet] is used for..."] = concept_net_used_for
             
@@ -128,43 +212,59 @@ def run(text: str, quasimodo: Quasimodo, addition_nouns = []):
     combs = list(combinations(nouns, 2))
     reverse_combs = [(comb[1], comb[0]) for comb in combs]
     combs += reverse_combs
-
-    # google autocomlete - for edges
-    d = {
-        "why do": [[comb[0], comb[1]] for comb in combs],
-        "why does": [[comb[0], comb[1]] for comb in combs],
-        "how do": [[comb[0], comb[1]] for comb in combs],
-        "how does": [[comb[0], comb[1]] for comb in combs],
-    }
-    google_autocomplete_edges_info = google_autocomplete.process(d, verbose=False)
     
     # create edge for every combination
     secho("\n[INFO] collect edges information from Quasimodo", fg="blue")
     for comb in tqdm(combs):
+        quasimodo_props, autocomplete_props, quasimodo_nodes_props = [], [], []
         labels = {}
-        autocomplete = google_autocomplete_edges_info.get((comb[0], comb[1]), {"suggestions": [], "props": []}).get("props", [])
-        if autocomplete:
-            labels["google-autocomplete"] = autocomplete
-        
-        quasimodo_subject_object_connection = quasimodo.get_edge_props(comb[0], comb[1], n_largest=10, plural_and_singular=True)
-        if quasimodo_subject_object_connection:
-            labels["from quasimido"] = [f"{comb[0]} {prop} {comb[1]}" for prop in quasimodo_subject_object_connection]
 
-        qusimodo_subjects_similarity = quasimodo.get_similarity_between_nodes(comb[0], comb[1], n_largest=10, plural_and_singular=True)
-        if qusimodo_subjects_similarity:
-            labels["they are both..."] = [f"{val[0]} {val[1]}" for val in qusimodo_subjects_similarity]
+        # quasimodo
+        if f"{comb[0]}#{comb[1]}" in graph.quasimodo_edges:
+            quasimodo_props = graph.quasimodo_edges[f"{comb[0]}#{comb[1]}"]
+        else:
+            quasimodo_props = quasimodo.get_edge_props(comb[0], comb[1], n_largest=10, plural_and_singular=True)
+            graph.quasimodo_edges[f"{comb[0]}#{comb[1]}"] = quasimodo_props  
         
-        concept_net_props = concept_net.hasProperty(engine=quasimodo.engine, subject=comb[0], n=1000, weight_thresh=1, plural_and_singular=True, obj=comb[1])
-        concept_net_capable = concept_net.capableOf(engine=quasimodo.engine, subject=comb[0], n=1000, weight_thresh=1, plural_and_singular=True, obj=comb[1])
-        concept_net_type_of = concept_net.isA(engine=quasimodo.engine, subject=comb[0], n=100, weight_thresh=1, plural_and_singular=True, obj=comb[1])
-        concept_net_used_for = concept_net.usedFor(engine=quasimodo.engine, subject=comb[0], n=1000, weight_thresh=1, plural_and_singular=True, obj=comb[1])
-        all_concept_net_props = concept_net_props + concept_net_capable + concept_net_type_of + concept_net_used_for
-        if all_concept_net_props:
-            labels["from conceptNet"] = all_concept_net_props
+        if quasimodo_props:
+            labels["from quasimido"] = [f"{comb[0]} {prop} {comb[1]}" for prop in quasimodo_props]
+
+        if f"{comb[0]}#{comb[1]}" in graph.quasimodo_nodes_similarity:
+            quasimodo_nodes_props = graph.quasimodo_nodes_similarity[f"{comb[0]}#{comb[1]}"]
+        else:
+            quasimodo_nodes_props = quasimodo.get_similarity_between_nodes(comb[0], comb[1], n_largest=10, plural_and_singular=True)
+            graph.quasimodo_nodes_similarity[f"{comb[0]}#{comb[1]}"] = quasimodo_nodes_props  
+
+        if quasimodo_nodes_props:
+            labels["they are both..."] = [f"{val[0]} {val[1]}" for val in quasimodo_nodes_props]
+
+        # google auto-complete
+        if f"{comb[0]}#{comb[1]}" in graph.google_edges:
+            autocomplete_props = graph.google_edges[f"{comb[0]}#{comb[1]}"]
+        else:
+            autocomplete_props = google_autocomplete.get_edge_props(comb[0], comb[1]).get((comb[0], comb[1]), {"suggestions": [], "props": []}).get("props", [])
+            graph.google_edges[f"{comb[0]}#{comb[1]}"] = autocomplete_props  
+
+        if autocomplete_props:
+            labels["google-autocomplete"] = autocomplete_props
+        
+
+        # concept net
+        if f"{comb[0]}#{comb[1]}" in graph.conceptnet_edges:
+            concept_new_props = graph.conceptnet_edges[f"{comb[0]}#{comb[1]}"]
+        else:
+            concept_new_props = concept_net.get_edge_props(quasimodo.engine, comb[0], comb[1])
+            graph.conceptnet_edges[f"{comb[0]}#{comb[1]}"] = concept_new_props   
+
+        if concept_new_props:
+            labels["from conceptNet"] = concept_new_props
 
         graph.add_edge(comb[0], comb[1], labels=labels)
 
+    if graph.save_database:
+        graph.save_datebase()
     graph.view()  # plot the graph
+
 
 
 @click.command()
@@ -186,7 +286,7 @@ def main(text, addition_nouns, quasimodo_path):
     secho(str(time.time() - start), fg='blue', bold=True)
 
 if __name__ == "__main__":
-    main()
+    # main()
     # text1 = "putting a band aid on a wound is like putting a flag in the code"
     # text2 = "horses in stables behave like cows in byre"
     # text3 = "electrons revolve around the nucleus as the earth revolve around the sun"
@@ -194,5 +294,13 @@ if __name__ == "__main__":
     # text4 = "peanut butter has a strong taste that causes a feeling of suffocation"
     # text5 = "The nucleus, which is positively charged, and the electrons which are negatively charged, compose the atom"
     # text6 = "On earth, the atmosphere protects us from the sun, but not enough so we use sunscreen"
+
+    quasimodo = Quasimodo(path='tsv/quasimodo.tsv')
+    for i, sample in enumerate(test.testset):
+        print(f"{i * 2} out of {len(test.testset) * 2}")
+        run(sample["input"][0], quasimodo=quasimodo, addition_nouns=['sunscreen'])
+        print(f"{(i * 2) + 1} out of {len(test.testset) * 2}")
+        run(sample["input"][1], quasimodo=quasimodo, addition_nouns=['sunscreen'])
+
 
     
