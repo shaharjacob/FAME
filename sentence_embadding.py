@@ -7,6 +7,7 @@ import inflect
 from click import secho
 from sentence_transformers import SentenceTransformer, util
 
+import test
 import concept_net
 import google_autocomplete
 from wikifier import Wikifier
@@ -215,9 +216,9 @@ def run(sentence1: str,
     secho(f"{len(combs1) * len(combs2)}", fg="blue", bold=True)
     for i, comb1 in enumerate(combs1):
         for j, comb2 in enumerate(combs2):
-            secho(f"{(i * len(combs2)) + j + 1}", fg="blue", bold=True, nl=False)
-            secho(f" out of ", fg="blue", nl=False)
-            secho(f"{len(combs1) * len(combs2)}", fg="blue", bold=True)
+            # secho(f"{(i * len(combs2)) + j + 1}", fg="blue", bold=True, nl=False)
+            # secho(f" out of ", fg="blue", nl=False)
+            # secho(f"{len(combs1) * len(combs2)}", fg="blue", bold=True)
             res = model.get_edges_score(comb1, comb2, n_best=5)
             matches.append(((comb1, comb2), res["score"], res["sentences"]))
     
@@ -243,13 +244,26 @@ def run(sentence1: str,
     }
 
 
+def validation():
+    score = 0
+    for i, sample in enumerate(test.testset):
+        res = main(sample["input"][0], sample["input"][1], verbose=True, full_details=True, model='stsb-mpnet-base-v2', addition_nouns=['sunscreen'])
+        if res["edges"] == sample["label"] or res["edges"] == (sample["label"][1], sample["label"][0]):
+            score += 1
+        else:
+            secho(f"Wrong answer for sample number {i}", fg="red", bold=True)
+            secho(f"  Expected: {sample['label']}", fg="red")
+            secho(f"  Actual: {res['edges']}\n", fg="red")
+    secho(f"\nSuccess {score}/{len(test.testset)}", fg="green", bold=True)    
+
+
 def main(sentence1: str, 
          sentence2: str, 
          verbose: bool = True, 
          full_details: bool = False, 
          threshold: float = 0.5, 
          model: str = "stsb-mpnet-base-v2", 
-         addition_nouns: str = []) -> bool:
+         addition_nouns: str = []) -> dict:
     res = run(sentence1, sentence2, verbose, full_details, model, addition_nouns)
     secho(f"\n--------------------------------------------------")
     secho(f"Match: ", fg="blue", nl=False)
@@ -259,7 +273,11 @@ def main(sentence1: str,
     secho(f"Is analogy: ", fg="blue", nl=False)
     secho(f"{res['score'] > threshold}", fg="blue", bold=True)
     secho(f"--------------------------------------------------\n")
-    return res["score"] > threshold
+    return {
+        "edges": res["match"],
+        "score": res["score"],
+        "is_analogy": res["score"] > threshold,
+    }
 
 
 @click.command()
@@ -283,27 +301,29 @@ def cli(sentence1: str, sentence2: str, verbose: bool, full_details: bool, thres
 if __name__ == "__main__":
     # cli()
 
-    sentences = [
-        "On earth, the atmosphere protects us from the sun, but not enough so we use sunscreen",  # 0
-        "The nucleus, which is positively charged, and the electrons which are negatively charged, compose the atom",  # 1
+    # sentences = [
+    #     "On earth, the atmosphere protects us from the sun, but not enough so we use sunscreen",  # 0
+    #     "The nucleus, which is positively charged, and the electrons which are negatively charged, compose the atom",  # 1
 
-        "A singer expresses what he thinks by songs",  # 2
-        "A programmer expresses what he thinks by writing code",  # 3
+    #     "A singer expresses what he thinks by songs",  # 2
+    #     "A programmer expresses what he thinks by writing code",  # 3
 
-        "A road is where cars are",  # 4
-        "boats sail on the lake to get from place to place",  # 5
+    #     "A road is where cars are",  # 4
+    #     "boats sail on the lake to get from place to place",  # 5
 
-        "In order to prevent illness, we use medicine",  # 6
-        "law is used to suppress anarchy",  # 7
+    #     "In order to prevent illness, we use medicine",  # 6
+    #     "law is used to suppress anarchy",  # 7
 
-        "His brain is full of thoughts",  # 8
-        "The astronaut is hovering in space",  # 9
+    #     "His brain is full of thoughts",  # 8
+    #     "The astronaut is hovering in space",  # 9
 
-        "The plant manages to survive in the desert even though it does not have much water",  # 10
-        "The cat wanders the street and eats cans in order to survive",  # 11
+    #     "The plant manages to survive in the desert even though it does not have much water",  # 10
+    #     "The cat wanders the street and eats cans in order to survive",  # 11
 
-        "sunscreen protect our skin from the sun",  # 12
-        "umbrella protect our body from the rain",  # 13
-     ]
+    #     "sunscreen protect our skin from the sun",  # 12
+    #     "umbrella protect our body from the rain",  # 13
+    #  ]
 
-    main(sentences[0], sentences[1], verbose=True, full_details=True, model='stsb-mpnet-base-v2', addition_nouns=['sunscreen'])
+    # main(sentences[0], sentences[1], verbose=True, full_details=True, model='stsb-mpnet-base-v2', addition_nouns=['sunscreen'])
+
+    validation()
