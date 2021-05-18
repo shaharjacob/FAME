@@ -303,7 +303,7 @@ if __name__ == "__main__":
         "The cat wanders the street and eats cans in order to survive",  # 11
 
         "sunscreen protect our skin from the sun",  # 12
-        "umbrella protect our body from the rain"  # 13
+        "umbrella protect our body from the rain",  # 13
      ]
 
     main(sentences[0], sentences[1], verbose=True, full_details=True, model='stsb-mpnet-base-v2', addition_nouns=['sunscreen'])

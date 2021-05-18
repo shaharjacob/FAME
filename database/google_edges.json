@@ -1,1 +1,261 @@
-{"skin#sun": ["get darker from the"], "body#rain": ["parts hurt when it", "hurt when it"], "body#umbrella": [], "rain#umbrella": [], "rain#body": ["affect your", "affect the"], "umbrella#body": [], "umbrella#rain": [], "skin#sunscreen": ["burn after putting on"], "sun#sunscreen": [], "sun#skin": ["clear", "darken", "burn", "burn your", "help", "damage", "age"], "sunscreen#skin": ["irritate my", "dry my", "burn my", "lighten", "help", "protect", "lighten", "protect your"], "sunscreen#sun": ["protect you from the", "protect you from the"], "desert#plant": [], "cans#cat": [], "cans#order": [], "cans#street": [], "cat#order": [], "cat#street": ["follow you in the", "cross the"], "order#street": [], "cat#cans": ["knock over trash"], "order#cans": [], "street#cans": [], "order#cat": [], "street#cat": [], "street#order": [], "desert#water": ["plants need to store", "lack", "have no", "get", "develop", "keep", "survive without", "plants conserve"], "plant#water": ["need", "lose", "need"], "plant#desert": [], "water#desert": ["freeze in the", "freeze in the"], "water#plant": ["move through"], "brain#thoughts": ["form", "produce", "affect", "create"], "astronaut#space": ["go to", "breathe in", "drink in", "live in", "float in", "go to", "shower in", "float in outer", "go in outer", "go to", "sleep in", "float in", "in", "go", "eat", "sleep in", "travel into", "live in", "survive in", "poop in", "eat in", "go to", "shower in", "pee in", "use the bathroom in", "eat in"], "space#astronaut": ["appear dark for", "appear black to", "weather affect", "debris affect", "affect", "radiation affect"], "thoughts#brain": ["travel in the", "work in the", "form in the", "arise in the", "occur in the", "affect the", "occur in the"], "illness#medicine": [], "anarchy#law": [], "law#anarchy": [], "illness#order": [], "medicine#order": [], "medicine#illness": [], "order#illness": [], "order#medicine": [], "cars#road": ["skid on icy", "skid on wet"], "boats#lake": ["sink in a", "travel through the great", "affect"], "boats#place": [], "lake#place": [], "lake#boats": [], "place#boats": [], "place#lake": [], "road#cars": ["salt rust", "salt affect"], "singer#songs": ["swear in", "say their names in", "write", "make", "remember", "released", "memorize", "record", "learn", "buy"], "code#programmer": [], "programmer#code": ["indent their", "refactor the", "use composition in developing software", "use source", "remember", "remember all"], "songs#singer": [], "atmosphere#earth": ["rotate with", "protect"], "atom#electrons": ["share", "lose", "share", "lose"], "atom#nucleus": ["have"], "electrons#nucleus": ["revolve around", "orbit", "fall into the", "not collapse into", "spin around the", "orbit far away from atomic", "orbit", "revolve around the", "not fall into", "not jump into the", "revolve around", "never fall into", "not fall in", "move around", "spin around the", "stay around", "orbit the", "move around", "circle the", "surround the", "move around", "revolve around"], "electrons#atom": ["move in", "stay in the", "move in an", "stay in the"], "nucleus#atom": [], "nucleus#electrons": [], "atmosphere#sun": ["affect"], "atmosphere#sunscreen": [], "earth#sun": ["revolve around", "rotate around", "not fall into", "revolve around", "circle the", "orbit", "spin around the", "move around the", "circle the", "rotate around", "revolve around", "orbit", "move around"], "earth#sunscreen": [], "earth#atmosphere": [], "sun#atmosphere": ["and"], "sunscreen#atmosphere": [], "sun#earth": ["orbit", "rotate around", "heat", "affect"], "sunscreen#earth": []}
+{
+    "skin#sun": [
+        "get darker from the"
+    ],
+    "body#rain": [
+        "parts hurt when it",
+        "hurt when it"
+    ],
+    "body#umbrella": [],
+    "rain#umbrella": [],
+    "rain#body": [
+        "affect your",
+        "affect the"
+    ],
+    "umbrella#body": [],
+    "umbrella#rain": [],
+    "skin#sunscreen": [
+        "burn after putting on"
+    ],
+    "sun#sunscreen": [],
+    "sun#skin": [
+        "clear",
+        "darken",
+        "burn",
+        "burn your",
+        "help",
+        "damage",
+        "age"
+    ],
+    "sunscreen#skin": [
+        "irritate my",
+        "dry my",
+        "burn my",
+        "lighten",
+        "help",
+        "protect",
+        "lighten",
+        "protect your"
+    ],
+    "sunscreen#sun": [
+        "protect you from the",
+        "protect you from the"
+    ],
+    "desert#plant": [],
+    "cans#cat": [],
+    "cans#order": [],
+    "cans#street": [],
+    "cat#order": [],
+    "cat#street": [
+        "follow you in the",
+        "cross the"
+    ],
+    "order#street": [],
+    "cat#cans": [
+        "knock over trash"
+    ],
+    "order#cans": [],
+    "street#cans": [],
+    "order#cat": [],
+    "street#cat": [],
+    "street#order": [],
+    "desert#water": [
+        "plants need to store",
+        "lack",
+        "have no",
+        "get",
+        "develop",
+        "keep",
+        "survive without",
+        "plants conserve"
+    ],
+    "plant#water": [
+        "need",
+        "lose",
+        "need"
+    ],
+    "plant#desert": [],
+    "water#desert": [
+        "freeze in the",
+        "freeze in the"
+    ],
+    "water#plant": [
+        "move through"
+    ],
+    "brain#thoughts": [
+        "form",
+        "produce",
+        "affect",
+        "create"
+    ],
+    "astronaut#space": [
+        "go to",
+        "breathe in",
+        "drink in",
+        "live in",
+        "float in",
+        "go to",
+        "shower in",
+        "float in outer",
+        "go in outer",
+        "go to",
+        "sleep in",
+        "float in",
+        "in",
+        "go",
+        "eat",
+        "sleep in",
+        "travel into",
+        "live in",
+        "survive in",
+        "poop in",
+        "eat in",
+        "go to",
+        "shower in",
+        "pee in",
+        "use the bathroom in",
+        "eat in"
+    ],
+    "space#astronaut": [
+        "appear dark for",
+        "appear black to",
+        "weather affect",
+        "debris affect",
+        "affect",
+        "radiation affect"
+    ],
+    "thoughts#brain": [
+        "travel in the",
+        "work in the",
+        "form in the",
+        "arise in the",
+        "occur in the",
+        "affect the",
+        "occur in the"
+    ],
+    "illness#medicine": [],
+    "anarchy#law": [],
+    "law#anarchy": [],
+    "illness#order": [],
+    "medicine#order": [],
+    "medicine#illness": [],
+    "order#illness": [],
+    "order#medicine": [],
+    "cars#road": [
+        "skid on icy",
+        "skid on wet"
+    ],
+    "boats#lake": [
+        "sink in a",
+        "travel through the great",
+        "affect"
+    ],
+    "boats#place": [],
+    "lake#place": [],
+    "lake#boats": [],
+    "place#boats": [],
+    "place#lake": [],
+    "road#cars": [
+        "salt rust",
+        "salt affect"
+    ],
+    "singer#songs": [
+        "swear in",
+        "say their names in",
+        "write",
+        "make",
+        "remember",
+        "released",
+        "memorize",
+        "record",
+        "learn",
+        "buy"
+    ],
+    "code#programmer": [],
+    "programmer#code": [
+        "indent their",
+        "refactor the",
+        "use composition in developing software",
+        "use source",
+        "remember",
+        "remember all"
+    ],
+    "songs#singer": [],
+    "atmosphere#earth": [
+        "rotate with",
+        "protect"
+    ],
+    "atom#electrons": [
+        "share",
+        "lose",
+        "share",
+        "lose"
+    ],
+    "atom#nucleus": [
+        "have"
+    ],
+    "electrons#nucleus": [
+        "revolve around",
+        "orbit",
+        "fall into the",
+        "not collapse into",
+        "spin around the",
+        "orbit far away from atomic",
+        "orbit",
+        "revolve around the",
+        "not fall into",
+        "not jump into the",
+        "revolve around",
+        "never fall into",
+        "not fall in",
+        "move around",
+        "spin around the",
+        "stay around",
+        "orbit the",
+        "move around",
+        "circle the",
+        "surround the",
+        "move around",
+        "revolve around"
+    ],
+    "electrons#atom": [
+        "move in",
+        "stay in the",
+        "move in an",
+        "stay in the"
+    ],
+    "nucleus#atom": [],
+    "nucleus#electrons": [],
+    "atmosphere#sun": [
+        "affect"
+    ],
+    "atmosphere#sunscreen": [],
+    "earth#sun": [
+        "revolve around",
+        "rotate around",
+        "not fall into",
+        "revolve around",
+        "circle the",
+        "orbit",
+        "spin around the",
+        "move around the",
+        "circle the",
+        "rotate around",
+        "revolve around",
+        "orbit",
+        "move around"
+    ],
+    "earth#sunscreen": [],
+    "earth#atmosphere": [],
+    "sun#atmosphere": [
+        "and"
+    ],
+    "sunscreen#atmosphere": [],
+    "sun#earth": [
+        "orbit",
+        "rotate around",
+        "heat",
+        "affect"
+    ],
+    "sunscreen#earth": []
+}
