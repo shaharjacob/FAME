@@ -212,14 +212,14 @@ def run(sentence1: str,
     model = SentenceEmbedding(model=model)
 
     matches = []
-    secho(f"[INFO] Total combinations to process: ", fg="blue", nl=False)
-    secho(f"{len(combs1) * len(combs2)}", fg="blue", bold=True)
+    # secho(f"[INFO] Total combinations to process: ", fg="blue", nl=False)
+    # secho(f"{len(combs1) * len(combs2)}", fg="blue", bold=True)
     for i, comb1 in enumerate(combs1):
         for j, comb2 in enumerate(combs2):
             # secho(f"{(i * len(combs2)) + j + 1}", fg="blue", bold=True, nl=False)
             # secho(f" out of ", fg="blue", nl=False)
             # secho(f"{len(combs1) * len(combs2)}", fg="blue", bold=True)
-            res = model.get_edges_score(comb1, comb2, n_best=5)
+            res = model.get_edges_score(comb1, comb2, n_best=10)
             matches.append(((comb1, comb2), res["score"], res["sentences"]))
     
     if model.save_database:
@@ -248,6 +248,10 @@ def validation():
     score = 0
     for i, sample in enumerate(test.testset):
         res = main(sample["input"][0], sample["input"][1], verbose=True, full_details=True, model='stsb-mpnet-base-v2', addition_nouns=['sunscreen'])
+        if res["score"] == 0:
+            secho(f"Wrong answer for sample number {i}", fg="red", bold=True)
+            secho(f"  no connection found...\n", fg="red")
+            continue
         if res["edges"] == sample["label"] or res["edges"] == (sample["label"][1], sample["label"][0]):
             score += 1
         else:
@@ -300,29 +304,6 @@ def cli(sentence1: str, sentence2: str, verbose: bool, full_details: bool, thres
 
 if __name__ == "__main__":
     # cli()
-
-    # sentences = [
-    #     "On earth, the atmosphere protects us from the sun, but not enough so we use sunscreen",  # 0
-    #     "The nucleus, which is positively charged, and the electrons which are negatively charged, compose the atom",  # 1
-
-    #     "A singer expresses what he thinks by songs",  # 2
-    #     "A programmer expresses what he thinks by writing code",  # 3
-
-    #     "A road is where cars are",  # 4
-    #     "boats sail on the lake to get from place to place",  # 5
-
-    #     "In order to prevent illness, we use medicine",  # 6
-    #     "law is used to suppress anarchy",  # 7
-
-    #     "His brain is full of thoughts",  # 8
-    #     "The astronaut is hovering in space",  # 9
-
-    #     "The plant manages to survive in the desert even though it does not have much water",  # 10
-    #     "The cat wanders the street and eats cans in order to survive",  # 11
-
-    #     "sunscreen protect our skin from the sun",  # 12
-    #     "umbrella protect our body from the rain",  # 13
-    #  ]
 
     # main(sentences[0], sentences[1], verbose=True, full_details=True, model='stsb-mpnet-base-v2', addition_nouns=['sunscreen'])
 

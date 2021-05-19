@@ -143,7 +143,7 @@ def run(text: str, quasimodo: Quasimodo, addition_nouns = []):
             graph.quasimodo_nodes[noun] = quasimodo_props 
 
         if quasimodo_props:
-            labels["[Quasimodo]"] = [f"{val[0]} {val[1]}" for val in quasimodo_props]
+            labels["[Quasimodo]"] = sorted([f"{val[0]} {val[1]}" for val in quasimodo_props])
 
 
         ###############
@@ -160,7 +160,7 @@ def run(text: str, quasimodo: Quasimodo, addition_nouns = []):
             graph.conceptnet_nodes[noun]["hasProperty"] = concept_net_props 
         
         if concept_net_props:
-            labels["[conceptNet] has properties..."] = concept_net_props
+            labels["[conceptNet] has properties..."] = sorted(concept_net_props)
 
 
         # capable of
@@ -173,7 +173,7 @@ def run(text: str, quasimodo: Quasimodo, addition_nouns = []):
             graph.conceptnet_nodes[noun]["capableOf"] = concept_net_capable 
         
         if concept_net_capable:
-            labels["[conceptNet] is capable of..."] = concept_net_capable
+            labels["[conceptNet] is capable of..."] = sorted(concept_net_capable)
         
 
         # is a type of
@@ -186,7 +186,7 @@ def run(text: str, quasimodo: Quasimodo, addition_nouns = []):
             graph.conceptnet_nodes[noun]["isA"] = concept_net_type_of 
         
         if concept_net_type_of:
-            labels["[conceptNet] is a type of..."] = concept_net_type_of
+            labels["[conceptNet] is a type of..."] = sorted(concept_net_type_of)
         
 
         # user for
@@ -199,7 +199,7 @@ def run(text: str, quasimodo: Quasimodo, addition_nouns = []):
             graph.conceptnet_nodes[noun]["usedFor"] = concept_net_used_for 
         
         if concept_net_used_for:
-            labels["[conceptNet] is used for..."] = concept_net_used_for
+            labels["[conceptNet] is used for..."] = sorted(concept_net_used_for)
             
         graph.add_node(noun, labels=labels)
 
@@ -227,7 +227,7 @@ def run(text: str, quasimodo: Quasimodo, addition_nouns = []):
             graph.quasimodo_edges[f"{comb[0]}#{comb[1]}"] = quasimodo_props  
         
         if quasimodo_props:
-            labels["from quasimido"] = [f"{comb[0]} {prop} {comb[1]}" for prop in quasimodo_props]
+            labels["from quasimido"] = sorted([f"{comb[0]} {prop} {comb[1]}" for prop in quasimodo_props])
 
         if f"{comb[0]}#{comb[1]}" in graph.quasimodo_nodes_similarity:
             quasimodo_nodes_props = graph.quasimodo_nodes_similarity[f"{comb[0]}#{comb[1]}"]
@@ -236,7 +236,7 @@ def run(text: str, quasimodo: Quasimodo, addition_nouns = []):
             graph.quasimodo_nodes_similarity[f"{comb[0]}#{comb[1]}"] = quasimodo_nodes_props  
 
         if quasimodo_nodes_props:
-            labels["they are both..."] = [f"{val[0]} {val[1]}" for val in quasimodo_nodes_props]
+            labels["they are both..."] = sorted([f"{val[0]} {val[1]}" for val in quasimodo_nodes_props])
 
         # google auto-complete
         if f"{comb[0]}#{comb[1]}" in graph.google_edges:
@@ -246,7 +246,7 @@ def run(text: str, quasimodo: Quasimodo, addition_nouns = []):
             graph.google_edges[f"{comb[0]}#{comb[1]}"] = autocomplete_props  
 
         if autocomplete_props:
-            labels["google-autocomplete"] = autocomplete_props
+            labels["google-autocomplete"] = sorted(autocomplete_props)
         
 
         # concept net
@@ -257,7 +257,7 @@ def run(text: str, quasimodo: Quasimodo, addition_nouns = []):
             graph.conceptnet_edges[f"{comb[0]}#{comb[1]}"] = concept_new_props   
 
         if concept_new_props:
-            labels["from conceptNet"] = concept_new_props
+            labels["from conceptNet"] = sorted(concept_new_props)
 
         graph.add_edge(comb[0], comb[1], labels=labels)
 
