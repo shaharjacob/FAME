@@ -246,7 +246,7 @@ def run(text: str, quasimodo: Quasimodo, addition_nouns = []):
             graph.google_edges[f"{comb[0]}#{comb[1]}"] = autocomplete_props  
 
         if autocomplete_props:
-            labels["google-autocomplete"] = sorted(autocomplete_props)
+            labels["google-autocomplete"] = sorted(list(set(autocomplete_props)))
         
 
         # concept net
