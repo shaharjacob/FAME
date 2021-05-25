@@ -1,4 +1,5 @@
 import json
+from pathlib import Path
 from typing import List, Tuple
 from itertools import combinations
 
@@ -9,8 +10,10 @@ from sentence_transformers import SentenceTransformer, util
 
 import test
 import concept_net
+# import networkx as nx
 import google_autocomplete
 from wikifier import Wikifier
+# import matplotlib.pyplot as plt
 from quasimodo import Quasimodo
 
 # avilable models can be found here: https://huggingface.co/models?sort=downloads&search=sentence-transformers&p=0
@@ -91,6 +94,52 @@ class SentenceEmbedding(SentenceTransformer):
             self.conceptnet_edges[f"{head}#{tail}"] = concept_new_props                
             
         return list(set(quasimodo_props + autocomplete_props + concept_new_props))
+
+    # def bipartite_edges(self, edge1: Tuple[str], edge2: Tuple[str]):
+    #     props_edge1 = self.get_edge_props(edge1[0], edge1[1])
+    #     props_left_side = {}
+    #     for prop in props_edge1:
+    #         props_left_side[prop] = prop
+
+    #     props_edge2 = self.get_edge_props(edge2[0], edge2[1])
+    #     props_right_side = {}
+    #     for prop in props_edge2:
+    #         props_right_side[prop] = prop
+        
+    #     similatiry_edges = {}
+    #     for prop1 in props_edge1:
+    #         max_score = 0
+    #         best_edge = ()
+    #         for prop2 in props_edge2:
+    #             similatiry = self.similarity(prop1, prop2)
+    #             if similatiry > max_score:
+    #                 max_score = similatiry
+    #                 best_edge = (prop1, prop2)
+    #         if max_score > 0:
+    #             similatiry_edges[best_edge] = max_score
+        
+        B = nx.Graph()
+        left_keys = list(props_left_side.keys())
+        right_keys = list(props_right_side.keys())
+        nodes = {**props_left_side, **props_right_side}
+        B.add_nodes_from(left_keys)
+        B.add_nodes_from(right_keys)
+        B.add_edges_from(list(similatiry_edges.keys()))
+
+        pos = dict()
+        pos.update( (n, (1, i)) for i, n in enumerate(props_left_side) )
+        pos.update( (n, (2, i)) for i, n in enumerate(props_right_side) )
+
+        nx.draw_networkx_nodes(B, pos, node_size=[len(nodes[i]) ** 2 * 10 for i in pos])
+        nx.draw_networkx_edges(B, pos)
+        nx.draw_networkx_labels(B, pos, labels=nodes)
+        nx.draw_networkx_edge_labels(B, pos, edge_labels=similatiry_edges, label_pos=0.4)
+
+        edge_dir = Path(f"bipartite/{'_'.join(sorted([edge1[0], edge1[1], edge2[0], edge2[1]]))}")
+        if not edge_dir.exists():
+            edge_dir.mkdir()
+
+        plt.savefig(f"{edge_dir}/{edge1[0]}_{edge1[1]}___{edge2[0]}_{edge2[1]}", bbox_inches='tight')
 
     def get_edges_score(self, edge1: Tuple[str], edge2: Tuple[str], n_best: int = 0, verbose: bool = False):
         
@@ -219,6 +268,7 @@ def run(sentence1: str,
             # secho(f"{(i * len(combs2)) + j + 1}", fg="blue", bold=True, nl=False)
             # secho(f" out of ", fg="blue", nl=False)
             # secho(f"{len(combs1) * len(combs2)}", fg="blue", bold=True)
+            # model.bipartite_edges(comb1, comb2)
             res = model.get_edges_score(comb1, comb2, n_best=10)
             matches.append(((comb1, comb2), res["score"], res["sentences"]))
     
