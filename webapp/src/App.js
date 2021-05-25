@@ -1,43 +1,24 @@
-import React, {useState, useEffect} from 'react';
-import Graph from "react-vis-network-graph";
+import React from 'react';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
+import BipartiteGraph from './components/graph/BipartiteGraph'
+import Main from './components/main/Main'
+
 
 const App = () => {
 
-  const [graph, setGraph] = useState({})
-
-  useEffect(() => {
-    loadData()
-  }, [])
-
-  const loadData = async() => {
-    const response = await fetch('/api')
-    const data = await response.json()
-    setGraph(data)
-  }
- 
-  const options = {
-    physics: {
-      enabled: false,
-    },
-    height: "800px",
-    groups: {
-      0: {color:{background:'orange'}, borderWidth:1},
-      1: {color:{background:'cyan'}, borderWidth:1}
-    }
-  };
-
   return (
-    <div>
-      {graph
-      ? 
-        <Graph
-          graph={graph}
-          options={options}
-        />
-      :
-        <></>
-      }
-    </div>
+    <Router>
+      <div>
+        <Switch>
+          <Route path='/' exact>
+            <Main />
+          </Route>
+          <Route path='/bipartite'>
+            <BipartiteGraph />
+          </Route>
+        </Switch>
+      </div>
+    </Router>
   );
 }
 

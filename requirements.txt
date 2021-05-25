@@ -1,10 +1,12 @@
 tqdm
 click
+flask
 pyyaml
 pandas
 inflect
 requests
 graphviz
+networkx
 beautifulsoup4
 sentence_transformers
 

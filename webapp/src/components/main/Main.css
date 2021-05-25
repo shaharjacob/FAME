@@ -1,0 +1,42 @@
+.main-container {
+    display: grid;
+    grid-template-rows: 0.8fr 0.2fr;
+    /* text-align: center; */
+}
+
+.main-button {
+    text-align: center;
+    padding-top: 15px;
+}
+
+.main-selects-grid {
+    display: grid;
+    grid-template-columns: 0.5fr 0.5fr;
+    grid-template-rows: 0.2fr 0.4fr 0.4fr;
+    width: 400px;
+    margin-top: 100px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.title {
+    text-align: center;
+    font-size: 14px;
+    font-weight: 700;
+    font-family: 'Segoe UI';
+    color: #464646;
+}
+
+.mid-title {
+    padding-left: 18px;
+    font-size: 10px;
+    font-weight: 700;
+    font-family: 'Segoe UI';
+    color: #464646;
+}
+
+.select {
+    padding-bottom: 5px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
