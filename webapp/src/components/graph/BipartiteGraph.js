@@ -3,6 +3,8 @@ import { useLocation } from 'react-router-dom'
 import Graph from "react-vis-network-graph";
 import './BipartiteGraph.css'
 import RightArrow from '../../assets/arrow-right.svg'
+import Slider from '@material-ui/core/Slider';
+import cloneDeep from 'lodash/cloneDeep';
 
 const BipartiteGraph = () => {
 
@@ -26,12 +28,19 @@ const BipartiteGraph = () => {
     setTail2(params.get('tail2'))
     const response = await fetch('/api?' + params)
     const data = await response.json()
+    setGraph(data)
+  }
 
+  function valuetext(value) {
+    return `${value}`;
+  }
+
+  function onThresholdChanged(event, value) {
+    let data = cloneDeep(graph)
     for (let i = 0; i < data["edges"].length; i++){
-      console.log(data["edges"][i]["value"])
-      if (data["edges"][i]["value"] < 0.7){
-        data["edges"][i]["hidden"] = true
-      }
+      let shouldBeHide = data["edges"][i]["value"] < value
+      console.log(shouldBeHide)
+      data["edges"][i]["hidden"] = shouldBeHide
     }
     setGraph(data)
   }
@@ -47,35 +56,41 @@ const BipartiteGraph = () => {
     }
   };
 
-  // const events = {
-  //   select: function(event) {
-  //     var { nodes, edges } = event;
-  //     console.log(edges)
-  //   }
-  // };
-
   return (
     <div>
       {graph
       ? 
         <div className="graph-container">
-          <div className="graph-title">
-            <span className="left-edge">
-              {head1}&nbsp;&nbsp;
-              <img src={RightArrow} width={10} alt="-->"/>
-              &nbsp;&nbsp;{tail1}
-            </span>
-            ~
-            <span className="right-edge">
-              {head2}&nbsp;&nbsp;
-              <img src={RightArrow} width={10} alt="-->"/>
-              &nbsp;&nbsp;{tail2}
-            </span>
+          <div className="graph-top">
+            <div className="graph-title">
+              <span className="left-edge">
+                {head1}&nbsp;&nbsp;
+                <img src={RightArrow} width={10} alt="-->"/>
+                &nbsp;&nbsp;{tail1}
+              </span>
+              ~
+              <span className="right-edge">
+                {head2}&nbsp;&nbsp;
+                <img src={RightArrow} width={10} alt="-->"/>
+                &nbsp;&nbsp;{tail2}
+              </span>
+            </div>
+            <div className="slider">
+              <Slider
+                defaultValue={0.00}
+                getAriaValueText={valuetext}
+                aria-labelledby="discrete-slider-small-steps"
+                step={0.01}
+                min={0.00}
+                max={1.00}
+                valueLabelDisplay="on"
+                onChange={onThresholdChanged}
+              />
+            </div>
           </div>
           <Graph
             graph={graph}
             options={options}
-            // events={events}
           />
         </div>
       :

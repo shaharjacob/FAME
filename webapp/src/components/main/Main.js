@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
 import Select from 'react-select'
-import { Link, useHistory } from 'react-router-dom'
+import { useHistory } from 'react-router-dom'
 import { options } from '../../utils'
 import './Main.css'
+
 
 const Main = () => {
 

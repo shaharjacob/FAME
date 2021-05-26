@@ -4,7 +4,9 @@
     margin-top: 40px;
 }
 
-.graph-title {
+.graph-top {
+    display: grid;
+    grid-template-columns: 0.55fr 0.45fr;
     text-align: center;
 }
 
@@ -28,4 +30,13 @@
     font-size: 14px;
     font-weight: 600;
     margin-left: 20px;
+}
+
+.graph-title {
+    text-align: right;
+}
+
+.slider {
+    width: 200px;
+    margin-left: 60px;
 }

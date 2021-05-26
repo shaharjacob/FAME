@@ -32,7 +32,10 @@ def get_edges_for_app(edges: List[str]) -> List[Dict]:
                     "max": 20,
                 },
             },
-            "label": f"{get_spaces(i, random.randint(0, 100))}{str(edge[2])}",
+            "font": {
+                "align": 'left',
+            },
+            "label": f"{get_spaces(i, random.randint(0, 20))}{str(edge[2])}",
             "value": edge[2],
             "width": 0.5,
             "arrows": {
