@@ -13,8 +13,16 @@ const Main = () => {
     const [selectedEdge2Head, setSelectedEdge2Head] = useState({label: "electrons", value: "electrons"});
     const [selectedEdge2Tail, setSelectedEdge2Tail] = useState({label: "nucleus", value: "nucleus"});
 
-    const onSubmit = () => {
+    const onSubmitBipartite = () => {
         history.push(`/bipartite?head1=${selectedEdge1Head.value}&tail1=${selectedEdge1Tail.value}&head2=${selectedEdge2Head.value}&tail2=${selectedEdge2Tail.value}`)
+    }
+
+    const onSubmitClustering = () => {
+        history.push(`/cluster?head1=${selectedEdge1Head.value}&tail1=${selectedEdge1Tail.value}&head2=${selectedEdge2Head.value}&tail2=${selectedEdge2Tail.value}`)
+    }
+
+    const onSubmitBoth = () => {
+        history.push(`/graph?head1=${selectedEdge1Head.value}&tail1=${selectedEdge1Tail.value}&head2=${selectedEdge2Head.value}&tail2=${selectedEdge2Tail.value}&edges=true`)
     }
 
     return (
@@ -73,7 +81,11 @@ const Main = () => {
                 </div>
             </div>
             <div className="main-button">
-                <button className="btn btn-primary" onClick={onSubmit}>Sumbit</button>
+                <button className="btn btn-primary" onClick={onSubmitClustering}>Clustring</button>
+                &nbsp;&nbsp;&nbsp;&nbsp;
+                <button className="btn btn-primary" onClick={onSubmitBipartite}>Bipartite</button>
+                &nbsp;&nbsp;&nbsp;&nbsp;
+                <button className="btn btn-primary" onClick={onSubmitBoth}>Both</button>
             </div>
         </div>
     );

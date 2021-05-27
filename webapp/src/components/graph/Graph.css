@@ -1,0 +1,56 @@
+.graph-container {
+    display: grid;
+    grid-template-rows: 0.01fr 0.99fr;
+    margin-top: 50px;
+}
+
+.edge-title {
+    border-radius: 5px;
+    padding: 3px;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 600;
+    height: 30px;
+    width: fit-content;
+}
+
+.left-edge {
+    background-color: orange;
+    border: 1px solid rgb(73, 49, 4);
+}
+
+.right-edge {
+    background-color: cyan;
+    border: 1px solid rgb(1, 107, 107);
+}
+
+.slider {
+    width: 200px;
+    text-align: center;
+}
+
+.slider-title {
+    font-size: 10px;
+    font-weight: 700;
+    color: #363636;
+}
+
+.td-left-edge {
+    text-align: right; 
+    width: 35%; 
+    padding-right: 20px; 
+    padding-left: 20px;
+}
+
+.td-right-edge {
+    text-align: left; 
+    width: 35%; 
+    padding-right: 20px; 
+    padding-left: 20px;
+}
+
+.td-slider {
+    width: 15%;
+    padding-right: 20px;
+    padding-left: 20px;
+}

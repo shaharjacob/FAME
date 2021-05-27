@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import { useLocation } from 'react-router-dom'
 import Graph from "react-vis-network-graph";
-import './BipartiteGraph.css'
+import './Graph.css'
 import RightArrow from '../../assets/arrow-right.svg'
 import Slider from '@material-ui/core/Slider';
 import cloneDeep from 'lodash/cloneDeep';
@@ -39,12 +39,11 @@ const BipartiteGraph = () => {
     let data = cloneDeep(graph)
     for (let i = 0; i < data["edges"].length; i++){
       let shouldBeHide = data["edges"][i]["value"] < value
-      console.log(shouldBeHide)
       data["edges"][i]["hidden"] = shouldBeHide
     }
     setGraph(data)
   }
- 
+
   const options = {
     physics: {
       enabled: false,
@@ -86,6 +85,9 @@ const BipartiteGraph = () => {
                 valueLabelDisplay="on"
                 onChange={onThresholdChanged}
               />
+              <span className="slider-title">
+                  Similarity Threshold (Clustering)
+              </span>
             </div>
           </div>
           <Graph
