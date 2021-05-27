@@ -4,6 +4,17 @@
     margin-top: 50px;
 }
 
+.graph-top {
+    display: grid;
+    grid-template-columns: 0.55fr 0.45fr;
+    margin-top: 40px;
+}
+
+.graph-title {
+    text-align: right;
+    margin-right: 40px;
+}
+
 .edge-title {
     border-radius: 5px;
     padding: 3px;

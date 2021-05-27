@@ -34,7 +34,7 @@ def get_edges_for_app(edges: List[str]) -> List[Dict]:
             "font": {
                 "align": 'left',
             },
-            "label": f"{get_spaces(i, random.randint(0, 40))}{str(edge[2])}",
+            "label": f"{get_spaces(i, random.randint(0, 80))}{str(edge[2])}",
             "value": edge[2],
             "width": 0.5,
             "arrows": {
@@ -50,7 +50,7 @@ def get_nodes_for_app(props: List[str], start_idx: int, x: int, group: str) -> L
         {
             "id": i + start_idx, 
             "x": x,
-            "y": i*38,
+            "y": i*35,
             "label": node, 
             "group": group,
             "font": "12px arial #343434"
@@ -171,14 +171,16 @@ def clustring():
     distance_thresholds = [0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9]
     for thresh in distance_thresholds:
         clustered_sentences_1 = model.clustering(edge1, distance_threshold=thresh)
-        nodes1 = get_cluster_nodes_for_app(clustered_sentences_1.get("clustered_sentences"), start_idx=0, start_gourp=0, x=200)
+        nodes1 = get_cluster_nodes_for_app(clustered_sentences_1, start_idx=0, start_gourp=0, x=200)
 
         clustered_sentences_2 = model.clustering(edge2, distance_threshold=thresh)
-        nodes2 = get_cluster_nodes_for_app(clustered_sentences_2.get("clustered_sentences"), start_idx=nodes1.get("total_nodes"), start_gourp=len(clustered_sentences_1), x=800)
+        nodes2 = get_cluster_nodes_for_app(clustered_sentences_2, start_idx=nodes1.get("total_nodes"), start_gourp=len(clustered_sentences_1), x=800)
         
         edges = []
         if calc_edges == 'true':
-            edges = get_maximum_weighted_match(model, clustered_sentences_1.get("props"), clustered_sentences_2.get("props"))
+            props1 = [node.get("label") for node in nodes1.get("nodes")]
+            props2 = [node.get("label") for node in nodes2.get("nodes")]
+            edges = get_maximum_weighted_match(model, props1, props2)
             edges = get_edges_for_app(edges)
 
         d[thresh] = {
@@ -186,7 +188,7 @@ def clustring():
                 "nodes": nodes1.get("nodes") + nodes2.get("nodes"),
                 "edges": edges,
             },
-            "options": get_options(len(clustered_sentences_1.get("clustered_sentences")) + len(clustered_sentences_2.get("clustered_sentences"))),
+            "options": get_options(len(clustered_sentences_1) + len(clustered_sentences_2)),
         }
 
     return jsonify(d)

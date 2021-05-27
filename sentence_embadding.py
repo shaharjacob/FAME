@@ -138,10 +138,7 @@ class SentenceEmbedding(SentenceTransformer):
             if cluster_id not in clustered_sentences:
                 clustered_sentences[cluster_id] = []
             clustered_sentences[cluster_id].append(props_edge[sentence_id])
-        return {
-            "clustered_sentences": clustered_sentences,
-            "props": props_edge,
-        }
+        return clustered_sentences
     
     def save_datebase(self):
         with open('database/quasimodo_edges.json', 'w') as f1:

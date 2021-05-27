@@ -62,13 +62,13 @@ const BipartiteGraph = () => {
         <div className="graph-container">
           <div className="graph-top">
             <div className="graph-title">
-              <span className="left-edge">
+              <span className="edge-title left-edge">
                 {head1}&nbsp;&nbsp;
                 <img src={RightArrow} width={10} alt="-->"/>
                 &nbsp;&nbsp;{tail1}
               </span>
-              ~
-              <span className="right-edge">
+              &nbsp;&nbsp; &nbsp;&nbsp;~ &nbsp;&nbsp; &nbsp;&nbsp;
+              <span className="edge-title right-edge">
                 {head2}&nbsp;&nbsp;
                 <img src={RightArrow} width={10} alt="-->"/>
                 &nbsp;&nbsp;{tail2}
