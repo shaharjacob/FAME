@@ -270,7 +270,7 @@ def run(sentence1: str,
 
 def validation():
     score = 0
-    for i, sample in enumerate(test.testset):
+    for i, sample in enumerate(testset.testset):
         res = main(sample["input"][0], sample["input"][1], verbose=True, full_details=True, model='stsb-mpnet-base-v2', addition_nouns=['sunscreen'])
         if res["score"] == 0:
             secho(f"Wrong answer for sample number {i}", fg="red", bold=True)
@@ -282,7 +282,7 @@ def validation():
             secho(f"Wrong answer for sample number {i}", fg="red", bold=True)
             secho(f"  Expected: {sample['label']}", fg="red")
             secho(f"  Actual: {res['edges']}\n", fg="red")
-    secho(f"\nSuccess {score}/{len(test.testset)}", fg="green", bold=True)    
+    secho(f"\nSuccess {score}/{len(testset.testset)}", fg="green", bold=True)    
 
 
 def main(sentence1: str, 
