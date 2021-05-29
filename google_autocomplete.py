@@ -18,7 +18,7 @@ class GoogleAutocomplete(object):
                 node2: str, 
                 browser: str = 'chrome',
                 pattern: str = '%s %s "*" %s', 
-                regex: str = '^%s %s (.*) %s$'):
+                regex: str = '^%s( a)?( an)?( the)? %s (.*) %s$'):
         self.question = question
         self.node1 = node1
         self.node2 = node2
@@ -39,7 +39,7 @@ class GoogleAutocomplete(object):
                 parts = suggestion.split()
                 pairs = [f"{parts[i]} {parts[i+1]}" for i in range(len(parts) - 1)]
                 if all(elem in (parts + pairs) for elem in [self.node1, self.node2, self.question]):
-                    sugges.append((suggestion, match.group(1)))
+                    sugges.append((suggestion, match.group(4)))
         return list(set(sugges))
 
     def render_single_suggestion(self, suggestion: tuple):
