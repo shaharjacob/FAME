@@ -96,6 +96,19 @@ Using --verbose --full-details will show you also inside the edges. The score is
 ![alt text](https://github.com/shaharjacob/commonsense-analogy/blob/main/images/sentence_embedding_3.png?raw=true)  
 &nbsp;  
 
+### Visualization with React.js
+```bash
+python api.py
+cd webapp
+npm start
+```
+
+Given two edges, calcualte the maximum bipraetite match, and visualize with React.js.  
+For example:
+![alt text](https://github.com/shaharjacob/commonsense-analogy/blob/main/images/both_react.png?raw=true)  
+&nbsp;  
+
+
 ## google_autocomplete.py
 This script using the API of google auto-complete the extract information.  
 We are using question, subject and object which make the results more detailed.
