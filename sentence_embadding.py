@@ -10,7 +10,7 @@ from click import secho
 from sklearn.cluster import AgglomerativeClustering
 from sentence_transformers import SentenceTransformer, util
 
-import test
+import testset
 import concept_net
 # import networkx as nx
 import google_autocomplete
