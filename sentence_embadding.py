@@ -28,8 +28,10 @@ class SentenceEmbedding(SentenceTransformer):
     def __init__(self, model: str = 'stsb-mpnet-base-v2', init_quasimodo: bool = True, init_inflect: bool = True, save_database=True):
         super().__init__(model)
         self.embaddings = {}
+        self.quasimodo = None
         if init_quasimodo:
             self.quasimodo = Quasimodo(path='tsv/quasimodo.tsv')
+        self.engine = None
         if init_inflect:
             self.engine = inflect.engine()
         self.save_database = save_database

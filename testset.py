@@ -39,4 +39,15 @@ testset = [
                   "we use heater in the winter"),
         "label": (("air conditioner", "summer"), ("heater", "winter")),
     },
+    {
+        "input": ("student should do homework for practice", 
+                  "civizen has duties such as tax or army"),
+        "label": (("student", "homework"), ("civizen", "duties")),
+    },
+    {
+        "input": ("antibiotic contain a small amount of the virus to develop antibodies", 
+                  "civizen has duties such as tax or army"),
+        "label": (("student", "homework"), ("civizen", "duties")),
+    },
 ]
+

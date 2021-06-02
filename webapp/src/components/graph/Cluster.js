@@ -1,9 +1,13 @@
 import React, {useState, useEffect} from 'react';
-import { useLocation } from 'react-router-dom'
+
 import Graph from "react-vis-network-graph";
-import RightArrow from '../../assets/arrow-right.svg'
+import { useLocation } from 'react-router-dom'
 import Slider from '@material-ui/core/Slider';
+import LoadingOverlay from 'react-loading-overlay'
+import ClipLoader from 'react-spinners/ClipLoader'
+
 import './Graph.css'
+import RightArrow from '../../assets/arrow-right.svg'
 
 
 const Cluster = () => {
@@ -17,23 +21,26 @@ const Cluster = () => {
     const [tail1, setTail1] = useState("")
     const [head2, setHead2] = useState("")
     const [tail2, setTail2] = useState("")
+    const [isLoading, setIsLoading] = useState(true)
 
     useEffect(() => {
-        loadData()
-    }, [])
-
-    const loadData = async() => {
         let params = new URLSearchParams(location.search)
         setHead1(params.get('head1'))
         setHead2(params.get('head2'))
         setTail1(params.get('tail1'))
         setTail2(params.get('tail2'))
-        const response = await fetch('/cluster?' + params)
-        const data = await response.json()
-        setData(data)
-        setGraph(data[0.8]["graph"])
-        setOptions(data[0.8]["options"])
-    }
+
+        fetch('/cluster?' + params).then(response => {
+          if(response.ok){
+            return response.json()
+          }
+        }).then(data => {
+            setData(data)
+            setGraph(data[0.8]["graph"])
+            setOptions(data[0.8]["options"])
+            setIsLoading(false)
+        })
+      },[])
 
     function valuetext(value) {
         return `${value}`;
@@ -79,10 +86,18 @@ const Cluster = () => {
                     </span>
                 </div>
             </div>
+            {isLoading
+            ?
+            <LoadingOverlay
+                active={isLoading}
+                spinner={<ClipLoader size={70} color="#469cac" />}
+            />
+            :
             <Graph
                 graph={graph}
                 options={options}
             />
+            }
         </div>
         :
         <></>
