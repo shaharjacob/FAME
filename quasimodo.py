@@ -16,7 +16,7 @@ from bs4 import BeautifulSoup
 class Quasimodo:
 
     def __init__(self, 
-                 path: str = 'merged.tsv'):
+                 path: str = 'tsv/quasimodo.tsv'):
 
         self.data = self.init_data(path)
         self.engine = inflect.engine()
@@ -195,16 +195,19 @@ class Quasimodo:
             df = df.nlargest(n_largest, 'plausibility')
         return df
     
-    def count_predicates(self):
+    def count_predicates(self, n: int = 0):
+        if n > 0:
+            return Counter(self.data["predicate"].tolist()).most_common(n)
         return Counter(self.data["predicate"].tolist())
-        # return Counter(self.data["predicate"].tolist()).most_common(100)
+        
     
-    def count_pred_obj_paris(self):
+    def count_pred_obj_paris(self, n: int = 0):
         predicates = self.data["predicate"].tolist()
         objects = self.data["object"].tolist()
         concat = [(predicate, obj) for predicate, obj in zip(predicates, objects)]
+        if n > 0:
+            return Counter(concat).most_common(n)
         return Counter(concat)
-        # return Counter(concat).most_common(100)
 
 
 def read_all_data(from_page: int = 1, to_page: int = 0):
@@ -252,8 +255,13 @@ def merge_tsvs(output: str):
 
 
 if __name__ == '__main__':
-    pass
+    quasimodo = Quasimodo()
+    df = quasimodo.filter_by("predicate", "express", n_largest=100)
+    for _, val in df.iterrows():
+        print(f"{val['subject']}  {val['predicate']}  {val['object']}")
+    # res = quasimodo.count_predicates(800)
+    # print(res)
 
-
-
+    # stopwords = ['has_property', 'can', 'have', 'has_trait', 'be in', 'be', 'get', 'need', 'be on']
+    # words = ['reflect', 'depend on', 'be divided', 'express', 'vary from']
     

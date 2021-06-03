@@ -274,17 +274,17 @@ def validation():
     score = 0
     for i, sample in enumerate(testset.testset):
         res = main(sample["input"][0], sample["input"][1], verbose=True, full_details=True, model='stsb-mpnet-base-v2', addition_nouns=['sunscreen'])
-        if res["score"] == 0:
-            secho(f"Wrong answer for sample number {i}", fg="red", bold=True)
-            secho(f"  no connection found...\n", fg="red")
-            continue
-        if res["edges"] == sample["label"] or res["edges"] == (sample["label"][1], sample["label"][0]):
-            score += 1
-        else:
-            secho(f"Wrong answer for sample number {i}", fg="red", bold=True)
-            secho(f"  Expected: {sample['label']}", fg="red")
-            secho(f"  Actual: {res['edges']}\n", fg="red")
-    secho(f"\nSuccess {score}/{len(testset.testset)}", fg="green", bold=True)    
+    #     if res["score"] == 0:
+    #         secho(f"Wrong answer for sample number {i}", fg="red", bold=True)
+    #         secho(f"  no connection found...\n", fg="red")
+    #         continue
+    #     if res["edges"] == sample["label"] or res["edges"] == (sample["label"][1], sample["label"][0]):
+    #         score += 1
+    #     else:
+    #         secho(f"Wrong answer for sample number {i}", fg="red", bold=True)
+    #         secho(f"  Expected: {sample['label']}", fg="red")
+    #         secho(f"  Actual: {res['edges']}\n", fg="red")
+    # secho(f"\nSuccess {score}/{len(testset.testset)}", fg="green", bold=True)    
 
 
 def main(sentence1: str, 

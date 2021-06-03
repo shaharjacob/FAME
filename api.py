@@ -145,19 +145,48 @@ def get_maximum_weighted_match(model: SentenceEmbedding, props_edge1: List[str],
     return similatiry_edges
 
 
-def get_trivial_match(model: SentenceEmbedding, props_edge1: List[str], props_edge2: List[str]) -> List[Tuple]:
-    similatiry_edges = []
+def get_maximum_weighted_match_(model: SentenceEmbedding, props_edge1: List[str], props_edge2: List[str], return_names: bool = False):
+    B = nx.Graph()
+    B.add_nodes_from(list(range(len(props_edge1))), bipartite=0)
+    B.add_nodes_from(list(range(len(props_edge1), len(props_edge1) + len(props_edge2))), bipartite=1)
+    all_edges = {}
+
     for i, prop1 in enumerate(props_edge1):
-        max_score = 0
-        best_edge = ()
         for j, prop2 in enumerate(props_edge2):
             similatiry = model.similarity(prop1, prop2)
-            if similatiry > max_score:
-                max_score = similatiry
-                best_edge = (i, len(props_edge1) + j)
-        if max_score > 0:
-            similatiry_edges.append((best_edge[0], best_edge[1], max_score))
+            B.add_edge(i, len(props_edge1) + j, weight=max(0, 1-similatiry))
+            all_edges[(i, len(props_edge1) + j)] = similatiry
+
+    best_matching = bipartite.matching.minimum_weight_full_matching(B, weight='weight')
+    similatiry_edges = []
+    already_seen = set()
+    for head, tail in best_matching.items():
+        if (head, tail) not in already_seen and (tail, head) not in already_seen:
+            similatiry_edges.append((head, tail, all_edges[(head, tail)]))
+            already_seen.add((head, tail))
+
+    if return_names:
+        return [(
+            props_edge1[edge[0]], 
+            props_edge2[edge[1] - len(props_edge1)], 
+            edge[2]) 
+            for edge in similatiry_edges]
     return similatiry_edges
+
+
+# def get_trivial_match(model: SentenceEmbedding, props_edge1: List[str], props_edge2: List[str]) -> List[Tuple]:
+#     similatiry_edges = []
+#     for i, prop1 in enumerate(props_edge1):
+#         max_score = 0
+#         best_edge = ()
+#         for j, prop2 in enumerate(props_edge2):
+#             similatiry = model.similarity(prop1, prop2)
+#             if similatiry > max_score:
+#                 max_score = similatiry
+#                 best_edge = (i, len(props_edge1) + j)
+#         if max_score > 0:
+#             similatiry_edges.append((best_edge[0], best_edge[1], max_score))
+#     return similatiry_edges
 
 
 @app.route("/api", methods=["GET", "POST"])
@@ -172,7 +201,6 @@ def bipartite_graph():
     props1 = get_nodes_for_app(props=props_edge1, start_idx=0, x=200, group="0")
     props2 = get_nodes_for_app(props=props_edge2, start_idx=len(props1), x=800, group="1")
     
-    # similatiry_edges = get_trivial_match(model, props_edge1, props_edge2)
     similatiry_edges = get_maximum_weighted_match(model, props_edge1, props_edge2)
 
     return jsonify({
@@ -203,8 +231,30 @@ def clustring():
             props1 = [node.get("label") for node in nodes1.get("nodes")]
             props2 = [node.get("label") for node in nodes2.get("nodes")]
             edges = get_maximum_weighted_match(model, props1, props2)
+
             if between_clusters == 'true':
                 edges = remove_edges_from_same_clusters(edges, nodes1.get("nodes"), nodes2.get("nodes"))
+                _nodes1, _nodes2 = [], []
+                for edge in edges:
+                    for node in nodes1.get("nodes"):
+                        if node.get("id") == edge[0]:
+                            _nodes1.append(node.get("label"))
+                            break
+                    for node in nodes2.get("nodes"):
+                        if node.get("id") == edge[1]:
+                            _nodes2.append(node.get("label"))
+                            break        
+                edges = get_maximum_weighted_match_(model, _nodes1, _nodes2, return_names=True)
+                for i in range(len(edges)):
+                    for node in nodes1.get("nodes"):
+                        if node["label"] == edges[i][0]:
+                            edges[i] = (node["id"], edges[i][1], edges[i][2])
+                            break
+                    for node in nodes2.get("nodes"):
+                        if node["label"] == edges[i][1]:
+                            edges[i] = (edges[i][0], node["id"], edges[i][2])
+                            break
+                
             edges = get_edges_for_app(edges)
 
         d[thresh] = {

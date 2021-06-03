@@ -100,10 +100,12 @@ const BipartiteGraph = () => {
           </div>
           {isLoading
           ?
-          <LoadingOverlay
-              active={isLoading}
-              spinner={<ClipLoader size={70} color="#469cac" />}
-          />
+          <div className="overlay-loading">
+            <LoadingOverlay
+                active={isLoading}
+                spinner={<ClipLoader size={70} color="#469cac" />}
+            />
+          </div>
           :
           <Graph
               graph={graph}
