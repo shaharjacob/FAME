@@ -1,11 +1,10 @@
 import os
 import random
-from typing import List, Dict, Tuple
+from typing import List, Dict
 
 import networkx as nx
 from flask import Flask, jsonify, request
 from networkx.algorithms import bipartite
-from scipy.spatial import distance
 
 from utils import COLORS_BRIGHT
 from sentence_embadding import SentenceEmbedding
@@ -17,7 +16,7 @@ def get_spaces(i, n):
     return " ".join([""]*n)
 
 
-def get_edges_for_app(edges: List[str]) -> List[Dict]:
+def get_edges_for_app(edges: List[str], spaces: int = 80) -> List[Dict]:
     return [
         {
             "from": edge[0], 
@@ -34,7 +33,7 @@ def get_edges_for_app(edges: List[str]) -> List[Dict]:
             "font": {
                 "align": 'left',
             },
-            "label": f"{get_spaces(i, random.randint(0, 80))}{str(edge[2])}",
+            "label": f"{get_spaces(i, random.randint(0, spaces))}{str(edge[2])}",
             "value": edge[2],
             "width": 0.5,
             "arrows": {
@@ -45,17 +44,21 @@ def get_edges_for_app(edges: List[str]) -> List[Dict]:
         for i, edge in enumerate(edges)]
 
 
-def get_nodes_for_app(props: List[str], start_idx: int, x: int, group: str) -> List[Dict]:
-    return [
-        {
+def get_nodes_for_app(props: List[str], start_idx: int, x: int, group: str, promote_group: int = 0) -> List[Dict]:
+    nodes = []
+    curr_y = 0
+    for i, node in enumerate(props):
+        print(curr_y)
+        nodes.append({
             "id": i + start_idx, 
             "x": x,
-            "y": i*35,
+            "y": curr_y,
             "label": node, 
-            "group": group,
+            "group": str(group + (promote_group*i)),
             "font": "12px arial #343434"
-        } 
-        for i, node in enumerate(props)]
+        })
+        curr_y += len(node.split('\n'))*40
+    return nodes
 
 
 def get_cluster_nodes_for_app(clustered_sentences: Dict[int, List[str]], start_idx: int, start_gourp: int, x: int) -> List[Dict]:
@@ -122,30 +125,11 @@ def get_options(num_of_clusters: int):
     }
 
 
-def get_maximum_weighted_match(model: SentenceEmbedding, props_edge1: List[str], props_edge2: List[str]):
-    B = nx.Graph()
-    B.add_nodes_from(list(range(len(props_edge1))), bipartite=0)
-    B.add_nodes_from(list(range(len(props_edge1), len(props_edge1) + len(props_edge2))), bipartite=1)
-    all_edges = {}
-
-    for i, prop1 in enumerate(props_edge1):
-        for j, prop2 in enumerate(props_edge2):
-            similatiry = model.similarity(prop1, prop2)
-            B.add_edge(i, len(props_edge1) + j, weight=max(0, 1-similatiry))
-            all_edges[(i, len(props_edge1) + j)] = similatiry
-
-    best_matching = bipartite.matching.minimum_weight_full_matching(B, weight='weight')
-    similatiry_edges = []
-    already_seen = set()
-    for head, tail in best_matching.items():
-        if (head, tail) not in already_seen and (tail, head) not in already_seen:
-            similatiry_edges.append((head, tail, all_edges[(head, tail)]))
-            already_seen.add((head, tail))
-
-    return similatiry_edges
+def get_edges_weighted(model: SentenceEmbedding, props_edge1: List[str], props_edge2: List[str]):
+    return [(prop1, prop2, model.similarity(prop1, prop2)) for prop1 in props_edge1 for prop2 in props_edge2]
 
 
-def get_maximum_weighted_match_(model: SentenceEmbedding, props_edge1: List[str], props_edge2: List[str], return_names: bool = False):
+def get_maximum_weighted_match(model: SentenceEmbedding, props_edge1: List[str], props_edge2: List[str], return_names: bool = False):
     B = nx.Graph()
     B.add_nodes_from(list(range(len(props_edge1))), bipartite=0)
     B.add_nodes_from(list(range(len(props_edge1), len(props_edge1) + len(props_edge2))), bipartite=1)
@@ -174,21 +158,6 @@ def get_maximum_weighted_match_(model: SentenceEmbedding, props_edge1: List[str]
     return similatiry_edges
 
 
-# def get_trivial_match(model: SentenceEmbedding, props_edge1: List[str], props_edge2: List[str]) -> List[Tuple]:
-#     similatiry_edges = []
-#     for i, prop1 in enumerate(props_edge1):
-#         max_score = 0
-#         best_edge = ()
-#         for j, prop2 in enumerate(props_edge2):
-#             similatiry = model.similarity(prop1, prop2)
-#             if similatiry > max_score:
-#                 max_score = similatiry
-#                 best_edge = (i, len(props_edge1) + j)
-#         if max_score > 0:
-#             similatiry_edges.append((best_edge[0], best_edge[1], max_score))
-#     return similatiry_edges
-
-
 @app.route("/api", methods=["GET", "POST"])
 def bipartite_graph():
     edge1 = (request.args.get('head1'), request.args.get('tail1'))
@@ -207,6 +176,88 @@ def bipartite_graph():
         "nodes": props1 + props2,
         "edges": get_edges_for_app(similatiry_edges),
     })
+
+
+@app.route("/test", methods=["GET", "POST"])
+def test():
+    edge1 = (request.args.get('head1'), request.args.get('tail1'))
+    edge2 = (request.args.get('head2'), request.args.get('tail2'))
+
+    model = SentenceEmbedding(init_quasimodo=False, init_inflect=False)
+
+    props_edge1 = model.get_edge_props(edge1[0], edge1[1])
+    props_edge2 = model.get_edge_props(edge2[0], edge2[1])
+    similatiry_edges = get_edges_weighted(model, props_edge1, props_edge2)
+
+    d = {}
+    distance_thresholds = [0.8]
+    for thresh in distance_thresholds:
+
+        clustered_sentences_1: Dict[int, List[str]] = model.clustering(edge1, distance_threshold=thresh)
+        clustered_sentences_1 = dict(sorted(clustered_sentences_1.items()))
+
+        clustered_sentences_2: Dict[int, List[str]] = model.clustering(edge2, distance_threshold=thresh)
+        clustered_sentences_2 = dict(sorted(clustered_sentences_2.items()))
+
+        props = []
+        cluster1 = []
+        for _, cluster in clustered_sentences_1.items():
+            cluster1.append("\n".join(cluster))
+        props.extend(get_nodes_for_app(props=cluster1, start_idx=0, x=200, group=0, promote_group=1))
+        
+        cluster2 = []
+        for _, cluster in clustered_sentences_2.items():
+            cluster2.append("\n".join(cluster))
+        props.extend(get_nodes_for_app(props=cluster2, start_idx=len(clustered_sentences_1), x=800, group=len(clustered_sentences_1), promote_group=1))
+        
+        cluster_edges_weights = {}
+        for edge in similatiry_edges:
+            cluster1, cluster2 = None, None
+            for key, cluster in clustered_sentences_1.items():
+                if edge[0] in cluster:
+                    cluster1 = int(key)
+                    break
+            for key, cluster in clustered_sentences_2.items():
+                if edge[1] in cluster:
+                    cluster2 = int(key) + len(clustered_sentences_1)
+                    break
+
+            if (cluster1, cluster2) not in cluster_edges_weights:
+                cluster_edges_weights[(cluster1, cluster2)] = edge
+            else:
+                if edge[2] > cluster_edges_weights[(cluster1, cluster2)][2]:
+                    cluster_edges_weights[(cluster1, cluster2)] = edge
+
+        B = nx.Graph()
+        B.add_nodes_from(list(range(len(clustered_sentences_1))), bipartite=0)
+        B.add_nodes_from(list(range(len(clustered_sentences_1), len(clustered_sentences_1) + len(clustered_sentences_2))), bipartite=1)
+        all_edges = {}
+
+        for i in range(len(clustered_sentences_1)):
+            for j in range(len(clustered_sentences_2)):
+                if (i, len(clustered_sentences_1) + j) not in cluster_edges_weights:
+                    continue
+                similatiry = cluster_edges_weights[(i, len(clustered_sentences_1) + j)][2]
+                B.add_edge(i, len(clustered_sentences_1) + j, weight=max(0, 1-similatiry))
+                all_edges[(i, len(clustered_sentences_1) + j)] = similatiry
+
+        best_matching = bipartite.matching.minimum_weight_full_matching(B, weight='weight')
+        similatiry_edges = []
+        already_seen = set()
+        for head, tail in best_matching.items():
+            if (head, tail) not in already_seen and (tail, head) not in already_seen:
+                similatiry_edges.append((head, tail, all_edges[(head, tail)]))
+                already_seen.add((head, tail))
+        
+        d[thresh] = {
+            "graph": {
+                "nodes": props,
+                "edges": get_edges_for_app(similatiry_edges, spaces=40),
+            },
+            "options": get_options(len(clustered_sentences_1) + len(clustered_sentences_2)),
+        }
+
+    return jsonify(d)
 
 
 @app.route("/cluster", methods=["GET", "POST"])
@@ -244,7 +295,7 @@ def clustring():
                         if node.get("id") == edge[1]:
                             _nodes2.append(node.get("label"))
                             break        
-                edges = get_maximum_weighted_match_(model, _nodes1, _nodes2, return_names=True)
+                edges = get_maximum_weighted_match(model, _nodes1, _nodes2, return_names=True)
                 for i in range(len(edges)):
                     for node in nodes1.get("nodes"):
                         if node["label"] == edges[i][0]:

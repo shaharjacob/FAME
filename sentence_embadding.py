@@ -1,5 +1,4 @@
 import json
-from pathlib import Path
 from itertools import combinations
 from typing import List, Tuple, Dict
 
@@ -12,10 +11,8 @@ from sentence_transformers import SentenceTransformer, util
 
 import testset
 import concept_net
-# import networkx as nx
 import google_autocomplete
 from wikifier import Wikifier
-# import matplotlib.pyplot as plt
 from quasimodo import Quasimodo
 
 # avilable models can be found here: https://huggingface.co/models?sort=downloads&search=sentence-transformers&p=0
