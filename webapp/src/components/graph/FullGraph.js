@@ -32,7 +32,7 @@ const FullGraph = () => {
         setTail1(params.get('tail1'))
         setTail2(params.get('tail2'))
     
-        fetch('/cluster?' + params).then(response => {
+        fetch('/full?' + params).then(response => {
           if(response.ok){
             return response.json()
           }

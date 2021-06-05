@@ -23,7 +23,7 @@ const Main = () => {
     }
 
     const onSubmitBoth = () => {
-        history.push(`/graph?head1=${selectedEdge1Head.value}&tail1=${selectedEdge1Tail.value}&head2=${selectedEdge2Head.value}&tail2=${selectedEdge2Tail.value}&edges=true`)
+        history.push(`/full?head1=${selectedEdge1Head.value}&tail1=${selectedEdge1Tail.value}&head2=${selectedEdge2Head.value}&tail2=${selectedEdge2Tail.value}`)
     }
 
     return (

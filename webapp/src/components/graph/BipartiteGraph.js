@@ -29,7 +29,7 @@ const BipartiteGraph = () => {
     setTail1(params.get('tail1'))
     setTail2(params.get('tail2'))
 
-    fetch('/api?' + params).then(response => {
+    fetch('/bipartite?' + params).then(response => {
       if(response.ok){
         return response.json()
       }
