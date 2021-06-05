@@ -167,9 +167,12 @@ def full():
     model = SentenceEmbedding(init_quasimodo=False, init_inflect=False)
     props_edge1 = model.get_edge_props(edge1[0], edge1[1])
     props_edge2 = model.get_edge_props(edge2[0], edge2[1])
+
+    if not props_edge1 or not props_edge2:
+        return jsonify({})
+
     # we want the weight of each edge between two nodes.
     similatiry_edges = get_edges_weighted(model, props_edge1, props_edge2)
-
     d = {}
     for thresh in DISTANCE_TRESHOLDS:
         clustered_sentences_1: Dict[int, List[str]] = model.clustering(edge1, distance_threshold=thresh)

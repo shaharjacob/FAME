@@ -8,6 +8,7 @@ import LoadingOverlay from 'react-loading-overlay'
 import ClipLoader from 'react-spinners/ClipLoader'
 
 import './Graph.css'
+import { IsEmpty } from '../../utils'
 import RightArrow from '../../assets/arrow-right.svg'
 
 
@@ -24,6 +25,7 @@ const FullGraph = () => {
     const [tail2, setTail2] = useState("")
     const [similarityThreshold, setSimilarityThreshold] = useState(0.00)
     const [isLoading, setIsLoading] = useState(true)
+    const [noMatchFound, setNoMatchFound] = useState(false)
 
     useEffect(() => {
         let params = new URLSearchParams(location.search)
@@ -37,9 +39,14 @@ const FullGraph = () => {
             return response.json()
           }
         }).then(data => {
-            setData(data)
-            setGraph(data[0.8]["graph"])
-            setOptions(data[0.8]["options"])
+            if (IsEmpty(data)) {
+                setData(data)
+                setGraph(data[0.8]["graph"])
+                setOptions(data[0.8]["options"])
+            }
+            else {
+                setNoMatchFound(true)
+            }
             setIsLoading(false)
         })
       },[])
@@ -78,56 +85,58 @@ const FullGraph = () => {
         ? 
         <div className="graph-container">
             <table>
-                <tr>
-                    <td className="td-left-edge">
-                        <span className="edge-title left-edge">
-                            {head1}&nbsp;&nbsp;
-                            <img src={RightArrow} width={10} alt="-->"/>
-                            &nbsp;&nbsp;{tail1}
-                        </span>
-                    </td>
-                    <td className="td-slider">
-                        <div className="slider">
-                            <Slider
-                                defaultValue={0.8}
-                                getAriaValueText={valueTextDistThreshold}
-                                aria-labelledby="discrete-slider-small-steps"
-                                step={0.1}
-                                min={0.1}
-                                max={0.9}
-                                valueLabelDisplay="on"
-                                onChange={onChangedDistThreshold}
-                            />
-                            <span className="slider-title">
-                                Distance Threshold (Clustering)
+                <tbody>
+                    <tr>
+                        <td className="td-left-edge">
+                            <span className="edge-title left-edge">
+                                {head1}&nbsp;&nbsp;
+                                <img src={RightArrow} width={10} alt="-->"/>
+                                &nbsp;&nbsp;{tail1}
                             </span>
-                        </div>
-                    </td>
-                    <td className="td-slider">
-                        <div className="slider">
-                            <Slider
-                                defaultValue={similarityThreshold}
-                                getAriaValueText={valueTextSimilarityThreshold}
-                                aria-labelledby="discrete-slider-small-steps"
-                                step={0.01}
-                                min={0.00}
-                                max={1.00}
-                                valueLabelDisplay="on"
-                                onChange={onChangedSimilarityThreshold}
-                            />
-                            <span className="slider-title">
-                                Similarity Threshold (Edges)
+                        </td>
+                        <td className="td-slider">
+                            <div className="slider">
+                                <Slider
+                                    defaultValue={0.8}
+                                    getAriaValueText={valueTextDistThreshold}
+                                    aria-labelledby="discrete-slider-small-steps"
+                                    step={0.1}
+                                    min={0.1}
+                                    max={0.9}
+                                    valueLabelDisplay="on"
+                                    onChange={onChangedDistThreshold}
+                                />
+                                <span className="slider-title">
+                                    Distance Threshold (Clustering)
+                                </span>
+                            </div>
+                        </td>
+                        <td className="td-slider">
+                            <div className="slider">
+                                <Slider
+                                    defaultValue={similarityThreshold}
+                                    getAriaValueText={valueTextSimilarityThreshold}
+                                    aria-labelledby="discrete-slider-small-steps"
+                                    step={0.01}
+                                    min={0.00}
+                                    max={1.00}
+                                    valueLabelDisplay="on"
+                                    onChange={onChangedSimilarityThreshold}
+                                />
+                                <span className="slider-title">
+                                    Similarity Threshold (Edges)
+                                </span>
+                            </div>
+                        </td>
+                        <td className="td-right-edge">
+                            <span className="edge-title right-edge">
+                                {head2}&nbsp;&nbsp;
+                                <img src={RightArrow} width={10} alt="-->"/>
+                                &nbsp;&nbsp;{tail2}
                             </span>
-                        </div>
-                    </td>
-                    <td className="td-right-edge">
-                        <span className="edge-title right-edge">
-                            {head2}&nbsp;&nbsp;
-                            <img src={RightArrow} width={10} alt="-->"/>
-                            &nbsp;&nbsp;{tail2}
-                        </span>
-                    </td>
-                </tr>
+                        </td>
+                    </tr>
+                </tbody>
             </table>
             {isLoading
             ?
@@ -142,6 +151,11 @@ const FullGraph = () => {
                 graph={graph}
                 options={options}
             />
+            }
+            {
+                noMatchFound
+                ? <span style={{textAlign: 'center'}}>No Match found</span>
+                : <></>
             }
         </div>
         :

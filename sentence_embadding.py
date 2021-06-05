@@ -22,7 +22,7 @@ from quasimodo import Quasimodo
 
 
 class SentenceEmbedding(SentenceTransformer):
-    def __init__(self, model: str = 'stsb-mpnet-base-v2', init_quasimodo: bool = True, init_inflect: bool = True, save_database=True):
+    def __init__(self, model: str = 'stsb-mpnet-base-v2', init_quasimodo: bool = True, init_inflect: bool = True, save_database: bool = True, override_database: bool = False):
         super().__init__(model)
         self.embaddings = {}
         self.quasimodo = None
@@ -31,6 +31,7 @@ class SentenceEmbedding(SentenceTransformer):
         self.engine = None
         if init_inflect:
             self.engine = inflect.engine()
+        self.override_database = override_database
         self.save_database = save_database
         self.quasimodo_edges = read_json('database/quasimodo_edges.json') if save_database else {}
         self.google_edges = read_json('database/google_edges.json') if save_database else {}
@@ -76,7 +77,7 @@ class SentenceEmbedding(SentenceTransformer):
         return sentences
     
     def get_edge_props(self, head: str, tail: str) -> List[str]:
-        if f"{head}#{tail}" in self.quasimodo_edges:
+        if f"{head}#{tail}" in self.quasimodo_edges and not self.override_database:
             quasimodo_props = self.quasimodo_edges[f"{head}#{tail}"]
         else:
             if not self.quasimodo:
@@ -84,13 +85,13 @@ class SentenceEmbedding(SentenceTransformer):
             quasimodo_props = self.quasimodo.get_edge_props(head, tail, n_largest=10, plural_and_singular=True)
             self.quasimodo_edges[f"{head}#{tail}"] = quasimodo_props  
 
-        if f"{head}#{tail}" in self.google_edges:
+        if f"{head}#{tail}" in self.google_edges and not self.override_database:
             autocomplete_props = self.google_edges[f"{head}#{tail}"]
         else:
             autocomplete_props = google_autocomplete.get_edge_props(head, tail).get((head, tail), {"suggestions": [], "props": []}).get("props", [])
             self.google_edges[f"{head}#{tail}"] = autocomplete_props  
 
-        if f"{head}#{tail}" in self.conceptnet_edges:
+        if f"{head}#{tail}" in self.conceptnet_edges and not self.override_database:
             concept_new_props = self.conceptnet_edges[f"{head}#{tail}"]
         else:
             if not self.engine:

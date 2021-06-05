@@ -8,6 +8,7 @@ import LoadingOverlay from 'react-loading-overlay'
 import ClipLoader from 'react-spinners/ClipLoader'
 
 import './Graph.css'
+import { IsEmpty } from '../../utils'
 import RightArrow from '../../assets/arrow-right.svg'
 
 
@@ -21,6 +22,7 @@ const BipartiteGraph = () => {
   const [head2, setHead2] = useState("")
   const [tail2, setTail2] = useState("")
   const [isLoading, setIsLoading] = useState(true)
+  const [noMatchFound, setNoMatchFound] = useState(false)
 
   useEffect(() => {
     let params = new URLSearchParams(location.search)
@@ -34,7 +36,12 @@ const BipartiteGraph = () => {
         return response.json()
       }
     }).then(data => {
-        setGraph(data)
+        if (IsEmpty(data)) {
+          setGraph(data)
+        }
+        else {
+          setNoMatchFound(true)
+        }
         setIsLoading(false)
     })
   },[])
@@ -111,6 +118,11 @@ const BipartiteGraph = () => {
               graph={graph}
               options={options}
           />
+          }
+          {
+            noMatchFound
+            ? <span style={{textAlign: 'center'}}>No Match found</span>
+            : <></>
           }
         </div>
       :

@@ -44,10 +44,5 @@ testset = [
                   "civizen has duties such as tax or army"),
         "label": (("student", "homework"), ("civizen", "duties")),
     },
-    {
-        "input": ("antibiotic contain a small amount of the virus to develop antibodies", 
-                  "civizen has duties such as tax or army"),
-        "label": (("student", "homework"), ("civizen", "duties")),
-    },
 ]
 

@@ -7,6 +7,7 @@ import LoadingOverlay from 'react-loading-overlay'
 import ClipLoader from 'react-spinners/ClipLoader'
 
 import './Graph.css'
+import { IsEmpty } from '../../utils'
 import RightArrow from '../../assets/arrow-right.svg'
 
 
@@ -22,6 +23,7 @@ const Cluster = () => {
     const [head2, setHead2] = useState("")
     const [tail2, setTail2] = useState("")
     const [isLoading, setIsLoading] = useState(true)
+    const [noMatchFound, setNoMatchFound] = useState(false)
 
     useEffect(() => {
         let params = new URLSearchParams(location.search)
@@ -35,9 +37,14 @@ const Cluster = () => {
             return response.json()
           }
         }).then(data => {
-            setData(data)
-            setGraph(data[0.8]["graph"])
-            setOptions(data[0.8]["options"])
+            if (IsEmpty(data)) {
+                setData(data)
+                setGraph(data[0.8]["graph"])
+                setOptions(data[0.8]["options"])
+            }
+            else {
+                setNoMatchFound(true)
+            }
             setIsLoading(false)
         })
       },[])
@@ -99,6 +106,11 @@ const Cluster = () => {
                 graph={graph}
                 options={options}
             />
+            }
+            {
+                noMatchFound
+                ? <span style={{textAlign: 'center'}}>No Match found</span>
+                : <></>
             }
         </div>
         :

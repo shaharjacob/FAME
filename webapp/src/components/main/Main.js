@@ -91,46 +91,58 @@ const Main = () => {
             <div style={{textAlign: 'left', marginLeft: '500px', marginTop: '100px'}}>
                 <b><u>Suggestions:</u></b><br/>
                 <ul>
-                    <li>
-                        (earth&nbsp;&nbsp;<img src={RightArrow} width={10} alt="-->"/>&nbsp;&nbsp;sun)
-                        &nbsp;&nbsp; &nbsp;&nbsp;~ &nbsp;&nbsp; &nbsp;&nbsp;
-                        (electrons&nbsp;&nbsp;<img src={RightArrow} width={10} alt="-->"/>&nbsp;&nbsp;nucleus)
-                    </li>
-                    <li>
-                        (singer&nbsp;&nbsp;<img src={RightArrow} width={10} alt="-->"/>&nbsp;&nbsp;songs)
-                        &nbsp;&nbsp; &nbsp;&nbsp;~ &nbsp;&nbsp; &nbsp;&nbsp;
-                        (programmer&nbsp;&nbsp;<img src={RightArrow} width={10} alt="-->"/>&nbsp;&nbsp;code)
-                    </li>
-                    <li>
-                        (cars&nbsp;&nbsp;<img src={RightArrow} width={10} alt="-->"/>&nbsp;&nbsp;road)
-                        &nbsp;&nbsp; &nbsp;&nbsp;~ &nbsp;&nbsp; &nbsp;&nbsp;
-                        (boats&nbsp;&nbsp;<img src={RightArrow} width={10} alt="-->"/>&nbsp;&nbsp;lake)
-                    </li>
-                    <li>
-                        (medicine&nbsp;&nbsp;<img src={RightArrow} width={10} alt="-->"/>&nbsp;&nbsp;illness)
-                        &nbsp;&nbsp; &nbsp;&nbsp;~ &nbsp;&nbsp; &nbsp;&nbsp;
-                        (law&nbsp;&nbsp;<img src={RightArrow} width={10} alt="-->"/>&nbsp;&nbsp;anarchy)
-                    </li>
-                    <li>
-                        (thoughts&nbsp;&nbsp;<img src={RightArrow} width={10} alt="-->"/>&nbsp;&nbsp;brain)
-                        &nbsp;&nbsp; &nbsp;&nbsp;~ &nbsp;&nbsp; &nbsp;&nbsp;
-                        (astronaut&nbsp;&nbsp;<img src={RightArrow} width={10} alt="-->"/>&nbsp;&nbsp;space)
-                    </li>
-                    <li>
-                        (plant&nbsp;&nbsp;<img src={RightArrow} width={10} alt="-->"/>&nbsp;&nbsp;desert)
-                        &nbsp;&nbsp; &nbsp;&nbsp;~ &nbsp;&nbsp; &nbsp;&nbsp;
-                        (cat&nbsp;&nbsp;<img src={RightArrow} width={10} alt="-->"/>&nbsp;&nbsp;street)
-                    </li>
-                    <li>
-                        (sunscreen&nbsp;&nbsp;<img src={RightArrow} width={10} alt="-->"/>&nbsp;&nbsp;sun)
-                        &nbsp;&nbsp; &nbsp;&nbsp;~ &nbsp;&nbsp; &nbsp;&nbsp;
-                        (umbrella&nbsp;&nbsp;<img src={RightArrow} width={10} alt="-->"/>&nbsp;&nbsp;rain)
-                    </li>
-                    <li>
-                        (air conditioner&nbsp;&nbsp;<img src={RightArrow} width={10} alt="-->"/>&nbsp;&nbsp;summer)
-                        &nbsp;&nbsp; &nbsp;&nbsp;~ &nbsp;&nbsp; &nbsp;&nbsp;
-                        (heater&nbsp;&nbsp;<img src={RightArrow} width={10} alt="-->"/>&nbsp;&nbsp;winter)
-                    </li>
+                    <b>Good:</b>
+                    <ul>
+                        <li>
+                            (earth&nbsp;&nbsp;<img src={RightArrow} width={10} alt="-->"/>&nbsp;&nbsp;sun)
+                            &nbsp;&nbsp; &nbsp;&nbsp;~ &nbsp;&nbsp; &nbsp;&nbsp;
+                            (electrons&nbsp;&nbsp;<img src={RightArrow} width={10} alt="-->"/>&nbsp;&nbsp;nucleus)
+                        </li>
+                        <li>
+                            (singer&nbsp;&nbsp;<img src={RightArrow} width={10} alt="-->"/>&nbsp;&nbsp;songs)
+                            &nbsp;&nbsp; &nbsp;&nbsp;~ &nbsp;&nbsp; &nbsp;&nbsp;
+                            (programmer&nbsp;&nbsp;<img src={RightArrow} width={10} alt="-->"/>&nbsp;&nbsp;code)
+                        </li>
+                        <li>
+                            (cars&nbsp;&nbsp;<img src={RightArrow} width={10} alt="-->"/>&nbsp;&nbsp;road)
+                            &nbsp;&nbsp; &nbsp;&nbsp;~ &nbsp;&nbsp; &nbsp;&nbsp;
+                            (boats&nbsp;&nbsp;<img src={RightArrow} width={10} alt="-->"/>&nbsp;&nbsp;lake)
+                        </li>   
+                        <li>
+                            (thoughts&nbsp;&nbsp;<img src={RightArrow} width={10} alt="-->"/>&nbsp;&nbsp;brain)
+                            &nbsp;&nbsp; &nbsp;&nbsp;~ &nbsp;&nbsp; &nbsp;&nbsp;
+                            (astronaut&nbsp;&nbsp;<img src={RightArrow} width={10} alt="-->"/>&nbsp;&nbsp;space)
+                        </li>
+                        <li>
+                            (sunscreen&nbsp;&nbsp;<img src={RightArrow} width={10} alt="-->"/>&nbsp;&nbsp;sun)
+                            &nbsp;&nbsp; &nbsp;&nbsp;~ &nbsp;&nbsp; &nbsp;&nbsp;
+                            (umbrella&nbsp;&nbsp;<img src={RightArrow} width={10} alt="-->"/>&nbsp;&nbsp;rain)
+                        </li>
+                        <li>
+                            (student&nbsp;&nbsp;<img src={RightArrow} width={10} alt="-->"/>&nbsp;&nbsp;homework)
+                            &nbsp;&nbsp; &nbsp;&nbsp;~ &nbsp;&nbsp; &nbsp;&nbsp;
+                            (civizen&nbsp;&nbsp;<img src={RightArrow} width={10} alt="-->"/>&nbsp;&nbsp;duties)
+                        </li>
+                    </ul>
+                    
+                    <b>Bad:</b>
+                    <ul>
+                        <li>
+                            (medicine&nbsp;&nbsp;<img src={RightArrow} width={10} alt="-->"/>&nbsp;&nbsp;illness)
+                            &nbsp;&nbsp; &nbsp;&nbsp;~ &nbsp;&nbsp; &nbsp;&nbsp;
+                            (law&nbsp;&nbsp;<img src={RightArrow} width={10} alt="-->"/>&nbsp;&nbsp;anarchy)
+                        </li>
+                        <li>
+                            (plant&nbsp;&nbsp;<img src={RightArrow} width={10} alt="-->"/>&nbsp;&nbsp;desert)
+                            &nbsp;&nbsp; &nbsp;&nbsp;~ &nbsp;&nbsp; &nbsp;&nbsp;
+                            (cat&nbsp;&nbsp;<img src={RightArrow} width={10} alt="-->"/>&nbsp;&nbsp;street)
+                        </li>
+                        <li>
+                            (air conditioner&nbsp;&nbsp;<img src={RightArrow} width={10} alt="-->"/>&nbsp;&nbsp;summer)
+                            &nbsp;&nbsp; &nbsp;&nbsp;~ &nbsp;&nbsp; &nbsp;&nbsp;
+                            (heater&nbsp;&nbsp;<img src={RightArrow} width={10} alt="-->"/>&nbsp;&nbsp;winter)
+                        </li>
+                    </ul>
                 </ul>
             </div>
         </div>

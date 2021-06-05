@@ -1,3 +1,10 @@
+export const IsEmpty = (obj) => {
+    for (var elem in obj) {
+        return true
+    }
+    return false
+}
+
 export const options = [
     { value: 'air conditioner', label: 'air conditioner' },
     { value: 'anarchy', label: 'anarchy' },
@@ -10,11 +17,14 @@ export const options = [
     { value: 'cans', label: 'cans' },
     { value: 'cars', label: 'cars' },
     { value: 'cat', label: 'cat' },
+    { value: 'civizen', label: 'civizen' },
     { value: 'code', label: 'code' },
     { value: 'desert', label: 'desert' },
+    { value: 'duties', label: 'duties' },
     { value: 'earth', label: 'earth' },
     { value: 'electrons', label: 'electrons' },
     { value: 'heater', label: 'heater' },
+    { value: 'homework', label: 'homework' },
     { value: 'illness', label: 'illness' },
     { value: 'lake', label: 'lake' },
     { value: 'law', label: 'law' },
@@ -31,6 +41,7 @@ export const options = [
     { value: 'songs', label: 'songs' },
     { value: 'space', label: 'space' },
     { value: 'street', label: 'street' },
+    { value: 'student', label: 'student' },
     { value: 'summer', label: 'summer' },
     { value: 'sun', label: 'sun' },
     { value: 'sunscreen', label: 'sunscreen' },
