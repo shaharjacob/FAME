@@ -49,7 +49,7 @@ const FullGraph = () => {
             }
             setIsLoading(false)
         })
-      },[])
+      },[location])
 
     function valueTextDistThreshold(value) {
         return `${value}`;

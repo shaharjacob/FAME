@@ -47,7 +47,7 @@ const Cluster = () => {
             }
             setIsLoading(false)
         })
-      },[])
+      },[location])
 
     function valuetext(value) {
         return `${value}`;

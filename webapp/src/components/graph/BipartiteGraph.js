@@ -44,7 +44,7 @@ const BipartiteGraph = () => {
         }
         setIsLoading(false)
     })
-  },[])
+  },[location])
 
   function valuetext(value) {
     return `${value}`;
