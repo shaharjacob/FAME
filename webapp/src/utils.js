@@ -17,7 +17,7 @@ export const options = [
     { value: 'cans', label: 'cans' },
     { value: 'cars', label: 'cars' },
     { value: 'cat', label: 'cat' },
-    { value: 'civizen', label: 'civizen' },
+    { value: 'citizen', label: 'citizen' },
     { value: 'code', label: 'code' },
     { value: 'desert', label: 'desert' },
     { value: 'duties', label: 'duties' },

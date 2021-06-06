@@ -138,10 +138,10 @@ const Main = () => {
                             </button>
                         </li>
                         <li>
-                            <button className="suggestion-button" onClick={() => onSelectSuggestion("student", "homework", "civizen", "duties")}>
+                            <button className="suggestion-button" onClick={() => onSelectSuggestion("student", "homework", "citizen", "duties")}>
                                 (student&nbsp;&nbsp;<img src={RightArrow} width={10} alt="-->"/>&nbsp;&nbsp;homework)
                                 &nbsp;&nbsp; &nbsp;&nbsp;~ &nbsp;&nbsp; &nbsp;&nbsp;
-                                (civizen&nbsp;&nbsp;<img src={RightArrow} width={10} alt="-->"/>&nbsp;&nbsp;duties)
+                                (citizen&nbsp;&nbsp;<img src={RightArrow} width={10} alt="-->"/>&nbsp;&nbsp;duties)
                             </button>
                         </li>
                     </ul>

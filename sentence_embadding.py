@@ -126,9 +126,14 @@ class SentenceEmbedding(SentenceTransformer):
     
     def clustering(self, edge: Tuple[str], distance_threshold: float) -> Dict[int, List[str]]:
         props_edge = self.get_edge_props(edge[0], edge[1])
+        if not props_edge:
+            return {}
         corpus_embeddings = self.encode(props_edge)
         corpus_embeddings = corpus_embeddings / np.linalg.norm(corpus_embeddings, axis=1, keepdims=True)
 
+        if len(props_edge) == 1:
+            return {0: props_edge}
+            
         clustering_model = AgglomerativeClustering(n_clusters=None, affinity='cosine', linkage='average', distance_threshold=distance_threshold)
         clustering_model.fit(corpus_embeddings)
         cluster_assignment = clustering_model.labels_
