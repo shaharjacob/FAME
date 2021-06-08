@@ -46,7 +46,7 @@ def get_edges_for_app(edges: List[str], spaces: int = 80) -> List[Dict]:
         for i, edge in enumerate(edges)]
 
 
-def get_nodes_for_app(props: List[str], start_idx: int, x: int, group: str, promote_group: int = 0) -> List[Dict]:
+def get_nodes_for_app(props: List[str], start_idx: int, x: int, group: int, promote_group: int = 0) -> List[Dict]:
     nodes = []
     curr_y = 0
     for i, node in enumerate(props):
@@ -148,8 +148,8 @@ def bipartite_graph():
     props_edge1 = model.get_edge_props(edge1[0], edge1[1])
     props_edge2 = model.get_edge_props(edge2[0], edge2[1])
 
-    props1 = get_nodes_for_app(props=props_edge1, start_idx=0, x=200, group="0")
-    props2 = get_nodes_for_app(props=props_edge2, start_idx=len(props1), x=800, group="1")
+    props1 = get_nodes_for_app(props=props_edge1, start_idx=0, x=200, group=0)
+    props2 = get_nodes_for_app(props=props_edge2, start_idx=len(props1), x=800, group=1)
     
     similatiry_edges = get_maximum_weighted_match(model, props_edge1, props_edge2)
 
