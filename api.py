@@ -105,7 +105,7 @@ def get_options(num_of_clusters: int):
     }
 
 
-def get_edges_weighted(model: SentenceEmbedding, props_edge1: List[str], props_edge2: List[str]):
+def get_edges_weights(model: SentenceEmbedding, props_edge1: List[str], props_edge2: List[str]):
     # get all edges in the graph (full graph)
     return [(prop1, prop2, model.similarity(prop1, prop2)) for prop1 in props_edge1 for prop2 in props_edge2]
 
@@ -171,7 +171,7 @@ def full():
         return jsonify({})
 
     # we want the weight of each edge between two nodes.
-    similatiry_edges = get_edges_weighted(model, props_edge1, props_edge2)
+    similatiry_edges = get_edges_weights(model, props_edge1, props_edge2)
     d = {}
     for thresh in DISTANCE_TRESHOLDS:
         clustered_sentences_1: Dict[int, List[str]] = model.clustering(edge1, distance_threshold=thresh)
