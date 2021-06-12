@@ -153,5 +153,7 @@
     "virus#amount": [],
     "antibodies#antibiotic": [],
     "virus#antibiotic": [],
-    "virus#antibodies": []
+    "virus#antibodies": [],
+    "citizen#duties": [],
+    "duties#citizen": []
 }

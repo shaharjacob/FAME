@@ -323,5 +323,9 @@
     "virus#antibiotic": [],
     "virus#antibodies": [
         "evade"
-    ]
+    ],
+    "citizen#duties": [
+        "have"
+    ],
+    "duties#citizen": []
 }

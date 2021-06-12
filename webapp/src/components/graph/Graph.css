@@ -1,7 +1,15 @@
 .graph-container {
     display: grid;
     grid-template-rows: 0.01fr 0.99fr;
+    grid-template-columns: 0.1fr 0.9fr;
+    grid-template-areas: 
+      "score top"
+      "score graph";
     margin-top: 50px;
+}
+
+.top {
+    grid-area: top;
 }
 
 .graph-top {
@@ -69,4 +77,51 @@
 .overlay-loading {
     background-color: #ffffff;
     margin-top: 200px;
+}
+
+.calculator {
+    grid-area: score;
+    margin-left: 20px;
+    background-color: #ececec;
+    padding: 5px;
+    border: 1px solid #dadada;
+    border-radius: 5px;
+    box-shadow: 3px 3px 8px #b3b3b3;
+}
+
+.equation {
+    margin-top: 5px; 
+    margin-bottom: 8px;
+    width: 300px;
+}
+
+.equation-title {
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.button-equation {
+    margin-bottom: 8px;
+}
+
+.score-title {
+    font-weight: 600;
+    font-size: 12px;
+    margin-bottom: 5px;
+    width: 300px;
+}
+
+.score {
+    font-weight: 700;
+}
+
+.edge-button {
+    border: 0;
+    background-color: transparent;
+}
+
+.edge-button:hover {
+    border-radius: 5px;
+    background-color: #d1d1d1;
+    cursor: pointer;
 }

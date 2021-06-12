@@ -331,5 +331,9 @@
         "be susceptible to",
         "be destroyed by"
     ],
-    "virus#antibodies": []
+    "virus#antibodies": [],
+    "citizen#duties": [
+        "have"
+    ],
+    "duties#citizen": []
 }

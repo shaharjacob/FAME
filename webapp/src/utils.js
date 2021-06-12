@@ -1,8 +1,8 @@
 export const IsEmpty = (obj) => {
     for (var elem in obj) {
-        return true
+        return false
     }
-    return false
+    return true
 }
 
 export const options = [

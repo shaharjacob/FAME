@@ -77,6 +77,7 @@ class SentenceEmbedding(SentenceTransformer):
         return sentences
     
     def get_edge_props(self, head: str, tail: str) -> List[str]:
+        should_save = False
         if f"{head}#{tail}" in self.quasimodo_edges and not self.override_database:
             quasimodo_props = self.quasimodo_edges[f"{head}#{tail}"]
         else:
@@ -84,12 +85,14 @@ class SentenceEmbedding(SentenceTransformer):
                 self.quasimodo = Quasimodo(path='tsv/quasimodo.tsv')
             quasimodo_props = self.quasimodo.get_edge_props(head, tail, n_largest=10, plural_and_singular=True)
             self.quasimodo_edges[f"{head}#{tail}"] = quasimodo_props  
+            should_save = True
 
         if f"{head}#{tail}" in self.google_edges and not self.override_database:
             autocomplete_props = self.google_edges[f"{head}#{tail}"]
         else:
             autocomplete_props = google_autocomplete.get_edge_props(head, tail).get((head, tail), {"suggestions": [], "props": []}).get("props", [])
             self.google_edges[f"{head}#{tail}"] = autocomplete_props  
+            should_save = True
 
         if f"{head}#{tail}" in self.conceptnet_edges and not self.override_database:
             concept_new_props = self.conceptnet_edges[f"{head}#{tail}"]
@@ -97,7 +100,12 @@ class SentenceEmbedding(SentenceTransformer):
             if not self.engine:
                 self.engine = inflect.engine()
             concept_new_props = concept_net.get_edge_props(self.engine, head, tail)
-            self.conceptnet_edges[f"{head}#{tail}"] = concept_new_props                
+            self.conceptnet_edges[f"{head}#{tail}"] = concept_new_props
+            should_save = True
+
+        if should_save:
+            self.save_database_()
+
         return list(set(quasimodo_props + autocomplete_props + concept_new_props))
 
     def get_edges_score(self, edge1: Tuple[str], edge2: Tuple[str], n_best: int = 0, verbose: bool = False):
@@ -145,7 +153,7 @@ class SentenceEmbedding(SentenceTransformer):
             clustered_sentences[cluster_id].append(props_edge[sentence_id])
         return dict(sorted(clustered_sentences.items()))
     
-    def save_datebase(self):
+    def save_database_(self):
         with open('database/quasimodo_edges.json', 'w') as f1:
             json.dump(self.quasimodo_edges, f1)
         with open('database/google_edges.json', 'w') as f2:
@@ -252,7 +260,7 @@ def run(sentence1: str,
             matches.append(((comb1, comb2), res["score"], res["sentences"]))
     
     if model.save_database:
-        model.save_datebase()
+        model.save_database_()
 
     matches = sorted(matches, key=lambda x: -x[1])
     if verbose:
