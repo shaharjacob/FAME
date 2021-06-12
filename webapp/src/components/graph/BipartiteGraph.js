@@ -36,7 +36,7 @@ const BipartiteGraph = () => {
         return response.json()
       }
     }).then(data => {
-        if (IsEmpty(data)) {
+        if (!IsEmpty(data)) {
           setGraph(data)
         }
         else {

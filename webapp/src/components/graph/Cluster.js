@@ -37,7 +37,7 @@ const Cluster = () => {
             return response.json()
           }
         }).then(data => {
-            if (IsEmpty(data)) {
+            if (!IsEmpty(data)) {
                 setData(data)
                 setGraph(data[0.8]["graph"])
                 setOptions(data[0.8]["options"])
