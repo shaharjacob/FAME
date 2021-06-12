@@ -125,3 +125,12 @@
     background-color: #d1d1d1;
     cursor: pointer;
 }
+
+.slider-calculator {
+    width: 200px;
+    text-align: center;
+    margin-left: auto; 
+    margin-right: auto;
+    margin-bottom: 40px;
+    margin-top: 40px;
+}

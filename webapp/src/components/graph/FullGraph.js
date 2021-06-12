@@ -27,6 +27,7 @@ const FullGraph = () => {
     const [head2, setHead2] = useState("")
     const [tail2, setTail2] = useState("")
     const [similarityThreshold, setSimilarityThreshold] = useState(0.00)
+    const [alpha, setAlpha] = useState(0.0)
     const [isLoading, setIsLoading] = useState(true)
     const [noMatchFound, setNoMatchFound] = useState(false)
     // const [equation, setEquation] = useState("")
@@ -107,7 +108,7 @@ const FullGraph = () => {
         }
     }
 
-    function valueTextDistThreshold(value) {
+    function valueTextSlider(value) {
         return `${value}`;
     }
     
@@ -127,20 +128,20 @@ const FullGraph = () => {
             data[3][value]["score"]
         ])
     }
-
-    function valueTextSimilarityThreshold(value) {
-        return `${value}`;
-      }
     
-      function onChangedSimilarityThreshold(event, value) {
+    function onChangedSimilarityThreshold(event, value) {
         let copyGraph = cloneDeep(graph)
         for (let i = 0; i < copyGraph["edges"].length; i++){
-          let shouldBeHide = copyGraph["edges"][i]["value"] < value
-          copyGraph["edges"][i]["hidden"] = shouldBeHide
+            let shouldBeHide = copyGraph["edges"][i]["value"] < value
+            copyGraph["edges"][i]["hidden"] = shouldBeHide
         }
         setGraph(copyGraph)
         setSimilarityThreshold(value)
-      }
+    }
+
+    function onChangedAlpha(event, value) {
+        setAlpha(value)
+    }
 
     return (
     <div>
@@ -161,8 +162,8 @@ const FullGraph = () => {
                             <td className="td-slider">
                                 <div className="slider">
                                     <Slider
-                                        defaultValue={0.8}
-                                        getAriaValueText={valueTextDistThreshold}
+                                        defaultValue={distThreshold}
+                                        getAriaValueText={valueTextSlider}
                                         aria-labelledby="discrete-slider-small-steps"
                                         step={0.1}
                                         min={0.1}
@@ -179,7 +180,7 @@ const FullGraph = () => {
                                 <div className="slider">
                                     <Slider
                                         defaultValue={similarityThreshold}
-                                        getAriaValueText={valueTextSimilarityThreshold}
+                                        getAriaValueText={valueTextSlider}
                                         aria-labelledby="discrete-slider-small-steps"
                                         step={0.01}
                                         min={0.00}
@@ -204,6 +205,21 @@ const FullGraph = () => {
                 </table>
             </div>
             <div className="calculator">
+                <div className="slider-calculator">
+                    <Slider
+                        defaultValue={alpha}
+                        getAriaValueText={valueTextSlider}
+                        aria-labelledby="discrete-slider-small-steps"
+                        step={0.1}
+                        min={0.0}
+                        max={1.0}
+                        valueLabelDisplay="on"
+                        onChange={onChangedAlpha}
+                    />
+                    <span className="slider-title">
+                        Weight of the opposite direction
+                    </span>
+                </div>
                 <button className="edge-button" onClick={() => onEdgeClick(0)}>
                     <div className="score-title">
                         <font color="red">
@@ -217,7 +233,7 @@ const FullGraph = () => {
                             <img src={RightArrow} width={10} alt="-->"/>
                             &nbsp;&nbsp;{tail2}
                         </font>
-                        : <b>{scores[0]}</b>
+                        : <b>{scores[0] + scores[1] * alpha}</b>
                     </div>
                 </button>
                 <button className="edge-button" onClick={() => onEdgeClick(1)}>
@@ -233,7 +249,7 @@ const FullGraph = () => {
                             <img src={RightArrow} width={10} alt="-->"/>
                             &nbsp;&nbsp;{head2}
                         </font>
-                        : <b>{scores[1]}</b>
+                        : <b>{scores[1] + scores[0] * alpha}</b>
                     </div>
                 </button>
                 <button className="edge-button" onClick={() => onEdgeClick(2)}>
@@ -249,7 +265,7 @@ const FullGraph = () => {
                             <img src={RightArrow} width={10} alt="-->"/>
                             &nbsp;&nbsp;{head2}
                         </font>
-                        : <b>{scores[2]}</b>
+                        : <b>{scores[2] + scores[3] * alpha}</b>
                     </div>
                 </button>
                 <button className="edge-button" onClick={() => onEdgeClick(3)}>
@@ -265,7 +281,7 @@ const FullGraph = () => {
                             <img src={RightArrow} width={10} alt="-->"/>
                             &nbsp;&nbsp;{tail2}
                         </font>
-                        : <b>{scores[3]}</b>
+                        : <b>{scores[3] + scores[2] * alpha}</b>
                     </div>
                 </button>
                 <div className="score-title">
