@@ -23,16 +23,12 @@ const FullGraph = () => {
     const [graphSelect, setGraphSelect] = useState(0)
     const [distThreshold, setDistThreshold] = useState(0.8)
     const [similarityThreshold, setSimilarityThreshold] = useState(0.00)
-    const [currBase1, setCurrBase1] = useState("")
-    const [currBase2, setCurrBase2] = useState("")
-    const [currTarget1, setCurrTarget1] = useState("")
-    const [currTarget2, setCurrTarget2] = useState("")
+    const [currB, setCurrB] = useState([])
+    const [currT, setCurrT] = useState([])
     
     // descriptor
-    const [base1, setBase1] = useState("")
-    const [base2, setBase2] = useState("")
-    const [target1, setTarget1] = useState("")
-    const [target2, setTarget2] = useState("")
+    const [B, setB] = useState([])
+    const [T, setT] = useState([])
     const [scores, setScores] = useState([0, 0, 0, 0])
     
     // general
@@ -41,18 +37,25 @@ const FullGraph = () => {
 
     useEffect(() => {
         let params = new URLSearchParams(location.search)
-
+        
+        let base = []
+        let target = []
+        for (const [key, value] of params.entries()) {
+            if (key.includes("base")) {
+                base.push(value)
+            }
+            if (key.includes("target")) {
+                target.push(value)
+            } 
+        }
+        
         // entities for the descriptor
-        setBase1(params.get('base1'))
-        setBase2(params.get('base2'))
-        setTarget1(params.get('target1'))
-        setTarget2(params.get('target2'))
-
+        setB(base)
+        setT(target)
+        
         // entities which currently display
-        setCurrBase1(params.get('base1'))
-        setCurrBase2(params.get('base2'))
-        setCurrTarget1(params.get('target1'))
-        setCurrTarget2(params.get('target2'))
+        setCurrB(base)
+        setCurrT(target)
     
         fetch('/full?' + params).then(response => {
           if(response.ok){
@@ -119,7 +122,7 @@ const FullGraph = () => {
                         <tr>
                             <td className="td-base">
                                 <span className="entities-title base">
-                                    {currBase1}&nbsp;.*&nbsp;{currBase2}
+                                    {currB[0]}&nbsp;.*&nbsp;{currB[1]}
                                 </span>
                             </td>
                             <td className="td-slider">
@@ -158,7 +161,7 @@ const FullGraph = () => {
                             </td>
                             <td className="td-target">
                                 <span className="entities-title target">
-                                    {currTarget1}&nbsp;.*&nbsp;{currTarget2}
+                                    {currT[0]}&nbsp;.*&nbsp;{currT[1]}
                                 </span>
                             </td>
                         </tr>
@@ -172,14 +175,10 @@ const FullGraph = () => {
                 setOptions={setOptions} 
                 scores={scores} 
                 distThreshold={distThreshold} 
-                base1={base1} 
-                setCurrBase1={setCurrBase1}
-                base2={base2} 
-                setCurrBase2={setCurrBase2}
-                target1={target1} 
-                setCurrTarget1={setCurrTarget1}
-                target2={target2}
-                setCurrTarget2={setCurrTarget2}
+                B={B}
+                setCurrB={setCurrB}
+                T={T}
+                setCurrT={setCurrT}
                 similarityThreshold={similarityThreshold} 
                 noMatchFound={noMatchFound} 
                 setNoMatchFound={setNoMatchFound}

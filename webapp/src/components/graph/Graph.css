@@ -8,19 +8,50 @@
     margin-top: 50px;
 }
 
+.overlay-loading {
+    background-color: #ffffff;
+    margin-top: 200px;
+}
+
+/****************************/
+/* Top -> entities, sliders */
+/****************************/
 .top {
     grid-area: top;
 }
 
-.graph-top {
-    display: grid;
-    grid-template-columns: 0.55fr 0.45fr;
-    margin-top: 40px;
+.entities-title {
+    border-radius: 5px;
+    padding: 3px;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 600;
+    height: 30px;
+    width: fit-content;
 }
 
-.graph-title {
-    text-align: right;
-    margin-right: 40px;
+.td-base {
+    text-align: right; 
+    width: 35%; 
+    padding-right: 20px; 
+    padding-left: 20px;
+}
+
+.td-target {
+    text-align: left; 
+    width: 35%; 
+    padding-right: 20px; 
+    padding-left: 20px;
+}
+
+.base {
+    background-color: orange;
+    border: 1px solid rgb(73, 49, 4);
+}
+
+.target {
+    background-color: cyan;
+    border: 1px solid rgb(1, 107, 107);
 }
 
 .slider {
@@ -38,70 +69,6 @@
     width: 15%;
     padding-right: 20px;
     padding-left: 20px;
-}
-
-.overlay-loading {
-    background-color: #ffffff;
-    margin-top: 200px;
-}
-
-.equation {
-    margin-top: 5px; 
-    margin-bottom: 8px;
-    width: 300px;
-}
-
-.equation-title {
-    font-weight: 600;
-    margin-bottom: 5px;
-}
-
-.button-equation {
-    margin-bottom: 8px;
-}
-
-.score-title {
-    font-weight: 600;
-    font-size: 12px;
-    margin-bottom: 5px;
-    width: 300px;
-}
-
-.score {
-    font-weight: 700;
-}
-
-/****************************/
-/* Top -> entities, sliders */
-/****************************/
-.entities-title {
-    border-radius: 5px;
-    padding: 3px;
-    text-align: center;
-    font-size: 14px;
-    font-weight: 600;
-    height: 30px;
-    width: fit-content;
-}
-.td-base {
-    text-align: right; 
-    width: 35%; 
-    padding-right: 20px; 
-    padding-left: 20px;
-}
-.td-target {
-    text-align: left; 
-    width: 35%; 
-    padding-right: 20px; 
-    padding-left: 20px;
-}
-.base {
-    background-color: orange;
-    border: 1px solid rgb(73, 49, 4);
-}
-.target {
-    background-color: cyan;
-    border: 1px solid rgb(1, 107, 107);
 }
 
 /**************/
@@ -123,7 +90,6 @@
     font-weight: 600;
     font-size: 12px;
     margin-bottom: 20px;
-    /* width: 500px; */
 }
 
 .descriptor-table {
@@ -136,7 +102,6 @@
     font-weight: 700;
     font-size: 12px;
     text-align: center;
-    /* width: 33%; */
     border: 1px solid #e2e2e2;
 }
 
@@ -155,4 +120,11 @@
     border-radius: 5px;
     background-color: #d1d1d1;
     cursor: pointer;
+}
+
+.score-title {
+    font-weight: 600;
+    font-size: 12px;
+    margin-bottom: 5px;
+    width: 300px;
 }

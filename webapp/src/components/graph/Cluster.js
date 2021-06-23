@@ -6,7 +6,7 @@ import Slider from '@material-ui/core/Slider';
 import LoadingOverlay from 'react-loading-overlay'
 import ClipLoader from 'react-spinners/ClipLoader'
 
-import './Graph.css'
+import './GraphWithoutDescriptor.css'
 import { IsEmpty } from '../../utils'
 
 
