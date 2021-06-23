@@ -10,28 +10,28 @@ import Hayadata from '../../assets/hayadata.png'
 const Main = () => {
 
     let history = useHistory()
-    const [selectedEdge1Head, setSelectedEdge1Head] = useState({label: "earth", value: "earth"});
-    const [selectedEdge1Tail, setSelectedEdge1Tail] = useState({label: "sun", value: "sun"});
-    const [selectedEdge2Head, setSelectedEdge2Head] = useState({label: "electrons", value: "electrons"});
-    const [selectedEdge2Tail, setSelectedEdge2Tail] = useState({label: "nucleus", value: "nucleus"});
+    const [selectedBase1, setSelectedBase1] = useState({label: "earth", value: "earth"});
+    const [selectedBase2, setSelectedBase2] = useState({label: "sun", value: "sun"});
+    const [selectedTarget1, setSelectedTarget1] = useState({label: "electrons", value: "electrons"});
+    const [selectedTarget2, setSelectedTarget2] = useState({label: "nucleus", value: "nucleus"});
 
-    const onSelectSuggestion = (head1, tail1, head2, tail2) => {
-        setSelectedEdge1Head({label: head1, value: head1})
-        setSelectedEdge1Tail({label: tail1, value: tail1})
-        setSelectedEdge2Head({label: head2, value: head2})
-        setSelectedEdge2Tail({label: tail2, value: tail2})
+    const onSelectSuggestion = (base1, base2, target1, target2) => {
+        setSelectedBase1({label: base1, value: base1})
+        setSelectedBase2({label: base2, value: base2})
+        setSelectedTarget1({label: target1, value: target1})
+        setSelectedTarget2({label: target2, value: target2})
     }
 
     const onSubmitBipartite = () => {
-        history.push(`/bipartite?head1=${selectedEdge1Head.value}&tail1=${selectedEdge1Tail.value}&head2=${selectedEdge2Head.value}&tail2=${selectedEdge2Tail.value}`)
+        history.push(`/bipartite?base1=${selectedBase1.value}&base2=${selectedBase2.value}&target1=${selectedTarget1.value}&target2=${selectedTarget2.value}`)
     }
 
     const onSubmitClustering = () => {
-        history.push(`/cluster?head1=${selectedEdge1Head.value}&tail1=${selectedEdge1Tail.value}&head2=${selectedEdge2Head.value}&tail2=${selectedEdge2Tail.value}`)
+        history.push(`/cluster?base1=${selectedBase1.value}&base2=${selectedBase2.value}&target1=${selectedTarget1.value}&target2=${selectedTarget2.value}`)
     }
 
     const onSubmitBoth = () => {
-        history.push(`/full?head1=${selectedEdge1Head.value}&tail1=${selectedEdge1Tail.value}&head2=${selectedEdge2Head.value}&tail2=${selectedEdge2Tail.value}`)
+        history.push(`/full?base1=${selectedBase1.value}&base2=${selectedBase2.value}&target1=${selectedTarget1.value}&target2=${selectedTarget2.value}`)
     }
 
     return (
@@ -47,46 +47,46 @@ const Main = () => {
                 </span>
 
                 <div>
-                    <span className="mid-title">Head</span>
+                    <span className="mid-title">Base 1</span>
                     <Select
                         className="select"
-                        value={options.find(obj => obj.value === selectedEdge1Head.value)}
-                        onChange={setSelectedEdge1Head}
+                        value={options.find(obj => obj.value === selectedBase1.value)}
+                        onChange={setSelectedBase1}
                         options={options}
-                        placeholder={selectedEdge1Head.value}
+                        placeholder={selectedBase1.value}
                     />
                 </div>
 
                 <div>
-                    <span className="mid-title">Head</span>
+                    <span className="mid-title">Target 1</span>
                     <Select
                         className="select"
-                        value={options.find(obj => obj.value === selectedEdge2Head.value)}
-                        onChange={setSelectedEdge2Head}
+                        value={options.find(obj => obj.value === selectedTarget1.value)}
+                        onChange={setSelectedTarget1}
                         options={options}
-                        placeholder={selectedEdge2Head.value}
+                        placeholder={selectedTarget1.value}
                     />
                 </div>
 
                 <div>
-                    <span className="mid-title">Tail</span>
+                    <span className="mid-title">Base 2</span>
                     <Select
                         className="select"
-                        value={options.find(obj => obj.value === selectedEdge1Tail.value)}
-                        onChange={setSelectedEdge1Tail}
+                        value={options.find(obj => obj.value === selectedBase2.value)}
+                        onChange={setSelectedBase2}
                         options={options}
-                        placeholder={selectedEdge1Tail.value}
+                        placeholder={selectedBase2.value}
                     />
                 </div>
 
                 <div>
-                    <span className="mid-title">Tail</span>
+                    <span className="mid-title">Target 2</span>
                     <Select
                         className="select"
-                        value={options.find(obj => obj.value === selectedEdge2Tail.value)}
-                        onChange={setSelectedEdge2Tail}
+                        value={options.find(obj => obj.value === selectedTarget2.value)}
+                        onChange={setSelectedTarget2}
                         options={options}
-                        placeholder={selectedEdge2Tail.value}
+                        placeholder={selectedTarget2.value}
                     />
                 </div>
             </div>

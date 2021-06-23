@@ -141,8 +141,8 @@ def get_maximum_weighted_match(model: SentenceEmbedding, props_edge1: List[str],
 
 @app.route("/bipartite", methods=["GET", "POST"])
 def bipartite_graph():
-    edge1 = (request.args.get('head1'), request.args.get('tail1'))
-    edge2 = (request.args.get('head2'), request.args.get('tail2'))
+    edge1 = (request.args.get('base1'), request.args.get('base2'))
+    edge2 = (request.args.get('target1'), request.args.get('target2'))
     model = SentenceEmbedding(init_quasimodo=False, init_inflect=False)
 
     props_edge1 = model.get_edge_props(edge1[0], edge1[1])
@@ -163,8 +163,8 @@ def bipartite_graph():
 def full():
     model = SentenceEmbedding(init_quasimodo=False, init_inflect=False)
 
-    edge1 = (request.args.get('head1'), request.args.get('tail1'))
-    edge2 = (request.args.get('head2'), request.args.get('tail2'))
+    edge1 = (request.args.get('base1'), request.args.get('base2'))
+    edge2 = (request.args.get('target1'), request.args.get('target2'))
 
     edges_ = [
         ((edge1[0], edge1[1]),(edge2[0], edge2[1])),
@@ -259,8 +259,8 @@ def full():
 
 @app.route("/cluster", methods=["GET", "POST"])
 def clustring():
-    edge1 = (request.args.get('head1'), request.args.get('tail1'))
-    edge2 = (request.args.get('head2'), request.args.get('tail2'))
+    edge1 = (request.args.get('base1'), request.args.get('base2'))
+    edge2 = (request.args.get('target1'), request.args.get('target2'))
 
     model = SentenceEmbedding(init_quasimodo=False, init_inflect=False)
 

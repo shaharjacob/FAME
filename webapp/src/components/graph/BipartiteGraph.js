@@ -9,7 +9,6 @@ import ClipLoader from 'react-spinners/ClipLoader'
 
 import './Graph.css'
 import { IsEmpty } from '../../utils'
-import RightArrow from '../../assets/arrow-right.svg'
 
 
 const BipartiteGraph = () => {
@@ -17,19 +16,19 @@ const BipartiteGraph = () => {
   let location = useLocation()
 
   const [graph, setGraph] = useState({})
-  const [head1, setHead1] = useState("")
-  const [tail1, setTail1] = useState("")
-  const [head2, setHead2] = useState("")
-  const [tail2, setTail2] = useState("")
+  const [base1, setBase1] = useState("")
+  const [base2, setBase2] = useState("")
+  const [target1, setTarget1] = useState("")
+  const [target2, setTarget2] = useState("")
   const [isLoading, setIsLoading] = useState(true)
   const [noMatchFound, setNoMatchFound] = useState(false)
 
   useEffect(() => {
     let params = new URLSearchParams(location.search)
-    setHead1(params.get('head1'))
-    setHead2(params.get('head2'))
-    setTail1(params.get('tail1'))
-    setTail2(params.get('tail2'))
+    setBase1(params.get('base1'))
+    setTarget1(params.get('target1'))
+    setBase2(params.get('base2'))
+    setTarget2(params.get('target2'))
 
     fetch('/bipartite?' + params).then(response => {
       if(response.ok){
@@ -77,16 +76,12 @@ const BipartiteGraph = () => {
         <div className="graph-container">
           <div className="graph-top">
             <div className="graph-title">
-              <span className="edge-title left-edge">
-                {head1}&nbsp;&nbsp;
-                <img src={RightArrow} width={10} alt="-->"/>
-                &nbsp;&nbsp;{tail1}
+              <span className="entities-title base">
+                {base1}&nbsp;.*&nbsp;{base2}
               </span>
               &nbsp;&nbsp; &nbsp;&nbsp;~ &nbsp;&nbsp; &nbsp;&nbsp;
-              <span className="edge-title right-edge">
-                {head2}&nbsp;&nbsp;
-                <img src={RightArrow} width={10} alt="-->"/>
-                &nbsp;&nbsp;{tail2}
+              <span className="entities-title target">
+                {target1}&nbsp;.*&nbsp;{target2}
               </span>
             </div>
             <div className="slider">
