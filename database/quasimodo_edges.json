@@ -335,5 +335,68 @@
     "citizen#duties": [
         "have"
     ],
-    "duties#citizen": []
+    "duties#citizen": [],
+    "electrons#electricity": [
+        "create",
+        "conduct",
+        "produce",
+        "relate to",
+        "be involved with",
+        "in conducting"
+    ],
+    "electricity#electrons": [
+        "has property",
+        "be related to",
+        "work with",
+        "be created by",
+        "be made out of"
+    ],
+    "nucleus#electricity": [],
+    "electricity#nucleus": [],
+    "earth#gravity": [
+        "have",
+        "be planet with",
+        "need",
+        "can lose",
+        "create"
+    ],
+    "gravity#earth": [
+        "pull moon to",
+        "be center of",
+        "be different on",
+        "affect",
+        "happen on",
+        "pull objects to",
+        "keep water on",
+        "keep on",
+        "stay on",
+        "be on"
+    ],
+    "sun#gravity": [
+        "has property",
+        "have"
+    ],
+    "gravity#sun": [
+        "pull earth into",
+        "pull into"
+    ],
+    "electrons#flower": [],
+    "flower#electrons": [],
+    "nucleus#flower": [],
+    "electrons#faraday": [],
+    "faraday#electrons": [],
+    "nucleus#faraday": [],
+    "faraday#nucleus": [],
+    "electricity#faraday": [],
+    "faraday#electricity": [],
+    "earth#newton": [],
+    "newton#earth": [],
+    "sun#newton": [],
+    "newton#sun": [],
+    "gravity#newton": [
+        "relate to"
+    ],
+    "newton#gravity": [
+        "be credited for"
+    ]
 }

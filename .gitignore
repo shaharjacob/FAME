@@ -1,5 +1,5 @@
 .bashrc
-test.py
+# test.py
 *.csv
 tsv/quasimodo.tsv
 .DS_Store

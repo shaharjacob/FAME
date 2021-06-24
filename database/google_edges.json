@@ -327,5 +327,55 @@
     "citizen#duties": [
         "have"
     ],
-    "duties#citizen": []
+    "duties#citizen": [],
+    "electrons#electricity": [
+        "move in static",
+        "have",
+        "conduct",
+        "move in",
+        "conduct",
+        "produce",
+        "create",
+        "carry",
+        "affect",
+        "create",
+        "conduct"
+    ],
+    "electricity#electrons": [
+        "work"
+    ],
+    "nucleus#electricity": [],
+    "electricity#nucleus": [],
+    "earth#gravity": [
+        "have",
+        "has",
+        "cause",
+        "have",
+        "have"
+    ],
+    "gravity#earth": [],
+    "sun#gravity": [
+        "have",
+        "have",
+        "have"
+    ],
+    "gravity#sun": [
+        "keep the planets orbiting the",
+        "not pull us into the"
+    ],
+    "electrons#flower": [],
+    "flower#electrons": [],
+    "nucleus#flower": [],
+    "electrons#faraday": [],
+    "faraday#electrons": [],
+    "nucleus#faraday": [],
+    "faraday#nucleus": [],
+    "electricity#faraday": [],
+    "faraday#electricity": [],
+    "earth#newton": [],
+    "newton#earth": [],
+    "sun#newton": [],
+    "newton#sun": [],
+    "gravity#newton": [],
+    "newton#gravity": []
 }

@@ -155,5 +155,34 @@
     "virus#antibiotic": [],
     "virus#antibodies": [],
     "citizen#duties": [],
-    "duties#citizen": []
+    "duties#citizen": [],
+    "electrons#electricity": [],
+    "electricity#electrons": [],
+    "nucleus#electricity": [],
+    "electricity#nucleus": [],
+    "earth#gravity": [
+        "big and has strong"
+    ],
+    "gravity#earth": [
+        "what keeps things on the"
+    ],
+    "sun#gravity": [
+        ""
+    ],
+    "gravity#sun": [],
+    "electrons#flower": [],
+    "flower#electrons": [],
+    "nucleus#flower": [],
+    "electrons#faraday": [],
+    "faraday#electrons": [],
+    "nucleus#faraday": [],
+    "faraday#nucleus": [],
+    "electricity#faraday": [],
+    "faraday#electricity": [],
+    "earth#newton": [],
+    "newton#earth": [],
+    "sun#newton": [],
+    "newton#sun": [],
+    "gravity#newton": [],
+    "newton#gravity": []
 }
