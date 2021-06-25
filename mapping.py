@@ -1,16 +1,3 @@
-# import json
-
-# import requests
-
-# # payload = {'query': 'why does earth'}
-# payload = {'variables': 'query'}
-# url = f"https://www.quora.com/graphql/gql_para_POST?q=SiteSearchBarQuery"
-# r = requests.post(url, json=json.dumps(payload))
-# print(r.text)
-# # suggestions = json.loads(r.text)[1]
-
-import os
-import random
 from itertools import combinations
 from typing import List, Dict, Tuple
 
@@ -19,10 +6,6 @@ import networkx as nx
 from networkx.algorithms import bipartite
 
 from sentence_embadding import SentenceEmbedding
-
-
-# DISTANCE_TRESHOLDS = [0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9]
-DISTANCE_TRESHOLDS = [0.8]
 
 
 def get_edges_weights(model: SentenceEmbedding, props_edge1: List[str], props_edge2: List[str]):
@@ -122,7 +105,7 @@ def update_list(already_mapping_list, entities):
     return already_mapping_list
 
 
-def get_best_pair_mapping(model, available_maps, base_already_mapping, target_already_mapping):
+def get_best_pair_mapping(model, available_maps):
     mappings = []
 
     # we will iterate over all the possible pairs mapping ((n choose 2)*(n choose 2)*2), 2->2, 3->18, 4->72
@@ -141,7 +124,8 @@ def get_best_pair_mapping(model, available_maps, base_already_mapping, target_al
 
             # we want the weight of each edge between two nodes.
             similatiry_edges = get_edges_weights(model, props_edge1, props_edge2)
-    
+
+            # we want the cluster similar properties
             clustered_sentences_1: Dict[int, List[str]] = model.clustering(direction[0], distance_threshold=0.8)
             clustered_sentences_2: Dict[int, List[str]] = model.clustering(direction[1], distance_threshold=0.8)
 
@@ -168,8 +152,8 @@ def get_best_pair_mapping(model, available_maps, base_already_mapping, target_al
             B = nx.Graph()
             B.add_nodes_from(list(range(len(clustered_sentences_1))), bipartite=0)
             B.add_nodes_from(list(range(len(clustered_sentences_1), len(clustered_sentences_1) + len(clustered_sentences_2))), bipartite=1)
+            
             all_edges = {}
-
             for i in range(len(clustered_sentences_1)):
                 for j in range(len(clustered_sentences_2)):
                     if (i, len(clustered_sentences_1) + j) not in cluster_edges_weights:
@@ -194,8 +178,6 @@ def get_best_pair_mapping(model, available_maps, base_already_mapping, target_al
     return {
         "best_mapping": mappings[0][0],
         "best_score": mappings[0][1],
-        "base_already_mapping": update_list(base_already_mapping, [mappings[0][0][0][0], mappings[0][0][0][1]]),
-        "target_already_mapping": update_list(target_already_mapping, [mappings[0][0][1][0], mappings[0][0][1][1]])
     }
 
 
@@ -203,13 +185,46 @@ def mapping(base, target):
     model = SentenceEmbedding(init_quasimodo=False, init_inflect=False)
     base_already_mapping = []
     target_already_mapping = []
-    
+
+    # we want all the possible pairs. For example, if base: a,b,c, target: 1,2,3:
+    #  a->1, b->2, (a:b, 1:2)
+    #  a->2, b->1, (a:b, 2:1)
+    #  a->2, b->3, (a:b, 2:3)
+    #  a->3, b->2, (a:b, 3:2)
+    #  a->1, b->3, (a:b, 1:3)
+    #  a->3, b->1, (a:b, 3:1)
+    #  b->1, c->2, (b:c, 1:2)
+    #  b->2, c->1, (b:c, 2:1)
+    #  b->2, c->3, (b:c, 2:3)
+    #  b->3, c->2, (b:c, 3:2)
+    #  b->1, c->3, (b:c, 1:3)
+    #  b->3, c->1, (b:c, 3:1)
+    #  a->1, c->2, (a:c, 1:2)
+    #  a->2, c->1, (a:c, 2:1)
+    #  a->2, c->3, (a:c, 2:3)
+    #  a->3, c->2, (a:c, 3:2)
+    #  a->1, c->3, (a:c, 1:3)
+    #  a->3, c->1, (a:c, 3:1)
+    # general there are (n choose 2) * (n choose 2) * 2 pairs.
     all_possible_pairs_map: List[List[List[Tuple[str, str]]]] = get_all_possible_pairs_map(base, target)
+
     while len(base_already_mapping) != len(base):
+        # here we update the possible/available pairs.
+        # for example, if we already map a->1, b->2, we will looking only for pairs which respect the 
+        # pairs that already maps. in our example it can be one of the following:
+        # (a->1, c->3) or (b->2, c->3).
         all_possible_pairs_map = update_paris_map(all_possible_pairs_map, base_already_mapping, target_already_mapping)
-        res = get_best_pair_mapping(model, all_possible_pairs_map, base_already_mapping, target_already_mapping)
-        base_already_mapping = res["base_already_mapping"]
-        target_already_mapping = res["target_already_mapping"]
+
+        # now we will get the pair with the best score.
+        res = get_best_pair_mapping(model, all_possible_pairs_map)
+
+        # if the best score is > 0, we will update the base and target lists of the already mapping entities.
+        # otherwise, if the best score is 0, we have no more maps.
+        if res["best_score"] > 0:
+            base_already_mapping = update_list(base_already_mapping, res["best_mapping"][0][0], res["best_mapping"][0][1])
+            target_already_mapping = update_list(target_already_mapping, res["best_mapping"][1][0], res["best_mapping"][1][1])
+        else:
+            break
 
     return [f"{b} --> {t}" for b, t in zip(base_already_mapping, target_already_mapping)]
 
@@ -219,8 +234,4 @@ if __name__ == "__main__":
     target = ["electrons", "nucleus", "electricity", "faraday"]
     res = mapping(base, target)
     print(res)
-
-    # res = get_all_possible_pairs_map(["earth", "sun", "gravity"], ["electrons", "nucleus", "electricity"])
-    # for entry in res:
-    #     print(entry)
 

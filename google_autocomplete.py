@@ -78,8 +78,10 @@ def verify_question(question: str, objects: List[str]):
     valid_questions = [
         'why do',
         'why does',
+        'why did',
         'how do',
         'how does',
+        'how did',
     ]
     if question not in valid_questions:
         secho(f"[ERROR] yaml file is not valid", fg="red", bold=True)
@@ -150,8 +152,10 @@ def get_edge_props(node1: str, node2: str) -> List[str]:
     d = {
         "why do": [[node1, node2]],
         "why does": [[node1, node2]],
+        "why did": [[node1, node2]],
         "how do": [[node1, node2]],
         "how does": [[node1, node2]],
+        "how did": [[node1, node2]],
     }
     return process(d, verbose=False)
 
