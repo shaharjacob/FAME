@@ -183,6 +183,7 @@ def get_best_pair_mapping(model, available_maps):
 
 def mapping(base, target):
     model = SentenceEmbedding(init_quasimodo=False, init_inflect=False)
+    relations = []
     base_already_mapping = []
     target_already_mapping = []
 
@@ -221,17 +222,23 @@ def mapping(base, target):
         # if the best score is > 0, we will update the base and target lists of the already mapping entities.
         # otherwise, if the best score is 0, we have no more maps.
         if res["best_score"] > 0:
-            base_already_mapping = update_list(base_already_mapping, res["best_mapping"][0][0], res["best_mapping"][0][1])
-            target_already_mapping = update_list(target_already_mapping, res["best_mapping"][1][0], res["best_mapping"][1][1])
+            base_already_mapping = update_list(base_already_mapping, (res["best_mapping"][0][0], res["best_mapping"][0][1]))
+            target_already_mapping = update_list(target_already_mapping, (res["best_mapping"][1][0], res["best_mapping"][1][1]))
+            relations.append(res["best_mapping"])
         else:
             break
-
-    return [f"{b} --> {t}" for b, t in zip(base_already_mapping, target_already_mapping)]
+    
+    return {
+        "mapping": [f"{b} --> {t}" for b, t in zip(base_already_mapping, target_already_mapping)],
+        "relations": relations,
+    }
 
 
 if __name__ == "__main__":
     base = ["earth", "sun", "gravity", "newton"]
     target = ["electrons", "nucleus", "electricity", "faraday"]
     res = mapping(base, target)
-    print(res)
+    print(res["mapping"])
+    for r in res["relations"]:
+        print(r)
 

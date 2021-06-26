@@ -358,7 +358,10 @@
         "be planet with",
         "need",
         "can lose",
-        "create"
+        "create",
+        "contain",
+        "get",
+        "keep in"
     ],
     "gravity#earth": [
         "pull moon to",
@@ -378,7 +381,11 @@
     ],
     "gravity#sun": [
         "pull earth into",
-        "pull into"
+        "pull into",
+        "be related to",
+        "keep earth around",
+        "be greater on",
+        "keep planets around"
     ],
     "electrons#flower": [],
     "flower#electrons": [],

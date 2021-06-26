@@ -195,28 +195,26 @@
         "have"
     ],
     "electrons#nucleus": [
-        "revolve around",
-        "orbit",
-        "fall into the",
-        "not collapse into",
         "spin around the",
-        "orbit far away from atomic",
+        "surround the",
+        "not collapse into",
+        "fall into the",
         "orbit",
+        "orbit far away from atomic",
         "revolve around the",
+        "revolve around",
+        "not fall in",
         "not fall into",
         "not jump into the",
-        "revolve around",
-        "never fall into",
-        "not fall in",
-        "move around",
-        "spin around the",
-        "stay around",
         "orbit the",
-        "move around",
+        "stay around",
+        "spin around the",
         "circle the",
+        "orbit the",
         "surround the",
-        "move around",
-        "revolve around"
+        "revolve around",
+        "orbit the",
+        "move around"
     ],
     "electrons#atom": [
         "move in",
@@ -232,18 +230,18 @@
     "atmosphere#sunscreen": [],
     "earth#sun": [
         "revolve around",
-        "rotate around",
-        "not fall into",
-        "revolve around",
         "circle the",
+        "move around the",
+        "not fall into",
         "orbit",
         "spin around the",
-        "move around the",
-        "circle the",
         "rotate around",
         "revolve around",
+        "move around",
+        "circle the",
+        "rotate around",
         "orbit",
-        "move around"
+        "revolve around"
     ],
     "earth#sunscreen": [],
     "earth#atmosphere": [],
@@ -252,9 +250,11 @@
     ],
     "sunscreen#atmosphere": [],
     "sun#earth": [
-        "orbit",
+        "orbit the",
+        "revolve around",
+        "create the",
         "rotate around",
-        "heat",
+        "orbit",
         "affect"
     ],
     "sunscreen#earth": [],
@@ -329,12 +329,12 @@
     ],
     "duties#citizen": [],
     "electrons#electricity": [
+        "move in",
         "move in static",
         "have",
         "conduct",
-        "move in",
-        "conduct",
         "produce",
+        "conduct",
         "create",
         "carry",
         "affect",
@@ -351,17 +351,26 @@
         "has",
         "cause",
         "have",
-        "have"
+        "have",
+        "get"
     ],
-    "gravity#earth": [],
+    "gravity#earth": [
+        "form the",
+        "affect",
+        "affect the formation of",
+        "from",
+        "come to"
+    ],
     "sun#gravity": [
         "have",
         "have",
         "have"
     ],
     "gravity#sun": [
+        "not pull us into the",
         "keep the planets orbiting the",
-        "not pull us into the"
+        "form the",
+        "help form the"
     ],
     "electrons#flower": [],
     "flower#electrons": [],
@@ -371,11 +380,24 @@
     "nucleus#faraday": [],
     "faraday#nucleus": [],
     "electricity#faraday": [],
-    "faraday#electricity": [],
+    "faraday#electricity": [
+        "discovered"
+    ],
     "earth#newton": [],
     "newton#earth": [],
     "sun#newton": [],
     "newton#sun": [],
     "gravity#newton": [],
-    "newton#gravity": []
+    "newton#gravity": [
+        "discover",
+        "call it",
+        "invent",
+        "describe",
+        "dicover",
+        "discovered",
+        "found",
+        "prove his ideas about",
+        "discover",
+        "invent"
+    ]
 }
