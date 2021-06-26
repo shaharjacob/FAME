@@ -57,7 +57,7 @@ const FullGraph = () => {
         setCurrB(base)
         setCurrT(target)
     
-        fetch('/full?' + params).then(response => {
+        fetch('/two-entities?' + params).then(response => {
           if(response.ok){
             return response.json()
           }

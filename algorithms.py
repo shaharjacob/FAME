@@ -1,16 +1,23 @@
-from typing import List, Dict, Tuple
+from typing import List, Dict, Tuple, Union
 
 import networkx as nx
+from click import secho
 from networkx.algorithms import bipartite
 
 from sentence_embadding import SentenceEmbedding
 
 
 def get_maximum_weighted_match(model: SentenceEmbedding, 
-                            props_edge1: List[str], 
-                            props_edge2: List[str], 
+                            props_edge1: Union[List[str], Dict[int, List[str]]],
+                            props_edge2: Union[List[str], Dict[int, List[str]]], 
                             weights: Dict[Tuple[int, int], Tuple[str, str, float]] = None
                             ) -> List[Tuple[str, str, float]]:
+    if isinstance(props_edge1, Dict) or isinstance(props_edge2, Dict):
+        # means that this is a clusters mode. So we need the weights that we already calculated
+        if not weights:
+            secho("[ERROR] in clusters mode, weights has two calculated before", fg="red", bold=True)
+            exit(1)
+
     B = nx.Graph()
     B.add_nodes_from(list(range(len(props_edge1))), bipartite=0)
     B.add_nodes_from(list(range(len(props_edge1), len(props_edge1) + len(props_edge2))), bipartite=1)

@@ -1,3 +1,5 @@
+from typing import Tuple
+
 COLORS_BRIGHT = [
     # https://www.w3schools.com/cssref/css_colors.asp
     "#7fffd4", # Aquamarine
@@ -9,6 +11,7 @@ COLORS_BRIGHT = [
     "#ffa500", # Orange
 ]
 
+
 COLORS_DARK = [
     "#0000ff", # Blue
     "#8a2be2", # BlueViolet
@@ -18,9 +21,19 @@ COLORS_DARK = [
     "#008000", # Green
 ]
 
+
 # DISTANCE_TRESHOLDS = [0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9]
 DISTANCE_TRESHOLDS = [0.8]
+
 
 def get_spaces(i, n):
     return " ".join([""]*n)
 
+
+def get_edges_combinations(edge1: Tuple[str, str], edge2: Tuple[str, str]):
+    return [
+        ((edge1[0], edge1[1]),(edge2[0], edge2[1])),
+        ((edge1[1], edge1[0]),(edge2[1], edge2[0])),
+        ((edge1[0], edge1[1]),(edge2[1], edge2[0])),
+        ((edge1[1], edge1[0]),(edge2[0], edge2[1]))
+    ]

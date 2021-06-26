@@ -21,7 +21,7 @@ const App = () => {
           <Route path='/cluster'>
             <Cluster />
           </Route>
-          <Route path='/full'>
+          <Route path='/two-entities'>
             <FullGraph />
           </Route>
         </Switch>
