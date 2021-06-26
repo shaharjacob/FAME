@@ -6,40 +6,7 @@ import networkx as nx
 from networkx.algorithms import bipartite
 
 from sentence_embadding import SentenceEmbedding
-
-
-def get_edges_weights(model: SentenceEmbedding, props_edge1: List[str], props_edge2: List[str]):
-    # get all edges in the graph (full graph)
-    return [(prop1, prop2, model.similarity(prop1, prop2)) for prop1 in props_edge1 for prop2 in props_edge2]
-
-
-def get_maximum_weighted_match(model: SentenceEmbedding, props_edge1: List[str], props_edge2: List[str], return_names: bool = False):
-    B = nx.Graph()
-    B.add_nodes_from(list(range(len(props_edge1))), bipartite=0)
-    B.add_nodes_from(list(range(len(props_edge1), len(props_edge1) + len(props_edge2))), bipartite=1)
-    all_edges = {}
-
-    for i, prop1 in enumerate(props_edge1):
-        for j, prop2 in enumerate(props_edge2):
-            similatiry = model.similarity(prop1, prop2)
-            B.add_edge(i, len(props_edge1) + j, weight=max(0, 1-similatiry))
-            all_edges[(i, len(props_edge1) + j)] = similatiry
-
-    best_matching = bipartite.matching.minimum_weight_full_matching(B, weight='weight')
-    similatiry_edges = []
-    already_seen = set()
-    for head, tail in best_matching.items():
-        if (head, tail) not in already_seen and (tail, head) not in already_seen:
-            similatiry_edges.append((head, tail, all_edges[(head, tail)]))
-            already_seen.add((head, tail))
-
-    if return_names:
-        return [(
-            props_edge1[edge[0]], 
-            props_edge2[edge[1] - len(props_edge1)], 
-            edge[2]) 
-            for edge in similatiry_edges]
-    return similatiry_edges
+from algorithms import get_maximum_weighted_match
 
 
 def get_all_possible_pairs_map(base: List[str], target: List[str]) -> List[List[List[Tuple[str, str]]]]:
@@ -60,7 +27,10 @@ def get_all_possible_pairs_map(base: List[str], target: List[str]) -> List[List[
     return all_mapping
 
 
-def update_paris_map(pairs_map, base_already_mapping, target_already_mapping):
+def update_paris_map(pairs_map: List[List[List[Tuple[str, str]]]], 
+                    base_already_mapping: List[str], 
+                    target_already_mapping: List[str]
+                    ) -> List[List[List[Tuple[str, str]]]]:
     new_pairs_map = []
     for mapping in pairs_map:
         one_direction = mapping[0]
@@ -97,7 +67,9 @@ def update_paris_map(pairs_map, base_already_mapping, target_already_mapping):
     return new_pairs_map
 
 
-def update_list(already_mapping_list, entities):
+def update_list(already_mapping_list: List[str], 
+                entities: Tuple[str, str]
+                ) -> List[str]:
     if entities[0] not in already_mapping_list:
         already_mapping_list.append(entities[0])
     if entities[1] not in already_mapping_list:
@@ -105,7 +77,34 @@ def update_list(already_mapping_list, entities):
     return already_mapping_list
 
 
-def get_best_pair_mapping(model, available_maps):
+def get_edges_with_maximum_weight(similatiry_edges: List[Tuple[str, str, float]], 
+                                clustered_sentences_1: Dict[int, List[str]], 
+                                clustered_sentences_2: Dict[int, List[str]]
+                                ) -> Dict[Tuple[int, int], Tuple[str, str, float]]:
+    cluster_edges_weights = {}
+    for edge in similatiry_edges:
+        cluster1, cluster2 = None, None
+        for key, cluster in clustered_sentences_1.items():
+            if edge[0] in cluster:
+                cluster1 = int(key)
+                break
+        for key, cluster in clustered_sentences_2.items():
+            if edge[1] in cluster:
+                cluster2 = int(key) + len(clustered_sentences_1)
+                break
+
+        if (cluster1, cluster2) not in cluster_edges_weights:
+            cluster_edges_weights[(cluster1, cluster2)] = edge
+        else:
+            if edge[2] > cluster_edges_weights[(cluster1, cluster2)][2]:
+                cluster_edges_weights[(cluster1, cluster2)] = edge
+
+    return cluster_edges_weights
+
+
+def get_best_pair_mapping(model: SentenceEmbedding, 
+                        available_maps: List[List[List[Tuple[str, str]]]]
+                        ) -> Dict:
     mappings = []
 
     # we will iterate over all the possible pairs mapping ((n choose 2)*(n choose 2)*2), 2->2, 3->18, 4->72
@@ -123,53 +122,20 @@ def get_best_pair_mapping(model, available_maps):
                 continue
 
             # we want the weight of each edge between two nodes.
-            similatiry_edges = get_edges_weights(model, props_edge1, props_edge2)
+            similatiry_edges = [(prop1, prop2, model.similarity(prop1, prop2)) for prop1 in props_edge1 for prop2 in props_edge2]
 
             # we want the cluster similar properties
             clustered_sentences_1: Dict[int, List[str]] = model.clustering(direction[0], distance_threshold=0.8)
             clustered_sentences_2: Dict[int, List[str]] = model.clustering(direction[1], distance_threshold=0.8)
 
             # for each two clusters (from the opposite side of the bipartite) we will take only one edge, which is the maximum weighted.
-            cluster_edges_weights = {}
-            for edge in similatiry_edges:
-                cluster1, cluster2 = None, None
-                for key, cluster in clustered_sentences_1.items():
-                    if edge[0] in cluster:
-                        cluster1 = int(key)
-                        break
-                for key, cluster in clustered_sentences_2.items():
-                    if edge[1] in cluster:
-                        cluster2 = int(key) + len(clustered_sentences_1)
-                        break
-
-                if (cluster1, cluster2) not in cluster_edges_weights:
-                    cluster_edges_weights[(cluster1, cluster2)] = edge
-                else:
-                    if edge[2] > cluster_edges_weights[(cluster1, cluster2)][2]:
-                        cluster_edges_weights[(cluster1, cluster2)] = edge
+            cluster_edges_weights = get_edges_with_maximum_weight(similatiry_edges, clustered_sentences_1, clustered_sentences_2)
                 
             # now we want to get the maximum weighted match, which hold the constraint that each cluster has no more than one edge.
-            B = nx.Graph()
-            B.add_nodes_from(list(range(len(clustered_sentences_1))), bipartite=0)
-            B.add_nodes_from(list(range(len(clustered_sentences_1), len(clustered_sentences_1) + len(clustered_sentences_2))), bipartite=1)
+            # we will look only on edges that appear in cluster_edges_weights
+            edges = get_maximum_weighted_match(model, clustered_sentences_1, clustered_sentences_2, cluster_edges_weights)
             
-            all_edges = {}
-            for i in range(len(clustered_sentences_1)):
-                for j in range(len(clustered_sentences_2)):
-                    if (i, len(clustered_sentences_1) + j) not in cluster_edges_weights:
-                        continue
-                    similatiry = cluster_edges_weights[(i, len(clustered_sentences_1) + j)][2]
-                    B.add_edge(i, len(clustered_sentences_1) + j, weight=max(0, 1-similatiry))
-                    all_edges[(i, len(clustered_sentences_1) + j)] = similatiry
-
-            best_matching = bipartite.matching.minimum_weight_full_matching(B, weight='weight')
-            edges = []
-            already_seen = set()
-            for head, tail in best_matching.items():
-                if (head, tail) not in already_seen and (tail, head) not in already_seen:
-                    edges.append((head, tail, all_edges[(head, tail)]))
-                    already_seen.add((head, tail))
-            
+            # score is just the sum of all the edges (edges between clusters)
             mapping_score += round(sum([edge[2] for edge in edges]), 3)
 
         mappings.append((mapping[0], mapping_score))

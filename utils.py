@@ -17,3 +17,10 @@ COLORS_DARK = [
     "#4b0082", # Indigo
     "#008000", # Green
 ]
+
+# DISTANCE_TRESHOLDS = [0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9]
+DISTANCE_TRESHOLDS = [0.8]
+
+def get_spaces(i, n):
+    return " ".join([""]*n)
+
