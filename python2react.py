@@ -44,7 +44,7 @@ def get_single_edge_for_app(edge: Tuple[str, str], label: str, value: float, cou
                 "label": {
                     "enabled": True,
                     "min": 6,
-                    "max": 10,
+                    "max": 8,
                 },
             },
             "font": {
@@ -74,7 +74,7 @@ def get_nodes_for_app(props: List[str], start_idx: int) -> List[Dict]:
         nodes.append({
             "id": i + start_idx, 
             "x": i * 250,
-            "y": 0,
+            "y": i,
             "label": node, 
             "font": "12px arial #343434"
         })

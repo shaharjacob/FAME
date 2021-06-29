@@ -20,6 +20,7 @@ def mapping_entities():
     nodes = python2react.get_nodes_for_app(props=res["mapping"], start_idx=0)
     nodes_val2index = {node:i for i, node in enumerate(res["mapping"])}
     edges = []
+    max_score_for_scaling = 0
 
     for relation in res["relations"]:
         for direction in range(2):
@@ -37,7 +38,12 @@ def mapping_entities():
             for i, cluster_edge in enumerate(graph["graph"]):
                 props = utils.get_ordered_edges_similarity(model, graph["clusters1"][cluster_edge[0]], graph["clusters2"][cluster_edge[1] - len(graph["clusters1"])])
                 label.append(f"{relation[0][0]} {props[0][0]} {relation[0][1]} :: {relation[1][0]} {props[0][1]} {relation[1][1]} :: {cluster_edge[2]}")
-            edges.extend(python2react.get_single_edge_for_app(edge, "\n".join(label), graph["score"], i))
+            edges.extend(python2react.get_single_edge_for_app(edge, "\n".join(sorted(label, key=lambda x: x.split('::')[2], reverse=True)), graph["score"], i))
+            max_score_for_scaling = max(max_score_for_scaling, graph["score"])
+    
+    # for scaling
+    for edge in edges:
+        edge["scaling"]["max"] = max_score_for_scaling
 
     return jsonify({
         "graph": {
