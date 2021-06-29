@@ -11,6 +11,41 @@ from sentence_embadding import SentenceEmbedding
 
 app = Flask(__name__)
 
+@app.route("/mapping", methods=["GET", "POST"])
+def mapping_entities():
+    model = SentenceEmbedding(init_quasimodo=False, init_inflect=False)
+    base = request.args.get('base').split(',')
+    target = request.args.get('target').split(',')
+    res = mapping.mapping(base, target)
+    nodes = python2react.get_nodes_for_app(props=res["mapping"], start_idx=0)
+    nodes_val2index = {node:i for i, node in enumerate(res["mapping"])}
+    edges = []
+
+    for relation in res["relations"]:
+        for direction in range(2):
+            node1 = f"{relation[0][0]} --> {relation[1][0]}"
+            node2 = f"{relation[0][1]} --> {relation[1][1]}"
+            edge = (nodes_val2index[node1], nodes_val2index[node2])
+            if direction == 1:
+                edge = (edge[1], edge[0])
+                relation = [(relation[0][1], relation[0][0]), (relation[1][1], relation[1][0])]
+
+            graph = mapping.get_pair_mapping(model, relation)
+            if not graph:
+                continue
+            label = []
+            for i, cluster_edge in enumerate(graph["graph"]):
+                props = utils.get_ordered_edges_similarity(model, graph["clusters1"][cluster_edge[0]], graph["clusters2"][cluster_edge[1] - len(graph["clusters1"])])
+                label.append(f"{relation[0][0]} {props[0][0]} {relation[0][1]} :: {relation[1][0]} {props[0][1]} {relation[1][1]} :: {cluster_edge[2]}")
+            edges.extend(python2react.get_single_edge_for_app(edge, "\n".join(label), graph["score"], i))
+
+    return jsonify({
+        "graph": {
+                "nodes": nodes,
+                "edges": edges,
+            },
+    })
+
 
 @app.route("/two-entities", methods=["GET", "POST"])
 def two_entities():
@@ -43,10 +78,10 @@ def two_entities():
 
             # we want to group each cluster to one node
             nodes1 = ["\n".join(cluster) for _, cluster in clustered_sentences_1.items()]
-            nodes1_for_app = python2react.get_nodes_for_app(props=nodes1, start_idx=0, x=200, group=0, promote_group=1)
+            nodes1_for_app = python2react.get_nodes_for_app_bipartite(props=nodes1, start_idx=0, x=200, group=0, promote_group=1)
             
             nodes2 = ["\n".join(cluster) for _, cluster in clustered_sentences_2.items()]
-            nodes2_for_app = python2react.get_nodes_for_app(props=nodes2, start_idx=len(clustered_sentences_1), x=800, group=len(clustered_sentences_1), promote_group=1)
+            nodes2_for_app = python2react.get_nodes_for_app_bipartite(props=nodes2, start_idx=len(clustered_sentences_1), x=800, group=len(clustered_sentences_1), promote_group=1)
 
             # for each two clusters (from the opposite side of the bipartite) we will take only one edge, which is the maximum weighted.
             cluster_edges_weights = mapping.get_edges_with_maximum_weight(similatiry_edges, clustered_sentences_1, clustered_sentences_2)
@@ -77,8 +112,8 @@ def bipartite_graph():
     props_edge1 = model.get_edge_props(edge1[0], edge1[1])
     props_edge2 = model.get_edge_props(edge2[0], edge2[1])
 
-    props1 = python2react.get_nodes_for_app(props=props_edge1, start_idx=0, x=200, group=0)
-    props2 = python2react.get_nodes_for_app(props=props_edge2, start_idx=len(props1), x=800, group=1)
+    props1 = python2react.get_nodes_for_app_bipartite(props=props_edge1, start_idx=0, x=200, group=0)
+    props2 = python2react.get_nodes_for_app_bipartite(props=props_edge2, start_idx=len(props1), x=800, group=1)
     
     similatiry_edges = algorithms.get_maximum_weighted_match(model, props_edge1, props_edge2)
 

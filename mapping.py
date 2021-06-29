@@ -102,6 +102,36 @@ def get_edges_with_maximum_weight(similatiry_edges: List[Tuple[str, str, float]]
     return cluster_edges_weights
 
 
+def get_pair_mapping(model: SentenceEmbedding, 
+                    mapping: List[Tuple[str, str]]):
+
+    props_edge1 = model.get_edge_props(mapping[0][0], mapping[0][1])
+    props_edge2 = model.get_edge_props(mapping[1][0], mapping[1][1])
+
+    if not props_edge1 or not props_edge2:
+        return {}
+
+    # we want the weight of each edge between two nodes.
+    similatiry_edges = [(prop1, prop2, model.similarity(prop1, prop2)) for prop1 in props_edge1 for prop2 in props_edge2]
+
+    # we want the cluster similar properties
+    clustered_sentences_1: Dict[int, List[str]] = model.clustering(mapping[0], distance_threshold=0.8)
+    clustered_sentences_2: Dict[int, List[str]] = model.clustering(mapping[1], distance_threshold=0.8)
+
+    # for each two clusters (from the opposite side of the bipartite) we will take only one edge, which is the maximum weighted.
+    cluster_edges_weights = get_edges_with_maximum_weight(similatiry_edges, clustered_sentences_1, clustered_sentences_2)
+        
+    # now we want to get the maximum weighted match, which hold the constraint that each cluster has no more than one edge.
+    # we will look only on edges that appear in cluster_edges_weights
+    edges = get_maximum_weighted_match(model, clustered_sentences_1, clustered_sentences_2, cluster_edges_weights)
+    return {
+        "graph": edges,
+        "clusters1": clustered_sentences_1,
+        "clusters2": clustered_sentences_2,
+        "score": round(sum([edge[2] for edge in edges]), 3)
+    }
+
+
 def get_best_pair_mapping(model: SentenceEmbedding, 
                         available_maps: List[List[List[Tuple[str, str]]]]
                         ) -> Dict:
@@ -208,3 +238,4 @@ if __name__ == "__main__":
     for r in res["relations"]:
         print(r)
 
+# http://localhost:3000/mapping?base=earth,sun,gravity,newton&target=electrons,nucleus,electricity,faraday

@@ -1,4 +1,6 @@
-from typing import Tuple
+from typing import Tuple, List
+
+from sentence_embadding import SentenceEmbedding
 
 COLORS_BRIGHT = [
     # https://www.w3schools.com/cssref/css_colors.asp
@@ -37,3 +39,11 @@ def get_edges_combinations(edge1: Tuple[str, str], edge2: Tuple[str, str]):
         ((edge1[0], edge1[1]),(edge2[1], edge2[0])),
         ((edge1[1], edge1[0]),(edge2[0], edge2[1]))
     ]
+
+
+def get_ordered_edges_similarity(model: SentenceEmbedding, cluster1: List[str], cluster2: List[str]):
+    edges = []
+    for edge1 in cluster1:
+        for edge2 in cluster2:
+            edges.append((edge1, edge2, model.similarity(edge1, edge2)))
+    return sorted(edges, key=lambda x: x[2], reverse=True)

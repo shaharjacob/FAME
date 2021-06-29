@@ -12,7 +12,7 @@ import Descriptor from './Descriptor'
 import { IsEmpty } from '../../utils'
 
 
-const FullGraph = () => {
+const TwoEntities = () => {
 
     let location = useLocation()
 
@@ -210,4 +210,4 @@ const FullGraph = () => {
     );
 }
 
-export default FullGraph;
+export default TwoEntities;
