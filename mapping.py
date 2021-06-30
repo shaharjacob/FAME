@@ -239,3 +239,4 @@ if __name__ == "__main__":
         print(r)
 
 # http://localhost:3000/mapping?base=earth,sun,gravity,newton&target=electrons,nucleus,electricity,faraday
+# http://localhost:3000/mapping?base=earth,sun,gravity,newton,tree&target=electrons,nucleus,electricity,faraday,battery

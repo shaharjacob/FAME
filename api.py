@@ -157,4 +157,4 @@ def clustring():
 
 if __name__ == "__main__":
     os.environ['FLASK_ENV'] = 'development'
-    app.run('localhost', port=5000, debug=True)
+    app.run('localhost', port=5000, debug=False)
