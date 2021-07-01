@@ -81,6 +81,7 @@ def get_edges_with_maximum_weight(similatiry_edges: List[Tuple[str, str, float]]
                                 clustered_sentences_1: Dict[int, List[str]], 
                                 clustered_sentences_2: Dict[int, List[str]]
                                 ) -> Dict[Tuple[int, int], Tuple[str, str, float]]:
+    # the idea here is for each two clusters (from the base and target) to take only one edge, which is the maximum weighted.
     cluster_edges_weights = {}
     for edge in similatiry_edges:
         cluster1, cluster2 = None, None
