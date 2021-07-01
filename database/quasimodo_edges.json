@@ -471,5 +471,54 @@
         "use"
     ],
     "faraday#battery": [],
-    "battery#faraday": []
+    "battery#faraday": [],
+    "electricity#atom": [],
+    "atom#electricity": [
+        "relate to",
+        "produce"
+    ],
+    "faraday#atom": [],
+    "atom#faraday": [],
+    "earth#universe": [
+        "be center of",
+        "be planet in"
+    ],
+    "universe#earth": [],
+    "sun#universe": [
+        "be center of"
+    ],
+    "universe#sun": [],
+    "gravity#universe": [
+        "influence"
+    ],
+    "universe#gravity": [
+        "have"
+    ],
+    "newton#universe": [],
+    "universe#newton": [],
+    "electricity#cell": [],
+    "cell#electricity": [
+        "produce"
+    ],
+    "electrons#cell": [],
+    "cell#electrons": [
+        "run out of"
+    ],
+    "nucleus#cell": [
+        "be in",
+        "do in",
+        "has property",
+        "be control of",
+        "be important in",
+        "be most important organelle in",
+        "be absent in",
+        "be largest organelle in",
+        "help",
+        "be important part of"
+    ],
+    "cell#nucleus": [
+        "have",
+        "need",
+        "keep dna in"
+    ]
 }

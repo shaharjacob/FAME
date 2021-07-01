@@ -487,5 +487,90 @@
         "produce"
     ],
     "faraday#battery": [],
-    "battery#faraday": []
+    "battery#faraday": [],
+    "electricity#atom": [
+        "flow",
+        "produce",
+        "flow through"
+    ],
+    "atom#electricity": [
+        "produce",
+        "create",
+        "make",
+        "generate",
+        "work in",
+        "conduct",
+        "produce",
+        "contribute to",
+        "conduct",
+        "relate to"
+    ],
+    "faraday#atom": [],
+    "atom#faraday": [],
+    "earth#universe": [
+        "fit in the",
+        "fit into the",
+        "move through the",
+        "from"
+    ],
+    "universe#earth": [],
+    "sun#universe": [
+        "orbit the",
+        "move through the"
+    ],
+    "universe#sun": [],
+    "gravity#universe": [
+        "hold the",
+        "affect our",
+        "work in the",
+        "the",
+        "affect the expansion of the",
+        "affect",
+        "influence the",
+        "shape the",
+        "form the"
+    ],
+    "universe#gravity": [
+        "have",
+        "have"
+    ],
+    "newton#universe": [
+        "describe the",
+        "view the"
+    ],
+    "universe#newton": [],
+    "electricity#cell": [],
+    "cell#electricity": [
+        "produce",
+        "generate",
+        "produce",
+        "create",
+        "produce",
+        "make",
+        "conduct"
+    ],
+    "electrons#cell": [
+        "flow in a galvanic",
+        "flow in a voltaic",
+        "flow in a concentration",
+        "move in an electrolytic",
+        "flow in an electrolytic",
+        "flow in a galvanic"
+    ],
+    "cell#electrons": [
+        "use"
+    ],
+    "nucleus#cell": [
+        "command",
+        "help",
+        "control the"
+    ],
+    "cell#nucleus": [
+        "lack",
+        "needs",
+        "need a",
+        "lose",
+        "contain",
+        "have a"
+    ]
 }

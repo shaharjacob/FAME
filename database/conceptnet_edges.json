@@ -215,5 +215,25 @@
         "powering something that uses"
     ],
     "faraday#battery": [],
-    "battery#faraday": []
+    "battery#faraday": [],
+    "electricity#atom": [],
+    "atom#electricity": [],
+    "faraday#atom": [],
+    "atom#faraday": [],
+    "earth#universe": [
+        "a small part of the"
+    ],
+    "universe#earth": [],
+    "sun#universe": [],
+    "universe#sun": [],
+    "gravity#universe": [],
+    "universe#gravity": [],
+    "newton#universe": [],
+    "universe#newton": [],
+    "electricity#cell": [],
+    "cell#electricity": [],
+    "electrons#cell": [],
+    "cell#electrons": [],
+    "nucleus#cell": [],
+    "cell#nucleus": []
 }
