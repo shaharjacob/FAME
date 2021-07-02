@@ -206,7 +206,7 @@ def mapping(base, target):
     # general there are (n choose 2) * (n choose 2) * 2 pairs.
     all_possible_pairs_map: List[List[List[Tuple[str, str]]]] = get_all_possible_pairs_map(base, target)
 
-    while len(base_already_mapping) != len(base):
+    while len(base_already_mapping) < min(len(base), len(target)):
         # here we update the possible/available pairs.
         # for example, if we already map a->1, b->2, we will looking only for pairs which respect the 
         # pairs that already maps. in our example it can be one of the following:
@@ -225,6 +225,37 @@ def mapping(base, target):
         else:
             break
     
+    #############
+    base_not_mapped = [b for b in base if b not in base_already_mapping]
+    props = []
+    for missing_base_entity in base_not_mapped:
+        for base_entity in base_already_mapping:
+            props_entity_1 = model.get_edge_props(base_entity, missing_base_entity)
+            props_entity_2 = model.get_edge_props(missing_base_entity, base_entity)
+            props.append(props_entity_1 + props_entity_2)
+
+    import re
+    import json
+    import requests
+    sugges = {}
+    for target_entity in target_already_mapping:
+        sugges[target_entity] = {}
+        for i, pair_props in enumerate(props):
+            sugges[target_entity][i] = []
+            for prop in pair_props:
+                for question in ["why does", "why do", "why did", "how does", "how do", "how did"]:
+                    keyword = f"{question} {target_entity} {prop} .*".replace(" ", "+")
+                    url = f"http://suggestqueries.google.com/complete/search?client=chrome&q={keyword}&hl=us"
+                    response = requests.get(url)
+                    suggestions = json.loads(response.text)[1]
+                    for suggestion in suggestions:
+                        match = re.match(f'^{question}( a)?( an)?( the)? {target_entity} {prop} .*', suggestion)
+                        if match:
+                            sugges[target_entity][i].append(suggestion)
+    print(sugges)
+    # target_not_mapped = [t for t in target if t not in target_already_mapping]
+    ############
+    
     return {
         "mapping": [f"{b} --> {t}" for b, t in zip(base_already_mapping, target_already_mapping)],
         "relations": relations,
@@ -232,8 +263,8 @@ def mapping(base, target):
 
 
 if __name__ == "__main__":
-    base = ["earth", "sun", "gravity", "newton"]
-    target = ["electrons", "nucleus", "electricity", "faraday"]
+    base = ["earth", "sun", "gravity", "newton", "universe"]
+    target = ["electrons", "nucleus", "electricity", 'cell']
     res = mapping(base, target)
     print(res["mapping"])
     for r in res["relations"]:

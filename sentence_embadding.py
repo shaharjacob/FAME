@@ -155,11 +155,11 @@ class SentenceEmbedding(SentenceTransformer):
     
     def save_database_(self):
         with open('database/quasimodo_edges.json', 'w') as f1:
-            json.dump(self.quasimodo_edges, f1)
+            json.dump(self.quasimodo_edges, f1, indent='\t')
         with open('database/google_edges.json', 'w') as f2:
-            json.dump(self.google_edges, f2)
+            json.dump(self.google_edges, f2, indent='\t')
         with open('database/conceptnet_edges.json', 'w') as f3:
-            json.dump(self.conceptnet_edges, f3)
+            json.dump(self.conceptnet_edges, f3, indent='\t')
 
     @staticmethod
     def print_sentence(sentence: tuple, show_nouns: bool = True):

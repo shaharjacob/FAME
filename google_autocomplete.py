@@ -17,7 +17,7 @@ class GoogleAutocomplete(object):
                 node1: str, 
                 node2: str, 
                 browser: str = 'chrome',
-                pattern: str = '%s %s "*" %s', 
+                pattern: str = '%s %s .* %s', 
                 regex: str = '^%s( a)?( an)?( the)? %s (.*) %s$'):
         self.question = question
         self.node1 = node1
