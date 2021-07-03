@@ -11,7 +11,43 @@ from tqdm import tqdm
 from click import secho
 
 
-class GoogleAutocomplete(object):
+class GoogleAutoSuggestOneEntity(object):
+    def __init__(self,
+                entity: str,
+                prop: str,
+                browser: str = 'chrome',
+                pattern1: str = '%s %s %s .*',
+                pattern2: str = '%s .* %s %s',
+                regex1: str = '%s %s %s (.*)',
+                regex2: str = '%s (.*) %s %s',
+                questions: List[str] = ["why does", "why do", "why did", "how does", "how do", "how did"],):
+        self.entity = entity
+        self.prop = prop
+        self.browser = browser
+        self.keywords = [pattern1 % (question, entity, prop), pattern2 % (question, prop, entity)]
+        self.regexs = [regex1 % (question, prop, entity), regex2 % (question, prop, entity)] 
+        self.suggestinos = self.init_suggestions()
+
+    def init_suggestions(self) -> List[Tuple[str]]:
+        sugges: List[Tuple[str]] = []
+        for keyword_, regex_ in zip(self.keywords, self.regexs):
+            keyword = keyword_.replace(" ", "+")
+            url = f"http://suggestqueries.google.com/complete/search?client={self.browser}&q={keyword}&hl=us"
+            response = requests.get(url)
+            suggestions = json.loads(response.text)[1]
+            for suggestion in suggestions:
+                print(f"suggestion: {suggestion}")
+                print(f"keyword_: {keyword_}")
+                print(f"regex_: {regex_}")
+                print()
+                match = re.match(regex_, suggestion)
+                if match:
+                    sugges.append((suggestion, match.group(1)))
+        return list(set(sugges))
+
+
+
+class GoogleAutoSuggestTwoEntities(object):
     def __init__(self, 
                 question: str, 
                 node1: str, 
@@ -111,7 +147,7 @@ def extend_to_plural_and_singular(engine: inflect.engine, entry: List[str], ques
     singular = engine.singular_noun(entry[0])
 
     if plural:
-        googleAC = GoogleAutocomplete(question, plural, entry[1])
+        googleAC = GoogleAutoSuggestTwoEntities(question, plural, entry[1])
         for suggestion in googleAC.suggestions:
             if suggestion[0] not in suggestions["suggestions"]:
                 if verbose:
@@ -119,7 +155,7 @@ def extend_to_plural_and_singular(engine: inflect.engine, entry: List[str], ques
                 suggestions["suggestions"].append(suggestion[0])
                 suggestions["props"].append(suggestion[1])
     if singular:
-        googleAC = GoogleAutocomplete(question, singular, entry[1])
+        googleAC = GoogleAutoSuggestTwoEntities(question, singular, entry[1])
         for suggestion in googleAC.suggestions:
             if suggestion[0] not in suggestions["suggestions"]:
                 if verbose:
@@ -131,7 +167,7 @@ def extend_to_plural_and_singular(engine: inflect.engine, entry: List[str], ques
     singular = engine.singular_noun(entry[1])
 
     if plural:
-        googleAC = GoogleAutocomplete(question, entry[0], plural)
+        googleAC = GoogleAutoSuggestTwoEntities(question, entry[0], plural)
         for suggestion in googleAC.suggestions:
             if suggestion[0] not in suggestions["suggestions"]:
                 if verbose:
@@ -139,7 +175,7 @@ def extend_to_plural_and_singular(engine: inflect.engine, entry: List[str], ques
                 suggestions["suggestions"].append(suggestion[0])
                 suggestions["props"].append(suggestion[1])
     if singular:
-        googleAC = GoogleAutocomplete(question, entry[0], singular)
+        googleAC = GoogleAutoSuggestTwoEntities(question, entry[0], singular)
         for suggestion in googleAC.suggestions:
             if suggestion[0] not in suggestions["suggestions"]:
                 if verbose:
@@ -174,7 +210,7 @@ def process(d: Dict[str, List[List[str]]], plural_and_singular: bool = True, ver
                     "suggestions": [],
                     "props": [],
                 }
-            googleAC = GoogleAutocomplete(question, entry[0], entry[1])
+            googleAC = GoogleAutoSuggestTwoEntities(question, entry[0], entry[1])
             for suggestion in googleAC.suggestions:
                 if suggestion[0] not in suggestions[(entry[0], entry[1])]["suggestions"]:
                     if verbose:
@@ -195,4 +231,6 @@ def main(config_file):
 
 
 if __name__ == '__main__':
-    main()
+    # main()
+    model = GoogleAutoSuggestOneEntity("electricity", "discovered")
+    print(model.suggestinos)

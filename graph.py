@@ -11,7 +11,7 @@ from graphviz import Digraph
 
 import test
 import concept_net
-import google_autocomplete
+import google_autosuggest
 from wikifier import Wikifier
 from quasimodo import Quasimodo
 
@@ -242,7 +242,7 @@ def run(text: str, quasimodo: Quasimodo, addition_nouns = []):
         if f"{comb[0]}#{comb[1]}" in graph.google_edges:
             autocomplete_props = graph.google_edges[f"{comb[0]}#{comb[1]}"]
         else:
-            autocomplete_props = google_autocomplete.get_edge_props(comb[0], comb[1]).get((comb[0], comb[1]), {"suggestions": [], "props": []}).get("props", [])
+            autocomplete_props = google_autosuggest.get_edge_props(comb[0], comb[1]).get((comb[0], comb[1]), {"suggestions": [], "props": []}).get("props", [])
             graph.google_edges[f"{comb[0]}#{comb[1]}"] = autocomplete_props  
 
         if autocomplete_props:

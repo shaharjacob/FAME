@@ -8,7 +8,7 @@ The main use is for synonyms. There are two classes that getting synonyms, *Word
 &nbsp;  
 
 The best results are calculate with distance function based on word-vector, using gensim package (https://radimrehurek.com/gensim).  
-Because of the use of this package, script that using this file (including google_autocomplete.py) have a long pre-loaing time (aroung 10-20 seconds).
+Because of the use of this package, script that using this file (including google_autosuggest.py) have a long pre-loaing time (aroung 10-20 seconds).
 &nbsp;
 
 **notice**: words such as "Equus caballus" or "stalking-horse" that are not contains inside the gensim corups will be ignored.  

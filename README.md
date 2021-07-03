@@ -17,7 +17,7 @@ Our main goal is to understand analogy, for example:
 # Table of content
 - **graph.py**: Creating a graph which represent the nouns in the sentence.  
 - **sentence_embadding.py**: Using sentence embadding to understand analogies.  
-- **google_autocomplete.py**: Extracting information from google auto-complete.  
+- **google_autosuggest.py**: Extracting information from google auto-complete.  
 - **quasimodo.py**: Using quasimodo database for extracting information about connections between objects.  
 - **wikifier.py**: Extracting information about the part-of-speech of the given text.  
 &nbsp;  
@@ -109,7 +109,7 @@ For example:
 &nbsp;  
 
 
-## google_autocomplete.py
+## google_autosuggest.py
 This script using the API of google auto-complete the extract information.  
 We are using question, subject and object which make the results more detailed.
 By default the forms is: **{question} {subject} "*" {object}**  
@@ -120,7 +120,7 @@ For example, **horses** will convert into **horse** (in addition) and **stables*
  
 ```bash
 # using default example.yaml file without saving the results into a file
-python google_autocomplete.py
+python google_autosuggest.py
 
 # define a yaml file:
 why do:
@@ -131,7 +131,7 @@ how do:
 
 
 # You can use it outside the script by define a dictionary:
-from google_autocomplete import process
+from google_autosuggest import process
 
 d = {
   "why do": [

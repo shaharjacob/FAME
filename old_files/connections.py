@@ -7,7 +7,7 @@ from pathlib import Path
 
 import concept_net
 import quasimodo as qs
-import google_autocomplete
+import google_autosuggest
 from quasimodo import Quasimodo
 
 

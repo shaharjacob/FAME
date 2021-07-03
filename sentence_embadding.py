@@ -11,7 +11,7 @@ from sentence_transformers import SentenceTransformer, util
 
 import testset
 import concept_net
-import google_autocomplete
+import google_autosuggest
 from wikifier import Wikifier
 from quasimodo import Quasimodo
 
@@ -90,7 +90,7 @@ class SentenceEmbedding(SentenceTransformer):
         if f"{head}#{tail}" in self.google_edges and not self.override_database:
             autocomplete_props = self.google_edges[f"{head}#{tail}"]
         else:
-            autocomplete_props = google_autocomplete.get_edge_props(head, tail).get((head, tail), {"suggestions": [], "props": []}).get("props", [])
+            autocomplete_props = google_autosuggest.get_edge_props(head, tail).get((head, tail), {"suggestions": [], "props": []}).get("props", [])
             self.google_edges[f"{head}#{tail}"] = autocomplete_props  
             should_save = True
 
