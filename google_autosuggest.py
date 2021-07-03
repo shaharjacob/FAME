@@ -110,38 +110,6 @@ class GoogleAutoSuggestTwoEntities(object):
             self.render_single_suggestion(suggestion)
 
 
-def verify_question(question: str, objects: List[str]):
-    valid_questions = [
-        'why do',
-        'why does',
-        'why did',
-        'how do',
-        'how does',
-        'how did',
-    ]
-    if question not in valid_questions:
-        secho(f"[ERROR] yaml file is not valid", fg="red", bold=True)
-        secho(f"        The question {question} should be one of the following: {valid_questions}", fg="red")
-        exit(1)
-    if len(objects) != 2:
-        secho(f"[ERROR] yaml file is not valid", fg="red", bold=True)
-        secho(f"        Two objects (str) should be defined in every entry", fg="red")
-        exit(1)
-
-
-def read_yaml(path: Path) -> Dict[str, List[List[str]]]:
-    if not path.exists():
-        secho(f"[ERROR] file {path} is not exists!", fg="red", bold=True)
-        exit(1)
-    with open(path, 'r') as f:
-        try:
-            return yaml.safe_load(f)
-        except yaml.YAMLError as exc:
-            secho(f"[ERROR] while loading yaml file {path}", fg="red", bold=True)
-            secho(f"        {exc}", fg="red")
-            exit(1)
-
-
 def extend_to_plural_and_singular(engine: inflect.engine, entry: List[str], question: str, suggestions: List[Tuple[str]], verbose: bool = True):
     plural = engine.plural(entry[0])
     singular = engine.singular_noun(entry[0])
@@ -204,7 +172,6 @@ def process(d: Dict[str, List[List[str]]], plural_and_singular: bool = True, ver
             secho(f"\n[INFO] collect information on question '{question}'", fg="blue")
         iterator = tqdm(objects) if verbose else objects
         for entry in iterator:
-            verify_question(question, entry)
             if (entry[0], entry[1]) not in suggestions:
                 suggestions[(entry[0], entry[1])] = {
                     "suggestions": [],
@@ -221,13 +188,6 @@ def process(d: Dict[str, List[List[str]]], plural_and_singular: bool = True, ver
                 extend_to_plural_and_singular(engine, entry, question, suggestions[(entry[0], entry[1])], verbose=verbose)
 
     return suggestions
-
-
-@click.command()
-@click.option('-f', 'config_file', default="example.yaml", help="configuration file")
-def main(config_file):
-    d = read_yaml(Path(config_file))
-    suggestions = process(d)
 
 
 if __name__ == '__main__':
