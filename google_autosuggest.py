@@ -13,14 +13,14 @@ from click import secho
 
 class GoogleAutoSuggestOneEntity(object):
     def __init__(self,
+                question: str,
                 entity: str,
                 prop: str,
                 browser: str = 'chrome',
                 pattern1: str = '%s %s %s .*',
                 pattern2: str = '%s .* %s %s',
                 regex1: str = '%s %s %s (.*)',
-                regex2: str = '%s (.*) %s %s',
-                questions: List[str] = ["why does", "why do", "why did", "how does", "how do", "how did"],):
+                regex2: str = '%s (.*) %s %s'):
         self.entity = entity
         self.prop = prop
         self.browser = browser
@@ -36,15 +36,10 @@ class GoogleAutoSuggestOneEntity(object):
             response = requests.get(url)
             suggestions = json.loads(response.text)[1]
             for suggestion in suggestions:
-                print(f"suggestion: {suggestion}")
-                print(f"keyword_: {keyword_}")
-                print(f"regex_: {regex_}")
-                print()
                 match = re.match(regex_, suggestion)
                 if match:
-                    sugges.append((suggestion, match.group(1)))
+                    sugges.append(match.group(1))
         return list(set(sugges))
-
 
 
 class GoogleAutoSuggestTwoEntities(object):
@@ -152,6 +147,14 @@ def extend_to_plural_and_singular(engine: inflect.engine, entry: List[str], ques
                 suggestions["props"].append(suggestion[1])
 
 
+def get_entity_suggestions(entity: str, prop: str):
+    suggestions = []
+    for question in ["why does", "why do", "why did", "how does", "how do", "how did"]:
+        model = GoogleAutoSuggestOneEntity(question, entity, prop)
+        suggestions.extend(model.suggestinos)
+    return list(set(suggestions))
+
+
 def get_edge_props(node1: str, node2: str) -> List[str]:
     d = {
         "why do": [[node1, node2]],
@@ -191,6 +194,6 @@ def process(d: Dict[str, List[List[str]]], plural_and_singular: bool = True, ver
 
 
 if __name__ == '__main__':
-    # main()
-    model = GoogleAutoSuggestOneEntity("electricity", "discovered")
-    print(model.suggestinos)
+    for q in ["why does", "why do", "why did", "how does", "how do", "how did"]:
+        model = GoogleAutoSuggestOneEntity(q, "electricity", "discovered")
+        print(model.suggestinos)

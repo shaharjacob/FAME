@@ -1,3 +1,4 @@
+import json
 from typing import Tuple, List
 
 from sentence_embadding import SentenceEmbedding
@@ -47,3 +48,8 @@ def get_ordered_edges_similarity(model: SentenceEmbedding, cluster1: List[str], 
         for edge2 in cluster2:
             edges.append((edge1, edge2, model.similarity(edge1, edge2)))
     return sorted(edges, key=lambda x: x[2], reverse=True)
+
+
+def read_json(path: str) -> dict:
+    with open(path, 'r') as f:
+        return json.load(f)

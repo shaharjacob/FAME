@@ -2,11 +2,11 @@ from itertools import combinations
 from typing import List, Dict, Tuple
 
 from tqdm import tqdm
-import networkx as nx
-from networkx.algorithms import bipartite
 
+import suggest_entities
 from sentence_embadding import SentenceEmbedding
 from algorithms import get_maximum_weighted_match
+from google_autosuggest import get_entity_suggestions
 
 
 def get_all_possible_pairs_map(base: List[str], target: List[str]) -> List[List[List[Tuple[str, str]]]]:
@@ -224,6 +224,8 @@ def mapping(base, target):
             relations.append(res["best_mapping"])
         else:
             break
+
+    suggest_entities.get_suggestions_for_missing_base_entities(model, base, base_already_mapping, target_already_mapping, verbose=True)
     
     return {
         "mapping": [f"{b} --> {t}" for b, t in zip(base_already_mapping, target_already_mapping)],

@@ -9,6 +9,7 @@ from click import secho
 from sklearn.cluster import AgglomerativeClustering
 from sentence_transformers import SentenceTransformer, util
 
+import utils
 import testset
 import concept_net
 import google_autosuggest
@@ -33,9 +34,9 @@ class SentenceEmbedding(SentenceTransformer):
             self.engine = inflect.engine()
         self.override_database = override_database
         self.save_database = save_database
-        self.quasimodo_edges = read_json('database/quasimodo_edges.json') if save_database else {}
-        self.google_edges = read_json('database/google_edges.json') if save_database else {}
-        self.conceptnet_edges = read_json('database/conceptnet_edges.json') if save_database else {}
+        self.quasimodo_edges = utils.read_json('database/quasimodo_edges.json') if save_database else {}
+        self.google_edges = utils.read_json('database/google_edges.json') if save_database else {}
+        self.conceptnet_edges = utils.read_json('database/conceptnet_edges.json') if save_database else {}
     
     def encode_sentences(self, sentences: List[str]):
         embeddings = super().encode(sentences)
@@ -201,11 +202,6 @@ class SentenceEmbedding(SentenceTransformer):
             [(nouns[3], nouns[0]), (nouns[1], nouns[2])],
             [(nouns[3], nouns[0]), (nouns[2], nouns[1])],
         ]
-
-
-def read_json(path: str) -> dict:
-    with open(path, 'r') as f:
-        return json.load(f)
 
 
 def run(sentence1: str, 
