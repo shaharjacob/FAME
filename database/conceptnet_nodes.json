@@ -894,16 +894,492 @@
 		],
 		"usedFor": []
 	},
-	"franklin": [
-		"landowner"
-	],
-	"newton": [
-		"force unit"
-	],
-	"math": [
-		"a subject",
-		"fun",
-		"interesting"
-	],
-	"the bohr model": []
+	"ben franklin": {
+		"hasProperty": [],
+		"capableOf": [],
+		"isA": [],
+		"usedFor": []
+	},
+	"newton": {
+		"hasProperty": [],
+		"capableOf": [],
+		"isA": [
+			"force unit"
+		],
+		"usedFor": []
+	},
+	"plants": {
+		"hasProperty": [
+			"poisonous",
+			"poisonous to humans",
+			"organic",
+			"endemic to an area"
+		],
+		"capableOf": [
+			"produce oxygen",
+			"reproduce asexually",
+			"require sunlight to grow",
+			"cause allergies"
+		],
+		"isA": [],
+		"usedFor": []
+	},
+	"cancer": {
+		"hasProperty": [],
+		"capableOf": [
+			"hurry death",
+			"result in death",
+			"spread"
+		],
+		"isA": [
+			"malignant tumor"
+		],
+		"usedFor": []
+	},
+	"they": {
+		"hasProperty": [],
+		"capableOf": [],
+		"isA": [],
+		"usedFor": []
+	},
+	"magnetism": {
+		"hasProperty": [],
+		"capableOf": [],
+		"isA": [
+			"geophysics"
+		],
+		"usedFor": []
+	},
+	"you": {
+		"hasProperty": [],
+		"capableOf": [],
+		"isA": [],
+		"usedFor": []
+	},
+	"einstein": {
+		"hasProperty": [],
+		"capableOf": [],
+		"isA": [],
+		"usedFor": []
+	},
+	"thomas edison": {
+		"hasProperty": [],
+		"capableOf": [],
+		"isA": [],
+		"usedFor": []
+	},
+	"nucleolus": {
+		"hasProperty": [],
+		"capableOf": [],
+		"isA": [
+			"organelle",
+			"tangible thing",
+			"cell part"
+		],
+		"usedFor": []
+	},
+	"edison": {
+		"hasProperty": [],
+		"capableOf": [],
+		"isA": [],
+		"usedFor": []
+	},
+	"j.j thomson": {
+		"hasProperty": [],
+		"capableOf": [],
+		"isA": [],
+		"usedFor": []
+	},
+	"windmill": {
+		"hasProperty": [],
+		"capableOf": [
+			"turn in many directions",
+			"power an entire town"
+		],
+		"isA": [
+			"generator",
+			"mill",
+			"machine",
+			"tower",
+			"toy"
+		],
+		"usedFor": [
+			"generate electricity"
+		]
+	},
+	"the electron cloud model": {
+		"hasProperty": [],
+		"capableOf": [],
+		"isA": [],
+		"usedFor": []
+	},
+	"tesla": {
+		"hasProperty": [],
+		"capableOf": [],
+		"isA": [
+			"flux density unit"
+		],
+		"usedFor": []
+	},
+	"meiosis": {
+		"hasProperty": [],
+		"capableOf": [],
+		"isA": [
+			"cell division",
+			"nuclear division",
+			"cellular multiplication",
+			"creation event"
+		],
+		"usedFor": []
+	},
+	"the romans not": {
+		"hasProperty": [],
+		"capableOf": [],
+		"isA": [],
+		"usedFor": []
+	},
+	"frequency": {
+		"hasProperty": [],
+		"capableOf": [],
+		"isA": [],
+		"usedFor": []
+	},
+	"spectrum": {
+		"hasProperty": [],
+		"capableOf": [],
+		"isA": [],
+		"usedFor": []
+	},
+	"rutherford": {
+		"hasProperty": [],
+		"capableOf": [],
+		"isA": [
+			"radioactivity unit"
+		],
+		"usedFor": []
+	},
+	"equality": {
+		"hasProperty": [],
+		"capableOf": [],
+		"isA": [],
+		"usedFor": []
+	},
+	"robert brown": {
+		"hasProperty": [],
+		"capableOf": [],
+		"isA": [],
+		"usedFor": []
+	},
+	"franklin": {
+		"hasProperty": [],
+		"capableOf": [],
+		"isA": [
+			"landowner"
+		],
+		"usedFor": []
+	},
+	"the electron-cloud model": {
+		"hasProperty": [],
+		"capableOf": [],
+		"isA": [],
+		"usedFor": []
+	},
+	"electron cloud model": {
+		"hasProperty": [],
+		"capableOf": [],
+		"isA": [],
+		"usedFor": []
+	},
+	"hooke": {
+		"hasProperty": [],
+		"capableOf": [],
+		"isA": [],
+		"usedFor": []
+	},
+	"light": {
+		"hasProperty": [
+			"off",
+			"dark"
+		],
+		"capableOf": [
+			"illuminate",
+			"travel",
+			"guide people through dark areas",
+			"age paper"
+		],
+		"isA": [
+			"energy"
+		],
+		"usedFor": []
+	},
+	"humans": {
+		"hasProperty": [
+			"very adaptable",
+			"male or female",
+			"bald",
+			"emotional"
+		],
+		"capableOf": [
+			"die only once",
+			"change something"
+		],
+		"isA": [
+			"higher animals",
+			"omnivores",
+			"omnivors"
+		],
+		"usedFor": []
+	},
+	"cathode rays": {
+		"hasProperty": [],
+		"capableOf": [],
+		"isA": [],
+		"usedFor": []
+	},
+	"atoms": {
+		"hasProperty": [
+			"very small"
+		],
+		"capableOf": [],
+		"isA": [],
+		"usedFor": []
+	},
+	"binary fission": {
+		"hasProperty": [],
+		"capableOf": [],
+		"isA": [],
+		"usedFor": []
+	},
+	"you highlight a": {
+		"hasProperty": [],
+		"capableOf": [],
+		"isA": [],
+		"usedFor": []
+	},
+	"photons": {
+		"hasProperty": [],
+		"capableOf": [],
+		"isA": [],
+		"usedFor": []
+	},
+	"quantum mechanical model": {
+		"hasProperty": [],
+		"capableOf": [],
+		"isA": [],
+		"usedFor": []
+	},
+	"we": {
+		"hasProperty": [
+			"nice",
+			"dependent on eachother"
+		],
+		"capableOf": [
+			"laugh together",
+			"dress ghetto",
+			"recycle plastic jugs"
+		],
+		"isA": [],
+		"usedFor": []
+	},
+	"faraday": {
+		"hasProperty": [],
+		"capableOf": [],
+		"isA": [],
+		"usedFor": []
+	},
+	"virchow": {
+		"hasProperty": [],
+		"capableOf": [],
+		"isA": [],
+		"usedFor": []
+	},
+	"math": {
+		"hasProperty": [
+			"fun",
+			"interesting"
+		],
+		"capableOf": [],
+		"isA": [
+			"a subject"
+		],
+		"usedFor": [
+			"fun"
+		]
+	},
+	"bohr": {
+		"hasProperty": [],
+		"capableOf": [],
+		"isA": [],
+		"usedFor": []
+	},
+	"homeostasis": {
+		"hasProperty": [],
+		"capableOf": [],
+		"isA": [
+			"equilibrium",
+			"biological regulation process"
+		],
+		"usedFor": []
+	},
+	"it take so long to": {
+		"hasProperty": [],
+		"capableOf": [],
+		"isA": [],
+		"usedFor": []
+	},
+	"quantum": {
+		"hasProperty": [],
+		"capableOf": [],
+		"isA": [
+			"quantity",
+			"measure"
+		],
+		"usedFor": []
+	},
+	"benjamin": {
+		"hasProperty": [],
+		"capableOf": [],
+		"isA": [],
+		"usedFor": []
+	},
+	"photosynthesis": {
+		"hasProperty": [],
+		"capableOf": [],
+		"isA": [
+			"chemical process",
+			"process",
+			"a photo-chemical process",
+			"synthesis"
+		],
+		"usedFor": []
+	},
+	"benjamin franklin": {
+		"hasProperty": [],
+		"capableOf": [],
+		"isA": [],
+		"usedFor": []
+	},
+	"chemistry": {
+		"hasProperty": [],
+		"capableOf": [],
+		"isA": [
+			"natural science"
+		],
+		"usedFor": []
+	},
+	"ernest rutherford": {
+		"hasProperty": [],
+		"capableOf": [],
+		"isA": [],
+		"usedFor": []
+	},
+	"benjamin franklin want to": {
+		"hasProperty": [],
+		"capableOf": [],
+		"isA": [],
+		"usedFor": []
+	},
+	"scientists": {
+		"hasProperty": [
+			"very very fussy"
+		],
+		"capableOf": [
+			"prove a theory",
+			"prove theories",
+			"discover how to split the atom"
+		],
+		"isA": [
+			"subordinates"
+		],
+		"usedFor": []
+	},
+	"thales": {
+		"hasProperty": [],
+		"capableOf": [],
+		"isA": [],
+		"usedFor": []
+	},
+	"ecology": {
+		"hasProperty": [],
+		"capableOf": [],
+		"isA": [
+			"environment",
+			"biology",
+			"science"
+		],
+		"usedFor": []
+	},
+	"robert hooke": {
+		"hasProperty": [],
+		"capableOf": [],
+		"isA": [],
+		"usedFor": []
+	},
+	"the bohr model": {
+		"hasProperty": [],
+		"capableOf": [],
+		"isA": [],
+		"usedFor": []
+	},
+	"the quantum mechanical model": {
+		"hasProperty": [],
+		"capableOf": [],
+		"isA": [],
+		"usedFor": []
+	},
+	"magnets": {
+		"hasProperty": [],
+		"capableOf": [
+			"press paper to the refrigerator"
+		],
+		"isA": [],
+		"usedFor": []
+	},
+	"jj thomson": {
+		"hasProperty": [],
+		"capableOf": [],
+		"isA": [],
+		"usedFor": []
+	},
+	"static electricity": {
+		"hasProperty": [],
+		"capableOf": [],
+		"isA": [],
+		"usedFor": []
+	},
+	"electron": {
+		"hasProperty": [],
+		"capableOf": [],
+		"isA": [
+			"elementary particle",
+			"lepton"
+		],
+		"usedFor": []
+	},
+	"alexander lodygin": {
+		"hasProperty": [],
+		"capableOf": [],
+		"isA": [],
+		"usedFor": []
+	},
+	"protons": {
+		"hasProperty": [
+			"more massive than electrons"
+		],
+		"capableOf": [],
+		"isA": [],
+		"usedFor": []
+	},
+	"thomson": {
+		"hasProperty": [],
+		"capableOf": [],
+		"isA": [],
+		"usedFor": []
+	},
+	"the level of organization": {
+		"hasProperty": [],
+		"capableOf": [],
+		"isA": [],
+		"usedFor": []
+	}
 }

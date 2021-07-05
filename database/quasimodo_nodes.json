@@ -1637,41 +1637,744 @@
 			"in the north different from winters in the south"
 		]
 	],
-	"franklin": [
-		"has property ins",
-		"be in a wheelchair",
-		"have 1 mission",
-		"have a 1",
-		"have can c",
-		"get to top",
-		"get to the rooftop",
-		"want the delegates to support the constitution",
-		"devote a week to each of the virtues",
-		"has trait busy"
-	],
+	"ben franklin": [],
 	"newton": [
-		"has property law",
-		"have law",
-		"be law",
-		"has property famous",
-		"has property second law",
-		"be third law of motion",
-		"be third law",
-		"be second law of motion",
-		"be first law",
-		"be first law of motion"
+		[
+			"has property",
+			"law"
+		],
+		[
+			"have",
+			"law"
+		],
+		[
+			"be",
+			"law"
+		],
+		[
+			"has property",
+			"famous"
+		],
+		[
+			"has property",
+			"second law"
+		]
+	],
+	"plants": [],
+	"cancer": [
+		[
+			"can",
+			"kill"
+		],
+		[
+			"has property",
+			"bad"
+		],
+		[
+			"can",
+			"spread"
+		],
+		[
+			"can",
+			"grow"
+		],
+		[
+			"has property",
+			"common"
+		]
+	],
+	"they": [],
+	"magnetism": [
+		[
+			"produce",
+			"electricity"
+		],
+		[
+			"can",
+			"work"
+		],
+		[
+			"has trait",
+			"physical"
+		],
+		[
+			"has property",
+			"physical property"
+		],
+		[
+			"create",
+			"electricity"
+		]
+	],
+	"you": [],
+	"einstein": [
+		[
+			"has property",
+			"famous"
+		],
+		[
+			"has time",
+			"junior"
+		],
+		[
+			"be related",
+			"to the speed of light"
+		],
+		[
+			"has property",
+			"an"
+		],
+		[
+			"be on",
+			"netflix anymore"
+		]
+	],
+	"thomas edison": [
+		[
+			"be kicked",
+			"out of school as a kid"
+		],
+		[
+			"has property",
+			"famous"
+		],
+		[
+			"has property",
+			"a hero"
+		],
+		[
+			"has property",
+			"a leader"
+		],
+		[
+			"be",
+			"a non-conformist"
+		]
+	],
+	"nucleolus": [
+		[
+			"has property",
+			"ar"
+		],
+		[
+			"related",
+			"to the part of the human body"
+		],
+		[
+			"has property",
+			"important to the cell"
+		],
+		[
+			"can",
+			"do"
+		],
+		[
+			"has property",
+			"made"
+		]
+	],
+	"edison": [
+		[
+			"make",
+			"electricity"
+		],
+		[
+			"has property",
+			"nj"
+		],
+		[
+			"led",
+			"bulbs work"
+		],
+		[
+			"get",
+			"all the credit"
+		],
+		[
+			"has property",
+			"famous"
+		]
+	],
+	"j.j thomson": [],
+	"windmill": [
+		[
+			"have",
+			"3 blades"
+		],
+		[
+			"can",
+			"work"
+		],
+		[
+			"generate",
+			"electricity"
+		],
+		[
+			"produce",
+			"energy"
+		],
+		[
+			"face",
+			"wind"
+		]
+	],
+	"the electron cloud model": [],
+	"tesla": [
+		[
+			"has property",
+			"car"
+		],
+		[
+			"have",
+			"tire"
+		],
+		[
+			"has trait",
+			"good"
+		],
+		[
+			"has property",
+			"company"
+		],
+		[
+			"be in",
+			"israel"
+		]
+	],
+	"meiosis": [
+		[
+			"contribute to",
+			"variation"
+		],
+		[
+			"contribute to",
+			"genetic variation"
+		],
+		[
+			"produce",
+			"one ovum"
+		],
+		[
+			"reduce",
+			"number"
+		],
+		[
+			"produce",
+			"cells"
+		]
+	],
+	"the romans not": [],
+	"frequency": [
+		[
+			"affect",
+			"pitch"
+		],
+		[
+			"be",
+			"related"
+		],
+		[
+			"be compared",
+			"to wavelength of the waves of the electromagnetic spectrum"
+		],
+		[
+			"affect",
+			"color"
+		],
+		[
+			"relate",
+			"to the energy of a wave"
+		]
+	],
+	"spectrum": [
+		[
+			"has place",
+			"down"
+		],
+		[
+			"appear",
+			"as a band of colors"
+		],
+		[
+			"work on",
+			"roku"
+		],
+		[
+			"have",
+			"outage"
+		],
+		[
+			"have",
+			"one internet plan"
+		]
+	],
+	"rutherford": [
+		[
+			"has property",
+			"nj"
+		],
+		[
+			"estimate",
+			"the number of protons from the scattering of the particles"
+		],
+		[
+			"be",
+			"able to estimate the number of protons in a nucleus from the scattering of the particles"
+		],
+		[
+			"has property",
+			"hays important"
+		]
+	],
+	"equality": [
+		[
+			"be",
+			"in the constitution"
+		],
+		[
+			"be",
+			"a street sweeper"
+		],
+		[
+			"has property",
+			"desirable"
+		],
+		[
+			"refer as",
+			"we"
+		],
+		[
+			"reduce",
+			"discrimination"
+		]
+	],
+	"robert brown": [],
+	"franklin": [
+		[
+			"has property",
+			"ins"
+		],
+		[
+			"be",
+			"in a wheelchair"
+		],
+		[
+			"have",
+			"1 mission"
+		],
+		[
+			"have",
+			"a 1"
+		],
+		[
+			"have",
+			"can c"
+		]
+	],
+	"the electron-cloud model": [],
+	"electron cloud model": [],
+	"hooke": [
+		[
+			"have",
+			"law"
+		],
+		[
+			"have",
+			"rs"
+		],
+		[
+			"have",
+			"re"
+		],
+		[
+			"have",
+			"li"
+		],
+		[
+			"have",
+			"ru"
+		]
+	],
+	"light": [
+		[
+			"has property",
+			"wave"
+		],
+		[
+			"get",
+			"hot"
+		],
+		[
+			"has color",
+			"green"
+		],
+		[
+			"has color",
+			"yellow"
+		],
+		[
+			"make",
+			"noise"
+		]
+	],
+	"humans": [],
+	"cathode rays": [],
+	"atoms": [],
+	"binary fission": [],
+	"you highlight a": [],
+	"photons": [],
+	"quantum mechanical model": [],
+	"we": [],
+	"faraday": [
+		[
+			"cage",
+			"work"
+		],
+		[
+			"pouch",
+			"work"
+		],
+		[
+			"have",
+			"law work"
+		]
+	],
+	"virchow": [
+		[
+			"can",
+			"work"
+		]
 	],
 	"math": [
-		"has manner hard",
-		"has property subject",
-		"has property easy",
-		"has trait difficult",
-		"has property interesting",
-		"be known as science of patterns",
-		"has property as an optional",
-		"has property a science of patterns",
-		"has trait boring",
-		"help us"
+		[
+			"has manner",
+			"hard"
+		],
+		[
+			"has property",
+			"subject"
+		],
+		[
+			"has property",
+			"easy"
+		],
+		[
+			"has trait",
+			"difficult"
+		],
+		[
+			"has property",
+			"interesting"
+		]
 	],
-	"the bohr model": []
+	"bohr": [
+		[
+			"have",
+			"model"
+		],
+		[
+			"has property",
+			"diagrams similar"
+		],
+		[
+			"be",
+			"atomic model similar to rutherford model"
+		]
+	],
+	"homeostasis": [
+		[
+			"be in",
+			"body"
+		],
+		[
+			"be important to",
+			"survival"
+		],
+		[
+			"be important in",
+			"body"
+		],
+		[
+			"has property",
+			"important for the function of enzymes"
+		],
+		[
+			"has property",
+			"important in the human body"
+		]
+	],
+	"it take so long to": [],
+	"quantum": [
+		[
+			"has property",
+			"as important"
+		],
+		[
+			"has property",
+			"break a 16"
+		],
+		[
+			"be called",
+			"quantum of solace"
+		],
+		[
+			"has property",
+			"time"
+		],
+		[
+			"has property",
+			"mechanics"
+		]
+	],
+	"benjamin": [
+		[
+			"has property",
+			"miss"
+		],
+		[
+			"has property",
+			"wendy playing"
+		],
+		[
+			"be",
+			"spelled"
+		],
+		[
+			"has property",
+			"important in the bible"
+		],
+		[
+			"has property",
+			"franklin"
+		]
+	],
+	"photosynthesis": [
+		[
+			"be important to",
+			"plants"
+		],
+		[
+			"need",
+			"light"
+		],
+		[
+			"has property",
+			"process"
+		],
+		[
+			"occur in",
+			"plant"
+		],
+		[
+			"be important to",
+			"life"
+		]
+	],
+	"benjamin franklin": [
+		[
+			"has property",
+			"famous"
+		],
+		[
+			"be",
+			"alike"
+		],
+		[
+			"be in",
+			"hamilton"
+		],
+		[
+			"has property",
+			"in hamilton"
+		],
+		[
+			"has property",
+			"important in the constitution"
+		]
+	],
+	"chemistry": [
+		[
+			"be called",
+			"science"
+		],
+		[
+			"has property",
+			"science"
+		],
+		[
+			"has manner",
+			"hard"
+		],
+		[
+			"be considered",
+			"science"
+		],
+		[
+			"be",
+			"a basic of science"
+		]
+	],
+	"ernest rutherford": [
+		[
+			"has property",
+			"alive"
+		],
+		[
+			"has property",
+			"famous"
+		],
+		[
+			"be",
+			"on the new zeal"
+		],
+		[
+			"be",
+			"on the 100 dollar bill"
+		],
+		[
+			"has time",
+			"now"
+		]
+	],
+	"benjamin franklin want to": [],
+	"scientists": [],
+	"thales": [
+		[
+			"be considered",
+			"as a father of geometry"
+		],
+		[
+			"be the father of",
+			"philosophy"
+		],
+		[
+			"has property",
+			"considered as father of geometry"
+		],
+		[
+			"has property",
+			"the father of philosophy"
+		],
+		[
+			"say",
+			"everything is water"
+		]
+	],
+	"ecology": [
+		[
+			"has property",
+			"science"
+		],
+		[
+			"has property",
+			"a branch of biology"
+		],
+		[
+			"has property",
+			"a vital field of study"
+		],
+		[
+			"impact",
+			"the environment"
+		],
+		[
+			"affect",
+			"environment"
+		]
+	],
+	"robert hooke": [
+		[
+			"have",
+			"law"
+		],
+		[
+			"be",
+			"important to the study of biology"
+		],
+		[
+			"have",
+			"fm"
+		],
+		[
+			"have",
+			"ss"
+		],
+		[
+			"has property",
+			"scientist"
+		]
+	],
+	"the bohr model": [],
+	"the quantum mechanical model": [],
+	"magnets": [],
+	"jj thomson": [],
+	"static electricity": [
+		[
+			"can",
+			"used"
+		],
+		[
+			"be different from",
+			"electricity"
+		],
+		[
+			"build up in",
+			"clouds"
+		],
+		[
+			"have",
+			"smell"
+		],
+		[
+			"has property",
+			"static"
+		]
+	],
+	"electron": [
+		[
+			"be in",
+			"atom"
+		],
+		[
+			"have",
+			"mass"
+		],
+		[
+			"leave",
+			"atom"
+		],
+		[
+			"have",
+			"energy"
+		],
+		[
+			"move",
+			"around the nucleus"
+		]
+	],
+	"alexander lodygin": [],
+	"protons": [],
+	"thomson": [
+		[
+			"make",
+			"profit"
+		],
+		[
+			"fly to",
+			"cuba"
+		],
+		[
+			"allocate",
+			"seats"
+		],
+		[
+			"be too",
+			"now"
+		],
+		[
+			"understand",
+			"right to life"
+		]
+	],
+	"the level of organization": []
 }
