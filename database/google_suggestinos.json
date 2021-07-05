@@ -1,31 +1,31 @@
 {
 	"electrons#relate to": [
-		"light",
-		"protons",
+		"quantum",
 		"math",
+		"protons",
 		"photons",
 		"spectrum",
 		"frequency",
-		"quantum"
+		"light"
 	],
 	"electrons#discover": [
-		"bohr",
-		"jj thomson",
-		"j.j thomson",
 		"thomson",
+		"bohr",
+		"j.j thomson",
+		"jj thomson",
 		"rutherford"
 	],
 	"electrons#discovered": [
-		"they",
 		"jj thomson",
+		"they",
 		"cathode rays"
 	],
 	"electrons#describe": [
-		"electron cloud model",
 		"quantum mechanical model",
 		"the bohr model",
 		"the electron cloud model",
-		"the electron-cloud model"
+		"the electron-cloud model",
+		"electron cloud model"
 	],
 	"electrons#dicover": [],
 	"electrons#prove his ideas about": [],
@@ -36,9 +36,9 @@
 	"electrons#found": [],
 	"electrons#invent": [],
 	"nucleus#relate to": [
-		"homeostasis",
 		"electron",
 		"meiosis",
+		"homeostasis",
 		"nucleolus"
 	],
 	"nucleus#discover": [
@@ -59,38 +59,38 @@
 	"nucleus#found": [],
 	"nucleus#invent": [],
 	"electricity#relate to": [
+		"magnets",
+		"magnetism",
+		"electrons",
+		"atoms",
+		"windmill",
+		"plants",
 		"static electricity",
 		"chemistry",
-		"plants",
-		"ecology",
-		"magnets",
-		"atoms",
-		"electrons",
-		"windmill",
-		"magnetism"
+		"ecology"
 	],
 	"electricity#discover": [
-		"benjamin franklin",
-		"einstein",
-		"equality",
 		"the romans not",
-		"benjamin franklin want to",
-		"it take so long to",
-		"edison",
 		"they",
+		"edison",
 		"we",
+		"equality",
+		"benjamin franklin want to",
 		"thales",
-		"humans"
+		"humans",
+		"einstein",
+		"benjamin franklin",
+		"it take so long to"
 	],
 	"electricity#discovered": [
-		"benjamin",
+		"faraday",
 		"edison",
 		"they",
-		"faraday"
+		"benjamin"
 	],
 	"electricity#describe": [
-		"einstein",
-		"you"
+		"you",
+		"einstein"
 	],
 	"electricity#dicover": [],
 	"electricity#prove his ideas about": [],
@@ -98,30 +98,30 @@
 	"electricity#call it": [],
 	"electricity#found": [],
 	"electricity#invent": [
+		"franklin",
+		"they",
+		"edison",
+		"we",
 		"ben franklin",
 		"thomas edison",
 		"tesla",
 		"benjamin franklin",
-		"they",
-		"edison",
-		"alexander lodygin",
-		"we",
-		"franklin"
+		"alexander lodygin"
 	],
 	"cell#relate to": [
-		"binary fission",
-		"photosynthesis",
+		"cancer",
 		"atoms",
+		"photosynthesis",
 		"the level of organization",
-		"cancer"
+		"binary fission"
 	],
 	"cell#discover": [
 		"virchow",
 		"they",
-		"it take so long to",
-		"we",
 		"hooke",
-		"scientists"
+		"we",
+		"scientists",
+		"it take so long to"
 	],
 	"cell#discovered": [
 		"robert hooke"
@@ -133,8 +133,8 @@
 	"cell#prove his ideas about": [],
 	"cell#be credited for": [],
 	"cell#call it": [
-		"we",
-		"they"
+		"they",
+		"we"
 	],
 	"cell#found": [
 		"you highlight a"
