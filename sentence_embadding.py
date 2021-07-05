@@ -23,7 +23,7 @@ from quasimodo import Quasimodo
 
 
 class SentenceEmbedding(SentenceTransformer):
-    def __init__(self, model: str = 'stsb-mpnet-base-v2', init_quasimodo: bool = True, init_inflect: bool = True, save_database: bool = True, override_database: bool = False):
+    def __init__(self, model: str = 'stsb-mpnet-base-v2', init_quasimodo: bool = False, init_inflect: bool = False, save_database: bool = True, override_database: bool = False):
         super().__init__(model)
         self.embaddings = {}
         self.quasimodo = None

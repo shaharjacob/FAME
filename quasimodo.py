@@ -41,13 +41,13 @@ class Quasimodo:
         secho(f"[INFO] init Quasimodo data", fg='blue')
         return pd.read_csv(path, sep='\t', low_memory=False)
     
-
+    
     def get_node_props(self, 
                        node: str, 
                        n_largest: int = 0,
                        verbose: bool = False,
                        plural_and_singular: bool = False) -> List[Tuple[str]]:
-        
+
         nodes = [node]
         if plural_and_singular:
             self.extend_plural_and_singular(node, nodes)
@@ -256,12 +256,4 @@ def merge_tsvs(output: str):
 
 if __name__ == '__main__':
     quasimodo = Quasimodo()
-    df = quasimodo.filter_by("predicate", "express", n_largest=100)
-    for _, val in df.iterrows():
-        print(f"{val['subject']}  {val['predicate']}  {val['object']}")
-    # res = quasimodo.count_predicates(800)
-    # print(res)
-
-    # stopwords = ['has_property', 'can', 'have', 'has_trait', 'be in', 'be', 'get', 'need', 'be on']
-    # words = ['reflect', 'depend on', 'be divided', 'express', 'vary from']
-    
+    quasimodo.get_node_props("faraday", n_largest=5, verbose=True)
