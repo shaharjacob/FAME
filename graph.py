@@ -253,7 +253,7 @@ def run(text: str, quasimodo: Quasimodo, addition_nouns = []):
         if f"{comb[0]}#{comb[1]}" in graph.conceptnet_edges:
             concept_new_props = graph.conceptnet_edges[f"{comb[0]}#{comb[1]}"]
         else:
-            concept_new_props = concept_net.get_edge_props(quasimodo.engine, comb[0], comb[1])
+            concept_new_props = concept_net.get_entities_relations(comb[0], comb[1], quasimodo.engine, plural_and_singular=True)
             graph.conceptnet_edges[f"{comb[0]}#{comb[1]}"] = concept_new_props   
 
         if concept_new_props:

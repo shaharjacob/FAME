@@ -15,11 +15,28 @@ Our main goal is to understand analogy, for example:
 &nbsp; 
 
 # Table of content
+- **concept_net.py**: Extracting entities information from ConcecptNet API.
 - **graph.py**: Creating a graph which represent the nouns in the sentence.  
 - **sentence_embadding.py**: Using sentence embadding to understand analogies.  
 - **google_autosuggest.py**: Extracting information from google auto-complete.  
 - **quasimodo.py**: Using quasimodo database for extracting information about connections between objects.  
 - **wikifier.py**: Extracting information about the part-of-speech of the given text.  
+&nbsp;  
+
+## concept_net.py
+We are using [ConceptNet](https://conceptnet.io/) API for extracting information for entities.  
+
+```bash
+from concept_net import get_entities_relations, get_entity_props
+
+relations = get_entities_relations("earth", "sun")
+# so the output will be:
+['revolving around the']
+
+props = get_entity_props("earth", n_best=10)
+# so the output will be:
+['4.5 billion years old', 'a word', 'an oblate sphereoid', 'an oblate spheroid', 'finite', 'flat', 'one astronomical unit from the Sun', 'one of many planets', 'receive rain from clouds', 'revolving around the sun', 'round like a ball', 'spherical', 'spherical in shape', 'very beautiful', 'very heavy']
+```  
 &nbsp;  
 
 ## graph.py

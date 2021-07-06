@@ -100,7 +100,7 @@ class SentenceEmbedding(SentenceTransformer):
         else:
             if not self.engine:
                 self.engine = inflect.engine()
-            concept_new_props = concept_net.get_edge_props(self.engine, head, tail)
+            concept_new_props = concept_net.get_entities_relations(head, tail, self.engine, plural_and_singular=True)
             self.conceptnet_edges[f"{head}#{tail}"] = concept_new_props
             should_save = True
 
