@@ -5,7 +5,6 @@ from flask import Flask, jsonify, request
 
 import utils
 import mapping
-import algorithms
 import python2react
 from sentence_embadding import SentenceEmbedding
 
@@ -106,7 +105,7 @@ def two_entities():
             cluster_edges_weights = mapping.get_edges_with_maximum_weight(similatiry_edges, clustered_sentences_1, clustered_sentences_2)
                 
             # now we want to get the maximum weighted match, which hold the constraint that each cluster has no more than one edge.
-            edges = algorithms.get_maximum_weighted_match(model, clustered_sentences_1, clustered_sentences_2, cluster_edges_weights)
+            edges = utils.get_maximum_weighted_match(model, clustered_sentences_1, clustered_sentences_2, cluster_edges_weights)
             
             # we doing this process for each threshold for the slider in the app
             d[edge_idx][thresh] = {
@@ -134,7 +133,7 @@ def bipartite_graph():
     props1 = python2react.get_nodes_for_app_bipartite(props=props_edge1, start_idx=0, x=200, group=0)
     props2 = python2react.get_nodes_for_app_bipartite(props=props_edge2, start_idx=len(props1), x=800, group=1)
     
-    similatiry_edges = algorithms.get_maximum_weighted_match(model, props_edge1, props_edge2)
+    similatiry_edges = utils.get_maximum_weighted_match(model, props_edge1, props_edge2)
 
     return jsonify({
         "nodes": props1 + props2,

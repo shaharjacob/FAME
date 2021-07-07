@@ -2,11 +2,11 @@ from itertools import combinations
 from typing import List, Dict, Tuple
 
 from tqdm import tqdm
+from click import secho
 
+import utils
 import suggest_entities
 from sentence_embadding import SentenceEmbedding
-from algorithms import get_maximum_weighted_match
-from google_autosuggest import get_entity_suggestions
 
 
 def get_all_possible_pairs_map(base: List[str], target: List[str]) -> List[List[List[Tuple[str, str]]]]:
@@ -124,7 +124,7 @@ def get_pair_mapping(model: SentenceEmbedding,
         
     # now we want to get the maximum weighted match, which hold the constraint that each cluster has no more than one edge.
     # we will look only on edges that appear in cluster_edges_weights
-    edges = get_maximum_weighted_match(model, clustered_sentences_1, clustered_sentences_2, cluster_edges_weights)
+    edges = utils.get_maximum_weighted_match(model, clustered_sentences_1, clustered_sentences_2, cluster_edges_weights)
     return {
         "graph": edges,
         "clusters1": clustered_sentences_1,
@@ -164,7 +164,7 @@ def get_best_pair_mapping(model: SentenceEmbedding,
                 
             # now we want to get the maximum weighted match, which hold the constraint that each cluster has no more than one edge.
             # we will look only on edges that appear in cluster_edges_weights
-            edges = get_maximum_weighted_match(model, clustered_sentences_1, clustered_sentences_2, cluster_edges_weights)
+            edges = utils.get_maximum_weighted_match(model, clustered_sentences_1, clustered_sentences_2, cluster_edges_weights)
             
             # score is just the sum of all the edges (edges between clusters)
             mapping_score += round(sum([edge[2] for edge in edges]), 3)
@@ -179,7 +179,7 @@ def get_best_pair_mapping(model: SentenceEmbedding,
 
 
 def mapping(base, target):
-    model = SentenceEmbedding(init_quasimodo=False, init_inflect=False)
+    model = SentenceEmbedding(init_quasimodo=True, init_inflect=False)
     relations = []
     base_already_mapping = []
     target_already_mapping = []
@@ -225,11 +225,14 @@ def mapping(base, target):
         else:
             break
 
-    suggest_entities.get_suggestions_for_missing_base_entities(model, base, base_already_mapping, target_already_mapping, verbose=True)
+    base_suggestions = suggest_entities.get_suggestions_for_missing_entities(model, base, base_already_mapping, target_already_mapping, verbose=True)
+    target_suggestions = suggest_entities.get_suggestions_for_missing_entities(model, target, target_already_mapping, base_already_mapping, verbose=True)
     
     return {
         "mapping": [f"{b} --> {t}" for b, t in zip(base_already_mapping, target_already_mapping)],
         "relations": relations,
+        "base_suggestions": base_suggestions, # Dict[str, Dict[str, Dict[str, Dict[str, List[str]]]]]
+        "target_suggestions": target_suggestions, # Dict[str, Dict[str, Dict[str, Dict[str, List[str]]]]]
     }
 
 
@@ -237,9 +240,11 @@ if __name__ == "__main__":
     base = ["earth", "sun", "gravity", "newton", "universe"]
     target = ["electrons", "nucleus", "electricity", 'cell']
     res = mapping(base, target)
-    print(res["mapping"])
-    for r in res["relations"]:
-        print(r)
+    for entity, suggestions in res["base_suggestions"].items():
+        secho(f"\nSuggestions for ", fg="blue", nl=False)
+        secho(f"{entity}: ", fg="blue", bold=True, nl=False)
+        for suggest in suggestions:
+            secho(f"({suggest[1]}, {suggest[2]}), ", fg="blue", nl=False)
 
 # http://localhost:3000/mapping?base=earth,sun,gravity,newton&target=electrons,nucleus,electricity,faraday
 # http://localhost:3000/mapping?base=earth,sun,gravity,newton,tree&target=electrons,nucleus,electricity,faraday,battery
