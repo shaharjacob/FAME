@@ -153,7 +153,6 @@ This script using quasimodo database, which contains semantic information.
 We are intersting in the following fields: **subject**, **predicate**, **object**, and **plausibility**.  
 
 ```bash
-# usage
 from quasimodo import Quasimodo
 
 quasimodo = Quasimodo(path='tsv/quasimodo.tsv')
@@ -163,15 +162,15 @@ quasimodo = Quasimodo(path='tsv/quasimodo.tsv')
 # quasimodo.merge_tsvs('quasimodo.tsv)
 
 # get information on a single subject. n_largest will take the best matches according to quasimodo score.
-quasimodo.get_node_props('horse', n_largest=20, verbose=True, plural_and_singular=True)
+quasimodo.get_entity_props('horse', n_largest=20, verbose=True, plural_and_singular=True)
 
 # so the output will be:  
 ```
 ![alt text](https://github.com/shaharjacob/commonsense-analogy/blob/main/images/get_subject_props_quasimodo_api.png?raw=true)  
 
 ```bash
-# get all the connections between each pair (connection is subject-object relationship)
-quasimodo.get_edge_props('sun', 'earth', n_largest=20, verbose=True, plural_and_singular=True)
+# get relations between two entities (order is important!)
+quasimodo.get_entities_relations('sun', 'earth', n_largest=20, verbose=True, plural_and_singular=True)
 
 # so the output will be:  
 ```
@@ -179,7 +178,7 @@ quasimodo.get_edge_props('sun', 'earth', n_largest=20, verbose=True, plural_and_
 
 ```bash
 # get all the similiar properties between two subjects
-quasimodo.get_similarity_between_nodes('sun', 'earth', n_largest=20, verbose=True, plural_and_singular=True)
+quasimodo.get_similarity_between_entities('sun', 'earth', n_largest=20, verbose=True, plural_and_singular=True)
 
 # so the output will be:  
 ```

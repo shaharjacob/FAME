@@ -26,7 +26,7 @@ def main(relation: str, quasimodo: Quasimodo):
     pair22 = pair2[1].strip()
 
     # pair11 & pair12 common properties
-    qusimodo_subjects_similarity = quasimodo.get_similarity_between_nodes(pair11, pair12, n_largest=10, plural_and_singular=True)
+    qusimodo_subjects_similarity = quasimodo.get_similarity_between_entities(pair11, pair12, n_largest=10, plural_and_singular=True)
     quasimodo_common_props = [f"{val[0]} {val[1]}" for val in qusimodo_subjects_similarity]
 
     pair11_props = concept_net.hasProperty(engine=quasimodo.engine, subject=pair11, n=10, weight_thresh=1, plural_and_singular=True)
@@ -76,7 +76,7 @@ def main(relation: str, quasimodo: Quasimodo):
 
     print()
     # pair21 & pair22 common properties
-    qusimodo_subjects_similarity = quasimodo.get_similarity_between_nodes(pair21, pair22, n_largest=10, plural_and_singular=True)
+    qusimodo_subjects_similarity = quasimodo.get_similarity_between_entities(pair21, pair22, n_largest=10, plural_and_singular=True)
     quasimodo_common_props = [f"{val[0]} {val[1]}" for val in qusimodo_subjects_similarity]
 
     pair21_props = concept_net.hasProperty(engine=quasimodo.engine, subject=pair21, n=10, weight_thresh=1, plural_and_singular=True)
@@ -126,8 +126,8 @@ def main(relation: str, quasimodo: Quasimodo):
 
     print()
     # sun --> earth, nucleus --> electrons
-    connection_11_21 = quasimodo.get_edge_props(pair11, pair21, n_largest=10, plural_and_singular=True)
-    connection_12_22 = quasimodo.get_edge_props(pair12, pair22, n_largest=10, plural_and_singular=True)
+    connection_11_21 = quasimodo.get_entities_relations(pair11, pair21, n_largest=10, plural_and_singular=True)
+    connection_12_22 = quasimodo.get_entities_relations(pair12, pair22, n_largest=10, plural_and_singular=True)
     connections = intersection(connection_11_21, connection_12_22)
     if connections:
         secho(f"{pair11} --> {pair21}, {pair12} --> {pair22}", fg="blue", bold=True)
@@ -137,8 +137,8 @@ def main(relation: str, quasimodo: Quasimodo):
 
     print()
     # earth --> sun, electrons --> nucleus
-    connection_21_11 = quasimodo.get_edge_props(pair21, pair11, n_largest=10, plural_and_singular=True)
-    connection_22_12 = quasimodo.get_edge_props(pair22, pair12, n_largest=10, plural_and_singular=True)
+    connection_21_11 = quasimodo.get_entities_relations(pair21, pair11, n_largest=10, plural_and_singular=True)
+    connection_22_12 = quasimodo.get_entities_relations(pair22, pair12, n_largest=10, plural_and_singular=True)
     connections = intersection(connection_21_11, connection_22_12)
     if connections:
         secho(f"{pair21} --> {pair11}, {pair22} --> {pair12}", fg="blue", bold=True)

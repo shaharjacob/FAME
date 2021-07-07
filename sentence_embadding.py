@@ -84,7 +84,7 @@ class SentenceEmbedding(SentenceTransformer):
         else:
             if not self.quasimodo:
                 self.quasimodo = Quasimodo(path='tsv/quasimodo.tsv')
-            quasimodo_props = self.quasimodo.get_edge_props(head, tail, n_largest=10, plural_and_singular=True)
+            quasimodo_props = self.quasimodo.get_entities_relations(head, tail, n_largest=10, plural_and_singular=True)
             self.quasimodo_edges[f"{head}#{tail}"] = quasimodo_props  
             should_save = True
 
@@ -177,7 +177,7 @@ class SentenceEmbedding(SentenceTransformer):
     @staticmethod
     def get_node_props(node: str, quasimodo: Quasimodo):
         props = []
-        quasimodo_props = quasimodo.get_node_props(node=node, n_largest=10, plural_and_singular=True)
+        quasimodo_props = quasimodo.get_entity_props(node=node, n_largest=10, plural_and_singular=True)
         quasimodo_props = [f"{val[0]} {val[1]}" for val in quasimodo_props]
         props.extend(quasimodo_props)
         props.extend(concept_net.hasProperty(engine=quasimodo.engine, subject=node, n=10, weight_thresh=1, plural_and_singular=True))

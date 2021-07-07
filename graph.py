@@ -139,7 +139,7 @@ def run(text: str, quasimodo: Quasimodo, addition_nouns = []):
         if noun in graph.quasimodo_nodes:
             quasimodo_props = graph.quasimodo_nodes[noun]
         else:
-            quasimodo_props = quasimodo.get_node_props(node=noun, n_largest=10, plural_and_singular=True)
+            quasimodo_props = quasimodo.get_entity_props(node=noun, n_largest=10, plural_and_singular=True)
             graph.quasimodo_nodes[noun] = quasimodo_props 
 
         if quasimodo_props:
@@ -223,7 +223,7 @@ def run(text: str, quasimodo: Quasimodo, addition_nouns = []):
         if f"{comb[0]}#{comb[1]}" in graph.quasimodo_edges:
             quasimodo_props = graph.quasimodo_edges[f"{comb[0]}#{comb[1]}"]
         else:
-            quasimodo_props = quasimodo.get_edge_props(comb[0], comb[1], n_largest=10, plural_and_singular=True)
+            quasimodo_props = quasimodo.get_entities_relations(comb[0], comb[1], n_largest=10, plural_and_singular=True)
             graph.quasimodo_edges[f"{comb[0]}#{comb[1]}"] = quasimodo_props  
         
         if quasimodo_props:
@@ -232,7 +232,7 @@ def run(text: str, quasimodo: Quasimodo, addition_nouns = []):
         if f"{comb[0]}#{comb[1]}" in graph.quasimodo_nodes_similarity:
             quasimodo_nodes_props = graph.quasimodo_nodes_similarity[f"{comb[0]}#{comb[1]}"]
         else:
-            quasimodo_nodes_props = quasimodo.get_similarity_between_nodes(comb[0], comb[1], n_largest=10, plural_and_singular=True)
+            quasimodo_nodes_props = quasimodo.get_similarity_between_entities(comb[0], comb[1], n_largest=10, plural_and_singular=True)
             graph.quasimodo_nodes_similarity[f"{comb[0]}#{comb[1]}"] = quasimodo_nodes_props  
 
         if quasimodo_nodes_props:

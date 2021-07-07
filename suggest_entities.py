@@ -88,7 +88,7 @@ def get_entitiy_props(entity: str,
 
     quasimodo_db = utils.read_json('database/quasimodo_nodes.json')
     if entity not in quasimodo_db:
-        quasimodo_db[entity] = [[prop[0], prop[1]] for prop in quasimodo.get_node_props(entity, n_largest=5)]
+        quasimodo_db[entity] = [[prop[0], prop[1]] for prop in quasimodo.get_entity_props(entity, n_largest=5)]
         with open('database/quasimodo_nodes.json', 'w') as f1:
             json.dump(quasimodo_db, f1, indent='\t')
 
