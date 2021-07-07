@@ -231,8 +231,8 @@ def mapping(base, target):
     return {
         "mapping": [f"{b} --> {t}" for b, t in zip(base_already_mapping, target_already_mapping)],
         "relations": relations,
-        "base_suggestions": base_suggestions, # Dict[str, Dict[str, Dict[str, Dict[str, List[str]]]]]
-        "target_suggestions": target_suggestions, # Dict[str, Dict[str, Dict[str, Dict[str, List[str]]]]]
+        "base_suggestions": base_suggestions, # Dict[str, List[str, str, float]]
+        "target_suggestions": target_suggestions, # Dict[str, List[str, str, float]]
     }
 
 
@@ -245,6 +245,7 @@ if __name__ == "__main__":
         secho(f"{entity}: ", fg="blue", bold=True, nl=False)
         for suggest in suggestions:
             secho(f"({suggest[1]}, {suggest[2]}), ", fg="blue", nl=False)
+
 
 # http://localhost:3000/mapping?base=earth,sun,gravity,newton&target=electrons,nucleus,electricity,faraday
 # http://localhost:3000/mapping?base=earth,sun,gravity,newton,tree&target=electrons,nucleus,electricity,faraday,battery

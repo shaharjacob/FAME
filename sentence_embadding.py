@@ -1,5 +1,4 @@
 import json
-from itertools import combinations
 from typing import List, Tuple, Dict
 
 import click
@@ -10,10 +9,8 @@ from sklearn.cluster import AgglomerativeClustering
 from sentence_transformers import SentenceTransformer, util
 
 import utils
-import testset
 import concept_net
 import google_autosuggest
-from wikifier import Wikifier
 from quasimodo import Quasimodo
 
 # avilable models can be found here: https://huggingface.co/models?sort=downloads&search=sentence-transformers&p=0
@@ -204,140 +201,128 @@ class SentenceEmbedding(SentenceTransformer):
         ]
 
 
-def run(sentence1: str, 
-        sentence2: str, 
-        verbose: bool = False, 
-        full_details: bool = False, 
-        model: str = "stsb-mpnet-base-v2", 
-        addition_nouns=[]) -> dict:
 
-    secho(f"- {sentence1}", fg="blue")
-    secho(f"- {sentence2}", fg="blue")
 
-    # TODO
-    addition_nouns = [noun for noun in addition_nouns if noun in sentence1.split()]
 
-    # part of speech
-    w = Wikifier(sentence1)
-    nouns1 = w.get_specific_part_of_speech("nouns", normForm=False)
-    Wikifier.remove_parts_of_compound_nouns(nouns1)
-    nouns1 = sorted(list(set(nouns1 + addition_nouns)))
 
-    w = Wikifier(sentence2)
-    nouns2 = w.get_specific_part_of_speech("nouns", normForm=False)
-    Wikifier.remove_parts_of_compound_nouns(nouns2)
-    nouns2 = sorted(list(set(nouns2)))
 
-    secho(f"\nNouns: ", fg="blue", bold=True)
-    secho(f"- {nouns1}", fg="blue")
-    secho(f"- {nouns2}\n", fg="blue")
 
-    combs1 = list(combinations(nouns1, 2))
-    reverse_combs1 = [(comb[1], comb[0]) for comb in combs1]
-    combs1 += reverse_combs1
 
-    combs2 = list(combinations(nouns2, 2))
-    reverse_combs2 = [(comb[1], comb[0]) for comb in combs2]
-    combs2 += reverse_combs2
+# from itertools import combinations
+# from wikifier import Wikifier
+# def run(sentence1: str, 
+#         sentence2: str, 
+#         verbose: bool = False, 
+#         full_details: bool = False, 
+#         model: str = "stsb-mpnet-base-v2", 
+#         addition_nouns=[]) -> dict:
 
-    secho(f"[INFO] create SentenceEmbedding object", fg="blue")
-    model = SentenceEmbedding(model=model)
+#     secho(f"- {sentence1}", fg="blue")
+#     secho(f"- {sentence2}", fg="blue")
 
-    matches = []
-    # secho(f"[INFO] Total combinations to process: ", fg="blue", nl=False)
-    # secho(f"{len(combs1) * len(combs2)}", fg="blue", bold=True)
-    for i, comb1 in enumerate(combs1):
-        for j, comb2 in enumerate(combs2):
-            # secho(f"{(i * len(combs2)) + j + 1}", fg="blue", bold=True, nl=False)
-            # secho(f" out of ", fg="blue", nl=False)
-            # secho(f"{len(combs1) * len(combs2)}", fg="blue", bold=True)
-            # model.bipartite_edges(comb1, comb2)
-            res = model.get_edges_score(comb1, comb2, n_best=10)
-            matches.append(((comb1, comb2), res["score"], res["sentences"]))
+#     # TODO
+#     addition_nouns = [noun for noun in addition_nouns if noun in sentence1.split()]
+
+#     # part of speech
+#     w = Wikifier(sentence1)
+#     nouns1 = w.get_specific_part_of_speech("nouns", normForm=False)
+#     Wikifier.remove_parts_of_compound_nouns(nouns1)
+#     nouns1 = sorted(list(set(nouns1 + addition_nouns)))
+
+#     w = Wikifier(sentence2)
+#     nouns2 = w.get_specific_part_of_speech("nouns", normForm=False)
+#     Wikifier.remove_parts_of_compound_nouns(nouns2)
+#     nouns2 = sorted(list(set(nouns2)))
+
+#     secho(f"\nNouns: ", fg="blue", bold=True)
+#     secho(f"- {nouns1}", fg="blue")
+#     secho(f"- {nouns2}\n", fg="blue")
+
+#     combs1 = list(combinations(nouns1, 2))
+#     reverse_combs1 = [(comb[1], comb[0]) for comb in combs1]
+#     combs1 += reverse_combs1
+
+#     combs2 = list(combinations(nouns2, 2))
+#     reverse_combs2 = [(comb[1], comb[0]) for comb in combs2]
+#     combs2 += reverse_combs2
+
+#     secho(f"[INFO] create SentenceEmbedding object", fg="blue")
+#     model = SentenceEmbedding(model=model)
+
+#     matches = []
+#     # secho(f"[INFO] Total combinations to process: ", fg="blue", nl=False)
+#     # secho(f"{len(combs1) * len(combs2)}", fg="blue", bold=True)
+#     for i, comb1 in enumerate(combs1):
+#         for j, comb2 in enumerate(combs2):
+#             # secho(f"{(i * len(combs2)) + j + 1}", fg="blue", bold=True, nl=False)
+#             # secho(f" out of ", fg="blue", nl=False)
+#             # secho(f"{len(combs1) * len(combs2)}", fg="blue", bold=True)
+#             # model.bipartite_edges(comb1, comb2)
+#             res = model.get_edges_score(comb1, comb2, n_best=10)
+#             matches.append(((comb1, comb2), res["score"], res["sentences"]))
     
-    if model.save_database:
-        model.save_database_()
+#     if model.save_database:
+#         model.save_database_()
 
-    matches = sorted(matches, key=lambda x: -x[1])
-    if verbose:
-        for match in matches:
-            secho(f"({match[0][0][0]} --> {match[0][0][1]})", fg='red', bold=True, underline=True, nl=False)
-            secho(f", ", underline=True, nl=False)
-            secho(f"({match[0][1][0]} --> {match[0][1][1]}) ", fg='green', bold=True, underline=True, nl=False)
-            secho(f"--avg--> ", underline=True, nl=False)
-            secho(f"{match[1]}", fg='blue', bold=True, underline=True)
-            if full_details:
-                for m in match[2]:
-                    SentenceEmbedding.print_sentence(m, show_nouns=False)
-                print()
+#     matches = sorted(matches, key=lambda x: -x[1])
+#     if verbose:
+#         for match in matches:
+#             secho(f"({match[0][0][0]} --> {match[0][0][1]})", fg='red', bold=True, underline=True, nl=False)
+#             secho(f", ", underline=True, nl=False)
+#             secho(f"({match[0][1][0]} --> {match[0][1][1]}) ", fg='green', bold=True, underline=True, nl=False)
+#             secho(f"--avg--> ", underline=True, nl=False)
+#             secho(f"{match[1]}", fg='blue', bold=True, underline=True)
+#             if full_details:
+#                 for m in match[2]:
+#                     SentenceEmbedding.print_sentence(m, show_nouns=False)
+#                 print()
     
-    return {
-        "score": matches[0][1],
-        "match": matches[0][0],
-    }
+#     return {
+#         "score": matches[0][1],
+#         "match": matches[0][0],
+#     }
 
 
-def validation():
-    score = 0
-    for i, sample in enumerate(testset.testset):
-        res = main(sample["input"][0], sample["input"][1], verbose=True, full_details=True, model='stsb-mpnet-base-v2', addition_nouns=['sunscreen'])
-    #     if res["score"] == 0:
-    #         secho(f"Wrong answer for sample number {i}", fg="red", bold=True)
-    #         secho(f"  no connection found...\n", fg="red")
-    #         continue
-    #     if res["edges"] == sample["label"] or res["edges"] == (sample["label"][1], sample["label"][0]):
-    #         score += 1
-    #     else:
-    #         secho(f"Wrong answer for sample number {i}", fg="red", bold=True)
-    #         secho(f"  Expected: {sample['label']}", fg="red")
-    #         secho(f"  Actual: {res['edges']}\n", fg="red")
-    # secho(f"\nSuccess {score}/{len(testset.testset)}", fg="green", bold=True)    
+# def main(sentence1: str, 
+#          sentence2: str, 
+#          verbose: bool = True, 
+#          full_details: bool = False, 
+#          threshold: float = 0.5, 
+#          model: str = "stsb-mpnet-base-v2", 
+#          addition_nouns: str = []) -> dict:
+#     res = run(sentence1, sentence2, verbose, full_details, model, addition_nouns)
+#     secho(f"\n--------------------------------------------------")
+#     secho(f"Match: ", fg="blue", nl=False)
+#     secho(f"{res['match'][0][0]} --> {res['match'][0][1]}  ~  {res['match'][1][0]} --> {res['match'][1][1]}", fg="blue", bold=True)
+#     secho(f"Score: ", fg="blue", nl=False)
+#     secho(f"{res['score']}", fg="blue", bold=True)
+#     secho(f"Is analogy: ", fg="blue", nl=False)
+#     secho(f"{res['score'] > threshold}", fg="blue", bold=True)
+#     secho(f"--------------------------------------------------\n")
+#     return {
+#         "edges": res["match"],
+#         "score": res["score"],
+#         "is_analogy": res["score"] > threshold,
+#     }
 
 
-def main(sentence1: str, 
-         sentence2: str, 
-         verbose: bool = True, 
-         full_details: bool = False, 
-         threshold: float = 0.5, 
-         model: str = "stsb-mpnet-base-v2", 
-         addition_nouns: str = []) -> dict:
-    res = run(sentence1, sentence2, verbose, full_details, model, addition_nouns)
-    secho(f"\n--------------------------------------------------")
-    secho(f"Match: ", fg="blue", nl=False)
-    secho(f"{res['match'][0][0]} --> {res['match'][0][1]}  ~  {res['match'][1][0]} --> {res['match'][1][1]}", fg="blue", bold=True)
-    secho(f"Score: ", fg="blue", nl=False)
-    secho(f"{res['score']}", fg="blue", bold=True)
-    secho(f"Is analogy: ", fg="blue", nl=False)
-    secho(f"{res['score'] > threshold}", fg="blue", bold=True)
-    secho(f"--------------------------------------------------\n")
-    return {
-        "edges": res["match"],
-        "score": res["score"],
-        "is_analogy": res["score"] > threshold,
-    }
+# @click.command()
+# @click.option('-s1', '--sentence1', default="The nucleus, which is positively charged, and the electrons which are negatively charged, compose the atom", 
+#                 help="First sentence")
+# @click.option('-s2', '--sentence2', default="On earth, the atmosphere protects us from the sun, but not enough so we use sunscreen", 
+#                 help="Second sentence")
+# @click.option('--verbose', is_flag=True,
+#                 help="Print all the edges and their scores")
+# @click.option('--full-details', is_flag=True,
+#                 help="Print all the scores inside the edges (which lead to the edge score)")
+# @click.option('--threshold', default=0.5,
+#                 help="Threshold to determine if this is analogy or not")
+# @click.option('-a', '--addition-nouns', default=[], multiple=True, 
+#                 help="Addition nouns in case of Wikifier is failed to recognize (sunscreen)")
+# def cli(sentence1: str, sentence2: str, verbose: bool, full_details: bool, threshold: float, addition_nouns: str) -> bool:
+#     res = main(sentence1, sentence2, verbose, full_details, threshold, addition_nouns=addition_nouns)
+#     return res
 
 
-@click.command()
-@click.option('-s1', '--sentence1', default="The nucleus, which is positively charged, and the electrons which are negatively charged, compose the atom", 
-                help="First sentence")
-@click.option('-s2', '--sentence2', default="On earth, the atmosphere protects us from the sun, but not enough so we use sunscreen", 
-                help="Second sentence")
-@click.option('--verbose', is_flag=True,
-                help="Print all the edges and their scores")
-@click.option('--full-details', is_flag=True,
-                help="Print all the scores inside the edges (which lead to the edge score)")
-@click.option('--threshold', default=0.5,
-                help="Threshold to determine if this is analogy or not")
-@click.option('-a', '--addition-nouns', default=[], multiple=True, 
-                help="Addition nouns in case of Wikifier is failed to recognize (sunscreen)")
-def cli(sentence1: str, sentence2: str, verbose: bool, full_details: bool, threshold: float, addition_nouns: str) -> bool:
-    res = main(sentence1, sentence2, verbose, full_details, threshold, addition_nouns=addition_nouns)
-    return res
-
-
-if __name__ == "__main__":
-    # cli()
-
-    # main(sentences[0], sentences[1], verbose=True, full_details=True, model='stsb-mpnet-base-v2', addition_nouns=['sunscreen'])
-
-    validation()
+# if __name__ == "__main__":
+#     pass

@@ -9,7 +9,6 @@ from tqdm import tqdm
 from click import secho
 from graphviz import Digraph
 
-import test
 import concept_net
 import google_autosuggest
 from wikifier import Wikifier
@@ -286,6 +285,7 @@ def main(text, addition_nouns, quasimodo_path):
     secho(str(time.time() - start), fg='blue', bold=True)
 
 if __name__ == "__main__":
+    pass
     # main()
     # text1 = "putting a band aid on a wound is like putting a flag in the code"
     # text2 = "horses in stables behave like cows in byre"
@@ -295,12 +295,13 @@ if __name__ == "__main__":
     # text5 = "The nucleus, which is positively charged, and the electrons which are negatively charged, compose the atom"
     # text6 = "On earth, the atmosphere protects us from the sun, but not enough so we use sunscreen"
 
-    quasimodo = Quasimodo(path='tsv/quasimodo.tsv')
-    for i, sample in enumerate(test.testset):
-        print(f"{i * 2} out of {len(test.testset) * 2}")
-        run(sample["input"][0], quasimodo=quasimodo, addition_nouns=['sunscreen'])
-        print(f"{(i * 2) + 1} out of {len(test.testset) * 2}")
-        run(sample["input"][1], quasimodo=quasimodo, addition_nouns=['sunscreen'])
+    # import old_files.testset as testset
+    # quasimodo = Quasimodo(path='tsv/quasimodo.tsv')
+    # for i, sample in enumerate(testset):
+    #     print(f"{i * 2} out of {len(testset) * 2}")
+    #     run(sample["input"][0], quasimodo=quasimodo, addition_nouns=['sunscreen'])
+    #     print(f"{(i * 2) + 1} out of {len(testset) * 2}")
+    #     run(sample["input"][1], quasimodo=quasimodo, addition_nouns=['sunscreen'])
 
 
     
