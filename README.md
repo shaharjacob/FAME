@@ -127,43 +127,26 @@ For example:
 
 
 ## google_autosuggest.py
-This script using the API of google auto-complete the extract information.  
-We are using question, subject and object which make the results more detailed.
-By default the forms is: **{question} {subject} "*" {object}**  
-for example: why do horses "*" stables  
-&nbsp;  
-by default, the script is looking also for the plural and singular forms of the inputs.  
-For example, **horses** will convert into **horse** (in addition) and **stables** into **stable**.  
+This script using the API of google autosuggest to extract entities information.  
+When we looking for relations between two entities, the form is: `{question} {entity1} .* {entity2}`  
+When we looking for suggestions for new entities, the form is: `{question} {entity} {prop} .*` and `{question} .* {prop} {entity}`  
+When we looking for entity properties, the form is: `{entity} {which} .*` when `which` can be `is a` or `is a type of`    
  
 ```bash
-# using default example.yaml file without saving the results into a file
-python google_autosuggest.py
+from google_autosuggest import get_entity_suggestions, get_entity_props, get_entities_relations
 
-# define a yaml file:
-why do:
-  - [horses, stables]
+relations = get_entities_relations("earth", "sun")
+# so the output will be:
+['revolve around', 'move around the', 'rotate around', 'orbit', 'not fall into', 'circle the', 'revolve around', 'spin around the', 'rotate around', 'revolve around', 'move around', 'circle the', 'orbit']
 
-how do:
-  - [horses, stables]
+props = get_entity_props("newton")
+# so the output will be:
+['derived unit', 'fundamental unit', 'derived unit why', 'unit for measuring', 'unit of', 'fundamental unit or derived unit', 'measure of']
 
-
-# You can use it outside the script by define a dictionary:
-from google_autosuggest import process
-
-d = {
-  "why do": [
-    ['horses', 'stables']
-  ],
-  "how do": [
-    ['horses', 'stables']
-  ]
-}
-suggestions = process(d)
-
-# the output will be:
+suggestions = get_entity_suggestions("electricity", "discovered")
+# so the output will be:
+['edison', 'benjamin', 'faraday', 'they']
 ```  
-![alt text](https://github.com/shaharjacob/commonsense-analogy/blob/main/images/google_engine_horses.png?raw=true)  
-&nbsp;  
 
 ## quasimodo.py
 This script using quasimodo database, which contains semantic information.  
