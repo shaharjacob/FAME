@@ -33,6 +33,9 @@ const App = () => {
           <Route path='/mapping-demo'>
             <MappingDemo />
           </Route>
+          <Route path='/relations-demo'>
+            <Main />
+          </Route>
           <Route path='/test'>
             <TestViewer />
           </Route>

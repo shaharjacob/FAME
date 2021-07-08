@@ -29,15 +29,21 @@ Given base entities and target entities, and it will apply the mapping.
 ![mapping-demo](https://github.com/shaharjacob/commonsense-analogy/blob/main/images/mapping-demo.png?raw=true)  
  
 ![mapping](https://github.com/shaharjacob/commonsense-analogy/blob/main/images/mapping.png?raw=true)  
-
-#### :large_blue_circle: Suggestions
-Same as mapping-demo above, but in case of missing entities, it will give suggestions.  
-TODO: image here  
-`http://localhost:3000/mapping-with-suggestions-demo`  
+ &nbsp;&nbsp;:memo: Clicking on edge will lead you to the relation between the nodes of the edge (like in *Relations* section below).  
 
 #### :brown_circle: Relations:
 Given pair from base, and pair from the target, it will show the relations between them.  
 For example: given pair from base: (earth, sun) and pair from target: (electrons, nucleus).  
+`http://localhost:3000/relations-demo`  
+
+![relations-demo](https://github.com/shaharjacob/commonsense-analogy/blob/main/images/relations-demo.png?raw=true)  
+ 
+![relations](https://github.com/shaharjacob/commonsense-analogy/blob/main/images/relations1.png?raw=true)  
+![relations](https://github.com/shaharjacob/commonsense-analogy/blob/main/images/relations2.png?raw=true) 
+ &nbsp;&nbsp;:memo: Clicking *Taken from* entry will lead you the the coresponding relation.  
+
+#### :large_blue_circle: Suggestions
+Same as mapping-demo above, but in case of missing entities, it will give suggestions.  
 TODO: image here  
 `http://localhost:3000/mapping-with-suggestions-demo`  
 &nbsp; 
