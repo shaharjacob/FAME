@@ -9,16 +9,3 @@ graphviz
 networkx
 beautifulsoup4
 sentence_transformers
-
-# # allennlp
-# torch
-# allennlp
-
-# # old
-# nltk
-# pydot
-# gensim
-# networkx
-# PyDictionary
-# fake_useragent
-# python-Levenshtein
