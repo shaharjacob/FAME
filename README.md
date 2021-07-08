@@ -2,7 +2,7 @@
 <img src="https://github.com/shaharjacob/commonsense-analogy/blob/main/images/mapping-entities-hayadata.png?raw=true" width="500px" alt="mapping-entities"/>
 </div>
 
-# :dart: Goal
+## :dart: Goal
 The main goal is to map entities from base domain to the target domain.  
 For example, given the following base domain: `earth, sun, gravity, newton, universe`, and the following target domain: `electrons, nucleus, electricity, faraday, cell`, we would like to map entities from the base to the target:
 - earth &nbsp;<img src="https://github.com/shaharjacob/commonsense-analogy/blob/main/images/right_arrow.png?raw=true" alt="-->" width="18px"/> &nbsp;electrons
