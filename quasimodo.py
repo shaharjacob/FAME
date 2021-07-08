@@ -167,6 +167,13 @@ def render_entities_similarity(entity1: str, entity2: str, row: dict):
     secho(f"{row['plausibility']}", fg="magenta")
 
 
+def merge_tsvs(output: str):
+    dir_parent = Path('tsv')
+    dataframes = [pd.read_csv(path, sep="\t") for path in dir_parent.iterdir()]
+    merged_df = pd.concat(dataframes)
+    merged_df.to_csv(dir_parent / output, sep="\t", index=False, encoding='utf-8')
+
+
 if __name__ == '__main__':
     quasimodo = Quasimodo()
     quasimodo.get_entity_props("faraday", n_largest=5, verbose=True)
@@ -235,8 +242,3 @@ if __name__ == '__main__':
 #     df.to_csv(dir_parent / f'{from_page}_{to_page}.tsv', sep="\t", index=False, encoding='utf-8')
 
 
-# def merge_tsvs(output: str):
-#     dir_parent = Path('tsv')
-#     dataframes = [pd.read_csv(path, sep="\t") for path in dir_parent.iterdir()]
-#     merged_df = pd.concat(dataframes)
-#     merged_df.to_csv(dir_parent / output, sep="\t", index=False, encoding='utf-8')
