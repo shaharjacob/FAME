@@ -8,6 +8,11 @@ from quasimodo import Quasimodo
 
 class TestFunctions(unittest.TestCase):
 
+    def test_print(self):
+        import os
+        print(os.listdir(os.getcwd()))
+        self.assertEqual("hello", "hello")
+
     def test_concept_net(self):
         # testing concept_net.get_entities_relations
         reference = ['revolving around the']
