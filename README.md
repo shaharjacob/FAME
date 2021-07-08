@@ -1,4 +1,6 @@
-# mapping-entities
+<div align="center">
+<img src="https://github.com/shaharjacob/commonsense-analogy/blob/main/images/mapping-entities-hayadata.png?raw=true" alt="mapping-entities"/>
+</div>
 
 ## :dart: Goal
 The main goal is to map entities from base domain to the target domain.  
