@@ -25,7 +25,6 @@ npm start
 #### :green_circle: Mapping
 Given base entities and target entities, and it will apply the mapping.  
 `http://localhost:3000/mapping-demo`  
-&nbsp;  
 
 ![mapping-demo](https://github.com/shaharjacob/commonsense-analogy/blob/main/images/mapping-demo.png?raw=true)  
  
