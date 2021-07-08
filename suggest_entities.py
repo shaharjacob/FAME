@@ -38,13 +38,10 @@ class Suggestions(object):
             json.dump(self.google_suggestinos, f1, indent='\t')
 
 
-def get_suggestions_for_missing_entities(model: SentenceEmbedding, base: List[str], base_already_mapping: List[str], target_already_mapping: List[str], verbose: bool = False) -> Dict[str, Dict[str, Dict[str, Dict[str, List[str]]]]]:
+def get_suggestions_for_missing_entities(model: SentenceEmbedding, base_not_mapped_entities: List[str], base_already_mapping: List[str], target_already_mapping: List[str], verbose: bool = False) -> Dict[str, Dict[str, Dict[str, Dict[str, List[str]]]]]:
     sugges = {}
 
-    # first we need to extract the entities that not mapped
-    base_not_mapped_entities = [entity for entity in base if entity not in base_already_mapping]
-
-    # now we iterate on each iterate that not mapped (in the same domain), and try to guess to which entity they should be mapped.
+    # now we iterate on each entity that not mapped (in the same domain), and try to guess to which entity they should be mapped.
     for base_not_mapped_entity in base_not_mapped_entities:
         suggests_list = []
         sugges[base_not_mapped_entity] = {}
