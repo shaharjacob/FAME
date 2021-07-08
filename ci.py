@@ -38,7 +38,7 @@ class TestFunctions(unittest.TestCase):
 
 
     def test_quasimodo(self):
-        quasimodo = Quasimodo(path=str(Path.cwd() / 'tsv' / 'quasimodo.tsv'))
+        quasimodo = Quasimodo(path=str(Path.cwd().parent / 'tsv' / 'quasimodo.tsv'))
         
         # testing quasimodo.get_entity_props
         reference = ['has body part hoof', 'eat grass', 'has body part leg', 'need horseshoes', 'has body part nose']
