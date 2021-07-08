@@ -3,11 +3,11 @@
 ## Goal
 The main goal is to map entities from base domain to the target domain.  
 For example, given the following base domain: `earth, sun, gravity, newton, universe`, and the following target domain: `electrons, nucleus, electricity, faraday, cell`, we would like to map entities from the base to the target:
-- earth ![-->](https://github.com/shaharjacob/commonsense-analogy/blob/main/images/right_arrow.png?raw=true) electrons
-- sun ![-->](https://github.com/shaharjacob/commonsense-analogy/blob/main/images/right_arrow.png?raw=true) nucleus
-- gravity ![-->](https://github.com/shaharjacob/commonsense-analogy/blob/main/images/right_arrow.png?raw=true) electricity
-- newton ![-->](https://github.com/shaharjacob/commonsense-analogy/blob/main/images/right_arrow.png?raw=true) faraday
-- universe ![-->](https://github.com/shaharjacob/commonsense-analogy/blob/main/images/right_arrow.png?raw=true) cell  
+- earth &nbsp;<img src="https://github.com/shaharjacob/commonsense-analogy/blob/main/images/right_arrow.png?raw=true" alt="-->" width="18px"/> &nbsp;electrons
+- sun &nbsp;<img src="https://github.com/shaharjacob/commonsense-analogy/blob/main/images/right_arrow.png?raw=true" alt="-->" width="18px"/> &nbsp;nucleus
+- gravity &nbsp;<img src="https://github.com/shaharjacob/commonsense-analogy/blob/main/images/right_arrow.png?raw=true" alt="-->" width="18px"/> &nbsp;electricity
+- newton &nbsp;<img src="https://github.com/shaharjacob/commonsense-analogy/blob/main/images/right_arrow.png?raw=true" alt="-->" width="18px"/> &nbsp;faraday
+- universe &nbsp;<img src="https://github.com/shaharjacob/commonsense-analogy/blob/main/images/right_arrow.png?raw=true" alt="-->" width="18px"/> &nbsp;cell  
 
 **Moreover**, if some of the entities are missing, we would like to suggest entities for good mapping.  
 For example, if we will remove the entity `faraday` from the target, our mapping will leave `newton` without a map. So we would like to suggest entities (and of course, hopefully `faraday` will be one of the suggestions).  
