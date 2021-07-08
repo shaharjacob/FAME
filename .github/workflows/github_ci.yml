@@ -18,5 +18,6 @@ jobs:
         python -m pip install --upgrade pip
         pip install -r requirements.txt
     - name: Running unit-tests
+      uses: actions/checkout@v2 
       run: |
         python ci.py
