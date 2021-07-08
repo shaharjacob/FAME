@@ -49,8 +49,8 @@ def get_suggestions_for_missing_entities(model: SentenceEmbedding, base_not_mapp
         for idx, base_entity in enumerate(base_already_mapping):
             if verbose: secho(f"{(base_not_mapped_entity, base_entity)}", fg="blue", bold=True)
             sugges[base_not_mapped_entity][base_entity] = {}
-            props_entity_1 = model.get_edge_props(base_entity, base_not_mapped_entity)
-            props_entity_2 = model.get_edge_props(base_not_mapped_entity, base_entity)
+            props_entity_1 = model.get_entities_relations(base_entity, base_not_mapped_entity)
+            props_entity_2 = model.get_entities_relations(base_not_mapped_entity, base_entity)
 
             # we we use the map that we already know (base_entity->target_already_mapping[idx])
             if verbose: secho(f"  {target_already_mapping[idx]}", fg="red", bold=True)

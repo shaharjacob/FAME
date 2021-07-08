@@ -106,8 +106,8 @@ def get_edges_with_maximum_weight(similatiry_edges: List[Tuple[str, str, float]]
 def get_pair_mapping(model: SentenceEmbedding, 
                     mapping: List[Tuple[str, str]]):
 
-    props_edge1 = model.get_edge_props(mapping[0][0], mapping[0][1])
-    props_edge2 = model.get_edge_props(mapping[1][0], mapping[1][1])
+    props_edge1 = model.get_entities_relations(mapping[0][0], mapping[0][1])
+    props_edge2 = model.get_entities_relations(mapping[1][0], mapping[1][1])
 
     if not props_edge1 or not props_edge2:
         return {}
@@ -146,8 +146,8 @@ def get_best_pair_mapping(model: SentenceEmbedding,
         # earth .* sun, electrons .* nucleus AND sun .* earth, nucleus .* electrons
         mapping_score = 0
         for direction in mapping:
-            props_edge1 = model.get_edge_props(direction[0][0], direction[0][1])
-            props_edge2 = model.get_edge_props(direction[1][0], direction[1][1])
+            props_edge1 = model.get_entities_relations(direction[0][0], direction[0][1])
+            props_edge2 = model.get_entities_relations(direction[1][0], direction[1][1])
 
             if not props_edge1 or not props_edge2:
                 continue

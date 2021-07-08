@@ -1,25 +1,51 @@
-# commonsense-analogy
+# mapping-entities
 
 ## Goal
-Our main goal is to understand analogy, for example:  
+The main goal is to map entities from base domain to the target domain.  
+For example, given the following base domain: `earth, sun, gravity, newton, universe`, and the following target domain: `electrons, nucleus, electricity, faraday, cell`, we would like to map entities from the base to the target:
+- earth ![-->](https://github.com/shaharjacob/commonsense-analogy/blob/main/images/right_arrow.png?raw=true) electrons
+- sun ![-->](https://github.com/shaharjacob/commonsense-analogy/blob/main/images/right_arrow.png?raw=true) nucleus
+- gravity ![-->](https://github.com/shaharjacob/commonsense-analogy/blob/main/images/right_arrow.png?raw=true) electricity
+- newton ![-->](https://github.com/shaharjacob/commonsense-analogy/blob/main/images/right_arrow.png?raw=true) faraday
+- universe ![-->](https://github.com/shaharjacob/commonsense-analogy/blob/main/images/right_arrow.png?raw=true) cell  
 
-**1) Finding a good man is like finding a needle in a haystack:**  
-**2) That's as useful as rearranging deck chairs on the Titanic:**  
-**3) Earth rotate around the sun as electrons rotate around the nucleus**  
-**4) Sunscreen protects against the sun just as a tarpaulin protects against rain**  
-&nbsp;  
-**More examples:**  
-- https://examples.yourdictionary.com/analogy-ex.html 
-- http://www.metamia.com  
+**Moreover**, if some of the entities are missing, we would like to suggest entities for good mapping.  
+For example, if we will remove the entity `faraday` from the target, our mapping will leave `newton` without a map. So we would like to suggest entities (and of course, hopefully `faraday` will be one of the suggestions).  
+&nbsp; 
 
+# Demo
+For using our demo:
+```bash
+python app.py
+cd webapp
+npm start
+```
+## Mapping
+Given base entities and target entities, and it will apply the mapping.  
+TODO: image here  
+`http://localhost:3000/mapping-demo`  
+
+## Seggustions
+Same as mapping-demo above, but in case of missing entities, it will give suggestions.  
+TODO: image here  
+`http://localhost:3000/mapping-with-suggestions-demo`  
+
+## Relations:
+Given pair from base, and pair from the target, it will show the relations between them.  
+For example: given pair from base: (earth, sun) and pair from target: (electrons, nucleus).  
+TODO: image here  
+`http://localhost:3000/mapping-with-suggestions-demo`  
 &nbsp; 
 
 # Table of content
-- **concept_net.py**: Extracting entities information from ConcecptNet API.
-- **graph.py**: Creating a graph which represent the nouns in the sentence.  
-- **sentence_embadding.py**: Using sentence embadding to understand analogies.  
-- **google_autosuggest.py**: Extracting information from google auto-complete.  
-- **quasimodo.py**: Using quasimodo database for extracting information about connections between objects.  
+- **mapping.py**: TODO
+- **suggest_entities.py**: TODO
+- **concept_net.py**: Extracting entities information from ConcecptNet API.  
+- **sentence_embadding.py**: Using sentence embadding to compare between properties.
+- **google_autosuggest.py**: Extracting entities information from google auto-suggest.  
+- **quasimodo.py**: Extracting entities information from quasimodo database.  
+## Deprecated 
+- **graph.py**: Creating a graph which represent the nouns in the sentence.
 - **wikifier.py**: Extracting information about the part-of-speech of the given text.  
 &nbsp;  
 
@@ -39,92 +65,35 @@ props = get_entity_props("earth", n_best=10)
 ```  
 &nbsp;  
 
-## graph.py
-1) Taking a text and extract the **nouns** using wikifier part-of-speech.  
-2) For each noun, which will be a **node in our graph**, extract the information from quasimodo (single subject information).  
-3) For each node, extract information from conceptNet.  
-4) For each pair of nouns, extract inforamtion from google auto-complete, with a question ('why do', 'how do'). This will be on the edges.  
-5) For each pair, extract information from quasimodo. This is also will be on the edges.  
-
-```bash
-python graph.py --text "electrons revolve around the nucleus as the earth revolve around the sun"
-
-# the output graph can be found here:
-# https://github.com/shaharjacob/commonsense-analogy/blob/main/graphs/earth_electrons_nucleus_sun.gv.pdf
-```  
-Or using it from other scripts:
-```bash
-from graph import run
-from quasimodo import Quasimodo
-
-text = "electrons revolve around the nucleus as the earth revolve around the sun"
-quasimodo = Quasimodo(path="path-to-tsv")
-
-run(text, quasimodo)
-```
-
-&nbsp;  
-
 ## sentence_embadding.py
-The main purpose of this script is to give score for the sentences, such that we can decide if this is an analogy or not.  
-But let start with simple use, just give similarity score for two sentences, base on SBERT model:  
+We are using [sentence-transformers](https://www.sbert.net/) for measure similarities between sentences. In our case, sentences are going to be relations and properties.  
+By default, we are using this model: `stsb-mpnet-base-v2`  
+But more models available [here](https://huggingface.co/models?sort=downloads&search=sentence-transformers&p=0)  
 ```bash
 from sentence_embadding import SentenceEmbedding
 
-text1 = 'earth revolve around the sun'
-text2 = 'earth circle the sun'
-text3 = 'dog is the best friend of human'
-
 model = SentenceEmbedding()
-similarity = model.similarity(text1, text2, verbose=True)
-similarity
+
+similarity = model.similarity('earth revolve around the sun', 'earth circle the sun')
 -- 0.889
 
-similarity = model.similarity(text1, text3, verbose=True)
-similarity
+similarity = model.similarity('earth revolve around the sun', 'dog is the best friend of human')
 -- 0.049
 
-similarity = model.similarity(text1, text1, verbose=True)
-similarity
+similarity = model.similarity('earth revolve around the sun', 'earth revolve around the sun')
 -- 1.000
 ```  
-Now, given two sentences, we examine all possible pairs, and select the pair of pairs with the highest score:  
+
+The script also provide as a function that get relations between two entities (probably not the base place for that), it just call to google-autocomplete, conceptNet and Quasimodo the combine all together (include handle the database).  
 ```bash
-python sentence_embadding.py --sentence1 "The nucleus, which is positively charged, and the electrons which are negatively charged, compose the atom" --sentence2 "On earth, the atmosphere protects us from the sun, but not enough so we use sunscreen"  --verbose --full_details --threshold 0.5
-```
-Or using it from other scripts:  
-```bash
-from sentence_embadding import run
+from sentence_embadding import SentenceEmbedding
 
-sentence1 = "The nucleus, which is positively charged, and the electrons which are negatively charged, compose the atom"
-sentence2 = "On earth, the atmosphere protects us from the sun, but not enough so we use sunscreen"
-run(sentence1, sentence2, verbose=True, full_details=True, threshold=0.5)
-
-# the output:
-```
-![alt text](https://github.com/shaharjacob/commonsense-analogy/blob/main/images/sentence_embedding_1.png?raw=true)  
+model = SentenceEmbedding()
+res = model.get_entities_relations("earth", "sun")
+# so the output will be:
+['turn around', 'revolving around the', 'rotate around', 'not fall into', 'move around the', 'be pulled into', 'revolve around', 'spin around', 'be to', 'spin around the', 'move around', 'be attracted to', 'be close to', 'need', 'circle the', 'has property', 'orbit']
+```  
 &nbsp;  
-**Notice** that in the first sentence it found 3 nouns: ['atom', 'electrons', 'nucleus'], in the second sentence it found also 3 nouns: ['atmosphere', 'earth', 'sun'], and from all possible options it found that the best match is: earth --> sun, electrons --> nucleus.  
-&nbsp;  
-Using --verbose will show you the scores for all the options:  
-![alt text](https://github.com/shaharjacob/commonsense-analogy/blob/main/images/sentence_embedding_2.png?raw=true)  
-&nbsp;  
-Using --verbose --full-details will show you also inside the edges. The score is the average of the 5 best match (or less). Here is the top scores:  
-![alt text](https://github.com/shaharjacob/commonsense-analogy/blob/main/images/sentence_embedding_3.png?raw=true)  
-&nbsp;  
-
-### Visualization with React.js
-```bash
-python api.py
-cd webapp
-npm start
-```
-
-Given two edges, calcualte the maximum bipraetite match, and visualize with React.js.  
-For example:
-![alt text](https://github.com/shaharjacob/commonsense-analogy/blob/main/images/both_react.png?raw=true)  
-&nbsp;  
-
 
 ## google_autosuggest.py
 This script using the API of google autosuggest to extract entities information.  
@@ -213,6 +182,32 @@ wikifier.get_part_of_speech()
 ```
 ![alt text](https://github.com/shaharjacob/commonsense-analogy/blob/main/images/wikifier_get_part_of_speech1.png?raw=true)  
 &nbsp;  
+
+## graph.py
+1) Taking a text and extract the **nouns** using wikifier part-of-speech.  
+2) For each noun, which will be a **node in our graph**, extract the information from quasimodo (single subject information).  
+3) For each node, extract information from conceptNet.  
+4) For each pair of nouns, extract inforamtion from google auto-complete, with a question ('why do', 'how do'). This will be on the edges.  
+5) For each pair, extract information from quasimodo. This is also will be on the edges.  
+
+```bash
+python graph.py --text "electrons revolve around the nucleus as the earth revolve around the sun"
+
+# the output graph can be found here:
+# https://github.com/shaharjacob/commonsense-analogy/blob/main/graphs/earth_electrons_nucleus_sun.gv.pdf
+```  
+Or using it from other scripts:
+```bash
+from graph import run
+from quasimodo import Quasimodo
+
+text = "electrons revolve around the nucleus as the earth revolve around the sun"
+quasimodo = Quasimodo(path="path-to-tsv")
+
+run(text, quasimodo)
+```
+
+
 &nbsp;  
 
 # References
@@ -232,34 +227,3 @@ wikifier.get_part_of_speech()
 - [The Analogical Mind](https://github.com/shaharjacob/commonsense-analogy/blob/main/pdf/The_Analogical_Mind.pdf)  
 - [The Structure-Mapping Engine: Algorithm and Examples](https://github.com/shaharjacob/commonsense-analogy/blob/main/pdf/structure_mapping_engine.pdf)  
 - [The Latent Relation Mapping Engine: Algorithm and Experiments](https://github.com/shaharjacob/commonsense-analogy/blob/main/pdf/The_Latent_Relation_Mapping_Engine.pdf)   
-
-&nbsp;     
-
-## Additions
-- https://examples.yourdictionary.com/analogy-ex.html  
-- https://songmeanings.com
-- https://www.songfacts.com  
-&nbsp;  
-
-
-## Remote access via VScode
-1) Follow the instructions here:  https://ca.huji.ac.il/book/samba-vpn-0  
-&nbsp;&nbsp;- In the end you should have RA account + cisco VPN  
-2) Connect to the VPN  
-&nbsp;&nbsp;- host: samba.huji.ac.il  
-&nbsp;&nbsp;- username: {ra-username}%ra (for example: shaharjacob%ra)  
-&nbsp;&nbsp;- password: your password of the ra account (not the OTP!)  
-3) Now you should install VScode from here: https://code.visualstudio.com/  
-4) After the installation complete, open it, and in the left menu icons, choose **Extensions**.  
-5) Search for **Remote: SSH** and install it (reload maybe required).  
-6) Now, again in the left menu, search for **Remote Explorer**.  
-7) Click on the + button (Add New).  
-8) Now enter: `ssh -l <cse-username> river.cs.huji.ac.il`,&nbsp;&nbsp; for example: `ssh -l shahar.jacob river.cs.huji.ac.il`  
-&nbsp;&nbsp;- **Notice**: ra-username and cse-username not necessarily have to be the same!  
-9) click **linux** os if it ask, then it will ask your password, so enter your cse-password.  
-
-&nbsp;  
-You can now use the terminal for running python scripts.  
-In addition, you can nevigate to the desire folder (and of course you can create/remove/edit files using the editor).
-
-

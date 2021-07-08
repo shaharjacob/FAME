@@ -74,8 +74,8 @@ def two_entities():
     d = {0: {}, 1: {}, 2: {}, 3: {}}
 
     for edge_idx, edge_ in enumerate(utils.get_edges_combinations(edge1, edge2)):   
-        props_edge1 = model.get_edge_props(edge_[0][0], edge_[0][1])
-        props_edge2 = model.get_edge_props(edge_[1][0], edge_[1][1])
+        props_edge1 = model.get_entities_relations(edge_[0][0], edge_[0][1])
+        props_edge2 = model.get_entities_relations(edge_[1][0], edge_[1][1])
         if not props_edge1 or not props_edge2:
             for thresh in utils.DISTANCE_TRESHOLDS:
                 d[edge_idx][thresh] = {
@@ -127,8 +127,8 @@ def bipartite_graph():
     edge2 = (request.args.get('target1'), request.args.get('target2'))
     model = SentenceEmbedding(init_quasimodo=False, init_inflect=False)
 
-    props_edge1 = model.get_edge_props(edge1[0], edge1[1])
-    props_edge2 = model.get_edge_props(edge2[0], edge2[1])
+    props_edge1 = model.get_entities_relations(edge1[0], edge1[1])
+    props_edge2 = model.get_entities_relations(edge2[0], edge2[1])
 
     props1 = python2react.get_nodes_for_app_bipartite(props=props_edge1, start_idx=0, x=200, group=0)
     props2 = python2react.get_nodes_for_app_bipartite(props=props_edge2, start_idx=len(props1), x=800, group=1)
