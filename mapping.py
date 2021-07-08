@@ -178,7 +178,7 @@ def get_best_pair_mapping(model: SentenceEmbedding,
     }
 
 
-def mapping(base, target):
+def mapping(base: List[str], target: List[str], suggestions: bool = True):
     model = SentenceEmbedding(init_quasimodo=True, init_inflect=False)
     relations = []
     base_already_mapping = []
@@ -225,11 +225,12 @@ def mapping(base, target):
         else:
             break
     
-    base_not_mapped_entities = [entity for entity in base if entity not in base_already_mapping]
-    base_suggestions = suggest_entities.get_suggestions_for_missing_entities(model, base_not_mapped_entities, base_already_mapping, target_already_mapping, verbose=True)
-    
-    target_not_mapped_entities = [entity for entity in target if entity not in target_already_mapping]
-    target_suggestions = suggest_entities.get_suggestions_for_missing_entities(model, target_not_mapped_entities, target_already_mapping, base_already_mapping, verbose=True)
+    if suggestions:
+        base_not_mapped_entities = [entity for entity in base if entity not in base_already_mapping]
+        base_suggestions = suggest_entities.get_suggestions_for_missing_entities(model, base_not_mapped_entities, base_already_mapping, target_already_mapping, verbose=True)
+        
+        target_not_mapped_entities = [entity for entity in target if entity not in target_already_mapping]
+        target_suggestions = suggest_entities.get_suggestions_for_missing_entities(model, target_not_mapped_entities, target_already_mapping, base_already_mapping, verbose=True)
     
     return {
         "mapping": [f"{b} --> {t}" for b, t in zip(base_already_mapping, target_already_mapping)],
