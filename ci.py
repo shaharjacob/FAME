@@ -3,7 +3,7 @@ from pathlib import Path
 
 import concept_net
 import google_autosuggest
-from quasimodo import Quasimodo
+from quasimodo import Quasimodo, merge_tsvs
 
 
 class TestFunctions(unittest.TestCase):
@@ -38,23 +38,24 @@ class TestFunctions(unittest.TestCase):
         self.assertEqual(sorted(reference), sorted(actual))
 
 
-    # def test_quasimodo(self):
-    #     quasimodo = Quasimodo(path=str(Path.cwd() / 'tsv' / 'quasimodo.tsv'))
+    def test_quasimodo(self):
+        merge_tsvs(str(Path.cwd() / 'tsv' / 'quasimodo.tsv'))
+        quasimodo = Quasimodo(path=str(Path.cwd() / 'tsv' / 'quasimodo.tsv'))
         
-    #     # testing quasimodo.get_entity_props
-    #     reference = ['has body part hoof', 'eat grass', 'has body part leg', 'need horseshoes', 'has body part nose']
-    #     actual = [f"{prop[0]} {prop[1]}" for prop in quasimodo.get_entity_props('horse', n_largest=5, plural_and_singular=True)]
-    #     self.assertEqual(sorted(reference), sorted(actual))
+        # testing quasimodo.get_entity_props
+        reference = ['has body part hoof', 'eat grass', 'has body part leg', 'need horseshoes', 'has body part nose']
+        actual = [f"{prop[0]} {prop[1]}" for prop in quasimodo.get_entity_props('horse', n_largest=5, plural_and_singular=True)]
+        self.assertEqual(sorted(reference), sorted(actual))
         
-    #     # testing quasimodo.get_entities_relations
-    #     reference = ['be to', 'rotate around', 'pull in', 'orbit', 'be closest star to']
-    #     actual = quasimodo.get_entities_relations('sun', 'earth', n_largest=5, plural_and_singular=True)
-    #     self.assertEqual(sorted(reference), sorted(actual))
+        # testing quasimodo.get_entities_relations
+        reference = ['be to', 'rotate around', 'pull in', 'orbit', 'be closest star to']
+        actual = quasimodo.get_entities_relations('sun', 'earth', n_largest=5, plural_and_singular=True)
+        self.assertEqual(sorted(reference), sorted(actual))
 
-    #     # testing quasimodo.get_similarity_between_entities
-    #     reference = ['has temperature hot', 'has property aesthetic', 'has color blue', 'be in space', 'has property round']
-    #     actual = [f"{prop[0]} {prop[1]}" for prop in quasimodo.get_similarity_between_entities('sun', 'earth', n_largest=5, plural_and_singular=True)]
-    #     self.assertEqual(sorted(reference), sorted(actual))
+        # testing quasimodo.get_similarity_between_entities
+        reference = ['has temperature hot', 'has property aesthetic', 'has color blue', 'be in space', 'has property round']
+        actual = [f"{prop[0]} {prop[1]}" for prop in quasimodo.get_similarity_between_entities('sun', 'earth', n_largest=5, plural_and_singular=True)]
+        self.assertEqual(sorted(reference), sorted(actual))
 
 
 if __name__ == '__main__':
