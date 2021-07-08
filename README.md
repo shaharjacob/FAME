@@ -22,7 +22,7 @@ python app.py
 cd webapp
 npm start
 ```
-### :green_circle: Mapping
+#### :green_circle: Mapping
 Given base entities and target entities, and it will apply the mapping.  
 TODO: image here  
 `http://localhost:3000/mapping-demo`  
@@ -46,7 +46,7 @@ TODO: image here
 - **sentence_embadding.py**: Using sentence embadding to compare between properties.
 - **google_autosuggest.py**: Extracting entities information from google auto-suggest.  
 - **quasimodo.py**: Extracting entities information from quasimodo database.  
-#### :warning: Deprecated 
+#### &nbsp;&nbsp;:warning: Deprecated:
 - **graph.py**: Creating a graph which represent the nouns in the sentence.
 - **wikifier.py**: Extracting information about the part-of-speech of the given text.  
 &nbsp;  
