@@ -1,5 +1,5 @@
 <div align="center">
-<img src="https://github.com/shaharjacob/commonsense-analogy/blob/main/images/mapping-entities-hayadata.png?raw=true" alt="mapping-entities"/>
+<img src="https://github.com/shaharjacob/commonsense-analogy/blob/main/images/mapping-entities-hayadata.png?raw=true" width="500px" alt="mapping-entities"/>
 </div>
 
 ## :dart: Goal
