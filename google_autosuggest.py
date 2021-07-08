@@ -228,5 +228,5 @@ def process(d: Dict[str, List[List[str]]], plural_and_singular: bool = True, ver
 if __name__ == '__main__':
     # res = get_entity_suggestions("electricity", "discovered")
     # res = get_entity_props("sun")
-    res = get_entities_relations("earth", "sun").get("props", [])
+    res = get_entities_relations("earth", "sun").get("props")
     print(res)
