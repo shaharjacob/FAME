@@ -2,7 +2,7 @@
 <img src="https://github.com/shaharjacob/commonsense-analogy/blob/main/images/mapping-entities-hayadata.png?raw=true" width="500px" alt="mapping-entities"/>
 </div>
 
-## :dart: Goal
+# :dart: Goal
 The main goal is to map entities from base domain to the target domain.  
 For example, given the following base domain: `earth, sun, gravity, newton, universe`, and the following target domain: `electrons, nucleus, electricity, faraday, cell`, we would like to map entities from the base to the target:
 - earth &nbsp;<img src="https://github.com/shaharjacob/commonsense-analogy/blob/main/images/right_arrow.png?raw=true" alt="-->" width="18px"/> &nbsp;electrons
@@ -15,43 +15,43 @@ For example, given the following base domain: `earth, sun, gravity, newton, univ
 For example, if we will remove the entity `faraday` from the target, our mapping will leave `newton` without a map. So we would like to suggest entities (and of course, hopefully `faraday` will be one of the suggestions).  
 &nbsp; 
 
-# Demo
+# :clapper: Demo
 For using our demo:
 ```bash
 python app.py
 cd webapp
 npm start
 ```
-## Mapping
+## :green_circle: Mapping
 Given base entities and target entities, and it will apply the mapping.  
 TODO: image here  
 `http://localhost:3000/mapping-demo`  
 
-## Suggestions
+## :large_blue_circle: Suggestions
 Same as mapping-demo above, but in case of missing entities, it will give suggestions.  
 TODO: image here  
 `http://localhost:3000/mapping-with-suggestions-demo`  
 
-## Relations:
+## :brown_circle: Relations:
 Given pair from base, and pair from the target, it will show the relations between them.  
 For example: given pair from base: (earth, sun) and pair from target: (electrons, nucleus).  
 TODO: image here  
 `http://localhost:3000/mapping-with-suggestions-demo`  
 &nbsp; 
 
-# Table of content
+# :books: Table of content
 - **mapping.py**: TODO
 - **suggest_entities.py**: TODO
 - **concept_net.py**: Extracting entities information from ConcecptNet API.  
 - **sentence_embadding.py**: Using sentence embadding to compare between properties.
 - **google_autosuggest.py**: Extracting entities information from google auto-suggest.  
 - **quasimodo.py**: Extracting entities information from quasimodo database.  
-## Deprecated 
+## :warning: Deprecated 
 - **graph.py**: Creating a graph which represent the nouns in the sentence.
 - **wikifier.py**: Extracting information about the part-of-speech of the given text.  
 &nbsp;  
 
-## concept_net.py
+## :large_blue_circle: concept_net.py
 We are using [ConceptNet](https://conceptnet.io/) API for extracting information for entities.  
 
 ```bash
@@ -67,7 +67,7 @@ props = get_entity_props("earth", n_best=10)
 ```  
 &nbsp;  
 
-## sentence_embadding.py
+## :brown_circle: sentence_embadding.py
 We are using [sentence-transformers](https://www.sbert.net/) for measure similarities between sentences. In our case, sentences are going to be relations and properties.  
 By default, we are using this model: `stsb-mpnet-base-v2`  
 But more models available [here](https://huggingface.co/models?sort=downloads&search=sentence-transformers&p=0)  
@@ -97,7 +97,7 @@ res = model.get_entities_relations("earth", "sun")
 ```  
 &nbsp;  
 
-## google_autosuggest.py
+## :yellow_circle: google_autosuggest.py
 This script using the API of google autosuggest to extract entities information.  
 When we looking for relations between two entities, the form is: `{question} {entity1} .* {entity2}`  
 When we looking for suggestions for new entities, the form is: `{question} {entity} {prop} .*` and `{question} .* {prop} {entity}`  
@@ -119,7 +119,7 @@ suggestions = get_entity_suggestions("electricity", "discovered")
 ['edison', 'benjamin', 'faraday', 'they']
 ```  
 
-## quasimodo.py
+## :red_circle: quasimodo.py
 This script using quasimodo database, which contains semantic information.  
 We are intersting in the following fields: **subject**, **predicate**, **object**, and **plausibility**.  
 
@@ -156,7 +156,7 @@ quasimodo.get_similarity_between_entities('sun', 'earth', n_largest=20, verbose=
 ![alt text](https://github.com/shaharjacob/commonsense-analogy/blob/main/images/get_similarity_between_nodes_quasimodo_api.png?raw=true)  
 &nbsp;  
 
-## wikifier.py
+## :green_circle: wikifier.py
 This script is extracting information from a text, such as part-of-speech.  
 It using wikifier API for that purpose.  
 
@@ -185,7 +185,7 @@ wikifier.get_part_of_speech()
 ![alt text](https://github.com/shaharjacob/commonsense-analogy/blob/main/images/wikifier_get_part_of_speech1.png?raw=true)  
 &nbsp;  
 
-## graph.py
+## :purple_circle: graph.py
 1) Taking a text and extract the **nouns** using wikifier part-of-speech.  
 2) For each noun, which will be a **node in our graph**, extract the information from quasimodo (single subject information).  
 3) For each node, extract information from conceptNet.  
@@ -212,7 +212,7 @@ run(text, quasimodo)
 
 &nbsp;  
 
-# References
+# :clipboard: References
 - **Quasimodo**: https://quasimodo.r2.enst.fr/  
 - **qa-srl**: http://qasrl.org/  
 - **hayadata-lab**: http://www.hyadatalab.com/  
@@ -222,7 +222,7 @@ run(text, quasimodo)
 &nbsp;  
   
 
-# PDFs
+# :pushpin: PDFs
 - [Analogy-based Detection of Morphological and Semantic Relations With Word Embeddings: What Works and What Doesn’t](https://github.com/shaharjacob/commonsense-analogy/blob/main/pdf/Analogy_based_Detection_of_Morphological_and_Semantic_Relations.pdf)  
 - [Using Analogy To Acquire CommonsenseKnowledge from Human Contributors](https://github.com/shaharjacob/commonsense-analogy/blob/main/pdf/Using_Analogy_To_Acquire_CommonsenseKnowledge_from_Human_Contributors.pdf)  
 - [Reasoning and Learning by Analogy](https://github.com/shaharjacob/commonsense-analogy/blob/main/pdf/UReasoning_and_Learning_by_Analogy.pdf)  
