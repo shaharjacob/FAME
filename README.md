@@ -51,7 +51,7 @@ TODO: image here
 - **wikifier.py**: Extracting information about the part-of-speech of the given text.  
 &nbsp;  
 
-### :large_blue_circle: concept_net.py
+#### :large_blue_circle: concept_net.py
 We are using [ConceptNet](https://conceptnet.io/) API for extracting information for entities.  
 
 ```bash
@@ -67,7 +67,7 @@ props = get_entity_props("earth", n_best=10)
 ```  
 &nbsp;  
 
-### :brown_circle: sentence_embadding.py
+#### :brown_circle: sentence_embadding.py
 We are using [sentence-transformers](https://www.sbert.net/) for measure similarities between sentences. In our case, sentences are going to be relations and properties.  
 By default, we are using this model: `stsb-mpnet-base-v2`  
 But more models available [here](https://huggingface.co/models?sort=downloads&search=sentence-transformers&p=0)  
@@ -97,7 +97,7 @@ res = model.get_entities_relations("earth", "sun")
 ```  
 &nbsp;  
 
-### :yellow_circle: google_autosuggest.py
+#### :yellow_circle: google_autosuggest.py
 This script using the API of google autosuggest to extract entities information.  
 When we looking for relations between two entities, the form is: `{question} {entity1} .* {entity2}`  
 When we looking for suggestions for new entities, the form is: `{question} {entity} {prop} .*` and `{question} .* {prop} {entity}`  
@@ -119,7 +119,7 @@ suggestions = get_entity_suggestions("electricity", "discovered")
 ['edison', 'benjamin', 'faraday', 'they']
 ```  
 
-### :red_circle: quasimodo.py
+#### :red_circle: quasimodo.py
 This script using quasimodo database, which contains semantic information.  
 We are intersting in the following fields: **subject**, **predicate**, **object**, and **plausibility**.  
 
@@ -156,7 +156,7 @@ quasimodo.get_similarity_between_entities('sun', 'earth', n_largest=20, verbose=
 ![alt text](https://github.com/shaharjacob/commonsense-analogy/blob/main/images/get_similarity_between_nodes_quasimodo_api.png?raw=true)  
 &nbsp;  
 
-### :green_circle: wikifier.py
+#### :green_circle: wikifier.py
 This script is extracting information from a text, such as part-of-speech.  
 It using wikifier API for that purpose.  
 
@@ -185,7 +185,7 @@ wikifier.get_part_of_speech()
 ![alt text](https://github.com/shaharjacob/commonsense-analogy/blob/main/images/wikifier_get_part_of_speech1.png?raw=true)  
 &nbsp;  
 
-### :purple_circle: graph.py
+#### :purple_circle: graph.py
 1) Taking a text and extract the **nouns** using wikifier part-of-speech.  
 2) For each noun, which will be a **node in our graph**, extract the information from quasimodo (single subject information).  
 3) For each node, extract information from conceptNet.  
