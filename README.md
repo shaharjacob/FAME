@@ -25,7 +25,7 @@ Given base entities and target entities, and it will apply the mapping.
 TODO: image here  
 `http://localhost:3000/mapping-demo`  
 
-## Seggustions
+## Suggestions
 Same as mapping-demo above, but in case of missing entities, it will give suggestions.  
 TODO: image here  
 `http://localhost:3000/mapping-with-suggestions-demo`  
