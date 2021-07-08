@@ -1,4 +1,5 @@
 import unittest
+from pathlib import Path
 
 import concept_net
 import google_autosuggest
@@ -37,7 +38,7 @@ class TestFunctions(unittest.TestCase):
 
 
     def test_quasimodo(self):
-        quasimodo = Quasimodo(path='tsv/quasimodo.tsv')
+        quasimodo = Quasimodo(path=str(Path.cwd() / 'tsv' / 'quasimodo.tsv'))
         
         # testing quasimodo.get_entity_props
         reference = ['has body part hoof', 'eat grass', 'has body part leg', 'need horseshoes', 'has body part nose']
