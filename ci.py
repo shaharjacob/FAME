@@ -22,9 +22,9 @@ class TestFunctions(unittest.TestCase):
 
     def test_google_autosuggest(self):
         # testing google_autosuggest.get_entities_relations
-        reference = ['revolve around', 'orbit', 'circle the', 'rotate around', 'move around the', 'spin around the', 'not fall into', 'move around']
+        # reference = ['revolve around', 'orbit', 'circle the', 'rotate around', 'move around the', 'spin around the', 'not fall into', 'move around']
+        reference = ['revolve around', 'rotate around the', 'orbit', 'need the', 'rotate around', 'not collide with', 'orbit around the', 'spin around the', 'orbit the', 'start orbiting the', 'form after the formation of', 'from the formation of the']
         actual = google_autosuggest.get_entities_relations("earth", "sun").get("props")
-        print(actual)
         self.assertEqual(sorted(reference), sorted(actual))
 
         # testing google_autosuggest.get_entity_props
