@@ -24,6 +24,7 @@ class TestFunctions(unittest.TestCase):
         # testing google_autosuggest.get_entities_relations
         reference = ['revolve around', 'orbit', 'circle the', 'rotate around', 'move around the', 'spin around the', 'not fall into', 'move around']
         actual = google_autosuggest.get_entities_relations("earth", "sun").get("props")
+        print(actual)
         self.assertEqual(sorted(reference), sorted(actual))
 
         # testing google_autosuggest.get_entity_props
