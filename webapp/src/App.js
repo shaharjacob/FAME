@@ -6,6 +6,7 @@ import TwoEntities from './components/graph/TwoEntities'
 import Mapping from './components/graph/Mapping'
 import TestViewer from './components/graph/TestViewer'
 import Main from './components/main/Main'
+import MappingDemo from './components/main/MappingDemo'
 
 
 const App = () => {
@@ -28,6 +29,9 @@ const App = () => {
           </Route>
           <Route path='/mapping'>
             <Mapping />
+          </Route>
+          <Route path='/mapping-demo'>
+            <MappingDemo />
           </Route>
           <Route path='/test'>
             <TestViewer />

@@ -1,0 +1,38 @@
+.mapping-demo-container {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+.mapping-demo-inputs {
+    display: grid;
+    grid-template-columns: 0.5fr 0.5fr;
+    grid-template-rows: 0.05fr 0.95fr;
+    margin-top: 50px;
+    width: 50%;
+    height: 250px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+.mapping-demo-button-submit {
+    background-color: #006eec;
+    border: 0;
+    border-radius: 5px;
+    color: #fafafa;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-right: 8px;
+    padding-left: 8px;
+}
+
+.mapping-demo-button-submit:hover {
+    background-color: #065fc5;
+    cursor: pointer;
+}
+
+.mapping-demo-textarea {
+    margin-left: 10px;
+    margin-right: 10px;
+}

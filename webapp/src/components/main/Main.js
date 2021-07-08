@@ -4,7 +4,7 @@ import { useHistory } from 'react-router-dom'
 import { options } from '../../utils'
 import './Main.css'
 import RightArrow from '../../assets/arrow-right.svg'
-import Hayadata from '../../assets/hayadata.png'
+import Hayadata from '../../assets/mapping-entities-hayadata.png'
 
 
 const Main = () => {

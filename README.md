@@ -24,8 +24,11 @@ npm start
 ```
 #### :green_circle: Mapping
 Given base entities and target entities, and it will apply the mapping.  
-TODO: image here  
 `http://localhost:3000/mapping-demo`  
+For the following example:  
+![mapping-demo](https://github.com/shaharjacob/commonsense-analogy/blob/main/images/mapping-demo.png?raw=true)  
+The output will be:  
+![mapping](https://github.com/shaharjacob/commonsense-analogy/blob/main/images/mapping.png?raw=true)  
 
 #### :large_blue_circle: Suggestions
 Same as mapping-demo above, but in case of missing entities, it will give suggestions.  
