@@ -27,12 +27,12 @@ Given base entities and target entities, and it will apply the mapping.
 TODO: image here  
 `http://localhost:3000/mapping-demo`  
 
-### :large_blue_circle: Suggestions
+#### :large_blue_circle: Suggestions
 Same as mapping-demo above, but in case of missing entities, it will give suggestions.  
 TODO: image here  
 `http://localhost:3000/mapping-with-suggestions-demo`  
 
-### :brown_circle: Relations:
+#### :brown_circle: Relations:
 Given pair from base, and pair from the target, it will show the relations between them.  
 For example: given pair from base: (earth, sun) and pair from target: (electrons, nucleus).  
 TODO: image here  
