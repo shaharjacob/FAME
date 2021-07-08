@@ -88,7 +88,7 @@ class SentenceEmbedding(SentenceTransformer):
         if f"{head}#{tail}" in self.google_edges and not self.override_database:
             autocomplete_props = self.google_edges[f"{head}#{tail}"]
         else:
-            autocomplete_props = google_autosuggest.get_entities_relations(head, tail).get((head, tail), {"suggestions": [], "props": []}).get("props", [])
+            autocomplete_props = google_autosuggest.get_entities_relations(head, tail).get("props", [])
             self.google_edges[f"{head}#{tail}"] = autocomplete_props  
             should_save = True
 

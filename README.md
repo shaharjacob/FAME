@@ -135,9 +135,9 @@ When we looking for entity properties, the form is: `{entity} {which} .*` when `
 ```bash
 from google_autosuggest import get_entity_suggestions, get_entity_props, get_entities_relations
 
-relations = get_entities_relations("earth", "sun")
+relations = get_entities_relations("earth", "sun").get("props)
 # so the output will be:
-['revolve around', 'move around the', 'rotate around', 'orbit', 'not fall into', 'circle the', 'revolve around', 'spin around the', 'rotate around', 'revolve around', 'move around', 'circle the', 'orbit']
+['revolve around', 'orbit', 'circle the', 'rotate around', 'move around the', 'spin around the', 'not fall into', 'move around']
 
 props = get_entity_props("newton")
 # so the output will be:

@@ -83,6 +83,7 @@ class GoogleAutoSuggestTwoEntities(object):
         self.suggestions: List[Tuple[str]] = self.init_suggestions()
 
     def init_suggestions(self) -> List[Tuple[str]]:
+        already_seen = set()
         sugges: List[Tuple[str]] = []
         keyword = self.keyword.replace(" ", "+")
         url = f"http://suggestqueries.google.com/complete/search?client={self.browser}&q={keyword}&hl=us"
@@ -96,8 +97,11 @@ class GoogleAutoSuggestTwoEntities(object):
                 # because they can be two words, we need to allow it also. otherwise they will not be found.
                 pairs = [f"{parts[i]} {parts[i+1]}" for i in range(len(parts) - 1)]
                 if all(elem in (parts + pairs) for elem in [self.entity1, self.entity2, self.question]):
-                    sugges.append((suggestion, match.group(4)))
-        return list(set(sugges))
+                    prop = match.group(4)
+                    if prop not in already_seen:
+                        sugges.append((suggestion, prop))
+                        already_seen.add(prop)
+        return sugges
 
     def render_single_suggestion(self, suggestion: tuple):
         # looking the indecies of the question
@@ -134,7 +138,7 @@ class GoogleAutoSuggestTwoEntities(object):
 def extend_suggestions(entity1: str, entity2: str, question: str, suggestions: List[Tuple[str]], verbose: bool):
     googleAC = GoogleAutoSuggestTwoEntities(question, entity1, entity2)
     for suggestion in googleAC.suggestions:
-        if suggestion[0] not in suggestions["suggestions"]:
+        if suggestion[0] not in suggestions["suggestions"] and suggestion[1] not in suggestions["props"]:
             if verbose:
                 googleAC.render_single_suggestion(suggestion)
             suggestions["suggestions"].append(suggestion[0])
@@ -191,45 +195,38 @@ def get_entities_relations(entity1: str, entity2: str) -> List[str]:
     # The order is important! get_entities_relations(entity1, entity2) != get_entities_relations(entity2, entity1)
     # for example, if entity1=earth, entity2=sun, it will return relations like: revolve around, not fall into, orbit.
     d = {
-        "why do": [[entity1, entity2]],
-        "why does": [[entity1, entity2]],
-        "why did": [[entity1, entity2]],
-        "how do": [[entity1, entity2]],
-        "how does": [[entity1, entity2]],
-        "how did": [[entity1, entity2]],
+        "why do": [entity1, entity2],
+        "why does": [entity1, entity2],
+        "why did": [entity1, entity2],
+        "how do": [entity1, entity2],
+        "how does": [entity1, entity2],
+        "how did": [entity1, entity2],
     }
     return process(d, verbose=False)
 
 
 def process(d: Dict[str, List[List[str]]], plural_and_singular: bool = True, verbose: bool = False) -> List[str]:
     engine = inflect.engine()
-    suggestions = {}
+    suggestions = {"suggestions": [], "props": []}
     for question, objects in d.items():
         if verbose:
             secho(f"\n[INFO] collect information on question '{question}'", fg="blue")
-        iterator = tqdm(objects) if verbose else objects
-        for entry in iterator:
-            entity1, entity2 = entry
-            if (entity1, entity2) not in suggestions:
-                suggestions[(entity1, entity2)] = {
-                    "suggestions": [],
-                    "props": [],
-                }
-            googleAC = GoogleAutoSuggestTwoEntities(question, entity1, entity2)
-            for suggestion in googleAC.suggestions:
-                if suggestion[0] not in suggestions[(entity1, entity2)]["suggestions"]:
-                    if verbose:
-                        googleAC.render_single_suggestion(suggestion)
-                    # we want the whole suggestion and not only the prop for better visualization and debugging
-                    suggestions[(entity1, entity2)]["suggestions"].append(suggestion[0])
-                    suggestions[(entity1, entity2)]["props"].append(suggestion[1])
-            if plural_and_singular:
-                extend_to_plural_and_singular(engine, entity1, entity2, question, suggestions[(entity1, entity2)], verbose=verbose)
+        entity1, entity2 = objects
+        googleAC = GoogleAutoSuggestTwoEntities(question, entity1, entity2)
+        for suggestion in googleAC.suggestions:
+            if suggestion[0] not in suggestions["suggestions"] and suggestion[1] not in suggestions["props"]:
+                if verbose:
+                    googleAC.render_single_suggestion(suggestion)
+                # we want the whole suggestion and not only the prop for better visualization and debugging
+                suggestions["suggestions"].append(suggestion[0])
+                suggestions["props"].append(suggestion[1])
+        if plural_and_singular:
+            extend_to_plural_and_singular(engine, entity1, entity2, question, suggestions, verbose=verbose)
     return suggestions
 
 
 if __name__ == '__main__':
     # res = get_entity_suggestions("electricity", "discovered")
     # res = get_entity_props("sun")
-    res = get_entities_relations("earth", "sun")
+    res = get_entities_relations("earth", "sun").get("props", [])
     print(res)
