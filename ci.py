@@ -2,6 +2,7 @@ import unittest
 from pathlib import Path
 
 import concept_net
+import suggest_entities
 import google_autosuggest
 from quasimodo import Quasimodo, merge_tsvs
 
@@ -57,6 +58,18 @@ class TestFunctions(unittest.TestCase):
         reference = ['has temperature hot', 'has property aesthetic', 'has color blue', 'be in space', 'has property round']
         actual = [f"{prop[0]} {prop[1]}" for prop in quasimodo.get_similarity_between_entities('sun', 'earth', n_largest=5, plural_and_singular=True)]
         self.assertEqual(sorted(reference), sorted(actual))
+    
+
+    def test_suggest_entities(self):
+        # testing get_score_between_two_entitites
+        reference = 0.83
+        actual = suggest_entities.get_score_between_two_entitites("newton", "faraday")
+        self.assertEqual(reference, actual)
+
+        # testing get_best_matches_for_entity
+        reference = [('newton', 'faraday', 0.83), ('newton', 'paper', 0.483), ('newton', 'wall', 0.482), ('newton', 'apple', 0.438), ('newton', 'tomato', 0.437)]
+        actual = suggest_entities.get_best_matches_for_entity("newton", ["faraday", "sky", "window", "paper", "photo", "apple", "tomato", "wall", "home", "horse"])
+        self.assertEqual(reference, actual)
 
 
 if __name__ == '__main__':

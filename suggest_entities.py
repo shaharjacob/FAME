@@ -102,6 +102,6 @@ def get_best_matches_for_entity(entity: str, entities: List[str], n_best: int = 
 
 
 if __name__ == '__main__':
-    res = get_score_between_two_entitites("newton", "faraday")
+    # res = get_score_between_two_entitites("newton", "faraday")
+    res = get_best_matches_for_entity("newton", ["faraday", "sky", "window", "paper", "photo", "apple", "tomato", "wall", "home", "horse"])
     print(res)
-    # pass

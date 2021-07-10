@@ -2376,5 +2376,203 @@
 			"right to life"
 		]
 	],
-	"the level of organization": []
+	"the level of organization": [],
+	"sky": [
+		[
+			"appear",
+			"blue"
+		],
+		[
+			"be gone",
+			"working"
+		],
+		[
+			"has color",
+			"red"
+		],
+		[
+			"go",
+			"work"
+		],
+		[
+			"be dark at",
+			"night"
+		]
+	],
+	"window": [
+		[
+			"has property",
+			"working"
+		],
+		[
+			"have",
+			"condensation"
+		],
+		[
+			"get",
+			"condensation"
+		],
+		[
+			"has trait",
+			"open"
+		],
+		[
+			"has trait",
+			"popular"
+		]
+	],
+	"paper": [
+		[
+			"has property",
+			"made"
+		],
+		[
+			"turn",
+			"yellow"
+		],
+		[
+			"has property",
+			"a solid"
+		],
+		[
+			"go",
+			"through a printer"
+		],
+		[
+			"has color",
+			"white"
+		]
+	],
+	"photo": [
+		[
+			"be on",
+			"cloud"
+		],
+		[
+			"upload",
+			"cloud"
+		],
+		[
+			"upload to",
+			"cloud"
+		],
+		[
+			"show up on",
+			"facebook"
+		],
+		[
+			"work on",
+			"iphone"
+		]
+	],
+	"apple": [
+		[
+			"fall off",
+			"tree"
+		],
+		[
+			"has property",
+			"fruit"
+		],
+		[
+			"has property",
+			"pay"
+		],
+		[
+			"has color",
+			"red"
+		],
+		[
+			"has trait",
+			"sweet"
+		]
+	],
+	"tomato": [
+		[
+			"has color",
+			"green"
+		],
+		[
+			"has color",
+			"red"
+		],
+		[
+			"turn",
+			"red"
+		],
+		[
+			"has trait",
+			"good"
+		],
+		[
+			"has property",
+			"expensive"
+		]
+	],
+	"wall": [
+		[
+			"has property",
+			"built"
+		],
+		[
+			"has property",
+			"made"
+		],
+		[
+			"crack in",
+			"house"
+		],
+		[
+			"compare with",
+			"walls"
+		],
+		[
+			"has property",
+			"one cell thick"
+		]
+	],
+	"home": [
+		[
+			"have",
+			"basements"
+		],
+		[
+			"hold",
+			"value"
+		],
+		[
+			"be on",
+			"tv"
+		],
+		[
+			"depreciate in",
+			"value"
+		],
+		[
+			"have",
+			"solar panels"
+		]
+	],
+	"horse": [
+		[
+			"has body part",
+			"hoof"
+		],
+		[
+			"eat",
+			"grass"
+		],
+		[
+			"has body part",
+			"leg"
+		],
+		[
+			"need",
+			"horseshoes"
+		],
+		[
+			"has body part",
+			"nose"
+		]
+	]
 }

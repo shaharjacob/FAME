@@ -1381,5 +1381,185 @@
 		"capableOf": [],
 		"isA": [],
 		"usedFor": []
+	},
+	"sky": {
+		"hasProperty": [
+			"blue on a clear day",
+			"blue during the day",
+			"dark",
+			"blue",
+			"full of stars"
+		],
+		"capableOf": [
+			"rain water",
+			"appear blue",
+			"appear ugly",
+			"appear gray",
+			"be starry"
+		],
+		"isA": [
+			"atmosphere",
+			"blue sometimes"
+		],
+		"usedFor": [
+			"flying in",
+			"...fly a kite",
+			"fly",
+			"rain",
+			"breath"
+		]
+	},
+	"window": {
+		"hasProperty": [
+			"double hung"
+		],
+		"capableOf": [
+			"let in a beam of light",
+			"stick open",
+			"face the mountains",
+			"break easily",
+			"be facing north"
+		],
+		"isA": [
+			"time period"
+		],
+		"usedFor": [
+			"look outside",
+			"look out of",
+			"letting fresh air into a room",
+			"looking outside",
+			"letting light in a building"
+		]
+	},
+	"paper": {
+		"hasProperty": [
+			"opaque",
+			"coloured"
+		],
+		"capableOf": [
+			"burn",
+			"cover stone",
+			"cut skin"
+		],
+		"isA": [
+			"a limited resource"
+		],
+		"usedFor": [
+			"drawing",
+			"make paper airplanes",
+			"write a letter",
+			"print something on",
+			"communication"
+		]
+	},
+	"photo": {
+		"hasProperty": [],
+		"capableOf": [
+			"explain what happened"
+		],
+		"isA": [
+			"A photograph"
+		],
+		"usedFor": []
+	},
+	"apple": {
+		"hasProperty": [
+			"red",
+			"green",
+			"one kind of fruit",
+			"opaque",
+			"red or green"
+		],
+		"capableOf": [
+			"fall from a tree",
+			"fall off a tree"
+		],
+		"isA": [
+			"edible fruit",
+			"apple tree"
+		],
+		"usedFor": [
+			"eating",
+			"sate hunger",
+			"making apple pie",
+			"make apple cider",
+			"representing knowlege"
+		]
+	},
+	"tomato": {
+		"hasProperty": [
+			"red or green"
+		],
+		"capableOf": [],
+		"isA": [
+			"a fruit, not a vegetable",
+			"solanaceous vegetable"
+		],
+		"usedFor": []
+	},
+	"wall": {
+		"hasProperty": [],
+		"capableOf": [
+			"separate rooms",
+			"separate rooms from each other",
+			"stop a car",
+			"separate people",
+			"divide the yard"
+		],
+		"isA": [
+			"difficulty",
+			"fence"
+		],
+		"usedFor": [
+			"holding up a roof",
+			"divide open space into smaller areas",
+			"dividing countries",
+			"dividing animals",
+			"stopping people from getting in"
+		]
+	},
+	"home": {
+		"hasProperty": [
+			"comfy",
+			"an asset"
+		],
+		"capableOf": [
+			"welcome you",
+			"be a sanctuary"
+		],
+		"isA": [
+			"where the heart is",
+			"a place where one lives",
+			"where people live",
+			"environment"
+		],
+		"usedFor": [
+			"living",
+			"living in",
+			"sleep",
+			"a place to keep your possessions"
+		]
+	},
+	"horse": {
+		"hasProperty": [
+			"white",
+			"larger than a person",
+			"majestic"
+		],
+		"capableOf": [
+			"pull a cart",
+			"run in a pasture",
+			"jump a barrier",
+			"carry a person",
+			"run quickly"
+		],
+		"isA": [],
+		"usedFor": [
+			"riding",
+			"ride around the ranch",
+			"pulling a carriage",
+			"spread the alarm",
+			"making fermented mare's milk"
+		]
 	}
 }
