@@ -236,36 +236,4 @@ if __name__ == '__main__':
     # res = get_entity_props("sun")
     # res = get_entities_relations("electricity", "cell", verbose=True).get("props")
     # print(res)
-
-    # from tqdm import tqdm
-
-    # with open('database/google_edges.json') as json_file:
-    #     data = json.load(json_file)
-    # i = 1
-    # for k, v in tqdm(data.items()):
-    #     entity1, entity2 = k.split("#")
-    #     try:
-    #         data[k] = get_entities_relations(entity1, entity2).get("props")
-    #         i += 1
-    #     except:
-    #         secho(f"Problem with: {k}", fg="red", bold=True)
-    #         break
-    #     if i % 10 == 0:
-    #         with open('database/google_edges.json', 'w') as f:
-    #             json.dump(data, f, indent='\t')
-    
-    # with open('database/google_edges.json', 'w') as f:
-    #     json.dump(data, f, indent='\t')
-    
-
-    from tqdm import tqdm
-
-    with open('database/google_edges.json') as json_file:
-        data = json.load(json_file)
-    
-    for k, v in tqdm(data.items()):
-        entity1, entity2 = k.split("#")
-        data[k] = sorted(v)
-    
-    with open('database/google_edges.json', 'w') as f:
-        json.dump(data, f, indent='\t')
+    pass
