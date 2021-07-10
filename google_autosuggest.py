@@ -9,6 +9,8 @@ from click import secho
 
 import utils
 
+IGNORE = ["a"]
+
 class GoogleAutoSuggestEntityProps(object):
     def __init__(self,
                 entity: str,
@@ -98,7 +100,7 @@ class GoogleAutoSuggestTwoEntities(object):
                 pairs = [f"{parts[i]} {parts[i+1]}" for i in range(len(parts) - 1)]
                 if all(elem in (parts + pairs) for elem in [self.entity1, self.entity2, self.question]):
                     prop = match.group(4)
-                    if prop not in already_seen:
+                    if prop not in already_seen not in IGNORE:
                         sugges.append((suggestion, prop))
                         already_seen.add(prop)
         return sugges
@@ -169,7 +171,7 @@ def get_entity_suggestions(entity: str, prop: str):
     # given an entity and prop, it will suggest new entities to complete the sentence.
     # for example, given entity 'electricity' and prop 'discovered', it will return entities like: faraday, edison, benjamin
     suggestions = []
-    for question in ["why does", "why do", "why did", "how does", "how do", "how did"]:
+    for question in ["why do", "why is", "why does", "why does it",  "why did", "how do", "how is", "how does", "how does it", "how did"]:
         model = GoogleAutoSuggestOneEntity(question, entity, prop)
         suggestions.extend(model.suggestinos)
     return list(set(suggestions))
@@ -184,25 +186,29 @@ def get_entity_props(entity: str):
         for p in ["is a", "is a type of"]:
             model = GoogleAutoSuggestEntityProps(entity, p)
             suggestions.extend(model.suggestinos)
-        google_db[entity] = list(set(suggestions))
+        google_db[entity] = sorted(list(set(suggestions)))
         with open('database/google_nodes.json', 'w') as f:
             json.dump(google_db, f, indent='\t')
     return google_db[entity]
 
 
-def get_entities_relations(entity1: str, entity2: str) -> List[str]:
+def get_entities_relations(entity1: str, entity2: str, plural_and_singular: bool = True, verbose: bool = False) -> List[str]:
     # given two entities, it will give the relations between them.
     # The order is important! get_entities_relations(entity1, entity2) != get_entities_relations(entity2, entity1)
     # for example, if entity1=earth, entity2=sun, it will return relations like: revolve around, not fall into, orbit.
     d = {
         "why do": [entity1, entity2],
+        "why is": [entity1, entity2],
         "why does": [entity1, entity2],
+        "why does it": [entity1, entity2],
         "why did": [entity1, entity2],
         "how do": [entity1, entity2],
+        "how is": [entity1, entity2],
         "how does": [entity1, entity2],
+        "how does it": [entity1, entity2],
         "how did": [entity1, entity2],
     }
-    return process(d, verbose=False)
+    return process(d, plural_and_singular=plural_and_singular, verbose=verbose)
 
 
 def process(d: Dict[str, List[List[str]]], plural_and_singular: bool = True, verbose: bool = False) -> List[str]:
@@ -228,5 +234,38 @@ def process(d: Dict[str, List[List[str]]], plural_and_singular: bool = True, ver
 if __name__ == '__main__':
     # res = get_entity_suggestions("electricity", "discovered")
     # res = get_entity_props("sun")
-    res = get_entities_relations("earth", "sun").get("props")
-    print(res)
+    # res = get_entities_relations("electricity", "cell", verbose=True).get("props")
+    # print(res)
+
+    # from tqdm import tqdm
+
+    # with open('database/google_edges.json') as json_file:
+    #     data = json.load(json_file)
+    # i = 1
+    # for k, v in tqdm(data.items()):
+    #     entity1, entity2 = k.split("#")
+    #     try:
+    #         data[k] = get_entities_relations(entity1, entity2).get("props")
+    #         i += 1
+    #     except:
+    #         secho(f"Problem with: {k}", fg="red", bold=True)
+    #         break
+    #     if i % 10 == 0:
+    #         with open('database/google_edges.json', 'w') as f:
+    #             json.dump(data, f, indent='\t')
+    
+    # with open('database/google_edges.json', 'w') as f:
+    #     json.dump(data, f, indent='\t')
+    
+
+    from tqdm import tqdm
+
+    with open('database/google_edges.json') as json_file:
+        data = json.load(json_file)
+    
+    for k, v in tqdm(data.items()):
+        entity1, entity2 = k.split("#")
+        data[k] = sorted(v)
+    
+    with open('database/google_edges.json', 'w') as f:
+        json.dump(data, f, indent='\t')

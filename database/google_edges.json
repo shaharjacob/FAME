@@ -1,5 +1,7 @@
 {
 	"skin#sun": [
+		"itchy after",
+		"damaged by the",
 		"get darker from the"
 	],
 	"body#rain": [
@@ -9,36 +11,50 @@
 	"body#umbrella": [],
 	"rain#umbrella": [],
 	"rain#body": [
+		"water slippery on the",
 		"affect your",
 		"affect the"
 	],
 	"umbrella#body": [],
-	"umbrella#rain": [],
+	"umbrella#rain": [
+		"protect us from"
+	],
 	"skin#sunscreen": [
 		"burn after putting on"
 	],
-	"sun#sunscreen": [],
+	"sun#sunscreen": [
+		"cause",
+		"shield"
+	],
 	"sun#skin": [
-		"clear",
+		"good for",
+		"bad for",
+		"burning my",
+		"burn your",
 		"darken",
 		"burn",
-		"burn your",
-		"help",
+		"clear",
+		"good for the",
+		"good for your",
+		"bad for your",
 		"damage",
-		"age"
+		"age",
+		"help"
 	],
 	"sunscreen#skin": [
-		"irritate my",
-		"dry my",
-		"burn my",
+		"good for",
+		"good for your",
+		"important for",
+		"important for black",
+		"bad for your",
 		"lighten",
-		"help",
+		"darken",
 		"protect",
-		"lighten",
-		"protect your"
+		"irritate my",
+		"protect your",
+		"help"
 	],
 	"sunscreen#sun": [
-		"protect you from the",
 		"protect you from the"
 	],
 	"desert#plant": [],
@@ -47,7 +63,6 @@
 	"cans#street": [],
 	"cat#order": [],
 	"cat#street": [
-		"follow you in the",
 		"cross the"
 	],
 	"order#street": [],
@@ -57,7 +72,9 @@
 	"order#cans": [],
 	"street#cans": [],
 	"order#cat": [],
-	"street#cat": [],
+	"street#cat": [
+		"called streets doja"
+	],
 	"street#order": [],
 	"desert#water": [
 		"plants need to store",
@@ -66,118 +83,137 @@
 		"get",
 		"develop",
 		"keep",
-		"survive without",
-		"plants conserve"
+		"plants conserve",
+		"survive without"
 	],
 	"plant#water": [
 		"need",
-		"lose",
-		"need"
+		"needs",
+		"absorbs",
+		"absorb",
+		"get"
 	],
-	"plant#desert": [],
+	"plant#desert": [
+		"survive in the"
+	],
 	"water#desert": [
-		"freeze in the",
+		"important in the",
 		"freeze in the"
 	],
 	"water#plant": [
+		"best for",
+		"transport in",
+		"enter",
+		"balance in",
 		"move through"
 	],
 	"brain#thoughts": [
+		"think negative",
+		"create intrusive",
 		"form",
+		"create",
 		"produce",
 		"affect",
-		"create"
+		"process",
+		"generate",
+		"think",
+		"make"
 	],
 	"astronaut#space": [
 		"go to",
-		"breathe in",
+		"float in",
+		"live in",
 		"drink in",
-		"live in",
-		"float in",
-		"go to",
+		"breathe in",
 		"shower in",
+		"weightless in",
 		"float in outer",
+		"sleep in",
 		"go in outer",
-		"go to",
-		"sleep in",
-		"float in",
 		"in",
-		"go",
 		"eat",
-		"sleep in",
-		"travel into",
-		"live in",
-		"survive in",
+		"go",
+		"life in",
 		"poop in",
 		"eat in",
-		"go to",
-		"shower in",
-		"pee in",
-		"use the bathroom in",
-		"eat in"
+		"travel into",
+		"survive in",
+		"pee in"
 	],
 	"space#astronaut": [
 		"appear dark for",
 		"appear black to",
-		"weather affect",
-		"debris affect",
 		"affect",
-		"radiation affect"
+		"radiation affect",
+		"weather affect"
 	],
 	"thoughts#brain": [
+		"form in the",
+		"affect the",
 		"travel in the",
 		"work in the",
-		"form in the",
-		"arise in the",
 		"occur in the",
-		"affect the",
-		"occur in the"
+		"arise in the",
+		"formed in the",
+		"created in the"
 	],
 	"illness#medicine": [],
 	"anarchy#law": [],
 	"law#anarchy": [],
 	"illness#order": [],
 	"medicine#order": [],
-	"medicine#illness": [],
+	"medicine#illness": [
+		"help mental"
+	],
 	"order#illness": [],
 	"order#medicine": [],
 	"cars#road": [
+		"skid on wet",
 		"skid on icy",
-		"skid on wet"
+		"cross the"
 	],
 	"boats#lake": [
 		"sink in a",
+		"affect",
 		"travel through the great",
-		"affect"
+		"get to the great"
 	],
 	"boats#place": [],
-	"lake#place": [],
+	"lake#place": [
+		"mungo a special"
+	],
 	"lake#boats": [],
 	"place#boats": [],
 	"place#lake": [],
 	"road#cars": [
+		"salt bad for",
+		"tax free for some",
+		"tax cheaper for some",
 		"salt rust",
+		"tax collected on electric",
 		"salt affect"
 	],
 	"singer#songs": [
 		"swear in",
 		"say their names in",
+		"record",
 		"write",
 		"make",
-		"remember",
-		"released",
 		"memorize",
-		"record",
 		"learn",
-		"buy"
+		"buy",
+		"released",
+		"get"
 	],
 	"code#programmer": [],
 	"programmer#code": [
 		"indent their",
+		"use",
 		"refactor the",
-		"use composition in developing software",
 		"use source",
+		"use composition in developing software",
 		"remember",
+		"write",
 		"remember all"
 	],
 	"songs#singer": [],
@@ -187,42 +223,41 @@
 	],
 	"atom#electrons": [
 		"share",
-		"lose",
-		"share",
 		"lose"
 	],
 	"atom#nucleus": [
+		"located in the",
 		"have"
 	],
 	"electrons#nucleus": [
-		"spin around the",
-		"surround the",
-		"not collapse into",
-		"fall into the",
 		"orbit",
+		"spin around the",
+		"fall into the",
+		"not collapse into",
+		"surround the",
 		"orbit far away from atomic",
-		"revolve around the",
+		"revolving around the",
+		"not fall into",
+		"orbit the",
+		"not jump into the",
 		"revolve around",
 		"not fall in",
-		"not fall into",
-		"not jump into the",
-		"orbit the",
-		"stay around",
-		"spin around the",
 		"circle the",
-		"orbit the",
-		"surround the",
-		"revolve around",
-		"orbit the",
+		"stay around",
+		"travel around the",
+		"emitted from the",
 		"move around"
 	],
 	"electrons#atom": [
-		"move in",
 		"stay in the",
+		"move in",
 		"move in an",
-		"stay in the"
+		"in"
 	],
-	"nucleus#atom": [],
+	"nucleus#atom": [
+		"smaller than the",
+		"related to"
+	],
 	"nucleus#electrons": [],
 	"atmosphere#sun": [
 		"affect"
@@ -230,67 +265,99 @@
 	"atmosphere#sunscreen": [],
 	"earth#sun": [
 		"revolve around",
+		"revolving around",
+		"orbiting the",
+		"rotating around",
+		"spinning around the",
+		"orbit",
 		"circle the",
+		"rotate around",
 		"move around the",
-		"not fall into",
-		"orbit",
 		"spin around the",
-		"rotate around",
-		"revolve around",
-		"move around",
-		"circle the",
-		"rotate around",
-		"orbit",
-		"revolve around"
+		"not fall into",
+		"need the",
+		"orbit around",
+		"from the",
+		"moon and",
+		"move around"
 	],
 	"earth#sunscreen": [],
 	"earth#atmosphere": [],
 	"sun#atmosphere": [
-		"and"
+		"have",
+		"and",
+		"heat"
 	],
 	"sunscreen#atmosphere": [],
 	"sun#earth": [
+		"important to",
+		"bigger than",
+		"closer to",
+		"closest to",
+		"getting closer to",
+		"older than the",
+		"larger than the",
 		"orbit the",
 		"revolve around",
 		"create the",
-		"rotate around",
+		"older than",
+		"far from",
+		"affect",
 		"orbit",
-		"affect"
+		"rotate around"
 	],
 	"sunscreen#earth": [],
-	"air conditioner#summer": [],
+	"air conditioner#summer": [
+		"unit work during"
+	],
 	"summer#air conditioner": [],
 	"heater#winter": [],
 	"winter#heater": [],
-	"homework#practice": [],
-	"army#duties": [],
+	"homework#practice": [
+		"good"
+	],
+	"army#duties": [
+		"have staff"
+	],
 	"army#tax": [
 		"file"
 	],
 	"duties#tax": [],
-	"duties#army": [],
+	"duties#army": [
+		"important in the"
+	],
 	"tax#army": [
 		"work in the"
 	],
-	"tax#duties": [],
+	"tax#duties": [
+		"called"
+	],
 	"homework#student": [
+		"bad for",
+		"good for",
+		"necessary for",
+		"not good for",
+		"important for",
+		"harmful to",
 		"help",
 		"prepare",
-		"help",
-		"benefit",
+		"affecting",
+		"beneficial for",
 		"affect",
+		"benefit",
 		"stress"
 	],
 	"practice#student": [],
 	"practice#homework": [],
 	"student#homework": [
 		"hate",
-		"need",
+		"have",
 		"get",
-		"have",
-		"hate",
-		"have",
+		"copy",
 		"need",
+		"eat his",
+		"eat his math",
+		"eat their",
 		"cheat",
 		"feel about"
 	],
@@ -302,18 +369,17 @@
 	"amount#virus": [],
 	"antibiotic#antibodies": [],
 	"antibiotic#virus": [
-		"not work against"
+		"ineffective against"
 	],
 	"antibodies#virus": [
 		"not treat",
-		"affect",
+		"attack",
 		"recognize",
+		"target",
 		"neutralize",
 		"stop",
-		"attack",
+		"affect",
 		"detect",
-		"target",
-		"kill",
 		"kill"
 	],
 	"antibiotic#amount": [],
@@ -322,48 +388,50 @@
 	"antibodies#antibiotic": [],
 	"virus#antibiotic": [],
 	"virus#antibodies": [
-		"evade"
+		"evade",
+		"avoid"
 	],
 	"citizen#duties": [
 		"have"
 	],
 	"duties#citizen": [],
 	"electrons#electricity": [
-		"move in",
-		"move in static",
+		"conduct",
 		"have",
-		"conduct",
+		"move in",
+		"not conduct",
+		"create",
 		"produce",
-		"conduct",
-		"create",
 		"carry",
-		"affect",
-		"create",
-		"conduct"
+		"related to",
+		"affect"
 	],
 	"electricity#electrons": [
+		"the flow of",
+		"the movement of",
+		"made",
+		"created by",
+		"related to",
+		"produced in",
 		"work"
 	],
 	"nucleus#electricity": [],
 	"electricity#nucleus": [],
 	"earth#gravity": [
-		"have",
 		"has",
+		"have",
 		"cause",
-		"have",
-		"have",
 		"get"
 	],
 	"gravity#earth": [
-		"form the",
-		"affect",
-		"affect the formation of",
+		"on",
+		"constant on",
 		"from",
+		"affect",
+		"form the",
 		"come to"
 	],
 	"sun#gravity": [
-		"have",
-		"have",
 		"have"
 	],
 	"gravity#sun": [
@@ -389,30 +457,26 @@
 	"newton#sun": [],
 	"gravity#newton": [],
 	"newton#gravity": [
+		"invent",
 		"discover",
 		"call it",
-		"invent",
-		"describe",
 		"dicover",
-		"discovered",
-		"found",
 		"prove his ideas about",
-		"discover",
-		"invent"
+		"prove",
+		"describe",
+		"discovered"
 	],
 	"earth#tree": [
-		"need",
 		"need",
 		"protect the",
 		"get"
 	],
 	"electrons#battery": [
 		"flow through a",
-		"move through a",
-		"flow in a car",
 		"flow in a",
 		"move in a",
-		"flow in a"
+		"move through a",
+		"flow in a car"
 	],
 	"tree#earth": [
 		"help",
@@ -422,15 +486,12 @@
 		"appear on"
 	],
 	"battery#electrons": [
+		"move",
 		"store",
-		"move",
 		"push",
-		"move",
-		"give energy to",
+		"supply",
 		"provide",
-		"store",
-		"push",
-		"supply"
+		"give energy to"
 	],
 	"electrons#sky": [],
 	"sky#electrons": [],
@@ -447,19 +508,17 @@
 	"sun#tree": [
 		"bears climb",
 		"affect",
-		"affect",
 		"help"
 	],
 	"tree#sun": [
-		"grow towards the",
 		"need",
+		"grow towards the",
 		"lean towards the"
 	],
 	"gravity#tree": [],
 	"tree#gravity": [
 		"grow against",
-		"defy",
-		"grow against"
+		"defy"
 	],
 	"newton#tree": [
 		"sit under the apple"
@@ -468,70 +527,77 @@
 	"nucleus#battery": [],
 	"battery#nucleus": [],
 	"electricity#battery": [
+		"stored in a",
+		"generated in a",
+		"stored in a lead acid",
+		"stored in",
 		"affect",
 		"charge a",
 		"get into"
 	],
 	"battery#electricity": [
+		"produce",
 		"stop producing",
-		"produce",
-		"produce",
-		"generate",
-		"produce",
-		"hold",
 		"store",
-		"allow for",
-		"generate",
+		"make",
 		"hold",
-		"produce",
-		"produce"
+		"allow for",
+		"generate"
 	],
 	"faraday#battery": [],
 	"battery#faraday": [],
 	"electricity#atom": [
+		"related to",
+		"made",
 		"flow",
 		"produce",
 		"flow through"
 	],
 	"atom#electricity": [
-		"produce",
-		"create",
+		"conduct",
 		"make",
+		"create",
 		"generate",
-		"work in",
-		"conduct",
 		"produce",
+		"work in",
+		"related to",
 		"contribute to",
-		"conduct",
 		"relate to"
 	],
 	"faraday#atom": [],
 	"atom#faraday": [],
 	"earth#universe": [
-		"fit in the",
+		"the center of the",
+		"616 the main",
+		"related to the",
 		"fit into the",
 		"move through the",
+		"fit in the",
 		"from"
 	],
 	"universe#earth": [],
 	"sun#universe": [
+		"the center of the",
+		"the strongest force in our",
 		"orbit the",
+		"situated in the",
+		"like other stars in the",
 		"move through the"
 	],
 	"universe#sun": [],
 	"gravity#universe": [
+		"important in the",
 		"hold the",
-		"affect our",
-		"work in the",
-		"the",
-		"affect the expansion of the",
 		"affect",
+		"the",
 		"influence the",
 		"shape the",
+		"affect our",
+		"work in the",
+		"affect the expansion of the",
 		"form the"
 	],
 	"universe#gravity": [
-		"have",
 		"have"
 	],
 	"newton#universe": [
@@ -539,28 +605,39 @@
 		"view the"
 	],
 	"universe#newton": [],
-	"electricity#cell": [],
+	"electricity#cell": [
+		"generated in fuel",
+		"produced in leclanche",
+		"generated using photovoltaic",
+		"generated from photovoltaic",
+		"generated using solar",
+		"generated from solar",
+		"generated using photo vault tayac"
+	],
 	"cell#electricity": [
 		"produce",
 		"generate",
-		"produce",
 		"create",
-		"produce",
 		"make",
 		"conduct"
 	],
 	"electrons#cell": [
 		"flow in a galvanic",
 		"flow in a voltaic",
-		"flow in a concentration",
-		"move in an electrolytic",
 		"flow in an electrolytic",
-		"flow in a galvanic"
+		"move in an electrolytic",
+		"flow in a concentration"
 	],
 	"cell#electrons": [
 		"use"
 	],
 	"nucleus#cell": [
+		"a",
+		"important",
+		"in eukaryotic",
+		"important to",
+		"absent in red blood",
+		"important to eukaryotic",
 		"command",
 		"help",
 		"control the"
@@ -568,9 +645,9 @@
 	"cell#nucleus": [
 		"lack",
 		"needs",
-		"need a",
 		"lose",
 		"contain",
+		"need a",
 		"have a"
 	],
 	"astronaut#spaceship": [
@@ -597,13 +674,17 @@
 		"repeat in my",
 		"pop into my",
 		"get stuck in my",
-		"get stuck in your"
+		"get stuck in your",
+		"stuck in my"
 	],
 	"head#thoughts": [],
 	"brain#head": [
+		"located in the",
+		"always in the",
 		"freeze hurt your"
 	],
 	"head#brain": [
+		"called",
 		"injuries affect the",
 		"injury affect",
 		"trauma affect the"
@@ -630,15 +711,25 @@
 	"winter#rain": [
 		"tires perform in"
 	],
-	"sunscreen#summer": [],
+	"sunscreen#summer": [
+		"needed especially in"
+	],
 	"summer#sunscreen": [],
 	"sun#summer": [
+		"hotter in",
+		"higher in sky in",
+		"higher in",
+		"warmer in",
+		"hot in",
 		"appear smaller in",
 		"feel warmer in",
 		"feel hotter in",
+		"in",
 		"move in"
 	],
-	"summer#sun": [],
+	"summer#sun": [
+		"when we are nearer the"
+	],
 	"citizen#country": [
 		"owe certain duties to their",
 		"defend their"

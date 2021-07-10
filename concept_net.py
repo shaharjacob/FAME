@@ -146,5 +146,6 @@ def get_entity_props(entity: str, engine: inflect.engine = None, n_best: int = 5
 
 
 if __name__ == '__main__':
-    res = get_entity_props("earth", n_best=10)
-    print(res)
+    # res = get_entity_props("earth", n_best=10)
+    # print(res)
+    pass
