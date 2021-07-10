@@ -243,41 +243,53 @@ if __name__ == "__main__":
 
     data = [
         [
-            # expected: earth->electrons, sun->nucleus, gravity->electricity, universe->cell, newton->? (faraday has been removed)
+            # seems good!
+            # expected mapping: earth->electrons, sun->nucleus, gravity->electricity, universe->cell, newton->? (faraday has been removed)
             ["earth", "sun", "gravity", "newton", "universe"], 
             ["electrons", "nucleus", "electricity", "cell"]
         ],
         [
-            # TODO: understand it (sun and its not good...)
-            # expected: earth->electrons, gravity->electricity, newton->faraday, sun->? (nucleus has been removed)
+            # expected mapping: earth->electrons, gravity->electricity, newton->faraday, nucleus->? (sun has been removed)
+            # http://localhost:3000/mapping?base=earth,%20newton,%20gravity&target=electrons,%20nucleus,%20electricity,%20faraday
+            # http://localhost:3000/two-entities?base1=gravity&base2=earth&target1=electrons&target2=electricity
+            # it map earth-->electricity and gravity-->electrons instead of earth-->electrons and gravity-->electricity, but their score is similar (2.125~1.879)
+            # seems that quasimodo give too much noise
             ["earth", "newton", "gravity"],
             ["electrons", "nucleus", "electricity", "faraday"],
         ],
         [
-            # expected: thoughts->astronaut, brain->space, head->spaceship
+            # expected mapping: thoughts->astronaut, brain->space, head->spaceship
+            # the mapping is good but with the wrong reason.
+            # expected that brain is inside the head as astronaut is inside the spaceship, or head containing brain as spaceship containing astronaut
             ["thoughts", "brain", "head"],
             ["astronaut", "space", "spaceship"],
         ],
         [
-            # TODO: check why there are no suggestions...
+            # there are no suggestions...
+            # seems that the relatoins between thoughts and head are too weak, and not similar enougth to astronaut and spaceship
+            # http://localhost:3000/mapping?base=thoughts,%20brain,%20head&target=astronaut,%20space,%20spaceship
+            # http://localhost:3000/two-entities?base1=thoughts&base2=head&target1=astronaut&target2=spaceship
             # expected: thoughts->astronaut, brain->space, head->? (spaceship has been removed)
             ["thoughts", "brain", "head"],
             ["astronaut", "space"],
         ],
         [
-            # TODO: why cars --> sail and road --> boats?
             # expected: cars->boats, road->river, wheels->sail
+            # after removing "has property" is seems better
+            # http://localhost:3000/mapping?base=cars,%20road,%20wheels&target=boats,%20river,%20sail
             ["cars", "road", "wheels"],
             ["boats", "river", "sail"],
         ],
-        # [
-        #     # expected: cars->boats, road->river, wheels->? (sail has been removed)
-        #     ["cars", "road", "wheels"],
-        #     ["boats", "river"],
-        # ],
         [
-            # TODO: very strange that there are no relations between rain:winter or unbrella:winter
+            # expected: cars->boats, road->river, wheels->? (sail has been removed)
+            # the suggestions are not good
+            ["cars", "road", "wheels"],
+            ["boats", "river"],
+        ],
+        [
             # expected: sunscreen->umbrella, sun->rain, summer->winter 
+            # it not mapping summer->winter.
+            # there are no relations between rain:winter or unbrella:winter
             ["sunscreen", "sun", "summer"],
             ["umbrella", "rain", "winter"],
         ],
