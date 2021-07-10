@@ -30,14 +30,14 @@ class DataCollector(object):
             if not self.quasimodo:
                 self.quasimodo = Quasimodo(path='tsv/quasimodo.tsv')
             quasimodo_props = self.quasimodo.get_entities_relations(entity1, entity2, n_largest=10, plural_and_singular=True)
-            self.quasimodo_edges[f"{entity1}#{entity2}"] = quasimodo_props  
+            self.quasimodo_edges[f"{entity1}#{entity2}"] = sorted(quasimodo_props)
             should_save = True
 
         if f"{entity1}#{entity2}" in self.google_edges and not self.override_database:
             autocomplete_props = self.google_edges[f"{entity1}#{entity2}"]
         else:
             autocomplete_props = google_autosuggest.get_entities_relations(entity1, entity2).get("props", [])
-            self.google_edges[f"{entity1}#{entity2}"] = autocomplete_props  
+            self.google_edges[f"{entity1}#{entity2}"] = sorted(autocomplete_props) 
             should_save = True
 
         if f"{entity1}#{entity2}" in self.conceptnet_edges and not self.override_database:
@@ -46,12 +46,15 @@ class DataCollector(object):
             if not self.engine:
                 self.engine = inflect.engine()
             concept_new_props = concept_net.get_entities_relations(entity1, entity2, self.engine, plural_and_singular=True)
-            self.conceptnet_edges[f"{entity1}#{entity2}"] = concept_new_props
+            self.conceptnet_edges[f"{entity1}#{entity2}"] = sorted(concept_new_props)
             should_save = True
 
         if should_save:
             self.save_database_()
-        return list(set(quasimodo_props + autocomplete_props + concept_new_props))
+        
+        properties = set(quasimodo_props + autocomplete_props + concept_new_props)
+        properties.discard("has property")
+        return list(properties)
     
 
     def get_entitiy_props(self, entity: str) -> List[str]:
@@ -59,7 +62,7 @@ class DataCollector(object):
         if entity not in quasimodo_db:
             if not self.quasimodo:
                 self.quasimodo = Quasimodo(path='tsv/quasimodo.tsv')
-            quasimodo_db[entity] = [[prop[0], prop[1]] for prop in self.quasimodo.get_entity_props(entity, n_largest=5)]
+            quasimodo_db[entity] = sorted([[prop[0], prop[1]] for prop in self.quasimodo.get_entity_props(entity, n_largest=5)])
             with open('database/quasimodo_nodes.json', 'w') as f1:
                 json.dump(quasimodo_db, f1, indent='\t')
 

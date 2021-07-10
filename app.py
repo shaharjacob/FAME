@@ -13,9 +13,10 @@ app = Flask(__name__)
 
 @app.route("/mapping", methods=["GET", "POST"])
 def mapping_entities():
-    model = SentenceEmbedding(init_quasimodo=False, init_inflect=False)
-    base = request.args.get('base').split(',')
-    target = request.args.get('target').split(',')
+    data_collector = DataCollector()
+    model = SentenceEmbedding(data_collector=data_collector)
+    base = [b.strip() for b in request.args.get('base').split(',')]
+    target = [t.strip() for t in request.args.get('target').split(',')]
 
     # here we map between base entitites and target entities
     res = mapping.mapping(base, target)
@@ -41,7 +42,7 @@ def mapping_entities():
             # now we extract information of the relation. 
             # actually we already did it in mapping.mapping(base, target), but this is very quick since we already saved all the props.
             # and it more readable to do it here again.
-            graph = mapping.get_pair_mapping(model, relation)
+            graph = mapping.get_pair_mapping(model, data_collector, relation)
             if not graph:
                 continue
 
@@ -150,7 +151,8 @@ def clustring():
     edge1 = (request.args.get('base1'), request.args.get('base2'))
     edge2 = (request.args.get('target1'), request.args.get('target2'))
 
-    model = SentenceEmbedding(init_quasimodo=False, init_inflect=False)
+    data_collector = DataCollector()
+    model = SentenceEmbedding(data_collector=data_collector)
 
     d = {}
     for thresh in utils.DISTANCE_TRESHOLDS:

@@ -8,22 +8,22 @@
 	"rain#body": [],
 	"umbrella#body": [],
 	"umbrella#rain": [
+		"keep off the",
+		"protect against",
 		"protection from the",
 		"shelter from",
-		"stay dry in the",
-		"protect against",
-		"keep off the"
+		"stay dry in the"
 	],
 	"skin#sunscreen": [],
 	"sun#sunscreen": [],
 	"sun#skin": [
-		"brown",
-		"burn your",
 		"age human",
-		"brown human",
 		"age the",
-		"kiss my",
+		"brown",
+		"brown human",
+		"burn your",
 		"cause burns to human",
+		"kiss my",
 		"tan your"
 	],
 	"sunscreen#skin": [],
@@ -50,9 +50,9 @@
 	"water#plant": [],
 	"brain#thoughts": [],
 	"astronaut#space": [
+		"travel into outer",
 		"travel through",
-		"visit",
-		"travel into outer"
+		"visit"
 	],
 	"space#astronaut": [],
 	"thoughts#brain": [],
@@ -64,18 +64,18 @@
 	"illness#order": [],
 	"medicine#order": [],
 	"medicine#illness": [
-		"treat an",
-		"cure"
+		"cure",
+		"treat an"
 	],
 	"order#illness": [],
 	"order#medicine": [],
 	"cars#road": [
 		"be traveling down a",
-		"move on a",
-		"travel on a",
+		"drive on a",
 		"lose control on a wet",
+		"move on a",
 		"travel down the",
-		"drive on a"
+		"travel on a"
 	],
 	"boats#lake": [
 		"go sailing on a",
@@ -114,16 +114,16 @@
 	"sun#atmosphere": [],
 	"sunscreen#atmosphere": [],
 	"sun#earth": [
-		"far from the",
-		"very far from the",
-		"heat the",
-		"shine on the",
-		"orbited by the",
-		"larger than the",
+		"...maintain life on",
 		"a major ligh source on",
 		"approximately 93,000,000 miles from the",
-		"...maintain life on",
-		"heating up the"
+		"far from the",
+		"heat the",
+		"heating up the",
+		"larger than the",
+		"orbited by the",
+		"shine on the",
+		"very far from the"
 	],
 	"sunscreen#earth": [],
 	"air conditioner#summer": [],
@@ -244,8 +244,8 @@
 	"head#thoughts": [],
 	"brain#head": [],
 	"head#brain": [
-		"protecting the",
-		"containing a"
+		"containing a",
+		"protecting the"
 	],
 	"boats#sail": [],
 	"sail#boats": [],
@@ -270,9 +270,8 @@
 	"duties#country": [],
 	"country#duties": [],
 	"student#university": [
-		"receive a scholarship from a",
 		"projects at",
-		"a"
+		"receive a scholarship from a"
 	],
 	"university#student": [],
 	"homework#university": [],

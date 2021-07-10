@@ -77,7 +77,7 @@ def extend_and_extract_props(engine: inflect.engine, which: str, entity1: str, n
             if prop.endswith(entity2):
                 new_props.append(prop[:-len(entity2)].strip())
         all_props = new_props
-    return all_props
+    return sorted(all_props)
 
 
 def capableOf(engine: inflect.engine, entity1: str, n: int = 20, weight_thresh: int = 0, plural_and_singular: bool = False, entity2: str = "") -> List[str]:

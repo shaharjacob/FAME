@@ -141,6 +141,11 @@ class Quasimodo:
             df = df.nlargest(n_largest, 'plausibility')
         return df
 
+    def count_predicates(self, n: int = 0):
+        if n > 0:
+            return Counter(self.data["predicate"].tolist()).most_common(n)
+        return Counter(self.data["predicate"].tolist())
+
 
 def render(row: dict):
     secho(f"{row['subject']} ", fg="blue", bold=True, nl=False)
@@ -176,10 +181,12 @@ def merge_tsvs(output: str):
 
 if __name__ == '__main__':
     quasimodo = Quasimodo()
+    counts = quasimodo.count_predicates(20)
+    print(counts)
     # res = quasimodo.get_entity_props('sun', n_largest=5)
     # res = quasimodo.get_entities_relations('sun', 'earth', n_largest=5)
-    res = quasimodo.get_similarity_between_entities('horse', 'cow', n_largest=5)
-    print(res)
+    # res = quasimodo.get_similarity_between_entities('horse', 'cow', n_largest=5)
+    # print(res)
 
 
 
@@ -194,10 +201,7 @@ if __name__ == '__main__':
 
 
 
-# def count_predicates(self, n: int = 0):
-#     if n > 0:
-#         return Counter(self.data["predicate"].tolist()).most_common(n)
-#     return Counter(self.data["predicate"].tolist())
+
 
 # def count_pred_obj_paris(self, n: int = 0):
 #     predicates = self.data["predicate"].tolist()

@@ -1,8 +1,8 @@
 {
 	"skin#sun": [
+		"be by",
 		"exposed to",
-		"get in",
-		"be by"
+		"get in"
 	],
 	"body#rain": [],
 	"body#umbrella": [],
@@ -14,16 +14,16 @@
 	"sun#sunscreen": [],
 	"sun#skin": [
 		"affect",
-		"darken",
-		"clear up",
+		"be bad for",
 		"be good for",
-		"be bad for"
+		"clear up",
+		"darken"
 	],
 	"sunscreen#skin": [
-		"protect",
-		"whiten",
+		"be bad for",
 		"lighten",
-		"be bad for"
+		"protect",
+		"whiten"
 	],
 	"sunscreen#sun": [
 		"protect from"
@@ -51,72 +51,72 @@
 		"keep"
 	],
 	"plant#water": [
-		"get",
-		"need",
 		"absorb",
 		"can grow in",
-		"take in",
-		"obtain",
-		"use",
+		"can live in",
 		"drink",
+		"get",
 		"lose",
-		"can live in"
+		"need",
+		"obtain",
+		"take in",
+		"use"
 	],
 	"plant#desert": [
-		"grow in",
-		"be in",
-		"survive in",
-		"live in",
-		"can survive in",
-		"can live in",
+		"adapt in",
 		"adapt to",
+		"be in",
+		"can live in",
+		"can survive in",
 		"get water in",
+		"grow in",
+		"live in",
 		"support life in",
-		"adapt in"
+		"survive in"
 	],
 	"water#desert": [],
 	"water#plant": [
+		"be lost from",
+		"be moved through",
+		"be transported in",
+		"be transported through",
 		"enter",
-		"move up",
+		"flow up",
+		"kill",
 		"leave",
 		"move through",
-		"flow up",
-		"be moved through",
-		"be transported through",
-		"be lost from",
-		"be transported in",
-		"kill"
+		"move up"
 	],
 	"brain#thoughts": [
 		"make up"
 	],
 	"astronaut#space": [
 		"be in",
-		"go into",
 		"eat food in",
-		"go to",
-		"float in",
 		"eat in",
+		"float in",
+		"go in",
+		"go into",
+		"go to",
 		"live in",
-		"walk in",
 		"talk in",
-		"go in"
+		"walk in"
 	],
 	"space#astronaut": [
-		"look to",
-		"be hazardous to"
+		"be hazardous to",
+		"look to"
 	],
 	"thoughts#brain": [
 		"affect",
-		"work in",
+		"be created in",
+		"be formed in",
+		"be processed in",
+		"be produced in",
+		"be regulated within",
+		"be stored in",
 		"occur in",
 		"travel in",
-		"be produced in",
-		"be formed in",
-		"be created in",
-		"be processed in",
-		"be stored in",
-		"be regulated within"
+		"work in"
 	],
 	"illness#medicine": [],
 	"anarchy#law": [],
@@ -127,8 +127,8 @@
 	"order#illness": [],
 	"order#medicine": [],
 	"cars#road": [
-		"has property",
-		"go on"
+		"go on",
+		"has property"
 	],
 	"boats#lake": [
 		"be on"
@@ -140,82 +140,82 @@
 	"place#lake": [],
 	"road#cars": [],
 	"singer#songs": [
-		"write",
-		"remember",
-		"make",
-		"swear in",
 		"buy",
-		"remember words to",
-		"come up with",
 		"can remember",
+		"come up with",
+		"make",
 		"match perfectly",
-		"remake"
+		"remake",
+		"remember",
+		"remember words to",
+		"swear in",
+		"write"
 	],
 	"code#programmer": [],
 	"programmer#code": [
-		"write in",
+		"manipulate things through",
 		"remember",
 		"write",
-		"manipulate things through"
+		"write in"
 	],
 	"songs#singer": [],
 	"atmosphere#earth": [
-		"exert pressure on",
-		"rotate with",
+		"be around",
 		"be outermost layer of",
-		"stay on",
-		"govern life on",
+		"exert pressure on",
 		"exist on",
+		"govern life on",
 		"protect",
 		"protect life on",
+		"rotate with",
 		"stay around",
-		"be around"
+		"stay on"
 	],
 	"atom#electrons": [
-		"lose",
+		"attract",
+		"can share",
+		"give away",
+		"give up",
 		"have",
-		"share",
+		"lose",
 		"move around",
 		"need",
-		"give up",
-		"attract",
-		"give away",
-		"can share",
+		"share",
 		"shared"
 	],
 	"atom#nucleus": [
-		"have",
-		"has property"
+		"has property",
+		"have"
 	],
 	"electrons#nucleus": [
-		"move around",
-		"fall into",
-		"revolve around",
-		"surround",
+		"enter",
 		"fall in",
-		"stay around",
-		"get attracted to",
+		"fall into",
 		"fly into",
+		"get attracted to",
 		"go into",
-		"enter"
+		"move around",
+		"revolve around",
+		"stay around",
+		"surround"
 	],
 	"electrons#atom": [
+		"be attracted to",
 		"be in",
+		"be most important part of",
+		"be part of",
+		"fill up orbitals in",
+		"fly off",
 		"leave",
 		"move in",
-		"be part of",
-		"fly off",
 		"move to",
-		"be attracted to",
-		"travel in",
-		"fill up orbitals in",
-		"be most important part of"
+		"travel in"
 	],
 	"nucleus#atom": [
+		"be densest part of",
 		"be in",
-		"relate to",
 		"be most located in",
-		"be densest part of"
+		"relate to"
 	],
 	"nucleus#electrons": [
 		"can emit",
@@ -224,35 +224,35 @@
 	"atmosphere#sun": [],
 	"atmosphere#sunscreen": [],
 	"earth#sun": [
+		"be attracted to",
+		"be close to",
+		"be pulled into",
+		"be to",
+		"has property",
+		"need",
 		"revolve around",
 		"rotate around",
-		"be pulled into",
-		"has property",
-		"be attracted to",
-		"need",
 		"spin around",
-		"be to",
-		"be close to",
 		"turn around"
 	],
 	"earth#sunscreen": [],
 	"earth#atmosphere": [
-		"have",
-		"be planet with"
+		"be planet with",
+		"have"
 	],
 	"sun#atmosphere": [],
 	"sunscreen#atmosphere": [],
 	"sun#earth": [
-		"be to",
-		"rotate around",
-		"pull in",
-		"orbit",
-		"be closest star to",
-		"capture moon away from",
 		"affect",
+		"be closest star to",
+		"be important to",
+		"be to",
 		"burn",
+		"capture moon away from",
+		"orbit",
+		"pull in",
 		"pull off",
-		"be important to"
+		"rotate around"
 	],
 	"sunscreen#earth": [],
 	"air conditioner#summer": [],
@@ -269,22 +269,22 @@
 		"be free free"
 	],
 	"duties#army": [
-		"be in",
 		"be important in",
+		"be in",
 		"has property"
 	],
 	"tax#army": [],
 	"tax#duties": [],
 	"homework#student": [
 		"affect",
-		"help",
-		"be given to",
-		"be for",
-		"be good for",
+		"be bad for",
 		"be beneficial to",
 		"be better for",
+		"be for",
+		"be given to",
+		"be good for",
 		"be important to",
-		"be bad for",
+		"help",
 		"put stress on"
 	],
 	"practice#student": [
@@ -292,15 +292,15 @@
 	],
 	"practice#homework": [],
 	"student#homework": [
-		"do",
-		"get",
 		"be given",
-		"have",
-		"hate",
 		"cheat on",
-		"feel about",
-		"need",
 		"copy",
+		"do",
+		"feel about",
+		"get",
+		"hate",
+		"have",
+		"need",
 		"over doing"
 	],
 	"student#practice": [],
@@ -309,16 +309,16 @@
 	"amount#virus": [],
 	"antibiotic#antibodies": [],
 	"antibiotic#virus": [
-		"work on",
-		"kill",
 		"affect",
-		"treat",
-		"do work on",
 		"be effective against",
+		"destroy",
+		"do work on",
+		"help",
+		"kill",
+		"treat",
 		"work against",
 		"work for",
-		"destroy",
-		"help"
+		"work on"
 	],
 	"antibodies#virus": [],
 	"antibiotic#amount": [],
@@ -326,10 +326,10 @@
 	"virus#amount": [],
 	"antibodies#antibiotic": [],
 	"virus#antibiotic": [
-		"respond to",
-		"be treated with",
+		"be destroyed by",
 		"be susceptible to",
-		"be destroyed by"
+		"be treated with",
+		"respond to"
 	],
 	"virus#antibodies": [],
 	"citizen#duties": [
@@ -337,55 +337,55 @@
 	],
 	"duties#citizen": [],
 	"electrons#electricity": [
-		"create",
-		"conduct",
-		"produce",
-		"relate to",
 		"be involved with",
-		"in conducting"
+		"conduct",
+		"create",
+		"in conducting",
+		"produce",
+		"relate to"
 	],
 	"electricity#electrons": [
-		"has property",
-		"be related to",
-		"work with",
 		"be created by",
-		"be made out of"
+		"be made out of",
+		"be related to",
+		"has property",
+		"work with"
 	],
 	"nucleus#electricity": [],
 	"electricity#nucleus": [],
 	"earth#gravity": [
-		"have",
 		"be planet with",
-		"need",
 		"can lose",
-		"create",
 		"contain",
+		"create",
 		"get",
-		"keep in"
+		"have",
+		"keep in",
+		"need"
 	],
 	"gravity#earth": [
-		"pull moon to",
+		"affect",
 		"be center of",
 		"be different on",
-		"affect",
+		"be on",
 		"happen on",
-		"pull objects to",
-		"keep water on",
 		"keep on",
-		"stay on",
-		"be on"
+		"keep water on",
+		"pull moon to",
+		"pull objects to",
+		"stay on"
 	],
 	"sun#gravity": [
 		"has property",
 		"have"
 	],
 	"gravity#sun": [
-		"pull earth into",
-		"pull into",
+		"be greater on",
 		"be related to",
 		"keep earth around",
-		"be greater on",
-		"keep planets around"
+		"keep planets around",
+		"pull earth into",
+		"pull into"
 	],
 	"electrons#flower": [],
 	"flower#electrons": [],
@@ -413,14 +413,14 @@
 		"move"
 	],
 	"tree#earth": [
-		"help",
-		"be good for",
-		"can save",
-		"be on",
-		"be important to",
-		"transfer energy into",
 		"be essential on",
-		"can help"
+		"be good for",
+		"be important to",
+		"be on",
+		"can help",
+		"can save",
+		"help",
+		"transfer energy into"
 	],
 	"battery#electrons": [
 		"push"
@@ -438,9 +438,9 @@
 	"sky#faraday": [],
 	"sun#tree": [],
 	"tree#sun": [
-		"use energy from",
+		"need",
 		"protect from",
-		"need"
+		"use energy from"
 	],
 	"gravity#tree": [],
 	"tree#gravity": [
@@ -454,28 +454,28 @@
 	"nucleus#battery": [],
 	"battery#nucleus": [],
 	"electricity#battery": [
-		"be stored in",
 		"be created in",
 		"be generated in",
-		"be made by"
+		"be made by",
+		"be stored in"
 	],
 	"battery#electricity": [
-		"produce",
-		"make",
-		"provide",
-		"generate",
-		"create",
 		"conduct",
-		"run out of",
+		"create",
+		"generate",
 		"hold",
+		"make",
+		"produce",
+		"provide",
+		"run out of",
 		"use"
 	],
 	"faraday#battery": [],
 	"battery#faraday": [],
 	"electricity#atom": [],
 	"atom#electricity": [
-		"relate to",
-		"produce"
+		"produce",
+		"relate to"
 	],
 	"faraday#atom": [],
 	"atom#faraday": [],
@@ -505,43 +505,43 @@
 		"run out of"
 	],
 	"nucleus#cell": [
-		"be in",
-		"do in",
-		"has property",
+		"be absent in",
 		"be control of",
 		"be important in",
-		"be most important organelle in",
-		"be absent in",
+		"be important part of",
+		"be in",
 		"be largest organelle in",
-		"help",
-		"be important part of"
+		"be most important organelle in",
+		"do in",
+		"has property",
+		"help"
 	],
 	"cell#nucleus": [
 		"have",
-		"need",
-		"keep dna in"
+		"keep dna in",
+		"need"
 	],
 	"astronaut#spaceship": [
-		"float in",
 		"feel in",
+		"float in",
 		"go out of",
+		"go washroom in",
 		"spend time in",
-		"steer",
-		"go washroom in"
+		"steer"
 	],
 	"spaceship#astronaut": [],
 	"space#spaceship": [],
 	"spaceship#space": [
-		"fly in",
-		"move in",
-		"get into",
-		"travel through",
 		"accelerate in",
-		"turn in",
+		"change direction in",
+		"fly in",
+		"get into",
+		"move in",
 		"navigate in",
 		"steer in",
-		"work in",
-		"change direction in"
+		"travel through",
+		"turn in",
+		"work in"
 	],
 	"thoughts#head": [],
 	"head#thoughts": [],
@@ -551,8 +551,8 @@
 	],
 	"head#brain": [],
 	"boats#sail": [
-		"have",
 		"can",
+		"have",
 		"use fabric for"
 	],
 	"sail#boats": [
@@ -565,16 +565,16 @@
 		"need"
 	],
 	"wheels#cars": [
-		"fall off",
-		"rotate in",
-		"turn in",
-		"move on",
-		"spin on",
 		"affect",
-		"turn on",
 		"be attached to",
+		"be connected to",
 		"come off",
-		"be connected to"
+		"fall off",
+		"move on",
+		"rotate in",
+		"spin on",
+		"turn in",
+		"turn on"
 	],
 	"road#wheels": [],
 	"wheels#road": [],
@@ -585,11 +585,11 @@
 	"sunscreen#summer": [],
 	"summer#sunscreen": [],
 	"sun#summer": [
-		"stay up longer in",
 		"appear in",
-		"set in",
+		"be higher in",
 		"be hotter in",
-		"be higher in"
+		"set in",
+		"stay up longer in"
 	],
 	"summer#sun": [],
 	"citizen#country": [
@@ -599,14 +599,14 @@
 	"duties#country": [],
 	"country#duties": [],
 	"student#university": [
-		"fail in",
-		"go to",
-		"drop out of",
-		"attend",
 		"afford",
+		"attend",
 		"choose",
-		"transfer",
-		"get through"
+		"drop out of",
+		"fail in",
+		"get through",
+		"go to",
+		"transfer"
 	],
 	"university#student": [
 		"affect"
