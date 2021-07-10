@@ -7,6 +7,7 @@ import utils
 import concept_net
 import google_autosuggest
 from quasimodo import Quasimodo
+from data_collector import DataCollector
 from sentence_embadding import SentenceEmbedding
 
 class Suggestions(object):
@@ -38,7 +39,7 @@ class Suggestions(object):
             json.dump(self.google_suggestinos, f1, indent='\t')
 
 
-def get_suggestions_for_missing_entities(model: SentenceEmbedding, base_not_mapped_entities: List[str], base_already_mapping: List[str], target_already_mapping: List[str], verbose: bool = False) -> Dict[str, Dict[str, Dict[str, Dict[str, List[str]]]]]:
+def get_suggestions_for_missing_entities(data_collector: DataCollector, base_not_mapped_entities: List[str], base_already_mapping: List[str], target_already_mapping: List[str], verbose: bool = False) -> Dict[str, Dict[str, Dict[str, Dict[str, List[str]]]]]:
     sugges = {}
 
     # now we iterate on each entity that not mapped (in the same domain), and try to guess to which entity they should be mapped.
@@ -49,8 +50,8 @@ def get_suggestions_for_missing_entities(model: SentenceEmbedding, base_not_mapp
         for idx, base_entity in enumerate(base_already_mapping):
             if verbose: secho(f"{(base_not_mapped_entity, base_entity)}", fg="blue", bold=True)
             sugges[base_not_mapped_entity][base_entity] = {}
-            props_entity_1 = model.get_entities_relations(base_entity, base_not_mapped_entity)
-            props_entity_2 = model.get_entities_relations(base_not_mapped_entity, base_entity)
+            props_entity_1 = data_collector.get_entities_relations(base_entity, base_not_mapped_entity)
+            props_entity_2 = data_collector.get_entities_relations(base_not_mapped_entity, base_entity)
 
             # we we use the map that we already know (base_entity->target_already_mapping[idx])
             if verbose: secho(f"  {target_already_mapping[idx]}", fg="red", bold=True)
@@ -74,26 +75,11 @@ def get_suggestions_for_missing_entities(model: SentenceEmbedding, base_not_mapp
     return sugges
 
 
-def get_entitiy_props(entity: str, quasimodo: Quasimodo = None) -> List[str]:
-    if not quasimodo: quasimodo = Quasimodo()
-
-    quasimodo_db = utils.read_json('database/quasimodo_nodes.json')
-    if entity not in quasimodo_db:
-        quasimodo_db[entity] = [[prop[0], prop[1]] for prop in quasimodo.get_entity_props(entity, n_largest=5)]
-        with open('database/quasimodo_nodes.json', 'w') as f1:
-            json.dump(quasimodo_db, f1, indent='\t')
-
-    quasimodo_props = [f"{prop[0]} {prop[1]}" for prop in quasimodo_db[entity]]
-    concept_net_props = concept_net.get_entity_props(entity, quasimodo.engine)
-    google_props = google_autosuggest.get_entity_props(entity)
-    return list(set(quasimodo_props + concept_net_props + google_props))
-
-
-def get_score_between_two_entitites(entity1: str, entity2: str, model: SentenceEmbedding = None, quasimodo: Quasimodo = None) -> float:
-    if not quasimodo: quasimodo = Quasimodo()
+def get_score_between_two_entitites(entity1: str, entity2: str, model: SentenceEmbedding = None, data_collector: DataCollector = None) -> float:
     if not model: model = SentenceEmbedding()
-    props1 = get_entitiy_props(entity1, quasimodo)
-    props2 = get_entitiy_props(entity2, quasimodo)
+    if not data_collector: data_collector = DataCollector()
+    props1 = data_collector.get_entitiy_props(entity1)
+    props2 = data_collector.get_entitiy_props(entity2)
     if not props1 or not props2:
         return 0
 
@@ -103,8 +89,9 @@ def get_score_between_two_entitites(entity1: str, entity2: str, model: SentenceE
     return round(sum([val[2] for val in similatiry_edges]) / len(similatiry_edges), 3)
 
 
-def get_best_matches_for_entity(entity: str, entities: List[str], n_best: int = 5, verbose: bool = False, model: SentenceEmbedding = None, quasimodo: Quasimodo = None) -> List[str]:
-    best = [(entity, e, get_score_between_two_entitites(e, entity, model, quasimodo)) for e in entities]
+def get_best_matches_for_entity(entity: str, entities: List[str], n_best: int = 5, verbose: bool = False, model: SentenceEmbedding = None) -> List[str]:
+    data_collector = DataCollector()
+    best = [(entity, e, get_score_between_two_entitites(e, entity, model, data_collector)) for e in entities]
     best = sorted(best, key=lambda x: x[2], reverse=True)
     if verbose:
         for val in best:
@@ -115,5 +102,6 @@ def get_best_matches_for_entity(entity: str, entities: List[str], n_best: int = 
 
 
 if __name__ == '__main__':
-    # get_score_between_two_entitites("newton", "faraday")
-    pass
+    res = get_score_between_two_entitites("newton", "faraday")
+    print(res)
+    # pass

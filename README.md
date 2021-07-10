@@ -92,16 +92,6 @@ similarity = model.similarity('earth revolve around the sun', 'dog is the best f
 similarity = model.similarity('earth revolve around the sun', 'earth revolve around the sun')
 -- 1.000
 ```  
-
-The script also provide as a function that get relations between two entities (probably not the base place for that), it just call to google-autocomplete, conceptNet and Quasimodo the combine all together (include handle the database).  
-```bash
-from sentence_embadding import SentenceEmbedding
-
-model = SentenceEmbedding()
-res = model.get_entities_relations("earth", "sun")
-# so the output will be:
-['turn around', 'revolving around the', 'rotate around', 'not fall into', 'move around the', 'be pulled into', 'revolve around', 'spin around', 'be to', 'spin around the', 'move around', 'be attracted to', 'be close to', 'need', 'circle the', 'has property', 'orbit']
-```  
 &nbsp;  
 
 #### :yellow_circle: google_autosuggest.py

@@ -109,7 +109,7 @@ def get_entities_relations(entity1: str, entity2: str, engine: inflect.engine = 
 
 
 def get_entity_props(entity: str, engine: inflect.engine = None, n_best: int = 5, weight_thresh: int = 1, plural_and_singular: bool = False, override_db: bool = False) -> List[str]:
-    if not engine:
+    if not engine and plural_and_singular:
         engine = inflect.engine()
 
     # we want the props of a single entity

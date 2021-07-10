@@ -6,6 +6,7 @@ from click import secho
 
 import utils
 import suggest_entities
+from data_collector import DataCollector
 from sentence_embadding import SentenceEmbedding
 
 
@@ -103,11 +104,10 @@ def get_edges_with_maximum_weight(similatiry_edges: List[Tuple[str, str, float]]
     return cluster_edges_weights
 
 
-def get_pair_mapping(model: SentenceEmbedding, 
-                    mapping: List[Tuple[str, str]]):
+def get_pair_mapping(model: SentenceEmbedding, data_collector: DataCollector, mapping: List[Tuple[str, str]]):
 
-    props_edge1 = model.get_entities_relations(mapping[0][0], mapping[0][1])
-    props_edge2 = model.get_entities_relations(mapping[1][0], mapping[1][1])
+    props_edge1 = data_collector.get_entities_relations(mapping[0][0], mapping[0][1])
+    props_edge2 = data_collector.get_entities_relations(mapping[1][0], mapping[1][1])
 
     if not props_edge1 or not props_edge2:
         return {}
@@ -133,9 +133,7 @@ def get_pair_mapping(model: SentenceEmbedding,
     }
 
 
-def get_best_pair_mapping(model: SentenceEmbedding, 
-                        available_maps: List[List[List[Tuple[str, str]]]]
-                        ) -> Dict:
+def get_best_pair_mapping(model: SentenceEmbedding, data_collector: DataCollector, available_maps: List[List[List[Tuple[str, str]]]]) -> Dict:
     mappings = []
 
     # we will iterate over all the possible pairs mapping ((n choose 2)*(n choose 2)*2), 2->2, 3->18, 4->72
@@ -146,8 +144,8 @@ def get_best_pair_mapping(model: SentenceEmbedding,
         # earth .* sun, electrons .* nucleus AND sun .* earth, nucleus .* electrons
         mapping_score = 0
         for direction in mapping:
-            props_edge1 = model.get_entities_relations(direction[0][0], direction[0][1])
-            props_edge2 = model.get_entities_relations(direction[1][0], direction[1][1])
+            props_edge1 = data_collector.get_entities_relations(direction[0][0], direction[0][1])
+            props_edge2 = data_collector.get_entities_relations(direction[1][0], direction[1][1])
 
             if not props_edge1 or not props_edge2:
                 continue
@@ -179,7 +177,8 @@ def get_best_pair_mapping(model: SentenceEmbedding,
 
 
 def mapping(base: List[str], target: List[str], suggestions: bool = True):
-    model = SentenceEmbedding(init_quasimodo=True, init_inflect=False)
+    data_collector = DataCollector()
+    model = SentenceEmbedding(data_collector=data_collector)
     relations = []
     base_already_mapping = []
     target_already_mapping = []
@@ -214,7 +213,7 @@ def mapping(base: List[str], target: List[str], suggestions: bool = True):
         all_possible_pairs_map = update_paris_map(all_possible_pairs_map, base_already_mapping, target_already_mapping)
 
         # now we will get the pair with the best score.
-        res = get_best_pair_mapping(model, all_possible_pairs_map)
+        res = get_best_pair_mapping(model, data_collector, all_possible_pairs_map)
 
         # if the best score is > 0, we will update the base and target lists of the already mapping entities.
         # otherwise, if the best score is 0, we have no more maps.
