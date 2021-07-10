@@ -226,10 +226,10 @@ def mapping(base: List[str], target: List[str], suggestions: bool = True):
     
     if suggestions:
         base_not_mapped_entities = [entity for entity in base if entity not in base_already_mapping]
-        base_suggestions = suggest_entities.get_suggestions_for_missing_entities(model, base_not_mapped_entities, base_already_mapping, target_already_mapping, verbose=True)
+        base_suggestions = suggest_entities.get_suggestions_for_missing_entities(data_collector, base_not_mapped_entities, base_already_mapping, target_already_mapping, verbose=True)
         
         target_not_mapped_entities = [entity for entity in target if entity not in target_already_mapping]
-        target_suggestions = suggest_entities.get_suggestions_for_missing_entities(model, target_not_mapped_entities, target_already_mapping, base_already_mapping, verbose=True)
+        target_suggestions = suggest_entities.get_suggestions_for_missing_entities(data_collector, target_not_mapped_entities, target_already_mapping, base_already_mapping, verbose=True)
     
     return {
         "mapping": [f"{b} --> {t}" for b, t in zip(base_already_mapping, target_already_mapping)],
@@ -240,14 +240,89 @@ def mapping(base: List[str], target: List[str], suggestions: bool = True):
 
 
 if __name__ == "__main__":
-    base = ["earth", "sun", "gravity", "newton", "universe"]
-    target = ["electrons", "nucleus", "electricity", 'cell']
-    res = mapping(base, target)
-    for entity, suggestions in res["base_suggestions"].items():
-        secho(f"\nSuggestions for ", fg="blue", nl=False)
-        secho(f"{entity}: ", fg="blue", bold=True, nl=False)
-        for suggest in suggestions:
-            secho(f"({suggest[1]}, {suggest[2]}), ", fg="blue", nl=False)
+
+    data = [
+        [
+            # expected: earth->electrons, sun->nucleus, gravity->electricity, universe->cell, newton->? (faraday has been removed)
+            ["earth", "sun", "gravity", "newton", "universe"], 
+            ["electrons", "nucleus", "electricity", "cell"]
+        ],
+        [
+            # TODO: understand it (sun and its not good...)
+            # expected: earth->electrons, gravity->electricity, newton->faraday, sun->? (nucleus has been removed)
+            ["earth", "newton", "gravity"],
+            ["electrons", "nucleus", "electricity", "faraday"],
+        ],
+        [
+            # expected: thoughts->astronaut, brain->space, head->spaceship
+            ["thoughts", "brain", "head"],
+            ["astronaut", "space", "spaceship"],
+        ],
+        [
+            # TODO: check why there are no suggestions...
+            # expected: thoughts->astronaut, brain->space, head->? (spaceship has been removed)
+            ["thoughts", "brain", "head"],
+            ["astronaut", "space"],
+        ],
+        [
+            # TODO: why cars --> sail and road --> boats?
+            # expected: cars->boats, road->river, wheels->sail
+            ["cars", "road", "wheels"],
+            ["boats", "river", "sail"],
+        ],
+        # [
+        #     # expected: cars->boats, road->river, wheels->? (sail has been removed)
+        #     ["cars", "road", "wheels"],
+        #     ["boats", "river"],
+        # ],
+        [
+            # TODO: very strange that there are no relations between rain:winter or unbrella:winter
+            # expected: sunscreen->umbrella, sun->rain, summer->winter 
+            ["sunscreen", "sun", "summer"],
+            ["umbrella", "rain", "winter"],
+        ],
+        # [
+        #     # expected: sunscreen->umbrella, sun->rain, summer->? (winter has been removed)
+        #     ["sunscreen", "sun", "summer"],
+        #     ["umbrella", "rain"],
+        # ],
+        [
+            # expected: student->citizen, homework->duties, university->country
+            ["student", "homework", "university"],
+            ["citizen", "duties", "country"],
+        ],
+        # [
+        #     # expected: student->citizen, homework->duties, university->? (country has been removed)
+        #     ["student", "homework", "university"],
+        #     ["citizen", "duties"],
+        # ],
+    ]
+
+    for input in data:
+        base, target = input
+        print("####################################################")
+        secho(f"{base} --> {target}", fg="green", bold=True)
+        print("----------------------------------------------------")
+        res = mapping(base, target)
+        print(res["mapping"])
+        print()
+        print(res["relations"])
+        print()
+        for entity, suggestions in res["base_suggestions"].items():
+            secho(f"\nSuggestions (base) for ", fg="blue", nl=False)
+            secho(f"{entity}: ", fg="blue", bold=True, nl=False)
+            for suggest in suggestions:
+                secho(f"{suggest}, ", fg="blue", nl=False)
+        print()
+        for entity, suggestions in res["target_suggestions"].items():
+            secho(f"\nSuggestions (target) for ", fg="blue", nl=False)
+            secho(f"{entity}: ", fg="blue", bold=True, nl=False)
+            for suggest in suggestions:
+                secho(f"{suggest}, ", fg="blue", nl=False)
+        print()
+        print("####################################################")
+        print()
+        print()
 
 
 # http://localhost:3000/mapping?base=earth,sun,gravity,newton&target=electrons,nucleus,electricity,faraday

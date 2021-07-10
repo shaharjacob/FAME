@@ -71,6 +71,7 @@ def get_suggestions_for_missing_entities(data_collector: DataCollector, base_not
                     secho(f"    No match found!", fg="green")
                 print()
 
+        sugges[base_not_mapped_entity] = list(set(suggests_list))
         # sugges[base_not_mapped_entity] = get_best_matches_for_entity(base_not_mapped_entity, list(set(suggests_list)), n_best=5, verbose=True, model=model, quasimodo=model.quasimodo)
     return sugges
 
