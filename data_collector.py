@@ -7,6 +7,8 @@ import concept_net
 import google_autosuggest
 from quasimodo import Quasimodo
 
+IGNORE = ["has property", "can", "be in", "get", "be", "a"]
+
 class DataCollector(object):
     def __init__(self, init_quasimodo: bool = False, init_inflect: bool = False, save_database: bool = True, override_database: bool = False):
         self.quasimodo = None
@@ -53,7 +55,8 @@ class DataCollector(object):
             self.save_database_()
         
         properties = set(quasimodo_props + autocomplete_props + concept_new_props)
-        properties.discard("has property")
+        for prop_to_discard in IGNORE:
+            properties.discard(prop_to_discard)
         return list(properties)
     
 
