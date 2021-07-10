@@ -176,9 +176,10 @@ def merge_tsvs(output: str):
 
 if __name__ == '__main__':
     quasimodo = Quasimodo()
-    quasimodo.get_entity_props("faraday", n_largest=5, verbose=True)
-
-
+    # res = quasimodo.get_entity_props('sun', n_largest=5)
+    # res = quasimodo.get_entities_relations('sun', 'earth', n_largest=5)
+    res = quasimodo.get_similarity_between_entities('horse', 'cow', n_largest=5)
+    print(res)
 
 
 

@@ -55,9 +55,7 @@ TODO: image here
 - **sentence_embadding.py**: Using sentence embadding to compare between properties.
 - **google_autosuggest.py**: Extracting entities information from google auto-suggest.  
 - **quasimodo.py**: Extracting entities information from quasimodo database.  
-#### &nbsp;&nbsp;:warning: Deprecated:
-- **graph.py**: Creating a graph which represent the nouns in the sentence.
-- **wikifier.py**: Extracting information about the part-of-speech of the given text.  
+- **graph.py**: Creating a graph which represent the nouns in the sentence.  
 &nbsp;  
 
 #### :large_blue_circle: concept_net.py
@@ -142,57 +140,21 @@ quasimodo = Quasimodo(path='tsv/quasimodo.tsv')
 # quasimodo.merge_tsvs('quasimodo.tsv)
 
 # get information on a single subject. n_largest will take the best matches according to quasimodo score.
-quasimodo.get_entity_props('horse', n_largest=20, verbose=True, plural_and_singular=True)
+quasimodo.get_entity_props('sun', n_largest=5)
+# so the output will be:
+[('has property', 'star'), ('be in', 'sky'), ('has temperature', 'hot'), ('has color', 'yellow'), ('go', 'shining')]
 
-# so the output will be:  
+# extract the relations between two object (the order is important!)
+quasimodo.get_entities_relations('sun', 'earth', n_largest=5)
+# so the output will be:
+['be to', 'rotate around', 'pull in', 'orbit', 'be closest star to']
+
+# extract the similarity between two object
+quasimodo.get_similarity_between_entities('horse', 'cow', n_largest=5)
+[('can', 'sit'), ('eat', 'grass'), ('has body part', 'teeth'), ('lay', 'down'), ('eat', 'hay')]
 ```
-![alt text](https://github.com/shaharjacob/commonsense-analogy/blob/main/images/get_subject_props_quasimodo_api.png?raw=true)  
-
-```bash
-# get relations between two entities (order is important!)
-quasimodo.get_entities_relations('sun', 'earth', n_largest=20, verbose=True, plural_and_singular=True)
-
-# so the output will be:  
-```
-![alt text](https://github.com/shaharjacob/commonsense-analogy/blob/main/images/get_edge_props_quasimodo_api.png?raw=true)  
-
-```bash
-# get all the similiar properties between two subjects
-quasimodo.get_similarity_between_entities('sun', 'earth', n_largest=20, verbose=True, plural_and_singular=True)
-
-# so the output will be:  
-```
-![alt text](https://github.com/shaharjacob/commonsense-analogy/blob/main/images/get_similarity_between_nodes_quasimodo_api.png?raw=true)  
 &nbsp;  
 
-#### :green_circle: wikifier.py
-This script is extracting information from a text, such as part-of-speech.  
-It using wikifier API for that purpose.  
-
-**Notice**: The tool is ignoring special character inside the text, expect ','  
-i.e. the output of "I lo!ve coding??" and "I love coding" will be the same.  
-
-```bash
-# usage
-from wikifier import Wikifier
-
-text_to_analyze = "I love coding but sometimes coding is very boring"
-wikifier = Wikifier(text_to_analyze)
-wikifier.get_part_of_speech()
-
-# output:  
-```
-![alt text](https://github.com/shaharjacob/commonsense-analogy/blob/main/images/wikifier_get_part_of_speech2.png?raw=true)  
-
-```bash
-text_to_analyze = "sunscreen protects against the sun as a tarpaulin protects against rain"
-wikifier = Wikifier(text_to_analyze)
-wikifier.get_part_of_speech()
-
-# output:  
-```
-![alt text](https://github.com/shaharjacob/commonsense-analogy/blob/main/images/wikifier_get_part_of_speech1.png?raw=true)  
-&nbsp;  
 
 #### :purple_circle: graph.py
 1) Taking a text and extract the **nouns** using wikifier part-of-speech.  
