@@ -245,15 +245,23 @@ if __name__ == "__main__":
         [
             # seems good!
             # expected mapping: earth->electrons, sun->nucleus, gravity->electricity, universe->cell, newton->? (faraday has been removed)
+            # http://localhost:3000/mapping?base=earth,sun,newton,gravity,universe&target=electrons,nucleus,electricity,faraday,cell
             ["earth", "sun", "gravity", "newton", "universe"], 
             ["electrons", "nucleus", "electricity", "cell"]
         ],
         [
+            # http://localhost:3000/mapping?base=earth,newton,gravity&target=electrons,nucleus,electricity,faraday
             # expected mapping: earth->electrons, gravity->electricity, newton->faraday, nucleus->? (sun has been removed)
-            # http://localhost:3000/mapping?base=earth,%20newton,%20gravity&target=electrons,%20nucleus,%20electricity,%20faraday
-            # http://localhost:3000/two-entities?base1=gravity&base2=earth&target1=electrons&target2=electricity
-            # it map earth-->electricity and gravity-->electrons instead of earth-->electrons and gravity-->electricity, but their score is similar (2.125~1.879)
-            # seems that quasimodo give too much noise
+            # it map earth-->electricity and gravity-->electrons instead of earth-->electrons and gravity-->electricity, but their score is similar (1.833, 1.625) without IGNORE list: (2.125~1.879)
+            # Option 1 (the chosen one): (earth-->electricity, gravity-->electrons, newton-->nucleus)
+            #   (earth:gravity, electricity:electrons): 1.833
+            #   (gravity:electrons, newton:nucleus): 0.707
+            #   total score: 2.54
+            # Option 2: (earth-->electrons, gravity-->electrivity, newton-->faraday)
+            #   (earth:gravity, electrons:electrivity): 1.625
+            #   (gravity:newton, electricity:faraday): 1
+            #   total score: 2.625
+
             ["earth", "newton", "gravity"],
             ["electrons", "nucleus", "electricity", "faraday"],
         ],

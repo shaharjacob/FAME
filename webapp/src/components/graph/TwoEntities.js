@@ -62,10 +62,18 @@ const TwoEntities = () => {
             return response.json()
           }
         }).then(data => {
-            if (!IsEmpty(data[0][0.8]["graph"])) {
+            let idx = 0
+            let length = Object.keys(data).length
+            for (let i = 0; i < length; i++) {
+                if (!IsEmpty(data[i][0.8]["graph"])) {
+                    idx = i
+                    break
+                }
+            }
+            if (!IsEmpty(data[idx][0.8]["graph"])) {
                 setData(data)
-                setGraph(data[0][0.8]["graph"])
-                setOptions(data[0][0.8]["options"])
+                setGraph(data[idx][0.8]["graph"])
+                setOptions(data[idx][0.8]["options"])
                 setScores([
                     data[0][0.8]["score"],
                     data[1][0.8]["score"],
