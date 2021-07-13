@@ -620,5 +620,13 @@
 	"umbrella#london": [],
 	"london#umbrella": [],
 	"rain#london": [],
-	"london#rain": []
+	"london#rain": [],
+	"spaceship#sky": [],
+	"sky#spaceship": [],
+	"spaceship#universe": [],
+	"universe#spaceship": [],
+	"thoughts#body": [
+		"affect"
+	],
+	"body#thoughts": []
 }

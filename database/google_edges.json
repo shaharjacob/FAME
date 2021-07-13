@@ -766,5 +766,14 @@
 		"get a lot of",
 		"get so much",
 		"have the least"
-	]
+	],
+	"spaceship#sky": [],
+	"sky#spaceship": [],
+	"spaceship#universe": [],
+	"universe#spaceship": [],
+	"thoughts#body": [
+		"affect",
+		"affect the"
+	],
+	"body#thoughts": []
 }

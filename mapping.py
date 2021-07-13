@@ -184,24 +184,6 @@ def mapping(base: List[str], target: List[str], suggestions: bool = True):
     target_already_mapping = []
 
     # we want all the possible pairs. For example, if base: a,b,c, target: 1,2,3:
-    #  a->1, b->2, (a:b, 1:2)
-    #  a->2, b->1, (a:b, 2:1)
-    #  a->2, b->3, (a:b, 2:3)
-    #  a->3, b->2, (a:b, 3:2)
-    #  a->1, b->3, (a:b, 1:3)
-    #  a->3, b->1, (a:b, 3:1)
-    #  b->1, c->2, (b:c, 1:2)
-    #  b->2, c->1, (b:c, 2:1)
-    #  b->2, c->3, (b:c, 2:3)
-    #  b->3, c->2, (b:c, 3:2)
-    #  b->1, c->3, (b:c, 1:3)
-    #  b->3, c->1, (b:c, 3:1)
-    #  a->1, c->2, (a:c, 1:2)
-    #  a->2, c->1, (a:c, 2:1)
-    #  a->2, c->3, (a:c, 2:3)
-    #  a->3, c->2, (a:c, 3:2)
-    #  a->1, c->3, (a:c, 1:3)
-    #  a->3, c->1, (a:c, 3:1)
     # general there are (n choose 2) * (n choose 2) * 2 pairs.
     all_possible_pairs_map: List[List[List[Tuple[str, str]]]] = get_all_possible_pairs_map(base, target)
 
@@ -266,84 +248,121 @@ if __name__ == "__main__":
             ["electrons", "nucleus", "electricity", "faraday"],
         ],
         [
+            # seems good!
+            # http://localhost:3000/mapping?base=thoughts,brain,head&target=astronaut,space,spaceship
             # expected mapping: thoughts->astronaut, brain->space, head->spaceship
-            # the mapping is good but with the wrong reason.
-            # expected that brain is inside the head as astronaut is inside the spaceship, or head containing brain as spaceship containing astronaut
             ["thoughts", "brain", "head"],
             ["astronaut", "space", "spaceship"],
         ],
         [
-            # there are no suggestions...
-            # seems that the relatoins between thoughts and head are too weak, and not similar enougth to astronaut and spaceship
-            # http://localhost:3000/mapping?base=thoughts,%20brain,%20head&target=astronaut,%20space,%20spaceship
-            # http://localhost:3000/two-entities?base1=thoughts&base2=head&target1=astronaut&target2=spaceship
+            # seems good!
+            # http://localhost:3000/mapping?base=thoughts,brain,head&target=astronaut,space
             # expected: thoughts->astronaut, brain->space, head->? (spaceship has been removed)
+            # it suggest for head: ['finn', 'spacex', 'earth', 'it'], I like the spacex option.
             ["thoughts", "brain", "head"],
             ["astronaut", "space"],
         ],
         [
+            # seems good!
+            # http://localhost:3000/mapping?base=thoughts,brain,body&target=astronaut,space,spaceship
+            ["thoughts", "brain", "body"],
+            ["astronaut", "space", "spaceship"],
+        ],
+        [
+            # http://localhost:3000/mapping?base=cars,road,wheels&target=boats,river,sail
             # expected: cars->boats, road->river, wheels->sail
             # after removing "has property" is seems better
-            # http://localhost:3000/mapping?base=cars,%20road,%20wheels&target=boats,%20river,%20sail
             ["cars", "road", "wheels"],
             ["boats", "river", "sail"],
         ],
         [
+            # http://localhost:3000/mapping?base=cars,road,wheels&target=boats,river
             # expected: cars->boats, road->river, wheels->? (sail has been removed)
-            # the suggestions are not good
+            # the suggestions are not good. Need to check why sail is now suggested in "boat have .*" 
             ["cars", "road", "wheels"],
             ["boats", "river"],
         ],
         [
+            # http://localhost:3000/mapping?base=sunscreen,sun,summer&target=umbrella,rain,winter
             # expected: sunscreen->umbrella, sun->rain, summer->winter 
-            # it not mapping summer->winter.
-            # there are no relations between rain:winter or unbrella:winter
+            # the mapping is good, but the map between summer-->winter is very week!
+            # the relation between sun:summer are good, but there are no relations between rain:winter!
+            # TODO: demo for single relation
             ["sunscreen", "sun", "summer"],
             ["umbrella", "rain", "winter"],
         ],
-        # [
-        #     # expected: sunscreen->umbrella, sun->rain, summer->? (winter has been removed)
-        #     ["sunscreen", "sun", "summer"],
-        #     ["umbrella", "rain"],
-        # ],
         [
+            # http://localhost:3000/mapping?base=student,homework,university&target=citizen,duties,winter
             # expected: student->citizen, homework->duties, university->country
+            # it found that (student:homework, citzen:country) is stronger then (student:homework, citzen:duties): 1.047 ~ 1
+            # http://localhost:3000/two-entities?base1=student&base2=homework&target1=citizen&target2=duties
+            # http://localhost:3000/two-entities?base1=student&base2=homework&target1=citizen&target2=country
             ["student", "homework", "university"],
             ["citizen", "duties", "country"],
         ],
-        # [
-        #     # expected: student->citizen, homework->duties, university->? (country has been removed)
-        #     ["student", "homework", "university"],
-        #     ["citizen", "duties"],
-        # ],
     ]
 
-    for input in data:
-        base, target = input
-        print("####################################################")
-        secho(f"{base} --> {target}", fg="green", bold=True)
-        print("----------------------------------------------------")
-        res = mapping(base, target)
-        print(res["mapping"])
-        print()
-        print(res["relations"])
-        print()
-        for entity, suggestions in res["base_suggestions"].items():
-            secho(f"\nSuggestions (base) for ", fg="blue", nl=False)
-            secho(f"{entity}: ", fg="blue", bold=True, nl=False)
-            for suggest in suggestions:
-                secho(f"{suggest}, ", fg="blue", nl=False)
-        print()
-        for entity, suggestions in res["target_suggestions"].items():
-            secho(f"\nSuggestions (target) for ", fg="blue", nl=False)
-            secho(f"{entity}: ", fg="blue", bold=True, nl=False)
-            for suggest in suggestions:
-                secho(f"{suggest}, ", fg="blue", nl=False)
-        print()
-        print("####################################################")
-        print()
-        print()
 
 
-# http://localhost:3000/mapping?base=earth,sun,gravity,newton&target=electrons,nucleus,electricity,faraday
-# http://localhost:3000/mapping?base=earth,sun,gravity,newton,tree&target=electrons,nucleus,electricity,faraday,battery
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    # for input in data:
+    #     base, target = input
+    #     print("####################################################")
+    #     secho(f"{base} --> {target}", fg="green", bold=True)
+    #     print("----------------------------------------------------")
+    #     res = mapping(base, target)
+    #     print(res["mapping"])
+    #     print()
+    #     print(res["relations"])
+    #     print()
+    #     for entity, suggestions in res["base_suggestions"].items():
+    #         secho(f"\nSuggestions (base) for ", fg="blue", nl=False)
+    #         secho(f"{entity}: ", fg="blue", bold=True, nl=False)
+    #         for suggest in suggestions:
+    #             secho(f"{suggest}, ", fg="blue", nl=False)
+    #     print()
+    #     for entity, suggestions in res["target_suggestions"].items():
+    #         secho(f"\nSuggestions (target) for ", fg="blue", nl=False)
+    #         secho(f"{entity}: ", fg="blue", bold=True, nl=False)
+    #         for suggest in suggestions:
+    #             secho(f"{suggest}, ", fg="blue", nl=False)
+    #     print()
+    #     print("####################################################")
+    #     print()
+    #     print()
+
+
+
+
+
+    #  a->1, b->2, (a:b, 1:2)
+    #  a->2, b->1, (a:b, 2:1)
+    #  a->2, b->3, (a:b, 2:3)
+    #  a->3, b->2, (a:b, 3:2)
+    #  a->1, b->3, (a:b, 1:3)
+    #  a->3, b->1, (a:b, 3:1)
+    #  b->1, c->2, (b:c, 1:2)
+    #  b->2, c->1, (b:c, 2:1)
+    #  b->2, c->3, (b:c, 2:3)
+    #  b->3, c->2, (b:c, 3:2)
+    #  b->1, c->3, (b:c, 1:3)
+    #  b->3, c->1, (b:c, 3:1)
+    #  a->1, c->2, (a:c, 1:2)
+    #  a->2, c->1, (a:c, 2:1)
+    #  a->2, c->3, (a:c, 2:3)
+    #  a->3, c->2, (a:c, 3:2)
+    #  a->1, c->3, (a:c, 1:3)
+    #  a->3, c->1, (a:c, 3:1)

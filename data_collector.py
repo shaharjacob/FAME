@@ -82,3 +82,10 @@ class DataCollector(object):
             json.dump(self.google_edges, f2, indent='\t')
         with open('database/conceptnet_edges.json', 'w') as f3:
             json.dump(self.conceptnet_edges, f3, indent='\t')
+
+
+if __name__ == '__main__':
+    data_collector = DataCollector()
+    # res = data_collector.get_entities_relations("sun", "summer")
+    res = data_collector.get_entities_relations("rain", "winter")
+    print(res)
