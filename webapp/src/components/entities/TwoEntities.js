@@ -1,6 +1,8 @@
 import React, {useState, useEffect} from 'react'
 
 import { useLocation } from 'react-router-dom'
+import LoadingOverlay from 'react-loading-overlay'
+import ClipLoader from 'react-spinners/ClipLoader'
 
 import './TwoEntities.css'
 
@@ -12,6 +14,7 @@ const TwoEntities = () => {
     const [secondDirection, setSecondDirection] = useState({quasimodo: "", concept_net: "", google_autosuggest: ""})
     const [entity1, setEntity1] = useState("")
     const [entity2, setEntity2] = useState("")
+    const [isLoading, setIsLoading] = useState(true)
 
     useEffect(() => {
         let params = new URLSearchParams(location.search)
@@ -26,108 +29,121 @@ const TwoEntities = () => {
         }).then(data => {
             setFirstDirection(data[`${entity1} .* ${entity2}`])
             setSecondDirection(data[`${entity2} .* ${entity1}`])
+            setIsLoading(false)
         })
       },[location.search])
 
 
     return (
-    <div className="two-entities-container">
-        <div style={{marginRight: '20px'}}>
-            <table style={{width: '100%'}}>
-                <tbody>
-                    <tr>
-                        <td className="direction-title">
-                            {entity1} .* {entity2}
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
-            <table style={{width: '100%'}}>
-                <tbody>
-                    <tr>
-                        <td className="content taken-from">
-                            Taken from
-                        </td>
-                        <td className="content relations">
-                            Relations
-                        </td>
-                    </tr>
-                    <tr>
-                        <td className="content">
-                            Quasimodo
-                        </td>
-                        <td className="content props" dangerouslySetInnerHTML={{__html: firstDirection.quasimodo}}>
-                    
-                        </td>
-                    </tr>
-                    <tr>
-                        <td className="content">
-                            Google
-                        </td>
-                        <td className="content props" dangerouslySetInnerHTML={{__html: firstDirection.google_autosuggest}}>
+    <>
+        {isLoading
+            ?
+            <div className="overlay-loading">
+                <LoadingOverlay
+                    active={isLoading}
+                    spinner={<ClipLoader size={70} color="#469cac" />}
+                />
+            </div>
+            :
+            <div className="two-entities-container">
+                <div style={{marginRight: '20px'}}>
+                    <table style={{width: '100%'}}>
+                        <tbody>
+                            <tr>
+                                <td className="direction-title">
+                                    {entity1} .* {entity2}
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <table style={{width: '100%'}}>
+                        <tbody>
+                            <tr>
+                                <td className="content taken-from">
+                                    Taken from
+                                </td>
+                                <td className="content relations">
+                                    Relations
+                                </td>
+                            </tr>
+                            <tr>
+                                <td className="content">
+                                    Quasimodo
+                                </td>
+                                <td className="content props" dangerouslySetInnerHTML={{__html: firstDirection.quasimodo}}>
+                            
+                                </td>
+                            </tr>
+                            <tr>
+                                <td className="content">
+                                    Google
+                                </td>
+                                <td className="content props" dangerouslySetInnerHTML={{__html: firstDirection.google_autosuggest}}>
 
-                        </td>
-                    </tr>
-                    <tr>
-                        <td className="content">
-                            ConceptNet
-                        </td>
-                        <td className="content props" dangerouslySetInnerHTML={{__html: firstDirection.concept_net}}>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td className="content">
+                                    ConceptNet
+                                </td>
+                                <td className="content props" dangerouslySetInnerHTML={{__html: firstDirection.concept_net}}>
 
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-        
-        <div style={{marginLeft: '20px'}}>
-            <table style={{width: '100%'}}>
-                <tbody>
-                    <tr>
-                        <td className="direction-title">
-                            {entity2} .* {entity1}
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
-            <table style={{width: '100%'}}>
-                <tbody>
-                    <tr>
-                        <td className="content taken-from">
-                            Taken from
-                        </td>
-                        <td className="content relations">
-                            Relations
-                        </td>
-                    </tr>
-                    <tr>
-                        <td className="content">
-                            Quasimodo
-                        </td>
-                        <td className="content props" dangerouslySetInnerHTML={{__html: secondDirection.quasimodo}}>
-                    
-                        </td>
-                    </tr>
-                    <tr>
-                        <td className="content">
-                            Google
-                        </td>
-                        <td className="content props" dangerouslySetInnerHTML={{__html: secondDirection.google_autosuggest}}>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                
+                <div style={{marginLeft: '20px'}}>
+                    <table style={{width: '100%'}}>
+                        <tbody>
+                            <tr>
+                                <td className="direction-title">
+                                    {entity2} .* {entity1}
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <table style={{width: '100%'}}>
+                        <tbody>
+                            <tr>
+                                <td className="content taken-from">
+                                    Taken from
+                                </td>
+                                <td className="content relations">
+                                    Relations
+                                </td>
+                            </tr>
+                            <tr>
+                                <td className="content">
+                                    Quasimodo
+                                </td>
+                                <td className="content props" dangerouslySetInnerHTML={{__html: secondDirection.quasimodo}}>
+                            
+                                </td>
+                            </tr>
+                            <tr>
+                                <td className="content">
+                                    Google
+                                </td>
+                                <td className="content props" dangerouslySetInnerHTML={{__html: secondDirection.google_autosuggest}}>
 
-                        </td>
-                    </tr>
-                    <tr>
-                        <td className="content">
-                            ConceptNet
-                        </td>
-                        <td className="content props" dangerouslySetInnerHTML={{__html: secondDirection.concept_net}}>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td className="content">
+                                    ConceptNet
+                                </td>
+                                <td className="content props" dangerouslySetInnerHTML={{__html: secondDirection.concept_net}}>
 
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        }
+    </>
     );
 }
 

@@ -35,3 +35,8 @@
     padding-top: 10px;
     padding-bottom: 10px;
 }
+
+.overlay-loading {
+    background-color: #ffffff;
+    margin-top: 200px;
+}
