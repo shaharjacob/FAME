@@ -1,0 +1,37 @@
+.two-entities-container {
+    display: grid;
+    grid-template-columns: 0.5fr 0.5fr;
+    margin: 20px;
+}
+
+.direction-title {
+    background-color: rgb(22, 69, 139);
+    color: whitesmoke;
+    border-radius: 8px 8px 0 0;
+    text-align: center;
+}
+
+.content {
+    background-color:white;
+    color: rgb(85, 85, 85);
+    box-shadow: 2px 2px 5px #b3b3b3;;
+    border: 1px solid #000000;
+    text-align: center;
+}
+
+.taken-from {
+    width: 15%;
+    font-weight: 700;
+}
+
+.relations {
+    width: 85%;
+    font-weight: 700;
+}
+
+.props {
+    text-align: left;
+    padding-left: 100px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}

@@ -60,12 +60,12 @@ class DataCollector(object):
 
         if from_where:
             return {
-                "quasimodo": list(set(quasimodo_props)),
-                "concept_net": list(set(concept_net_props)),
-                "google_autosuggest": list(set(autosuggets_props)),
+                "quasimodo": sorted(list(set(quasimodo_props))),
+                "concept_net": sorted(list(set(concept_net_props))),
+                "google_autosuggest": sorted(list(set(autosuggets_props))),
             }
 
-        return list(set(quasimodo_props + autosuggets_props + concept_net_props))
+        return sorted(list(set(quasimodo_props + autosuggets_props + concept_net_props)))
     
 
     def get_entitiy_props(self, entity: str, from_where: bool = False) -> List[str]:
@@ -83,12 +83,12 @@ class DataCollector(object):
 
         if from_where:
             return {
-                "quasimodo": list(set(quasimodo_props)),
-                "concept_net": list(set(concept_net_props)),
-                "google_autosuggest": list(set(google_props)),
+                "quasimodo": sorted(list(set(quasimodo_props))),
+                "concept_net": sorted(list(set(concept_net_props))),
+                "google_autosuggest": sorted(list(set(google_props))),
             }
 
-        return list(set(quasimodo_props + concept_net_props + google_props))
+        return sorted(list(set(quasimodo_props + concept_net_props + google_props)))
 
 
     def save_database_(self):

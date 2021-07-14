@@ -124,6 +124,26 @@ def single_mapping():
     return jsonify(d)
 
 
+@app.route("/two-entities", methods=["GET", "POST"])
+def two_entities():
+    entity1 = request.args.get('entity1') 
+    entity2 = request.args.get('entity2')
+    data_collector = DataCollector() 
+
+    props1 = data_collector.get_entities_relations(entity1, entity2, from_where=True)
+    for k, v in props1.items():
+        props1[k] = "<br/>".join(v)
+
+    props2 = data_collector.get_entities_relations(entity2, entity1, from_where=True)
+    for k, v in props2.items():
+        props2[k] = "<br/>".join(v)
+
+    return jsonify({
+        f"{entity1} .* {entity2}": props1, 
+        f"{entity2} .* {entity1}": props2
+    })
+
+
 @app.route("/bipartite", methods=["GET", "POST"])
 def bipartite_graph():
     edge1 = (request.args.get('base1'), request.args.get('base2'))

@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 import BipartiteGraph from './components/graph/BipartiteGraph'
 import Cluster from './components/graph/Cluster'
 import SingleMapping from './components/graph/SingleMapping'
+import TwoEntities from './components/entities/TwoEntities'
 import Mapping from './components/graph/Mapping'
 import TestViewer from './components/graph/TestViewer'
 import Main from './components/main/Main'
@@ -26,6 +27,9 @@ const App = () => {
           </Route>
           <Route path='/single-mapping'>
             <SingleMapping />
+          </Route>
+          <Route path='/two-entities'>
+            <TwoEntities />
           </Route>
           <Route path='/mapping'>
             <Mapping />
