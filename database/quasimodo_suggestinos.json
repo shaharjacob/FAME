@@ -1,0 +1,31 @@
+{
+	"boats#have": [
+		"one gear",
+		"names",
+		"steering wheel",
+		"sails",
+		"windows"
+	],
+	"boats#need": [
+		"bottom paint",
+		"trim tabs",
+		"anchors",
+		"ballast",
+		"radar"
+	],
+	"boats#affect": [
+		"water quality",
+		"environment",
+		"coral reefs",
+		"water"
+	],
+	"boats#be attached to": [],
+	"boats#be connected to": [],
+	"boats#come off": [],
+	"boats#fall off": [],
+	"boats#move on": [],
+	"boats#rotate in": [],
+	"boats#spin on": [],
+	"boats#turn in": [],
+	"boats#turn on": []
+}

@@ -1001,5 +1001,11 @@
 	"boats#buoyancy": [
 		"use"
 	],
-	"buoyancy#boats": []
+	"buoyancy#boats": [],
+	"boats#steering wheel": [
+		"have"
+	],
+	"steering wheel#boats": [
+		"be on"
+	]
 }

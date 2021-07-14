@@ -1331,5 +1331,11 @@
 	"buoyancy#boats": [
 		"affect",
 		"work on a"
+	],
+	"boats#steering wheel": [
+		"have the"
+	],
+	"steering wheel#boats": [
+		"on the right in"
 	]
 }
