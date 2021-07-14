@@ -167,13 +167,26 @@ def extend_to_plural_and_singular(engine: inflect.engine, entity1: str, entity2:
         extend_suggestions(entity1, singular, question, suggestions, verbose)
 
 
-def get_entity_suggestions(entity: str, prop: str):
+def get_entity_suggestions(entity: str, prop: str, plural_and_singular: bool = False):
     # given an entity and prop, it will suggest new entities to complete the sentence.
     # for example, given entity 'electricity' and prop 'discovered', it will return entities like: faraday, edison, benjamin
+    if plural_and_singular: 
+        engine = inflect.engine()
     suggestions = []
     for question in ["why do", "why is", "why does", "why does it",  "why did", "how do", "how is", "how does", "how does it", "how did"]:
         model = GoogleAutoSuggestOneEntity(question, entity, prop)
         suggestions.extend(model.suggestinos)
+        if plural_and_singular:
+            plural = engine.plural(entity)
+            if plural and plural != entity:
+                model = GoogleAutoSuggestOneEntity(question, plural, prop)
+                suggestions.extend(model.suggestinos)
+
+            singular = engine.singular_noun(entity)
+            if singular and singular != plural and singular != entity:
+                model = GoogleAutoSuggestOneEntity(question, singular, prop)
+                suggestions.extend(model.suggestinos)
+
     return list(set(suggestions))
 
 
@@ -235,5 +248,6 @@ if __name__ == '__main__':
     # res = get_entity_suggestions("electricity", "discovered")
     # res = get_entity_props("sun")
     # res = get_entities_relations("electricity", "cell", verbose=True).get("props")
-    # print(res)
+    res = get_entities_relations("boats", "sail", verbose=True).get("props")
+    print(res)
     pass
