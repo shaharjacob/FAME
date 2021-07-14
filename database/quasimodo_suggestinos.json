@@ -27,5 +27,19 @@
 	"boats#rotate in": [],
 	"boats#spin on": [],
 	"boats#turn in": [],
-	"boats#turn on": []
+	"boats#turn on": [],
+	"electricity#relate to": [
+		"subatomic particles",
+		"magnetism",
+		"climate change"
+	],
+	"electricity#be credited for": [],
+	"electricity#call it": [],
+	"electricity#describe": [],
+	"electricity#dicover": [],
+	"electricity#discover": [],
+	"electricity#discovered": [],
+	"electricity#invent": [],
+	"electricity#prove": [],
+	"electricity#prove his ideas about": []
 }

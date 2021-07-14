@@ -1337,5 +1337,26 @@
 	],
 	"steering wheel#boats": [
 		"on the right in"
+	],
+	"electrons#subatomic particles": [],
+	"subatomic particles#electrons": [],
+	"electrons#climate change": [],
+	"climate change#electrons": [],
+	"nucleus#subatomic particles": [],
+	"subatomic particles#nucleus": [],
+	"nucleus#climate change": [],
+	"climate change#nucleus": [],
+	"electricity#subatomic particles": [],
+	"subatomic particles#electricity": [],
+	"electricity#climate change": [
+		"affect",
+		"cause",
+		"contribute to",
+		"impact",
+		"usage affect"
+	],
+	"climate change#electricity": [
+		"affect",
+		"related to"
 	]
 }

@@ -485,5 +485,17 @@
 	"boats#buoyancy": [],
 	"buoyancy#boats": [],
 	"boats#steering wheel": [],
-	"steering wheel#boats": []
+	"steering wheel#boats": [],
+	"electrons#subatomic particles": [],
+	"subatomic particles#electrons": [],
+	"electrons#climate change": [],
+	"climate change#electrons": [],
+	"nucleus#subatomic particles": [],
+	"subatomic particles#nucleus": [],
+	"nucleus#climate change": [],
+	"climate change#nucleus": [],
+	"electricity#subatomic particles": [],
+	"subatomic particles#electricity": [],
+	"electricity#climate change": [],
+	"climate change#electricity": []
 }
