@@ -337,5 +337,21 @@
 		"spacex",
 		"finn",
 		"it"
+	],
+	"astronaut#work": [
+		"the"
+	],
+	"astronaut#create": [],
+	"space#affect": [
+		"weather",
+		"mass"
+	],
+	"space#affect the": [
+		"apollo 11",
+		"size",
+		"sputnik",
+		"television",
+		"speed",
+		"the cold war"
 	]
 }
