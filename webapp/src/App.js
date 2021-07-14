@@ -6,8 +6,8 @@ import SingleMapping from './components/graph/SingleMapping'
 import TwoEntities from './components/entities/TwoEntities'
 import Mapping from './components/graph/Mapping'
 import TestViewer from './components/graph/TestViewer'
-import Main from './components/main/Main'
-import MappingDemo from './components/main/MappingDemo'
+import SingleMappingDemo from './components/demo/SingleMappingDemo'
+import MappingDemo from './components/demo/MappingDemo'
 
 
 const App = () => {
@@ -17,7 +17,7 @@ const App = () => {
       <div>
         <Switch>
           <Route path='/' exact>
-            <Main />
+            <MappingDemo />
           </Route>
           <Route path='/bipartite'>
             <BipartiteGraph />
@@ -37,8 +37,8 @@ const App = () => {
           <Route path='/mapping-demo'>
             <MappingDemo />
           </Route>
-          <Route path='/relations-demo'>
-            <Main />
+          <Route path='/single-mapping-demo'>
+            <SingleMappingDemo />
           </Route>
           <Route path='/test'>
             <TestViewer />

@@ -34,9 +34,9 @@ Given base entities and target entities, and it will apply the mapping.
 #### :brown_circle: Relations:
 Given pair from base, and pair from the target, it will show the relations between them.  
 For example: given pair from base: (earth, sun) and pair from target: (electrons, nucleus).  
-`http://localhost:3000/relations-demo`  
+`http://localhost:3000/single-mapping-demo`  
 
-![relations-demo](https://github.com/shaharjacob/commonsense-analogy/blob/main/images/relations-demo.png?raw=true)  
+![single-mapping-demo](https://github.com/shaharjacob/commonsense-analogy/blob/main/images/relations-demo.png?raw=true)  
  
 ![relations-gui](https://github.com/shaharjacob/commonsense-analogy/blob/main/images/relations1.png?raw=true)  
 ![relations-score](https://github.com/shaharjacob/commonsense-analogy/blob/main/images/relations2.png?raw=true)  

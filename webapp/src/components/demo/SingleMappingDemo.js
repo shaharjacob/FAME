@@ -2,12 +2,12 @@ import React, { useState } from 'react';
 import Select from 'react-select'
 import { useHistory } from 'react-router-dom'
 import { options } from '../../utils'
-import './Main.css'
+import './SingleMappingDemo.css'
 import RightArrow from '../../assets/arrow-right.svg'
 import Hayadata from '../../assets/mapping-entities-hayadata.png'
 
 
-const Main = () => {
+const SingleMappingDemo = () => {
 
     let history = useHistory()
     const [selectedBase1, setSelectedBase1] = useState({label: "earth", value: "earth"});
@@ -176,4 +176,4 @@ const Main = () => {
     );
 }
 
-export default Main;
+export default SingleMappingDemo;
