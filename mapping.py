@@ -301,6 +301,7 @@ if __name__ == "__main__":
             # the suggestions are not good. Need to check why sail is now suggested in "boat have .*" 
             # why do boats .* sails --> found 'have', but why do boats have .. --> not found 'have'.
             # maybe I should have "RelatedTo" from conceptNet: https://conceptnet.io/c/en/boat?rel=/r/RelatedTo&limit=1000
+            # well after adding quasimodo, it found streeing wheel -> sound good but I still prefer sails here..
             ["cars", "road", "wheels"],
             ["boats", "river"],
         ],
