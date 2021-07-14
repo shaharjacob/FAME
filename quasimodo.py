@@ -1,17 +1,37 @@
-import math
 import copy
 from pathlib import Path
 from collections import Counter
 from typing import List, Dict, Tuple
 
 import inflect
-import requests
 import pandas as pd
-from tqdm import tqdm
 from click import secho
 from pandas import DataFrame
-from bs4 import BeautifulSoup
 
+
+def render(row: dict):
+    secho(f"{row['subject']} ", fg="blue", bold=True, nl=False)
+    secho(f"{row['predicate'].replace('_', ' ')} ", fg="green", bold=True, nl=False)
+    secho(f"{row['object']} ", fg="cyan", bold=True, nl=False)
+    current_length = len(row['subject']) + len(row['predicate']) + len(row['object']) + 2
+    max_length = 40
+    spaces = ' '.join([""] * max(1, (max_length - current_length)))
+    secho(f"{spaces}score: ", nl=False)
+    secho(f"{row['plausibility']}", fg="magenta")
+
+
+def render_entities_similarity(entity1: str, entity2: str, row: dict):
+    secho(f"{entity1} ", fg="blue", bold=True, nl=False)
+    secho(f"and ", nl=False)
+    secho(f"{entity2} ", fg="blue", bold=True, nl=False)
+    secho("are both ", nl=False)
+    secho(f"{row['predicate'].replace('_', ' ')} ", fg="green", bold=True, nl=False)
+    secho(f"{row['object']}", fg="cyan", bold=True, nl=False)
+    current_length = len(f"{entity1} ") + len("and ") + len(f"{entity2} ") + len("are both ") + len(f"{row['predicate']} ") + len(row['object'])
+    max_length = 50
+    spaces = ' '.join([""] * max(1, (max_length - current_length)))
+    secho(f"{spaces}avg. score: ", nl=False)
+    secho(f"{row['plausibility']}", fg="magenta")
 
 class Quasimodo:
     def __init__(self, path: str = 'tsv/quasimodo.tsv'):
@@ -132,6 +152,24 @@ class Quasimodo:
                 render_entities_similarity(entity1, entity2, row)
         return props_list
     
+    def get_entity_suggestions(self, entity: str, prop: str, n_largest: int = 0, plural_and_singular: bool = False):
+        entities = [entity]
+        if plural_and_singular:
+            self.extend_plural_and_singular(entity, entities)
+        
+        # we filter by our entities, then we concat to one dataframe.
+        subject_dataframes = [self.filter_by('subject', h) for h in entities]
+        concat_subject_df = pd.concat(subject_dataframes)
+        concat_subject_df = concat_subject_df.drop_duplicates(subset=['predicate', 'object'])
+        filtered_df = self.filter_by('predicate', prop, use_outside_df=True, df=concat_subject_df)
+
+        # plausibility is our messure for good match
+        if n_largest:
+            filtered_df = filtered_df.nlargest(n_largest, 'plausibility')
+
+        return list(set([row['object'].replace('_', ' ') for _, row in filtered_df.iterrows()]))
+
+    
     def filter_by(self, col: str, obj: str, inplace: bool = False, use_outside_df: bool = False, df: DataFrame = DataFrame(), n_largest: int = 0) -> DataFrame:
         if not use_outside_df:
             df = self.data if inplace else copy.deepcopy(self.data)
@@ -147,29 +185,7 @@ class Quasimodo:
         return Counter(self.data["predicate"].tolist())
 
 
-def render(row: dict):
-    secho(f"{row['subject']} ", fg="blue", bold=True, nl=False)
-    secho(f"{row['predicate'].replace('_', ' ')} ", fg="green", bold=True, nl=False)
-    secho(f"{row['object']} ", fg="cyan", bold=True, nl=False)
-    current_length = len(row['subject']) + len(row['predicate']) + len(row['object']) + 2
-    max_length = 40
-    spaces = ' '.join([""] * max(1, (max_length - current_length)))
-    secho(f"{spaces}score: ", nl=False)
-    secho(f"{row['plausibility']}", fg="magenta")
 
-
-def render_entities_similarity(entity1: str, entity2: str, row: dict):
-    secho(f"{entity1} ", fg="blue", bold=True, nl=False)
-    secho(f"and ", nl=False)
-    secho(f"{entity2} ", fg="blue", bold=True, nl=False)
-    secho("are both ", nl=False)
-    secho(f"{row['predicate'].replace('_', ' ')} ", fg="green", bold=True, nl=False)
-    secho(f"{row['object']}", fg="cyan", bold=True, nl=False)
-    current_length = len(f"{entity1} ") + len("and ") + len(f"{entity2} ") + len("are both ") + len(f"{row['predicate']} ") + len(row['object'])
-    max_length = 50
-    spaces = ' '.join([""] * max(1, (max_length - current_length)))
-    secho(f"{spaces}avg. score: ", nl=False)
-    secho(f"{row['plausibility']}", fg="magenta")
 
 
 def merge_tsvs(output: str):
@@ -181,8 +197,10 @@ def merge_tsvs(output: str):
 
 if __name__ == '__main__':
     quasimodo = Quasimodo()
-    counts = quasimodo.count_predicates(20)
-    print(counts)
+    res = quasimodo.get_entity_suggestions("boats", "have", n_largest=5, plural_and_singular=True)
+    print(res)
+    # counts = quasimodo.count_predicates(20)
+    # print(counts)
     # res = quasimodo.get_entity_props('sun', n_largest=5)
     # res = quasimodo.get_entities_relations('sun', 'earth', n_largest=5)
     # res = quasimodo.get_similarity_between_entities('horse', 'cow', n_largest=5)

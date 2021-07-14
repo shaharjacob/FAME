@@ -11,12 +11,14 @@ from data_collector import DataCollector
 from sentence_embadding import SentenceEmbedding
 
 class Suggestions(object):
-    def __init__(self, entity: str, prop: str, save_db: bool = True, override_database: bool = False):
+    def __init__(self, entity: str, prop: str, save_db: bool = True, override_database: bool = False, quasimodo: Quasimodo = None):
         self.entity = entity
         self.prop = prop
+        self.quasimodo = quasimodo
         self.override_database = override_database
         self.save_db = save_db
         self.google_suggestinos = utils.read_json('database/google_suggestinos.json') if save_db else {}
+        self.quasimodo_suggestinos = utils.read_json('database/quasimodo_suggestinos.json') if save_db else {}
     
 
     def get_suggestions(self):
@@ -27,16 +29,27 @@ class Suggestions(object):
             google_suggestinos = google_autosuggest.get_entity_suggestions(self.entity, self.prop)
             self.google_suggestinos[f"{self.entity}#{self.prop}"] = google_suggestinos  
             should_save = True
+        
+        if f"{self.entity}#{self.prop}" in self.quasimodo_suggestinos and not self.override_database:
+            quasimodo_suggestinos = self.quasimodo_suggestinos[f"{self.entity}#{self.prop}"]
+        else:
+            if not self.quasimodo:
+                self.quasimodo = Quasimodo()
+            quasimodo_suggestinos = self.quasimodo.get_entity_suggestions(self.entity, self.prop, n_largest=5, plural_and_singular=True)
+            self.quasimodo_suggestinos[f"{self.entity}#{self.prop}"] = quasimodo_suggestinos  
+            should_save = True
 
         if should_save:
             self.save_database()
 
-        return list(set(google_suggestinos))
+        return list(set(google_suggestinos + quasimodo_suggestinos))
 
 
     def save_database(self):
         with open('database/google_suggestinos.json', 'w') as f1:
             json.dump(self.google_suggestinos, f1, indent='\t')
+        with open('database/quasimodo_suggestinos.json', 'w') as f2:
+            json.dump(self.quasimodo_suggestinos, f2, indent='\t')
 
 
 def get_suggestions_for_missing_entities(data_collector: DataCollector, base_not_mapped_entities: List[str], base_already_mapping: List[str], target_already_mapping: List[str], verbose: bool = False) -> Dict[str, Dict[str, Dict[str, Dict[str, List[str]]]]]:
@@ -57,7 +70,7 @@ def get_suggestions_for_missing_entities(data_collector: DataCollector, base_not
             if verbose: secho(f"  {target_already_mapping[idx]}", fg="red", bold=True)
             sugges[base_not_mapped_entity][base_entity][target_already_mapping[idx]] = {}
             for prop in (props_entity_1 + props_entity_2):
-                suggestions_model = Suggestions(target_already_mapping[idx], prop)
+                suggestions_model = Suggestions(target_already_mapping[idx], prop, quasimodo=data_collector.quasimodo)
                 props = suggestions_model.get_suggestions()
                 if props:
                     # we found candidates for '<exist_entity> <prop> <candidate>' or '<candidate> <prop> <exist_entity>'

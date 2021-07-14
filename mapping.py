@@ -177,7 +177,7 @@ def get_best_pair_mapping(model: SentenceEmbedding, data_collector: DataCollecto
 
 
 def mapping(base: List[str], target: List[str], suggestions: bool = True, relations=[], base_already_mapping: List[str] = [], target_already_mapping: List[str] = []):
-    data_collector = DataCollector()
+    data_collector = DataCollector(init_quasimodo=True)
     model = SentenceEmbedding(data_collector=data_collector)
 
     # we want all the possible pairs. For example, if base: a,b,c, target: 1,2,3:
