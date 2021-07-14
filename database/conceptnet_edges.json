@@ -467,5 +467,21 @@
 	"asteroids#space": [
 		"big rocks adrift in"
 	],
-	"space#asteroids": []
+	"space#asteroids": [],
+	"astronaut#aliens": [],
+	"aliens#astronaut": [],
+	"space#aliens": [],
+	"aliens#space": [
+		"creatures from outtern"
+	],
+	"thoughts#neurons": [],
+	"space#stars": [],
+	"stars#space": [
+		"something burning in"
+	],
+	"neurons#thoughts": [],
+	"space#black hole": [],
+	"black hole#space": [],
+	"boats#buoyancy": [],
+	"buoyancy#boats": []
 }

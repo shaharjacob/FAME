@@ -1281,5 +1281,55 @@
 	"space#asteroids": [
 		"exploration protect us from",
 		"probes avoid"
+	],
+	"astronaut#aliens": [],
+	"aliens#astronaut": [],
+	"space#aliens": [],
+	"aliens#space": [],
+	"thoughts#neurons": [
+		"work"
+	],
+	"space#stars": [
+		"have"
+	],
+	"stars#space": [
+		"born in",
+		"burn in",
+		"die in",
+		"float in",
+		"look from",
+		"look in",
+		"look like in",
+		"lord end up in",
+		"lord get to",
+		"lord in",
+		"lord survive in",
+		"made in",
+		"matter recycled in",
+		"remain in",
+		"stay in",
+		"wars characters breathe in",
+		"wars have sound in",
+		"work in"
+	],
+	"neurons#thoughts": [
+		"create"
+	],
+	"space#black hole": [],
+	"black hole#space": [
+		"form in",
+		"formed in",
+		"made in",
+		"move through",
+		"twist",
+		"work in"
+	],
+	"boats#buoyancy": [
+		"float",
+		"use"
+	],
+	"buoyancy#boats": [
+		"affect",
+		"work on a"
 	]
 }

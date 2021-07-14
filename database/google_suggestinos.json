@@ -233,27 +233,6 @@
 		"rain"
 	],
 	"road#travel through the great": [],
-	"boats#need": [],
-	"boats#have": [
-		"djedefre",
-		"texas highway patrol"
-	],
-	"boats#move on": [],
-	"boats#turn on": [],
-	"boats#rotate in": [],
-	"boats#fall off": [],
-	"boats#spin on": [],
-	"boats#come off": [],
-	"boats#be connected to": [],
-	"boats#be attached to": [],
-	"boats#turn in": [],
-	"boats#affect": [
-		"tides",
-		"salt water",
-		"altitude",
-		"freshwater",
-		"buoyancy"
-	],
 	"rain#be higher in": [],
 	"rain#appear in": [
 		"fungi suddenly",
@@ -353,5 +332,27 @@
 		"television",
 		"speed",
 		"the cold war"
-	]
+	],
+	"boats#have": [
+		"texas highway patrol",
+		"djedefre"
+	],
+	"boats#need": [],
+	"boats#affect": [
+		"buoyancy",
+		"salt water",
+		"freshwater",
+		"tides",
+		"altitude",
+		"alcohol use"
+	],
+	"boats#be attached to": [],
+	"boats#be connected to": [],
+	"boats#come off": [],
+	"boats#fall off": [],
+	"boats#move on": [],
+	"boats#rotate in": [],
+	"boats#spin on": [],
+	"boats#turn in": [],
+	"boats#turn on": []
 }

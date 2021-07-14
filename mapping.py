@@ -176,12 +176,9 @@ def get_best_pair_mapping(model: SentenceEmbedding, data_collector: DataCollecto
     }
 
 
-def mapping(base: List[str], target: List[str], suggestions: bool = True):
+def mapping(base: List[str], target: List[str], suggestions: bool = True, relations=[], base_already_mapping: List[str] = [], target_already_mapping: List[str] = []):
     data_collector = DataCollector()
     model = SentenceEmbedding(data_collector=data_collector)
-    relations = []
-    base_already_mapping = []
-    target_already_mapping = []
 
     # we want all the possible pairs. For example, if base: a,b,c, target: 1,2,3:
     # general there are (n choose 2) * (n choose 2) * 2 pairs.
@@ -206,12 +203,32 @@ def mapping(base: List[str], target: List[str], suggestions: bool = True):
         else:
             break
     
+    base_suggestions = {}
+    target_suggestions = {}
     if suggestions:
         base_not_mapped_entities = [entity for entity in base if entity not in base_already_mapping]
         base_suggestions = suggest_entities.get_suggestions_for_missing_entities(data_collector, base_not_mapped_entities, base_already_mapping, target_already_mapping, verbose=True)
+        for base_not_mapped_entity in base_not_mapped_entities:
+            mapping(
+                base=base_already_mapping+[base_not_mapped_entity], 
+                target=target_already_mapping+base_suggestions[base_not_mapped_entity], 
+                suggestions=False, 
+                relations=relations, 
+                base_already_mapping=base_already_mapping, 
+                target_already_mapping=target_already_mapping
+            )
         
         target_not_mapped_entities = [entity for entity in target if entity not in target_already_mapping]
         target_suggestions = suggest_entities.get_suggestions_for_missing_entities(data_collector, target_not_mapped_entities, target_already_mapping, base_already_mapping, verbose=True)
+        for target_not_mapped_entity in target_not_mapped_entities:
+            mapping(
+                base=base_already_mapping+target_suggestions[target_not_mapped_entity], 
+                target=target_already_mapping+[target_not_mapped_entity], 
+                suggestions=False, 
+                relations=relations, 
+                base_already_mapping=base_already_mapping, 
+                target_already_mapping=target_already_mapping
+            )
     
     return {
         "mapping": [f"{b} --> {t}" for b, t in zip(base_already_mapping, target_already_mapping)],
@@ -226,15 +243,25 @@ if __name__ == "__main__":
     data = [
         [
             # seems good!
-            # expected mapping: earth->electrons, sun->nucleus, gravity->electricity, universe->cell, newton->? (faraday has been removed)
+            # expected mapping: earth->electrons, sun->nucleus, gravity->electricity, newton->faraday, universe->cell
             # http://localhost:3000/mapping?base=earth,sun,newton,gravity,universe&target=electrons,nucleus,electricity,faraday,cell
             ["earth", "sun", "gravity", "newton", "universe"], 
-            ["electrons", "nucleus", "electricity", "cell"]
+            ["electrons", "nucleus", "electricity", "cell", "faraday"]
+        ],
+        [
+            # expected mapping: earth->electrons, sun->nucleus, gravity->electricity, newton->? (faraday has been removed)
+            # http://localhost:3000/mapping?base=earth,sun,newton,gravity&target=electrons,nucleus,electricity
+            # after using recursively the mapping function, it found 'humans' as the best option (instead of faraday, but maybe its not so bad?)
+            # http://localhost:3000/single-mapping?base1=gravity&base2=newton&target1=electricity&target2=humans
+            # http://localhost:3000/single-mapping?base1=gravity&base2=newton&target1=electricity&target2=faraday
+            ["earth", "sun", "gravity", "newton"], 
+            ["electrons", "nucleus", "electricity"]
         ],
         [
             # http://localhost:3000/mapping?base=earth,newton,gravity&target=electrons,nucleus,electricity,faraday
             # expected mapping: earth->electrons, gravity->electricity, newton->faraday, nucleus->? (sun has been removed)
             # it map earth-->electricity and gravity-->electrons instead of earth-->electrons and gravity-->electricity, but their score is similar (1.833, 1.625) without IGNORE list: (2.125~1.879)
+            # http://localhost:3000/single-mapping?base1=earth&base2=gravity&target1=electricity&target2=electrons
             # Option 1 (the chosen one): (earth-->electricity, gravity-->electrons, newton-->nucleus)
             #   (earth:gravity, electricity:electrons): 1.833
             #   (gravity:electrons, newton:nucleus): 0.707
@@ -243,32 +270,25 @@ if __name__ == "__main__":
             #   (earth:gravity, electrons:electrivity): 1.625
             #   (gravity:newton, electricity:faraday): 1
             #   total score: 2.625
-
             ["earth", "newton", "gravity"],
             ["electrons", "nucleus", "electricity", "faraday"],
         ],
         [
             # seems good!
-            # http://localhost:3000/mapping?base=thoughts,brain,head&target=astronaut,space,spaceship
-            # expected mapping: thoughts->astronaut, brain->space, head->spaceship
-            ["thoughts", "brain", "head"],
-            ["astronaut", "space", "spaceship"],
-        ],
-        [
-            # seems good!
             # http://localhost:3000/mapping?base=thoughts,brain,head&target=astronaut,space
-            # expected: thoughts->astronaut, brain->space, head->? (spaceship has been removed)
-            # it suggest for head: ['finn', 'spacex', 'earth', 'it'], I like the spacex option.
-            ["thoughts", "brain", "head"],
+            # expected: thoughts->astronaut, brain->space
+            ["thoughts", "brain"],
             ["astronaut", "space"],
         ],
         [
             # seems good!
-            # http://localhost:3000/mapping?base=thoughts,brain,body&target=astronaut,space,spaceship
-            ["thoughts", "brain", "body"],
-            ["astronaut", "space", "spaceship"],
+            # http://localhost:3000/mapping?base=thoughts,brain,neurons&target=astronaut,space,black%20hole
+            # expected mapping: thoughts->astronaut, brain->space, neurons->black hole
+            ["thoughts", "brain", "neurons"],
+            ["astronaut", "space", "black hole"],
         ],
         [
+            # seems good!
             # http://localhost:3000/mapping?base=cars,road,wheels&target=boats,river,sail
             # expected: cars->boats, road->river, wheels->sail
             # after removing "has property" is seems better
@@ -279,6 +299,8 @@ if __name__ == "__main__":
             # http://localhost:3000/mapping?base=cars,road,wheels&target=boats,river
             # expected: cars->boats, road->river, wheels->? (sail has been removed)
             # the suggestions are not good. Need to check why sail is now suggested in "boat have .*" 
+            # why do boats .* sails --> found 'have', but why do boats have .. --> not found 'have'.
+            # maybe I should have "RelatedTo" from conceptNet: https://conceptnet.io/c/en/boat?rel=/r/RelatedTo&limit=1000
             ["cars", "road", "wheels"],
             ["boats", "river"],
         ],
@@ -286,22 +308,22 @@ if __name__ == "__main__":
             # http://localhost:3000/mapping?base=sunscreen,sun,summer&target=umbrella,rain,winter
             # expected: sunscreen->umbrella, sun->rain, summer->winter 
             # the mapping is good, but the map between summer-->winter is very week!
-            # the relation between sun:summer are good, but there are no relations between rain:winter!
-            # TODO: demo for single relation
+            # the relation between sun:summer are good, but there are no relations between rain:winter or umbrela:winter!
+            # http://localhost:3000/two-entities?entity1=rain&entity2=winter
             ["sunscreen", "sun", "summer"],
             ["umbrella", "rain", "winter"],
         ],
         [
-            # http://localhost:3000/mapping?base=student,homework,university&target=citizen,duties,winter
+            # http://localhost:3000/mapping?base=student,homework,university&target=citizen,duties,country
             # expected: student->citizen, homework->duties, university->country
             # it found that (student:homework, citzen:country) is stronger then (student:homework, citzen:duties): 1.047 ~ 1
             # http://localhost:3000/single-mapping?base1=student&base2=homework&target1=citizen&target2=duties
             # http://localhost:3000/single-mapping?base1=student&base2=homework&target1=citizen&target2=country
+            # maybe few weaks relations are weaker than one stronger?
             ["student", "homework", "university"],
             ["citizen", "duties", "country"],
         ],
     ]
-
 
 
 

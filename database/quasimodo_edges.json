@@ -957,5 +957,49 @@
 		"move through",
 		"travel fast in"
 	],
-	"space#asteroids": []
+	"space#asteroids": [],
+	"astronaut#aliens": [],
+	"aliens#astronaut": [],
+	"space#aliens": [],
+	"aliens#space": [
+		"be adapted to",
+		"get to",
+		"travel through"
+	],
+	"thoughts#neurons": [
+		"work"
+	],
+	"space#stars": [
+		"have"
+	],
+	"stars#space": [
+		"be in",
+		"be visible from",
+		"burn in",
+		"end up in",
+		"float in",
+		"light up",
+		"look in",
+		"move in",
+		"shine in",
+		"twinkle in"
+	],
+	"neurons#thoughts": [],
+	"space#black hole": [],
+	"black hole#space": [
+		"affect",
+		"be created in",
+		"be important in",
+		"be important to",
+		"be in",
+		"move normally through",
+		"move through",
+		"occur in",
+		"take people to",
+		"work in"
+	],
+	"boats#buoyancy": [
+		"use"
+	],
+	"buoyancy#boats": []
 }
