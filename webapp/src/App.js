@@ -2,7 +2,7 @@ import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 import BipartiteGraph from './components/graph/BipartiteGraph'
 import Cluster from './components/graph/Cluster'
-import TwoEntities from './components/graph/TwoEntities'
+import SingleMapping from './components/graph/SingleMapping'
 import Mapping from './components/graph/Mapping'
 import TestViewer from './components/graph/TestViewer'
 import Main from './components/main/Main'
@@ -24,8 +24,8 @@ const App = () => {
           <Route path='/cluster'>
             <Cluster />
           </Route>
-          <Route path='/two-entities'>
-            <TwoEntities />
+          <Route path='/single-mapping'>
+            <SingleMapping />
           </Route>
           <Route path='/mapping'>
             <Mapping />

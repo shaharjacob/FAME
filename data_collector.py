@@ -24,7 +24,7 @@ class DataCollector(object):
         self.conceptnet_edges = utils.read_json('database/conceptnet_edges.json') if save_database else {}
 
 
-    def get_entities_relations(self, entity1: str, entity2: str) -> List[str]:
+    def get_entities_relations(self, entity1: str, entity2: str, from_where: bool = False) -> List[str]:
         should_save = False
         if f"{entity1}#{entity2}" in self.quasimodo_edges and not self.override_database:
             quasimodo_props = self.quasimodo_edges[f"{entity1}#{entity2}"]
@@ -36,31 +36,39 @@ class DataCollector(object):
             should_save = True
 
         if f"{entity1}#{entity2}" in self.google_edges and not self.override_database:
-            autocomplete_props = self.google_edges[f"{entity1}#{entity2}"]
+            autosuggets_props = self.google_edges[f"{entity1}#{entity2}"]
         else:
-            autocomplete_props = google_autosuggest.get_entities_relations(entity1, entity2).get("props", [])
-            self.google_edges[f"{entity1}#{entity2}"] = sorted(autocomplete_props) 
+            autosuggets_props = google_autosuggest.get_entities_relations(entity1, entity2).get("props", [])
+            self.google_edges[f"{entity1}#{entity2}"] = sorted(autosuggets_props) 
             should_save = True
 
         if f"{entity1}#{entity2}" in self.conceptnet_edges and not self.override_database:
-            concept_new_props = self.conceptnet_edges[f"{entity1}#{entity2}"]
+            concept_net_props = self.conceptnet_edges[f"{entity1}#{entity2}"]
         else:
             if not self.engine:
                 self.engine = inflect.engine()
-            concept_new_props = concept_net.get_entities_relations(entity1, entity2, self.engine, plural_and_singular=True)
-            self.conceptnet_edges[f"{entity1}#{entity2}"] = sorted(concept_new_props)
+            concept_net_props = concept_net.get_entities_relations(entity1, entity2, self.engine, plural_and_singular=True)
+            self.conceptnet_edges[f"{entity1}#{entity2}"] = sorted(concept_net_props)
             should_save = True
 
         if should_save:
             self.save_database_()
         
-        properties = set(quasimodo_props + autocomplete_props + concept_new_props)
-        for prop_to_discard in IGNORE:
-            properties.discard(prop_to_discard)
-        return list(properties)
+        quasimodo_props = [prop for prop in quasimodo_props if prop not in IGNORE]
+        autosuggets_props = [prop for prop in autosuggets_props if prop not in IGNORE]
+        concept_net_props = [prop for prop in concept_net_props if prop not in IGNORE]
+
+        if from_where:
+            return {
+                "quasimodo": list(set(quasimodo_props)),
+                "concept_net": list(set(concept_net_props)),
+                "google_autosuggest": list(set(autosuggets_props)),
+            }
+
+        return list(set(quasimodo_props + autosuggets_props + concept_net_props))
     
 
-    def get_entitiy_props(self, entity: str) -> List[str]:
+    def get_entitiy_props(self, entity: str, from_where: bool = False) -> List[str]:
         quasimodo_db = utils.read_json('database/quasimodo_nodes.json')
         if entity not in quasimodo_db:
             if not self.quasimodo:
@@ -72,6 +80,14 @@ class DataCollector(object):
         quasimodo_props = [f"{prop[0]} {prop[1]}" for prop in quasimodo_db[entity]]
         concept_net_props = concept_net.get_entity_props(entity)
         google_props = google_autosuggest.get_entity_props(entity)
+
+        if from_where:
+            return {
+                "quasimodo": list(set(quasimodo_props)),
+                "concept_net": list(set(concept_net_props)),
+                "google_autosuggest": list(set(google_props)),
+            }
+
         return list(set(quasimodo_props + concept_net_props + google_props))
 
 

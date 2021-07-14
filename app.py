@@ -67,8 +67,8 @@ def mapping_entities():
     })
 
 
-@app.route("/two-entities", methods=["GET", "POST"])
-def two_entities():
+@app.route("/single-mapping", methods=["GET", "POST"])
+def single_mapping():
     data_collector = DataCollector()
     model = SentenceEmbedding(data_collector=data_collector)
 

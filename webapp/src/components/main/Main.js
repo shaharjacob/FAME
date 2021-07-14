@@ -31,7 +31,7 @@ const Main = () => {
     }
 
     const onSubmitBoth = () => {
-        history.push(`/two-entities?base1=${selectedBase1.value}&base2=${selectedBase2.value}&target1=${selectedTarget1.value}&target2=${selectedTarget2.value}`)
+        history.push(`/single-mapping?base1=${selectedBase1.value}&base2=${selectedBase2.value}&target1=${selectedTarget1.value}&target2=${selectedTarget2.value}`)
     }
 
     return (

@@ -295,8 +295,8 @@ if __name__ == "__main__":
             # http://localhost:3000/mapping?base=student,homework,university&target=citizen,duties,winter
             # expected: student->citizen, homework->duties, university->country
             # it found that (student:homework, citzen:country) is stronger then (student:homework, citzen:duties): 1.047 ~ 1
-            # http://localhost:3000/two-entities?base1=student&base2=homework&target1=citizen&target2=duties
-            # http://localhost:3000/two-entities?base1=student&base2=homework&target1=citizen&target2=country
+            # http://localhost:3000/single-mapping?base1=student&base2=homework&target1=citizen&target2=duties
+            # http://localhost:3000/single-mapping?base1=student&base2=homework&target1=citizen&target2=country
             ["student", "homework", "university"],
             ["citizen", "duties", "country"],
         ],

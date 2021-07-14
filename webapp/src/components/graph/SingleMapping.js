@@ -12,7 +12,7 @@ import Descriptor from './Descriptor'
 import { IsEmpty } from '../../utils'
 
 
-const TwoEntities = () => {
+const SingleMapping = () => {
 
     let location = useLocation()
 
@@ -57,7 +57,7 @@ const TwoEntities = () => {
         setCurrB(base)
         setCurrT(target)
     
-        fetch('/two-entities?' + params).then(response => {
+        fetch('/single-mapping?' + params).then(response => {
           if(response.ok){
             return response.json()
           }
@@ -218,4 +218,4 @@ const TwoEntities = () => {
     );
 }
 
-export default TwoEntities;
+export default SingleMapping;

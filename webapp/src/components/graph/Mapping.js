@@ -56,7 +56,7 @@ const Mapping = () => {
                 var edge = edges[0].split(":")
                 var map1 = getNodeLabelByID(parseInt(edge[0])).split(" --> ")
                 var map2 = getNodeLabelByID(parseInt(edge[1])).split(" --> ")
-                window.open(`/two-entities?base1=${map1[0]}&base2=${map2[0]}&target1=${map1[1]}&target2=${map2[1]}`, '_blank').focus();
+                window.open(`/single-mapping?base1=${map1[0]}&base2=${map2[0]}&target1=${map1[1]}&target2=${map2[1]}`, '_blank').focus();
             }
         }
     };
