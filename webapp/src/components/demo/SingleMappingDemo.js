@@ -35,9 +35,9 @@ const SingleMappingDemo = () => {
     }
 
     return (
-        <div className="main-container">
+        <div className="single-mapping-demo-container">
             <img src={Hayadata} alt="logo" className="logo" />
-            <div className="main-selects-grid">
+            <div className="single-mapping-demo-selects-grid">
                 <span className="title">
                     Edge 1
                 </span>
@@ -90,7 +90,7 @@ const SingleMappingDemo = () => {
                     />
                 </div>
             </div>
-            <div className="main-button">
+            <div className="single-mapping-demo-button">
                 <button className="btn btn-primary" onClick={onSubmitClustering}>Clustring</button>
                 &nbsp;&nbsp;&nbsp;&nbsp;
                 <button className="btn btn-primary" onClick={onSubmitBipartite}>Bipartite</button>

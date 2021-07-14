@@ -19,3 +19,12 @@ code {
 .text-red {
   color: #b9223b;
 }
+
+.container {
+  display: grid;
+  height: 100vh;
+  grid-template-rows: 0.05fr 0.95fr;
+  grid-template-areas: 
+    "nav" 
+    "main";
+}

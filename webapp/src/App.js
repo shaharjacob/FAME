@@ -8,6 +8,7 @@ import Mapping from './components/graph/Mapping'
 import TestViewer from './components/graph/TestViewer'
 import SingleMappingDemo from './components/demo/SingleMappingDemo'
 import MappingDemo from './components/demo/MappingDemo'
+import Navbar from './components/navbar/Navbar'
 
 
 const App = () => {
@@ -15,6 +16,7 @@ const App = () => {
   return (
     <Router>
       <div>
+        <Navbar />
         <Switch>
           <Route path='/' exact>
             <MappingDemo />

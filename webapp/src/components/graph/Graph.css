@@ -8,6 +8,15 @@
     margin-top: 50px;
 }
 
+.bipartie-container {
+    display: grid;
+    grid-template-rows: 0.05fr 0.95fr;
+    grid-template-areas: 
+      "top"
+      "graph";
+    margin-top: 10px;
+}
+
 .overlay-loading {
     background-color: #ffffff;
     margin-top: 200px;

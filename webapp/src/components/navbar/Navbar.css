@@ -1,0 +1,20 @@
+.navbar {
+    grid-area: nav;
+    background-color: rgb(30, 122, 209);
+    width: 100%;
+    color: whitesmoke;
+}
+
+.left-side {
+    text-align: left;
+}
+
+.animate:hover {
+    -webkit-animation:spin 3s linear infinite;
+    -moz-animation:spin 3s linear infinite;
+    animation:spin 3s linear infinite;
+}
+
+@-moz-keyframes spin { 100% { -moz-transform: rotateY(360deg); } }
+@-webkit-keyframes spin { 100% { -webkit-transform: rotateY(360deg); } }
+@keyframes spin { 100% { -webkit-transform: rotateY(360deg); transform:rotateY(360deg); } }

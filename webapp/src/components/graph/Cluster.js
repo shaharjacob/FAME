@@ -61,7 +61,7 @@ const Cluster = () => {
     <div>
         {graph && options
         ? 
-        <div className="graph-container">
+        <div className="bipartite-container">
             <div className="graph-top">
                 <div className="graph-title">
                     <span className="entities-title base">

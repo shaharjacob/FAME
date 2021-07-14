@@ -74,7 +74,7 @@ const BipartiteGraph = () => {
     <div>
       {graph
       ? 
-        <div className="graph-container">
+        <div className="bipartie-container">
           <div className="graph-top">
             <div className="graph-title">
               <span className="entities-title base">
