@@ -1,0 +1,49 @@
+.main-container {
+    grid-area: main;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    display: grid;
+    grid-template-columns: 0.23fr 0.2fr 0.2fr 0.2fr 0.17fr;
+    grid-template-rows: 0.5fr 0.5fr;
+    margin-top: 100px;
+}
+
+.demo-container{
+    width: 250px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.demo-container:hover {
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 3px 3px 8px #dadada;
+}
+
+.main-logo{
+    height: 120px;
+}
+
+.demo-title {
+    font-size: 16px;
+    font-weight: bold;
+    text-align: left;
+    margin-top: 15px;
+}
+
+.demo-description {
+    font-size: 12px;
+    text-align: left;
+}
+
+.demo-links {
+    text-decoration: none; 
+    color: #000000;
+}
+
+.demo-links:hover {
+    text-decoration: none; 
+    color: #000000;
+}

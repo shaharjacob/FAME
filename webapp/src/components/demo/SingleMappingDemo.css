@@ -12,7 +12,7 @@
 .single-mapping-demo-selects-grid {
     display: grid;
     grid-template-columns: 0.5fr 0.5fr;
-    grid-template-rows: 0.2fr 0.4fr 0.4fr;
+    grid-template-rows: 0.5fr 0.5fr;
     width: 400px;
     margin-top: 40px;
     margin-left: auto;

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import Select from 'react-select'
+import CreatableSelect from 'react-select/creatable';
 import { useHistory } from 'react-router-dom'
 import { options } from '../../utils'
 import './SingleMappingDemo.css'
@@ -38,17 +38,9 @@ const SingleMappingDemo = () => {
         <div className="single-mapping-demo-container">
             <img src={Hayadata} alt="logo" className="logo" />
             <div className="single-mapping-demo-selects-grid">
-                <span className="title">
-                    Edge 1
-                </span>
-
-                <span className="title">
-                    Edge 2
-                </span>
-
                 <div>
                     <span className="mid-title">Base 1</span>
-                    <Select
+                    <CreatableSelect
                         className="select"
                         value={options.find(obj => obj.value === selectedBase1.value)}
                         onChange={setSelectedBase1}
@@ -59,7 +51,7 @@ const SingleMappingDemo = () => {
 
                 <div>
                     <span className="mid-title">Target 1</span>
-                    <Select
+                    <CreatableSelect
                         className="select"
                         value={options.find(obj => obj.value === selectedTarget1.value)}
                         onChange={setSelectedTarget1}
@@ -70,7 +62,7 @@ const SingleMappingDemo = () => {
 
                 <div>
                     <span className="mid-title">Base 2</span>
-                    <Select
+                    <CreatableSelect
                         className="select"
                         value={options.find(obj => obj.value === selectedBase2.value)}
                         onChange={setSelectedBase2}
@@ -81,7 +73,7 @@ const SingleMappingDemo = () => {
 
                 <div>
                     <span className="mid-title">Target 2</span>
-                    <Select
+                    <CreatableSelect
                         className="select"
                         value={options.find(obj => obj.value === selectedTarget2.value)}
                         onChange={setSelectedTarget2}

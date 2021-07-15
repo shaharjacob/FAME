@@ -1,14 +1,21 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
-import BipartiteGraph from './components/graph/BipartiteGraph'
-import Cluster from './components/graph/Cluster'
-import SingleMapping from './components/graph/SingleMapping'
-import TwoEntities from './components/entities/TwoEntities'
+
+// graph
 import Mapping from './components/graph/Mapping'
+import Cluster from './components/graph/Cluster'
 import TestViewer from './components/graph/TestViewer'
-import SingleMappingDemo from './components/demo/SingleMappingDemo'
+import SingleMapping from './components/graph/SingleMapping'
+import BipartiteGraph from './components/graph/BipartiteGraph'
+
+// demo 
 import MappingDemo from './components/demo/MappingDemo'
+import SingleMappingDemo from './components/demo/SingleMappingDemo'
+
+// others
+import Main from './components/main/Main'
 import Navbar from './components/navbar/Navbar'
+import TwoEntities from './components/entities/TwoEntities'
 
 
 const App = () => {
@@ -19,7 +26,7 @@ const App = () => {
         <Navbar />
         <Switch>
           <Route path='/' exact>
-            <MappingDemo />
+            <Main />
           </Route>
           <Route path='/bipartite'>
             <BipartiteGraph />

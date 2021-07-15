@@ -8,9 +8,9 @@ const Navbar = () => {
     return (
         <div className="navbar">
             <div className="left-side">
-            <Link to="/" style={{textDecoration: 'none', color: 'whitesmoke'}}>
-                <i className="fas fa-home animate"></i>
-            </Link> 
+                <Link to="/" style={{textDecoration: 'none', color: 'whitesmoke'}}>
+                    <i className="fas fa-home animate"></i>
+                </Link> 
             </div>
         </div>
     );
