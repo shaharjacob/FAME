@@ -1025,5 +1025,168 @@
 		"contribute to",
 		"relate to"
 	],
-	"climate change#electricity": []
+	"climate change#electricity": [],
+	"boats#ballast": [
+		"need"
+	],
+	"ballast#boats": [],
+	"boats#coral reefs": [
+		"affect"
+	],
+	"coral reefs#boats": [],
+	"boats#names": [
+		"be given",
+		"have",
+		"have ss in"
+	],
+	"names#boats": [],
+	"boats#altitude": [],
+	"altitude#boats": [],
+	"boats#salt water": [
+		"float better in"
+	],
+	"salt water#boats": [
+		"be bad for"
+	],
+	"boats#water quality": [
+		"affect"
+	],
+	"water quality#boats": [],
+	"boats#alcohol use": [],
+	"alcohol use#boats": [],
+	"boats#anchors": [
+		"need",
+		"use"
+	],
+	"anchors#boats": [],
+	"boats#environment": [
+		"affect",
+		"harm"
+	],
+	"environment#boats": [],
+	"boats#radar": [
+		"have",
+		"need"
+	],
+	"radar#boats": [],
+	"boats#djedefre": [],
+	"djedefre#boats": [],
+	"boats#one gear": [
+		"have"
+	],
+	"one gear#boats": [],
+	"boats#bottom paint": [
+		"has property",
+		"need"
+	],
+	"bottom paint#boats": [],
+	"boats#freshwater": [],
+	"freshwater#boats": [],
+	"boats#tides": [],
+	"tides#boats": [
+		"affect"
+	],
+	"boats#sails": [
+		"can",
+		"have",
+		"use fabric for"
+	],
+	"sails#boats": [
+		"has property"
+	],
+	"boats#trim tabs": [
+		"have",
+		"need"
+	],
+	"trim tabs#boats": [],
+	"boats#texas highway patrol": [],
+	"texas highway patrol#boats": [],
+	"boats#water": [
+		"float in",
+		"float on",
+		"get into",
+		"move in",
+		"pollute",
+		"pump out",
+		"put birds in",
+		"shoot out",
+		"sink in",
+		"take on"
+	],
+	"water#boats": [
+		"come out of"
+	],
+	"boats#windows": [
+		"have"
+	],
+	"windows#boats": [],
+	"river#ballast": [],
+	"ballast#river": [],
+	"river#coral reefs": [],
+	"coral reefs#river": [],
+	"river#names": [
+		"get",
+		"have"
+	],
+	"names#river": [],
+	"river#buoyancy": [],
+	"buoyancy#river": [],
+	"river#altitude": [],
+	"altitude#river": [],
+	"river#salt water": [
+		"be",
+		"have"
+	],
+	"salt water#river": [],
+	"river#water quality": [],
+	"water quality#river": [],
+	"river#alcohol use": [],
+	"alcohol use#river": [],
+	"river#anchors": [],
+	"anchors#river": [],
+	"river#environment": [
+		"affect",
+		"be important to",
+		"help"
+	],
+	"environment#river": [],
+	"river#radar": [],
+	"radar#river": [],
+	"river#djedefre": [],
+	"djedefre#river": [],
+	"river#one gear": [],
+	"one gear#river": [],
+	"river#bottom paint": [],
+	"bottom paint#river": [],
+	"river#freshwater": [
+		"become",
+		"has property",
+		"have"
+	],
+	"freshwater#river": [],
+	"river#tides": [
+		"have"
+	],
+	"tides#river": [
+		"work in"
+	],
+	"river#sails": [],
+	"sails#river": [],
+	"river#steering wheel": [],
+	"steering wheel#river": [],
+	"river#trim tabs": [],
+	"trim tabs#river": [],
+	"river#texas highway patrol": [],
+	"texas highway patrol#river": [],
+	"river#water": [
+		"can get",
+		"filter",
+		"get",
+		"have",
+		"naturally purify",
+		"purify"
+	],
+	"water#river": [],
+	"river#windows": [],
+	"windows#river": []
 }

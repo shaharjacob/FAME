@@ -1358,5 +1358,205 @@
 	"climate change#electricity": [
 		"affect",
 		"related to"
-	]
+	],
+	"boats#ballast": [
+		"need"
+	],
+	"ballast#boats": [],
+	"boats#coral reefs": [
+		"affect"
+	],
+	"coral reefs#boats": [],
+	"boats#names": [
+		"get",
+		"get female",
+		"get their",
+		"have",
+		"have female",
+		"have girl"
+	],
+	"names#boats": [],
+	"boats#altitude": [],
+	"altitude#boats": [
+		"affect"
+	],
+	"boats#salt water": [],
+	"salt water#boats": [
+		"affect",
+		"affect aluminum",
+		"bad for"
+	],
+	"boats#water quality": [
+		"affect"
+	],
+	"water quality#boats": [],
+	"boats#alcohol use": [],
+	"alcohol use#boats": [],
+	"boats#anchors": [
+		"have",
+		"have 2",
+		"need",
+		"swing on",
+		"use"
+	],
+	"anchors#boats": [
+		"work"
+	],
+	"boats#environment": [
+		"affect the",
+		"harm the"
+	],
+	"environment#boats": [],
+	"boats#radar": [
+		"have",
+		"have two",
+		"use"
+	],
+	"radar#boats": [],
+	"boats#djedefre": [],
+	"djedefre#boats": [],
+	"boats#one gear": [
+		"only have"
+	],
+	"one gear#boats": [],
+	"boats#bottom paint": [
+		"need"
+	],
+	"bottom paint#boats": [],
+	"boats#freshwater": [],
+	"freshwater#boats": [],
+	"boats#tides": [],
+	"tides#boats": [
+		"affect"
+	],
+	"boats#sails": [
+		"have",
+		"have black",
+		"have triangular"
+	],
+	"sails#boats": [
+		"improve"
+	],
+	"boats#trim tabs": [
+		"have",
+		"need"
+	],
+	"trim tabs#boats": [
+		"help a"
+	],
+	"boats#texas highway patrol": [],
+	"texas highway patrol#boats": [],
+	"boats#water": [
+		"affect",
+		"displace",
+		"drain",
+		"engines need",
+		"float in",
+		"float on",
+		"get",
+		"in",
+		"pollute",
+		"spit",
+		"spray"
+	],
+	"water#boats": [
+		"come out of",
+		"get in my",
+		"getting in my",
+		"pour out of"
+	],
+	"boats#windows": [
+		"have circle",
+		"have circular",
+		"have round"
+	],
+	"windows#boats": [],
+	"river#ballast": [],
+	"ballast#river": [],
+	"river#coral reefs": [],
+	"coral reefs#river": [],
+	"river#names": [
+		"get its",
+		"get their",
+		"have",
+		"know the doctor's",
+		"phoenix change his",
+		"song get her",
+		"thames get its"
+	],
+	"names#river": [],
+	"river#buoyancy": [],
+	"buoyancy#river": [],
+	"river#altitude": [],
+	"altitude#river": [],
+	"river#salt water": [
+		"not have",
+		"water become"
+	],
+	"salt water#river": [],
+	"river#water quality": [],
+	"water quality#river": [
+		"at lower peirce reservoir different from kallang"
+	],
+	"river#alcohol use": [],
+	"alcohol use#river": [],
+	"river#anchors": [],
+	"anchors#river": [],
+	"river#environment": [
+		"affect the",
+		"discharge affect the",
+		"help the",
+		"impact the",
+		"otters adapt to their",
+		"otters help the",
+		"pollution affect the"
+	],
+	"environment#river": [],
+	"river#radar": [],
+	"radar#river": [],
+	"river#djedefre": [],
+	"djedefre#river": [],
+	"river#one gear": [],
+	"one gear#river": [],
+	"river#bottom paint": [],
+	"bottom paint#river": [],
+	"river#freshwater": [
+		"become",
+		"dolphins live in"
+	],
+	"freshwater#river": [],
+	"river#tides": [
+		"have",
+		"thames have a"
+	],
+	"tides#river": [
+		"affect",
+		"work in"
+	],
+	"river#sails": [],
+	"sails#river": [],
+	"river#steering wheel": [],
+	"steering wheel#river": [],
+	"river#trim tabs": [],
+	"trim tabs#river": [],
+	"river#texas highway patrol": [],
+	"texas highway patrol#river": [],
+	"river#water": [
+		"filter",
+		"get",
+		"get their",
+		"hold",
+		"purify"
+	],
+	"water#river": [
+		"extracted from",
+		"filtered from lakes and",
+		"flow measured on",
+		"important to",
+		"sport groups use",
+		"taken from",
+		"transport difficult in"
+	],
+	"river#windows": [],
+	"windows#river": []
 }
