@@ -275,7 +275,7 @@ if __name__ == "__main__":
         ],
         [
             # seems good!
-            # http://localhost:3000/mapping?base=thoughts,brain,head&target=astronaut,space
+            # http://localhost:3000/mapping?base=thoughts,brain&target=astronaut,space
             # expected: thoughts->astronaut, brain->space
             ["thoughts", "brain"],
             ["astronaut", "space"],
@@ -291,7 +291,6 @@ if __name__ == "__main__":
             # seems good!
             # http://localhost:3000/mapping?base=cars,road,wheels&target=boats,river,sail
             # expected: cars->boats, road->river, wheels->sail
-            # after removing "has property" is seems better
             ["cars", "road", "wheels"],
             ["boats", "river", "sail"],
         ],
