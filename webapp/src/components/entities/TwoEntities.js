@@ -5,6 +5,9 @@ import LoadingOverlay from 'react-loading-overlay'
 import ClipLoader from 'react-spinners/ClipLoader'
 
 import './TwoEntities.css'
+import GoogleLogo from '../../assets/google.png'
+import QuasimodoLogo from '../../assets/quasimodo.png'
+import ConceptnetLogo from '../../assets/conceptnet.png'
 
 const TwoEntities = () => {
 
@@ -68,27 +71,24 @@ const TwoEntities = () => {
                             </tr>
                             <tr>
                                 <td className="content">
-                                    Quasimodo
+                                    <img className="resource-logo" src={QuasimodoLogo} alg="quasimodo" /><br/>
+                                    <span style={{fontSize: '10px'}}>Quasimodo</span>
                                 </td>
-                                <td className="content props" dangerouslySetInnerHTML={{__html: firstDirection.quasimodo}}>
-                            
-                                </td>
+                                <td className="content props" dangerouslySetInnerHTML={{__html: firstDirection.quasimodo}}></td>
                             </tr>
                             <tr>
                                 <td className="content">
-                                    Google
+                                    <img className="resource-logo" src={GoogleLogo} alg="google" /><br/>
+                                    <span style={{fontSize: '10px'}}>Google</span>
                                 </td>
-                                <td className="content props" dangerouslySetInnerHTML={{__html: firstDirection.google_autosuggest}}>
-
-                                </td>
+                                <td className="content props" dangerouslySetInnerHTML={{__html: firstDirection.google_autosuggest}}></td>
                             </tr>
                             <tr>
                                 <td className="content">
-                                    ConceptNet
+                                    <img className="resource-logo" src={ConceptnetLogo} alg="conceptnet" /><br/>
+                                    <span style={{fontSize: '10px'}}>ConceptNet</span>
                                 </td>
-                                <td className="content props" dangerouslySetInnerHTML={{__html: firstDirection.concept_net}}>
-
-                                </td>
+                                <td className="content props" dangerouslySetInnerHTML={{__html: firstDirection.concept_net}}></td>
                             </tr>
                         </tbody>
                     </table>
@@ -116,27 +116,24 @@ const TwoEntities = () => {
                             </tr>
                             <tr>
                                 <td className="content">
-                                    Quasimodo
+                                    <img className="resource-logo" src={QuasimodoLogo} alg="quasimodo" /><br/>
+                                    <span style={{fontSize: '10px'}}>Quasimodo</span>
                                 </td>
-                                <td className="content props" dangerouslySetInnerHTML={{__html: secondDirection.quasimodo}}>
-                            
-                                </td>
+                                <td className="content props" dangerouslySetInnerHTML={{__html: secondDirection.quasimodo}}></td>
                             </tr>
                             <tr>
                                 <td className="content">
-                                    Google
+                                    <img className="resource-logo" src={GoogleLogo} alg="google" /><br/>
+                                    <span style={{fontSize: '10px'}}>Google</span>
                                 </td>
-                                <td className="content props" dangerouslySetInnerHTML={{__html: secondDirection.google_autosuggest}}>
-
-                                </td>
+                                <td className="content props" dangerouslySetInnerHTML={{__html: secondDirection.google_autosuggest}}></td>
                             </tr>
                             <tr>
                                 <td className="content">
-                                    ConceptNet
+                                    <img className="resource-logo" src={ConceptnetLogo} alg="conceptnet" /><br/>
+                                    <span style={{fontSize: '10px'}}>ConceptNet</span>
                                 </td>
-                                <td className="content props" dangerouslySetInnerHTML={{__html: secondDirection.concept_net}}>
-
-                                </td>
+                                <td className="content props" dangerouslySetInnerHTML={{__html: secondDirection.concept_net}}></td>
                             </tr>
                         </tbody>
                     </table>
