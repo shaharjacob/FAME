@@ -19,7 +19,7 @@ const MappingDemo = () => {
             <img style={{width: "400px", marginTop: '100px'}} src={Logo} alt="logo" />
             <div className="mapping-demo-inputs">
                 <span><i className="fas fa-home text-blue"></i>&nbsp;Base entities</span>
-                <span><i class="fas fa-dot-circle text-red"></i>&nbsp;Target entities</span>
+                <span><i className="fas fa-dot-circle text-red"></i>&nbsp;Target entities</span>
                 <textarea classNamea="mapping-demo-textarea" id="base-input" />
                 <textarea className="mapping-demo-textarea" id="target-input" />
             </div>

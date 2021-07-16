@@ -6,6 +6,7 @@ import LoadingOverlay from 'react-loading-overlay'
 import ClipLoader from 'react-spinners/ClipLoader'
 
 import './Graph.css'
+import './Mapping.css'
 import { IsEmpty } from '../../utils'
 
 
@@ -18,10 +19,15 @@ const Mapping = () => {
 
     // general
     const [isLoading, setIsLoading] = useState(true)
+    const [baseEntities, setBaseEntities] = useState([])
+    const [targetEntities, setTargetEntities] = useState([])
+    const [exeutionTime, setExeutionTime] = useState(0)
 
     useEffect(() => {
         let params = new URLSearchParams(location.search)
-    
+        setBaseEntities(params.get("base"))
+        setTargetEntities(params.get("target"))
+
         fetch('/mapping?' + params).then(response => {
           if(response.ok){
             return response.json()
@@ -29,6 +35,7 @@ const Mapping = () => {
         }).then(data => {
             if (!IsEmpty(data) && !IsEmpty(data["graph"])) {
                 setGraph(data["graph"])
+                setExeutionTime(data["time"])
                 setIsLoading(false)
             }
         })
@@ -64,21 +71,38 @@ const Mapping = () => {
 
     return (
     <div>
-        <div className="overlay-loading">
-            <LoadingOverlay
-                active={isLoading}
-                spinner={<ClipLoader size={70} color="#469cac" />}
-            />
-        </div>
-        {graph
+        {!isLoading && graph
         ?
-            <Graph
-                graph={graph}
-                options={options}
-                events={events}
-            />
+            <div className="mapping-container">
+                <div className="mapping-top">
+                    <div></div>
+                    <div>
+                        <div><i className="fas fa-home text-blue"></i>&nbsp;<span className="mapping-titles">Base</span></div>
+                        <div><code>{baseEntities}</code></div>
+                    </div>
+                    <div>
+                        <div><i className="fas fa-dot-circle text-red"></i>&nbsp;<span className="mapping-titles">Target</span></div>
+                        <div><code>{targetEntities}</code></div>
+                    </div>
+                    <div>
+                        <div><i className="far fa-clock dark-gray"></i>&nbsp;<span className="mapping-titles">Execution time</span></div>
+                        <div><code>{exeutionTime} sec</code></div>
+                    </div>
+                    <div></div>
+                </div>
+                <Graph
+                    graph={graph}
+                    options={options}
+                    events={events}
+                />
+            </div>
         :
-            <></>
+            <div className="overlay-loading">
+                <LoadingOverlay
+                    active={isLoading}
+                    spinner={<ClipLoader size={70} color="#469cac" />}
+                />
+            </div>
         }
     </div>
     );

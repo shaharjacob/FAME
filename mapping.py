@@ -245,6 +245,8 @@ if __name__ == "__main__":
             # seems good!
             # expected mapping: earth->electrons, sun->nucleus, gravity->electricity, newton->faraday, universe->cell
             # http://localhost:3000/mapping?base=earth,sun,newton,gravity,universe&target=electrons,nucleus,electricity,faraday,cell
+            # base=earth,sun,gravity,newton,universe
+            # target=electrons,nucleus,electricity,cell,faraday
             ["earth", "sun", "gravity", "newton", "universe"], 
             ["electrons", "nucleus", "electricity", "cell", "faraday"]
         ],

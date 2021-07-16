@@ -1,0 +1,19 @@
+.mapping-container {
+    grid-area: main;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    display: grid;
+    grid-template-rows: 0.1fr 0.9fr;
+}
+
+.mapping-top {
+    display: grid;
+    grid-template-columns: 0.2fr 0.2fr 0.2fr 0.2fr 0.2fr;
+    margin-top: 20px;
+}
+
+.mapping-titles {
+    color: #252525;
+    font-size: 14px;
+}

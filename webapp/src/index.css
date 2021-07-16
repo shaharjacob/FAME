@@ -8,8 +8,11 @@ body {
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+  background-color: #dbdbdb;
+  color: #616161;
+  border-radius: 3px;
+  padding: 3px;
 }
 
 .text-blue {
@@ -18,6 +21,10 @@ code {
 
 .text-red {
   color: #b9223b;
+}
+
+.dark-gray {
+  color: #5c5c5c;
 }
 
 .container {

@@ -1,4 +1,5 @@
 import os
+import time
 from typing import List, Dict
 
 from flask import Flask, jsonify, request
@@ -13,6 +14,7 @@ app = Flask(__name__)
 
 @app.route("/mapping", methods=["GET", "POST"])
 def mapping_entities():
+    start_time = time.time()
     data_collector = DataCollector()
     model = SentenceEmbedding(data_collector=data_collector)
     base = [b.strip() for b in request.args.get('base').split(',')]
@@ -64,6 +66,7 @@ def mapping_entities():
                 "nodes": nodes,
                 "edges": edges,
             },
+        "time": round(time.time() - start_time, 2),
     })
 
 
