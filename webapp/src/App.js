@@ -10,6 +10,7 @@ import BipartiteGraph from './components/graph/BipartiteGraph'
 
 // demo 
 import MappingDemo from './components/demo/MappingDemo'
+import TwoEntitiesDemo from './components/demo/TwoEntitiesDemo'
 import SingleMappingDemo from './components/demo/SingleMappingDemo'
 
 // others
@@ -48,6 +49,9 @@ const App = () => {
           </Route>
           <Route path='/single-mapping-demo'>
             <SingleMappingDemo />
+          </Route>
+          <Route path='/two-entities-demo'>
+            <TwoEntitiesDemo />
           </Route>
           <Route path='/test'>
             <TestViewer />

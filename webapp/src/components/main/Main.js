@@ -13,7 +13,7 @@ const Main = () => {
         <div className="main-container">
             <span></span>
             <div className="demo-container">
-                <Link to="/mapping-demo" className="demo-links">
+                <Link to="/two-entities-demo" className="demo-links">
                     <img className="main-logo" src={TwoEntities} alt="logo" />
                     <div className="demo-title">
                         Two Entities

@@ -1,0 +1,40 @@
+.two-entities-demo-container {
+    grid-area: main;
+    display: grid;
+    grid-template-rows: 0.4fr 0.4fr 0.2fr;
+}
+
+.two-entities-demo-selects-grid {
+    display: grid;
+    grid-template-columns: 0.5fr 0.5fr;
+    width: 400px;
+    margin-top: 40px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.two-entities-demo-button {
+    text-align: center;
+    padding-top: 15px;
+}
+
+.mid-title {
+    padding-left: 18px;
+    font-size: 10px;
+    font-weight: 700;
+    font-family: 'Segoe UI';
+    color: #464646;
+}
+
+.select {
+    padding-bottom: 5px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.logo {
+    margin-top: 30px;
+    width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+}
