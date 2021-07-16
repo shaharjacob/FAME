@@ -19,7 +19,7 @@ def mapping_entities():
     target = [t.strip() for t in request.args.get('target').split(',')]
 
     # here we map between base entitites and target entities
-    res = mapping.mapping(base, target)
+    res = mapping.mapping(base, target, True, [], [], [])
 
     # prepare the nodes for the react app
     nodes = python2react.get_nodes_for_app(props=res["mapping"], start_idx=0)
