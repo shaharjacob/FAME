@@ -243,12 +243,12 @@ if __name__ == "__main__":
     data = [
         [
             # seems good!
-            # expected mapping: earth->electrons, sun->nucleus, gravity->electricity, newton->faraday, universe->cell
-            # http://localhost:3000/mapping?base=earth,sun,newton,gravity,universe&target=electrons,nucleus,electricity,faraday,cell
-            # base=earth,sun,gravity,newton,universe
-            # target=electrons,nucleus,electricity,cell,faraday
-            ["earth", "sun", "gravity", "newton", "universe"], 
-            ["electrons", "nucleus", "electricity", "cell", "faraday"]
+            # expected mapping: earth->electrons, sun->nucleus, gravity->electricity, newton->faraday
+            # http://localhost:3000/mapping?base=earth,sun,newton,gravity&target=electrons,nucleus,electricity,faraday
+            # base=earth,sun,gravity,newton
+            # target=electrons,nucleus,electricity,faraday
+            ["earth", "sun", "gravity", "newton"], 
+            ["electrons", "nucleus", "electricity", "faraday"]
         ],
         [
             # expected mapping: earth->electrons, sun->nucleus, gravity->electricity, newton->? (faraday has been removed)
@@ -340,33 +340,6 @@ if __name__ == "__main__":
 
 
 
-
-
-    # for input in data:
-    #     base, target = input
-    #     print("####################################################")
-    #     secho(f"{base} --> {target}", fg="green", bold=True)
-    #     print("----------------------------------------------------")
-    #     res = mapping(base, target)
-    #     print(res["mapping"])
-    #     print()
-    #     print(res["relations"])
-    #     print()
-    #     for entity, suggestions in res["base_suggestions"].items():
-    #         secho(f"\nSuggestions (base) for ", fg="blue", nl=False)
-    #         secho(f"{entity}: ", fg="blue", bold=True, nl=False)
-    #         for suggest in suggestions:
-    #             secho(f"{suggest}, ", fg="blue", nl=False)
-    #     print()
-    #     for entity, suggestions in res["target_suggestions"].items():
-    #         secho(f"\nSuggestions (target) for ", fg="blue", nl=False)
-    #         secho(f"{entity}: ", fg="blue", bold=True, nl=False)
-    #         for suggest in suggestions:
-    #             secho(f"{suggest}, ", fg="blue", nl=False)
-    #     print()
-    #     print("####################################################")
-    #     print()
-    #     print()
 
 
 
