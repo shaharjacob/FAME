@@ -1192,5 +1192,22 @@
 	"astronaut#black hole": [
 		"avoid"
 	],
-	"black hole#astronaut": []
+	"black hole#astronaut": [],
+	"astronaut#stars": [
+		"can see"
+	],
+	"stars#astronaut": [],
+	"brain#neuron": [],
+	"neuron#brain": [
+		"affect",
+		"be arranged in",
+		"be important to",
+		"be in",
+		"can carry signals to",
+		"communicate in",
+		"function in",
+		"send messages to",
+		"transmit messages to",
+		"work in"
+	]
 }

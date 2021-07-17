@@ -613,5 +613,9 @@
 	"river#windows": [],
 	"windows#river": [],
 	"astronaut#black hole": [],
-	"black hole#astronaut": []
+	"black hole#astronaut": [],
+	"astronaut#stars": [],
+	"stars#astronaut": [],
+	"brain#neuron": [],
+	"neuron#brain": []
 }
