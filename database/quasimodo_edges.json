@@ -1216,5 +1216,310 @@
 	],
 	"astronaut#rocket engines": [],
 	"rocket engines#astronaut": [],
-	"astronaut#forensic scientists": []
+	"astronaut#forensic scientists": [],
+	"astronaut#astronauts": [
+		"be called",
+		"communicate with",
+		"has property",
+		"want"
+	],
+	"astronauts#astronaut": [
+		"be called",
+		"communicate with",
+		"has property",
+		"want"
+	],
+	"astronaut#communication": [],
+	"communication#astronaut": [],
+	"astronaut#mass": [],
+	"mass#astronaut": [],
+	"astronaut#time": [
+		"has property",
+		"tell"
+	],
+	"time#astronaut": [],
+	"astronaut#size": [],
+	"size#astronaut": [],
+	"astronaut#apollo 11": [],
+	"apollo 11#astronaut": [],
+	"forensic scientists#astronaut": [],
+	"astronaut#speed": [
+		"can"
+	],
+	"speed#astronaut": [],
+	"astronaut#japanese": [],
+	"japanese#astronaut": [],
+	"astronaut#on the space station": [
+		"breathe",
+		"sleep",
+		"work"
+	],
+	"on the space station#astronaut": [],
+	"astronaut#cameras": [],
+	"cameras#astronaut": [],
+	"astronaut#guns": [
+		"carry"
+	],
+	"guns#astronaut": [],
+	"astronaut#thrust": [],
+	"thrust#astronaut": [],
+	"astronaut#nasa": [
+		"communicate with"
+	],
+	"nasa#astronaut": [
+		"communicate with"
+	],
+	"astronaut#gravity": [
+		"adjust to",
+		"feel",
+		"overcome"
+	],
+	"gravity#astronaut": [],
+	"astronaut#sputnik": [],
+	"sputnik#astronaut": [],
+	"astronaut#it dark": [],
+	"it dark#astronaut": [],
+	"astronaut#magnets": [
+		"wear shoes with"
+	],
+	"magnets#astronaut": [],
+	"astronaut#astronauts use radios to": [],
+	"astronauts use radios to#astronaut": [],
+	"astronaut#human body": [],
+	"human body#astronaut": [],
+	"astronaut#electricity": [],
+	"electricity#astronaut": [],
+	"astronaut#weather": [],
+	"weather#astronaut": [],
+	"astronaut#organs": [],
+	"organs#astronaut": [],
+	"astronaut#glue": [],
+	"glue#astronaut": [],
+	"astronaut#astronauts move": [],
+	"astronauts move#astronaut": [],
+	"astronaut#astronauts float": [],
+	"astronauts float#astronaut": [],
+	"astronaut#a rocket": [],
+	"a rocket#astronaut": [],
+	"astronaut#radar": [],
+	"radar#astronaut": [],
+	"astronaut#rockets": [
+		"find route in",
+		"use"
+	],
+	"rockets#astronaut": [],
+	"astronaut#plant growth": [],
+	"plant growth#astronaut": [],
+	"astronaut#television": [],
+	"television#astronaut": [],
+	"astronaut#rocket": [
+		"find route in",
+		"use"
+	],
+	"rocket#astronaut": [],
+	"astronaut#rockets work": [],
+	"rockets work#astronaut": [],
+	"astronaut#morse code": [],
+	"morse code#astronaut": [],
+	"astronaut#the cold war": [],
+	"the cold war#astronaut": [],
+	"astronaut#propulsion": [],
+	"propulsion#astronaut": [],
+	"astronaut#you think astronauts use radios to": [],
+	"you think astronauts use radios to#astronaut": [],
+	"astronaut#health": [],
+	"health#astronaut": [],
+	"space#astronauts": [
+		"look to"
+	],
+	"astronauts#space": [
+		"be in",
+		"eat food in",
+		"eat in",
+		"float in",
+		"go in",
+		"go into",
+		"go to",
+		"live in",
+		"talk in",
+		"walk in"
+	],
+	"space#communication": [
+		"affect",
+		"can affect"
+	],
+	"communication#space": [],
+	"space#mass": [],
+	"mass#space": [
+		"be in"
+	],
+	"space#time": [
+		"affect",
+		"has property",
+		"relate to"
+	],
+	"time#space": [
+		"be different in",
+		"be measured in",
+		"be relative in",
+		"feel in",
+		"go slower in",
+		"relate to",
+		"run slower in",
+		"slow down in",
+		"speed up in",
+		"vary in"
+	],
+	"space#size": [
+		"can",
+		"has property"
+	],
+	"size#space": [],
+	"space#apollo 11": [],
+	"apollo 11#space": [],
+	"space#forensic scientists": [
+		"be important to"
+	],
+	"forensic scientists#space": [],
+	"space#speed": [],
+	"speed#space": [
+		"be calculated in",
+		"be measured in"
+	],
+	"space#japanese": [
+		"work in"
+	],
+	"japanese#space": [
+		"have",
+		"use"
+	],
+	"space#on the space station": [],
+	"on the space station#space": [],
+	"space#cameras": [],
+	"cameras#space": [
+		"be in",
+		"work in"
+	],
+	"space#thrust": [],
+	"thrust#space": [],
+	"space#nasa": [],
+	"nasa#space": [
+		"explore",
+		"feel about",
+		"get internet in",
+		"go anymore to",
+		"go to",
+		"grow plants in",
+		"make oxygen in",
+		"send images from",
+		"send robots into",
+		"take pictures in"
+	],
+	"space#rocket engines": [],
+	"rocket engines#space": [
+		"burn in"
+	],
+	"space#gravity": [
+		"have"
+	],
+	"gravity#space": [
+		"affect",
+		"be created in",
+		"be formed in",
+		"be important in",
+		"be in",
+		"be made in",
+		"be measured in",
+		"be much stronger than",
+		"be simulated in",
+		"exist in"
+	],
+	"space#sputnik": [],
+	"sputnik#space": [],
+	"space#it dark": [],
+	"it dark#space": [],
+	"space#magnets": [],
+	"magnets#space": [
+		"behave in",
+		"react in",
+		"work in"
+	],
+	"space#astronauts use radios to": [],
+	"astronauts use radios to#space": [],
+	"space#human body": [
+		"affect",
+		"change"
+	],
+	"human body#space": [],
+	"space#electricity": [],
+	"electricity#space": [],
+	"space#weather": [],
+	"weather#space": [
+		"be measured from",
+		"be measured in"
+	],
+	"space#organs": [],
+	"organs#space": [],
+	"space#glue": [],
+	"glue#space": [],
+	"space#astronauts move": [],
+	"astronauts move#space": [],
+	"space#astronauts float": [],
+	"astronauts float#space": [],
+	"space#a rocket": [],
+	"a rocket#space": [],
+	"space#radar": [],
+	"radar#space": [],
+	"space#rockets": [],
+	"rockets#space": [
+		"accelerate in",
+		"can fly in",
+		"can move in",
+		"fly in",
+		"get to",
+		"go into",
+		"go to",
+		"move in",
+		"slow down in",
+		"work in"
+	],
+	"space#plant growth": [
+		"affect"
+	],
+	"plant growth#space": [],
+	"space#television": [],
+	"television#space": [],
+	"space#rocket": [],
+	"rocket#space": [
+		"accelerate in",
+		"can fly in",
+		"can move in",
+		"fly in",
+		"get to",
+		"go into",
+		"go to",
+		"move in",
+		"slow down in",
+		"work in"
+	],
+	"space#rockets work": [],
+	"rockets work#space": [],
+	"space#morse code": [
+		"work in"
+	],
+	"morse code#space": [],
+	"space#the cold war": [],
+	"the cold war#space": [],
+	"space#propulsion": [],
+	"propulsion#space": [
+		"be in",
+		"be possible in"
+	],
+	"space#you think astronauts use radios to": [],
+	"you think astronauts use radios to#space": [],
+	"space#health": [
+		"affect",
+		"can affect"
+	],
+	"health#space": []
 }

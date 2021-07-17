@@ -1579,5 +1579,367 @@
 	],
 	"astronaut#rocket engines": [],
 	"rocket engines#astronaut": [],
-	"astronaut#forensic scientists": []
+	"astronaut#forensic scientists": [],
+	"astronaut#astronauts": [],
+	"astronauts#astronaut": [],
+	"astronaut#communication": [],
+	"communication#astronaut": [],
+	"astronaut#mass": [
+		"lose bone"
+	],
+	"mass#astronaut": [],
+	"astronaut#time": [
+		"experience",
+		"tell"
+	],
+	"time#astronaut": [
+		"work for"
+	],
+	"astronaut#size": [],
+	"size#astronaut": [],
+	"astronaut#apollo 11": [
+		"poop",
+		"train for"
+	],
+	"apollo 11#astronaut": [],
+	"forensic scientists#astronaut": [],
+	"astronaut#speed": [],
+	"speed#astronaut": [],
+	"astronaut#japanese": [],
+	"japanese#astronaut": [],
+	"astronaut#on the space station": [],
+	"on the space station#astronaut": [],
+	"astronaut#cameras": [],
+	"cameras#astronaut": [],
+	"astronaut#guns": [
+		"carry",
+		"have",
+		"have a"
+	],
+	"guns#astronaut": [],
+	"astronaut#thrust": [],
+	"thrust#astronaut": [],
+	"astronaut#nasa": [
+		"float in space",
+		"sleep in space"
+	],
+	"nasa#astronaut": [
+		"choose",
+		"sending"
+	],
+	"astronaut#gravity": [
+		"adapt to",
+		"adjust to",
+		"experience zero",
+		"overcome",
+		"poop without",
+		"practice zero",
+		"train for zero",
+		"use"
+	],
+	"gravity#astronaut": [],
+	"astronaut#sputnik": [],
+	"sputnik#astronaut": [],
+	"astronaut#it dark": [],
+	"it dark#astronaut": [],
+	"astronaut#magnets": [],
+	"magnets#astronaut": [],
+	"astronaut#astronauts use radios to": [],
+	"astronauts use radios to#astronaut": [],
+	"astronaut#human body": [],
+	"human body#astronaut": [],
+	"astronaut#electricity": [
+		"generate"
+	],
+	"electricity#astronaut": [],
+	"astronaut#weather": [],
+	"weather#astronaut": [],
+	"astronaut#organs": [],
+	"organs#astronaut": [],
+	"astronaut#glue": [],
+	"glue#astronaut": [],
+	"astronaut#astronauts move": [],
+	"astronauts move#astronaut": [],
+	"astronaut#astronauts float": [],
+	"astronauts float#astronaut": [],
+	"astronaut#a rocket": [
+		"eat in",
+		"enter",
+		"sleep in"
+	],
+	"a rocket#astronaut": [],
+	"astronaut#radar": [],
+	"radar#astronaut": [],
+	"astronaut#rockets": [
+		"control",
+		"use"
+	],
+	"rockets#astronaut": [],
+	"astronaut#plant growth": [],
+	"plant growth#astronaut": [],
+	"astronaut#television": [],
+	"television#astronaut": [],
+	"astronaut#rocket": [
+		"enter a",
+		"get into the",
+		"pee in",
+		"poop in",
+		"sit in",
+		"sleep in a",
+		"steer the"
+	],
+	"rocket#astronaut": [],
+	"astronaut#rockets work": [],
+	"rockets work#astronaut": [],
+	"astronaut#morse code": [],
+	"morse code#astronaut": [],
+	"astronaut#the cold war": [],
+	"the cold war#astronaut": [],
+	"astronaut#propulsion": [],
+	"propulsion#astronaut": [],
+	"astronaut#you think astronauts use radios to": [],
+	"you think astronauts use radios to#astronaut": [],
+	"astronaut#health": [],
+	"health#astronaut": [],
+	"space#astronauts": [
+		"appear black to",
+		"appear dark for"
+	],
+	"astronauts#space": [
+		"breathe in",
+		"drink in",
+		"eat",
+		"eat in",
+		"float in",
+		"float in outer",
+		"go",
+		"go to",
+		"in",
+		"life in",
+		"live in",
+		"poop in",
+		"shower in",
+		"sleep in",
+		"survive in",
+		"travel into",
+		"weightless in"
+	],
+	"space#communication": [
+		"a barrier to",
+		"affect",
+		"affect verbal",
+		"important in"
+	],
+	"communication#space": [
+		"possible in",
+		"work in",
+		"works in"
+	],
+	"space#mass": [
+		"affect",
+		"have"
+	],
+	"mass#space": [
+		"affect",
+		"curve",
+		"have",
+		"measured in",
+		"occupies"
+	],
+	"space#time": [
+		"and",
+		"change over",
+		"exploration evolved over"
+	],
+	"time#space": [
+		"slower in"
+	],
+	"space#size": [],
+	"size#space": [],
+	"space#apollo 11": [],
+	"apollo 11#space": [
+		"astronauts never return to",
+		"contribute to our knowledge of",
+		"go to"
+	],
+	"space#forensic scientists": [],
+	"forensic scientists#space": [],
+	"space#speed": [
+		"shuttles measure",
+		"station maintain its"
+	],
+	"speed#space": [
+		"calculated in",
+		"measured in",
+		"of sound in",
+		"work in"
+	],
+	"space#japanese": [
+		"work in"
+	],
+	"japanese#space": [
+		"back into parking",
+		"have no",
+		"not use"
+	],
+	"space#on the space station": [],
+	"on the space station#space": [],
+	"space#cameras": [],
+	"cameras#space": [
+		"work in"
+	],
+	"space#thrust": [],
+	"thrust#space": [
+		"created in",
+		"work in",
+		"work in outer"
+	],
+	"space#nasa": [
+		"exploration important"
+	],
+	"nasa#space": [
+		"go to",
+		"in"
+	],
+	"space#rocket engines": [],
+	"rocket engines#space": [
+		"work in"
+	],
+	"space#gravity": [
+		"affected by",
+		"have no",
+		"have zero",
+		"stations create",
+		"stations have",
+		"time causes",
+		"time create",
+		"zero"
+	],
+	"gravity#space": [
+		"created in",
+		"distort",
+		"exist in",
+		"formed in",
+		"important in",
+		"in",
+		"not work in",
+		"outer",
+		"simulated in"
+	],
+	"space#sputnik": [],
+	"sputnik#space": [
+		"1 get into",
+		"get into"
+	],
+	"space#it dark": [],
+	"it dark#space": [
+		"in",
+		"in outer"
+	],
+	"space#magnets": [],
+	"magnets#space": [
+		"act in",
+		"behave in",
+		"react in",
+		"work in"
+	],
+	"space#astronauts use radios to": [],
+	"astronauts use radios to#space": [],
+	"space#human body": [
+		"affect",
+		"change the",
+		"exploration improve our understanding of the",
+		"radiation affect the"
+	],
+	"human body#space": [
+		"affected in",
+		"change in",
+		"react in"
+	],
+	"space#electricity": [
+		"conduct",
+		"heaters use so much",
+		"shuttle get",
+		"station get"
+	],
+	"electricity#space": [
+		"generated in",
+		"work in"
+	],
+	"space#weather": [],
+	"weather#space": [],
+	"space#organs": [],
+	"organs#space": [
+		"function in"
+	],
+	"space#glue": [],
+	"glue#space": [
+		"work in"
+	],
+	"space#astronauts move": [],
+	"astronauts move#space": [
+		"in",
+		"slow in"
+	],
+	"space#astronauts float": [],
+	"astronauts float#space": [
+		"in",
+		"in outer"
+	],
+	"space#a rocket": [],
+	"a rocket#space": [
+		"launched into",
+		"need to go to",
+		"work in"
+	],
+	"space#radar": [],
+	"radar#space": [],
+	"space#rockets": [],
+	"rockets#space": [
+		"engines work in",
+		"going to",
+		"sent to",
+		"work in"
+	],
+	"space#plant growth": [
+		"affect"
+	],
+	"plant growth#space": [],
+	"space#television": [],
+	"television#space": [],
+	"space#rocket": [],
+	"rocket#space": [
+		"engines work in",
+		"going to",
+		"sent to",
+		"work in"
+	],
+	"space#rockets work": [
+		"shuttle"
+	],
+	"rockets work#space": [
+		"in"
+	],
+	"space#morse code": [
+		"work in"
+	],
+	"morse code#space": [],
+	"space#the cold war": [],
+	"the cold war#space": [],
+	"space#propulsion": [],
+	"propulsion#space": [
+		"achieved in",
+		"possible in",
+		"systems work in",
+		"work in"
+	],
+	"space#you think astronauts use radios to": [],
+	"you think astronauts use radios to#space": [],
+	"space#health": [
+		"affect your mental",
+		"exploration affect medicine and"
+	],
+	"health#space": [
+		"app take up so much"
+	]
 }
