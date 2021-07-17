@@ -1571,5 +1571,13 @@
 		"affect the",
 		"fire in the",
 		"in the"
-	]
+	],
+	"space#guns": [],
+	"guns#space": [
+		"fire in",
+		"work in"
+	],
+	"astronaut#rocket engines": [],
+	"rocket engines#astronaut": [],
+	"astronaut#forensic scientists": []
 }

@@ -617,5 +617,10 @@
 	"astronaut#stars": [],
 	"stars#astronaut": [],
 	"brain#neuron": [],
-	"neuron#brain": []
+	"neuron#brain": [],
+	"space#guns": [],
+	"guns#space": [],
+	"astronaut#rocket engines": [],
+	"rocket engines#astronaut": [],
+	"astronaut#forensic scientists": []
 }

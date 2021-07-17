@@ -42,5 +42,32 @@
 	"electricity#invent": [],
 	"electricity#prove": [],
 	"electricity#prove his ideas about": [],
-	"earth#discovered": []
+	"earth#discovered": [],
+	"astronaut#work": [
+		"on the space station"
+	],
+	"astronaut#create": [],
+	"space#affect": [
+		"communication",
+		"human body",
+		"us",
+		"health",
+		"plant growth"
+	],
+	"space#affect the": [],
+	"space#be arranged in": [],
+	"space#be important to": [
+		"forensic scientists"
+	],
+	"space#can carry signals to": [],
+	"space#communicate in": [],
+	"space#fire in the": [],
+	"space#function in": [],
+	"space#in the": [],
+	"space#send messages to": [],
+	"space#transmit messages to": [],
+	"space#work in": [
+		"morse code",
+		"japanese"
+	]
 }

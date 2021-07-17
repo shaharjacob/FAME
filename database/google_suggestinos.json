@@ -355,5 +355,46 @@
 	"boats#spin on": [],
 	"boats#turn in": [],
 	"boats#turn on": [],
-	"electricity#prove": []
+	"electricity#prove": [],
+	"space#be arranged in": [],
+	"space#be important to": [],
+	"space#can carry signals to": [],
+	"space#communicate in": [
+		"they",
+		"you",
+		"astronauts",
+		"you think astronauts use radios to",
+		"nasa",
+		"astronauts use radios to",
+		"we"
+	],
+	"space#fire in the": [],
+	"space#function in": [
+		"organs"
+	],
+	"space#in the": [
+		"it dark",
+		"astronauts move",
+		"rockets work",
+		"astronauts float"
+	],
+	"space#send messages to": [],
+	"space#transmit messages to": [],
+	"space#work in": [
+		"radar",
+		"rocket engines",
+		"communication",
+		"glue",
+		"cameras",
+		"thrust",
+		"a rocket",
+		"rocket",
+		"electricity",
+		"propulsion",
+		"magnets",
+		"rockets",
+		"time",
+		"guns",
+		"gravity"
+	]
 }

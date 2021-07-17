@@ -1209,5 +1209,12 @@
 		"send messages to",
 		"transmit messages to",
 		"work in"
-	]
+	],
+	"space#guns": [],
+	"guns#space": [
+		"work in"
+	],
+	"astronaut#rocket engines": [],
+	"rocket engines#astronaut": [],
+	"astronaut#forensic scientists": []
 }
