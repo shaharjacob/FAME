@@ -1188,5 +1188,9 @@
 	],
 	"water#river": [],
 	"river#windows": [],
-	"windows#river": []
+	"windows#river": [],
+	"astronaut#black hole": [
+		"avoid"
+	],
+	"black hole#astronaut": []
 }

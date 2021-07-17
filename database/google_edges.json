@@ -1558,5 +1558,7 @@
 		"transport difficult in"
 	],
 	"river#windows": [],
-	"windows#river": []
+	"windows#river": [],
+	"astronaut#black hole": [],
+	"black hole#astronaut": []
 }
