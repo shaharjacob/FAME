@@ -10,6 +10,8 @@ from quasimodo import Quasimodo
 from data_collector import DataCollector
 from sentence_embadding import SentenceEmbedding
 
+IGNORE_SUGGESTION = ["the", "they", "us", "we", "you"]
+
 class Suggestions(object):
     def __init__(self, entity: str, prop: str, save_db: bool = True, override_database: bool = False, quasimodo: Quasimodo = None):
         self.entity = entity
@@ -42,7 +44,8 @@ class Suggestions(object):
         if should_save:
             self.save_database()
 
-        return list(set(google_suggestinos + quasimodo_suggestinos))
+        suggestions = list(set(google_suggestinos + quasimodo_suggestinos))
+        return [suggestion for suggestion in suggestions if suggestion not in IGNORE_SUGGESTION]
 
 
     def save_database(self):

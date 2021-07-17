@@ -311,8 +311,6 @@
 		"unit work during"
 	],
 	"summer#air conditioner": [],
-	"heater#winter": [],
-	"winter#heater": [],
 	"homework#practice": [
 		"good"
 	],
@@ -705,12 +703,6 @@
 	],
 	"road#wheels": [],
 	"wheels#road": [],
-	"umbrella#winter": [],
-	"winter#umbrella": [],
-	"rain#winter": [],
-	"winter#rain": [
-		"tires perform in"
-	],
 	"sunscreen#summer": [
 		"needed especially in"
 	],
@@ -1941,5 +1933,16 @@
 	],
 	"health#space": [
 		"app take up so much"
-	]
+	],
+	"rain#winter": [
+		"during",
+		"in",
+		"less in",
+		"more in summer than"
+	],
+	"winter#rain": [
+		"tires perform in"
+	],
+	"umbrella#winter": [],
+	"winter#umbrella": []
 }

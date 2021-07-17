@@ -98,7 +98,9 @@ class GoogleAutoSuggestTwoEntities(object):
                 # we looking for entity1, entity2 and the question inside the suggestion.
                 # because they can be two words, we need to allow it also. otherwise they will not be found.
                 pairs = [f"{parts[i]} {parts[i+1]}" for i in range(len(parts) - 1)]
-                if all(elem in (parts + pairs) for elem in [self.entity1, self.entity2, self.question]):
+                # it also can be three words, for example 'why does it'
+                threes = [f"{parts[i]} {parts[i+1]} {parts[i+2]}" for i in range(len(parts) - 2)]
+                if all(elem in (parts + pairs + threes) for elem in [self.entity1, self.entity2, self.question]):
                     prop = match.group(4)
                     if prop not in already_seen not in IGNORE:
                         sugges.append((suggestion, prop))
@@ -248,6 +250,5 @@ if __name__ == '__main__':
     # res = get_entity_suggestions("electricity", "discovered")
     # res = get_entity_props("sun")
     # res = get_entities_relations("electricity", "cell", verbose=True).get("props")
-    res = get_entities_relations("boats", "sail", verbose=True).get("props")
+    res = get_entities_relations("rain", "winter", verbose=True).get("props")
     print(res)
-    pass

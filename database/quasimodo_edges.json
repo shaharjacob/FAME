@@ -257,8 +257,6 @@
 	"sunscreen#earth": [],
 	"air conditioner#summer": [],
 	"summer#air conditioner": [],
-	"heater#winter": [],
-	"winter#heater": [],
 	"homework#practice": [],
 	"army#duties": [],
 	"army#tax": [
@@ -578,10 +576,6 @@
 	],
 	"road#wheels": [],
 	"wheels#road": [],
-	"umbrella#winter": [],
-	"winter#umbrella": [],
-	"rain#winter": [],
-	"winter#rain": [],
 	"sunscreen#summer": [],
 	"summer#sunscreen": [],
 	"sun#summer": [
@@ -1521,5 +1515,9 @@
 		"affect",
 		"can affect"
 	],
-	"health#space": []
+	"health#space": [],
+	"rain#winter": [],
+	"winter#rain": [],
+	"umbrella#winter": [],
+	"winter#umbrella": []
 }
