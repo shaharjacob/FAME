@@ -1,11 +1,17 @@
+import os
 import unittest
 from pathlib import Path
+
+import yaml
 
 import concept_net
 import suggest_entities
 import google_autosuggest
+from mapping import mapping
 from quasimodo import Quasimodo, merge_tsvs
 
+
+TEST_FOLDER = Path('tests')
 
 class TestFunctions(unittest.TestCase):
 
@@ -35,7 +41,7 @@ class TestFunctions(unittest.TestCase):
         self.assertEqual(sorted(reference), sorted(actual))
 
         # testing google_autosuggest.get_entity_suggestions
-        reference = ['edison', 'faraday', 'they']
+        reference = ['edison', 'faraday', 'they'] if os.environ.get('CI', False) else ['faraday'] 
         actual = google_autosuggest.get_entity_suggestions("electricity", "discovered")
         self.assertEqual(sorted(reference), sorted(actual))
 
@@ -70,6 +76,34 @@ class TestFunctions(unittest.TestCase):
         reference = [('newton', 'faraday', 0.83), ('newton', 'paper', 0.483), ('newton', 'wall', 0.482), ('newton', 'apple', 0.438), ('newton', 'tomato', 0.437)]
         actual = suggest_entities.get_best_matches_for_entity("newton", ["faraday", "sky", "window", "paper", "photo", "apple", "tomato", "wall", "home", "horse"])
         self.assertEqual(reference, actual)
+
+
+class TestMapping(unittest.TestCase):
+
+    def test_mapping(self):
+        with open(TEST_FOLDER / 'tests.yaml', 'r') as y:
+            spec = yaml.load(y, Loader=yaml.SafeLoader)
+        mapping_spec = spec["mapping"]
+        for tv in mapping_spec:
+            if tv["ignore"]:
+                continue
+            res = mapping(tv["input"]["base"], tv["input"]["target"], False, [], [], [], {}, {}, [])
+            solution = res[0]
+
+            # check the mapping
+            actual = solution["mapping"]
+            reference = tv["output"]["mapping"]
+            self.assertEqual(reference, actual)
+
+            # check the relations
+            actual = [[list(relation[0]), list(relation[1])] for relation in solution["relations"]]
+            reference = tv["output"]["relations"]
+            self.assertEqual(reference, actual)
+
+            # check the score
+            actual = solution["score"]
+            reference = tv["output"]["score"]
+            self.assertEqual(round(reference, 3), round(actual, 3))
 
 
 if __name__ == '__main__':

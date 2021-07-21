@@ -176,9 +176,21 @@ def get_best_pair_mapping(model: SentenceEmbedding, data_collector: DataCollecto
     }
 
 
-def mapping(base: List[str], target: List[str], suggestions: bool = True, relations=[], base_already_mapping: List[str] = [], target_already_mapping: List[str] = []):
+def mapping(
+    base: List[str], 
+    target: List[str], 
+    suggestions: bool = True, 
+    relations=[], 
+    base_already_mapping: List[str] = [], 
+    target_already_mapping: List[str] = [], 
+    base_suggestions: Dict[str, List[str]] = {}, 
+    target_suggestions: Dict[str, List[str]] = {},
+    solutions: list = [],
+    score: int = 0) -> dict:
+    
     data_collector = DataCollector(init_quasimodo=True)
     model = SentenceEmbedding(data_collector=data_collector)
+    
 
     # we want all the possible pairs. For example, if base: a,b,c, target: 1,2,3:
     # general there are (n choose 2) * (n choose 2) * 2 pairs.
@@ -200,46 +212,59 @@ def mapping(base: List[str], target: List[str], suggestions: bool = True, relati
             base_already_mapping = update_list(base_already_mapping, (res["best_mapping"][0][0], res["best_mapping"][0][1]))
             target_already_mapping = update_list(target_already_mapping, (res["best_mapping"][1][0], res["best_mapping"][1][1]))
             relations.append(res["best_mapping"])
+            score += res["best_score"]
         else:
             break
     
-    base_suggestions = {}
-    target_suggestions = {}
+    base_not_mapped_entities = [entity for entity in base if entity not in base_already_mapping]
+    target_not_mapped_entities = [entity for entity in target if entity not in target_already_mapping]
     if suggestions:
-        base_not_mapped_entities = [entity for entity in base if entity not in base_already_mapping]
-        base_suggestions = suggest_entities.get_suggestions_for_missing_entities(data_collector, base_not_mapped_entities, base_already_mapping, target_already_mapping, verbose=True)
         for base_not_mapped_entity in base_not_mapped_entities:
+            if base_not_mapped_entity in base_suggestions:
+                continue
+            base_entity_suggestions = suggest_entities.get_suggestions_for_missing_entities(data_collector, base_not_mapped_entity, base_already_mapping, target_already_mapping, verbose=True)
+            base_suggestions[base_not_mapped_entity] = base_entity_suggestions
             mapping(
                 base=base_already_mapping+[base_not_mapped_entity], 
-                target=target_already_mapping+base_suggestions[base_not_mapped_entity], 
+                target=target_already_mapping+base_entity_suggestions, 
                 suggestions=False, 
                 relations=relations, 
                 base_already_mapping=base_already_mapping, 
-                target_already_mapping=target_already_mapping
+                target_already_mapping=target_already_mapping,
+                solutions=solutions,
+                score=score,
             )
         
-        target_not_mapped_entities = [entity for entity in target if entity not in target_already_mapping]
-        target_suggestions = suggest_entities.get_suggestions_for_missing_entities(data_collector, target_not_mapped_entities, target_already_mapping, base_already_mapping, verbose=True)
         for target_not_mapped_entity in target_not_mapped_entities:
+            if target_not_mapped_entity in target_suggestions:
+                continue
+            target_entity_suggestions = suggest_entities.get_suggestions_for_missing_entities(data_collector, target_not_mapped_entity, target_already_mapping, base_already_mapping, verbose=True)
+            target_suggestions[target_not_mapped_entity] = target_entity_suggestions
             mapping(
-                base=base_already_mapping+target_suggestions[target_not_mapped_entity], 
+                base=base_already_mapping+target_entity_suggestions, 
                 target=target_already_mapping+[target_not_mapped_entity], 
                 suggestions=False, 
                 relations=relations, 
                 base_already_mapping=base_already_mapping, 
-                target_already_mapping=target_already_mapping
+                target_already_mapping=target_already_mapping,
+                solutions=solutions,
+                score=score,
             )
+
+    if not base_suggestions and not target_suggestions:
+        solutions.append({
+            "mapping": [f"{b} --> {t}" for b, t in zip(base_already_mapping, target_already_mapping)],
+            "relations": relations,
+            "score": score,
+            "base_suggestions": base_suggestions, # Dict[str, List[str]]
+            "target_suggestions": target_suggestions, # Dict[str, List[str]]
+        })
     
-    return {
-        "mapping": [f"{b} --> {t}" for b, t in zip(base_already_mapping, target_already_mapping)],
-        "relations": relations,
-        "base_suggestions": base_suggestions, # Dict[str, List[str, str, float]]
-        "target_suggestions": target_suggestions, # Dict[str, List[str, str, float]]
-    }
+    return sorted(solutions, key=lambda x: x["score"], reverse=True)
 
 
 if __name__ == "__main__":
-
+    
     data = [
         [
             # seems good!
@@ -326,6 +351,18 @@ if __name__ == "__main__":
             ["citizen", "duties", "country"],
         ],
     ]
+
+    # base = ["earth", "gravity", "newton"]
+    # target = ["electrons", "nucleus", "electricity", "faraday"]
+    for inputs in data:
+        print(f"inputs: {inputs}")
+        res = mapping(inputs[0], inputs[1], True, [], [], [], {}, {}, [])
+        for solution in res:
+            for k,v in solution.items():
+                print(f"k: {k}")
+                print(f"v: {v}")
+            print()
+        print()
 
 
 

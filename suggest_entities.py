@@ -55,41 +55,38 @@ class Suggestions(object):
             json.dump(self.quasimodo_suggestinos, f2, indent='\t')
 
 
-def get_suggestions_for_missing_entities(data_collector: DataCollector, base_not_mapped_entities: List[str], base_already_mapping: List[str], target_already_mapping: List[str], verbose: bool = False) -> Dict[str, Dict[str, Dict[str, Dict[str, List[str]]]]]:
-    sugges = {}
+def get_suggestions_for_missing_entities(data_collector: DataCollector, base_not_mapped_entity: str, base_already_mapping: List[str], target_already_mapping: List[str], verbose: bool = False) -> List[str]:
+    # sugges = {}
+    suggests_list = []
+    # sugges[base_not_mapped_entity] = {}
+    # we need all the relations between the entity (the one that not mapped) to the entities that already mapped (again - in the same domain)
+    for idx, base_entity in enumerate(base_already_mapping):
+        if verbose: secho(f"{(base_not_mapped_entity, base_entity)}", fg="blue", bold=True)
+        # sugges[base_not_mapped_entity][base_entity] = {}
+        props_entity_1 = data_collector.get_entities_relations(base_entity, base_not_mapped_entity)
+        props_entity_2 = data_collector.get_entities_relations(base_not_mapped_entity, base_entity)
 
-    # now we iterate on each entity that not mapped (in the same domain), and try to guess to which entity they should be mapped.
-    for base_not_mapped_entity in base_not_mapped_entities:
-        suggests_list = []
-        sugges[base_not_mapped_entity] = {}
-        # we need all the relations between the entity (the one that not mapped) to the entities that already mapped (again - in the same domain)
-        for idx, base_entity in enumerate(base_already_mapping):
-            if verbose: secho(f"{(base_not_mapped_entity, base_entity)}", fg="blue", bold=True)
-            sugges[base_not_mapped_entity][base_entity] = {}
-            props_entity_1 = data_collector.get_entities_relations(base_entity, base_not_mapped_entity)
-            props_entity_2 = data_collector.get_entities_relations(base_not_mapped_entity, base_entity)
+        # we we use the map that we already know (base_entity->target_already_mapping[idx])
+        if verbose: secho(f"  {target_already_mapping[idx]}", fg="red", bold=True)
+        # sugges[base_not_mapped_entity][base_entity][target_already_mapping[idx]] = {}
+        for prop in (props_entity_1 + props_entity_2):
+            suggestions_model = Suggestions(target_already_mapping[idx], prop, quasimodo=data_collector.quasimodo)
+            props = suggestions_model.get_suggestions()
+            if props:
+                # we found candidates for '<exist_entity> <prop> <candidate>' or '<candidate> <prop> <exist_entity>'
+                # sugges[base_not_mapped_entity][base_entity][target_already_mapping[idx]][prop] = props
+                suggests_list.extend(props)
+                if verbose:
+                    secho(f"    {prop}: ", fg="green", bold=True, nl=False)
+                    secho(f"{props}", fg="cyan")
+        if verbose: 
+            if not props_entity_1 + props_entity_2:
+                secho(f"    No match found!", fg="green")
+            print()
 
-            # we we use the map that we already know (base_entity->target_already_mapping[idx])
-            if verbose: secho(f"  {target_already_mapping[idx]}", fg="red", bold=True)
-            sugges[base_not_mapped_entity][base_entity][target_already_mapping[idx]] = {}
-            for prop in (props_entity_1 + props_entity_2):
-                suggestions_model = Suggestions(target_already_mapping[idx], prop, quasimodo=data_collector.quasimodo)
-                props = suggestions_model.get_suggestions()
-                if props:
-                    # we found candidates for '<exist_entity> <prop> <candidate>' or '<candidate> <prop> <exist_entity>'
-                    sugges[base_not_mapped_entity][base_entity][target_already_mapping[idx]][prop] = props
-                    suggests_list.extend(props)
-                    if verbose:
-                        secho(f"    {prop}: ", fg="green", bold=True, nl=False)
-                        secho(f"{props}", fg="cyan")
-            if verbose: 
-                if not props_entity_1 + props_entity_2:
-                    secho(f"    No match found!", fg="green")
-                print()
-
-        sugges[base_not_mapped_entity] = list(set(suggests_list))
-        # sugges[base_not_mapped_entity] = get_best_matches_for_entity(base_not_mapped_entity, list(set(suggests_list)), n_best=5, verbose=True, model=model, quasimodo=model.quasimodo)
-    return sugges
+    # sugges[base_not_mapped_entity] = list(set(suggests_list))
+    # sugges[base_not_mapped_entity] = get_best_matches_for_entity(base_not_mapped_entity, list(set(suggests_list)), n_best=5, verbose=True, model=model, quasimodo=model.quasimodo)
+    return list(set(suggests_list))
 
 
 def get_score_between_two_entitites(entity1: str, entity2: str, model: SentenceEmbedding = None, data_collector: DataCollector = None) -> float:

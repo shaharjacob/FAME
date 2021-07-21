@@ -1,0 +1,104 @@
+mapping:
+  - input:
+      base: [earth, sun, gravity, newton]
+      target: [electrons, nucleus, electricity, faraday]
+    output:
+      mapping:
+        - earth --> electrons
+        - sun --> nucleus
+        - gravity --> electricity
+        - newton --> faraday
+      relations: 
+        - [[earth, sun], [electrons, nucleus]]
+        - [[earth, gravity], [electrons, electricity]]
+        - [[gravity, newton], [electricity, faraday]]
+      score: 6.121
+    ignore: False
+
+  - input:
+      base: [earth, sun, gravity, newton]
+      target: [electrons, nucleus, electricity]
+    output:
+      mapping:
+        - earth --> electrons
+        - sun --> nucleus
+        - gravity --> electricity
+        - newton --> humans
+      relations: 
+        - [[earth, sun], [electrons, nucleus]]
+        - [[earth, gravity], [electrons, electricity]]
+        - [[gravity, newton], [electricity, humans]]
+      score: 6.958
+    ignore: False
+
+  - input:
+      base: [earth, newton, gravity]
+      target: [electrons, nucleus, electricity, faraday]
+    output:
+      mapping:
+        - earth --> electricity
+        - gravity --> electrons
+        - newton --> nucleus
+      relations: 
+        - [[earth, gravity], [electricity, electrons]]
+        - [[newton, gravity], [nucleus, electrons]]
+      score: 2.54
+    ignore: False
+
+  - input:
+      base: [thoughts, brain, neurons]
+      target: [astronaut, space, black hole]
+    output:
+      mapping:
+        - thoughts --> astronaut
+        - brain --> space
+        - neurons --> black hole
+      relations: 
+        - [[thoughts, brain], [astronaut, space]]
+        - [[brain, neurons], [space, black hole]]
+      score: 3.296
+    ignore: False
+  
+  - input:
+      base: [cars, road, wheels]
+      target: [boats, river, sail]
+    output:
+      mapping:
+        - cars --> boats
+        - road --> river
+        - wheels --> sail
+      relations: 
+        - [[cars, road], [boats, river]]
+        - [[cars, wheels], [boats, sail]]
+      score: 3.034
+    ignore: False
+  
+  - input:
+      base: [cars, road, wheels]
+      target: [boats, river]
+    output:
+      mapping:
+        - cars --> boats
+        - road --> river
+        - wheels --> steering wheel
+      relations: 
+        - [[cars, road], [boats, river]]
+        - [[cars, wheels], [boats, steering wheel]]
+      score: 3.151
+    ignore: False
+
+  - input:
+      base: [sunscreen, sun, summer]
+      target: [umbrella, rain, winter]
+    output:
+      mapping:
+        - sun --> rain
+        - summer --> winter
+        - sunscreen --> umbrella
+      relations: 
+        - [[sun, summer], [rain, winter]]
+        - [[sunscreen, sun], [umbrella, rain]]
+      score: 2.604
+    ignore: False
+  
+
