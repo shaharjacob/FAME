@@ -85,7 +85,7 @@ mapping:
         - [[cars, road], [boats, river]]
         - [[cars, wheels], [boats, steering wheel]]
       score: 3.151
-    ignore: False
+    ignore: True
 
   - input:
       base: [sunscreen, sun, summer]
