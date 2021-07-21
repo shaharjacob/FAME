@@ -1944,5 +1944,12 @@
 		"tires perform in"
 	],
 	"umbrella#winter": [],
-	"winter#umbrella": []
+	"winter#umbrella": [],
+	"sun#sun": [
+		"become the",
+		"called the",
+		"named the",
+		"revolve around the",
+		"the"
+	]
 }
