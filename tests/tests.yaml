@@ -29,7 +29,7 @@ mapping:
         - [[earth, gravity], [electrons, electricity]]
         - [[gravity, newton], [electricity, humans]]
       score: 6.958
-    ignore: True
+    ignore: False
 
   - input:
       base: [earth, newton, gravity]
@@ -85,7 +85,7 @@ mapping:
         - [[cars, road], [boats, river]]
         - [[cars, wheels], [boats, steering wheel]]
       score: 3.151
-    ignore: True
+    ignore: False
 
   - input:
       base: [sunscreen, sun, summer]

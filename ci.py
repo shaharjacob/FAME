@@ -87,7 +87,7 @@ class TestMapping(unittest.TestCase):
         for tv in mapping_spec:
             if tv["ignore"]:
                 continue
-            res = mapping(tv["input"]["base"], tv["input"]["target"], False, [], [], [], {}, {}, [])
+            res = mapping(tv["input"]["base"], tv["input"]["target"], True, [], [], [], {}, {}, [])
             solution = res[0]
 
             # check the mapping
