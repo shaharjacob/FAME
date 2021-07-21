@@ -29,7 +29,7 @@ mapping:
         - [[earth, gravity], [electrons, electricity]]
         - [[gravity, newton], [electricity, humans]]
       score: 6.958
-    ignore: False
+    ignore: True
 
   - input:
       base: [earth, newton, gravity]
