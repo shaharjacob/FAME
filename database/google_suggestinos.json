@@ -396,5 +396,47 @@
 		"time",
 		"guns",
 		"gravity"
-	]
+	],
+	"gravity#discovered": [
+		"newton",
+		"galileo galilei"
+	],
+	"electrons#be planet with": [],
+	"electrons#big and has strong": [],
+	"electrons#can lose": [],
+	"electrons#cause": [
+		"friction",
+		"voltage"
+	],
+	"electrons#contain": [
+		"scientists discover that atoms"
+	],
+	"electrons#create": [],
+	"electrons#has": [],
+	"electrons#have": [
+		"oxygen"
+	],
+	"electrons#keep in": [],
+	"electrons#need": [
+		"we",
+		"cations",
+		"atoms"
+	],
+	"electrons#affect": [
+		"photons",
+		"light"
+	],
+	"electrons#be center of": [],
+	"electrons#be different on": [],
+	"electrons#be on": [],
+	"electrons#come to": [],
+	"electrons#constant on": [],
+	"electrons#form the": [],
+	"electrons#from": [
+		"electricity made",
+		"light produced"
+	],
+	"electrons#happen on": [],
+	"electrons#keep on": [],
+	"electrons#keep water on": []
 }
