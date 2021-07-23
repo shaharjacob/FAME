@@ -591,5 +591,126 @@
 	"river#spin on": [],
 	"river#turn in": [],
 	"river#turn on": [],
-	"newton#discovered": []
+	"newton#discovered": [],
+	"newton#circle the": [],
+	"newton#emitted from the": [],
+	"newton#enter": [],
+	"newton#fall in": [],
+	"newton#fall into": [],
+	"newton#fall into the": [],
+	"newton#fly into": [],
+	"newton#get attracted to": [],
+	"newton#go into": [],
+	"newton#move around": [],
+	"newton#not collapse into": [],
+	"newton#not fall in": [],
+	"newton#not fall into": [],
+	"newton#not jump into the": [],
+	"newton#orbit": [],
+	"newton#orbit far away from atomic": [],
+	"newton#orbit the": [],
+	"newton#revolve around": [],
+	"newton#revolving around the": [],
+	"newton#spin around the": [],
+	"newton#stay around": [],
+	"newton#surround": [],
+	"newton#surround the": [],
+	"newton#travel around the": [],
+	"newton#can emit": [],
+	"newton#emit": [],
+	"earth#circle the": [
+		"snowpiercer",
+		"moon",
+		"apollo 11",
+		"the moon",
+		"the sun"
+	],
+	"earth#emitted from the": [],
+	"earth#enter": [
+		"asteroids burn up as they",
+		"dinosaurs",
+		"energy",
+		"water",
+		"meteors burn up when they",
+		"groundwater",
+		"water first",
+		"space junk eventually",
+		"oxygen first",
+		"objects burn when they"
+	],
+	"earth#fall in": [
+		"buildings"
+	],
+	"earth#fall into": [
+		"the moon not"
+	],
+	"earth#fall into the": [
+		"the moon not"
+	],
+	"earth#fly into": [],
+	"earth#get attracted to": [],
+	"earth#go into": [
+		"sita"
+	],
+	"earth#move around": [
+		"sun",
+		"water",
+		"satellite",
+		"moon"
+	],
+	"earth#not collapse into": [],
+	"earth#not fall in": [],
+	"earth#not fall into": [],
+	"earth#not jump into the": [],
+	"earth#orbit": [
+		"the satellite",
+		"the international space station",
+		"iss",
+		"moon",
+		"satellites",
+		"a satellite",
+		"things"
+	],
+	"earth#orbit far away from atomic": [],
+	"earth#orbit the": [
+		"the international space station",
+		"artificial satellites",
+		"iss",
+		"objects",
+		"rockets",
+		"space shuttles",
+		"moon",
+		"satellites",
+		"you",
+		"the iss",
+		"john glenn",
+		"things",
+		"space shuttle",
+		"the sun",
+		"a rocket",
+		"satellite"
+	],
+	"earth#revolve around": [
+		"moon",
+		"the moon",
+		"the sun",
+		"the sun not",
+		"satellite"
+	],
+	"earth#revolving around the": [],
+	"earth#spin around the": [
+		"the moon"
+	],
+	"earth#stay around": [],
+	"earth#surround": [],
+	"earth#surround the": [],
+	"earth#travel around the": [
+		"wind",
+		"the iss",
+		"the moon",
+		"the sun",
+		"radio waves"
+	],
+	"earth#can emit": [],
+	"earth#emit": []
 }

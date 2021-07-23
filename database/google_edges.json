@@ -3756,5 +3756,635 @@
 	"boats#climate": [],
 	"climate#boats": [],
 	"boats#to be managed": [],
-	"to be managed#boats": []
+	"to be managed#boats": [],
+	"earth#asteroids burn up as they": [],
+	"asteroids burn up as they#earth": [],
+	"earth#the international space station": [],
+	"the international space station#earth": [],
+	"earth#dinosaurs": [],
+	"dinosaurs#earth": [
+		"appear on",
+		"disappear from",
+		"get on",
+		"help the",
+		"live on",
+		"rule the",
+		"survive on",
+		"vanish from the"
+	],
+	"earth#snowpiercer": [
+		"cold in",
+		"freeze in",
+		"frozen in"
+	],
+	"snowpiercer#earth": [
+		"circle the",
+		"circling the"
+	],
+	"earth#around the sun": [
+		"go",
+		"move",
+		"moving",
+		"revolution",
+		"revolve",
+		"rotate",
+		"rotating",
+		"spin",
+		"spinning",
+		"turn"
+	],
+	"around the sun#earth": [],
+	"earth#the sun at night": [],
+	"the sun at night#earth": [],
+	"earth#the sun emit ultra violet waves": [],
+	"the sun emit ultra violet waves#earth": [],
+	"earth#meteors burn up when they": [],
+	"meteors burn up when they#earth": [],
+	"earth#long wave radiation": [],
+	"long wave radiation#earth": [],
+	"earth#water first": [],
+	"water first#earth": [
+		"appear on",
+		"come to",
+		"form on",
+		"get on"
+	],
+	"earth#buildings": [],
+	"buildings#earth": [],
+	"earth#the iss": [],
+	"the iss#earth": [
+		"help",
+		"look from",
+		"not fall to",
+		"orbit",
+		"so close to",
+		"visible from"
+	],
+	"earth#itself": [
+		"balance",
+		"clean",
+		"cool",
+		"form",
+		"heal",
+		"pulls everything towards",
+		"recycle",
+		"revolve around",
+		"rotate around",
+		"rotates",
+		"rotating around",
+		"spin around"
+	],
+	"itself#earth": [],
+	"earth#the sun": [
+		"circle",
+		"far from",
+		"from",
+		"in orbit around",
+		"move around",
+		"moving around",
+		"moving away from",
+		"not fall into",
+		"not pulled into",
+		"orbit",
+		"orbiting",
+		"revolution around",
+		"revolve around",
+		"rotate around",
+		"satellite of",
+		"spin around",
+		"spinning around"
+	],
+	"the sun#earth": [
+		"affect",
+		"bigger than",
+		"closer to",
+		"closest to",
+		"from",
+		"getting closer to",
+		"important to",
+		"larger than the",
+		"move around the",
+		"older than",
+		"older than the",
+		"orbit",
+		"orbit the",
+		"revolve around",
+		"rotate around the"
+	],
+	"earth#objects burn when they": [],
+	"objects burn when they#earth": [],
+	"earth#the sun emit visible light": [],
+	"the sun emit visible light#earth": [],
+	"earth#satellite": [
+		"considered a"
+	],
+	"satellite#earth": [
+		"communicate with",
+		"crash to",
+		"fall back to",
+		"fall to",
+		"look from",
+		"move around",
+		"not fall to",
+		"orbit",
+		"orbit around",
+		"orbit the",
+		"orbiting",
+		"return to"
+	],
+	"earth#artificial satellites": [],
+	"artificial satellites#earth": [
+		"orbit the",
+		"travel so high above the"
+	],
+	"earth#iss": [
+		"look from"
+	],
+	"iss#earth": [
+		"communicate with",
+		"crew return to",
+		"look from",
+		"looks from",
+		"not fall to",
+		"orbit",
+		"revolve around",
+		"seen from",
+		"so close to",
+		"visible from"
+	],
+	"earth#influence climate on earth": [],
+	"influence climate on earth#earth": [],
+	"earth#space shuttles": [],
+	"space shuttles#earth": [
+		"come back to",
+		"communicate with",
+		"land on",
+		"leave",
+		"moved on",
+		"orbit around the",
+		"orbit the",
+		"re enter",
+		"return to"
+	],
+	"earth#satellites": [
+		"considered a"
+	],
+	"satellites#earth": [
+		"communicate with",
+		"crash to",
+		"fall back to",
+		"fall to",
+		"look from",
+		"move around",
+		"not fall to",
+		"orbit",
+		"orbit around",
+		"orbit the",
+		"orbiting",
+		"return to"
+	],
+	"earth#space junk eventually": [],
+	"space junk eventually#earth": [],
+	"earth#john glenn": [],
+	"john glenn#earth": [
+		"orbit the"
+	],
+	"earth#space shuttle": [],
+	"space shuttle#earth": [
+		"come back to",
+		"communicate with",
+		"land on",
+		"leave",
+		"moved on",
+		"orbit around the",
+		"orbit the",
+		"re enter",
+		"return to"
+	],
+	"earth#longer-wave radiation than the sun": [],
+	"longer-wave radiation than the sun#earth": [],
+	"earth#the satellite": [],
+	"the satellite#earth": [
+		"appear stationary to the observer on",
+		"move around",
+		"not fall while revolving around the",
+		"orbit",
+		"orbit the"
+	],
+	"earth#energy": [
+		"an open system",
+		"need",
+		"receive",
+		"release"
+	],
+	"energy#earth": [
+		"important to",
+		"leave"
+	],
+	"earth#objects": [
+		"attract other"
+	],
+	"objects#earth": [
+		"fall toward",
+		"fall towards the",
+		"orbit the",
+		"stay on"
+	],
+	"earth#groundwater": [],
+	"groundwater#earth": [
+		"change",
+		"enter",
+		"help the"
+	],
+	"earth#a satellite": [
+		"considered"
+	],
+	"a satellite#earth": [
+		"look from",
+		"look like from",
+		"move around the",
+		"not fall to",
+		"orbit",
+		"stay in orbit around the"
+	],
+	"earth#apollo 11": [],
+	"apollo 11#earth": [
+		"come back to",
+		"communicate with",
+		"get back to",
+		"land back on",
+		"land on",
+		"orbit the",
+		"return to",
+		"talk to"
+	],
+	"earth#things": [
+		"a",
+		"atmosphere important to living",
+		"day a"
+	],
+	"things#earth": [
+		"fall towards the",
+		"orbit",
+		"orbit the"
+	],
+	"earth#the sun not": [],
+	"the sun not#earth": [
+		"orbit"
+	],
+	"earth#a rocket": [],
+	"a rocket#earth": [
+		"falling to",
+		"land back on",
+		"land on",
+		"leave",
+		"orbit the",
+		"re enter",
+		"return to"
+	],
+	"earth#radio waves": [],
+	"radio waves#earth": [
+		"affect",
+		"travel around the"
+	],
+	"earth#wind": [
+		"have",
+		"need",
+		"not affected by solar",
+		"protected from solar"
+	],
+	"wind#earth": [
+		"affect",
+		"created on",
+		"distribute energy around",
+		"energy good for the",
+		"form on",
+		"helpful to",
+		"move on",
+		"redistribute energy around"
+	],
+	"earth#rockets": [],
+	"rockets#earth": [
+		"come back to",
+		"communicate with",
+		"falling to",
+		"first orbit the",
+		"land back to",
+		"land on",
+		"leave",
+		"leave the",
+		"orbit the",
+		"re enter",
+		"reenter",
+		"return to",
+		"ships leave"
+	],
+	"earth#the moon not": [],
+	"the moon not#earth": [
+		"crash into",
+		"fall to",
+		"falling on",
+		"like",
+		"on",
+		"pulled into the"
+	],
+	"earth#oxygen first": [],
+	"oxygen first#earth": [
+		"appear on"
+	],
+	"earth#sita": [],
+	"sita#earth": [
+		"entered",
+		"go into"
+	],
+	"gravity#asteroids burn up as they": [],
+	"asteroids burn up as they#gravity": [],
+	"gravity#the international space station": [],
+	"the international space station#gravity": [],
+	"gravity#dinosaurs": [],
+	"dinosaurs#gravity": [],
+	"gravity#snowpiercer": [],
+	"snowpiercer#gravity": [],
+	"gravity#around the sun": [
+		"affect earth's motion",
+		"affect earth's orbit",
+		"and inertia keep a planet revolving",
+		"and inertia keep the planets in orbit",
+		"create the orbits of planets",
+		"keep a planet moving in an orbit",
+		"keep planet moving in an orbit",
+		"keep planets in orbit",
+		"keep the earth",
+		"keep the earth in orbit",
+		"keep the planets in orbit"
+	],
+	"around the sun#gravity": [],
+	"gravity#the sun at night": [],
+	"the sun at night#gravity": [],
+	"gravity#the sun emit ultra violet waves": [],
+	"the sun emit ultra violet waves#gravity": [],
+	"gravity#meteors burn up when they": [],
+	"meteors burn up when they#gravity": [],
+	"gravity#long wave radiation": [],
+	"long wave radiation#gravity": [],
+	"gravity#water first": [],
+	"water first#gravity": [],
+	"gravity#buildings": [
+		"affect"
+	],
+	"buildings#gravity": [],
+	"gravity#the iss": [
+		"work on"
+	],
+	"the iss#gravity": [
+		"created",
+		"have",
+		"not have artificial"
+	],
+	"gravity#itself": [
+		"affect"
+	],
+	"itself#gravity": [],
+	"gravity#the sun": [
+		"affect",
+		"form",
+		"help form",
+		"keep the planets orbiting",
+		"not pull planets into",
+		"not pull the earth into",
+		"not pull us into",
+		"of",
+		"on"
+	],
+	"the sun#gravity": [
+		"have"
+	],
+	"gravity#objects burn when they": [],
+	"objects burn when they#gravity": [],
+	"gravity#the sun emit visible light": [],
+	"the sun emit visible light#gravity": [],
+	"gravity#satellite": [
+		"affect",
+		"assist"
+	],
+	"satellite#gravity": [
+		"affect",
+		"measure"
+	],
+	"gravity#artificial satellites": [],
+	"artificial satellites#gravity": [],
+	"gravity#iss": [
+		"work on the"
+	],
+	"iss#gravity": [
+		"have",
+		"have no",
+		"not have artificial",
+		"zero"
+	],
+	"gravity#influence climate on earth": [],
+	"influence climate on earth#gravity": [],
+	"gravity#space shuttles": [
+		"impact your"
+	],
+	"space shuttles#gravity": [],
+	"gravity#water": [
+		"affect",
+		"different in",
+		"hold",
+		"less in",
+		"of the moon affect",
+		"weaker in"
+	],
+	"water#gravity": [
+		"affect",
+		"defy",
+		"fall",
+		"move against"
+	],
+	"gravity#satellites": [
+		"affect",
+		"assist"
+	],
+	"satellites#gravity": [
+		"affect",
+		"measure"
+	],
+	"gravity#space junk eventually": [],
+	"space junk eventually#gravity": [],
+	"gravity#john glenn": [],
+	"john glenn#gravity": [],
+	"gravity#space shuttle": [
+		"impact your"
+	],
+	"space shuttle#gravity": [],
+	"gravity#longer-wave radiation than the sun": [],
+	"longer-wave radiation than the sun#gravity": [],
+	"gravity#the satellite": [],
+	"the satellite#gravity": [],
+	"gravity#energy": [
+		"affect",
+		"affect potential",
+		"attract",
+		"increase",
+		"negative",
+		"potential",
+		"related to kinetic",
+		"related to potential"
+	],
+	"energy#gravity": [
+		"affect",
+		"cause",
+		"have"
+	],
+	"gravity#objects": [
+		"accelerate",
+		"affect",
+		"affect an",
+		"attract",
+		"pull harder on heavier",
+		"the same for all"
+	],
+	"objects#gravity": [
+		"exert",
+		"float",
+		"get",
+		"have",
+		"move pulled by",
+		"move when pulled by",
+		"resist"
+	],
+	"gravity#groundwater": [],
+	"groundwater#gravity": [],
+	"gravity#a satellite": [],
+	"a satellite#gravity": [],
+	"gravity#apollo 11": [],
+	"apollo 11#gravity": [],
+	"gravity#things": [
+		"a",
+		"accelerate",
+		"become a"
+	],
+	"things#gravity": [
+		"defy",
+		"float",
+		"have",
+		"stay on the moon without",
+		"with mass have"
+	],
+	"gravity#the sun not": [],
+	"the sun not#gravity": [
+		"collapse under its own"
+	],
+	"gravity#a rocket": [
+		"affect"
+	],
+	"a rocket#gravity": [
+		"escape earth",
+		"overcome"
+	],
+	"gravity#radio waves": [
+		"affect"
+	],
+	"radio waves#gravity": [],
+	"gravity#wind": [
+		"affect",
+		"cause"
+	],
+	"wind#gravity": [],
+	"gravity#rockets": [
+		"affect"
+	],
+	"rockets#gravity": [
+		"defy",
+		"escape",
+		"escape earth",
+		"overcome"
+	],
+	"gravity#the moon not": [],
+	"the moon not#gravity": [
+		"have"
+	],
+	"gravity#oxygen first": [],
+	"oxygen first#gravity": [],
+	"gravity#sita": [],
+	"sita#gravity": [],
+	"newton#asteroids burn up as they": [],
+	"asteroids burn up as they#newton": [],
+	"newton#the international space station": [],
+	"the international space station#newton": [],
+	"newton#dinosaurs": [],
+	"dinosaurs#newton": [],
+	"newton#snowpiercer": [],
+	"snowpiercer#newton": [],
+	"newton#around the sun": [],
+	"around the sun#newton": [],
+	"newton#the sun at night": [],
+	"the sun at night#newton": [],
+	"newton#the sun emit ultra violet waves": [],
+	"the sun emit ultra violet waves#newton": [],
+	"newton#meteors burn up when they": [],
+	"meteors burn up when they#newton": [],
+	"newton#long wave radiation": [],
+	"long wave radiation#newton": [],
+	"newton#water first": [],
+	"water first#newton": [],
+	"newton#buildings": [],
+	"buildings#newton": [],
+	"newton#the iss": [],
+	"the iss#newton": [],
+	"newton#itself": [],
+	"itself#newton": [],
+	"newton#the moon": [
+		"know the distance to",
+		"think there was a force acting on",
+		"think there was a force on"
+	],
+	"the moon#newton": [],
+	"newton#the sun": [],
+	"the sun#newton": [],
+	"newton#objects burn when they": [],
+	"objects burn when they#newton": [],
+	"newton#the sun emit visible light": [],
+	"the sun emit visible light#newton": [],
+	"newton#satellite": [],
+	"satellite#newton": [],
+	"newton#artificial satellites": [],
+	"artificial satellites#newton": [],
+	"newton#iss": [],
+	"iss#newton": [],
+	"newton#influence climate on earth": [],
+	"influence climate on earth#newton": [],
+	"newton#space shuttles": [],
+	"space shuttles#newton": [],
+	"newton#water": [],
+	"water#newton": [],
+	"newton#satellites": [],
+	"satellites#newton": [],
+	"newton#space junk eventually": [],
+	"space junk eventually#newton": [],
+	"newton#john glenn": [],
+	"john glenn#newton": [],
+	"newton#space shuttle": [],
+	"space shuttle#newton": [],
+	"newton#longer-wave radiation than the sun": [],
+	"longer-wave radiation than the sun#newton": [],
+	"newton#the satellite": [],
+	"the satellite#newton": [],
+	"newton#energy": [],
+	"energy#newton": [],
+	"newton#objects": [
+		"describe the way gravity pulls"
+	],
+	"objects#newton": [],
+	"newton#groundwater": [],
+	"groundwater#newton": [],
+	"newton#moon": [
+		"know the distance to the"
+	],
+	"moon#newton": [],
+	"newton#a satellite": [],
+	"a satellite#newton": [],
+	"newton#apollo 11": [],
+	"apollo 11#newton": []
 }
