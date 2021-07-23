@@ -1520,5 +1520,1077 @@
 	"winter#rain": [],
 	"umbrella#winter": [],
 	"winter#umbrella": [],
-	"sun#sun": []
+	"sun#sun": [],
+	"earth#galileo galilei": [],
+	"galileo galilei#earth": [],
+	"sun#galileo galilei": [],
+	"galileo galilei#sun": [],
+	"gravity#galileo galilei": [],
+	"galileo galilei#gravity": [],
+	"electrons#on nucleus": [
+		"be on"
+	],
+	"on nucleus#electrons": [],
+	"electrons#most mass": [],
+	"most mass#electrons": [],
+	"electrons#white blood cells": [],
+	"white blood cells#electrons": [],
+	"electrons#charge": [
+		"carry",
+		"get",
+		"has property",
+		"have"
+	],
+	"charge#electrons": [
+		"be on",
+		"be related to",
+		"be transferred by",
+		"be usually transferred by"
+	],
+	"electrons#light produced": [],
+	"light produced#electrons": [],
+	"electrons#negative charge": [
+		"carry",
+		"get",
+		"has property",
+		"have"
+	],
+	"negative charge#electrons": [],
+	"electrons#red blood cells": [],
+	"red blood cells#electrons": [],
+	"electrons#bacteria": [],
+	"electrons#prokaryotes": [],
+	"prokaryotes#electrons": [],
+	"electrons#paramecium": [],
+	"paramecium#electrons": [],
+	"electrons#energy": [
+		"absorb",
+		"create",
+		"gain",
+		"get",
+		"has property",
+		"have",
+		"lose",
+		"provide",
+		"radiate",
+		"run out of"
+	],
+	"energy#electrons": [],
+	"electrons#cations": [],
+	"cations#electrons": [
+		"attract",
+		"lose"
+	],
+	"electrons#photons": [
+		"absorb",
+		"create",
+		"emit",
+		"have",
+		"produce",
+		"turn into"
+	],
+	"photons#electrons": [
+		"affect",
+		"be absorbed by",
+		"become",
+		"can excite",
+		"eject",
+		"excite",
+		"interact with",
+		"knock free",
+		"move",
+		"relate to"
+	],
+	"electrons#an aurora": [
+		"cause"
+	],
+	"an aurora#electrons": [],
+	"electrons#oxygen": [
+		"be arranged in",
+		"be more attracted to",
+		"has property"
+	],
+	"oxygen#electrons": [
+		"accept",
+		"has property",
+		"have",
+		"have unpaired"
+	],
+	"electrons#birds": [],
+	"birds#electrons": [],
+	"electrons#membrane": [],
+	"membrane#electrons": [],
+	"electrons#energy to escape the metal": [
+		"need"
+	],
+	"energy to escape the metal#electrons": [],
+	"electrons#electricity made": [],
+	"electricity made#electrons": [],
+	"electrons#scientists discover that atoms": [],
+	"scientists discover that atoms#electrons": [],
+	"electrons#blood": [],
+	"blood#electrons": [],
+	"electrons#friction": [],
+	"friction#electrons": [],
+	"electrons#pores": [],
+	"pores#electrons": [],
+	"electrons#the colors in a line-emission spectrum": [
+		"create"
+	],
+	"the colors in a line-emission spectrum#electrons": [],
+	"electrons#positive charge": [
+		"move to"
+	],
+	"positive charge#electrons": [],
+	"electrons#shape of molecule": [
+		"affect"
+	],
+	"shape of molecule#electrons": [],
+	"electrons#mass": [
+		"differ in",
+		"have"
+	],
+	"mass#electrons": [],
+	"electrons#color": [
+		"affect"
+	],
+	"color#electrons": [],
+	"electrons#magnetic field": [
+		"be deflected by",
+		"create",
+		"have",
+		"make"
+	],
+	"magnetic field#electrons": [
+		"affect"
+	],
+	"electrons#light": [
+		"absorb",
+		"be involved in",
+		"create",
+		"emit",
+		"give off",
+		"produce",
+		"reflect"
+	],
+	"light#electrons": [],
+	"electrons#a light paddle wheel to rotate": [
+		"cause"
+	],
+	"a light paddle wheel to rotate#electrons": [],
+	"electrons#eukaryotic cells": [],
+	"eukaryotic cells#electrons": [],
+	"electrons#the same as neutrons number": [
+		"have"
+	],
+	"the same as neutrons number#electrons": [],
+	"bacteria#electrons": [],
+	"electrons#voltage": [],
+	"voltage#electrons": [],
+	"electrons#to be arranged in shells": [
+		"need"
+	],
+	"to be arranged in shells#electrons": [],
+	"electrons#ph": [
+		"affect"
+	],
+	"ph#electrons": [],
+	"electrons#light paddle wheel rotate": [
+		"cause"
+	],
+	"light paddle wheel rotate#electrons": [],
+	"electrons#platelets": [],
+	"platelets#electrons": [],
+	"electrons#re activity": [
+		"affect"
+	],
+	"re activity#electrons": [],
+	"nucleus#prokaryotes": [],
+	"prokaryotes#nucleus": [
+		"can live without",
+		"have",
+		"live without"
+	],
+	"nucleus#paramecium": [],
+	"paramecium#nucleus": [
+		"have"
+	],
+	"nucleus#energy": [],
+	"energy#nucleus": [],
+	"nucleus#cations": [],
+	"cations#nucleus": [],
+	"nucleus#photons": [],
+	"photons#nucleus": [],
+	"nucleus#white blood cells": [],
+	"white blood cells#nucleus": [
+		"have",
+		"have lobed",
+		"need",
+		"require"
+	],
+	"nucleus#an aurora": [],
+	"an aurora#nucleus": [],
+	"nucleus#negative charge": [],
+	"negative charge#nucleus": [],
+	"nucleus#red blood cells": [
+		"miss from"
+	],
+	"red blood cells#nucleus": [
+		"contain",
+		"do have",
+		"function without",
+		"have",
+		"lack",
+		"live without",
+		"lose",
+		"need",
+		"reproduce without",
+		"survive without"
+	],
+	"nucleus#oxygen": [
+		"be in"
+	],
+	"oxygen#nucleus": [],
+	"nucleus#birds": [],
+	"birds#nucleus": [],
+	"nucleus#membrane": [
+		"have"
+	],
+	"membrane#nucleus": [],
+	"nucleus#energy to escape the metal": [],
+	"energy to escape the metal#nucleus": [],
+	"nucleus#electricity made": [],
+	"electricity made#nucleus": [],
+	"nucleus#scientists discover that atoms": [],
+	"scientists discover that atoms#nucleus": [],
+	"nucleus#blood": [],
+	"blood#nucleus": [],
+	"nucleus#friction": [],
+	"friction#nucleus": [],
+	"nucleus#pores": [
+		"have"
+	],
+	"pores#nucleus": [],
+	"nucleus#charge": [
+		"have"
+	],
+	"charge#nucleus": [],
+	"nucleus#the colors in a line-emission spectrum": [],
+	"the colors in a line-emission spectrum#nucleus": [],
+	"nucleus#positive charge": [
+		"have"
+	],
+	"positive charge#nucleus": [],
+	"nucleus#shape of molecule": [],
+	"shape of molecule#nucleus": [],
+	"nucleus#mass": [],
+	"mass#nucleus": [],
+	"nucleus#color": [],
+	"color#nucleus": [],
+	"nucleus#magnetic field": [],
+	"magnetic field#nucleus": [],
+	"nucleus#light": [],
+	"light#nucleus": [],
+	"nucleus#on nucleus": [],
+	"on nucleus#nucleus": [],
+	"nucleus#a light paddle wheel to rotate": [],
+	"a light paddle wheel to rotate#nucleus": [],
+	"nucleus#eukaryotic cells": [
+		"be in"
+	],
+	"eukaryotic cells#nucleus": [],
+	"nucleus#the same as neutrons number": [],
+	"the same as neutrons number#nucleus": [],
+	"nucleus#bacteria": [],
+	"bacteria#nucleus": [
+		"have"
+	],
+	"nucleus#voltage": [],
+	"voltage#nucleus": [],
+	"nucleus#to be arranged in shells": [],
+	"to be arranged in shells#nucleus": [],
+	"nucleus#ph": [],
+	"ph#nucleus": [],
+	"nucleus#light produced": [],
+	"light produced#nucleus": [],
+	"nucleus#most mass": [
+		"have"
+	],
+	"most mass#nucleus": [],
+	"nucleus#light paddle wheel rotate": [],
+	"light paddle wheel rotate#nucleus": [],
+	"nucleus#platelets": [],
+	"platelets#nucleus": [
+		"have",
+		"lack"
+	],
+	"nucleus#re activity": [],
+	"re activity#nucleus": [],
+	"earth#cyanobacteria": [],
+	"cyanobacteria#earth": [
+		"affect"
+	],
+	"earth#in space create cycles we all experience": [],
+	"in space create cycles we all experience#earth": [],
+	"earth#solar system": [
+		"affect",
+		"be densest planet of",
+		"be fifth planet in",
+		"be important to",
+		"be largest planet in",
+		"be special in",
+		"help",
+		"move around in"
+	],
+	"solar system#earth": [
+		"affect",
+		"revolve around"
+	],
+	"earth#gold": [
+		"produce"
+	],
+	"gold#earth": [
+		"be created on",
+		"be extracted from",
+		"be found in",
+		"be obtained from",
+		"be on",
+		"be removed from",
+		"be taken from"
+	],
+	"earth#nelson": [],
+	"nelson#earth": [],
+	"earth#senator nelson": [],
+	"senator nelson#earth": [],
+	"earth#biology": [],
+	"biology#earth": [],
+	"earth#fault": [],
+	"fault#earth": [
+		"be in",
+		"shape"
+	],
+	"earth#density": [
+		"be layered by"
+	],
+	"density#earth": [
+		"be important on",
+		"be important to",
+		"react in"
+	],
+	"earth#tsunami": [],
+	"tsunami#earth": [
+		"affect",
+		"can affect",
+		"help"
+	],
+	"earth#oxygen": [
+		"be breathable",
+		"be planet with",
+		"get",
+		"has property",
+		"have",
+		"need",
+		"produce",
+		"run out of"
+	],
+	"oxygen#earth": [
+		"affect",
+		"be common on",
+		"be formed in",
+		"be gas on",
+		"be made on",
+		"be most abundant element on",
+		"be on",
+		"be produced on",
+		"leave",
+		"stay on"
+	],
+	"earth#the moon": [
+		"miss then"
+	],
+	"the moon#earth": [],
+	"earth#water": [
+		"be covered in",
+		"be covered with",
+		"be divided into",
+		"be planet with",
+		"be short of",
+		"can run out of",
+		"has property",
+		"have",
+		"need",
+		"run out of"
+	],
+	"water#earth": [
+		"be cycled on",
+		"be distributed on",
+		"be moved around",
+		"be on",
+		"fly off",
+		"leave",
+		"spin off",
+		"stay on"
+	],
+	"earth#moon": [
+		"affect",
+		"appear from",
+		"be than",
+		"be to",
+		"cast shadow on",
+		"has property",
+		"have",
+		"need",
+		"pull on",
+		"rotate around"
+	],
+	"moon#earth": [
+		"be from",
+		"be pulled away from",
+		"be same as",
+		"be satellite of",
+		"face",
+		"has property",
+		"move away from",
+		"orbit",
+		"pulled into",
+		"revolve around"
+	],
+	"earth#the crust": [
+		"affect"
+	],
+	"the crust#earth": [],
+	"earth#cocoon": [],
+	"cocoon#earth": [],
+	"earth#oil": [
+		"has property",
+		"make",
+		"produce"
+	],
+	"oil#earth": [
+		"be bad for",
+		"be created in",
+		"be extracted from",
+		"be in",
+		"be on",
+		"be produced in",
+		"be recovered from",
+		"be removed from",
+		"be unevenly distributed on"
+	],
+	"earth#the mantle so important to": [],
+	"the mantle so important to#earth": [],
+	"earth#elliptical galaxies": [
+		"be related to"
+	],
+	"elliptical galaxies#earth": [],
+	"earth#jupiter": [
+		"be different from",
+		"be hotter than",
+		"be similar to",
+		"be smaller than",
+		"be warmer than"
+	],
+	"jupiter#earth": [
+		"affect",
+		"be different from",
+		"be different to",
+		"be hotter than",
+		"be important to",
+		"be like",
+		"be related to",
+		"be similar to",
+		"compare to",
+		"look from"
+	],
+	"earth#electricity": [
+		"absorb",
+		"be place with",
+		"conduct",
+		"get"
+	],
+	"electricity#earth": [
+		"be bad for",
+		"can",
+		"find",
+		"get to",
+		"go to",
+		"need",
+		"seek",
+		"want to"
+	],
+	"earth#magnetic field": [
+		"be surrounded by",
+		"generate",
+		"has property",
+		"have",
+		"need",
+		"produce"
+	],
+	"magnetic field#earth": [
+		"be around",
+		"be important to",
+		"be on",
+		"protect"
+	],
+	"earth#fracking": [],
+	"fracking#earth": [],
+	"earth#field": [
+		"has property",
+		"have"
+	],
+	"field#earth": [
+		"be on"
+	],
+	"earth#we not feel": [],
+	"we not feel#earth": [],
+	"earth#god": [
+		"be important to"
+	],
+	"god#earth": [
+		"be omnipresent on",
+		"be on",
+		"be sent to",
+		"created",
+		"did created",
+		"hold",
+		"send everyone here on",
+		"supposedly interact on"
+	],
+	"earth#we need to": [],
+	"we need to#earth": [],
+	"earth#the solar system": [],
+	"the solar system#earth": [],
+	"earth#one moon": [
+		"have"
+	],
+	"one moon#earth": [],
+	"earth#the presence of sinkholes": [],
+	"the presence of sinkholes#earth": [],
+	"earth#seasons": [
+		"cause",
+		"get",
+		"have",
+		"relate to",
+		"tilt"
+	],
+	"seasons#earth": [
+		"be caused by",
+		"be on",
+		"change on",
+		"exist on",
+		"happen on",
+		"help",
+		"occur on",
+		"vary around"
+	],
+	"earth#mars": [
+		"be better than",
+		"be cooler than",
+		"be different from",
+		"be like",
+		"be smaller than",
+		"be than",
+		"can support",
+		"differ from",
+		"has property"
+	],
+	"mars#earth": [
+		"be close to",
+		"be cold compared to",
+		"be colder than",
+		"be different from",
+		"be like",
+		"be same as",
+		"be similar to",
+		"be to",
+		"be visible from",
+		"look from"
+	],
+	"earth#life": [
+		"affect",
+		"be capable of",
+		"be hospitable for",
+		"be with",
+		"can support",
+		"can sustain",
+		"give",
+		"have",
+		"support",
+		"sustain"
+	],
+	"life#earth": [
+		"arise on",
+		"be found on",
+		"be in",
+		"be on",
+		"be possible on",
+		"can end on",
+		"can exist on",
+		"exist on",
+		"started on"
+	],
+	"earth#layers": [
+		"be in",
+		"be made of",
+		"can",
+		"has property",
+		"have",
+		"need"
+	],
+	"layers#earth": [
+		"protect"
+	],
+	"sun#cyanobacteria": [],
+	"cyanobacteria#sun": [],
+	"sun#in space create cycles we all experience": [],
+	"in space create cycles we all experience#sun": [],
+	"sun#solar system": [
+		"be center of"
+	],
+	"solar system#sun": [
+		"need"
+	],
+	"sun#gold": [],
+	"gold#sun": [],
+	"sun#space": [
+		"be in",
+		"give to",
+		"light up",
+		"shine in"
+	],
+	"space#sun": [
+		"be cold in front of"
+	],
+	"sun#nelson": [],
+	"nelson#sun": [],
+	"sun#senator nelson": [],
+	"senator nelson#sun": [],
+	"sun#biology": [],
+	"biology#sun": [],
+	"sun#fault": [],
+	"fault#sun": [],
+	"sun#density": [],
+	"density#sun": [],
+	"sun#tsunami": [],
+	"tsunami#sun": [],
+	"sun#oxygen": [
+		"burn without"
+	],
+	"oxygen#sun": [
+		"be 3rd most common element in"
+	],
+	"sun#the moon": [],
+	"the moon#sun": [],
+	"sun#water": [],
+	"water#sun": [],
+	"sun#moon": [
+		"be bigger than",
+		"steal"
+	],
+	"moon#sun": [
+		"be bigger than",
+		"be same size as",
+		"eclipse perfectly",
+		"exactly cover",
+		"get light from",
+		"look size as",
+		"orbit",
+		"perfectly cover",
+		"reflect",
+		"revolve around"
+	],
+	"sun#the crust": [],
+	"the crust#sun": [],
+	"sun#cocoon": [],
+	"cocoon#sun": [],
+	"sun#oil": [
+		"has property"
+	],
+	"oil#sun": [
+		"be connected to",
+		"be related to",
+		"come from"
+	],
+	"sun#the mantle so important to": [],
+	"the mantle so important to#sun": [],
+	"sun#elliptical galaxies": [],
+	"elliptical galaxies#sun": [],
+	"sun#jupiter": [],
+	"jupiter#sun": [
+		"be 5th planet from",
+		"be called",
+		"be different to",
+		"be fifth planet from",
+		"be hotter than",
+		"be similar to",
+		"has property",
+		"move slower around",
+		"orbit faster",
+		"rotate around"
+	],
+	"sun#electricity": [],
+	"electricity#sun": [],
+	"sun#magnetic field": [
+		"have"
+	],
+	"magnetic field#sun": [],
+	"sun#fracking": [],
+	"fracking#sun": [],
+	"sun#field": [],
+	"field#sun": [],
+	"sun#we not feel": [],
+	"we not feel#sun": [],
+	"sun#god": [],
+	"god#sun": [
+		"be like"
+	],
+	"sun#we need to": [],
+	"we need to#sun": [],
+	"sun#the solar system": [],
+	"the solar system#sun": [],
+	"sun#one moon": [],
+	"one moon#sun": [],
+	"sun#the presence of sinkholes": [],
+	"the presence of sinkholes#sun": [],
+	"sun#seasons": [],
+	"seasons#sun": [],
+	"sun#mars": [],
+	"mars#sun": [
+		"be colder than",
+		"be fourth planet from",
+		"revolve around",
+		"rotate around"
+	],
+	"sun#life": [],
+	"life#sun": [
+		"depend on"
+	],
+	"sun#layers": [
+		"has property"
+	],
+	"layers#sun": [],
+	"earth#pluto": [
+		"be different from",
+		"be hotter than"
+	],
+	"pluto#earth": [
+		"affect",
+		"be colder than",
+		"be different from",
+		"be important to",
+		"be similar to",
+		"be smaller than",
+		"have",
+		"observe from"
+	],
+	"earth#heat": [
+		"lose"
+	],
+	"heat#earth": [
+		"be distributed across",
+		"be distributed around",
+		"be from",
+		"be transferred inside",
+		"be transferred through",
+		"be transferred to",
+		"be within",
+		"get to",
+		"leave",
+		"reach"
+	],
+	"earth#the planets": [],
+	"the planets#earth": [],
+	"earth#pluto come to": [],
+	"pluto come to#earth": [],
+	"earth#the earth": [],
+	"the earth#earth": [],
+	"earth#planets": [
+		"be called",
+		"be considered",
+		"be different from",
+		"be known as",
+		"be referred as",
+		"be same as",
+		"be unique from",
+		"be unique out of",
+		"compare to",
+		"has property"
+	],
+	"planets#earth": [
+		"affect",
+		"appear from",
+		"be named",
+		"be visible from",
+		"influence life on",
+		"look from",
+		"revolve instead of"
+	],
+	"earth#white light": [],
+	"white light#earth": [],
+	"earth#light": [
+		"give out"
+	],
+	"light#earth": [
+		"affect",
+		"get to"
+	],
+	"earth#planets not collide while": [],
+	"planets not collide while#earth": [],
+	"earth#a rainbow": [],
+	"a rainbow#earth": [],
+	"earth#jupiter not": [],
+	"jupiter not#earth": [],
+	"earth#solar flares affect the amount of radiation": [],
+	"solar flares affect the amount of radiation#earth": [],
+	"earth#continuous spectrum": [],
+	"continuous spectrum#earth": [],
+	"earth#earth not": [],
+	"earth not#earth": [],
+	"earth#planets do as they": [],
+	"planets do as they#earth": [],
+	"earth#the earth not": [],
+	"the earth not#earth": [],
+	"earth#comets": [],
+	"comets#earth": [
+		"affect",
+		"be different from",
+		"be important to",
+		"can affect",
+		"come to",
+		"come toward",
+		"come towards",
+		"crash into",
+		"fall to",
+		"hit"
+	],
+	"earth#mercury not": [],
+	"mercury not#earth": [],
+	"earth#asteroids": [
+		"be different from",
+		"protect from"
+	],
+	"asteroids#earth": [
+		"affect",
+		"can affect",
+		"come to",
+		"destroy",
+		"fall to",
+		"get to",
+		"has property",
+		"hit",
+		"miss",
+		"reach"
+	],
+	"earth#planets not": [],
+	"planets not#earth": [],
+	"sun#pluto": [],
+	"pluto#sun": [
+		"be away from",
+		"be closer to",
+		"be closest and farthest planet from",
+		"be farther than",
+		"be farthest planet from",
+		"be hotter than",
+		"be most further est away from",
+		"orbit",
+		"revolve around"
+	],
+	"sun#heat": [],
+	"heat#sun": [
+		"be from",
+		"be generated through",
+		"be transferred from",
+		"get from"
+	],
+	"sun#the planets": [],
+	"the planets#sun": [],
+	"sun#pluto come to": [],
+	"pluto come to#sun": [],
+	"sun#the earth": [],
+	"the earth#sun": [],
+	"sun#planets": [
+		"be considered",
+		"has property",
+		"pull in"
+	],
+	"planets#sun": [
+		"be away",
+		"be closer to",
+		"be from",
+		"crash into",
+		"do orbit",
+		"fly into",
+		"hit",
+		"orbit",
+		"revolve around",
+		"rotate around"
+	],
+	"sun#white light": [
+		"emit"
+	],
+	"white light#sun": [],
+	"sun#light": [
+		"give",
+		"has movement",
+		"make",
+		"produce"
+	],
+	"light#sun": [
+		"be dangerous from",
+		"be white from"
+	],
+	"sun#planets not collide while": [],
+	"planets not collide while#sun": [],
+	"sun#a rainbow": [],
+	"a rainbow#sun": [],
+	"sun#jupiter not": [],
+	"jupiter not#sun": [],
+	"sun#solar flares affect the amount of radiation": [],
+	"solar flares affect the amount of radiation#sun": [],
+	"sun#continuous spectrum": [
+		"emit",
+		"produce"
+	],
+	"continuous spectrum#sun": [],
+	"sun#earth not": [],
+	"earth not#sun": [],
+	"sun#planets do as they": [],
+	"planets do as they#sun": [],
+	"sun#the earth not": [],
+	"the earth not#sun": [],
+	"sun#comets": [],
+	"comets#sun": [
+		"can approach",
+		"face away from",
+		"go around",
+		"move faster near",
+		"point away from",
+		"revolve around",
+		"speed up near",
+		"travel faster near",
+		"travel faster nearer"
+	],
+	"sun#mercury not": [],
+	"mercury not#sun": [],
+	"sun#asteroids": [],
+	"asteroids#sun": [
+		"revolve around"
+	],
+	"sun#planets not": [],
+	"planets not#sun": [],
+	"gravity#pluto": [
+		"pull on"
+	],
+	"pluto#gravity": [
+		"have"
+	],
+	"gravity#heat": [],
+	"heat#gravity": [],
+	"gravity#the planets": [
+		"affect",
+		"influence",
+		"move"
+	],
+	"the planets#gravity": [],
+	"gravity#the moon": [
+		"impact"
+	],
+	"the moon#gravity": [],
+	"gravity#pluto come to": [],
+	"pluto come to#gravity": [],
+	"gravity#moon": [
+		"affect",
+		"affect activities on",
+		"affect sports on",
+		"be different on",
+		"be exclusive to",
+		"be generated on",
+		"be greater on",
+		"be on",
+		"be weaker on"
+	],
+	"moon#gravity": [
+		"have"
+	],
+	"gravity#the earth": [
+		"be the center of"
+	],
+	"the earth#gravity": [],
+	"gravity#planets": [
+		"affect",
+		"affect weight on",
+		"be determined on",
+		"be different on",
+		"develop around",
+		"differ on",
+		"hold together",
+		"keep",
+		"make round",
+		"move"
+	],
+	"planets#gravity": [
+		"create",
+		"float without",
+		"generate",
+		"have",
+		"move without"
+	],
+	"gravity#white light": [],
+	"white light#gravity": [],
+	"gravity#jupiter": [
+		"affect",
+		"be on"
+	],
+	"jupiter#gravity": [
+		"have"
+	],
+	"gravity#light": [
+		"affect",
+		"be affected by",
+		"can affect",
+		"have effect on",
+		"of bending",
+		"oppose"
+	],
+	"light#gravity": [
+		"be affected by",
+		"be attracted by",
+		"be bent by",
+		"get affected by"
+	],
+	"gravity#planets not collide while": [],
+	"planets not collide while#gravity": [],
+	"gravity#a rainbow": [],
+	"a rainbow#gravity": [],
+	"gravity#jupiter not": [],
+	"jupiter not#gravity": [],
+	"gravity#solar flares affect the amount of radiation": [],
+	"solar flares affect the amount of radiation#gravity": [],
+	"gravity#continuous spectrum": [],
+	"continuous spectrum#gravity": [],
+	"gravity#earth not": [],
+	"earth not#gravity": [],
+	"gravity#planets do as they": [],
+	"planets do as they#gravity": [],
+	"gravity#the earth not": [],
+	"the earth not#gravity": [],
+	"gravity#comets": [],
+	"comets#gravity": [],
+	"gravity#mercury not": [],
+	"mercury not#gravity": [],
+	"gravity#mars": [
+		"be different on",
+		"be in",
+		"be on"
+	],
+	"mars#gravity": [
+		"be affected by",
+		"have"
+	],
+	"gravity#asteroids": [
+		"affect"
+	],
+	"asteroids#gravity": [],
+	"gravity#planets not": [],
+	"planets not#gravity": []
 }
