@@ -2,6 +2,7 @@ mapping:
   - input:
       base: [earth, sun, gravity, newton]
       target: [electrons, nucleus, electricity, faraday]
+      depth: 2
     output:
       mapping:
         - earth --> electrons
@@ -18,6 +19,7 @@ mapping:
   - input:
       base: [earth, sun, gravity, newton]
       target: [electrons, nucleus, electricity]
+      depth: 2
     output:
       mapping:
         - earth --> electrons
@@ -34,20 +36,24 @@ mapping:
   - input:
       base: [earth, newton, gravity]
       target: [electrons, nucleus, electricity, faraday]
+      depth: 4
     output:
       mapping:
-        - newton --> electricity
-        - gravity --> electrons
-        - earth --> nucleus
+        - earth --> electrons
+        - gravity --> electricity
+        - newton --> faraday
+        - sun --> nucleus
       relations: 
-        - [[newton, gravity], [electricity, electrons]]
-        - [[earth, gravity], [nucleus, electrons]]
-      score: 2.896
+        - [[earth, gravity], [electrons, electricity]]
+        - [[gravity, newton], [electricity, faraday]]
+        - [[earth, sun], [electrons, nucleus]]
+      score: 6.121
     ignore: False
 
   - input:
       base: [thoughts, brain, neurons]
       target: [astronaut, space, black hole]
+      depth: 2
     output:
       mapping:
         - thoughts --> astronaut
@@ -62,6 +68,7 @@ mapping:
   - input:
       base: [cars, road, wheels]
       target: [boats, river, sail]
+      depth: 2
     output:
       mapping:
         - cars --> boats
@@ -76,6 +83,7 @@ mapping:
   - input:
       base: [cars, road, wheels]
       target: [boats, river]
+      depth: 2
     output:
       mapping:
         - cars --> boats
@@ -90,6 +98,7 @@ mapping:
   - input:
       base: [sunscreen, sun, summer]
       target: [umbrella, rain, winter]
+      depth: 2
     output:
       mapping:
         - sun --> rain

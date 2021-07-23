@@ -89,7 +89,7 @@ class TestMapping(unittest.TestCase):
                 continue
 
             # check the mapping
-            solution = mapping_wrapper(base=tv["input"]["base"], target=tv["input"]["target"], suggestions=True, depth=2, top_n=1)
+            solution = mapping_wrapper(base=tv["input"]["base"], target=tv["input"]["target"], suggestions=True, depth=tv["input"]["depth"], top_n=1)
             actual = solution["mapping"]
             reference = tv["output"]["mapping"]
             self.assertEqual(reference, actual)
