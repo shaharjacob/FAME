@@ -45,7 +45,7 @@ mapping:
         - sun --> nucleus
       relations: 
         - [[earth, gravity], [electrons, electricity]]
-        - [[gravity, newton], [electricity, faraday]]
+        - [[newton, gravity], [faraday, electricity]]
         - [[earth, sun], [electrons, nucleus]]
       score: 6.121
     ignore: False

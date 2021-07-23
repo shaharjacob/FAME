@@ -88,8 +88,9 @@ class TestMapping(unittest.TestCase):
             if tv["ignore"]:
                 continue
 
-            # check the mapping
             solution = mapping_wrapper(base=tv["input"]["base"], target=tv["input"]["target"], suggestions=True, depth=tv["input"]["depth"], top_n=1)
+
+            # check the mapping
             actual = solution["mapping"]
             reference = tv["output"]["mapping"]
             self.assertEqual(reference, actual)
