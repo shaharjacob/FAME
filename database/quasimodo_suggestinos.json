@@ -239,5 +239,35 @@
 	"nucleus#discovered": [],
 	"nucleus#invent": [],
 	"nucleus#prove": [],
-	"nucleus#prove his ideas about": []
+	"nucleus#prove his ideas about": [],
+	"river#have": [
+		"deltas",
+		"salt",
+		"water",
+		"waves",
+		"tides"
+	],
+	"river#need": [
+		"springs",
+		"periodic flooding",
+		"locks",
+		"managed",
+		"to be managed"
+	],
+	"river#affect": [
+		"environment",
+		"the economy of a country explain",
+		"climate",
+		"florida",
+		"economy of country"
+	],
+	"river#be attached to": [],
+	"river#be connected to": [],
+	"river#come off": [],
+	"river#fall off": [],
+	"river#move on": [],
+	"river#rotate in": [],
+	"river#spin on": [],
+	"river#turn in": [],
+	"river#turn on": []
 }

@@ -3593,5 +3593,168 @@
 	"ernest rutherford#nucleus": [
 		"discover",
 		"explain the existence of"
-	]
+	],
+	"river#humans": [
+		"affect",
+		"benefit",
+		"blindness affect",
+		"blindness transmitted to",
+		"ganges used by",
+		"help",
+		"pollution affect",
+		"severn used by",
+		"tees managed by",
+		"thames used by"
+	],
+	"humans#river": [
+		"affect",
+		"build",
+		"destroy",
+		"live near",
+		"need",
+		"pollute",
+		"settle near",
+		"use"
+	],
+	"river#periodic flooding": [],
+	"periodic flooding#river": [],
+	"river#waves": [
+		"have",
+		"not have"
+	],
+	"waves#river": [
+		"form"
+	],
+	"river#economy of country": [],
+	"economy of country#river": [],
+	"river#erosion": [
+		"cause",
+		"damming sometimes contribute to coastal"
+	],
+	"erosion#river": [
+		"affect",
+		"bad for"
+	],
+	"river#salt": [],
+	"salt#river": [
+		"river named the salt"
+	],
+	"river#deforestation": [],
+	"deforestation#river": [
+		"affect",
+		"affect the amazon"
+	],
+	"river#locks": [
+		"have",
+		"thames have"
+	],
+	"locks#river": [],
+	"river#managed": [
+		"need to be",
+		"tees",
+		"thames",
+		"wye"
+	],
+	"managed#river": [],
+	"river#florida": [
+		"affect",
+		"move to"
+	],
+	"florida#river": [],
+	"river#islands": [],
+	"islands#river": [
+		"form in",
+		"get",
+		"have"
+	],
+	"river#farmers": [
+		"godavari useful to",
+		"help"
+	],
+	"farmers#river": [
+		"cross the",
+		"need",
+		"need access to the mississippi",
+		"travel the mississippi",
+		"use"
+	],
+	"river#deltas": [
+		"form",
+		"form a",
+		"have"
+	],
+	"deltas#river": [
+		"form at the mouths of"
+	],
+	"river#the economy of a country explain": [],
+	"the economy of a country explain#river": [],
+	"river#springs": [
+		"need"
+	],
+	"springs#river": [],
+	"river#climate": [
+		"affect",
+		"influence"
+	],
+	"climate#river": [
+		"affect",
+		"change affect",
+		"change affect the colorado",
+		"change affect the nile",
+		"change affecting",
+		"change affecting the colorado",
+		"change affecting the murray",
+		"change affecting the nile"
+	],
+	"river#to be managed": [
+		"need",
+		"tees need"
+	],
+	"to be managed#river": [],
+	"boats#humans": [],
+	"humans#boats": [],
+	"boats#periodic flooding": [],
+	"periodic flooding#boats": [],
+	"boats#waves": [
+		"make",
+		"make multiple",
+		"survive big"
+	],
+	"waves#boats": [],
+	"boats#economy of country": [],
+	"economy of country#boats": [],
+	"boats#erosion": [],
+	"erosion#boats": [],
+	"boats#salt": [],
+	"salt#boats": [
+		"water affect",
+		"water affect aluminum",
+		"water bad for"
+	],
+	"boats#deforestation": [],
+	"deforestation#boats": [],
+	"boats#locks": [
+		"go through"
+	],
+	"locks#boats": [
+		"work for"
+	],
+	"boats#managed": [],
+	"managed#boats": [],
+	"boats#florida": [],
+	"florida#boats": [],
+	"boats#islands": [],
+	"islands#boats": [],
+	"boats#farmers": [],
+	"farmers#boats": [],
+	"boats#deltas": [],
+	"deltas#boats": [],
+	"boats#the economy of a country explain": [],
+	"the economy of a country explain#boats": [],
+	"boats#springs": [],
+	"springs#boats": [],
+	"boats#climate": [],
+	"climate#boats": [],
+	"boats#to be managed": [],
+	"to be managed#boats": []
 }

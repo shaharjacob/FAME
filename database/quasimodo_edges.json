@@ -2710,5 +2710,157 @@
 	"nucleus#robert brown": [],
 	"robert brown#nucleus": [],
 	"nucleus#ernest rutherford": [],
-	"ernest rutherford#nucleus": []
+	"ernest rutherford#nucleus": [],
+	"river#humans": [
+		"be important to",
+		"be used by",
+		"be useful for",
+		"benefit",
+		"help",
+		"impact"
+	],
+	"humans#river": [
+		"can damage",
+		"can help",
+		"destroy",
+		"effect",
+		"use"
+	],
+	"river#periodic flooding": [
+		"need"
+	],
+	"periodic flooding#river": [],
+	"river#waves": [
+		"have"
+	],
+	"waves#river": [],
+	"river#economy of country": [
+		"affect"
+	],
+	"economy of country#river": [],
+	"river#erosion": [
+		"affect",
+		"cause",
+		"caused"
+	],
+	"erosion#river": [
+		"happen at",
+		"happen in",
+		"occur in"
+	],
+	"river#salt": [
+		"have"
+	],
+	"salt#river": [],
+	"river#deforestation": [],
+	"deforestation#river": [
+		"affect"
+	],
+	"river#locks": [
+		"have",
+		"need",
+		"use"
+	],
+	"locks#river": [
+		"be in",
+		"be needed on",
+		"be used in",
+		"exist in",
+		"work on"
+	],
+	"river#managed": [
+		"can",
+		"has property",
+		"need"
+	],
+	"managed#river": [],
+	"river#florida": [
+		"affect",
+		"be formed in",
+		"be important to"
+	],
+	"florida#river": [],
+	"river#islands": [
+		"has property"
+	],
+	"islands#river": [],
+	"river#farmers": [
+		"help"
+	],
+	"farmers#river": [
+		"be found near"
+	],
+	"river#deltas": [
+		"end in",
+		"form",
+		"have"
+	],
+	"deltas#river": [],
+	"river#the economy of a country explain": [
+		"affect"
+	],
+	"the economy of a country explain#river": [],
+	"river#springs": [
+		"carry sediment in",
+		"need"
+	],
+	"springs#river": [],
+	"river#climate": [
+		"affect",
+		"can affect"
+	],
+	"climate#river": [
+		"affect"
+	],
+	"river#to be managed": [
+		"need"
+	],
+	"to be managed#river": [],
+	"boats#humans": [
+		"help"
+	],
+	"humans#boats": [],
+	"boats#periodic flooding": [],
+	"periodic flooding#boats": [],
+	"boats#waves": [
+		"cause",
+		"make"
+	],
+	"waves#boats": [],
+	"boats#economy of country": [],
+	"economy of country#boats": [],
+	"boats#erosion": [
+		"cause"
+	],
+	"erosion#boats": [],
+	"boats#salt": [],
+	"salt#boats": [],
+	"boats#deforestation": [],
+	"deforestation#boats": [],
+	"boats#locks": [
+		"use"
+	],
+	"locks#boats": [
+		"can"
+	],
+	"boats#managed": [],
+	"managed#boats": [],
+	"boats#florida": [
+		"be taxed in"
+	],
+	"florida#boats": [],
+	"boats#islands": [],
+	"islands#boats": [],
+	"boats#farmers": [],
+	"farmers#boats": [],
+	"boats#deltas": [],
+	"deltas#boats": [],
+	"boats#the economy of a country explain": [],
+	"the economy of a country explain#boats": [],
+	"boats#springs": [],
+	"springs#boats": [],
+	"boats#climate": [],
+	"climate#boats": [],
+	"boats#to be managed": [],
+	"to be managed#boats": []
 }

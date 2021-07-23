@@ -568,5 +568,27 @@
 	],
 	"sun#can emit": [],
 	"sun#emit": [],
-	"nucleus#prove": []
+	"nucleus#prove": [],
+	"river#have": [
+		"islands"
+	],
+	"river#need": [
+		"we",
+		"humans",
+		"farmers"
+	],
+	"river#affect": [
+		"deforestation",
+		"tides",
+		"erosion"
+	],
+	"river#be attached to": [],
+	"river#be connected to": [],
+	"river#come off": [],
+	"river#fall off": [],
+	"river#move on": [],
+	"river#rotate in": [],
+	"river#spin on": [],
+	"river#turn in": [],
+	"river#turn on": []
 }
