@@ -36,13 +36,13 @@ mapping:
       target: [electrons, nucleus, electricity, faraday]
     output:
       mapping:
-        - earth --> electricity
+        - newton --> electricity
         - gravity --> electrons
-        - newton --> nucleus
+        - earth --> nucleus
       relations: 
-        - [[earth, gravity], [electricity, electrons]]
-        - [[newton, gravity], [nucleus, electrons]]
-      score: 2.54
+        - [[newton, gravity], [electricity, electrons]]
+        - [[earth, gravity], [nucleus, electrons]]
+      score: 2.896
     ignore: False
 
   - input:

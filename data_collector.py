@@ -1,5 +1,5 @@
 import json
-from typing import List
+from typing import List, Optional
 
 import utils
 import inflect
@@ -10,13 +10,9 @@ from quasimodo import Quasimodo
 IGNORE = ["has property", "can", "be in", "get", "be", "a"]
 
 class DataCollector(object):
-    def __init__(self, init_quasimodo: bool = False, init_inflect: bool = False, save_database: bool = True, override_database: bool = False):
-        self.quasimodo = None
-        if init_quasimodo:
-            self.quasimodo = Quasimodo(path='tsv/quasimodo.tsv')
-        self.engine = None
-        if init_inflect:
-            self.engine = inflect.engine()
+    def __init__(self, quasimodo: Optional[Quasimodo] = None, engine: Optional[inflect.engine] = None, save_database: bool = True, override_database: bool = False):
+        self.quasimodo = quasimodo
+        self.engine = engine
         self.override_database = override_database
         self.save_database = save_database
         self.quasimodo_edges = utils.read_json('database/quasimodo_edges.json') if save_database else {}

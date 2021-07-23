@@ -7,7 +7,7 @@ import yaml
 import concept_net
 import suggest_entities
 import google_autosuggest
-from mapping import mapping
+from mapping import mapping, get_all_possible_pairs_map, mapping_wrapper
 from quasimodo import Quasimodo, merge_tsvs
 
 
@@ -87,10 +87,9 @@ class TestMapping(unittest.TestCase):
         for tv in mapping_spec:
             if tv["ignore"]:
                 continue
-            res = mapping(tv["input"]["base"], tv["input"]["target"], True, [], [], [], {}, {}, [])
-            solution = res[0]
 
             # check the mapping
+            solution = mapping_wrapper(base=tv["input"]["base"], target=tv["input"]["target"], suggestions=True, depth=2, top_n=1)
             actual = solution["mapping"]
             reference = tv["output"]["mapping"]
             self.assertEqual(reference, actual)

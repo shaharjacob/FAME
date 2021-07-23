@@ -1,11 +1,13 @@
+import copy
 from itertools import combinations
-from typing import List, Dict, Tuple
+from typing import List, Dict, Tuple, Optional
 
 from tqdm import tqdm
 from click import secho
 
 import utils
 import suggest_entities
+from quasimodo import Quasimodo
 from data_collector import DataCollector
 from sentence_embadding import SentenceEmbedding
 
@@ -28,10 +30,7 @@ def get_all_possible_pairs_map(base: List[str], target: List[str]) -> List[List[
     return all_mapping
 
 
-def update_paris_map(pairs_map: List[List[List[Tuple[str, str]]]], 
-                    base_already_mapping: List[str], 
-                    target_already_mapping: List[str]
-                    ) -> List[List[List[Tuple[str, str]]]]:
+def update_paris_map(pairs_map: List[List[List[Tuple[str, str]]]], base_already_mapping: List[str], target_already_mapping: List[str]) -> List[List[List[Tuple[str, str]]]]:
     new_pairs_map = []
     for mapping in pairs_map:
         one_direction = mapping[0]
@@ -68,14 +67,14 @@ def update_paris_map(pairs_map: List[List[List[Tuple[str, str]]]],
     return new_pairs_map
 
 
-def update_list(already_mapping_list: List[str], 
-                entities: Tuple[str, str]
-                ) -> List[str]:
-    if entities[0] not in already_mapping_list:
-        already_mapping_list.append(entities[0])
-    if entities[1] not in already_mapping_list:
-        already_mapping_list.append(entities[1])
-    return already_mapping_list
+def update_list(already_mapping_list: List[str], entities: Tuple[str, str], inplace: bool = False) -> Optional[List[str]]:
+    list_to_update = already_mapping_list if inplace else copy.deepcopy(already_mapping_list)
+    if entities[0] not in list_to_update:
+        list_to_update.append(entities[0])
+    if entities[1] not in list_to_update:
+        list_to_update.append(entities[1])
+    if not inplace:
+        return list_to_update
 
 
 def get_edges_with_maximum_weight(similatiry_edges: List[Tuple[str, str, float]], 
@@ -133,7 +132,7 @@ def get_pair_mapping(model: SentenceEmbedding, data_collector: DataCollector, ma
     }
 
 
-def get_best_pair_mapping(model: SentenceEmbedding, data_collector: DataCollector, available_maps: List[List[List[Tuple[str, str]]]]) -> Dict:
+def get_best_pair_mapping(model: SentenceEmbedding, data_collector: DataCollector, available_maps: List[List[List[Tuple[str, str]]]], depth: int = 2) -> Dict:
     mappings = []
 
     # we will iterate over all the possible pairs mapping ((n choose 2)*(n choose 2)*2), 2->2, 3->18, 4->72
@@ -170,97 +169,147 @@ def get_best_pair_mapping(model: SentenceEmbedding, data_collector: DataCollecto
         mappings.append((mapping[0], mapping_score))
 
     mappings = sorted(mappings, key=lambda x: x[1], reverse=True)
-    return {
-        "best_mapping": mappings[0][0],
-        "best_score": mappings[0][1],
-    }
+    return [{"best_mapping": mapping[0], "best_score": mapping[1]} for mapping in mappings[:depth]]
 
 
 def mapping(
     base: List[str], 
-    target: List[str], 
-    suggestions: bool = True, 
-    relations=[], 
-    base_already_mapping: List[str] = [], 
-    target_already_mapping: List[str] = [], 
-    base_suggestions: Dict[str, List[str]] = {}, 
-    target_suggestions: Dict[str, List[str]] = {},
-    solutions: list = [],
-    score: int = 0) -> dict:
-    
-    data_collector = DataCollector(init_quasimodo=True)
-    model = SentenceEmbedding(data_collector=data_collector)
-    
+    target: List[str],
+    available_pairs: List[List[List[Tuple[str, str]]]],
+    solutions: List[dict],
+    data_collector: DataCollector,
+    model: SentenceEmbedding,
+    base_already_mapping: List[str] = [],
+    target_already_mapping: List[str] = [],
+    relations: List[List[Tuple[str, str]]] = [],
+    score: float = 0,
+    depth: int = 2):
 
-    # we want all the possible pairs. For example, if base: a,b,c, target: 1,2,3:
-    # general there are (n choose 2) * (n choose 2) * 2 pairs.
-    all_possible_pairs_map: List[List[List[Tuple[str, str]]]] = get_all_possible_pairs_map(base, target)
-
-    while len(base_already_mapping) < min(len(base), len(target)):
-        # here we update the possible/available pairs.
-        # for example, if we already map a->1, b->2, we will looking only for pairs which respect the 
-        # pairs that already maps. in our example it can be one of the following:
-        # (a->1, c->3) or (b->2, c->3).
-        all_possible_pairs_map = update_paris_map(all_possible_pairs_map, base_already_mapping, target_already_mapping)
-
-        # now we will get the pair with the best score.
-        res = get_best_pair_mapping(model, data_collector, all_possible_pairs_map)
-
-        # if the best score is > 0, we will update the base and target lists of the already mapping entities.
-        # otherwise, if the best score is 0, we have no more maps.
-        if res["best_score"] > 0:
-            base_already_mapping = update_list(base_already_mapping, (res["best_mapping"][0][0], res["best_mapping"][0][1]))
-            target_already_mapping = update_list(target_already_mapping, (res["best_mapping"][1][0], res["best_mapping"][1][1]))
-            relations.append(res["best_mapping"])
-            score += res["best_score"]
-        else:
-            break
-    
-    base_not_mapped_entities = [entity for entity in base if entity not in base_already_mapping]
-    target_not_mapped_entities = [entity for entity in target if entity not in target_already_mapping]
-    if suggestions:
-        for base_not_mapped_entity in base_not_mapped_entities:
-            if base_not_mapped_entity in base_suggestions:
-                continue
-            base_entity_suggestions = suggest_entities.get_suggestions_for_missing_entities(data_collector, base_not_mapped_entity, base_already_mapping, target_already_mapping, verbose=True)
-            base_suggestions[base_not_mapped_entity] = base_entity_suggestions
-            mapping(
-                base=base_already_mapping+[base_not_mapped_entity], 
-                target=target_already_mapping+base_entity_suggestions, 
-                suggestions=False, 
-                relations=relations, 
-                base_already_mapping=base_already_mapping, 
-                target_already_mapping=target_already_mapping,
-                solutions=solutions,
-                score=score,
-            )
-        
-        for target_not_mapped_entity in target_not_mapped_entities:
-            if target_not_mapped_entity in target_suggestions:
-                continue
-            target_entity_suggestions = suggest_entities.get_suggestions_for_missing_entities(data_collector, target_not_mapped_entity, target_already_mapping, base_already_mapping, verbose=True)
-            target_suggestions[target_not_mapped_entity] = target_entity_suggestions
-            mapping(
-                base=base_already_mapping+target_entity_suggestions, 
-                target=target_already_mapping+[target_not_mapped_entity], 
-                suggestions=False, 
-                relations=relations, 
-                base_already_mapping=base_already_mapping, 
-                target_already_mapping=target_already_mapping,
-                solutions=solutions,
-                score=score,
-            )
-
-    if not base_suggestions and not target_suggestions:
+    if len(base_already_mapping) == min(len(base), len(target)):
         solutions.append({
             "mapping": [f"{b} --> {t}" for b, t in zip(base_already_mapping, target_already_mapping)],
             "relations": relations,
-            "score": score,
-            "base_suggestions": base_suggestions, # Dict[str, List[str]]
-            "target_suggestions": target_suggestions, # Dict[str, List[str]]
+            "score": round(score, 3),
+            "actual_base": base_already_mapping,
+            "actual_target": target_already_mapping,
         })
+        return
+
+    best_results_for_current_iteration = get_best_pair_mapping(model, data_collector, available_pairs, depth)
+    for result in best_results_for_current_iteration:
+        if result["best_score"] > 0:
+            available_pairs_copy = copy.deepcopy(available_pairs)
+            relations_copy = copy.deepcopy(relations)
+            base_already_mapping_new = update_list(base_already_mapping, (result["best_mapping"][0][0], result["best_mapping"][0][1]), inplace=False)
+            target_already_mapping_new = update_list(target_already_mapping, (result["best_mapping"][1][0], result["best_mapping"][1][1]), inplace=False)
+            available_pairs_copy = update_paris_map(available_pairs_copy, base_already_mapping_new, target_already_mapping_new)
+            relations_copy.append(result["best_mapping"])
+            mapping(
+                base=base, 
+                target=target,
+                available_pairs=available_pairs_copy,
+                solutions=solutions,
+                data_collector=data_collector,
+                model=model,
+                base_already_mapping=base_already_mapping_new,
+                target_already_mapping=target_already_mapping_new,
+                relations=relations_copy,
+                score=score+result["best_score"],
+                depth=depth
+            )
     
-    return sorted(solutions, key=lambda x: x["score"], reverse=True)
+
+def mapping_single_iteration(
+    available_pairs: List[List[List[Tuple[str, str]]]],
+    current_solution: dict,
+    solutions: List[dict],
+    data_collector: DataCollector,
+    model: SentenceEmbedding,
+    num_of_suggestions: int = 1):
+
+    best_results_for_current_iteration = get_best_pair_mapping(model, data_collector, available_pairs, num_of_suggestions)
+    for result in best_results_for_current_iteration:
+        if result["best_score"] > 0:
+            base_already_mapping_new = update_list(current_solution["actual_base"], (result["best_mapping"][0][0], result["best_mapping"][0][1]), inplace=False)
+            target_already_mapping_new = update_list(current_solution["actual_target"], (result["best_mapping"][1][0], result["best_mapping"][1][1]), inplace=False)
+            current_solution["relations"].append(result["best_mapping"])
+            solutions.append({
+                "mapping": [f"{b} --> {t}" for b, t in zip(base_already_mapping_new, target_already_mapping_new)],
+                "relations": current_solution["relations"],
+                "score": round(current_solution["score"] + result["best_score"], 3),
+                "actual_base": base_already_mapping_new,
+                "actual_target": target_already_mapping_new,
+            })
+        
+
+def mapping_wrapper(base: List[str], target: List[str], suggestions: bool = True, depth: int = 2, top_n: int = 1):
+    available_pairs = get_all_possible_pairs_map(base, target)
+    quasimodo = Quasimodo()
+    solutions = []
+    data_collector = DataCollector(quasimodo=quasimodo)
+    model = SentenceEmbedding(data_collector=data_collector)
+    mapping(base, target, available_pairs, solutions, data_collector, model, depth=depth)
+    
+    suggestions_solutions = []
+    if suggestions:
+        for solution in solutions:
+            base_not_mapped_entities = [entity for entity in base if entity not in solution["actual_base"]]
+            for base_not_mapped_entity in base_not_mapped_entities:
+                entities_suggestions = suggest_entities.get_suggestions_for_missing_entities(data_collector, base_not_mapped_entity, solution["actual_base"], solution["actual_target"], verbose=False)
+                if not entities_suggestions:
+                    continue
+                new_base = solution["actual_base"] + [base_not_mapped_entity]
+                new_target = solution["actual_target"] + entities_suggestions
+                all_pairs = get_all_possible_pairs_map(new_base, new_target)
+                available_pairs_new = update_paris_map(all_pairs, solution["actual_base"], solution["actual_target"])
+                mapping_single_iteration(
+                    available_pairs=available_pairs_new,
+                    current_solution=copy.deepcopy(solution),
+                    solutions=suggestions_solutions,
+                    data_collector=data_collector,
+                    model=model,
+                    num_of_suggestions=1
+                )
+            
+            target_not_mapped_entities = [entity for entity in target if entity not in solution["actual_target"]]
+            for target_not_mapped_entity in target_not_mapped_entities:
+                entities_suggestions = suggest_entities.get_suggestions_for_missing_entities(data_collector, target_not_mapped_entity, solution["actual_target"], solution["actual_base"], verbose=False)
+                if not entities_suggestions:
+                    continue
+                new_base = solution["actual_base"] + entities_suggestions
+                new_target = solution["actual_target"] + [target_not_mapped_entity]
+                all_pairs = get_all_possible_pairs_map(new_base, new_target)
+                available_pairs_new = update_paris_map(all_pairs, solution["actual_base"], solution["actual_target"])
+                mapping_single_iteration(
+                    available_pairs=available_pairs_new,
+                    current_solution=copy.deepcopy(solution),
+                    solutions=suggestions_solutions,
+                    data_collector=data_collector,
+                    model=model,
+                    num_of_suggestions=1
+                )
+    
+    all_solutions = sorted(solutions + suggestions_solutions, key=lambda x: x["score"], reverse=True)
+    for solution in all_solutions:
+        print_solution(solution)
+    return all_solutions[:top_n] if top_n > 1 else all_solutions[0]
+
+
+def print_solution(solution: dict):
+    secho("mapping", fg="blue", bold=True)
+    for mapping in solution["mapping"]:
+        secho(f"\t{mapping}", fg="blue")
+    print()
+
+    secho("relations", fg="blue", bold=True)
+    for relations in solution["relations"]:
+        secho(f"\t{relations}", fg="blue")
+    print()
+
+    secho(f"score: {solution['score']}", fg="blue", bold=True)
+    print()
+    print("------------------------------------------------------")
+    print()
 
 
 if __name__ == "__main__":
@@ -352,17 +401,11 @@ if __name__ == "__main__":
         ],
     ]
 
-    # base = ["earth", "gravity", "newton"]
-    # target = ["electrons", "nucleus", "electricity", "faraday"]
-    for inputs in data:
-        print(f"inputs: {inputs}")
-        res = mapping(inputs[0], inputs[1], True, [], [], [], {}, {}, [])
-        for solution in res:
-            for k,v in solution.items():
-                print(f"k: {k}")
-                print(f"v: {v}")
-            print()
-        print()
+    base = ["earth", "gravity", "newton", "sun"]
+    target = ["electrons", "nucleus", "electricity", "faraday"]
+    solution = mapping_wrapper(base, target)
+    print_solution(solution)
+    
 
 
 
@@ -400,3 +443,5 @@ if __name__ == "__main__":
     #  a->3, c->2, (a:c, 3:2)
     #  a->1, c->3, (a:c, 1:3)
     #  a->3, c->1, (a:c, 3:1)
+
+
