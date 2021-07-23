@@ -179,12 +179,13 @@ def mapping(
     solutions: List[dict],
     data_collector: DataCollector,
     model: SentenceEmbedding,
-    base_already_mapping: List[str] = [],
-    target_already_mapping: List[str] = [],
-    relations: List[List[Tuple[str, str]]] = [],
-    score: float = 0,
+    base_already_mapping: List[str],
+    target_already_mapping: List[str],
+    relations: List[List[Tuple[str, str]]],
+    score: float,
     depth: int = 2):
 
+    # base case for recursive function. there is no more available pairs to match (base->target)
     if len(base_already_mapping) == min(len(base), len(target)):
         solutions.append({
             "mapping": [f"{b} --> {t}" for b, t in zip(base_already_mapping, target_already_mapping)],
@@ -195,15 +196,27 @@ def mapping(
         })
         return
 
+    # we will get the top-depth pairs with the best score.
     best_results_for_current_iteration = get_best_pair_mapping(model, data_collector, available_pairs, depth)
     for result in best_results_for_current_iteration:
+        # if the best score is > 0, we will update the base and target lists of the already mapping entities.
+        # otherwise, if the best score is 0, we have no more mappings to do.
         if result["best_score"] > 0:
+            # deepcopy is more safe when working with recursive functions
             available_pairs_copy = copy.deepcopy(available_pairs)
             relations_copy = copy.deepcopy(relations)
+            relations_copy.append(result["best_mapping"])
+
+            # we will add the new mapping to the already mapping lists. 
             base_already_mapping_new = update_list(base_already_mapping, (result["best_mapping"][0][0], result["best_mapping"][0][1]), inplace=False)
             target_already_mapping_new = update_list(target_already_mapping, (result["best_mapping"][1][0], result["best_mapping"][1][1]), inplace=False)
+            
+            # here we update the possible/available pairs.
+            # for example, if we already map a->1, b->2, we will looking only for pairs which respect the 
+            # pairs that already maps. in our example it can be one of the following:
+            # (a->1, c->3) or (b->2, c->3).
             available_pairs_copy = update_paris_map(available_pairs_copy, base_already_mapping_new, target_already_mapping_new)
-            relations_copy.append(result["best_mapping"])
+            
             mapping(
                 base=base, 
                 target=target,
@@ -226,13 +239,20 @@ def mapping_single_iteration(
     data_collector: DataCollector,
     model: SentenceEmbedding,
     num_of_suggestions: int = 1):
-
+    # this function is use for mapping in suggestions mode. this is only one iteration.
+    # we will get the top-num-of-suggestions with the best score.
     best_results_for_current_iteration = get_best_pair_mapping(model, data_collector, available_pairs, num_of_suggestions)
     for result in best_results_for_current_iteration:
+        # if the best score is > 0, we will update the base and target lists of the already mapping entities.
+        # otherwise, if the best score is 0, we have no more mappings to do.
         if result["best_score"] > 0:
+            # we will add the new mapping to the already mapping lists. 
             base_already_mapping_new = update_list(current_solution["actual_base"], (result["best_mapping"][0][0], result["best_mapping"][0][1]), inplace=False)
             target_already_mapping_new = update_list(current_solution["actual_target"], (result["best_mapping"][1][0], result["best_mapping"][1][1]), inplace=False)
+            
+            # we need to add the mapping that we just found to the relations that already exist for that solution.
             current_solution["relations"].append(result["best_mapping"])
+
             solutions.append({
                 "mapping": [f"{b} --> {t}" for b, t in zip(base_already_mapping_new, target_already_mapping_new)],
                 "relations": current_solution["relations"],
@@ -242,22 +262,33 @@ def mapping_single_iteration(
             })
         
 
-def mapping_wrapper(base: List[str], target: List[str], suggestions: bool = True, depth: int = 2, top_n: int = 1):
+def mapping_wrapper(base: List[str], target: List[str], suggestions: bool = True, depth: int = 2, top_n: int = 1, verbose: bool = False):
+
+    # we want all the possible pairs.
+    # general there are (n choose 2) * (n choose 2) * 2 pairs.
     available_pairs = get_all_possible_pairs_map(base, target)
-    quasimodo = Quasimodo()
+
+    # this is an array of solutions we going to update in the mapping function.
     solutions = []
+
+    # better to init all the objects here, since they are not changed in the run
+    quasimodo = Quasimodo()
     data_collector = DataCollector(quasimodo=quasimodo)
     model = SentenceEmbedding(data_collector=data_collector)
-    mapping(base, target, available_pairs, solutions, data_collector, model, depth=depth)
+    mapping(base, target, available_pairs, solutions, data_collector, model, [], [], [], 0, depth=depth)
     
+    # array of addition solutions for the suggestions if some entities have missing mappings.
     suggestions_solutions = []
     if suggestions:
+        # the idea is to iterate over the founded solutions, and check if there are entities are not mapped.
+        # this logic is checked only if ONE entity have missing mapping (from base or target)
         for solution in solutions:
             base_not_mapped_entities = [entity for entity in base if entity not in solution["actual_base"]]
             for base_not_mapped_entity in base_not_mapped_entities:
+                # suggestion for mapping an entity. a list of strings.
                 entities_suggestions = suggest_entities.get_suggestions_for_missing_entities(data_collector, base_not_mapped_entity, solution["actual_base"], solution["actual_target"], verbose=False)
                 if not entities_suggestions:
-                    continue
+                    continue  # no suggestion found :(
                 new_base = solution["actual_base"] + [base_not_mapped_entity]
                 new_target = solution["actual_target"] + entities_suggestions
                 all_pairs = get_all_possible_pairs_map(new_base, new_target)
@@ -273,9 +304,10 @@ def mapping_wrapper(base: List[str], target: List[str], suggestions: bool = True
             
             target_not_mapped_entities = [entity for entity in target if entity not in solution["actual_target"]]
             for target_not_mapped_entity in target_not_mapped_entities:
+                # suggestion for mapping an entity. a list of strings.
                 entities_suggestions = suggest_entities.get_suggestions_for_missing_entities(data_collector, target_not_mapped_entity, solution["actual_target"], solution["actual_base"], verbose=False)
                 if not entities_suggestions:
-                    continue
+                    continue  # no suggestion found :(
                 new_base = solution["actual_base"] + entities_suggestions
                 new_target = solution["actual_target"] + [target_not_mapped_entity]
                 all_pairs = get_all_possible_pairs_map(new_base, new_target)
@@ -290,8 +322,9 @@ def mapping_wrapper(base: List[str], target: List[str], suggestions: bool = True
                 )
     
     all_solutions = sorted(solutions + suggestions_solutions, key=lambda x: x["score"], reverse=True)
-    for solution in all_solutions:
-        print_solution(solution)
+    if verbose:
+        for solution in all_solutions:
+            print_solution(solution)
     return all_solutions[:top_n] if top_n > 1 else all_solutions[0]
 
 
@@ -313,98 +346,10 @@ def print_solution(solution: dict):
 
 
 if __name__ == "__main__":
-    
-    data = [
-        [
-            # seems good!
-            # expected mapping: earth->electrons, sun->nucleus, gravity->electricity, newton->faraday
-            # http://localhost:3000/mapping?base=earth,sun,newton,gravity&target=electrons,nucleus,electricity,faraday
-            # base=earth,sun,gravity,newton
-            # target=electrons,nucleus,electricity,faraday
-            ["earth", "sun", "gravity", "newton"], 
-            ["electrons", "nucleus", "electricity", "faraday"]
-        ],
-        [
-            # expected mapping: earth->electrons, sun->nucleus, gravity->electricity, newton->? (faraday has been removed)
-            # http://localhost:3000/mapping?base=earth,sun,newton,gravity&target=electrons,nucleus,electricity
-            # after using recursively the mapping function, it found 'humans' as the best option (instead of faraday, but maybe its not so bad?)
-            # http://localhost:3000/single-mapping?base1=gravity&base2=newton&target1=electricity&target2=humans
-            # http://localhost:3000/single-mapping?base1=gravity&base2=newton&target1=electricity&target2=faraday
-            ["earth", "sun", "gravity", "newton"], 
-            ["electrons", "nucleus", "electricity"]
-        ],
-        [
-            # http://localhost:3000/mapping?base=earth,newton,gravity&target=electrons,nucleus,electricity,faraday
-            # expected mapping: earth->electrons, gravity->electricity, newton->faraday, nucleus->? (sun has been removed)
-            # it map earth-->electricity and gravity-->electrons instead of earth-->electrons and gravity-->electricity, but their score is similar (1.833, 1.625) without IGNORE list: (2.125~1.879)
-            # http://localhost:3000/single-mapping?base1=earth&base2=gravity&target1=electricity&target2=electrons
-            # Option 1 (the chosen one): (earth-->electricity, gravity-->electrons, newton-->nucleus)
-            #   (earth:gravity, electricity:electrons): 1.833
-            #   (gravity:electrons, newton:nucleus): 0.707
-            #   total score: 2.54
-            # Option 2: (earth-->electrons, gravity-->electrivity, newton-->faraday)
-            #   (earth:gravity, electrons:electrivity): 1.625
-            #   (gravity:newton, electricity:faraday): 1
-            #   total score: 2.625
-            ["earth", "newton", "gravity"],
-            ["electrons", "nucleus", "electricity", "faraday"],
-        ],
-        [
-            # seems good!
-            # http://localhost:3000/mapping?base=thoughts,brain&target=astronaut,space
-            # expected: thoughts->astronaut, brain->space
-            ["thoughts", "brain"],
-            ["astronaut", "space"],
-        ],
-        [
-            # seems good!
-            # http://localhost:3000/mapping?base=thoughts,brain,neurons&target=astronaut,space,black%20hole
-            # expected mapping: thoughts->astronaut, brain->space, neurons->black hole
-            ["thoughts", "brain", "neurons"],
-            ["astronaut", "space", "black hole"],
-        ],
-        [
-            # seems good!
-            # http://localhost:3000/mapping?base=cars,road,wheels&target=boats,river,sail
-            # expected: cars->boats, road->river, wheels->sail
-            ["cars", "road", "wheels"],
-            ["boats", "river", "sail"],
-        ],
-        [
-            # http://localhost:3000/mapping?base=cars,road,wheels&target=boats,river
-            # expected: cars->boats, road->river, wheels->? (sail has been removed)
-            # the suggestions are not good. Need to check why sail is now suggested in "boat have .*" 
-            # why do boats .* sails --> found 'have', but why do boats have .. --> not found 'have'.
-            # maybe I should have "RelatedTo" from conceptNet: https://conceptnet.io/c/en/boat?rel=/r/RelatedTo&limit=1000
-            # well after adding quasimodo, it found streeing wheel -> sound good but I still prefer sails here..
-            ["cars", "road", "wheels"],
-            ["boats", "river"],
-        ],
-        [
-            # http://localhost:3000/mapping?base=sunscreen,sun,summer&target=umbrella,rain,winter
-            # expected: sunscreen->umbrella, sun->rain, summer->winter 
-            # the mapping is good, but the map between summer-->winter is very week!
-            # the relation between sun:summer are good, but there are no relations between rain:winter or umbrela:winter!
-            # http://localhost:3000/two-entities?entity1=rain&entity2=winter
-            ["sunscreen", "sun", "summer"],
-            ["umbrella", "rain", "winter"],
-        ],
-        [
-            # http://localhost:3000/mapping?base=student,homework,university&target=citizen,duties,country
-            # expected: student->citizen, homework->duties, university->country
-            # it found that (student:homework, citzen:country) is stronger then (student:homework, citzen:duties): 1.047 ~ 1
-            # http://localhost:3000/single-mapping?base1=student&base2=homework&target1=citizen&target2=duties
-            # http://localhost:3000/single-mapping?base1=student&base2=homework&target1=citizen&target2=country
-            # maybe few weaks relations are weaker than one stronger?
-            ["student", "homework", "university"],
-            ["citizen", "duties", "country"],
-        ],
-    ]
-
-    base = ["earth", "gravity", "newton", "sun"]
+    base = ["earth", "gravity", "newton"]
     target = ["electrons", "nucleus", "electricity", "faraday"]
-    solution = mapping_wrapper(base, target)
-    print_solution(solution)
+    solution = mapping_wrapper(base, target, depth=4, verbose=True)
+    # print_solution(solution)
     
 
 
@@ -445,3 +390,89 @@ if __name__ == "__main__":
     #  a->3, c->1, (a:c, 3:1)
 
 
+# data = [
+#         [
+#             # seems good!
+#             # expected mapping: earth->electrons, sun->nucleus, gravity->electricity, newton->faraday
+#             # http://localhost:3000/mapping?base=earth,sun,newton,gravity&target=electrons,nucleus,electricity,faraday
+#             # base=earth,sun,gravity,newton
+#             # target=electrons,nucleus,electricity,faraday
+#             ["earth", "sun", "gravity", "newton"], 
+#             ["electrons", "nucleus", "electricity", "faraday"]
+#         ],
+#         [
+#             # expected mapping: earth->electrons, sun->nucleus, gravity->electricity, newton->? (faraday has been removed)
+#             # http://localhost:3000/mapping?base=earth,sun,newton,gravity&target=electrons,nucleus,electricity
+#             # after using recursively the mapping function, it found 'humans' as the best option (instead of faraday, but maybe its not so bad?)
+#             # http://localhost:3000/single-mapping?base1=gravity&base2=newton&target1=electricity&target2=humans
+#             # http://localhost:3000/single-mapping?base1=gravity&base2=newton&target1=electricity&target2=faraday
+#             ["earth", "sun", "gravity", "newton"], 
+#             ["electrons", "nucleus", "electricity"]
+#         ],
+#         [
+#             # http://localhost:3000/mapping?base=earth,newton,gravity&target=electrons,nucleus,electricity,faraday
+#             # expected mapping: earth->electrons, gravity->electricity, newton->faraday, nucleus->? (sun has been removed)
+#             # it map earth-->electricity and gravity-->electrons instead of earth-->electrons and gravity-->electricity, but their score is similar (1.833, 1.625) without IGNORE list: (2.125~1.879)
+#             # http://localhost:3000/single-mapping?base1=earth&base2=gravity&target1=electricity&target2=electrons
+#             # Option 1 (the chosen one): (earth-->electricity, gravity-->electrons, newton-->nucleus)
+#             #   (earth:gravity, electricity:electrons): 1.833
+#             #   (gravity:electrons, newton:nucleus): 0.707
+#             #   total score: 2.54
+#             # Option 2: (earth-->electrons, gravity-->electrivity, newton-->faraday)
+#             #   (earth:gravity, electrons:electrivity): 1.625
+#             #   (gravity:newton, electricity:faraday): 1
+#             #   total score: 2.625
+#             ["earth", "newton", "gravity"],
+#             ["electrons", "nucleus", "electricity", "faraday"],
+#         ],
+#         [
+#             # seems good!
+#             # http://localhost:3000/mapping?base=thoughts,brain&target=astronaut,space
+#             # expected: thoughts->astronaut, brain->space
+#             ["thoughts", "brain"],
+#             ["astronaut", "space"],
+#         ],
+#         [
+#             # seems good!
+#             # http://localhost:3000/mapping?base=thoughts,brain,neurons&target=astronaut,space,black%20hole
+#             # expected mapping: thoughts->astronaut, brain->space, neurons->black hole
+#             ["thoughts", "brain", "neurons"],
+#             ["astronaut", "space", "black hole"],
+#         ],
+#         [
+#             # seems good!
+#             # http://localhost:3000/mapping?base=cars,road,wheels&target=boats,river,sail
+#             # expected: cars->boats, road->river, wheels->sail
+#             ["cars", "road", "wheels"],
+#             ["boats", "river", "sail"],
+#         ],
+#         [
+#             # http://localhost:3000/mapping?base=cars,road,wheels&target=boats,river
+#             # expected: cars->boats, road->river, wheels->? (sail has been removed)
+#             # the suggestions are not good. Need to check why sail is now suggested in "boat have .*" 
+#             # why do boats .* sails --> found 'have', but why do boats have .. --> not found 'have'.
+#             # maybe I should have "RelatedTo" from conceptNet: https://conceptnet.io/c/en/boat?rel=/r/RelatedTo&limit=1000
+#             # well after adding quasimodo, it found streeing wheel -> sound good but I still prefer sails here..
+#             ["cars", "road", "wheels"],
+#             ["boats", "river"],
+#         ],
+#         [
+#             # http://localhost:3000/mapping?base=sunscreen,sun,summer&target=umbrella,rain,winter
+#             # expected: sunscreen->umbrella, sun->rain, summer->winter 
+#             # the mapping is good, but the map between summer-->winter is very week!
+#             # the relation between sun:summer are good, but there are no relations between rain:winter or umbrela:winter!
+#             # http://localhost:3000/two-entities?entity1=rain&entity2=winter
+#             ["sunscreen", "sun", "summer"],
+#             ["umbrella", "rain", "winter"],
+#         ],
+#         [
+#             # http://localhost:3000/mapping?base=student,homework,university&target=citizen,duties,country
+#             # expected: student->citizen, homework->duties, university->country
+#             # it found that (student:homework, citzen:country) is stronger then (student:homework, citzen:duties): 1.047 ~ 1
+#             # http://localhost:3000/single-mapping?base1=student&base2=homework&target1=citizen&target2=duties
+#             # http://localhost:3000/single-mapping?base1=student&base2=homework&target1=citizen&target2=country
+#             # maybe few weaks relations are weaker than one stronger?
+#             ["student", "homework", "university"],
+#             ["citizen", "duties", "country"],
+#         ],
+#     ]
