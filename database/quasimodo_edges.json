@@ -2592,5 +2592,123 @@
 	],
 	"asteroids#gravity": [],
 	"gravity#planets not": [],
-	"planets not#gravity": []
+	"planets not#gravity": [],
+	"electricity#homeostasis": [],
+	"homeostasis#electricity": [],
+	"electricity#mitochondria": [],
+	"mitochondria#electricity": [],
+	"electricity#meiosis": [],
+	"meiosis#electricity": [],
+	"electricity#electron": [
+		"be created by",
+		"be made out of",
+		"be related to",
+		"has property",
+		"work with"
+	],
+	"electron#electricity": [
+		"be involved with",
+		"conduct",
+		"create",
+		"in conducting",
+		"produce",
+		"relate to"
+	],
+	"electricity#ribosome": [],
+	"ribosome#electricity": [],
+	"electricity#protein synthesis": [],
+	"protein synthesis#electricity": [],
+	"electricity#nucleolus": [],
+	"nucleolus#electricity": [],
+	"electricity#city": [
+		"be important for"
+	],
+	"city#electricity": [
+		"generate"
+	],
+	"electricity#robert brown": [],
+	"robert brown#electricity": [],
+	"electricity#ernest rutherford": [],
+	"ernest rutherford#electricity": [],
+	"electrons#homeostasis": [],
+	"homeostasis#electrons": [],
+	"electrons#mitochondria": [],
+	"mitochondria#electrons": [],
+	"electrons#meiosis": [],
+	"meiosis#electrons": [],
+	"electrons#electron": [
+		"be called"
+	],
+	"electron#electrons": [
+		"be called"
+	],
+	"electrons#ribosome": [],
+	"ribosome#electrons": [],
+	"electrons#protein synthesis": [],
+	"protein synthesis#electrons": [],
+	"electrons#nucleolus": [],
+	"nucleolus#electrons": [],
+	"electrons#city": [],
+	"city#electrons": [],
+	"electrons#robert brown": [],
+	"robert brown#electrons": [],
+	"electrons#ernest rutherford": [],
+	"ernest rutherford#electrons": [],
+	"nucleus#homeostasis": [
+		"maintain"
+	],
+	"homeostasis#nucleus": [],
+	"nucleus#mitochondria": [
+		"relate to"
+	],
+	"mitochondria#nucleus": [],
+	"nucleus#meiosis": [],
+	"meiosis#nucleus": [],
+	"nucleus#electron": [
+		"can emit",
+		"emit"
+	],
+	"electron#nucleus": [
+		"enter",
+		"fall in",
+		"fall into",
+		"fly into",
+		"get attracted to",
+		"go into",
+		"move around",
+		"revolve around",
+		"stay around",
+		"surround"
+	],
+	"nucleus#ribosome": [
+		"relate to"
+	],
+	"ribosome#nucleus": [
+		"be found near",
+		"get from",
+		"get out of",
+		"help",
+		"leave",
+		"move out of"
+	],
+	"nucleus#protein synthesis": [
+		"be involved in",
+		"relate to"
+	],
+	"protein synthesis#nucleus": [],
+	"nucleus#nucleolus": [],
+	"nucleolus#nucleus": [
+		"be darker than",
+		"be in",
+		"help",
+		"relate to"
+	],
+	"nucleus#city": [
+		"relate to"
+	],
+	"city#nucleus": [],
+	"nucleus#robert brown": [],
+	"robert brown#nucleus": [],
+	"nucleus#ernest rutherford": [],
+	"ernest rutherford#nucleus": []
 }

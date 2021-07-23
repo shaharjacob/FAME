@@ -567,5 +567,6 @@
 		"planets"
 	],
 	"sun#can emit": [],
-	"sun#emit": []
+	"sun#emit": [],
+	"nucleus#prove": []
 }

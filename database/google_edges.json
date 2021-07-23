@@ -3438,5 +3438,160 @@
 	],
 	"asteroids#gravity": [],
 	"gravity#planets not": [],
-	"planets not#gravity": []
+	"planets not#gravity": [],
+	"electricity#homeostasis": [],
+	"homeostasis#electricity": [],
+	"electricity#mitochondria": [],
+	"mitochondria#electricity": [],
+	"electricity#meiosis": [],
+	"meiosis#electricity": [],
+	"electricity#electron": [
+		"created by",
+		"made",
+		"produced in",
+		"related to",
+		"the flow of",
+		"the movement of",
+		"work"
+	],
+	"electron#electricity": [
+		"affect",
+		"become",
+		"carry",
+		"conduct",
+		"create",
+		"have",
+		"move in",
+		"not conduct",
+		"produce",
+		"related to"
+	],
+	"electricity#ribosome": [],
+	"ribosome#electricity": [],
+	"electricity#protein synthesis": [],
+	"protein synthesis#electricity": [],
+	"electricity#nucleolus": [],
+	"nucleolus#electricity": [],
+	"electricity#city": [
+		"change life in",
+		"generated for"
+	],
+	"city#electricity": [
+		"generate",
+		"get",
+		"get their",
+		"make",
+		"produce"
+	],
+	"electricity#robert brown": [],
+	"robert brown#electricity": [],
+	"electricity#ernest rutherford": [],
+	"ernest rutherford#electricity": [],
+	"electrons#homeostasis": [],
+	"homeostasis#electrons": [],
+	"electrons#mitochondria": [
+		"transport chain occur in the"
+	],
+	"mitochondria#electrons": [],
+	"electrons#meiosis": [],
+	"meiosis#electrons": [],
+	"electrons#electron": [],
+	"electron#electrons": [
+		"cloud model describe"
+	],
+	"electrons#ribosome": [],
+	"ribosome#electrons": [],
+	"electrons#protein synthesis": [],
+	"protein synthesis#electrons": [],
+	"electrons#nucleolus": [],
+	"nucleolus#electrons": [],
+	"electrons#city": [],
+	"city#electrons": [],
+	"electrons#robert brown": [],
+	"robert brown#electrons": [],
+	"electrons#ernest rutherford": [],
+	"ernest rutherford#electrons": [],
+	"nucleus#homeostasis": [
+		"maintain",
+		"relate to"
+	],
+	"homeostasis#nucleus": [
+		"relate to"
+	],
+	"nucleus#mitochondria": [
+		"affect"
+	],
+	"mitochondria#nucleus": [
+		"affect",
+		"similar to the",
+		"work with"
+	],
+	"nucleus#meiosis": [
+		"divide during"
+	],
+	"meiosis#nucleus": [
+		"relate to"
+	],
+	"nucleus#electron": [],
+	"electron#nucleus": [
+		"circle the",
+		"emitted from the",
+		"fall into the",
+		"move around",
+		"never fall into",
+		"not collapse into",
+		"not fall in",
+		"not fall into",
+		"not jump into the",
+		"orbit",
+		"orbit the",
+		"revolve around",
+		"revolving around the",
+		"spin around the",
+		"stay around",
+		"surround the",
+		"travel around the"
+	],
+	"nucleus#ribosome": [
+		"make",
+		"relate to",
+		"work with"
+	],
+	"ribosome#nucleus": [
+		"help the",
+		"leave the",
+		"work with the"
+	],
+	"nucleus#protein synthesis": [
+		"controls",
+		"direct",
+		"involved in",
+		"relate to"
+	],
+	"protein synthesis#nucleus": [],
+	"nucleus#nucleolus": [
+		"and",
+		"relate to"
+	],
+	"nucleolus#nucleus": [
+		"darker than the",
+		"help the",
+		"inside the",
+		"relate to"
+	],
+	"nucleus#city": [
+		"compared to a",
+		"like a"
+	],
+	"city#nucleus": [],
+	"nucleus#robert brown": [],
+	"robert brown#nucleus": [
+		"discovered",
+		"discovered the cell"
+	],
+	"nucleus#ernest rutherford": [],
+	"ernest rutherford#nucleus": [
+		"discover",
+		"explain the existence of"
+	]
 }

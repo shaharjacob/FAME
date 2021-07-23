@@ -233,5 +233,11 @@
 	"sun#emit": [
 		"continuous spectrum",
 		"white light"
-	]
+	],
+	"nucleus#dicover": [],
+	"nucleus#discover": [],
+	"nucleus#discovered": [],
+	"nucleus#invent": [],
+	"nucleus#prove": [],
+	"nucleus#prove his ideas about": []
 }
