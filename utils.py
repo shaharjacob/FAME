@@ -1,5 +1,5 @@
 import json
-from typing import List, Dict, Tuple, Union
+from typing import List, Dict, Tuple, Union, Optional
 
 import networkx as nx
 from click import secho
@@ -32,6 +32,13 @@ COLORS_DARK = [
 
 # DISTANCE_TRESHOLDS = [0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9]
 DISTANCE_TRESHOLDS = [0.8]
+
+def get_int(val: Optional[int], default_value: int) -> int:
+    try:
+        arg = int(val)
+    except:
+        arg = default_value
+    return arg
 
 
 def get_spaces(i, n):

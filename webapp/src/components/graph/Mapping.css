@@ -9,7 +9,7 @@
 
 .mapping-top {
     display: grid;
-    grid-template-columns: 0.24fr 0.13fr 0.13fr 0.13fr 0.13fr 0.24fr;
+    grid-template-columns: 0.25fr 0.12fr 0.12fr 0.07fr 0.07fr 0.12fr 0.25fr;
     margin-top: 20px;
 }
 

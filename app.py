@@ -19,20 +19,14 @@ def mapping_entities():
     model = SentenceEmbedding(data_collector=data_collector)
     base = [b.strip() for b in request.args.get('base').split(',')]
     target = [t.strip() for t in request.args.get('target').split(',')]
-    depth = request.args.get('depth')
-    try:
-        depth = int(depth)
-    except:
-        depth = 4
-    top_n = request.args.get('top')
-    try:
-        top_n = int(top_n)
-    except:
-        top_n = 3
+    depth = utils.get_int(request.args.get('depth'), 4)
+    top_n = utils.get_int(request.args.get('top'), 3)
+    num_of_suggestions = utils.get_int(request.args.get('suggestions'), 3)
 
     # here we map between base entitites and target entities
-    solutions = mapping.mapping_wrapper(base=base, target=target, suggestions=True, depth=depth, top_n=top_n)
+    solutions = mapping.mapping_wrapper(base=base, target=target, suggestions=True, depth=depth, top_n=top_n, num_of_suggestions=num_of_suggestions)
     data = []
+    scores = []
 
     for solution in solutions:
         # prepare the nodes for the react app
@@ -74,14 +68,21 @@ def mapping_entities():
             edge["scaling"]["max"] = max_score_for_scaling
         
         data.append({
-        "graph": {
-                "nodes": nodes,
-                "edges": edges,
-            }
+            "graph": {
+                    "nodes": nodes,
+                    "edges": edges,
+                },
+            "top_suggestions" : solution.get("top_suggestions", [])
+        })
+        
+        scores.append({
+            "label": f"Top #{len(scores)+1} ({solution['score']})",
+            "value": len(scores)
         })
 
     return jsonify({
         "data": data,
+        "scores": scores,
         "time": round(time.time() - start_time, 2),
     })
 

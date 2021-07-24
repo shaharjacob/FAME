@@ -19,7 +19,7 @@
 
 .mapping-demo-args {
     display: grid;
-    grid-template-columns: 0.1fr 0.1fr 0.8fr;
+    grid-template-columns: 0.1fr 0.1fr 0.1fr 0.7fr;
     grid-template-rows: 0.3fr 0.7fr;
     margin-top: 10px;
     width: 50%;

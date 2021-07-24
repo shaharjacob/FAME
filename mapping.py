@@ -255,11 +255,12 @@ def mapping_suggestions(
             top_suggestions.append(target_already_mapping_new[-1])
             
             # we need to add the mapping that we just found to the relations that already exist for that solution.
-            current_solution["relations"].append(result["best_mapping"])
+            relations = copy.deepcopy(current_solution["relations"])
+            relations.append(result["best_mapping"])
 
             solutions.append({
                 "mapping": [f"{b} --> {t}" for b, t in zip(base_already_mapping_new, target_already_mapping_new)],
-                "relations": current_solution["relations"],
+                "relations": relations,
                 "score": round(current_solution["score"] + result["best_score"], 3),
                 "actual_base": base_already_mapping_new,
                 "actual_target": target_already_mapping_new,
@@ -273,7 +274,8 @@ def mapping_suggestions_wrapper(
     solution: dict, 
     data_collector: DataCollector,
     model: SentenceEmbedding, 
-    solutions: List[dict]):
+    solutions: List[dict],
+    num_of_suggestions: int = 1):
     
     first_domain_not_mapped_entities = [entity for entity in domain if entity not in solution[first_domain]]
     for first_domain_not_mapped_entity in first_domain_not_mapped_entities:
@@ -298,13 +300,13 @@ def mapping_suggestions_wrapper(
             data_collector=data_collector,
             model=model,
             top_suggestions=top_suggestions,
-            num_of_suggestions=1,
+            num_of_suggestions=num_of_suggestions,
         )
-        for solution in solutions:
+        for solution in solutions: # TODO: fix here
             solution["top_suggestions"] = solution.get("top_suggestions", top_suggestions)
 
 
-def mapping_wrapper(base: List[str], target: List[str], suggestions: bool = True, depth: int = 2, top_n: int = 1, verbose: bool = False):
+def mapping_wrapper(base: List[str], target: List[str], suggestions: bool = True, depth: int = 2, top_n: int = 1, num_of_suggestions: int = 1, verbose: bool = False):
 
     # we want all the possible pairs.
     # general there are (n choose 2) * (n choose 2) * 2 pairs.
@@ -325,8 +327,8 @@ def mapping_wrapper(base: List[str], target: List[str], suggestions: bool = True
         # the idea is to iterate over the founded solutions, and check if there are entities are not mapped.
         # this logic is checked only if ONE entity have missing mapping (from base or target)
         for solution in solutions:
-            mapping_suggestions_wrapper(base, "actual_base", "actual_target", solution, data_collector, model, suggestions_solutions)
-            mapping_suggestions_wrapper(target, "actual_target", "actual_base", solution, data_collector, model, suggestions_solutions)
+            mapping_suggestions_wrapper(base, "actual_base", "actual_target", solution, data_collector, model, suggestions_solutions, num_of_suggestions)
+            mapping_suggestions_wrapper(target, "actual_target", "actual_base", solution, data_collector, model, suggestions_solutions, num_of_suggestions)
     
     all_solutions = sorted(solutions + suggestions_solutions, key=lambda x: x["score"], reverse=True)
     if verbose:

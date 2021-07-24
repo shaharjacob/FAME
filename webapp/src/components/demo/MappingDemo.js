@@ -13,7 +13,8 @@ const MappingDemo = () => {
         var target = document.getElementById("target-input")
         var depth = document.getElementById("depth")
         var top_solutions = document.getElementById("top-solutions")
-        history.push(`/mapping?base=${base.value.split(",")}&target=${target.value.split(",")}&depth=${depth.value}&top=${top_solutions.value}`)
+        var suggestions = document.getElementById("suggestions")
+        history.push(`/mapping?base=${base.value.split(",")}&target=${target.value.split(",")}&depth=${depth.value}&top=${top_solutions.value}&suggestions=${suggestions.value}`)
     }
 
     return (
@@ -28,9 +29,11 @@ const MappingDemo = () => {
             <div className="mapping-demo-args">
                 <span><i className="fas fa-skull-crossbones dark-gray"></i>&nbsp;Depth</span>
                 <span><i className="fas fa-trophy gold"></i>&nbsp;Top solutions</span>
+                <span><i className="far fa-lightbulb gold"></i>&nbsp;Number of Suggestions</span>
                 <div></div>
                 <input className="mapping-demo-input" defaultValue={4} id="depth" />
                 <input className="mapping-demo-input" defaultValue={3} id="top-solutions" />
+                <input className="mapping-demo-input" defaultValue={3} id="suggestions" />
                 <div></div>
             </div>
             <button className="mapping-demo-button-submit" onClick={onSubmit}>Submit</button>

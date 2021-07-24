@@ -8,7 +8,7 @@ import ClipLoader from 'react-spinners/ClipLoader'
 
 import './Graph.css'
 import './Mapping.css'
-import { IsEmpty, topSolutionsOptions } from '../../utils'
+import { IsEmpty } from '../../utils'
 
 
 const Mapping = () => {
@@ -18,12 +18,14 @@ const Mapping = () => {
     // graph viewer
     const [graph, setGraph] = useState({})
     const [data, setData] = useState([])
+    const [topSuggestions, setTopSuggestions] = useState([])
 
     // general
     const [isLoading, setIsLoading] = useState(true)
     const [baseEntities, setBaseEntities] = useState([])
     const [targetEntities, setTargetEntities] = useState([])
     const [exeutionTime, setExeutionTime] = useState(0)
+    const [topSolutionsOptions, setTopSolutionsOptions] = useState([])
 
     useEffect(() => {
         let params = new URLSearchParams(location.search)
@@ -38,6 +40,8 @@ const Mapping = () => {
             if (!IsEmpty(data) && data["data"].length > 0 && !IsEmpty(data["data"][0]["graph"])) {
                 setData(data["data"])
                 setGraph(data["data"][0]["graph"])
+                setTopSuggestions(data["data"][0]["top_suggestions"])
+                setTopSolutionsOptions(data["scores"])
                 setExeutionTime(data["time"])
                 setIsLoading(false)
             }
@@ -45,8 +49,8 @@ const Mapping = () => {
       },[location.search])
 
     function onChangeTopSolutions(obj) {
-        console.log(obj.value)
-        setGraph(data[obj.value-1]["graph"])
+        setGraph(data[obj.value]["graph"])
+        setTopSuggestions(data[obj.value]["top_suggestions"])
     }
 
     const options = {
@@ -102,10 +106,13 @@ const Mapping = () => {
                             <Select
                                 className="select-top-solutions"
                                 onChange={(obj) => onChangeTopSolutions(obj)}
-                                options={topSolutionsOptions(data.length)}
-                                placeholder="1"
+                                options={topSolutionsOptions}
                             />
                         </div>
+                    </div>
+                    <div>
+                        <div><i className="far fa-lightbulb gold"></i>&nbsp;<span className="mapping-titles">Suggestions</span></div>
+                        <div><code>{topSuggestions.join(",")}</code></div>
                     </div>
                     <div></div>
                 </div>
