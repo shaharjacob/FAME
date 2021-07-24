@@ -19,53 +19,69 @@ def mapping_entities():
     model = SentenceEmbedding(data_collector=data_collector)
     base = [b.strip() for b in request.args.get('base').split(',')]
     target = [t.strip() for t in request.args.get('target').split(',')]
+    depth = request.args.get('depth')
+    try:
+        depth = int(depth)
+    except:
+        depth = 4
+    top_n = request.args.get('top')
+    try:
+        top_n = int(top_n)
+    except:
+        top_n = 3
 
     # here we map between base entitites and target entities
-    res = mapping.mapping(base, target, True, [], [], [])
+    solutions = mapping.mapping_wrapper(base=base, target=target, suggestions=True, depth=depth, top_n=top_n)
+    data = []
 
-    # prepare the nodes for the react app
-    nodes = python2react.get_nodes_for_app(props=res["mapping"], start_idx=0)
-    nodes_val2index = {node:i for i, node in enumerate(res["mapping"])}
-    edges = []
-    max_score_for_scaling = 0
+    for solution in solutions:
+        # prepare the nodes for the react app
+        nodes = python2react.get_nodes_for_app(props=solution["mapping"], start_idx=0)
+        nodes_val2index = {node:i for i, node in enumerate(solution["mapping"])}
+        edges = []
+        max_score_for_scaling = 0
 
-    # we iterate over the mapping that found. 
-    # the first iterate is the strongest map, and so on.
-    for relation in res["relations"]:
-        # we count both direction. for example earth:sun, electrons:nucleus, we want also sun:earth, nucleus:electrons.
-        for direction in range(2):
-            node1 = f"{relation[0][0]} --> {relation[1][0]}"
-            node2 = f"{relation[0][1]} --> {relation[1][1]}"
-            edge = (nodes_val2index[node1], nodes_val2index[node2])
-            if direction == 1:
-                edge = (edge[1], edge[0])
-                relation = [(relation[0][1], relation[0][0]), (relation[1][1], relation[1][0])]
+        # we iterate over the mapping that found. 
+        # the first iterate is the strongest map, and so on.
+        for relation in solution["relations"]:
+            # we count both direction. for example earth:sun, electrons:nucleus, we want also sun:earth, nucleus:electrons.
+            for direction in range(2):
+                node1 = f"{relation[0][0]} --> {relation[1][0]}"
+                node2 = f"{relation[0][1]} --> {relation[1][1]}"
+                edge = (nodes_val2index[node1], nodes_val2index[node2])
+                if direction == 1:
+                    edge = (edge[1], edge[0])
+                    relation = [(relation[0][1], relation[0][0]), (relation[1][1], relation[1][0])]
 
-            # now we extract information of the relation. 
-            # actually we already did it in mapping.mapping(base, target), but this is very quick since we already saved all the props.
-            # and it more readable to do it here again.
-            graph = mapping.get_pair_mapping(model, data_collector, relation)
-            if not graph:
-                continue
+                # now we extract information of the relation. 
+                # actually we already did it in mapping.mapping(base, target), but this is very quick since we already saved all the props.
+                # and it more readable to do it here again.
+                graph = mapping.get_pair_mapping(model, data_collector, relation)
+                if not graph:
+                    continue
 
-            # now we are building the labels on the edge between two nodes (node is a map between base and target)
-            # we take the best prop in each cluster.
-            label = []
-            for i, cluster_edge in enumerate(graph["graph"]):
-                props = utils.get_ordered_edges_similarity(model, graph["clusters1"][cluster_edge[0]], graph["clusters2"][cluster_edge[1] - len(graph["clusters1"])])
-                label.append(f"{relation[0][0]} {props[0][0]} {relation[0][1]} :: {relation[1][0]} {props[0][1]} {relation[1][1]} :: {cluster_edge[2]}")
-            edges.extend(python2react.get_single_edge_for_app(edge, "\n".join(sorted(label, key=lambda x: x.split('::')[2], reverse=True)), graph["score"], i))
-            max_score_for_scaling = max(max_score_for_scaling, graph["score"])
-    
-    # for scaling
-    for edge in edges:
-        edge["scaling"]["max"] = max_score_for_scaling
-
-    return jsonify({
+                # now we are building the labels on the edge between two nodes (node is a map between base and target)
+                # we take the best prop in each cluster.
+                label = []
+                for i, cluster_edge in enumerate(graph["graph"]):
+                    props = utils.get_ordered_edges_similarity(model, graph["clusters1"][cluster_edge[0]], graph["clusters2"][cluster_edge[1] - len(graph["clusters1"])])
+                    label.append(f"{relation[0][0]} {props[0][0]} {relation[0][1]} :: {relation[1][0]} {props[0][1]} {relation[1][1]} :: {cluster_edge[2]}")
+                edges.extend(python2react.get_single_edge_for_app(edge, "\n".join(sorted(label, key=lambda x: x.split('::')[2], reverse=True)), graph["score"], i))
+                max_score_for_scaling = max(max_score_for_scaling, graph["score"])
+        
+        # for scaling
+        for edge in edges:
+            edge["scaling"]["max"] = max_score_for_scaling
+        
+        data.append({
         "graph": {
                 "nodes": nodes,
                 "edges": edges,
-            },
+            }
+        })
+
+    return jsonify({
+        "data": data,
         "time": round(time.time() - start_time, 2),
     })
 

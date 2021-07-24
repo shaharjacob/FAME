@@ -17,6 +17,18 @@
     text-align: center;
 }
 
+.mapping-demo-args {
+    display: grid;
+    grid-template-columns: 0.1fr 0.1fr 0.8fr;
+    grid-template-rows: 0.3fr 0.7fr;
+    margin-top: 10px;
+    width: 50%;
+    height: 60px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
 .mapping-demo-button-submit {
     background-color: #006eec;
     border: 0;
@@ -36,4 +48,9 @@
 .mapping-demo-textarea {
     margin-left: 10px;
     margin-right: 10px;
+}
+
+.mapping-demo-input {
+    margin-left: 5px;
+    margin-right: 5px;
 }

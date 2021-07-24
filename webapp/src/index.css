@@ -27,6 +27,11 @@ code {
   color: #5c5c5c;
 }
 
+.gold {
+  color: #ebc700;
+}
+
+
 .container {
   display: grid;
   height: 100vh;

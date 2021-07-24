@@ -9,11 +9,17 @@
 
 .mapping-top {
     display: grid;
-    grid-template-columns: 0.2fr 0.2fr 0.2fr 0.2fr 0.2fr;
+    grid-template-columns: 0.24fr 0.13fr 0.13fr 0.13fr 0.13fr 0.24fr;
     margin-top: 20px;
 }
 
 .mapping-titles {
     color: #252525;
     font-size: 14px;
+}
+
+.select-top-solutions {
+    width: 150px;
+    margin-right: auto;
+    margin-left: auto;
 }

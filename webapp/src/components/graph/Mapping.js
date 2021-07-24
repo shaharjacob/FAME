@@ -1,5 +1,6 @@
 import React, {useState, useEffect} from 'react'
 
+import Select from 'react-select';
 import Graph from "react-vis-network-graph"
 import { useLocation } from 'react-router-dom'
 import LoadingOverlay from 'react-loading-overlay'
@@ -7,7 +8,7 @@ import ClipLoader from 'react-spinners/ClipLoader'
 
 import './Graph.css'
 import './Mapping.css'
-import { IsEmpty } from '../../utils'
+import { IsEmpty, topSolutionsOptions } from '../../utils'
 
 
 const Mapping = () => {
@@ -16,6 +17,7 @@ const Mapping = () => {
 
     // graph viewer
     const [graph, setGraph] = useState({})
+    const [data, setData] = useState([])
 
     // general
     const [isLoading, setIsLoading] = useState(true)
@@ -33,13 +35,19 @@ const Mapping = () => {
             return response.json()
           }
         }).then(data => {
-            if (!IsEmpty(data) && !IsEmpty(data["graph"])) {
-                setGraph(data["graph"])
+            if (!IsEmpty(data) && data["data"].length > 0 && !IsEmpty(data["data"][0]["graph"])) {
+                setData(data["data"])
+                setGraph(data["data"][0]["graph"])
                 setExeutionTime(data["time"])
                 setIsLoading(false)
             }
         })
       },[location.search])
+
+    function onChangeTopSolutions(obj) {
+        console.log(obj.value)
+        setGraph(data[obj.value-1]["graph"])
+    }
 
     const options = {
         height: "800px",
@@ -87,6 +95,17 @@ const Mapping = () => {
                     <div>
                         <div><i className="far fa-clock dark-gray"></i>&nbsp;<span className="mapping-titles">Execution time</span></div>
                         <div><code>{exeutionTime} sec</code></div>
+                    </div>
+                    <div>
+                        <div>
+                            <i className="fas fa-trophy gold"></i>&nbsp;<span className="mapping-titles">Top solutions</span>
+                            <Select
+                                className="select-top-solutions"
+                                onChange={(obj) => onChangeTopSolutions(obj)}
+                                options={topSolutionsOptions(data.length)}
+                                placeholder="1"
+                            />
+                        </div>
                     </div>
                     <div></div>
                 </div>

@@ -5,6 +5,16 @@ export const IsEmpty = (obj) => {
     return true
 }
 
+export const topSolutionsOptions = (n) => {
+    let options = []
+    for (let i = 0; i < n; i++){
+        options.push({
+            value: i+1, label: i+1
+        })
+    }
+    return options
+}
+
 export const options = [
     { value: 'air conditioner', label: 'air conditioner' },
     { value: 'anarchy', label: 'anarchy' },
