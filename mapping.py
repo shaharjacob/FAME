@@ -232,12 +232,13 @@ def mapping(
             )
     
 
-def mapping_single_iteration(
+def mapping_suggestions(
     available_pairs: List[List[List[Tuple[str, str]]]],
     current_solution: dict,
     solutions: List[dict],
     data_collector: DataCollector,
     model: SentenceEmbedding,
+    top_suggestions: List[str],
     num_of_suggestions: int = 1):
     # this function is use for mapping in suggestions mode. this is only one iteration.
     # we will get the top-num-of-suggestions with the best score.
@@ -250,6 +251,9 @@ def mapping_single_iteration(
             base_already_mapping_new = update_list(current_solution["actual_base"], (result["best_mapping"][0][0], result["best_mapping"][0][1]), inplace=False)
             target_already_mapping_new = update_list(current_solution["actual_target"], (result["best_mapping"][1][0], result["best_mapping"][1][1]), inplace=False)
             
+            # updating the top suggestions for the GUI
+            top_suggestions.append(target_already_mapping_new[-1])
+            
             # we need to add the mapping that we just found to the relations that already exist for that solution.
             current_solution["relations"].append(result["best_mapping"])
 
@@ -260,7 +264,45 @@ def mapping_single_iteration(
                 "actual_base": base_already_mapping_new,
                 "actual_target": target_already_mapping_new,
             })
-        
+
+
+def mapping_suggestions_wrapper(
+    domain: List[str],
+    first_domain: str, 
+    second_domain: str, 
+    solution: dict, 
+    data_collector: DataCollector,
+    model: SentenceEmbedding, 
+    solutions: List[dict]):
+    
+    first_domain_not_mapped_entities = [entity for entity in domain if entity not in solution[first_domain]]
+    for first_domain_not_mapped_entity in first_domain_not_mapped_entities:
+        # suggestion for mapping an entity. a list of strings.
+        entities_suggestions = suggest_entities.get_suggestions_for_missing_entities(data_collector, first_domain_not_mapped_entity, solution[first_domain], solution[second_domain], verbose=False)
+        if not entities_suggestions:
+            continue  # no suggestion found :(
+        if first_domain == "actual_base":
+            new_base = solution["actual_base"] + [first_domain_not_mapped_entity]
+            new_target = solution["actual_target"] + entities_suggestions
+        else:  # first_domain == "actual_target"
+            new_base = solution["actual_base"] + entities_suggestions
+            new_target = solution["actual_target"] + [first_domain_not_mapped_entity]
+            
+        all_pairs = get_all_possible_pairs_map(new_base, new_target)
+        available_pairs_new = update_paris_map(all_pairs, solution["actual_base"], solution["actual_target"])
+        top_suggestions = []
+        mapping_suggestions(
+            available_pairs=available_pairs_new,
+            current_solution=copy.deepcopy(solution),
+            solutions=solutions,
+            data_collector=data_collector,
+            model=model,
+            top_suggestions=top_suggestions,
+            num_of_suggestions=1,
+        )
+        for solution in solutions:
+            solution["top_suggestions"] = solution.get("top_suggestions", top_suggestions)
+
 
 def mapping_wrapper(base: List[str], target: List[str], suggestions: bool = True, depth: int = 2, top_n: int = 1, verbose: bool = False):
 
@@ -283,43 +325,8 @@ def mapping_wrapper(base: List[str], target: List[str], suggestions: bool = True
         # the idea is to iterate over the founded solutions, and check if there are entities are not mapped.
         # this logic is checked only if ONE entity have missing mapping (from base or target)
         for solution in solutions:
-            base_not_mapped_entities = [entity for entity in base if entity not in solution["actual_base"]]
-            for base_not_mapped_entity in base_not_mapped_entities:
-                # suggestion for mapping an entity. a list of strings.
-                entities_suggestions = suggest_entities.get_suggestions_for_missing_entities(data_collector, base_not_mapped_entity, solution["actual_base"], solution["actual_target"], verbose=False)
-                if not entities_suggestions:
-                    continue  # no suggestion found :(
-                new_base = solution["actual_base"] + [base_not_mapped_entity]
-                new_target = solution["actual_target"] + entities_suggestions
-                all_pairs = get_all_possible_pairs_map(new_base, new_target)
-                available_pairs_new = update_paris_map(all_pairs, solution["actual_base"], solution["actual_target"])
-                mapping_single_iteration(
-                    available_pairs=available_pairs_new,
-                    current_solution=copy.deepcopy(solution),
-                    solutions=suggestions_solutions,
-                    data_collector=data_collector,
-                    model=model,
-                    num_of_suggestions=1
-                )
-            
-            target_not_mapped_entities = [entity for entity in target if entity not in solution["actual_target"]]
-            for target_not_mapped_entity in target_not_mapped_entities:
-                # suggestion for mapping an entity. a list of strings.
-                entities_suggestions = suggest_entities.get_suggestions_for_missing_entities(data_collector, target_not_mapped_entity, solution["actual_target"], solution["actual_base"], verbose=False)
-                if not entities_suggestions:
-                    continue  # no suggestion found :(
-                new_base = solution["actual_base"] + entities_suggestions
-                new_target = solution["actual_target"] + [target_not_mapped_entity]
-                all_pairs = get_all_possible_pairs_map(new_base, new_target)
-                available_pairs_new = update_paris_map(all_pairs, solution["actual_base"], solution["actual_target"])
-                mapping_single_iteration(
-                    available_pairs=available_pairs_new,
-                    current_solution=copy.deepcopy(solution),
-                    solutions=suggestions_solutions,
-                    data_collector=data_collector,
-                    model=model,
-                    num_of_suggestions=1
-                )
+            mapping_suggestions_wrapper(base, "actual_base", "actual_target", solution, data_collector, model, suggestions_solutions)
+            mapping_suggestions_wrapper(target, "actual_target", "actual_base", solution, data_collector, model, suggestions_solutions)
     
     all_solutions = sorted(solutions + suggestions_solutions, key=lambda x: x["score"], reverse=True)
     if verbose:
