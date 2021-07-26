@@ -1,7 +1,6 @@
 import json
 from typing import List, Optional
 
-import utils
 import inflect
 import concept_net
 import google_autosuggest
@@ -15,9 +14,9 @@ class DataCollector(object):
         self.engine = engine
         self.override_database = override_database
         self.save_database = save_database
-        self.quasimodo_edges = utils.read_json('database/quasimodo_edges.json') if save_database else {}
-        self.google_edges = utils.read_json('database/google_edges.json') if save_database else {}
-        self.conceptnet_edges = utils.read_json('database/conceptnet_edges.json') if save_database else {}
+        self.quasimodo_edges = read_json('database/quasimodo_edges.json') if save_database else {}
+        self.google_edges = read_json('database/google_edges.json') if save_database else {}
+        self.conceptnet_edges = read_json('database/conceptnet_edges.json') if save_database else {}
 
 
     def get_entities_relations(self, entity1: str, entity2: str, from_where: bool = False) -> List[str]:
@@ -65,7 +64,7 @@ class DataCollector(object):
     
 
     def get_entitiy_props(self, entity: str, from_where: bool = False) -> List[str]:
-        quasimodo_db = utils.read_json('database/quasimodo_nodes.json')
+        quasimodo_db = read_json('database/quasimodo_nodes.json')
         if entity not in quasimodo_db:
             if not self.quasimodo:
                 self.quasimodo = Quasimodo(path='tsv/quasimodo.tsv')
@@ -95,6 +94,11 @@ class DataCollector(object):
         with open('database/conceptnet_edges.json', 'w') as f3:
             json.dump(self.conceptnet_edges, f3, indent='\t')
 
+
+def read_json(path: str) -> dict:
+    with open(path, 'r') as f:
+        return json.load(f)
+    
 
 if __name__ == '__main__':
     data_collector = DataCollector()

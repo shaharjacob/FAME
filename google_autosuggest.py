@@ -4,12 +4,13 @@ from typing import List, Dict, Tuple
 
 import inflect
 import requests
-from tqdm import tqdm
 from click import secho
 
-import utils
-
 IGNORE = ["a"]
+
+def read_json(path: str) -> dict:
+    with open(path, 'r') as f:
+        return json.load(f)
 
 class GoogleAutoSuggestEntityProps(object):
     def __init__(self,
@@ -195,7 +196,7 @@ def get_entity_suggestions(entity: str, prop: str, plural_and_singular: bool = F
 def get_entity_props(entity: str):
     # given an entity, it will give some props that charactrize this entity.
     # for example, given entity 'newton', it will return props like: derived unit, fundamental unit, measure of
-    google_db = utils.read_json('database/google_nodes.json')
+    google_db = read_json('database/google_nodes.json')
     if entity not in google_db:
         suggestions = []
         for p in ["is a", "is a type of"]:

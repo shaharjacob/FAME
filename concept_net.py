@@ -6,7 +6,10 @@ import requests
 from click import secho
 from bs4 import BeautifulSoup
 
-import utils
+
+def read_json(path: str) -> dict:
+    with open(path, 'r') as f:
+        return json.load(f)
 
 
 def read_page(entity: str, which: str, n: int = 20) -> str:
@@ -114,7 +117,7 @@ def get_entity_props(entity: str, engine: inflect.engine = None, n_best: int = 5
 
     # we want the props of a single entity
     # we first check if the entity exists in the db - if not, we extract if from the conceptNet API.
-    conceptnet_db = utils.read_json('database/conceptnet_nodes.json')
+    conceptnet_db = read_json('database/conceptnet_nodes.json')
     should_save = False
 
     if entity not in conceptnet_db:
