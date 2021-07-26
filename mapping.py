@@ -239,6 +239,7 @@ def mapping_suggestions(
     data_collector: DataCollector,
     model: SentenceEmbedding,
     top_suggestions: List[str],
+    domain: str,
     num_of_suggestions: int = 1):
     # this function is use for mapping in suggestions mode. this is only one iteration.
     # we will get the top-num-of-suggestions with the best score.
@@ -252,7 +253,10 @@ def mapping_suggestions(
             target_already_mapping_new = update_list(current_solution["actual_target"], (result["best_mapping"][1][0], result["best_mapping"][1][1]), inplace=False)
             
             # updating the top suggestions for the GUI
-            top_suggestions.append(target_already_mapping_new[-1])
+            if domain == "actual_base":
+                top_suggestions.append(target_already_mapping_new[-1])
+            else:  # domain == "actual_target"
+                top_suggestions.append(base_already_mapping_new[-1])
             
             # we need to add the mapping that we just found to the relations that already exist for that solution.
             relations = copy.deepcopy(current_solution["relations"])
@@ -300,6 +304,7 @@ def mapping_suggestions_wrapper(
             data_collector=data_collector,
             model=model,
             top_suggestions=top_suggestions,
+            domain=first_domain,
             num_of_suggestions=num_of_suggestions,
         )
         for solution in solutions: # TODO: fix here
@@ -329,7 +334,7 @@ def mapping_wrapper(base: List[str], target: List[str], suggestions: bool = True
         for solution in solutions:
             mapping_suggestions_wrapper(base, "actual_base", "actual_target", solution, data_collector, model, suggestions_solutions, num_of_suggestions)
             mapping_suggestions_wrapper(target, "actual_target", "actual_base", solution, data_collector, model, suggestions_solutions, num_of_suggestions)
-    
+
     all_solutions = sorted(solutions + suggestions_solutions, key=lambda x: x["score"], reverse=True)
     if verbose:
         for solution in all_solutions:
