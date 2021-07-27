@@ -4404,5 +4404,145 @@
 	"newton#things": [],
 	"things#newton": [],
 	"newton#the moon not": [],
-	"the moon not#newton": []
+	"the moon not#newton": [],
+	"solar system#gravity": [
+		"related to"
+	],
+	"gravity#solar system": [
+		"affect",
+		"affect the",
+		"affect the formation of stars planets and",
+		"form planets and stars and structure",
+		"form the",
+		"important in our",
+		"important in the",
+		"related to"
+	],
+	"atom#electron": [],
+	"electron#atom": [
+		"in",
+		"move in",
+		"move in an",
+		"stay in the"
+	],
+	"atom#electromagnetism": [],
+	"electromagnetism#atom": [],
+	"nucleus#electromagnetism": [],
+	"electromagnetism#nucleus": [],
+	"electron#electromagnetism": [],
+	"electromagnetism#electron": [],
+	"solar system#planet": [],
+	"planet#solar system": [
+		"move around our"
+	],
+	"gravity#planet": [
+		"affect",
+		"calculated on other",
+		"different on",
+		"different on each",
+		"different on every",
+		"different on other",
+		"form",
+		"form the",
+		"make",
+		"measured on other",
+		"the dominant force among"
+	],
+	"planet#gravity": [
+		"created",
+		"get",
+		"have",
+		"have different",
+		"have surface",
+		"mass affect",
+		"size affect"
+	],
+	"planet#sun": [
+		"affect the",
+		"close to the",
+		"closer to the",
+		"closest to the",
+		"different from the",
+		"form around the",
+		"move around the",
+		"orbit",
+		"orbit around",
+		"orbit the",
+		"revolve",
+		"revolve around the",
+		"rotate around the",
+		"start orbiting the",
+		"stay in orbit around the",
+		"travel around"
+	],
+	"sun#planet": [
+		"affect",
+		"bigger than all the",
+		"bigger than the other",
+		"called",
+		"control the",
+		"different to",
+		"help the",
+		"important for the",
+		"look from other",
+		"not a",
+		"similar to the",
+		"the biggest",
+		"the hottest"
+	],
+	"water#pressure": [
+		"boil at lower"
+	],
+	"heat#temperature": [
+		"affect",
+		"always associated with",
+		"capacity change with",
+		"capacity contribute to regulating global",
+		"capacity dependent on",
+		"capacity increase with",
+		"flow between substances of different",
+		"flow from high to low",
+		"index higher than",
+		"islands contribute to city",
+		"move from higher to lower"
+	],
+	"pressure#water": [],
+	"temperature#heat": [
+		"affect",
+		"and",
+		"change with specific",
+		"related to"
+	],
+	"heat#thermodynamics": [
+		"engine related to",
+		"pump work",
+		"transfer differ from"
+	],
+	"thermodynamics#heat": [],
+	"heat#kettle": [
+		"loss in a",
+		"travel through a"
+	],
+	"kettle#heat": [],
+	"temperature#thermodynamics": [],
+	"thermodynamics#temperature": [],
+	"temperature#kettle": [],
+	"kettle#temperature": [],
+	"thermodynamics#kettle": [],
+	"kettle#thermodynamics": [],
+	"water#hydrodynamics": [],
+	"hydrodynamics#water": [],
+	"water#bucket": [
+		"move in",
+		"stay in"
+	],
+	"bucket#water": [
+		"of"
+	],
+	"pressure#hydrodynamics": [],
+	"hydrodynamics#pressure": [],
+	"pressure#bucket": [],
+	"bucket#pressure": [],
+	"hydrodynamics#bucket": [],
+	"bucket#hydrodynamics": []
 }

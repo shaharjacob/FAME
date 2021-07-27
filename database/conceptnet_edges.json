@@ -1659,5 +1659,65 @@
 	"newton#things": [],
 	"things#newton": [],
 	"newton#the moon not": [],
-	"the moon not#newton": []
+	"the moon not#newton": [],
+	"solar system#gravity": [],
+	"gravity#solar system": [],
+	"atom#electron": [],
+	"electron#atom": [],
+	"atom#electromagnetism": [],
+	"electromagnetism#atom": [],
+	"nucleus#electromagnetism": [],
+	"electromagnetism#nucleus": [],
+	"electron#electromagnetism": [],
+	"electromagnetism#electron": [],
+	"solar system#planet": [],
+	"planet#solar system": [
+		"understand a"
+	],
+	"gravity#planet": [],
+	"planet#gravity": [
+		"slingshot from planet's"
+	],
+	"planet#sun": [
+		"circle the",
+		"orbiting around the"
+	],
+	"sun#planet": [
+		"a",
+		"a star not a",
+		"necessary for life on our"
+	],
+	"water#pressure": [],
+	"heat#temperature": [
+		"",
+		"increase"
+	],
+	"pressure#water": [],
+	"temperature#heat": [],
+	"heat#thermodynamics": [],
+	"thermodynamics#heat": [],
+	"heat#kettle": [],
+	"kettle#heat": [],
+	"temperature#thermodynamics": [],
+	"thermodynamics#temperature": [],
+	"temperature#kettle": [],
+	"kettle#temperature": [],
+	"thermodynamics#kettle": [],
+	"kettle#thermodynamics": [],
+	"water#hydrodynamics": [],
+	"hydrodynamics#water": [],
+	"water#bucket": [],
+	"bucket#water": [
+		"bail",
+		"carry",
+		"carry",
+		"hold",
+		"holding"
+	],
+	"pressure#hydrodynamics": [],
+	"hydrodynamics#pressure": [],
+	"pressure#bucket": [],
+	"bucket#pressure": [],
+	"hydrodynamics#bucket": [],
+	"bucket#hydrodynamics": []
 }

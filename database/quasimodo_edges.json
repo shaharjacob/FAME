@@ -3311,5 +3311,141 @@
 		"be measured in"
 	],
 	"newton#the moon not": [],
-	"the moon not#newton": []
+	"the moon not#newton": [],
+	"solar system#gravity": [],
+	"gravity#solar system": [
+		"affect",
+		"be important in",
+		"control motion in",
+		"control motions in",
+		"help",
+		"hold together",
+		"influence",
+		"maintain obits in"
+	],
+	"atom#electron": [
+		"attract",
+		"can share",
+		"give away",
+		"give up",
+		"have",
+		"lose",
+		"move around",
+		"need",
+		"share",
+		"shared"
+	],
+	"electron#atom": [
+		"be attracted to",
+		"be in",
+		"be most important part of",
+		"be part of",
+		"fill up orbitals in",
+		"fly off",
+		"leave",
+		"move in",
+		"move to",
+		"travel in"
+	],
+	"atom#electromagnetism": [],
+	"electromagnetism#atom": [],
+	"nucleus#electromagnetism": [],
+	"electromagnetism#nucleus": [],
+	"electron#electromagnetism": [],
+	"electromagnetism#electron": [],
+	"solar system#planet": [
+		"has property"
+	],
+	"planet#solar system": [
+		"be formed in",
+		"be in",
+		"have motions in",
+		"move around",
+		"move in"
+	],
+	"gravity#planet": [
+		"affect",
+		"affect weight on",
+		"be determined on",
+		"be different on",
+		"develop around",
+		"differ on",
+		"hold together",
+		"keep",
+		"make round",
+		"move"
+	],
+	"planet#gravity": [
+		"create",
+		"float without",
+		"generate",
+		"have",
+		"move without"
+	],
+	"planet#sun": [
+		"be away",
+		"be closer to",
+		"be from",
+		"crash into",
+		"do orbit",
+		"fly into",
+		"hit",
+		"orbit",
+		"revolve around",
+		"rotate around"
+	],
+	"sun#planet": [
+		"be considered",
+		"has property",
+		"pull in"
+	],
+	"water#pressure": [],
+	"heat#temperature": [
+		"be differed from",
+		"be different from",
+		"be related to",
+		"be with",
+		"differ from",
+		"relate to",
+		"vary with"
+	],
+	"pressure#water": [
+		"affect",
+		"has property"
+	],
+	"temperature#heat": [
+		"be different from",
+		"be related to",
+		"be same as",
+		"differ from",
+		"relate to"
+	],
+	"heat#thermodynamics": [],
+	"thermodynamics#heat": [
+		"be related to"
+	],
+	"heat#kettle": [],
+	"kettle#heat": [
+		"conduct",
+		"lose",
+		"produce"
+	],
+	"temperature#thermodynamics": [],
+	"thermodynamics#temperature": [],
+	"temperature#kettle": [],
+	"kettle#temperature": [],
+	"thermodynamics#kettle": [],
+	"kettle#thermodynamics": [],
+	"water#hydrodynamics": [],
+	"hydrodynamics#water": [],
+	"water#bucket": [
+		"fall out of"
+	],
+	"bucket#water": [],
+	"pressure#hydrodynamics": [],
+	"hydrodynamics#pressure": [],
+	"pressure#bucket": [],
+	"bucket#pressure": [],
+	"hydrodynamics#bucket": [],
+	"bucket#hydrodynamics": []
 }
