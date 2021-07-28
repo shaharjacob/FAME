@@ -3449,5 +3449,363 @@
 	"hydrodynamics#bucket": [],
 	"bucket#hydrodynamics": [],
 	"electrons#electromagnetism": [],
-	"electromagnetism#electrons": []
+	"electromagnetism#electrons": [],
+	"waves#water": [
+		"affect",
+		"break in",
+		"move in",
+		"propagate across",
+		"travel faster in"
+	],
+	"sounds#air": [
+		"can",
+		"die off in",
+		"go off",
+		"propagate through"
+	],
+	"water#waves": [
+		"affect"
+	],
+	"air#sounds": [
+		"make"
+	],
+	"sounds#wall": [
+		"go through"
+	],
+	"wall#sounds": [
+		"amplify",
+		"make"
+	],
+	"sounds#insulation": [],
+	"insulation#sounds": [],
+	"air#wall": [],
+	"wall#air": [
+		"has property"
+	],
+	"air#insulation": [],
+	"insulation#air": [],
+	"wall#insulation": [],
+	"insulation#wall": [],
+	"waves#shore": [
+		"affect",
+		"as approaching",
+		"break at",
+		"break far from",
+		"break near",
+		"come to",
+		"flow towards",
+		"go to",
+		"go towards",
+		"move towards"
+	],
+	"shore#waves": [],
+	"waves#breakwater": [],
+	"breakwater#waves": [],
+	"water#shore": [],
+	"shore#water": [],
+	"water#breakwater": [],
+	"breakwater#water": [],
+	"shore#breakwater": [],
+	"breakwater#shore": [],
+	"projectile#earth": [],
+	"earth#projectile": [],
+	"planet#elliptical": [
+		"has property"
+	],
+	"elliptical#planet": [],
+	"planet#space": [
+		"be in",
+		"drift into",
+		"fall in",
+		"float in",
+		"fly off into",
+		"move in",
+		"move off into",
+		"remain in",
+		"slow down in",
+		"stay in"
+	],
+	"space#planet": [],
+	"sun#elliptical": [],
+	"elliptical#sun": [],
+	"elliptical#space": [],
+	"space#elliptical": [],
+	"projectile#parabolic": [],
+	"parabolic#projectile": [],
+	"projectile#air": [],
+	"air#projectile": [],
+	"earth#parabolic": [],
+	"parabolic#earth": [],
+	"earth#air": [
+		"be planet with",
+		"have"
+	],
+	"air#earth": [
+		"circulate around",
+		"leave"
+	],
+	"parabolic#air": [],
+	"air#parabolic": [],
+	"galaxy#sun": [],
+	"sun#galaxy": [],
+	"galaxy#planet": [],
+	"planet#galaxy": [],
+	"galaxy#gravity": [],
+	"gravity#galaxy": [
+		"affect",
+		"allow",
+		"hold together",
+		"keep stars together in"
+	],
+	"solar planet#sun": [],
+	"sun#solar planet": [],
+	"cell#electron": [
+		"run out of"
+	],
+	"electron#cell": [],
+	"cell#electromagnetism": [],
+	"electromagnetism#cell": [],
+	"solar planet#planet": [],
+	"planet#solar planet": [],
+	"solar planet#gravity": [],
+	"gravity#solar planet": [],
+	"heat#iron": [],
+	"iron#heat": [],
+	"temperature#iron": [],
+	"iron#temperature": [],
+	"kettle#iron": [],
+	"iron#kettle": [],
+	"water#pipe": [],
+	"pipe#water": [],
+	"pressure#pipe": [],
+	"pipe#pressure": [],
+	"bucket#pipe": [],
+	"pipe#bucket": [],
+	"pipe#iron": [],
+	"iron#pipe": [
+		"be black"
+	],
+	"electron#faraday": [],
+	"faraday#electron": [],
+	"solar system#newton": [],
+	"newton#solar system": [],
+	"planet#newton": [],
+	"newton#planet": [],
+	"sound#wall": [
+		"go through"
+	],
+	"wall#sound": [
+		"amplify",
+		"make"
+	],
+	"sounds#ear": [
+		"come from",
+		"enter into",
+		"get to",
+		"go through"
+	],
+	"ear#sounds": [
+		"detect",
+		"hear",
+		"make",
+		"pick up",
+		"receive"
+	],
+	"air#ear": [],
+	"ear#air": [],
+	"ear#insulation": [],
+	"insulation#ear": [],
+	"sounds#earplugs": [],
+	"earplugs#sounds": [
+		"block out"
+	],
+	"air#earplugs": [],
+	"earplugs#air": [
+		"can"
+	],
+	"ear#earplugs": [],
+	"earplugs#ear": [
+		"can protect"
+	],
+	"balls#billiards": [],
+	"molecules#gas": [
+		"be arranged in",
+		"be in",
+		"compare in",
+		"exist as",
+		"interact in",
+		"move in"
+	],
+	"billiards#balls": [],
+	"gas#molecules": [
+		"be considered",
+		"form",
+		"has property",
+		"have"
+	],
+	"molecules#air": [
+		"be in",
+		"has property"
+	],
+	"air#molecules": [],
+	"gas#air": [
+		"be in",
+		"be lighter than",
+		"be obtained from",
+		"get into",
+		"has property"
+	],
+	"air#gas": [
+		"has property"
+	],
+	"balls#table": [],
+	"table#balls": [],
+	"billiards#table": [],
+	"table#billiards": [],
+	"billiards balls#rolling": [],
+	"gas molecules#flying": [],
+	"rolling#billiards balls": [],
+	"flying#gas molecules": [],
+	"gas molecules#air": [],
+	"air#gas molecules": [],
+	"flying#air": [
+		"can",
+		"has property"
+	],
+	"air#flying": [],
+	"billiards balls#table": [],
+	"table#billiards balls": [],
+	"rolling#table": [
+		"can"
+	],
+	"table#rolling": [],
+	"balls#rolling": [
+		"stop"
+	],
+	"molecules#flying": [],
+	"rolling#balls": [],
+	"flying#molecules": [],
+	"computer#processing": [
+		"work in",
+		"work with"
+	],
+	"mind#thinking": [],
+	"processing#computer": [
+		"be measured in"
+	],
+	"thinking#mind": [],
+	"mind#forgetting": [],
+	"forgetting#mind": [],
+	"mind#mistake": [],
+	"mistake#mind": [],
+	"thinking#forgetting": [],
+	"forgetting#thinking": [],
+	"thinking#mistake": [],
+	"mistake#thinking": [],
+	"forgetting#mistake": [],
+	"mistake#forgetting": [],
+	"computer#erasing": [],
+	"erasing#computer": [],
+	"computer#bug": [
+		"can",
+		"catch"
+	],
+	"bug#computer": [],
+	"processing#erasing": [],
+	"erasing#processing": [],
+	"processing#bug": [],
+	"bug#processing": [],
+	"erasing#bug": [],
+	"bug#erasing": [],
+	"people#thinking": [],
+	"thinking#people": [],
+	"people#forgetting": [],
+	"forgetting#people": [],
+	"people#mistake": [],
+	"mistake#people": [
+		"can help"
+	],
+	"war#soldier": [
+		"affect",
+		"change",
+		"psychologically affect"
+	],
+	"argument#debater": [],
+	"soldier#war": [
+		"change after",
+		"feel about",
+		"feel during",
+		"go after",
+		"go to",
+		"miss",
+		"prepare for",
+		"prepare mentally for",
+		"talk about",
+		"tell jokes about"
+	],
+	"debater#argument": [],
+	"war#solider": [],
+	"solider#war": [],
+	"war#fighter": [],
+	"fighter#war": [],
+	"war#soldiers": [
+		"affect",
+		"change",
+		"psychologically affect"
+	],
+	"soldiers#war": [
+		"change after",
+		"feel about",
+		"feel during",
+		"go after",
+		"go to",
+		"miss",
+		"prepare for",
+		"prepare mentally for",
+		"talk about",
+		"tell jokes about"
+	],
+	"argument#lawyer": [],
+	"lawyer#argument": [],
+	"law#lawyer": [],
+	"lawyer#law": [
+		"be in",
+		"enforce",
+		"interpret",
+		"keep up with",
+		"know",
+		"look up",
+		"practice"
+	],
+	"buildings#foundations": [
+		"have",
+		"need"
+	],
+	"theories#reasons": [],
+	"foundations#buildings": [
+		"be important in"
+	],
+	"reasons#theories": [],
+	"theories#rational": [],
+	"rational#theories": [],
+	"theories#dubious": [],
+	"dubious#theories": [],
+	"reasons#rational": [],
+	"rational#reasons": [],
+	"reasons#dubious": [],
+	"dubious#reasons": [],
+	"rational#dubious": [],
+	"dubious#rational": [],
+	"buildings#solid": [],
+	"solid#buildings": [
+		"be used for"
+	],
+	"buildings#weak": [],
+	"weak#buildings": [],
+	"foundations#solid": [],
+	"solid#foundations": [],
+	"foundations#weak": [],
+	"weak#foundations": [],
+	"solid#weak": [],
+	"weak#solid": []
 }

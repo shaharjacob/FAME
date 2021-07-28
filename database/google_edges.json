@@ -4546,5 +4546,467 @@
 	"hydrodynamics#bucket": [],
 	"bucket#hydrodynamics": [],
 	"electrons#electromagnetism": [],
-	"electromagnetism#electrons": []
+	"electromagnetism#electrons": [],
+	"waves#water": [
+		"height increase in shallow",
+		"speed decrease in shallow",
+		"travel faster in deep"
+	],
+	"sounds#air": [
+		"like my baby is gasping for",
+		"propagated through",
+		"transmitted through",
+		"travel in",
+		"travel through",
+		"travels through"
+	],
+	"water#waves": [
+		"a electromagnetic",
+		"a transverse"
+	],
+	"air#sounds": [
+		"affect",
+		"density affect",
+		"make",
+		"move",
+		"particles help make",
+		"pressure affect"
+	],
+	"sounds#wall": [
+		"like someone is knocking on my"
+	],
+	"wall#sounds": [
+		"lizards make"
+	],
+	"sounds#insulation": [],
+	"insulation#sounds": [],
+	"air#wall": [
+		"bubbles appear when painting",
+		"cracks appear in",
+		"vents face the"
+	],
+	"wall#air": [],
+	"air#insulation": [],
+	"insulation#air": [],
+	"wall#insulation": [],
+	"insulation#wall": [
+		"blown into"
+	],
+	"waves#shore": [
+		"affect the",
+		"approach the",
+		"break along",
+		"break as they approach the",
+		"break on",
+		"break on the",
+		"change as they approach the",
+		"come to",
+		"form at the",
+		"get taller as they approach",
+		"go towards",
+		"move towards"
+	],
+	"shore#waves": [],
+	"waves#breakwater": [],
+	"breakwater#waves": [],
+	"water#shore": [
+		"in gulf"
+	],
+	"shore#water": [],
+	"water#breakwater": [],
+	"breakwater#water": [],
+	"shore#breakwater": [],
+	"breakwater#shore": [],
+	"projectile#earth": [],
+	"earth#projectile": [],
+	"planet#elliptical": [
+		"orbit"
+	],
+	"elliptical#planet": [],
+	"planet#space": [
+		"float in",
+		"hang in",
+		"move in",
+		"move through",
+		"not fly off into",
+		"remain intact in",
+		"stay in",
+		"stay suspended in"
+	],
+	"space#planet": [
+		"have"
+	],
+	"sun#elliptical": [],
+	"elliptical#sun": [],
+	"elliptical#space": [],
+	"space#elliptical": [],
+	"projectile#parabolic": [
+		"follow a",
+		"motion",
+		"path"
+	],
+	"parabolic#projectile": [],
+	"projectile#air": [],
+	"air#projectile": [
+		"affect the flight of a",
+		"resistance affect",
+		"resistance affect range of"
+	],
+	"earth#parabolic": [],
+	"parabolic#earth": [],
+	"earth#air": [
+		"affect",
+		"beat",
+		"get",
+		"have",
+		"the only planet with",
+		"the opposite of"
+	],
+	"air#earth": [
+		"around",
+		"circulate around the",
+		"created on",
+		"exert pressure on",
+		"made on",
+		"pollution affecting the",
+		"stay on"
+	],
+	"parabolic#air": [],
+	"air#parabolic": [],
+	"galaxy#sun": [],
+	"sun#galaxy": [
+		"move in the",
+		"move through the",
+		"moving in the",
+		"orbit the",
+		"rotate around the"
+	],
+	"galaxy#planet": [],
+	"planet#galaxy": [],
+	"galaxy#gravity": [
+		"relate to"
+	],
+	"gravity#galaxy": [
+		"affect",
+		"form",
+		"help",
+		"impact the milky way",
+		"relate to",
+		"work in"
+	],
+	"solar planet#sun": [],
+	"sun#solar planet": [],
+	"cell#electron": [],
+	"electron#cell": [
+		"flow in a concentration",
+		"flow in a galvanic",
+		"flow in a voltaic",
+		"flow in an electrolytic",
+		"microscope affect",
+		"microscopes affect",
+		"move in an electrolytic"
+	],
+	"cell#electromagnetism": [],
+	"electromagnetism#cell": [],
+	"solar planet#planet": [],
+	"planet#solar planet": [],
+	"solar planet#gravity": [],
+	"gravity#solar planet": [],
+	"heat#iron": [
+		"produced in a flat",
+		"travel from the"
+	],
+	"iron#heat": [
+		"a good conductor of",
+		"conduct",
+		"store"
+	],
+	"temperature#iron": [],
+	"iron#temperature": [
+		"affect body",
+		"almirah solid at room",
+		"almirah stay solid at room",
+		"regulate body",
+		"rod solid at room",
+		"solid at room"
+	],
+	"kettle#iron": [],
+	"iron#kettle": [],
+	"water#pipe": [],
+	"pipe#water": [],
+	"pressure#pipe": [
+		"drop in a"
+	],
+	"pipe#pressure": [
+		"affect",
+		"diameter affect",
+		"diameter related to",
+		"length affect",
+		"size affect"
+	],
+	"bucket#pipe": [],
+	"pipe#bucket": [],
+	"pipe#iron": [],
+	"iron#pipe": [
+		"not used for water"
+	],
+	"electron#faraday": [],
+	"faraday#electron": [],
+	"solar system#newton": [],
+	"newton#solar system": [],
+	"planet#newton": [],
+	"newton#planet": [],
+	"sound#wall": [
+		"bounce off",
+		"go through",
+		"like running water in my",
+		"like someone is knocking on my",
+		"like something is in my",
+		"like there is something in my",
+		"pass through",
+		"penetrate",
+		"transmit through",
+		"travel through"
+	],
+	"wall#sound": [
+		"lizards make"
+	],
+	"sounds#ear": [
+		"amplified in the",
+		"crunchy in my",
+		"hurt my",
+		"in your",
+		"muffled in my",
+		"muffled in one",
+		"perceived by the",
+		"processed in",
+		"reach our",
+		"transduced in the",
+		"transmitted through the",
+		"windy in my"
+	],
+	"ear#sounds": [
+		"detect",
+		"distinguish",
+		"hear",
+		"makes",
+		"related to"
+	],
+	"air#ear": [
+		"come my",
+		"come out of my",
+		"conditioning hurt my",
+		"hurt my",
+		"pressure affect",
+		"pressure affect your",
+		"pressure hurt my"
+	],
+	"ear#air": [],
+	"ear#insulation": [],
+	"insulation#ear": [],
+	"sounds#earplugs": [],
+	"earplugs#sounds": [
+		"block"
+	],
+	"air#earplugs": [],
+	"earplugs#air": [],
+	"ear#earplugs": [],
+	"earplugs#ear": [
+		"hurt my"
+	],
+	"balls#billiards": [],
+	"molecules#gas": [
+		"have",
+		"move in a",
+		"move in solids liquids and"
+	],
+	"billiards#balls": [],
+	"gas#molecules": [],
+	"molecules#air": [
+		"move in cold"
+	],
+	"air#molecules": [
+		"cold"
+	],
+	"gas#air": [
+		"lighter than",
+		"monkey go off the"
+	],
+	"air#gas": [
+		"a homogeneous mixture of various",
+		"a mixture of",
+		"an ideal",
+		"called a mixture of",
+		"conditioning use",
+		"conditioning waste",
+		"considered a",
+		"differ from",
+		"regarded as a mixture of",
+		"separated into its constituent"
+	],
+	"balls#table": [],
+	"table#balls": [],
+	"billiards#table": [],
+	"table#billiards": [],
+	"billiards balls#rolling": [],
+	"gas molecules#flying": [],
+	"rolling#billiards balls": [],
+	"flying#gas molecules": [],
+	"gas molecules#air": [
+		"diffuse through"
+	],
+	"air#gas molecules": [],
+	"flying#air": [],
+	"air#flying": [
+		"canada still",
+		"pressure affect"
+	],
+	"billiards balls#table": [],
+	"table#billiards balls": [],
+	"rolling#table": [],
+	"table#rolling": [],
+	"balls#rolling": [
+		"stop"
+	],
+	"molecules#flying": [],
+	"rolling#balls": [],
+	"flying#molecules": [],
+	"computer#processing": [
+		"important in data"
+	],
+	"mind#thinking": [],
+	"processing#computer": [
+		"an important function of a",
+		"speed measured in"
+	],
+	"thinking#mind": [],
+	"mind#forgetting": [],
+	"forgetting#mind": [],
+	"mind#mistake": [],
+	"mistake#mind": [],
+	"thinking#forgetting": [],
+	"forgetting#thinking": [],
+	"thinking#mistake": [],
+	"mistake#thinking": [],
+	"forgetting#mistake": [],
+	"mistake#forgetting": [],
+	"computer#erasing": [],
+	"erasing#computer": [],
+	"computer#bug": [],
+	"bug#computer": [],
+	"processing#erasing": [],
+	"erasing#processing": [],
+	"processing#bug": [],
+	"bug#processing": [],
+	"erasing#bug": [],
+	"bug#erasing": [],
+	"people#thinking": [
+		"engage in philosophical"
+	],
+	"thinking#people": [],
+	"people#forgetting": [],
+	"forgetting#people": [],
+	"people#mistake": [],
+	"mistake#people": [],
+	"war#soldier": [
+		"affect",
+		"affect child",
+		"change",
+		"child help child",
+		"presented in the",
+		"psychologically affect"
+	],
+	"argument#debater": [],
+	"soldier#war": [
+		"cope with",
+		"desert the civil",
+		"die in",
+		"feel about",
+		"feel after",
+		"feel at",
+		"feel during",
+		"fight in",
+		"go to",
+		"have",
+		"join the",
+		"miss",
+		"prepare for",
+		"present",
+		"sleep during",
+		"survive",
+		"walk in civil"
+	],
+	"debater#argument": [],
+	"war#solider": [],
+	"solider#war": [],
+	"war#fighter": [],
+	"fighter#war": [
+		"aircrafts changed the"
+	],
+	"war#soldiers": [
+		"affect",
+		"affect child",
+		"change",
+		"child help child",
+		"effects",
+		"presented in the",
+		"psychologically affect"
+	],
+	"soldiers#war": [
+		"cope with",
+		"desert the civil",
+		"die in",
+		"feel about",
+		"feel after",
+		"feel at",
+		"feel during",
+		"fight in",
+		"go to",
+		"have",
+		"join the",
+		"miss",
+		"prepare for",
+		"present",
+		"sleep during",
+		"survive",
+		"walk in civil"
+	],
+	"argument#lawyer": [],
+	"lawyer#argument": [],
+	"law#lawyer": [
+		"firms hire",
+		"firms pay",
+		"firms recruit"
+	],
+	"lawyer#law": [
+		"practice"
+	],
+	"buildings#foundations": [
+		"and dams have wide",
+		"have wide",
+		"need"
+	],
+	"theories#reasons": [],
+	"foundations#buildings": [],
+	"reasons#theories": [],
+	"theories#rational": [],
+	"rational#theories": [],
+	"theories#dubious": [],
+	"dubious#theories": [],
+	"reasons#rational": [],
+	"rational#reasons": [],
+	"reasons#dubious": [],
+	"dubious#reasons": [],
+	"rational#dubious": [],
+	"dubious#rational": [],
+	"buildings#solid": [],
+	"solid#buildings": [],
+	"buildings#weak": [],
+	"weak#buildings": [],
+	"foundations#solid": [],
+	"solid#foundations": [],
+	"foundations#weak": [],
+	"weak#foundations": [],
+	"solid#weak": [],
+	"weak#solid": []
 }
