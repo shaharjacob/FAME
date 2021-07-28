@@ -4544,5 +4544,7 @@
 	"pressure#bucket": [],
 	"bucket#pressure": [],
 	"hydrodynamics#bucket": [],
-	"bucket#hydrodynamics": []
+	"bucket#hydrodynamics": [],
+	"electrons#electromagnetism": [],
+	"electromagnetism#electrons": []
 }
