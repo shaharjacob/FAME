@@ -5008,5 +5008,452 @@
 	"foundations#weak": [],
 	"weak#foundations": [],
 	"solid#weak": [],
-	"weak#solid": []
+	"weak#solid": [],
+	"atom#charge": [
+		"acquire",
+		"gain",
+		"get",
+		"has",
+		"have",
+		"have a neutral",
+		"have electric",
+		"have no",
+		"have no overall",
+		"have positive",
+		"hold no"
+	],
+	"charge#atom": [],
+	"electron#charge": [
+		"acquire",
+		"carry",
+		"configuration relate to",
+		"flow",
+		"gets its",
+		"have",
+		"have a",
+		"have a negative",
+		"have electric",
+		"have negative",
+		"have positive",
+		"produce"
+	],
+	"charge#electron": [
+		"transferred by"
+	],
+	"electromagnetism#charge": [],
+	"charge#electromagnetism": [],
+	"solar system#mass": [],
+	"mass#solar system": [
+		"distributed in"
+	],
+	"sun#mass": [
+		"have",
+		"have so much",
+		"lose",
+		"losing",
+		"primarily losing"
+	],
+	"mass#sun": [
+		"of the"
+	],
+	"planet#mass": [],
+	"mass#planet": [
+		"affect",
+		"not change on different"
+	],
+	"gravity#mass": [
+		"affect",
+		"affect different",
+		"affect objects of different",
+		"affected by",
+		"depend on",
+		"different from",
+		"have",
+		"independent of",
+		"not affected by",
+		"only attract",
+		"proportional to"
+	],
+	"mass#gravity": [
+		"affect",
+		"affected by",
+		"and distance affect",
+		"create",
+		"generate",
+		"have",
+		"impact",
+		"measured without",
+		"not affect acceleration due to",
+		"not affected by",
+		"not dependent on"
+	],
+	"heat#burner": [],
+	"burner#heat": [],
+	"temperature#burner": [],
+	"burner#temperature": [],
+	"burner#kettle": [],
+	"kettle#burner": [],
+	"burner#iron": [],
+	"iron#burner": [],
+	"water#water tower": [
+		"get in",
+		"get into",
+		"pumped into",
+		"stored in",
+		"stored in a",
+		"tower called the"
+	],
+	"water tower#water": [
+		"get",
+		"get filled with",
+		"not hold"
+	],
+	"pressure#water tower": [],
+	"water tower#pressure": [
+		"create"
+	],
+	"water tower#bucket": [],
+	"bucket#water tower": [],
+	"water tower#pipe": [],
+	"pipe#water tower": [],
+	"respiration#animal": [
+		"important for plants and",
+		"important to",
+		"in",
+		"in plants and",
+		"occur in",
+		"take place in"
+	],
+	"combustion#fire": [
+		"different from"
+	],
+	"animal#respiration": [],
+	"fire#combustion": [],
+	"combustion#fuel": [
+		"of"
+	],
+	"fuel#combustion": [
+		"needed for"
+	],
+	"combustion#burning": [
+		"different from"
+	],
+	"burning#combustion": [
+		"a special form of"
+	],
+	"fire#fuel": [
+		"need"
+	],
+	"fuel#fire": [
+		"cause",
+		"effect",
+		"needed for"
+	],
+	"fire#burning": [
+		"keep",
+		"stop"
+	],
+	"burning#fire": [],
+	"fuel#burning": [],
+	"burning#fuel": [],
+	"respiration#food": [
+		"release energy from"
+	],
+	"food#respiration": [
+		"fuels cellular"
+	],
+	"respiration#breathing": [
+		"differ from",
+		"different from",
+		"linked to",
+		"more than just",
+		"not",
+		"similar to"
+	],
+	"breathing#respiration": [
+		"called",
+		"called external",
+		"differ from",
+		"differ from cellular",
+		"essential for",
+		"help cellular",
+		"important for",
+		"linked to",
+		"necessary for cellular",
+		"not",
+		"relate cellular",
+		"required for cellular"
+	],
+	"animal#food": [
+		"digest",
+		"eat",
+		"find",
+		"get",
+		"need",
+		"obtain",
+		"plasma in cat",
+		"require",
+		"store",
+		"used for"
+	],
+	"food#animal": [
+		"digested in grass eating",
+		"help",
+		"important for",
+		"important to",
+		"storage important in",
+		"stored in plants and",
+		"transported in",
+		"waste affect"
+	],
+	"animal#breathing": [
+		"need"
+	],
+	"breathing#animal": [
+		"faster in aquatic",
+		"take place in primitive"
+	],
+	"food#breathing": [
+		"relate to"
+	],
+	"breathing#food": [],
+	"light#bright": [
+		"so"
+	],
+	"sound#loud": [],
+	"bright#light": [],
+	"loud#sound": [],
+	"sound#horn": [
+		"made on a",
+		"produced on a french"
+	],
+	"horn#sound": [
+		"amplify",
+		"emit",
+		"make",
+		"makes",
+		"produce"
+	],
+	"sound#burning": [],
+	"burning#sound": [],
+	"loud#horn": [],
+	"horn#loud": [],
+	"loud#burning": [],
+	"burning#loud": [],
+	"horn#burning": [],
+	"burning#horn": [],
+	"light#lens": [
+		"affect",
+		"affected by a",
+		"effect",
+		"refract in"
+	],
+	"lens#light": [
+		"affect",
+		"bend",
+		"converge",
+		"focus",
+		"reflect",
+		"refract",
+		"refract (bend)"
+	],
+	"light#breathing": [],
+	"breathing#light": [],
+	"bright#lens": [],
+	"lens#bright": [],
+	"bright#breathing": [],
+	"breathing#bright": [],
+	"lens#breathing": [],
+	"breathing#lens": [],
+	"planet#orbit": [
+		"clear its"
+	],
+	"orbit#planet": [],
+	"sun#orbit": [],
+	"orbit#sun": [],
+	"elliptical#orbit": [],
+	"orbit#elliptical": [],
+	"space#orbit": [
+		"shuttle stay in",
+		"shuttles get into",
+		"shuttles stay in",
+		"station stay in",
+		"stations"
+	],
+	"orbit#space": [],
+	"projectile#trajectory": [
+		"follow parabolic",
+		"vertical acceleration change across its"
+	],
+	"trajectory#projectile": [],
+	"earth#trajectory": [],
+	"trajectory#earth": [],
+	"parabolic#trajectory": [],
+	"trajectory#parabolic": [
+		"of a projectile"
+	],
+	"air#trajectory": [
+		"resistance affect"
+	],
+	"trajectory#air": [],
+	"species#competition": [
+		"avoid",
+		"reduce"
+	],
+	"breeds#selection": [],
+	"competition#species": [
+		"affect weaker organisms of a"
+	],
+	"selection#breeds": [],
+	"breeds#conformance": [],
+	"conformance#breeds": [],
+	"breeds#artificial": [],
+	"artificial#breeds": [],
+	"breeds#popularity": [],
+	"popularity#breeds": [],
+	"selection#conformance": [],
+	"conformance#selection": [],
+	"selection#artificial": [],
+	"artificial#selection": [],
+	"selection#popularity": [],
+	"popularity#selection": [],
+	"conformance#artificial": [],
+	"artificial#conformance": [],
+	"conformance#popularity": [],
+	"popularity#conformance": [],
+	"artificial#popularity": [],
+	"popularity#artificial": [],
+	"species#adaptation": [],
+	"adaptation#species": [
+		"affect",
+		"affect a",
+		"affect the diversity of",
+		"affect the survival of a",
+		"help",
+		"important for survival of a"
+	],
+	"species#natural": [],
+	"natural#species": [
+		"selection",
+		"selection affect",
+		"selection affect invasive",
+		"selection create new",
+		"selection produce",
+		"selection produce adaptations in a"
+	],
+	"species#fitness": [],
+	"fitness#species": [],
+	"competition#adaptation": [
+		"for resources lead to",
+		"lead to"
+	],
+	"adaptation#competition": [
+		"enable organisms to reduce",
+		"help species manage"
+	],
+	"competition#natural": [],
+	"natural#competition": [
+		"selection impact",
+		"selection reduce"
+	],
+	"competition#fitness": [],
+	"fitness#competition": [],
+	"adaptation#natural": [],
+	"natural#adaptation": [
+		"selection",
+		"selection affect",
+		"selection influence",
+		"selection lead to",
+		"selection produce",
+		"selection related to",
+		"selection result in"
+	],
+	"adaptation#fitness": [
+		"contribute to an organism's",
+		"influence",
+		"related to"
+	],
+	"fitness#adaptation": [
+		"relate to"
+	],
+	"natural#fitness": [
+		"selection contribute to biological",
+		"selection relate to",
+		"selection related to",
+		"selection related to a species",
+		"selection related to species"
+	],
+	"fitness#natural": [],
+	"machine#working": [],
+	"working#machine": [
+		"fax",
+		"washing"
+	],
+	"mind#confused": [],
+	"confused#mind": [],
+	"mind#therapy": [],
+	"therapy#mind": [],
+	"thinking#confused": [],
+	"confused#thinking": [],
+	"thinking#therapy": [],
+	"therapy#thinking": [],
+	"confused#therapy": [],
+	"therapy#confused": [],
+	"machine#broken": [],
+	"broken#machine": [],
+	"machine#repair": [],
+	"repair#machine": [],
+	"working#broken": [],
+	"broken#working": [],
+	"working#repair": [],
+	"repair#working": [],
+	"broken#repair": [
+		"bone"
+	],
+	"repair#broken": [],
+	"argument#acceptance": [],
+	"acceptance#argument": [],
+	"argument#weapon": [],
+	"weapon#argument": [],
+	"argument#refute": [],
+	"refute#argument": [],
+	"debater#acceptance": [],
+	"acceptance#debater": [],
+	"debater#weapon": [],
+	"weapon#debater": [],
+	"debater#refute": [],
+	"refute#debater": [],
+	"acceptance#weapon": [],
+	"weapon#acceptance": [],
+	"acceptance#refute": [],
+	"refute#acceptance": [],
+	"weapon#refute": [],
+	"refute#weapon": [],
+	"war#defeat": [],
+	"defeat#war": [],
+	"war#weapon": [],
+	"weapon#war": [
+		"affect the civil",
+		"effects",
+		"impact the civil",
+		"leveling work in cold",
+		"xp work cold"
+	],
+	"war#destroy": [],
+	"destroy#war": [],
+	"soldiers#defeat": [],
+	"defeat#soldiers": [],
+	"soldiers#weapon": [
+		"adapt the use of chemical",
+		"have"
+	],
+	"weapon#soldiers": [],
+	"soldiers#destroy": [],
+	"destroy#soldiers": [],
+	"defeat#weapon": [],
+	"weapon#defeat": [],
+	"defeat#destroy": [],
+	"destroy#defeat": [],
+	"weapon#destroy": [],
+	"destroy#weapon": []
 }

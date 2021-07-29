@@ -1,5 +1,24 @@
 mapping:
   - input:
+      base: [solar system, sun, planet, gravity, newton]
+      target: [cell, nucleus, electrons, electricity, faraday]
+      depth: 4
+    output:
+      mapping:
+        - sun --> nucleus
+        - planet --> electron
+        - solar system --> cell
+        - gravity --> electricity
+        - newton --> faraday
+      relations: 
+        - [[sun, planet], [nucleus, electron]]
+        - [[solar system, sun], [cell, nucleus]]
+        - [[planet, gravity], [electron, electricity]]
+        - [[gravity, newton], [electricity, faraday]]
+      score: 8.105
+    ignore: False
+
+  - input:
       base: [earth, sun, gravity, newton]
       target: [electrons, nucleus, electricity, faraday]
       depth: 2

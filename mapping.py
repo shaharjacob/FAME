@@ -182,18 +182,41 @@ def mapping(
     base_already_mapping: List[str],
     target_already_mapping: List[str],
     relations: List[List[Tuple[str, str]]],
-    score: float,
+    scores: List[float],
     depth: int = 2):
+    
+    # in the end we will sort by the length and the score. So its ok to add all of them
+    if base_already_mapping:
+        for solution in solutions:
+            if sorted(relations) == sorted(solution["relations"]):
+                return
+        new_mapping = True
+        for i, solution in enumerate(solutions):
+            if relations[:-1] == solution["relations"]:
+                solutions[i] = {
+                    "mapping": [f"{b} --> {t}" for b, t in zip(base_already_mapping, target_already_mapping)],
+                    "relations": relations,
+                    "scores": scores,
+                    "score": round(sum(scores), 3),
+                    "actual_base": base_already_mapping,
+                    "actual_target": target_already_mapping,
+                    "length": len(base_already_mapping),
+                }
+                new_mapping = False
+                break
+        if new_mapping:
+            solutions.append({
+                "mapping": [f"{b} --> {t}" for b, t in zip(base_already_mapping, target_already_mapping)],
+                "relations": relations,
+                "scores": scores,
+                "score": round(sum(scores), 3),
+                "actual_base": base_already_mapping,
+                "actual_target": target_already_mapping,
+                "length": len(base_already_mapping),
+            })
 
     # base case for recursive function. there is no more available pairs to match (base->target)
     if len(base_already_mapping) == min(len(base), len(target)):
-        solutions.append({
-            "mapping": [f"{b} --> {t}" for b, t in zip(base_already_mapping, target_already_mapping)],
-            "relations": relations,
-            "score": round(score, 3),
-            "actual_base": base_already_mapping,
-            "actual_target": target_already_mapping,
-        })
         return
 
     # we will get the top-depth pairs with the best score.
@@ -206,6 +229,8 @@ def mapping(
             available_pairs_copy = copy.deepcopy(available_pairs)
             relations_copy = copy.deepcopy(relations)
             relations_copy.append(result["best_mapping"])
+            scores_copy = copy.deepcopy(scores)
+            scores_copy.append(round(result["best_score"], 3))
 
             # we will add the new mapping to the already mapping lists. 
             base_already_mapping_new = update_list(base_already_mapping, (result["best_mapping"][0][0], result["best_mapping"][0][1]), inplace=False)
@@ -227,7 +252,7 @@ def mapping(
                 base_already_mapping=base_already_mapping_new,
                 target_already_mapping=target_already_mapping_new,
                 relations=relations_copy,
-                score=score+result["best_score"],
+                scores=scores_copy,
                 depth=depth
             )
     
@@ -268,6 +293,7 @@ def mapping_suggestions(
                 "score": round(current_solution["score"] + result["best_score"], 3),
                 "actual_base": base_already_mapping_new,
                 "actual_target": target_already_mapping_new,
+                "length": len(base_already_mapping_new),
             })
 
 
@@ -324,22 +350,30 @@ def mapping_wrapper(base: List[str], target: List[str], suggestions: bool = True
     quasimodo = Quasimodo()
     data_collector = DataCollector(quasimodo=quasimodo)
     model = SentenceEmbedding(data_collector=data_collector)
-    mapping(base, target, available_pairs, solutions, data_collector, model, [], [], [], 0, depth=depth)
+    mapping(base, target, available_pairs, solutions, data_collector, model, [], [], [], [], depth=depth)
     
     # array of addition solutions for the suggestions if some entities have missing mappings.
     suggestions_solutions = []
     if suggestions:
+        solutions = sorted(solutions, key=lambda x: (x["length"], x["score"]), reverse=True)
+        number_of_solutions_for_suggestions = 5
         # the idea is to iterate over the founded solutions, and check if there are entities are not mapped.
         # this logic is checked only if ONE entity have missing mapping (from base or target)
-        for solution in solutions:
+        for solution in solutions[:number_of_solutions_for_suggestions]:
             mapping_suggestions_wrapper(base, "actual_base", "actual_target", solution, data_collector, model, suggestions_solutions, num_of_suggestions)
             mapping_suggestions_wrapper(target, "actual_target", "actual_base", solution, data_collector, model, suggestions_solutions, num_of_suggestions)
 
-    all_solutions = sorted(solutions + suggestions_solutions, key=lambda x: x["score"], reverse=True)
+    all_solutions = sorted(solutions + suggestions_solutions, key=lambda x: (x["length"], x["score"]), reverse=True)
+    if not all_solutions:
+        secho("No solution found")
+        return []
     if verbose:
-        for solution in all_solutions:
+        secho(f"\nBase: {base}", fg="blue", bold=True)
+        secho(f"Target: {target}\n", fg="blue", bold=True)
+        for i, solution in enumerate(all_solutions[:top_n]):
+            secho(f"#{i+1}", fg="blue", bold=True)
             print_solution(solution)
-    return all_solutions[:top_n] if top_n > 1 else all_solutions[0]
+    return all_solutions[:top_n]
 
 
 def print_solution(solution: dict):
@@ -349,21 +383,107 @@ def print_solution(solution: dict):
     print()
 
     secho("relations", fg="blue", bold=True)
-    for relations in solution["relations"]:
-        secho(f"\t{relations}", fg="blue")
+    for relations, score in zip(solution["relations"], solution["scores"]):
+        secho(f"\t{relations}   ", fg="blue", nl=False)
+        secho(f"{score}", fg="blue", bold=True)
     print()
 
-    secho(f"score: {solution['score']}", fg="blue", bold=True)
+    secho(f"Total score: {solution['score']}", fg="blue", bold=True)
     print()
     print("------------------------------------------------------")
     print()
 
 
 if __name__ == "__main__":
-    base = ["earth", "gravity", "newton"]
-    target = ["electrons", "nucleus", "electricity", "faraday"]
-    solution = mapping_wrapper(base, target, depth=4, verbose=True)
-    # print_solution(solution)
+    
+    data = [
+        {
+            "base": ["solar system", "sun", "planet"],
+            "target": ["atom", "nucleus", "electron"]
+            # this is working good
+            # BUT if I changed the cell to atom, it not good. 
+            # very high score for (sun .* solar system, electron .* atom) (3.883)
+            # http://localhost:3000/single-mapping?base1=solar%20system&base2=sun&target1=atom&target2=electron
+            # so it map sun->electron (even with high depth)
+            # I expect (sun .* solar system, nucleus .* atom) to be higher:  (only 1.774)
+            # http://localhost:3000/single-mapping?base1=solar%20system&base2=sun&target1=atom&target2=nucleus
+            # and generally atom with high score with everything so it hard
+        },
+        # {
+        #     "base": ["solar system", "sun", "planet", "gravity", "mass"],
+        #     "target": ["atom", "nucleus", "electron", "electromagnetism", "charge"]
+        # },
+        # {
+        #     "base": ["water", "pressure", "water tower", "bucket", "pipe"],
+        #     "target": ["heat", "temperature", "burner", "kettle", 'iron']
+        #     # this is good but pipe->iron not because what I expected.
+        #     # water tower->burner ?
+        # },
+        # {
+        #     "base": ["water", "pressure", "bucket", "pipe"],
+        #     "target": ["heat", "temperature", "kettle", 'iron']
+        #     # water tower->burner ?
+        # },
+        # {
+        #     "base": ["waves", "water", "shore", "breakwater"],
+        #     "target": ["sounds", "air", "ear", "earplugs"]
+        #     # this map waves->sounds, water->air, shore->ear
+        #     # which is good BUT, the last map is not clear. I want to say thay waves coming to the shore like sounds coming to the ear.
+        #     # In addition, nothing for waves:breakwater
+        # },
+        # {
+        #     "base": ["waves", "water", "shore", "breakwater"],
+        #     "target": ["sounds", "air", "wall", "insulation"]
+        # },
+        # {
+        #     "base": ["respiration", "animal", "food", "breathing"],
+        #     "target": ["combustion", "fire", "fuel", "burning"]
+        # },
+        # {
+        #     "base": ["light", "bright", "lens", "breathing"],
+        #     "target": ["sound", "loud", "horn", "burning"]
+        # },
+        # {
+        #     "base": ["projectile", "earth", "parabolic", "air"],
+        #     "target": ["planet", "sun", "elliptical", "space"]
+        #     # not good
+        #     # earth->space, air->sun is stronger then (earth->sun, air->space)
+        #     # the good one is only #3, after setting depth to 6
+        # }, 
+        # {
+        #     "base": ["projectile", "earth", "parabolic", "air", "trajectory"],
+        #     "target": ["planet", "sun", "elliptical", "space", "orbit"]
+        # },
+        # {
+        #     "base": ["species", "competition", "adaptation", "natural", "fitness"],
+        #     "target": ["breeds", "selection", "conformance", "artificial", "popularity"]
+        # },  
+        # {
+        #     "base": ["computer", "processing", "erasing", "bug"],
+        #     "target": ["mind", "thinking", "forgetting", "mistake"]  # people or mind
+        #     # not good
+        # },
+        # {
+        #     "base": ["machine", "working", "broken", "repair"],
+        #     "target": ["mind", "thinking", "confused", "therapy"]
+        # },  
+        # {
+        #     "base": ["war", "soldiers", "defeat", "weapon", "destroy"],
+        #     "target": ["argument", "debater", "acceptance", "weapon", "refute"]
+        #     # nothing for argument:debater
+        #     # http://localhost:3000/two-entities?entity1=argument&entity2=debater
+        # }, 
+        # {
+        #     "base": ["buildings", "foundations", "solid", "weak"],
+        #     "target": ["theories", "reasons", "rational", "dubious"]
+        #     # nothing...
+        # },           
+    ]
+    
+    for entry in data:
+        base = entry["base"]
+        target = entry["target"]
+        solutions = mapping_wrapper(base, target, suggestions=False, depth=4, top_n=10, verbose=True)
     
 
 
@@ -384,24 +504,7 @@ if __name__ == "__main__":
 
 
 
-    #  a->1, b->2, (a:b, 1:2)
-    #  a->2, b->1, (a:b, 2:1)
-    #  a->2, b->3, (a:b, 2:3)
-    #  a->3, b->2, (a:b, 3:2)
-    #  a->1, b->3, (a:b, 1:3)
-    #  a->3, b->1, (a:b, 3:1)
-    #  b->1, c->2, (b:c, 1:2)
-    #  b->2, c->1, (b:c, 2:1)
-    #  b->2, c->3, (b:c, 2:3)
-    #  b->3, c->2, (b:c, 3:2)
-    #  b->1, c->3, (b:c, 1:3)
-    #  b->3, c->1, (b:c, 3:1)
-    #  a->1, c->2, (a:c, 1:2)
-    #  a->2, c->1, (a:c, 2:1)
-    #  a->2, c->3, (a:c, 2:3)
-    #  a->3, c->2, (a:c, 3:2)
-    #  a->1, c->3, (a:c, 1:3)
-    #  a->3, c->1, (a:c, 3:1)
+
 
 
 # data = [

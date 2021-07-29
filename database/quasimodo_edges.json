@@ -3807,5 +3807,359 @@
 	"foundations#weak": [],
 	"weak#foundations": [],
 	"solid#weak": [],
-	"weak#solid": []
+	"weak#solid": [],
+	"atom#charge": [
+		"acquire",
+		"be neutral in",
+		"gain",
+		"have",
+		"obtain"
+	],
+	"charge#atom": [],
+	"electron#charge": [
+		"carry",
+		"get",
+		"has property",
+		"have"
+	],
+	"charge#electron": [
+		"be on",
+		"be related to",
+		"be transferred by",
+		"be usually transferred by"
+	],
+	"electromagnetism#charge": [],
+	"charge#electromagnetism": [],
+	"solar system#mass": [],
+	"mass#solar system": [],
+	"sun#mass": [],
+	"mass#sun": [],
+	"planet#mass": [],
+	"mass#planet": [],
+	"gravity#mass": [
+		"be affected by",
+		"be different from",
+		"be related to",
+		"depend on",
+		"relate to",
+		"vary with"
+	],
+	"mass#gravity": [
+		"affect",
+		"be affected by",
+		"create",
+		"has property",
+		"have",
+		"relate to"
+	],
+	"heat#burner": [],
+	"burner#heat": [],
+	"temperature#burner": [],
+	"burner#temperature": [],
+	"burner#kettle": [],
+	"kettle#burner": [],
+	"burner#iron": [],
+	"iron#burner": [],
+	"water#water tower": [
+		"be stored in"
+	],
+	"water tower#water": [
+		"get",
+		"hold"
+	],
+	"pressure#water tower": [],
+	"water tower#pressure": [],
+	"water tower#bucket": [],
+	"bucket#water tower": [],
+	"water tower#pipe": [],
+	"pipe#water tower": [],
+	"respiration#animal": [
+		"be important to",
+		"be in",
+		"differ from",
+		"differ in",
+		"occur in",
+		"take place in"
+	],
+	"combustion#fire": [],
+	"animal#respiration": [
+		"carry out",
+		"do",
+		"get glucose for",
+		"need",
+		"undergo"
+	],
+	"fire#combustion": [],
+	"combustion#fuel": [
+		"has property"
+	],
+	"fuel#combustion": [
+		"be needed for"
+	],
+	"combustion#burning": [],
+	"burning#combustion": [],
+	"fire#fuel": [],
+	"fuel#fire": [
+		"make"
+	],
+	"fire#burning": [
+		"has property"
+	],
+	"burning#fire": [],
+	"fuel#burning": [
+		"be used for"
+	],
+	"burning#fuel": [],
+	"respiration#food": [],
+	"food#respiration": [],
+	"respiration#breathing": [
+		"be different",
+		"be different from",
+		"be different to",
+		"be related to",
+		"be same as",
+		"be similar to",
+		"differ from",
+		"has property"
+	],
+	"breathing#respiration": [
+		"be",
+		"be coupled to",
+		"be for",
+		"be from",
+		"be to",
+		"differ from",
+		"has property",
+		"help"
+	],
+	"animal#food": [
+		"can eat",
+		"can make",
+		"cook",
+		"eat",
+		"find",
+		"get",
+		"need",
+		"obtain",
+		"recognize food as",
+		"want"
+	],
+	"food#animal": [
+		"be obtained from",
+		"be required by"
+	],
+	"animal#breathing": [],
+	"breathing#animal": [
+		"be in"
+	],
+	"food#breathing": [],
+	"breathing#food": [],
+	"light#bright": [
+		"has trait",
+		"seem",
+		"switched to"
+	],
+	"sound#loud": [],
+	"bright#light": [],
+	"loud#sound": [],
+	"sound#horn": [],
+	"horn#sound": [
+		"amplify",
+		"make"
+	],
+	"sound#burning": [],
+	"burning#sound": [],
+	"loud#horn": [],
+	"horn#loud": [],
+	"loud#burning": [],
+	"burning#loud": [],
+	"horn#burning": [],
+	"burning#horn": [],
+	"light#lens": [],
+	"lens#light": [
+		"affect",
+		"bend",
+		"cause",
+		"focus",
+		"reflect",
+		"refract"
+	],
+	"light#breathing": [],
+	"breathing#light": [],
+	"bright#lens": [],
+	"lens#bright": [],
+	"bright#breathing": [],
+	"breathing#bright": [],
+	"lens#breathing": [],
+	"breathing#lens": [],
+	"planet#orbit": [
+		"be in",
+		"fall out of",
+		"have",
+		"move in",
+		"remain in",
+		"revolve in",
+		"stay in",
+		"stay on",
+		"take longer",
+		"travel in"
+	],
+	"orbit#planet": [
+		"differ from"
+	],
+	"sun#orbit": [
+		"can"
+	],
+	"orbit#sun": [
+		"can",
+		"has property"
+	],
+	"elliptical#orbit": [],
+	"orbit#elliptical": [
+		"has property"
+	],
+	"space#orbit": [],
+	"orbit#space": [],
+	"projectile#trajectory": [
+		"follow"
+	],
+	"trajectory#projectile": [],
+	"earth#trajectory": [],
+	"trajectory#earth": [],
+	"parabolic#trajectory": [],
+	"trajectory#parabolic": [
+		"has property"
+	],
+	"air#trajectory": [],
+	"trajectory#air": [],
+	"species#competition": [
+		"avoid",
+		"reduce"
+	],
+	"breeds#selection": [],
+	"competition#species": [],
+	"selection#breeds": [],
+	"breeds#conformance": [],
+	"conformance#breeds": [],
+	"breeds#artificial": [],
+	"artificial#breeds": [],
+	"breeds#popularity": [],
+	"popularity#breeds": [],
+	"selection#conformance": [],
+	"conformance#selection": [],
+	"selection#artificial": [],
+	"artificial#selection": [],
+	"selection#popularity": [],
+	"popularity#selection": [],
+	"conformance#artificial": [],
+	"artificial#conformance": [],
+	"conformance#popularity": [],
+	"popularity#conformance": [],
+	"artificial#popularity": [],
+	"popularity#artificial": [],
+	"species#adaptation": [],
+	"adaptation#species": [
+		"affect",
+		"arise in",
+		"benefit",
+		"can impact evolution within",
+		"effect",
+		"help",
+		"relate to",
+		"vary among"
+	],
+	"species#natural": [],
+	"natural#species": [],
+	"species#fitness": [],
+	"fitness#species": [],
+	"competition#adaptation": [
+		"can lead to"
+	],
+	"adaptation#competition": [],
+	"competition#natural": [],
+	"natural#competition": [],
+	"competition#fitness": [],
+	"fitness#competition": [],
+	"adaptation#natural": [],
+	"natural#adaptation": [],
+	"adaptation#fitness": [
+		"be related to",
+		"contribute to"
+	],
+	"fitness#adaptation": [
+		"be different from"
+	],
+	"natural#fitness": [],
+	"fitness#natural": [],
+	"machine#working": [
+		"stop"
+	],
+	"working#machine": [],
+	"mind#confused": [],
+	"confused#mind": [],
+	"mind#therapy": [],
+	"therapy#mind": [],
+	"thinking#confused": [],
+	"confused#thinking": [],
+	"thinking#therapy": [],
+	"therapy#thinking": [],
+	"confused#therapy": [],
+	"therapy#confused": [],
+	"machine#broken": [],
+	"broken#machine": [],
+	"machine#repair": [],
+	"repair#machine": [],
+	"working#broken": [],
+	"broken#working": [],
+	"working#repair": [],
+	"repair#working": [],
+	"broken#repair": [],
+	"repair#broken": [],
+	"argument#acceptance": [],
+	"acceptance#argument": [],
+	"argument#weapon": [],
+	"weapon#argument": [],
+	"argument#refute": [],
+	"refute#argument": [],
+	"debater#acceptance": [],
+	"acceptance#debater": [],
+	"debater#weapon": [],
+	"weapon#debater": [],
+	"debater#refute": [],
+	"refute#debater": [],
+	"acceptance#weapon": [],
+	"weapon#acceptance": [],
+	"acceptance#refute": [],
+	"refute#acceptance": [],
+	"weapon#refute": [],
+	"refute#weapon": [],
+	"war#defeat": [],
+	"defeat#war": [],
+	"war#weapon": [],
+	"weapon#war": [
+		"banned from",
+		"be banned in",
+		"be in",
+		"can prevent",
+		"prevent"
+	],
+	"war#destroy": [],
+	"destroy#war": [],
+	"soldiers#defeat": [],
+	"defeat#soldiers": [],
+	"soldiers#weapon": [
+		"get assigned",
+		"use"
+	],
+	"weapon#soldiers": [
+		"assigned to"
+	],
+	"soldiers#destroy": [],
+	"destroy#soldiers": [],
+	"defeat#weapon": [],
+	"weapon#defeat": [],
+	"defeat#destroy": [],
+	"destroy#defeat": [],
+	"weapon#destroy": [],
+	"destroy#weapon": []
 }

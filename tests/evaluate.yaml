@@ -1,0 +1,156 @@
+mapping:
+  - input:
+      base: [solar system, sun, planet, gravity, newton]
+      target: [atom, nucleus, electron, electricity, faraday]
+      depth: 4
+    output:
+      mapping:
+        - sun --> nucleus
+        - planet --> electron
+        - solar system --> atom
+        - gravity --> electricity
+        - newton --> faraday
+  
+  - input:
+      base: [thoughts, brain, neurons]
+      target: [astronaut, space, black hole]
+      depth: 2
+    output:
+      mapping:
+        - thoughts --> astronaut
+        - brain --> space
+        - neurons --> black hole
+  
+  - input:
+      base: [cars, road, wheels]
+      target: [boats, river, sail]
+      depth: 2
+    output:
+      mapping:
+        - cars --> boats
+        - road --> river
+        - wheels --> sail
+  
+  - input:
+      base: [sunscreen, sun, summer]
+      target: [umbrella, rain, winter]
+      depth: 2
+    output:
+      mapping:
+        - sun --> rain
+        - summer --> winter
+        - sunscreen --> umbrella
+  
+  - input:
+      base: [water, pressure, water tower, bucket, pipe]
+      target: [heat, temperature, burner, kettle, iron]
+      depth: 4
+    output:
+      mapping:
+        - water --> heat
+        - pressure --> temperature
+        - water tower --> burner
+        - bucket --> kettle
+        - pipe --> iron
+  
+  - input:
+      base: [waves, water, shore, breakwater]
+      target: [sounds, air, wall, earplugs]
+      depth: 4
+    output:
+      mapping:
+        - waves --> sounds
+        - water --> air
+        - shore --> wall
+        - breakwater --> earplugs
+
+  - input:
+      base: [respiration, animal, food, breathing]
+      target: [combustion, fire, fuel, burning]
+      depth: 4
+    output:
+      mapping:
+        - respiration --> combustion
+        - animal --> fire
+        - food --> fuel
+        - breathing --> burning
+
+  - input:
+      base: [light, bright, lens, breathing]
+      target: [sound, loud, horn, burning]
+      depth: 4
+    output:
+      mapping:
+        - light --> sound
+        - bright --> loud
+        - lens --> horn
+        - breathing --> burning
+
+  - input:
+      base: [projectile, earth, parabolic, air, trajectory]
+      target: [planet, sun, elliptical, space, orbit]
+      depth: 4
+    output:
+      mapping:
+        - projectile --> planet
+        - earth --> sun
+        - parabolic --> elliptical
+        - air --> space
+        - trajectory --> orbit
+
+  - input:
+      base: [species, competition, adaptation, natural, fitness]
+      target: [breeds, selection, conformance, artificial, popularity]
+      depth: 4
+    output:
+      mapping:
+        - species --> breeds
+        - competition --> selection
+        - adaptation --> conformance
+        - natural --> artificial
+        - fitness --> popularity
+
+  - input:
+      base: [computer, processing, erasing, bug]
+      target: [mind, thinking, forgetting, mistake]
+      depth: 4
+    output:
+      mapping:
+        - computer --> mind
+        - processing --> thinking
+        - erasing --> forgetting
+        - bug --> mistake
+
+  - input:
+      base: [machine, working, broken, repair]
+      target: [mind, thinking, confused, therapy]
+      depth: 4
+    output:
+      mapping:
+        - machine --> mind
+        - working --> thinking
+        - broken --> confused
+        - repair --> therapy
+
+  - input:
+      base: [war, soldiers, defeat, weapon, destroy]
+      target: [argument", debater, acceptance, logic, refute] 
+      depth: 4
+    output:
+      mapping:
+        - war --> argument
+        - soldiers --> debater
+        - defeat --> acceptance
+        - weapon --> logic
+        - destroy --> refute
+
+  - input:
+      base: [buildings, foundations, solid, weak]
+      target: [theories, reasons, rational, dubious] 
+      depth: 4
+    output:
+      mapping:
+        - buildings --> theories
+        - foundations --> reasons
+        - solid --> rational
+        - weak --> dubious
