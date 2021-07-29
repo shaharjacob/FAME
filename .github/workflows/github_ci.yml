@@ -22,3 +22,6 @@ jobs:
         python ci.py
       env:
         CI: True
+    - name: Evaluation
+      run: |
+        python evaluation.py
