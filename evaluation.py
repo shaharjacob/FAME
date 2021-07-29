@@ -17,17 +17,20 @@ def evaluate():
     for tv in mapping_spec:
 
         solutions = mapping_wrapper(base=tv["input"]["base"], target=tv["input"]["target"], suggestions=False, depth=tv["input"]["depth"], top_n=1)
-        solution = solutions[0]
-        current_good = 0
-        current_maps = 0
+        if solutions:    
+            solution = solutions[0]
+            current_good = 0
+            current_maps = 0
 
-        # check the mapping
-        actual = sorted(solution["mapping"])
-        reference = sorted(tv["output"]["mapping"])
-        for mapping in reference:
-            if mapping in actual:
-                current_good += 1
-            current_maps += 1
+            # check the mapping
+            actual = sorted(solution["mapping"])
+            reference = sorted(tv["output"]["mapping"])
+            for mapping in reference:
+                if mapping in actual:
+                    current_good += 1
+                current_maps += 1
+        else:
+            current_maps = len(tv["output"]["mapping"])
                 
         total_good += current_good
         total_maps += current_maps
