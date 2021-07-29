@@ -89,7 +89,8 @@ class TestMapping(unittest.TestCase):
             if tv["ignore"]:
                 continue
 
-            solution = mapping_wrapper(base=tv["input"]["base"], target=tv["input"]["target"], suggestions=True, depth=tv["input"]["depth"], top_n=1)
+            solutions = mapping_wrapper(base=tv["input"]["base"], target=tv["input"]["target"], suggestions=True, depth=tv["input"]["depth"], top_n=1)
+            solution = solutions[0]
 
             # check the mapping
             actual = solution["mapping"]
