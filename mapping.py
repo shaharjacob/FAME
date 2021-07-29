@@ -164,6 +164,10 @@ def get_best_pair_mapping(model: SentenceEmbedding, data_collector: DataCollecto
     return [{"best_mapping": mapping[0], "best_score": mapping[1]} for mapping in mappings[:depth]]
 
 
+def get_score(base: List[str], target: List[str], base_entity: str, target_entity: str, cache: dict) -> float:
+    return round(sum([cache[((b, base_entity),(t, target_entity))] for b, t in zip(base, target)]), 3)
+
+
 def mapping(
     base: List[str], 
     target: List[str],
@@ -191,7 +195,8 @@ def mapping(
                     "mapping": [f"{b} --> {t}" for b, t in zip(base_already_mapping, target_already_mapping)],
                     "relations": relations,
                     "scores": scores,
-                    "score": round(sum(scores), 3),
+                    # "score": round(sum(scores), 3),
+                    "score": round(new_score, 3),
                     "actual_base": base_already_mapping,
                     "actual_target": target_already_mapping,
                     "length": len(base_already_mapping),
@@ -203,7 +208,8 @@ def mapping(
                 "mapping": [f"{b} --> {t}" for b, t in zip(base_already_mapping, target_already_mapping)],
                 "relations": relations,
                 "scores": scores,
-                "score": round(sum(scores), 3),
+                # "score": round(sum(scores), 3),
+                "score": round(new_score, 3),
                 "actual_base": base_already_mapping,
                 "actual_target": target_already_mapping,
                 "length": len(base_already_mapping),
@@ -230,11 +236,14 @@ def mapping(
             base_already_mapping_new = copy.deepcopy(base_already_mapping)
             target_already_mapping_new = copy.deepcopy(target_already_mapping)
 
-            if result["best_mapping"][0][0] not in base_already_mapping_new and result["best_mapping"][1][0] not in target_already_mapping_new:  
+            score = 0
+            if result["best_mapping"][0][0] not in base_already_mapping_new and result["best_mapping"][1][0] not in target_already_mapping_new:
+                score += get_score(base_already_mapping_new, target_already_mapping_new, result["best_mapping"][0][0], result["best_mapping"][1][0], cache)
                 base_already_mapping_new.append(result["best_mapping"][0][0])
                 target_already_mapping_new.append(result["best_mapping"][1][0])
             
-            if result["best_mapping"][0][1] not in base_already_mapping_new and result["best_mapping"][1][1] not in target_already_mapping_new:  
+            if result["best_mapping"][0][1] not in base_already_mapping_new and result["best_mapping"][1][1] not in target_already_mapping_new:
+                score += get_score(base_already_mapping_new, target_already_mapping_new, result["best_mapping"][0][1], result["best_mapping"][1][1], cache)
                 base_already_mapping_new.append(result["best_mapping"][0][1])
                 target_already_mapping_new.append(result["best_mapping"][1][1])
             
@@ -255,7 +264,7 @@ def mapping(
                 target_already_mapping=target_already_mapping_new,
                 relations=relations_copy,
                 scores=scores_copy,
-                new_score=0,
+                new_score=new_score+score,
                 cache=cache,
                 depth=depth
             )
@@ -269,10 +278,11 @@ def mapping_suggestions(
     model: SentenceEmbedding,
     top_suggestions: List[str],
     domain: str,
+    cache: dict,
     num_of_suggestions: int = 1):
     # this function is use for mapping in suggestions mode. this is only one iteration.
     # we will get the top-num-of-suggestions with the best score.
-    best_results_for_current_iteration = get_best_pair_mapping(model, data_collector, available_pairs, {}, num_of_suggestions)
+    best_results_for_current_iteration = get_best_pair_mapping(model, data_collector, available_pairs, cache, num_of_suggestions)
     for result in best_results_for_current_iteration:
         # if the best score is > 0, we will update the base and target lists of the already mapping entities.
         # otherwise, if the best score is 0, we have no more mappings to do.
@@ -280,12 +290,15 @@ def mapping_suggestions(
             # we will add the new mapping to the already mapping lists. 
             base_already_mapping_new = copy.deepcopy(current_solution["actual_base"])
             target_already_mapping_new = copy.deepcopy(current_solution["actual_target"])
-
-            if result["best_mapping"][0][0] not in base_already_mapping_new and result["best_mapping"][1][0] not in target_already_mapping_new:  
+            
+            score = 0
+            if result["best_mapping"][0][0] not in base_already_mapping_new and result["best_mapping"][1][0] not in target_already_mapping_new:
+                score += get_score(base_already_mapping_new, target_already_mapping_new, result["best_mapping"][0][0], result["best_mapping"][1][0], cache)
                 base_already_mapping_new.append(result["best_mapping"][0][0])
                 target_already_mapping_new.append(result["best_mapping"][1][0])
             
-            if result["best_mapping"][0][1] not in base_already_mapping_new and result["best_mapping"][1][1] not in target_already_mapping_new:  
+            if result["best_mapping"][0][1] not in base_already_mapping_new and result["best_mapping"][1][1] not in target_already_mapping_new:
+                score += get_score(base_already_mapping_new, target_already_mapping_new, result["best_mapping"][0][1], result["best_mapping"][1][1], cache)
                 base_already_mapping_new.append(result["best_mapping"][0][1])
                 target_already_mapping_new.append(result["best_mapping"][1][1])
             
@@ -298,11 +311,14 @@ def mapping_suggestions(
             # we need to add the mapping that we just found to the relations that already exist for that solution.
             relations = copy.deepcopy(current_solution["relations"])
             relations.append(result["best_mapping"])
+            scores_copy = copy.deepcopy(current_solution["scores"])
+            scores_copy.append(round(result["best_score"], 3))
 
             solutions.append({
                 "mapping": [f"{b} --> {t}" for b, t in zip(base_already_mapping_new, target_already_mapping_new)],
                 "relations": relations,
-                "score": round(current_solution["score"] + result["best_score"], 3),
+                "scores": scores_copy,
+                "score": round(current_solution["score"] + score, 3),
                 "actual_base": base_already_mapping_new,
                 "actual_target": target_already_mapping_new,
                 "length": len(base_already_mapping_new),
@@ -317,6 +333,7 @@ def mapping_suggestions_wrapper(
     data_collector: DataCollector,
     model: SentenceEmbedding, 
     solutions: List[dict],
+    cache: dict,
     num_of_suggestions: int = 1):
     
     first_domain_not_mapped_entities = [entity for entity in domain if entity not in solution[first_domain]]
@@ -343,6 +360,7 @@ def mapping_suggestions_wrapper(
             model=model,
             top_suggestions=top_suggestions,
             domain=first_domain,
+            cache=cache,
             num_of_suggestions=num_of_suggestions,
         )
         for solution in solutions: # TODO: fix here
@@ -362,7 +380,8 @@ def mapping_wrapper(base: List[str], target: List[str], suggestions: bool = True
     quasimodo = Quasimodo()
     data_collector = DataCollector(quasimodo=quasimodo)
     model = SentenceEmbedding(data_collector=data_collector)
-    mapping(base, target, available_pairs, solutions, data_collector, model, [], [], [], [], 0, {}, depth=depth)
+    cache = {}
+    mapping(base, target, available_pairs, solutions, data_collector, model, [], [], [], [], 0, cache, depth=depth)
     
     # array of addition solutions for the suggestions if some entities have missing mappings.
     suggestions_solutions = []
@@ -372,8 +391,8 @@ def mapping_wrapper(base: List[str], target: List[str], suggestions: bool = True
         # the idea is to iterate over the founded solutions, and check if there are entities are not mapped.
         # this logic is checked only if ONE entity have missing mapping (from base or target)
         for solution in solutions[:number_of_solutions_for_suggestions]:
-            mapping_suggestions_wrapper(base, "actual_base", "actual_target", solution, data_collector, model, suggestions_solutions, num_of_suggestions)
-            mapping_suggestions_wrapper(target, "actual_target", "actual_base", solution, data_collector, model, suggestions_solutions, num_of_suggestions)
+            mapping_suggestions_wrapper(base, "actual_base", "actual_target", solution, data_collector, model, suggestions_solutions, cache, num_of_suggestions)
+            mapping_suggestions_wrapper(target, "actual_target", "actual_base", solution, data_collector, model, suggestions_solutions, cache, num_of_suggestions)
 
     all_solutions = sorted(solutions + suggestions_solutions, key=lambda x: (x["length"], x["score"]), reverse=True)
     if not all_solutions:
@@ -382,7 +401,7 @@ def mapping_wrapper(base: List[str], target: List[str], suggestions: bool = True
     if verbose:
         secho(f"\nBase: {base}", fg="blue", bold=True)
         secho(f"Target: {target}\n", fg="blue", bold=True)
-        for i, solution in enumerate(all_solutions[:top_n]):
+        for i, solution in enumerate(all_solutions[:20]):
             secho(f"#{i+1}", fg="blue", bold=True)
             print_solution(solution)
     return all_solutions[:top_n]
@@ -401,6 +420,7 @@ def print_solution(solution: dict):
     print()
 
     secho(f"Total score: {solution['score']}", fg="blue", bold=True)
+    secho(f"Old score: {round(sum(solution['scores']), 3)}", fg="blue", bold=True)
     print()
     print("------------------------------------------------------")
     print()
