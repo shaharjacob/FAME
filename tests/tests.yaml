@@ -1,7 +1,7 @@
 mapping:
   - input:
       base: [solar system, sun, planet, gravity, newton]
-      target: [cell, nucleus, electrons, electricity, faraday]
+      target: [cell, nucleus, electron, electricity, faraday]
       depth: 4
     output:
       mapping:
