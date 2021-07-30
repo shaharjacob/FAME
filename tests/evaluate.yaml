@@ -134,7 +134,7 @@ mapping:
 
   - input:
       base: [war, soldiers, defeat, weapon, destroy]
-      target: [argument", debater, acceptance, logic, refute] 
+      target: [argument, debater, acceptance, logic, refute] 
       depth: 4
     output:
       mapping:
