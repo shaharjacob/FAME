@@ -1,3 +1,4 @@
+import os
 import copy
 from itertools import combinations
 from typing import List, Dict, Tuple, Optional
@@ -126,7 +127,8 @@ def get_best_pair_mapping(model: SentenceEmbedding, data_collector: DataCollecto
     mappings = []
 
     # we will iterate over all the possible pairs mapping ((n choose 2)*(n choose 2)*2), 2->2, 3->18, 4->72
-    for mapping in tqdm(available_maps):
+    iterator = available_maps if os.environ.get('CI', False) else tqdm(available_maps)
+    for mapping in iterator:
         # for each mapping we want both direction, for example:
         # if we have in the base: earth, sun. AND in the target: electrons, nucleus.
         # for the mapping earth->electrons, sun->nucleus , we will calculate: 
@@ -185,14 +187,17 @@ def mapping(
     
     # in the end we will sort by the length and the score. So its ok to add all of them
     if base_already_mapping:
+        mapping_repr = [f"{b} --> {t}" for b, t in zip(base_already_mapping, target_already_mapping)]
         for solution in solutions:
             if sorted(relations) == sorted(solution["relations"]):
+                return
+            if sorted(mapping_repr) == sorted(solution["mapping"]):
                 return
         new_mapping = True
         for i, solution in enumerate(solutions):
             if relations[:-1] == solution["relations"]:
                 solutions[i] = {
-                    "mapping": [f"{b} --> {t}" for b, t in zip(base_already_mapping, target_already_mapping)],
+                    "mapping": mapping_repr,
                     "relations": relations,
                     "scores": scores,
                     # "score": round(sum(scores), 3),
@@ -205,7 +210,7 @@ def mapping(
                 break
         if new_mapping:
             solutions.append({
-                "mapping": [f"{b} --> {t}" for b, t in zip(base_already_mapping, target_already_mapping)],
+                "mapping": mapping_repr,
                 "relations": relations,
                 "scores": scores,
                 # "score": round(sum(scores), 3),
