@@ -2272,5 +2272,15 @@
 	"sun#benzene": [],
 	"benzene#sun": [],
 	"sun#it colder": [],
-	"it colder#sun": []
+	"it colder#sun": [],
+	"wall#earplugs": [],
+	"earplugs#wall": [],
+	"argument#logic": [],
+	"logic#argument": [],
+	"debater#logic": [],
+	"logic#debater": [],
+	"acceptance#logic": [],
+	"logic#acceptance": [],
+	"logic#refute": [],
+	"refute#logic": []
 }

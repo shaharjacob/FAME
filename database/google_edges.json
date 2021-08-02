@@ -5582,5 +5582,20 @@
 	"sun#it colder": [],
 	"it colder#sun": [
 		"closer to the"
-	]
+	],
+	"wall#earplugs": [],
+	"earplugs#wall": [],
+	"argument#logic": [],
+	"logic#argument": [
+		"help form a good",
+		"help to form a good",
+		"important in an",
+		"used in an"
+	],
+	"debater#logic": [],
+	"logic#debater": [],
+	"acceptance#logic": [],
+	"logic#acceptance": [],
+	"logic#refute": [],
+	"refute#logic": []
 }
