@@ -76,15 +76,14 @@ mapping:
         - breathing --> burning
 
   - input:
-      base: [light, bright, lens, breathing]
-      target: [sound, loud, horn, burning]
+      base: [light, bright, lens]
+      target: [sound, loud, horn]
       depth: 4
     output:
       mapping:
         - light --> sound
         - bright --> loud
         - lens --> horn
-        - breathing --> burning
 
   - input:
       base: [projectile, earth, parabolic, air, trajectory]
