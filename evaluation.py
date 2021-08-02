@@ -68,8 +68,8 @@ def evaluate():
         
         print(f'{COLORS["OKBLUE"]}Base: {tv["input"]["base"]}{COLORS["ENDC"]}')
         print(f'{COLORS["OKBLUE"]}Target: {tv["input"]["target"]}{COLORS["ENDC"]}')
-        print(f'{COLORS["OKCYAN"]}Correct answers: {choosen_good}/{current_maps}{COLORS["ENDC"]}')
-        print(f'{COLORS["OKCYAN"]}Anywhere in the solutions (#{idx_best_good+1}): {best_good}/{current_maps}{COLORS["ENDC"]}\n')
+        print(f'{COLORS["OKGREEN"]}Correct answers: {choosen_good}/{current_maps}{COLORS["ENDC"]}')
+        print(f'{COLORS["OKGREEN"]}Anywhere in the solutions (#{idx_best_good+1}): {best_good}/{current_maps}{COLORS["ENDC"]}\n')
         # secho(f'Base: {tv["input"]["base"]}', fg="blue")
         # secho(f'Target: {tv["input"]["target"]}', fg="blue")
         # secho(f'Correct answers: {choosen_good}/{current_maps}', fg="cyan")

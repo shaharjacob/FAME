@@ -401,7 +401,8 @@ def mapping_wrapper(base: List[str], target: List[str], suggestions: bool = True
 
     all_solutions = sorted(solutions + suggestions_solutions, key=lambda x: (x["length"], x["score"]), reverse=True)
     if not all_solutions:
-        secho("No solution found")
+        if verbose:
+            secho("No solution found")
         return []
     if verbose:
         secho(f"\nBase: {base}", fg="blue", bold=True)
