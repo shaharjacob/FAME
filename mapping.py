@@ -427,8 +427,6 @@ def print_solution(solution: dict):
     secho(f"Total score: {solution['score']}", fg="blue", bold=True)
     secho(f"Old score: {round(sum(solution['scores']), 3)}", fg="blue", bold=True)
     print()
-    print("------------------------------------------------------")
-    print()
 
 
 if __name__ == "__main__":

@@ -1,3 +1,4 @@
+import os
 import copy
 from pathlib import Path
 from collections import Counter
@@ -48,7 +49,8 @@ class Quasimodo:
             list_to_update.append(singular)
     
     def init_data(self, path: str) -> DataFrame:
-        secho(f"[INFO] init Quasimodo data", fg='blue')
+        if 'CI' not in os.environ: 
+            secho(f"[INFO] init Quasimodo data", fg='blue')
         return pd.read_csv(path, sep='\t', low_memory=False)
     
     def get_entity_props(self, entity: str, n_largest: int = 10, verbose: bool = False, plural_and_singular: bool = False) -> List[Tuple[str]]:
