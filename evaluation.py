@@ -8,7 +8,17 @@ from mapping import mapping_wrapper
 
 
 TEST_FOLDER = Path('tests')
-
+COLORS = {
+    "HEADER": '\033[95m',
+    "OKBLUE": '\033[94m',
+    "OKCYAN": '\033[96m',
+    "OKGREEN": '\033[92m',
+    "WARNING": '\033[93m',
+    "FAIL": '\033[91m',
+    "ENDC": '\033[0m',
+    "BOLD": '\033[1m',
+    "UNDERLINE": '\033[4m',
+}
 
 def get_scores(corrent_mapping: List[str], solutions: List[List[str]]):
     res = {
@@ -56,14 +66,18 @@ def evaluate():
         total_anywhere += best_good
         total_maps += current_maps
         
-        secho(f'Base: {tv["input"]["base"]}', fg="blue")
-        secho(f'Target: {tv["input"]["target"]}', fg="blue")
-        secho(f'Correct answers: {choosen_good}/{current_maps}', fg="cyan")
-        secho(f'Anywhere in the solutions (#{idx_best_good+1}): {best_good}/{current_maps}\n', fg="cyan")
+        print(f'{COLORS["OKBLUE"]}Base: {tv["input"]["base"]}{COLORS["ENDC"]}')
+        print(f'{COLORS["OKBLUE"]}Target: {tv["input"]["target"]}{COLORS["ENDC"]}')
+        print(f'{COLORS["OKCYAN"]}Correct answers: {choosen_good}/{current_maps}{COLORS["ENDC"]}')
+        print(f'{COLORS["OKCYAN"]}Anywhere in the solutions (#{idx_best_good+1}): {best_good}/{current_maps}{COLORS["ENDC"]}\n')
+        # secho(f'Base: {tv["input"]["base"]}', fg="blue")
+        # secho(f'Target: {tv["input"]["target"]}', fg="blue")
+        # secho(f'Correct answers: {choosen_good}/{current_maps}', fg="cyan")
+        # secho(f'Anywhere in the solutions (#{idx_best_good+1}): {best_good}/{current_maps}\n', fg="cyan")
         print("------------------------------------------------------------")
         print()
-    secho(f'Total: {total_good}/{total_maps}\n', fg="green")
-    secho(f'Total (anywhere): {total_anywhere}/{total_maps}\n', fg="green")
+    print(f'{COLORS["OKGREEN"]}Total: {total_good}/{total_maps}{COLORS["ENDC"]}')
+    print(f'{COLORS["OKGREEN"]}Total (anywhere): {total_anywhere}/{total_maps}{COLORS["ENDC"]}\n')
 
 
 if __name__ == '__main__':
