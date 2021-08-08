@@ -407,7 +407,8 @@ def mapping_wrapper(base: List[str], target: List[str], suggestions: bool = True
     if verbose:
         secho(f"\nBase: {base}", fg="blue", bold=True)
         secho(f"Target: {target}\n", fg="blue", bold=True)
-        for i, solution in enumerate(all_solutions[:20]):
+        solutions_to_print = 20 if os.environ.get("CI", False) else top_n
+        for i, solution in enumerate(all_solutions[:solutions_to_print]):
             secho(f"#{i+1}", fg="blue", bold=True)
             print_solution(solution)
     return all_solutions[:top_n]
@@ -431,95 +432,9 @@ def print_solution(solution: dict):
 
 
 if __name__ == "__main__":
-    
-    data = [
-        {
-            "base": ["solar system", "sun", "planet"],
-            "target": ["atom", "nucleus", "electron"]
-            # this is working good
-            # BUT if I changed the cell to atom, it not good. 
-            # very high score for (sun .* solar system, electron .* atom) (3.883)
-            # http://localhost:3000/single-mapping?base1=solar%20system&base2=sun&target1=atom&target2=electron
-            # so it map sun->electron (even with high depth)
-            # I expect (sun .* solar system, nucleus .* atom) to be higher:  (only 1.774)
-            # http://localhost:3000/single-mapping?base1=solar%20system&base2=sun&target1=atom&target2=nucleus
-            # and generally atom with high score with everything so it hard
-        },
-        # {
-        #     "base": ["solar system", "sun", "planet", "gravity", "mass"],
-        #     "target": ["atom", "nucleus", "electron", "electromagnetism", "charge"]
-        # },
-        # {
-        #     "base": ["water", "pressure", "water tower", "bucket", "pipe"],
-        #     "target": ["heat", "temperature", "burner", "kettle", 'iron']
-        #     # this is good but pipe->iron not because what I expected.
-        #     # water tower->burner ?
-        # },
-        # {
-        #     "base": ["water", "pressure", "bucket", "pipe"],
-        #     "target": ["heat", "temperature", "kettle", 'iron']
-        #     # water tower->burner ?
-        # },
-        # {
-        #     "base": ["waves", "water", "shore", "breakwater"],
-        #     "target": ["sounds", "air", "ear", "earplugs"]
-        #     # this map waves->sounds, water->air, shore->ear
-        #     # which is good BUT, the last map is not clear. I want to say thay waves coming to the shore like sounds coming to the ear.
-        #     # In addition, nothing for waves:breakwater
-        # },
-        # {
-        #     "base": ["waves", "water", "shore", "breakwater"],
-        #     "target": ["sounds", "air", "wall", "insulation"]
-        # },
-        # {
-        #     "base": ["respiration", "animal", "food", "breathing"],
-        #     "target": ["combustion", "fire", "fuel", "burning"]
-        # },
-        # {
-        #     "base": ["light", "bright", "lens", "breathing"],
-        #     "target": ["sound", "loud", "horn", "burning"]
-        # },
-        # {
-        #     "base": ["projectile", "earth", "parabolic", "air"],
-        #     "target": ["planet", "sun", "elliptical", "space"]
-        #     # not good
-        #     # earth->space, air->sun is stronger then (earth->sun, air->space)
-        #     # the good one is only #3, after setting depth to 6
-        # }, 
-        # {
-        #     "base": ["projectile", "earth", "parabolic", "air", "trajectory"],
-        #     "target": ["planet", "sun", "elliptical", "space", "orbit"]
-        # },
-        # {
-        #     "base": ["species", "competition", "adaptation", "natural", "fitness"],
-        #     "target": ["breeds", "selection", "conformance", "artificial", "popularity"]
-        # },  
-        # {
-        #     "base": ["computer", "processing", "erasing", "bug"],
-        #     "target": ["mind", "thinking", "forgetting", "mistake"]  # people or mind
-        #     # not good
-        # },
-        # {
-        #     "base": ["machine", "working", "broken", "repair"],
-        #     "target": ["mind", "thinking", "confused", "therapy"]
-        # },  
-        # {
-        #     "base": ["war", "soldiers", "defeat", "weapon", "destroy"],
-        #     "target": ["argument", "debater", "acceptance", "weapon", "refute"]
-        #     # nothing for argument:debater
-        #     # http://localhost:3000/two-entities?entity1=argument&entity2=debater
-        # }, 
-        # {
-        #     "base": ["buildings", "foundations", "solid", "weak"],
-        #     "target": ["theories", "reasons", "rational", "dubious"]
-        #     # nothing...
-        # },           
-    ]
-    
-    for entry in data:
-        base = entry["base"]
-        target = entry["target"]
-        solutions = mapping_wrapper(base, target, suggestions=False, depth=4, top_n=10, verbose=True)
+    base = ["respiration", "animal", "food", "breathing"]
+    target = ["combustion", "fire", "fuel", "burning"]
+    solutions = mapping_wrapper(base, target, suggestions=False, depth=4, top_n=10, verbose=True)
     
 
 

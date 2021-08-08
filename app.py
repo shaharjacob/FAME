@@ -166,15 +166,21 @@ def two_entities():
 
 @app.route("/bipartite", methods=["GET", "POST"])
 def bipartite_graph():
-    edge1 = (request.args.get('base1'), request.args.get('base2'))
-    edge2 = (request.args.get('target1'), request.args.get('target2'))
+    base1 = request.args.get('base1')
+    base2 = request.args.get('base2')
+    target1 = request.args.get('target1')
+    target2 = request.args.get('target2')
 
     data_collector = DataCollector()
     model = SentenceEmbedding(data_collector=data_collector)
 
-    props_edge1 = data_collector.get_entities_relations(edge1[0], edge1[1])
-    props_edge2 = data_collector.get_entities_relations(edge2[0], edge2[1])
-
+    if not utils.is_none(base1) and not utils.is_none(base2) and not utils.is_none(target1) and not utils.is_none(target2):
+        props_edge1 = data_collector.get_entities_relations(base1, base2)
+        props_edge2 = data_collector.get_entities_relations(target1, target2)
+    else:
+        props_edge1 = request.args.get('left').split(",")
+        props_edge2 = request.args.get('right').split(",")
+        
     props1 = python2react.get_nodes_for_app_bipartite(props=props_edge1, start_idx=0, x=200, group=0)
     props2 = python2react.get_nodes_for_app_bipartite(props=props_edge2, start_idx=len(props1), x=800, group=1)
     

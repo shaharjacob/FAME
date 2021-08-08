@@ -7,6 +7,7 @@ import utils
 def get_edges_for_app(edges: List[str], spaces: int = 80) -> List[Dict]:
     return [
         {
+            "id": f"{edge[0]}:{edge[1]}",
             "from": edge[0], 
             "to": edge[1], 
             "scaling": {

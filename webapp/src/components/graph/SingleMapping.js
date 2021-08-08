@@ -119,6 +119,27 @@ const SingleMapping = () => {
         setSimilarityThreshold(value)
     }
 
+    const events = {
+        select: function(event) {
+            var { nodes, edges } = event;
+            if (edges.length === 1) {
+                let edge_id = edges[0]
+                let nodes_ids = edge_id.split(":")
+                let labels1 = []
+                let labels2 = []
+                for (let i = 0; i < graph.nodes.length; i++){
+                    if (parseInt(graph.nodes[i].id) === parseInt(nodes_ids[0])){
+                        labels1 = graph.nodes[i].label.split("\n")
+                    }
+                    if (parseInt(graph.nodes[i].id) === parseInt(nodes_ids[1])){
+                        labels2 = graph.nodes[i].label.split("\n")
+                    }
+                }
+                window.open(`/bipartite?left=${labels1}&right=${labels2}`, '_blank').focus();
+            }
+        }
+    };
+
     return (
     <div>
         {graph && options
@@ -203,6 +224,7 @@ const SingleMapping = () => {
                 <Graph
                     graph={graph}
                     options={options}
+                    events={events}
                 />
             }
             {

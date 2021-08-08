@@ -103,3 +103,10 @@ def get_maximum_weighted_match(model: SentenceEmbedding,
             already_seen.add((head, tail))
 
     return similatiry_edges
+
+def is_none(val):
+    if not val:
+        return True
+    if val == 'None' or val == 'none':
+        return True
+    return False
