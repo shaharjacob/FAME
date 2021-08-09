@@ -1,5 +1,6 @@
 import os
 import copy
+import json
 from pathlib import Path
 from collections import Counter
 from typing import List, Dict, Tuple
@@ -181,89 +182,37 @@ class Quasimodo:
             df = df.nlargest(n_largest, 'plausibility')
         return df
 
-    def count_predicates(self, n: int = 0):
-        if n > 0:
-            return Counter(self.data["predicate"].tolist()).most_common(n)
-        return Counter(self.data["predicate"].tolist())
-
-
-
-
+    def save_predicates(self):
+        values = [val.replace("_", " ").lower() for val in self.data["predicate"].tolist()]
+        dict_counter = Counter(values)
+        d = {k: v for k, v in sorted(dict_counter.items(), key=lambda x: x[1], reverse=True)}
+        with open('database/predicates.json', 'w') as f:
+            json.dump(d, f, indent='\t')
+    
 
 def merge_tsvs(output: str):
     dir_parent = Path('tsv')
-    dataframes = [pd.read_csv(path, sep="\t") for path in dir_parent.iterdir()]
+    dataframes = [pd.read_csv(path, sep="\t") for path in dir_parent.iterdir() if path.name != 'quasimodo.tsv']
     merged_df = pd.concat(dataframes)
     merged_df.to_csv(dir_parent / output, sep="\t", index=False, encoding='utf-8')
 
 
 if __name__ == '__main__':
     quasimodo = Quasimodo()
-    res = quasimodo.get_entity_suggestions("boats", "have", n_largest=5, plural_and_singular=True)
-    print(res)
-    # counts = quasimodo.count_predicates(20)
-    # print(counts)
+    quasimodo.save_predicates()
+    # values = list(predicates.values())
+    # for prop in ["affect", "be considered", "different to", "look from other", "similar to the", "circle the", "move around", "orbit", "orbit the", "revolve around", "revolving around the", "spin around the", "stay around", "surround", "surround the", "travel around the"]:
+    #     appearence = predicates.get(prop, 0)
+    #     if appearence > 0:
+    #         print(f"{prop}: {values.index(predicates.get(prop))}")
+    #     else:
+    #         prop = prop.replace(" ", "_")
+    #         appearence = predicates.get(prop, 0)
+    #         if appearence > 0:
+    #             print(f"{prop}: {values.index(predicates.get(prop))}")
+    #         else:
+    #             print(f"not found ({prop})")
     # res = quasimodo.get_entity_props('sun', n_largest=5)
     # res = quasimodo.get_entities_relations('sun', 'earth', n_largest=5)
     # res = quasimodo.get_similarity_between_entities('horse', 'cow', n_largest=5)
     # print(res)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-# def count_pred_obj_paris(self, n: int = 0):
-#     predicates = self.data["predicate"].tolist()
-#     objects = self.data["object"].tolist()
-#     concat = [(predicate, obj) for predicate, obj in zip(predicates, objects)]
-#     if n > 0:
-#         return Counter(concat).most_common(n)
-#     return Counter(concat)
-
-# def read_all_data(from_page: int = 1, to_page: int = 0):
-#     rows_list = []
-#     number_of_results = 3_845_266
-#     to_page = min(to_page, math.ceil(number_of_results / 20))
-#     for page in tqdm(range(from_page, to_page)):
-
-#         try:
-#             response = requests.get(f'https://quasimodo.r2.enst.fr/explorer/?page={page}')
-#             content = response.text
-#         except:
-#             secho(f"skipping page {page}")
-#             continue
-
-#         soup = BeautifulSoup(content, 'html.parser')
-#         table = soup.find_all("table")[0]  # assuming only one table in the page
-#         trs = table.find_all("tr")[1:]  # first row is the titles
-#         for tr in trs:
-#             tds = tr.find_all("td")
-#             rows_list.append({
-#                 "subject": tds[0].text,
-#                 "predicate": tds[1].text,
-#                 "object": tds[2].text,
-#                 "plausibility": float(tds[5].text),
-#                 "neighborhood_sigma": float(tds[6].text),
-#                 "local_sigma": float(tds[7].text)
-#             })
-#     return rows_list
-
-
-# def write_tsv(from_page: int = 1, to_page: int = 0):
-#     info: List[Dict[str, str]] = read_all_data(from_page, to_page)
-#     df = DataFrame(info)
-#     dir_parent = Path('tsv')
-#     df.to_csv(dir_parent / f'{from_page}_{to_page}.tsv', sep="\t", index=False, encoding='utf-8')
-
-
