@@ -7,6 +7,7 @@ tsv/quasimodo.tsv
 .vscode
 *.pyc
 test/
+jsons/
 .idea/
 txt_sentoken/
 movie_review/

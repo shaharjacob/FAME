@@ -3,6 +3,8 @@ click
 flask
 pyyaml
 pandas
+gensim
+sklearn
 inflect
 requests
 graphviz
