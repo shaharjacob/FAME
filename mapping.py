@@ -403,7 +403,7 @@ def mapping_wrapper(base: List[str], target: List[str], suggestions: bool = True
     # 'msmarco-distilbert-base-v4'
     # 'paraphrase-xlm-r-multilingual-v1' --> to big
     model = SentenceEmbedding(model='stsb-mpnet-base-v2', data_collector=data_collector)
-    if not freq:
+    if not freq and 'CI' not in os.environ:
         freq = Frequencies('jsons/merged/20%/all_1m_filter_2_sort.json')
     freq.apply_threshold(0.99995)
     cache = {}
