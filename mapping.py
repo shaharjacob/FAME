@@ -9,6 +9,7 @@ from click import secho
 import utils
 import suggest_entities
 from quasimodo import Quasimodo
+from frequency import Frequencies
 from data_collector import DataCollector
 from sentence_embadding import SentenceEmbedding
 
@@ -123,7 +124,17 @@ def get_pair_mapping(model: SentenceEmbedding, data_collector: DataCollector, ma
     }
 
 
-def get_best_pair_mapping(model: SentenceEmbedding, data_collector: DataCollector, available_maps: List[List[List[Tuple[str, str]]]], cache: dict, depth: int = 2) -> Dict:
+def get_edge_score(prop1: str, prop2: str, model: SentenceEmbedding, freq: Frequencies) -> float:
+    # if freq.exists(prop1) and freq.exists(prop2):
+    #     return model.similarity(prop1, prop2)
+    # else:
+    #     # return 0.01
+    #     return 0
+    # # return freq.get(prop1) * model.similarity(prop1, prop2) * freq.get(prop2)
+    return model.similarity(prop1, prop2)
+
+
+def get_best_pair_mapping(model: SentenceEmbedding, freq: Frequencies, data_collector: DataCollector, available_maps: List[List[List[Tuple[str, str]]]], cache: dict, depth: int = 2) -> Dict:
     mappings = []
 
     # we will iterate over all the possible pairs mapping ((n choose 2)*(n choose 2)*2), 2->2, 3->18, 4->72
@@ -142,7 +153,7 @@ def get_best_pair_mapping(model: SentenceEmbedding, data_collector: DataCollecto
                 continue
 
             # we want the weight of each edge between two nodes.
-            similatiry_edges = [(prop1, prop2, model.similarity(prop1, prop2)) for prop1 in props_edge1 for prop2 in props_edge2]
+            similatiry_edges = [(prop1, prop2, get_edge_score(prop1, prop2, model, freq)) for prop1 in props_edge1 for prop2 in props_edge2]
 
             # we want the cluster similar properties
             clustered_sentences_1: Dict[int, List[str]] = model.clustering(direction[0], distance_threshold=0.8)
@@ -177,6 +188,7 @@ def mapping(
     solutions: List[dict],
     data_collector: DataCollector,
     model: SentenceEmbedding,
+    freq: Frequencies,
     base_already_mapping: List[str],
     target_already_mapping: List[str],
     relations: List[List[Tuple[str, str]]],
@@ -200,7 +212,6 @@ def mapping(
                     "mapping": mapping_repr,
                     "relations": relations,
                     "scores": scores,
-                    # "score": round(sum(scores), 3),
                     "score": round(new_score, 3),
                     "actual_base": base_already_mapping,
                     "actual_target": target_already_mapping,
@@ -213,7 +224,6 @@ def mapping(
                 "mapping": mapping_repr,
                 "relations": relations,
                 "scores": scores,
-                # "score": round(sum(scores), 3),
                 "score": round(new_score, 3),
                 "actual_base": base_already_mapping,
                 "actual_target": target_already_mapping,
@@ -225,7 +235,7 @@ def mapping(
         return
 
     # we will get the top-depth pairs with the best score.
-    best_results_for_current_iteration = get_best_pair_mapping(model, data_collector, available_pairs, cache, depth)
+    best_results_for_current_iteration = get_best_pair_mapping(model, freq, data_collector, available_pairs, cache, depth)
     for result in best_results_for_current_iteration:
         # if the best score is > 0, we will update the base and target lists of the already mapping entities.
         # otherwise, if the best score is 0, we have no more mappings to do.
@@ -265,6 +275,7 @@ def mapping(
                 solutions=solutions,
                 data_collector=data_collector,
                 model=model,
+                freq=freq,
                 base_already_mapping=base_already_mapping_new,
                 target_already_mapping=target_already_mapping_new,
                 relations=relations_copy,
@@ -281,13 +292,14 @@ def mapping_suggestions(
     solutions: List[dict],
     data_collector: DataCollector,
     model: SentenceEmbedding,
+    freq: Frequencies,
     top_suggestions: List[str],
     domain: str,
     cache: dict,
     num_of_suggestions: int = 1):
     # this function is use for mapping in suggestions mode. this is only one iteration.
     # we will get the top-num-of-suggestions with the best score.
-    best_results_for_current_iteration = get_best_pair_mapping(model, data_collector, available_pairs, cache, num_of_suggestions)
+    best_results_for_current_iteration = get_best_pair_mapping(model, freq, data_collector, available_pairs, cache, num_of_suggestions)
     for result in best_results_for_current_iteration:
         # if the best score is > 0, we will update the base and target lists of the already mapping entities.
         # otherwise, if the best score is 0, we have no more mappings to do.
@@ -337,6 +349,7 @@ def mapping_suggestions_wrapper(
     solution: dict, 
     data_collector: DataCollector,
     model: SentenceEmbedding, 
+    freq: Frequencies,
     solutions: List[dict],
     cache: dict,
     num_of_suggestions: int = 1):
@@ -372,7 +385,8 @@ def mapping_suggestions_wrapper(
             solution["top_suggestions"] = solution.get("top_suggestions", top_suggestions)
 
 
-def mapping_wrapper(base: List[str], target: List[str], suggestions: bool = True, depth: int = 2, top_n: int = 1, num_of_suggestions: int = 1, verbose: bool = False):
+def mapping_wrapper(base: List[str], target: List[str], suggestions: bool = True, depth: int = 2, top_n: int = 1, num_of_suggestions: int = 1, verbose: bool = False, 
+                    quasimodo: Quasimodo = None, freq: Frequencies = None):
 
     # we want all the possible pairs.
     # general there are (n choose 2) * (n choose 2) * 2 pairs.
@@ -382,11 +396,18 @@ def mapping_wrapper(base: List[str], target: List[str], suggestions: bool = True
     solutions = []
 
     # better to init all the objects here, since they are not changed in the run
-    quasimodo = Quasimodo()
+    if not quasimodo:
+        quasimodo = Quasimodo()
     data_collector = DataCollector(quasimodo=quasimodo)
-    model = SentenceEmbedding(data_collector=data_collector)
+    # 'stsb-mpnet-base-v2'
+    # 'msmarco-distilbert-base-v4'
+    # 'paraphrase-xlm-r-multilingual-v1' --> to big
+    model = SentenceEmbedding(model='stsb-mpnet-base-v2', data_collector=data_collector)
+    if not freq:
+        freq = Frequencies('jsons/merged/20%/all_1m_filter_2_sort.json')
+    freq.apply_threshold(0.99995)
     cache = {}
-    mapping(base, target, available_pairs, solutions, data_collector, model, [], [], [], [], 0, cache, depth=depth)
+    mapping(base, target, available_pairs, solutions, data_collector, model, freq, [], [], [], [], 0, cache, depth=depth)
     
     # array of addition solutions for the suggestions if some entities have missing mappings.
     suggestions_solutions = []
@@ -396,8 +417,8 @@ def mapping_wrapper(base: List[str], target: List[str], suggestions: bool = True
         # the idea is to iterate over the founded solutions, and check if there are entities are not mapped.
         # this logic is checked only if ONE entity have missing mapping (from base or target)
         for solution in solutions[:number_of_solutions_for_suggestions]:
-            mapping_suggestions_wrapper(base, "actual_base", "actual_target", solution, data_collector, model, suggestions_solutions, cache, num_of_suggestions)
-            mapping_suggestions_wrapper(target, "actual_target", "actual_base", solution, data_collector, model, suggestions_solutions, cache, num_of_suggestions)
+            mapping_suggestions_wrapper(base, "actual_base", "actual_target", solution, data_collector, model, freq, suggestions_solutions, cache, num_of_suggestions)
+            mapping_suggestions_wrapper(target, "actual_target", "actual_base", solution, data_collector, model, freq, suggestions_solutions, cache, num_of_suggestions)
 
     all_solutions = sorted(solutions + suggestions_solutions, key=lambda x: (x["length"], x["score"]), reverse=True)
     if not all_solutions:

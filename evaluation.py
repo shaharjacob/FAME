@@ -4,6 +4,9 @@ from pathlib import Path
 import yaml
 from click import secho
 
+import torch
+from quasimodo import Quasimodo
+from frequency import Frequencies
 from mapping import mapping_wrapper
 
 
@@ -58,11 +61,15 @@ def evaluate():
     total_maps = 0
     total_good_good = 0
     total_good_good_total = 0
+    quasimodo = Quasimodo()
+    freq = Frequencies('jsons/merged/20%/all_1m_filter_2_sort.json')
     for tv in mapping_spec:
-        solutions = mapping_wrapper(base=tv["input"]["base"], target=tv["input"]["target"], suggestions=False, depth=tv["input"]["depth"], top_n=10, verbose=True)
+        solutions = mapping_wrapper(base=tv["input"]["base"], target=tv["input"]["target"], suggestions=False, depth=tv["input"]["depth"], top_n=10, verbose=True, quasimodo=quasimodo, freq=freq)
         choosen_good = 0
         best_good = 0
         idx_best_good = -1
+        choosen_good_good = 0
+        choosen_good_good_total = 0
         current_maps = len(tv["output"]["mapping"])
         if solutions:
             res = get_scores(tv["output"]["mapping"], solutions)
@@ -83,10 +90,6 @@ def evaluate():
         print(f'{COLORS["OKGREEN"]}Correct answers: {choosen_good}/{current_maps}{COLORS["ENDC"]}')
         print(f'{COLORS["OKGREEN"]}Anywhere in the solutions (#{idx_best_good+1}): {best_good}/{current_maps}{COLORS["ENDC"]}')
         print(f'{COLORS["OKGREEN"]}Correct from active mapping: {choosen_good_good}/{choosen_good_good_total}{COLORS["ENDC"]}\n')
-        # secho(f'Base: {tv["input"]["base"]}', fg="blue")
-        # secho(f'Target: {tv["input"]["target"]}', fg="blue")
-        # secho(f'Correct answers: {choosen_good}/{current_maps}', fg="cyan")
-        # secho(f'Anywhere in the solutions (#{idx_best_good+1}): {best_good}/{current_maps}\n', fg="cyan")
         print("------------------------------------------------------------")
         print()
     print(f'{COLORS["OKGREEN"]}Total: {total_good}/{total_maps}{COLORS["ENDC"]}')
@@ -95,4 +98,8 @@ def evaluate():
 
 
 if __name__ == '__main__':
+    torch.cuda.empty_cache()
+    import sys
+    if len(sys.argv) > 1:
+        print(sys.argv[1])
     evaluate()
