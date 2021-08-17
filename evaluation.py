@@ -62,7 +62,7 @@ def evaluate():
     total_good_good = 0
     total_good_good_total = 0
     quasimodo = Quasimodo()
-    freq = Frequencies('jsons/merged/20%/all_1m_filter_2_sort.json')
+    freq = Frequencies('jsons/merged/20%/all_1m_filter_2_sort.json', threshold=0.99995)
     for tv in mapping_spec:
         solutions = mapping_wrapper(base=tv["input"]["base"], target=tv["input"]["target"], suggestions=False, depth=tv["input"]["depth"], top_n=10, verbose=True, quasimodo=quasimodo, freq=freq)
         choosen_good = 0
