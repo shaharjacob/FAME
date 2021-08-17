@@ -376,6 +376,7 @@ def mapping_suggestions_wrapper(
             solutions=solutions,
             data_collector=data_collector,
             model=model,
+            freq=freq,
             top_suggestions=top_suggestions,
             domain=first_domain,
             cache=cache,
