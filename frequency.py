@@ -8,8 +8,9 @@ from sklearn.feature_extraction.text import CountVectorizer
 import utils
 
 class Frequencies():
-    def __init__(self, path: str):
+    def __init__(self, path: str, threshold: float):
         self.data = utils.read_json(path)
+        self.apply_threshold(threshold)
     
     def apply_threshold(self, threshold):
         target_value = int((1-threshold) * len(self.data))
