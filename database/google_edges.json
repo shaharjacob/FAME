@@ -5597,5 +5597,305 @@
 	"acceptance#logic": [],
 	"logic#acceptance": [],
 	"logic#refute": [],
-	"refute#logic": []
+	"refute#logic": [],
+	"river#moses": [],
+	"moses#river": [
+		"float down the",
+		"get sent down the",
+		"go down the",
+		"mom put him in the",
+		"mom sent him down the"
+	],
+	"river#the farmer": [],
+	"the farmer#river": [
+		"cross the",
+		"get everything across the"
+	],
+	"river#i": [],
+	"i#river": [],
+	"river#the chicken": [],
+	"the chicken#river": [
+		"cross the"
+	],
+	"river#a caterpillar": [],
+	"a caterpillar#river": [
+		"cross the"
+	],
+	"river#spider man": [],
+	"spider man#river": [
+		"cross the"
+	],
+	"river#joshua": [],
+	"joshua#river": [
+		"cross the jordan",
+		"part the jordan"
+	],
+	"river#the rabbit": [],
+	"the rabbit#river": [
+		"cross the"
+	],
+	"river#the subway": [],
+	"the subway#river": [
+		"cross the"
+	],
+	"river#the israelites": [],
+	"the israelites#river": [
+		"able to cross the jordan",
+		"cross the jordan",
+		"get across the jordan"
+	],
+	"river#the fool": [],
+	"the fool#river": [
+		"cross the"
+	],
+	"river#krakauer": [],
+	"krakauer#river": [],
+	"river#the dog": [],
+	"the dog#river": [
+		"cross the"
+	],
+	"river#the otter": [],
+	"the otter#river": [],
+	"river#in animal crossing": [],
+	"in animal crossing#river": [],
+	"boats#moses": [],
+	"moses#boats": [],
+	"boats#the farmer": [],
+	"the farmer#boats": [],
+	"boats#i": [],
+	"i#boats": [
+		"beat the u",
+		"call",
+		"call a person who makes",
+		"defeat u",
+		"have fishing",
+		"make paper",
+		"name",
+		"need"
+	],
+	"boats#the chicken": [],
+	"the chicken#boats": [],
+	"boats#a caterpillar": [],
+	"a caterpillar#boats": [],
+	"boats#spider man": [],
+	"spider man#boats": [],
+	"boats#joshua": [],
+	"joshua#boats": [],
+	"boats#the rabbit": [],
+	"the rabbit#boats": [],
+	"boats#the subway": [],
+	"the subway#boats": [],
+	"boats#the israelites": [],
+	"the israelites#boats": [],
+	"boats#the fool": [],
+	"the fool#boats": [],
+	"boats#krakauer": [],
+	"krakauer#boats": [],
+	"boats#the dog": [],
+	"the dog#boats": [],
+	"boats#the otter": [],
+	"the otter#boats": [],
+	"boats#in animal crossing": [],
+	"in animal crossing#boats": [],
+	"rain#cyclones": [
+		"during"
+	],
+	"cyclones#rain": [
+		"bring",
+		"brings",
+		"cause"
+	],
+	"rain#clouds": [
+		"come from",
+		"created from",
+		"fall down from the",
+		"from",
+		"get into",
+		"only come from grey",
+		"stay in",
+		"without"
+	],
+	"clouds#rain": [
+		"dark before it",
+		"form before it",
+		"go grey when",
+		"hold",
+		"make",
+		"produce",
+		"turn black when it",
+		"turn dark when it"
+	],
+	"rain#forests": [
+		"more in the"
+	],
+	"forests#rain": [
+		"attract",
+		"bring"
+	],
+	"rain#winds": [
+		"affect"
+	],
+	"winds#rain": [
+		"and",
+		"bring",
+		"cause"
+	],
+	"rain#mountains": [
+		"affect",
+		"as air passes over the",
+		"more near",
+		"more over",
+		"near",
+		"on",
+		"on one side of the",
+		"so much in smoky"
+	],
+	"mountains#rain": [
+		"block",
+		"cause",
+		"create",
+		"get more",
+		"help"
+	],
+	"rain#fronts": [
+		"at",
+		"before a cold",
+		"formed at weather",
+		"occur near a cold",
+		"occur near a warm"
+	],
+	"fronts#rain": [
+		"cause",
+		"d not associated with heavy",
+		"produce"
+	],
+	"rain#trees": [
+		"affect",
+		"more where there are"
+	],
+	"trees#rain": [
+		"attract",
+		"bring",
+		"bubble when it",
+		"fall when it",
+		"foam when it",
+		"help in",
+		"help in bringing",
+		"make",
+		"turn green when it"
+	],
+	"rain#birds": [
+		"affect"
+	],
+	"birds#rain": [
+		"avoid",
+		"chirp after",
+		"chirp before",
+		"chirp when it",
+		"come out when it",
+		"eat more when it",
+		"fly in",
+		"fly low before",
+		"handle",
+		"like",
+		"love the",
+		"make noise when it",
+		"sing in the",
+		"sing when it",
+		"sit in the",
+		"sleep when it",
+		"stay dry when it",
+		"survive",
+		"survive heavy"
+	],
+	"rain#low pressure": [
+		"associated with"
+	],
+	"low pressure#rain": [
+		"bring",
+		"cause",
+		"create"
+	],
+	"rain#diffraction": [],
+	"diffraction#rain": [],
+	"winter#cyclones": [],
+	"cyclones#winter": [],
+	"winter#clouds": [],
+	"clouds#winter": [
+		"form in"
+	],
+	"winter#forests": [],
+	"forests#winter": [],
+	"winter#winds": [],
+	"winds#winter": [
+		"blows in",
+		"shift between summer and",
+		"whistle in"
+	],
+	"winter#mountains": [],
+	"mountains#winter": [
+		"goats survive",
+		"lions survive in the",
+		"stay warm in"
+	],
+	"winter#fronts": [],
+	"fronts#winter": [],
+	"winter#trees": [
+		"affect"
+	],
+	"trees#winter": [
+		"breathe in",
+		"bud in",
+		"die in",
+		"frogs",
+		"frogs hibernate in the",
+		"get",
+		"look in",
+		"lose leaves during",
+		"lose leaves in",
+		"lose their leaves",
+		"lose their leaves in",
+		"need",
+		"photosynthesize in",
+		"prepare for",
+		"shed leaves during",
+		"shed leaves in",
+		"squirrels survive",
+		"survive",
+		"survive in"
+	],
+	"winter#birds": [
+		"affect"
+	],
+	"birds#winter": [
+		"bathe in",
+		"flock in",
+		"fly south in the",
+		"have",
+		"migrate",
+		"prepare for",
+		"puff up their feathers in",
+		"sing in",
+		"survive",
+		"survive in the",
+		"survive the",
+		"swarm in",
+		"swell their feathers in"
+	],
+	"winter#low pressure": [],
+	"low pressure#winter": [],
+	"winter#diffraction": [],
+	"diffraction#winter": [],
+	"sun#we need": [],
+	"we need#sun": [],
+	"sun#suntan": [],
+	"suntan#sun": [],
+	"sun#the atmosphere provide": [],
+	"the atmosphere provide#sun": [],
+	"summer#we need": [],
+	"we need#summer": [],
+	"summer#suntan": [],
+	"suntan#summer": [],
+	"summer#the atmosphere provide": [],
+	"the atmosphere provide#summer": []
 }
