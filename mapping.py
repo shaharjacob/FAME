@@ -124,7 +124,7 @@ def get_pair_mapping(model: SentenceEmbedding, data_collector: DataCollector, fr
         
     # now we want to get the maximum weighted match, which hold the constraint that each cluster has no more than one edge.
     # we will look only on edges that appear in cluster_edges_weights
-    edges = utils.get_maximum_weighted_match(model, clustered_sentences_1, clustered_sentences_2, cluster_edges_weights)
+    edges = utils.get_maximum_weighted_match(model, clustered_sentences_1, clustered_sentences_2, weights=cluster_edges_weights)
     return {
         "graph": edges,
         "clusters1": clustered_sentences_1,
@@ -163,7 +163,7 @@ def get_best_pair_mapping(model: SentenceEmbedding, freq: Frequencies, data_coll
                 
             # now we want to get the maximum weighted match, which hold the constraint that each cluster has no more than one edge.
             # we will look only on edges that appear in cluster_edges_weights
-            edges = utils.get_maximum_weighted_match(model, clustered_sentences_1, clustered_sentences_2, cluster_edges_weights)
+            edges = utils.get_maximum_weighted_match(model, clustered_sentences_1, clustered_sentences_2, weights=cluster_edges_weights)
             
             # score is just the sum of all the edges (edges between clusters)
             mapping_score += round(sum([edge[2] for edge in edges]), 3)

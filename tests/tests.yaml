@@ -96,7 +96,7 @@ mapping:
       relations: 
         - [[cars, road], [boats, river]]
         - [[cars, wheels], [boats, sail]]
-      score: 2.024
+      score: 2.152
     ignore: False
   
   - input:
@@ -111,7 +111,7 @@ mapping:
       relations: 
         - [[cars, road], [boats, river]]
         - [[cars, wheels], [boats, buoyancy]]
-      score: 2.835
+      score: 2.963
     ignore: False
 
   - input:
@@ -122,11 +122,11 @@ mapping:
       mapping:
         - sun --> rain
         - summer --> winter
-        - sunscreen --> umbrella
+        - sunscreen --> mountains
       relations: 
         - [[sun, summer], [rain, winter]]
-        - [[sunscreen, sun], [umbrella, rain]]
-      score: 2.604
+        - [[sun, sunscreen], [rain, mountains]]
+      score: 1.807
     ignore: False
   
 

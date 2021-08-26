@@ -98,7 +98,7 @@ def filter_json(path: Path, thresh: int):
 
 def filter_merged_json():
     for thresh in [2, 3, 4, 5, 6]:
-        path = Path(f"jsons/merged/filtered/all_1m.json")
+        path = Path(f"jsons/merged/20%/all_1m.json")
         with open(path, 'r') as f:
             current_dict = json.load(f)
         new_dict = {k: v for k, v in current_dict.items() if v > thresh}
@@ -121,7 +121,7 @@ def check_space():
         print(dir)
 
 
-if __name__ == '__main__':
+def create_json_for_ci():
     merged_dict = {}
     filtered = Path(f"jsons/merged/filtered")
     for path in tqdm(filtered.iterdir()):
@@ -129,16 +129,19 @@ if __name__ == '__main__':
             current_dict = json.load(f)
         merged_dict = {k: merged_dict.get(k, 0) + current_dict.get(k, 0) for k in set(merged_dict) | set(current_dict)}
         
-    new_dict = {k: v for k, v in merged_dict.items() if v > 3}
+    new_dict = {k: v for k, v in sorted(merged_dict.items(), key=lambda x: x[1], reverse=True) if v > 3}
     parent_dir = filtered.parent.resolve()
     if not (parent_dir / '20%').is_dir:
         (filtered / '20%').mkdir()
     with open(parent_dir / '20%' / 'all_1m_filter_3_sort.json', 'w') as fw:
         json.dump(new_dict, fw, indent="\t")
-        
-        
-        
-    # freq = Frequencies('jsons/merged/20%/all_1m_filter_2_sort.json')
+    
+
+if __name__ == '__main__':
+    create_json_for_ci()
+
+    # freq = Frequencies('jsons/merged/20%/all_1m_filter_3.json', 0)
+    # freq.write_order_json('jsons/merged/20%/all_1m_filter_3_sort.json')
     # freq.apply_threshold(0.00005)
     # freq.get("revolve around")
     # freq.get("revolve around the")

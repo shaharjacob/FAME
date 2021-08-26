@@ -42,7 +42,7 @@ class TestFunctions(unittest.TestCase):
         self.assertEqual(sorted(reference), sorted(actual))
 
         # testing google_autosuggest.get_entity_suggestions
-        reference = ['benjamin franklin', 'edison', 'faraday', 'they'] if os.environ.get('CI', False) else ['faraday'] 
+        reference = ['benjamin franklin', 'edison', 'faraday', 'they'] if os.environ.get('CI', False) else ['benjamin franklin', 'faraday'] 
         actual = google_autosuggest.get_entity_suggestions("electricity", "discovered")
         self.assertEqual(sorted(reference), sorted(actual))
 
@@ -69,12 +69,12 @@ class TestFunctions(unittest.TestCase):
 
     def test_suggest_entities(self):
         # testing get_score_between_two_entitites
-        reference = 0.83
+        reference = 0.887
         actual = suggest_entities.get_score_between_two_entitites("newton", "faraday")
         self.assertEqual(reference, actual)
 
         # testing get_best_matches_for_entity
-        reference = [('newton', 'faraday', 0.83), ('newton', 'paper', 0.483), ('newton', 'wall', 0.482), ('newton', 'apple', 0.438), ('newton', 'tomato', 0.437)]
+        reference = [('newton', 'faraday', 0.887),  ('newton', 'wall', 0.508), ('newton', 'apple', 0.463), ('newton', 'paper', 0.425), ('newton', 'window', 0.417)]
         actual = suggest_entities.get_best_matches_for_entity("newton", ["faraday", "sky", "window", "paper", "photo", "apple", "tomato", "wall", "home", "horse"])
         self.assertEqual(reference, actual)
 
@@ -84,7 +84,7 @@ class TestMapping(unittest.TestCase):
     def test_mapping(self):
         threshold = 200
         quasimodo = Quasimodo()
-        freq = Frequencies('jsons/merged/20%/all_1m_filter_3_sort.json', threshold=200)
+        freq = Frequencies('jsons/merged/20%/all_1m_filter_3_sort.json', threshold=threshold)
         with open(TEST_FOLDER / 'tests.yaml', 'r') as y:
             spec = yaml.load(y, Loader=yaml.SafeLoader)
         mapping_spec = spec["mapping"]
@@ -123,7 +123,9 @@ class TestMapping(unittest.TestCase):
 
 if __name__ == '__main__':
     unittest.main()
+    # threshold = 200
     # quasimodo = Quasimodo()
+    # freq = Frequencies('jsons/merged/20%/all_1m_filter_3_sort.json', threshold=threshold)
     # with open(TEST_FOLDER / 'tests.yaml', 'r') as y:
     #     spec = yaml.load(y, Loader=yaml.SafeLoader)
     # mapping_spec = spec["mapping"]
@@ -132,12 +134,14 @@ if __name__ == '__main__':
     #         continue
         
     #     solutions = mapping_wrapper(
-    #                                 base=tv["input"]["base"], 
-    #                                 target=tv["input"]["target"], 
-    #                                 suggestions=True, 
-    #                                 depth=tv["input"]["depth"], 
-    #                                 top_n=1, 
-    #                                 verbose=True,
-    #                                 quasimodo=quasimodo,
-    #                                 model_name='msmarco-distilbert-base-v4')
+    #                                     base=tv["input"]["base"], 
+    #                                     target=tv["input"]["target"], 
+    #                                     suggestions=True, 
+    #                                     depth=tv["input"]["depth"], 
+    #                                     top_n=1, 
+    #                                     verbose=True,
+    #                                     quasimodo=quasimodo,
+    #                                     freq=freq,
+    #                                     model_name='msmarco-distilbert-base-v4',
+    #                                     threshold=threshold)
     #     solution = solutions[0]
