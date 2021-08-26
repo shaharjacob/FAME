@@ -5897,5 +5897,117 @@
 	"summer#suntan": [],
 	"suntan#summer": [],
 	"summer#the atmosphere provide": [],
-	"the atmosphere provide#summer": []
+	"the atmosphere provide#summer": [],
+	"cars#an odd number of spokes": [],
+	"an odd number of spokes#cars": [],
+	"cars#lorries": [],
+	"lorries#cars": [
+		"flash"
+	],
+	"cars#trolleys": [],
+	"trolleys#cars": [],
+	"cars#airplanes": [
+		"seats work on"
+	],
+	"airplanes#cars": [
+		"travel faster than"
+	],
+	"cars#helicopters": [],
+	"helicopters#cars": [],
+	"cars#rex": [],
+	"rex#cars": [],
+	"cars#tanks": [
+		"have gas"
+	],
+	"tanks#cars": [],
+	"cars#safety chains": [],
+	"safety chains#cars": [],
+	"cars#spokes": [
+		"wheels have",
+		"wheels have 5",
+		"wheels have five"
+	],
+	"spokes#cars": [],
+	"cars#bed": [],
+	"bed#cars": [
+		"bugs get in your"
+	],
+	"cars#the same speed as tracks now": [],
+	"the same speed as tracks now#cars": [],
+	"cars#quality of life": [],
+	"quality of life#cars": [],
+	"cars#helicopter": [],
+	"helicopter#cars": [],
+	"cars#beds": [],
+	"beds#cars": [],
+	"cars#old furniture": [],
+	"old furniture#cars": [],
+	"cars#2 valves": [],
+	"2 valves#cars": [],
+	"wheels#an odd number of spokes": [],
+	"an odd number of spokes#wheels": [],
+	"wheels#lorries": [],
+	"lorries#wheels": [
+		"have",
+		"have several sets of",
+		"raise"
+	],
+	"wheels#trolleys": [],
+	"trolleys#wheels": [
+		"have"
+	],
+	"wheels#airplanes": [],
+	"airplanes#wheels": [
+		"have",
+		"have small",
+		"need"
+	],
+	"wheels#helicopters": [],
+	"helicopters#wheels": [
+		"have",
+		"use"
+	],
+	"wheels#rex": [],
+	"rex#wheels": [
+		"have"
+	],
+	"wheels#tanks": [],
+	"tanks#wheels": [
+		"have",
+		"have tracks instead of"
+	],
+	"wheels#safety chains": [],
+	"safety chains#wheels": [],
+	"wheels#spokes": [
+		"have",
+		"have 24",
+		"have 5",
+		"use"
+	],
+	"spokes#wheels": [],
+	"wheels#bed": [],
+	"bed#wheels": [
+		"frames have",
+		"have"
+	],
+	"wheels#the same speed as tracks now": [],
+	"the same speed as tracks now#wheels": [],
+	"wheels#quality of life": [],
+	"quality of life#wheels": [],
+	"wheels#helicopter": [],
+	"helicopter#wheels": [
+		"have",
+		"use"
+	],
+	"wheels#beds": [],
+	"beds#wheels": [
+		"frames have",
+		"have"
+	],
+	"wheels#old furniture": [],
+	"old furniture#wheels": [
+		"have"
+	],
+	"wheels#2 valves": [],
+	"2 valves#wheels": []
 }

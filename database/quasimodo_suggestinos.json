@@ -420,5 +420,18 @@
 	"sun#protect us from": [],
 	"sun#protection from the": [],
 	"sun#shelter from": [],
-	"sun#stay dry in the": []
+	"sun#stay dry in the": [],
+	"wheels#have": [
+		"an odd number of spokes",
+		"safety chains",
+		"spokes",
+		"the same speed as tracks now",
+		"2 valves"
+	],
+	"wheels#have black": [],
+	"wheels#have triangular": [],
+	"wheels#use fabric for": [],
+	"wheels#improve": [
+		"quality of life"
+	]
 }

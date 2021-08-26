@@ -4472,5 +4472,99 @@
 	"summer#suntan": [],
 	"suntan#summer": [],
 	"summer#the atmosphere provide": [],
-	"the atmosphere provide#summer": []
+	"the atmosphere provide#summer": [],
+	"cars#an odd number of spokes": [],
+	"an odd number of spokes#cars": [],
+	"cars#lorries": [],
+	"lorries#cars": [],
+	"cars#trolleys": [],
+	"trolleys#cars": [],
+	"cars#airplanes": [
+		"have streamlined"
+	],
+	"airplanes#cars": [
+		"be better transportation than",
+		"be faster than",
+		"be much faster than",
+		"be safer than"
+	],
+	"cars#helicopters": [],
+	"helicopters#cars": [],
+	"cars#rex": [],
+	"rex#cars": [],
+	"cars#tanks": [],
+	"tanks#cars": [],
+	"cars#safety chains": [],
+	"safety chains#cars": [],
+	"cars#spokes": [],
+	"spokes#cars": [],
+	"cars#bed": [],
+	"bed#cars": [],
+	"cars#the same speed as tracks now": [],
+	"the same speed as tracks now#cars": [],
+	"cars#quality of life": [],
+	"quality of life#cars": [],
+	"cars#helicopter": [],
+	"helicopter#cars": [],
+	"cars#beds": [],
+	"beds#cars": [],
+	"cars#old furniture": [],
+	"old furniture#cars": [],
+	"cars#2 valves": [],
+	"2 valves#cars": [],
+	"wheels#an odd number of spokes": [
+		"have"
+	],
+	"an odd number of spokes#wheels": [],
+	"wheels#lorries": [],
+	"lorries#wheels": [],
+	"wheels#trolleys": [],
+	"trolleys#wheels": [],
+	"wheels#airplanes": [],
+	"airplanes#wheels": [
+		"have"
+	],
+	"wheels#helicopters": [],
+	"helicopters#wheels": [
+		"have",
+		"use"
+	],
+	"wheels#rex": [],
+	"rex#wheels": [],
+	"wheels#tanks": [],
+	"tanks#wheels": [
+		"have"
+	],
+	"wheels#safety chains": [
+		"have"
+	],
+	"safety chains#wheels": [],
+	"wheels#spokes": [
+		"have",
+		"use"
+	],
+	"spokes#wheels": [],
+	"wheels#bed": [],
+	"bed#wheels": [],
+	"wheels#the same speed as tracks now": [
+		"have"
+	],
+	"the same speed as tracks now#wheels": [],
+	"wheels#quality of life": [
+		"improve"
+	],
+	"quality of life#wheels": [],
+	"wheels#helicopter": [],
+	"helicopter#wheels": [
+		"have",
+		"use"
+	],
+	"wheels#beds": [],
+	"beds#wheels": [],
+	"wheels#old furniture": [],
+	"old furniture#wheels": [],
+	"wheels#2 valves": [
+		"have"
+	],
+	"2 valves#wheels": []
 }

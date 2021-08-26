@@ -842,5 +842,22 @@
 		"the atmosphere provide"
 	],
 	"sun#shelter from": [],
-	"sun#stay dry in the": []
+	"sun#stay dry in the": [],
+	"wheels#have": [
+		"lorries",
+		"trolleys",
+		"airplanes",
+		"helicopters",
+		"rex",
+		"tanks",
+		"bed",
+		"helicopter",
+		"cars",
+		"beds",
+		"old furniture"
+	],
+	"wheels#have black": [],
+	"wheels#have triangular": [],
+	"wheels#use fabric for": [],
+	"wheels#improve": []
 }
