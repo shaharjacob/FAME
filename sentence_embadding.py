@@ -8,7 +8,7 @@ from sentence_transformers import SentenceTransformer, util
 from data_collector import DataCollector
 
 class SentenceEmbedding(SentenceTransformer):
-    def __init__(self, model: str = 'stsb-mpnet-base-v2', data_collector: DataCollector = None):
+    def __init__(self, model: str = 'msmarco-distilbert-base-v4', data_collector: DataCollector = None):
         super().__init__(model)
         self.embaddings = {}
         self.data_collector = data_collector

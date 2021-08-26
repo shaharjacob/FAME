@@ -67,10 +67,20 @@ def read_json(path: str) -> dict:
         return json.load(f)
 
 
+def get_edge_score(prop1: str, prop2: str, model: SentenceEmbedding, freq) -> float:
+    if prop1 in freq.stopwords or prop2 in freq.stopwords:
+        return 0
+    else:
+        return model.similarity(prop1, prop2)
+    # return model.similarity(prop1, prop2)
+    # return freq.get(prop1) * model.similarity(prop1, prop2) * freq.get(prop2)
+
+
 def get_maximum_weighted_match(model: SentenceEmbedding, 
                             props_edge1: Union[List[str], Dict[int, List[str]]],
                             props_edge2: Union[List[str], Dict[int, List[str]]], 
-                            weights: Dict[Tuple[int, int], Tuple[str, str, float]] = None
+                            weights: Dict[Tuple[int, int], Tuple[str, str, float]] = None,
+                            freq=None
                             ) -> List[Tuple[str, str, float]]:
     if isinstance(props_edge1, Dict) or isinstance(props_edge2, Dict):
         # means that this is a clusters mode. So we need the weights that we already calculated
@@ -90,7 +100,7 @@ def get_maximum_weighted_match(model: SentenceEmbedding,
                     continue
                 similatiry = weights[(i, len(props_edge1) + j)][2]
             else:
-                similatiry = model.similarity(prop1, prop2)
+                similatiry = get_edge_score(prop1, prop2, model, freq)
             B.add_edge(i, len(props_edge1) + j, weight=max(0, 1-similatiry))
             all_edges[(i, len(props_edge1) + j)] = similatiry
 

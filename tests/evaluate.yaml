@@ -132,16 +132,14 @@ mapping:
         - repair --> therapy
 
   - input:
-      base: [war, soldiers, defeat, weapon, destroy]
-      target: [argument, debater, acceptance, logic, refute] 
+      base: [war, soldiers, weapon]
+      target: [argument, debater, logic] 
       depth: 4
     output:
       mapping:
         - war --> argument
         - soldiers --> debater
-        - defeat --> acceptance
         - weapon --> logic
-        - destroy --> refute
 
   - input:
       base: [buildings, foundations, solid, weak]

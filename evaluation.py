@@ -3,6 +3,7 @@ from typing import List
 from pathlib import Path
 
 import yaml
+import click
 from click import secho
 
 import torch
@@ -53,7 +54,7 @@ def get_scores(corrent_mapping: List[str], solutions: List[List[str]]):
     return res
 
 
-def evaluate():
+def evaluate(model_name: str, threshold: float):
     with open(TEST_FOLDER / 'evaluate.yaml', 'r') as y:
         spec = yaml.load(y, Loader=yaml.SafeLoader)
     mapping_spec = spec["mapping"]
@@ -63,11 +64,20 @@ def evaluate():
     total_good_good = 0
     total_good_good_total = 0
     quasimodo = Quasimodo()
-    freq = None
-    if 'CI' not in os.environ:
-        freq = Frequencies('jsons/merged/20%/all_1m_filter_2_sort.json', threshold=0.99995)
+    freq = Frequencies('jsons/merged/20%/all_1m_filter_2_sort.json', threshold=threshold)
     for tv in mapping_spec:
-        solutions = mapping_wrapper(base=tv["input"]["base"], target=tv["input"]["target"], suggestions=False, depth=tv["input"]["depth"], top_n=10, verbose=True, quasimodo=quasimodo, freq=freq)
+        solutions = mapping_wrapper(
+                                        base=tv["input"]["base"], 
+                                        target=tv["input"]["target"], 
+                                        suggestions=False, 
+                                        depth=tv["input"]["depth"], 
+                                        top_n=5, 
+                                        verbose=True, 
+                                        quasimodo=quasimodo, 
+                                        freq=freq, 
+                                        model_name=model_name,
+                                        threshold=threshold
+                                    )
         choosen_good = 0
         best_good = 0
         idx_best_good = -1
@@ -100,9 +110,26 @@ def evaluate():
     print(f'{COLORS["OKGREEN"]}Total correct from active mapping: {total_good_good}/{total_good_good_total}{COLORS["ENDC"]}\n')
 
 
-if __name__ == '__main__':
+# 'msmarco-distilbert-base-v4'            #1 - 34
+# 'paraphrase-MiniLM-L12-v2'              #2 - 33
+# 'paraphrase-mpnet-base-v2'              #3 - 31
+# 'paraphrase-distilroberta-base-v2'      #4 - 29
+# 'msmarco-roberta-base-v3'               #5 - 28
+# 'bert-base-nli-mean-tokens'             #6 - 27
+# 'stsb-mpnet-base-v2'                    #7 - 26
+# 'distilbert-base-nli-stsb-mean-tokens'  #8 - 25
+
+# 'xlm-r-distilroberta-base-paraphrase-v1' --> to big
+# 'paraphrase-xlm-r-multilingual-v1'       --> to big
+# 'LaBSE'                                  --> to big
+
+@click.command()
+@click.option('--model', default="msmarco-distilbert-base-v4", type=str, help="The model for sBERT: https://huggingface.co/sentence-transformers")
+@click.option('--threshold', default=200, type=float, help="Threshold for % to take from json frequencies")
+@click.option('--comment', default="", type=str, help="Additional comment for the job")
+def run(model, threshold, comment):
     torch.cuda.empty_cache()
-    import sys
-    if len(sys.argv) > 1:
-        print(sys.argv[1])
-    evaluate()
+    evaluate(model, threshold)
+
+if __name__ == '__main__':
+    run()

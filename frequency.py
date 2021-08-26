@@ -10,19 +10,18 @@ import utils
 class Frequencies():
     def __init__(self, path: str, threshold: float):
         self.data = utils.read_json(path)
-        self.apply_threshold(threshold)
+        self.stopwords = {}
+        if threshold > 0:
+            self.apply_threshold(threshold)
     
     def apply_threshold(self, threshold):
-        target_value = int((1-threshold) * len(self.data))
-        self.data = {k: v for i, (k, v) in enumerate(self.data.items()) if i > target_value}
+        target_value = threshold if threshold > 1 else int(threshold * len(self.data))
+        self.stopwords = {k: v for i, (k, v) in enumerate(self.data.items()) if i < target_value}
     
     def get(self, sequence: str):
-        print(f"{sequence}: {self.data.get(sequence, 0)}")
-        print()
+        if sequence in self.stopwords:
+            return 0
         return self.data.get(sequence, 0)
-
-    def exists(self, sequence: str):
-        return sequence in self.data
 
     def write_order_json(self, output: str):
         self.data = {k: v for k, v in sorted(self.data.items(), key=lambda x: x[1], reverse=True)}
@@ -123,27 +122,35 @@ def check_space():
 
 
 if __name__ == '__main__':
-    freq = Frequencies('jsons/merged/20%/all_1m_filter_2_sort.json')
-    # freq.write_order_json('jsons/merged/20%/all_1m_filter_2_sort.json')
-    freq.apply_threshold(0.9999)
-    freq.get("revolve around")
-    freq.get("revolve around the")
-    freq.get("orbit")
-    freq.get("fall into")
-    freq.get("have")
-    freq.get("need")
-    freq.get("floating on the water")
-    freq.get("discover")
-    freq.get("discovered")
-    freq.get("related to")
-    freq.get("bigger than")
-    
-    
-    
-    
-    
-    
-    
+    merged_dict = {}
+    filtered = Path(f"jsons/merged/filtered")
+    for path in tqdm(filtered.iterdir()):
+        with open(path, 'r') as f:
+            current_dict = json.load(f)
+        merged_dict = {k: merged_dict.get(k, 0) + current_dict.get(k, 0) for k in set(merged_dict) | set(current_dict)}
+        
+    new_dict = {k: v for k, v in merged_dict.items() if v > 3}
+    parent_dir = filtered.parent.resolve()
+    if not (parent_dir / '20%').is_dir:
+        (filtered / '20%').mkdir()
+    with open(parent_dir / '20%' / 'all_1m_filter_3_sort.json', 'w') as fw:
+        json.dump(new_dict, fw, indent="\t")
+        
+        
+        
+    # freq = Frequencies('jsons/merged/20%/all_1m_filter_2_sort.json')
+    # freq.apply_threshold(0.00005)
+    # freq.get("revolve around")
+    # freq.get("revolve around the")
+    # freq.get("orbit")
+    # freq.get("fall into")
+    # freq.get("have")
+    # freq.get("need")
+    # freq.get("floating on the water")
+    # freq.get("discover")
+    # freq.get("discovered")
+    # freq.get("related to")
+    # freq.get("bigger than")
     
     # ngram()
     # filter_merged_json()

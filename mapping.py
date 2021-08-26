@@ -1,7 +1,7 @@
 import os
 import copy
 from itertools import combinations
-from typing import List, Dict, Tuple, Optional
+from typing import List, Dict, Tuple, Optional, Union
 
 from tqdm import tqdm
 from click import secho
@@ -13,6 +13,15 @@ from frequency import Frequencies
 from data_collector import DataCollector
 from sentence_embadding import SentenceEmbedding
 
+
+def get_edge_score(prop1: str, prop2: str, model: SentenceEmbedding, freq: Frequencies) -> float:
+    if prop1 in freq.stopwords or prop2 in freq.stopwords:
+        return 0
+    else:
+        return model.similarity(prop1, prop2)
+    # return model.similarity(prop1, prop2)
+    # return freq.get(prop1) * model.similarity(prop1, prop2) * freq.get(prop2)
+    
 
 def get_all_possible_pairs_map(base: List[str], target: List[str]) -> List[List[List[Tuple[str, str]]]]:
     # complexity: (n choose 2) * (n choose 2) * 2
@@ -95,7 +104,7 @@ def get_edges_with_maximum_weight(similatiry_edges: List[Tuple[str, str, float]]
     return cluster_edges_weights
 
 
-def get_pair_mapping(model: SentenceEmbedding, data_collector: DataCollector, mapping: List[Tuple[str, str]]):
+def get_pair_mapping(model: SentenceEmbedding, data_collector: DataCollector, freq: Frequencies, mapping: List[Tuple[str, str]]):
 
     props_edge1 = data_collector.get_entities_relations(mapping[0][0], mapping[0][1])
     props_edge2 = data_collector.get_entities_relations(mapping[1][0], mapping[1][1])
@@ -104,7 +113,7 @@ def get_pair_mapping(model: SentenceEmbedding, data_collector: DataCollector, ma
         return {}
 
     # we want the weight of each edge between two nodes.
-    similatiry_edges = [(prop1, prop2, model.similarity(prop1, prop2)) for prop1 in props_edge1 for prop2 in props_edge2]
+    similatiry_edges = [(prop1, prop2, get_edge_score(prop1, prop2, model, freq)) for prop1 in props_edge1 for prop2 in props_edge2]
 
     # we want the cluster similar properties
     clustered_sentences_1: Dict[int, List[str]] = model.clustering(mapping[0], distance_threshold=0.8)
@@ -122,16 +131,6 @@ def get_pair_mapping(model: SentenceEmbedding, data_collector: DataCollector, ma
         "clusters2": clustered_sentences_2,
         "score": round(sum([edge[2] for edge in edges]), 3)
     }
-
-
-def get_edge_score(prop1: str, prop2: str, model: SentenceEmbedding, freq: Frequencies) -> float:
-    # if freq.exists(prop1) and freq.exists(prop2):
-    #     return model.similarity(prop1, prop2)
-    # else:
-    #     # return 0.01
-    #     return 0
-    # # return freq.get(prop1) * model.similarity(prop1, prop2) * freq.get(prop2)
-    return model.similarity(prop1, prop2)
 
 
 def get_best_pair_mapping(model: SentenceEmbedding, freq: Frequencies, data_collector: DataCollector, available_maps: List[List[List[Tuple[str, str]]]], cache: dict, depth: int = 2) -> Dict:
@@ -386,8 +385,17 @@ def mapping_suggestions_wrapper(
             solution["top_suggestions"] = solution.get("top_suggestions", top_suggestions)
 
 
-def mapping_wrapper(base: List[str], target: List[str], suggestions: bool = True, depth: int = 2, top_n: int = 1, num_of_suggestions: int = 1, verbose: bool = False, 
-                    quasimodo: Quasimodo = None, freq: Frequencies = None):
+def mapping_wrapper(base: List[str], 
+                    target: List[str], 
+                    suggestions: bool = True, 
+                    depth: int = 2, 
+                    top_n: int = 1, 
+                    num_of_suggestions: int = 1, 
+                    verbose: bool = False, 
+                    quasimodo: Quasimodo = None, 
+                    freq: Frequencies = None, 
+                    model_name: str = 'msmarco-distilbert-base-v4',
+                    threshold: Union[float, int] = 200):
 
     # we want all the possible pairs.
     # general there are (n choose 2) * (n choose 2) * 2 pairs.
@@ -400,19 +408,16 @@ def mapping_wrapper(base: List[str], target: List[str], suggestions: bool = True
     if not quasimodo:
         quasimodo = Quasimodo()
     data_collector = DataCollector(quasimodo=quasimodo)
-    # 'stsb-mpnet-base-v2'
-    # 'msmarco-distilbert-base-v4'
-    # 'paraphrase-xlm-r-multilingual-v1' --> to big
-    model = SentenceEmbedding(model='stsb-mpnet-base-v2', data_collector=data_collector)
-    if not freq and 'CI' not in os.environ:
-        freq = Frequencies('jsons/merged/20%/all_1m_filter_2_sort.json', threshold=0.99995)
+    model = SentenceEmbedding(model=model_name, data_collector=data_collector)
+    if not freq:
+        freq = Frequencies('jsons/merged/20%/all_1m_filter_3_sort.json', threshold=threshold)
 
     cache = {}
     mapping(base, target, available_pairs, solutions, data_collector, model, freq, [], [], [], [], 0, cache, depth=depth)
     
     # array of addition solutions for the suggestions if some entities have missing mappings.
     suggestions_solutions = []
-    if suggestions:
+    if suggestions and num_of_suggestions > 0:
         solutions = sorted(solutions, key=lambda x: (x["length"], x["score"]), reverse=True)
         number_of_solutions_for_suggestions = 5
         # the idea is to iterate over the founded solutions, and check if there are entities are not mapped.
@@ -421,7 +426,8 @@ def mapping_wrapper(base: List[str], target: List[str], suggestions: bool = True
             mapping_suggestions_wrapper(base, "actual_base", "actual_target", solution, data_collector, model, freq, suggestions_solutions, cache, num_of_suggestions)
             mapping_suggestions_wrapper(target, "actual_target", "actual_base", solution, data_collector, model, freq, suggestions_solutions, cache, num_of_suggestions)
 
-    all_solutions = sorted(solutions + suggestions_solutions, key=lambda x: (x["length"], x["score"]), reverse=True)
+    # all_solutions = sorted(solutions + suggestions_solutions, key=lambda x: (x["length"], x["score"]), reverse=True)
+    all_solutions = sorted(solutions + suggestions_solutions, key=lambda x: x["score"], reverse=True)
     if not all_solutions:
         if verbose:
             secho("No solution found")
@@ -457,112 +463,3 @@ if __name__ == "__main__":
     base = ["respiration", "animal", "food", "breathing"]
     target = ["combustion", "fire", "fuel", "burning"]
     solutions = mapping_wrapper(base, target, suggestions=False, depth=4, top_n=10, verbose=True)
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-# data = [
-#         [
-#             # seems good!
-#             # expected mapping: earth->electrons, sun->nucleus, gravity->electricity, newton->faraday
-#             # http://localhost:3000/mapping?base=earth,sun,newton,gravity&target=electrons,nucleus,electricity,faraday
-#             # base=earth,sun,gravity,newton
-#             # target=electrons,nucleus,electricity,faraday
-#             ["earth", "sun", "gravity", "newton"], 
-#             ["electrons", "nucleus", "electricity", "faraday"]
-#         ],
-#         [
-#             # expected mapping: earth->electrons, sun->nucleus, gravity->electricity, newton->? (faraday has been removed)
-#             # http://localhost:3000/mapping?base=earth,sun,newton,gravity&target=electrons,nucleus,electricity
-#             # after using recursively the mapping function, it found 'humans' as the best option (instead of faraday, but maybe its not so bad?)
-#             # http://localhost:3000/single-mapping?base1=gravity&base2=newton&target1=electricity&target2=humans
-#             # http://localhost:3000/single-mapping?base1=gravity&base2=newton&target1=electricity&target2=faraday
-#             ["earth", "sun", "gravity", "newton"], 
-#             ["electrons", "nucleus", "electricity"]
-#         ],
-#         [
-#             # http://localhost:3000/mapping?base=earth,newton,gravity&target=electrons,nucleus,electricity,faraday
-#             # expected mapping: earth->electrons, gravity->electricity, newton->faraday, nucleus->? (sun has been removed)
-#             # it map earth-->electricity and gravity-->electrons instead of earth-->electrons and gravity-->electricity, but their score is similar (1.833, 1.625) without IGNORE list: (2.125~1.879)
-#             # http://localhost:3000/single-mapping?base1=earth&base2=gravity&target1=electricity&target2=electrons
-#             # Option 1 (the chosen one): (earth-->electricity, gravity-->electrons, newton-->nucleus)
-#             #   (earth:gravity, electricity:electrons): 1.833
-#             #   (gravity:electrons, newton:nucleus): 0.707
-#             #   total score: 2.54
-#             # Option 2: (earth-->electrons, gravity-->electrivity, newton-->faraday)
-#             #   (earth:gravity, electrons:electrivity): 1.625
-#             #   (gravity:newton, electricity:faraday): 1
-#             #   total score: 2.625
-#             ["earth", "newton", "gravity"],
-#             ["electrons", "nucleus", "electricity", "faraday"],
-#         ],
-#         [
-#             # seems good!
-#             # http://localhost:3000/mapping?base=thoughts,brain&target=astronaut,space
-#             # expected: thoughts->astronaut, brain->space
-#             ["thoughts", "brain"],
-#             ["astronaut", "space"],
-#         ],
-#         [
-#             # seems good!
-#             # http://localhost:3000/mapping?base=thoughts,brain,neurons&target=astronaut,space,black%20hole
-#             # expected mapping: thoughts->astronaut, brain->space, neurons->black hole
-#             ["thoughts", "brain", "neurons"],
-#             ["astronaut", "space", "black hole"],
-#         ],
-#         [
-#             # seems good!
-#             # http://localhost:3000/mapping?base=cars,road,wheels&target=boats,river,sail
-#             # expected: cars->boats, road->river, wheels->sail
-#             ["cars", "road", "wheels"],
-#             ["boats", "river", "sail"],
-#         ],
-#         [
-#             # http://localhost:3000/mapping?base=cars,road,wheels&target=boats,river
-#             # expected: cars->boats, road->river, wheels->? (sail has been removed)
-#             # the suggestions are not good. Need to check why sail is now suggested in "boat have .*" 
-#             # why do boats .* sails --> found 'have', but why do boats have .. --> not found 'have'.
-#             # maybe I should have "RelatedTo" from conceptNet: https://conceptnet.io/c/en/boat?rel=/r/RelatedTo&limit=1000
-#             # well after adding quasimodo, it found streeing wheel -> sound good but I still prefer sails here..
-#             ["cars", "road", "wheels"],
-#             ["boats", "river"],
-#         ],
-#         [
-#             # http://localhost:3000/mapping?base=sunscreen,sun,summer&target=umbrella,rain,winter
-#             # expected: sunscreen->umbrella, sun->rain, summer->winter 
-#             # the mapping is good, but the map between summer-->winter is very week!
-#             # the relation between sun:summer are good, but there are no relations between rain:winter or umbrela:winter!
-#             # http://localhost:3000/two-entities?entity1=rain&entity2=winter
-#             ["sunscreen", "sun", "summer"],
-#             ["umbrella", "rain", "winter"],
-#         ],
-#         [
-#             # http://localhost:3000/mapping?base=student,homework,university&target=citizen,duties,country
-#             # expected: student->citizen, homework->duties, university->country
-#             # it found that (student:homework, citzen:country) is stronger then (student:homework, citzen:duties): 1.047 ~ 1
-#             # http://localhost:3000/single-mapping?base1=student&base2=homework&target1=citizen&target2=duties
-#             # http://localhost:3000/single-mapping?base1=student&base2=homework&target1=citizen&target2=country
-#             # maybe few weaks relations are weaker than one stronger?
-#             ["student", "homework", "university"],
-#             ["citizen", "duties", "country"],
-#         ],
-#     ]

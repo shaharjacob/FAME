@@ -76,7 +76,7 @@ props = get_entity_props("earth", n_best=10)
 
 #### :brown_circle: sentence_embadding.py
 We are using [sentence-transformers](https://www.sbert.net/) for measure similarities between sentences. In our case, sentences are going to be relations and properties.  
-By default, we are using this model: `stsb-mpnet-base-v2`  
+By default, we are using this model: `msmarco-distilbert-base-v4`  
 But more models available [here](https://huggingface.co/models?sort=downloads&search=sentence-transformers&p=0)  
 ```bash
 from sentence_embadding import SentenceEmbedding
