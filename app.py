@@ -7,6 +7,7 @@ from flask import Flask, jsonify, request
 import utils
 import mapping
 import python2react
+from frequency import Frequencies
 from data_collector import DataCollector
 from sentence_embadding import SentenceEmbedding
 
@@ -16,28 +17,42 @@ app = Flask(__name__)
 def mapping_entities():
     start_time = time.time()
     data_collector = DataCollector()
-    model = SentenceEmbedding(data_collector=data_collector)
+    model_name = 'msmarco-distilbert-base-v4'
+    model = SentenceEmbedding(model="", data_collector=data_collector)
+    threshold = request.args.get('threshold')
+    threshold = threshold if threshold else 200
+    freq = Frequencies('jsons/merged/20%/all_1m_filter_3_sort.json', threshold=float(threshold))
     base = [b.strip() for b in request.args.get('base').split(',')]
     target = [t.strip() for t in request.args.get('target').split(',')]
     depth = utils.get_int(request.args.get('depth'), 4)
     top_n = utils.get_int(request.args.get('top'), 3)
     num_of_suggestions = utils.get_int(request.args.get('suggestions'), 3)
-
-    # here we map between base entitites and target entities
-    solutions = mapping.mapping_wrapper(base=base, target=target, suggestions=True, depth=depth, top_n=top_n, num_of_suggestions=num_of_suggestions)
     data = []
     scores = []
+    
+    # here we map between base entitites and target entities
+    solutions = mapping.mapping_wrapper(
+                                    base=base, 
+                                    target=target, 
+                                    suggestions=True, 
+                                    depth=depth, 
+                                    top_n=top_n, 
+                                    num_of_suggestions=num_of_suggestions, 
+                                    freq=freq, 
+                                    model_name=model_name, 
+                                    threshold=float(threshold)
+                                )
 
     for solution in solutions:
         # prepare the nodes for the react app
-        nodes = python2react.get_nodes_for_app(props=solution["mapping"], start_idx=0)
-        nodes_val2index = {node:i for i, node in enumerate(solution["mapping"])}
+        nodes = python2react.get_nodes_for_app(props=solution.mapping, start_idx=0)
+        nodes_val2index = {node:i for i, node in enumerate(solution.mapping)}
         edges = []
         max_score_for_scaling = 0
 
         # we iterate over the mapping that found. 
         # the first iterate is the strongest map, and so on.
-        for relation in solution["relations"]:
+        for relation in solution.relations:
             # we count both direction. for example earth:sun, electrons:nucleus, we want also sun:earth, nucleus:electrons.
             for direction in range(2):
                 node1 = f"{relation[0][0]} --> {relation[1][0]}"
@@ -50,7 +65,7 @@ def mapping_entities():
                 # now we extract information of the relation. 
                 # actually we already did it in mapping.mapping(base, target), but this is very quick since we already saved all the props.
                 # and it more readable to do it here again.
-                graph = mapping.get_pair_mapping(model, data_collector, relation)
+                graph = mapping.get_pair_mapping(model, data_collector, freq, relation)
                 if not graph:
                     continue
 
@@ -72,11 +87,11 @@ def mapping_entities():
                     "nodes": nodes,
                     "edges": edges,
                 },
-            "top_suggestions" : solution.get("top_suggestions", [])
+            "top_suggestions" : solution.top_suggestions
         })
         
         scores.append({
-            "label": f"Top #{len(scores)+1} ({solution['score']})",
+            "label": f"Top #{len(scores)+1} ({solution.score})",
             "value": len(scores)
         })
 
@@ -90,11 +105,15 @@ def mapping_entities():
 @app.route("/single-mapping", methods=["GET", "POST"])
 def single_mapping():
     data_collector = DataCollector()
-    model = SentenceEmbedding(data_collector=data_collector)
+    model = SentenceEmbedding(model='msmarco-distilbert-base-v4', data_collector=data_collector)
 
     edge1 = (request.args.get('base1'), request.args.get('base2'))
     edge2 = (request.args.get('target1'), request.args.get('target2'))
     d = {0: {}, 1: {}, 2: {}, 3: {}}
+    
+    threshold = request.args.get('threshold')
+    threshold = threshold if threshold else 200
+    freq = Frequencies('jsons/merged/20%/all_1m_filter_3_sort.json', threshold=float(threshold))
 
     for edge_idx, edge_ in enumerate(utils.get_edges_combinations(edge1, edge2)):   
         props_edge1 = data_collector.get_entities_relations(edge_[0][0], edge_[0][1])
@@ -111,7 +130,7 @@ def single_mapping():
             continue
 
         # we want the weight of each edge between two nodes.
-        similatiry_edges = [(prop1, prop2, model.similarity(prop1, prop2)) for prop1 in props_edge1 for prop2 in props_edge2]
+        similatiry_edges = [(prop1, prop2, mapping.get_edge_score(prop1, prop2, model, freq)) for prop1 in props_edge1 for prop2 in props_edge2]
         
         for thresh in utils.DISTANCE_TRESHOLDS:
             clustered_sentences_1: Dict[int, List[str]] = model.clustering(edge_[0], distance_threshold=thresh)
@@ -128,7 +147,7 @@ def single_mapping():
             cluster_edges_weights = mapping.get_edges_with_maximum_weight(similatiry_edges, clustered_sentences_1, clustered_sentences_2)
                 
             # now we want to get the maximum weighted match, which hold the constraint that each cluster has no more than one edge.
-            edges = utils.get_maximum_weighted_match(model, clustered_sentences_1, clustered_sentences_2, cluster_edges_weights)
+            edges = utils.get_maximum_weighted_match(model, clustered_sentences_1, clustered_sentences_2, weights=cluster_edges_weights)
             
             # we doing this process for each threshold for the slider in the app
             d[edge_idx][thresh] = {
@@ -173,6 +192,9 @@ def bipartite_graph():
 
     data_collector = DataCollector()
     model = SentenceEmbedding(data_collector=data_collector)
+    threshold = request.args.get('threshold')
+    threshold = threshold if threshold else 0.00001
+    freq = Frequencies('jsons/merged/20%/all_1m_filter_3_sort.json', threshold=float(threshold))
 
     if not utils.is_none(base1) and not utils.is_none(base2) and not utils.is_none(target1) and not utils.is_none(target2):
         props_edge1 = data_collector.get_entities_relations(base1, base2)
@@ -184,7 +206,7 @@ def bipartite_graph():
     props1 = python2react.get_nodes_for_app_bipartite(props=props_edge1, start_idx=0, x=200, group=0)
     props2 = python2react.get_nodes_for_app_bipartite(props=props_edge2, start_idx=len(props1), x=800, group=1)
     
-    similatiry_edges = utils.get_maximum_weighted_match(model, props_edge1, props_edge2)
+    similatiry_edges = utils.get_maximum_weighted_match(model, props_edge1, props_edge2, freq=freq)
 
     return jsonify({
         "nodes": props1 + props2,

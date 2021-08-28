@@ -23,7 +23,7 @@ class Solution:
         self.actual_base = actual_base
         self.actual_target = actual_target
         self.length = length
-        self.top_suggestions = None
+        self.top_suggestions = []
     
     def get_actual(self, which: str):
         if which == 'actual_base':
@@ -202,7 +202,7 @@ def mapping(
     base: List[str], 
     target: List[str],
     available_pairs: List[List[List[Tuple[str, str]]]],
-    solutions: List[dict],
+    solutions: List[Solution],
     data_collector: DataCollector,
     model: SentenceEmbedding,
     freq: Frequencies,
@@ -305,8 +305,8 @@ def mapping(
 
 def mapping_suggestions(
     available_pairs: List[List[List[Tuple[str, str]]]],
-    current_solution: dict,
-    solutions: List[dict],
+    current_solution: Solution,
+    solutions: List[Solution],
     data_collector: DataCollector,
     model: SentenceEmbedding,
     freq: Frequencies,
@@ -363,11 +363,11 @@ def mapping_suggestions_wrapper(
     domain: List[str],
     first_domain: str, 
     second_domain: str, 
-    solution: dict, 
+    solution: Solution, 
     data_collector: DataCollector,
     model: SentenceEmbedding, 
     freq: Frequencies,
-    solutions: List[dict],
+    solutions: List[Solution],
     cache: dict,
     num_of_suggestions: int = 1,
     verbose: bool = False):
@@ -415,7 +415,7 @@ def mapping_wrapper(base: List[str],
                     quasimodo: Quasimodo = None, 
                     freq: Frequencies = None, 
                     model_name: str = 'msmarco-distilbert-base-v4',
-                    threshold: Union[float, int] = 200):
+                    threshold: Union[float, int] = 200) -> List[Solution]:
 
     # we want all the possible pairs.
     # general there are (n choose 2) * (n choose 2) * 2 pairs.

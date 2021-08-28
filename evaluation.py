@@ -9,7 +9,7 @@ from click import secho
 import torch
 from quasimodo import Quasimodo
 from frequency import Frequencies
-from mapping import mapping_wrapper
+from mapping import mapping_wrapper, Solution
 
 
 TEST_FOLDER = Path('tests')
@@ -25,7 +25,7 @@ COLORS = {
     "UNDERLINE": '\033[4m',
 }
 
-def get_scores(corrent_mapping: List[str], solutions: List[List[str]]):
+def get_scores(corrent_mapping: List[str], solutions: List[Solution]):
     res = {
         "choosen_good": 0,
         "best_good": 0,
@@ -35,7 +35,7 @@ def get_scores(corrent_mapping: List[str], solutions: List[List[str]]):
     for i, solution in enumerate(solutions):
         current_good = 0
         current_good_good = 0
-        actual = sorted(solution["mapping"])
+        actual = sorted(solution.mapping)
         reference = sorted(corrent_mapping)
         for mapping in reference:
             if mapping in actual:
