@@ -25,44 +25,51 @@ COLORS = {
     "UNDERLINE": '\033[4m',
 }
 
-def get_scores(corrent_mapping: List[str], solutions: List[Solution]):
-    res = {
-        "choosen_good": 0,
-        "best_good": 0,
-        "index_for_best": 0,
-    }
+class Result:
+    def __init__(self):
+        self.correct_answers = 0 # the map with the highest score
+        self.num_of_guesses = 0
+        self.num_of_maps = 0
+        self.best = 0 # the map that give maximum match with the correct mapping
+        self.best_idx = -1
+
+
+class Results:
+    def __init__(self):
+        self.correct_answers = 0
+        self.correct_anywhere = 0
+        self.total_maps = 0
+        self.total_guesses = 0
     
+    def update_results(self, result: Result):
+        self.correct_answers += result.correct_answers
+        self.correct_anywhere += result.best
+        self.total_maps += result.num_of_maps
+        self.total_guesses += result.num_of_guesses
+
+
+def update_result(corrent_mapping: List[str], solutions: List[Solution], result: Result):
     for i, solution in enumerate(solutions):
         current_good = 0
-        current_good_good = 0
         actual = sorted(solution.mapping)
         reference = sorted(corrent_mapping)
         for mapping in reference:
             if mapping in actual:
                 current_good += 1
-        for mapping in actual:
-            if mapping in reference:
-                current_good_good += 1
-        if current_good > res["best_good"]:
-            res["best_good"] = current_good
-            res["index_for_best"] = i
+        if current_good > result.best:
+            result.best = current_good
+            result.best_idx = i
         if i == 0:
-            res["choosen_good"] = current_good
-            res["choosen_good_good"] = current_good_good
-            res["choosen_good_good_total"] = len(actual)
-    
-    return res
+            result.correct_answers = current_good
+            result.num_of_guesses = len(actual)
+            result.num_of_maps = len(reference)
 
 
 def evaluate(model_name: str, threshold: float):
     with open(TEST_FOLDER / 'evaluate.yaml', 'r') as y:
         spec = yaml.load(y, Loader=yaml.SafeLoader)
     mapping_spec = spec["mapping"]
-    total_good = 0
-    total_anywhere = 0
-    total_maps = 0
-    total_good_good = 0
-    total_good_good_total = 0
+    results = Results()
     quasimodo = Quasimodo()
     pass_for_json = 'jsons/merged/20%/ci.json' if 'CI' in os.environ else 'jsons/merged/20%/all_1m_filter_3_sort.json'
     freq = Frequencies(pass_for_json, threshold=threshold)
@@ -79,36 +86,22 @@ def evaluate(model_name: str, threshold: float):
                                         model_name=model_name,
                                         threshold=threshold
                                     )
-        choosen_good = 0
-        best_good = 0
-        idx_best_good = -1
-        choosen_good_good = 0
-        choosen_good_good_total = 0
+        result = Result()
         current_maps = len(tv["output"]["mapping"])
         if solutions:
-            res = get_scores(tv["output"]["mapping"], solutions)
-            choosen_good = res["choosen_good"] # the map with the highest score
-            best_good = res["best_good"] # the map that give maximum match with the correct mapping
-            idx_best_good = res["index_for_best"]
-            choosen_good_good = res["choosen_good_good"]
-            choosen_good_good_total = res["choosen_good_good_total"]
-            
-        total_good += choosen_good
-        total_anywhere += best_good
-        total_maps += current_maps
-        total_good_good += choosen_good_good
-        total_good_good_total += choosen_good_good_total
+            update_result(tv["output"]["mapping"], solutions, result) 
+        results.update_results(result)
         
         print(f'{COLORS["OKBLUE"]}Base: {tv["input"]["base"]}{COLORS["ENDC"]}')
         print(f'{COLORS["OKBLUE"]}Target: {tv["input"]["target"]}{COLORS["ENDC"]}')
-        print(f'{COLORS["OKGREEN"]}Correct answers: {choosen_good}/{current_maps}{COLORS["ENDC"]}')
-        print(f'{COLORS["OKGREEN"]}Anywhere in the solutions (#{idx_best_good+1}): {best_good}/{current_maps}{COLORS["ENDC"]}')
-        print(f'{COLORS["OKGREEN"]}Correct from active mapping: {choosen_good_good}/{choosen_good_good_total}{COLORS["ENDC"]}\n')
+        print(f'{COLORS["OKGREEN"]}Correct answers: {result.correct_answers}/{current_maps}{COLORS["ENDC"]}')
+        print(f'{COLORS["OKGREEN"]}Anywhere in the solutions (#{result.best_idx+1}): {result.best}/{current_maps}{COLORS["ENDC"]}')
+        print(f'{COLORS["OKGREEN"]}Correct from active mapping: {result.correct_answers}/{result.num_of_guesses}{COLORS["ENDC"]}\n')
         print("------------------------------------------------------------")
         print()
-    print(f'{COLORS["OKGREEN"]}Total: {total_good}/{total_maps}{COLORS["ENDC"]}')
-    print(f'{COLORS["OKGREEN"]}Total (anywhere): {total_anywhere}/{total_maps}{COLORS["ENDC"]}')
-    print(f'{COLORS["OKGREEN"]}Total correct from active mapping: {total_good_good}/{total_good_good_total}{COLORS["ENDC"]}\n')
+    print(f'{COLORS["OKGREEN"]}Total: {results.correct_answers}/{results.total_maps}{COLORS["ENDC"]}')
+    print(f'{COLORS["OKGREEN"]}Total (anywhere): {results.correct_anywhere}/{results.total_maps}{COLORS["ENDC"]}')
+    print(f'{COLORS["OKGREEN"]}Total correct from active mapping: {results.correct_answers}/{results.total_guesses}{COLORS["ENDC"]}\n')
 
 
 # 'msmarco-distilbert-base-v4'            #1 - 34
