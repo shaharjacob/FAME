@@ -14,6 +14,24 @@ from data_collector import DataCollector
 from sentence_embadding import SentenceEmbedding
 
 
+class Solution:
+    def __init__(self, mapping, relations, scores, score, actual_base, actual_target, length):
+        self.mapping = mapping
+        self.relations = relations
+        self.scores = scores
+        self.score = score
+        self.actual_base = actual_base
+        self.actual_target = actual_target
+        self.length = length
+        self.top_suggestions = None
+    
+    def get_actual(self, which: str):
+        if which == 'actual_base':
+            return self.actual_base
+        elif which == 'actual_target':
+            return self.actual_target
+
+
 def get_edge_score(prop1: str, prop2: str, model: SentenceEmbedding, freq: Frequencies) -> float:
     if prop1 in freq.stopwords or prop2 in freq.stopwords:
         return 0
@@ -200,34 +218,34 @@ def mapping(
     if base_already_mapping:
         mapping_repr = [f"{b} --> {t}" for b, t in zip(base_already_mapping, target_already_mapping)]
         for solution in solutions:
-            if sorted(relations) == sorted(solution["relations"]):
+            if sorted(relations) == sorted(solution.relations):
                 return
-            if sorted(mapping_repr) == sorted(solution["mapping"]):
+            if sorted(mapping_repr) == sorted(solution.mapping):
                 return
         new_mapping = True
         for i, solution in enumerate(solutions):
-            if relations[:-1] == solution["relations"]:
-                solutions[i] = {
-                    "mapping": mapping_repr,
-                    "relations": relations,
-                    "scores": scores,
-                    "score": round(new_score, 3),
-                    "actual_base": base_already_mapping,
-                    "actual_target": target_already_mapping,
-                    "length": len(base_already_mapping),
-                }
+            if relations[:-1] == solution.relations:
+                solutions[i] = Solution(
+                    mapping=mapping_repr,
+                    relations=relations,
+                    scores=scores,
+                    score=round(new_score, 3),
+                    actual_base=base_already_mapping,
+                    actual_target=target_already_mapping,
+                    length=len(base_already_mapping),
+                )
                 new_mapping = False
                 break
         if new_mapping:
-            solutions.append({
-                "mapping": mapping_repr,
-                "relations": relations,
-                "scores": scores,
-                "score": round(new_score, 3),
-                "actual_base": base_already_mapping,
-                "actual_target": target_already_mapping,
-                "length": len(base_already_mapping),
-            })
+            solutions.append(Solution(
+                mapping=mapping_repr,
+                relations=relations,
+                scores=scores,
+                score=round(new_score, 3),
+                actual_base=base_already_mapping,
+                actual_target=target_already_mapping,
+                length=len(base_already_mapping),
+            ))
 
     # base case for recursive function. there is no more available pairs to match (base->target)
     if len(base_already_mapping) == min(len(base), len(target)):
@@ -330,15 +348,15 @@ def mapping_suggestions(
             scores_copy = copy.deepcopy(current_solution["scores"])
             scores_copy.append(round(result["best_score"], 3))
 
-            solutions.append({
-                "mapping": [f"{b} --> {t}" for b, t in zip(base_already_mapping_new, target_already_mapping_new)],
-                "relations": relations,
-                "scores": scores_copy,
-                "score": round(current_solution["score"] + score, 3),
-                "actual_base": base_already_mapping_new,
-                "actual_target": target_already_mapping_new,
-                "length": len(base_already_mapping_new),
-            })
+            solutions.append(Solution(
+                mapping=[f"{b} --> {t}" for b, t in zip(base_already_mapping_new, target_already_mapping_new)],
+                relations=relations,
+                scores=scores_copy,
+                score=round(current_solution["score"] + score, 3),
+                actual_base=base_already_mapping_new,
+                actual_target=target_already_mapping_new,
+                length=len(base_already_mapping_new),
+            ))
 
 
 def mapping_suggestions_wrapper(
@@ -351,23 +369,24 @@ def mapping_suggestions_wrapper(
     freq: Frequencies,
     solutions: List[dict],
     cache: dict,
-    num_of_suggestions: int = 1):
+    num_of_suggestions: int = 1,
+    verbose: bool = False):
     
-    first_domain_not_mapped_entities = [entity for entity in domain if entity not in solution[first_domain]]
+    first_domain_not_mapped_entities = [entity for entity in domain if entity not in solution.get_actual(first_domain)]
     for first_domain_not_mapped_entity in first_domain_not_mapped_entities:
         # suggestion for mapping an entity. a list of strings.
-        entities_suggestions = suggest_entities.get_suggestions_for_missing_entities(data_collector, first_domain_not_mapped_entity, solution[first_domain], solution[second_domain], verbose=False)
+        entities_suggestions = suggest_entities.get_suggestions_for_missing_entities(data_collector, first_domain_not_mapped_entity, solution.get_actual(first_domain), solution.get_actual(second_domain), verbose=verbose)
         if not entities_suggestions:
             continue  # no suggestion found :(
         if first_domain == "actual_base":
-            new_base = solution["actual_base"] + [first_domain_not_mapped_entity]
-            new_target = solution["actual_target"] + entities_suggestions
-        else:  # first_domain == "actual_target"
-            new_base = solution["actual_base"] + entities_suggestions
-            new_target = solution["actual_target"] + [first_domain_not_mapped_entity]
+            new_base = solution.get_actual("actual_base") + [first_domain_not_mapped_entity]
+            new_target = solution.get_actual("actual_target") + entities_suggestions
+        elif first_domain == "actual_target":
+            new_base = solution.get_actual("actual_base") + entities_suggestions
+            new_target = solution.get_actual("actual_target") + [first_domain_not_mapped_entity]
             
         all_pairs = get_all_possible_pairs_map(new_base, new_target)
-        available_pairs_new = update_paris_map(all_pairs, solution["actual_base"], solution["actual_target"])
+        available_pairs_new = update_paris_map(all_pairs, solution.get_actual("actual_base"), solution.get_actual("actual_target"))
         top_suggestions = []
         mapping_suggestions(
             available_pairs=available_pairs_new,
@@ -382,7 +401,8 @@ def mapping_suggestions_wrapper(
             num_of_suggestions=num_of_suggestions,
         )
         for solution in solutions: # TODO: fix here
-            solution["top_suggestions"] = solution.get("top_suggestions", top_suggestions)
+            if not solution.top_suggestions:
+                solution.top_suggestions = top_suggestions
 
 
 def mapping_wrapper(base: List[str], 
@@ -419,16 +439,16 @@ def mapping_wrapper(base: List[str],
     # array of addition solutions for the suggestions if some entities have missing mappings.
     suggestions_solutions = []
     if suggestions and num_of_suggestions > 0:
-        solutions = sorted(solutions, key=lambda x: (x["length"], x["score"]), reverse=True)
+        solutions = sorted(solutions, key=lambda x: (x.length, x.score), reverse=True)
         number_of_solutions_for_suggestions = 5
         # the idea is to iterate over the founded solutions, and check if there are entities are not mapped.
         # this logic is checked only if ONE entity have missing mapping (from base or target)
         for solution in solutions[:number_of_solutions_for_suggestions]:
-            mapping_suggestions_wrapper(base, "actual_base", "actual_target", solution, data_collector, model, freq, suggestions_solutions, cache, num_of_suggestions)
-            mapping_suggestions_wrapper(target, "actual_target", "actual_base", solution, data_collector, model, freq, suggestions_solutions, cache, num_of_suggestions)
+            mapping_suggestions_wrapper(base, "actual_base", "actual_target", solution, data_collector, model, freq, suggestions_solutions, cache, num_of_suggestions, verbose)
+            mapping_suggestions_wrapper(target, "actual_target", "actual_base", solution, data_collector, model, freq, suggestions_solutions, cache, num_of_suggestions, verbose)
 
     # all_solutions = sorted(solutions + suggestions_solutions, key=lambda x: (x["length"], x["score"]), reverse=True)
-    all_solutions = sorted(solutions + suggestions_solutions, key=lambda x: x["score"], reverse=True)
+    all_solutions = sorted(solutions + suggestions_solutions, key=lambda x: x.score, reverse=True)
     if not all_solutions:
         if verbose:
             secho("No solution found")
@@ -443,20 +463,20 @@ def mapping_wrapper(base: List[str],
     return all_solutions[:top_n]
 
 
-def print_solution(solution: dict):
+def print_solution(solution: Solution):
     secho("mapping", fg="blue", bold=True)
-    for mapping in solution["mapping"]:
+    for mapping in solution.mapping:
         secho(f"\t{mapping}", fg="blue")
     print()
 
     secho("relations", fg="blue", bold=True)
-    for relations, score in zip(solution["relations"], solution["scores"]):
+    for relations, score in zip(solution.relations, solution.scores):
         secho(f"\t{relations}   ", fg="blue", nl=False)
         secho(f"{score}", fg="blue", bold=True)
     print()
 
-    secho(f"Total score: {solution['score']}", fg="blue", bold=True)
-    secho(f"Old score: {round(sum(solution['scores']), 3)}", fg="blue", bold=True)
+    secho(f"Total score: {solution.score}", fg="blue", bold=True)
+    secho(f"Old score: {round(sum(solution.scores), 3)}", fg="blue", bold=True)
     print()
 
 

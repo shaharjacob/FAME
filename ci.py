@@ -107,33 +107,35 @@ class TestMapping(unittest.TestCase):
             solution = solutions[0]
 
             # check the mapping
-            actual = solution["mapping"]
+            actual = solution.mapping
             reference = tv["output"]["mapping"]
             self.assertEqual(reference, actual)
 
             # check the relations
-            actual = [[list(relation[0]), list(relation[1])] for relation in solution["relations"]]
+            actual = [[list(relation[0]), list(relation[1])] for relation in solution.relations]
             reference = tv["output"]["relations"]
             self.assertEqual(reference, actual)
 
             # check the score
-            actual = solution["score"]
+            actual = solution.score
             reference = tv["output"]["score"]
             self.assertEqual(round(reference, 3), round(actual, 3))
 
 
 if __name__ == '__main__':
+    # os.environ['CI'] = 'true'
     unittest.main()
     # threshold = 200
     # quasimodo = Quasimodo()
-    # freq = Frequencies('jsons/merged/20%/all_1m_filter_3_sort.json', threshold=threshold)
+    # pass_for_json = 'jsons/merged/20%/ci.json' if 'CI' in os.environ else 'jsons/merged/20%/all_1m_filter_3_sort.json'
+    # freq = Frequencies(pass_for_json, threshold=threshold)
     # with open(TEST_FOLDER / 'tests.yaml', 'r') as y:
     #     spec = yaml.load(y, Loader=yaml.SafeLoader)
     # mapping_spec = spec["mapping"]
     # for tv in mapping_spec:
     #     if tv["ignore"]:
     #         continue
-        
+
     #     solutions = mapping_wrapper(
     #                                     base=tv["input"]["base"], 
     #                                     target=tv["input"]["target"], 
