@@ -62,7 +62,7 @@ def update_result(corrent_mapping: List[str], solutions: List[Solution], result:
         if i == 0:
             result.correct_answers = current_good
             result.num_of_guesses = len(actual)
-            result.num_of_maps = len(reference)
+        
 
 
 def evaluate(model_name: str, threshold: float):
@@ -88,6 +88,7 @@ def evaluate(model_name: str, threshold: float):
                                     )
         result = Result()
         current_maps = len(tv["output"]["mapping"])
+        result.num_of_maps = current_maps
         if solutions:
             update_result(tv["output"]["mapping"], solutions, result) 
         results.update_results(result)

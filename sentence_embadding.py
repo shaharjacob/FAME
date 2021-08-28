@@ -8,8 +8,8 @@ from sentence_transformers import SentenceTransformer, util
 from data_collector import DataCollector
 
 class SentenceEmbedding(SentenceTransformer):
-    def __init__(self, model: str = 'msmarco-distilbert-base-v4', data_collector: DataCollector = None):
-        super().__init__(model)
+    def __init__(self, model: str = 'msmarco-distilbert-base-v4', data_collector: DataCollector = None, device: str = 'cuda'):
+        super().__init__(model, device=device)
         self.embaddings = {}
         self.data_collector = data_collector
 
@@ -32,7 +32,7 @@ class SentenceEmbedding(SentenceTransformer):
         if verbose:
             secho(f"{sentence1} ~ {sentence2},  ", fg='blue', nl=False)
             secho(f'Similarity: {similarity}', fg='blue', bold=True)
-        return similarity
+        return similarity if similarity > 0.9 else 0
     
 
     def clustering(self, edge: Tuple[str], distance_threshold: float) -> Dict[int, List[str]]:

@@ -18,7 +18,7 @@ def mapping_entities():
     start_time = time.time()
     data_collector = DataCollector()
     model_name = 'msmarco-distilbert-base-v4'
-    model = SentenceEmbedding(model="", data_collector=data_collector)
+    model = SentenceEmbedding(model=model_name, data_collector=data_collector)
     threshold = request.args.get('threshold')
     threshold = threshold if threshold else 200
     freq = Frequencies('jsons/merged/20%/all_1m_filter_3_sort.json', threshold=float(threshold))
