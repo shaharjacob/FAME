@@ -322,8 +322,8 @@ def mapping_suggestions(
         # otherwise, if the best score is 0, we have no more mappings to do.
         if result["best_score"] > 0:
             # we will add the new mapping to the already mapping lists. 
-            base_already_mapping_new = copy.deepcopy(current_solution["actual_base"])
-            target_already_mapping_new = copy.deepcopy(current_solution["actual_target"])
+            base_already_mapping_new = copy.deepcopy(current_solution.actual_base)
+            target_already_mapping_new = copy.deepcopy(current_solution.actual_target)
             
             score = 0
             if result["best_mapping"][0][0] not in base_already_mapping_new and result["best_mapping"][1][0] not in target_already_mapping_new:
@@ -339,20 +339,20 @@ def mapping_suggestions(
             # updating the top suggestions for the GUI
             if domain == "actual_base":
                 top_suggestions.append(target_already_mapping_new[-1])
-            else:  # domain == "actual_target"
+            elif domain == "actual_target":
                 top_suggestions.append(base_already_mapping_new[-1])
             
             # we need to add the mapping that we just found to the relations that already exist for that solution.
-            relations = copy.deepcopy(current_solution["relations"])
+            relations = copy.deepcopy(current_solution.relations)
             relations.append(result["best_mapping"])
-            scores_copy = copy.deepcopy(current_solution["scores"])
+            scores_copy = copy.deepcopy(current_solution.scores)
             scores_copy.append(round(result["best_score"], 3))
 
             solutions.append(Solution(
                 mapping=[f"{b} --> {t}" for b, t in zip(base_already_mapping_new, target_already_mapping_new)],
                 relations=relations,
                 scores=scores_copy,
-                score=round(current_solution["score"] + score, 3),
+                score=round(current_solution.score + score, 3),
                 actual_base=base_already_mapping_new,
                 actual_target=target_already_mapping_new,
                 length=len(base_already_mapping_new),
@@ -447,7 +447,7 @@ def mapping_wrapper(base: List[str],
             mapping_suggestions_wrapper(base, "actual_base", "actual_target", solution, data_collector, model, freq, suggestions_solutions, cache, num_of_suggestions, verbose)
             mapping_suggestions_wrapper(target, "actual_target", "actual_base", solution, data_collector, model, freq, suggestions_solutions, cache, num_of_suggestions, verbose)
 
-    # all_solutions = sorted(solutions + suggestions_solutions, key=lambda x: (x["length"], x["score"]), reverse=True)
+    # all_solutions = sorted(solutions + suggestions_solutions, key=lambda x: (x.length, x.score), reverse=True)
     all_solutions = sorted(solutions + suggestions_solutions, key=lambda x: x.score, reverse=True)
     if not all_solutions:
         if verbose:
