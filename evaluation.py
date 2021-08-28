@@ -64,7 +64,8 @@ def evaluate(model_name: str, threshold: float):
     total_good_good = 0
     total_good_good_total = 0
     quasimodo = Quasimodo()
-    freq = Frequencies('jsons/merged/20%/all_1m_filter_2_sort.json', threshold=threshold)
+    pass_for_json = 'jsons/merged/20%/ci.json' if 'CI' in os.environ else 'jsons/merged/20%/all_1m_filter_3_sort.json'
+    freq = Frequencies(pass_for_json, threshold=threshold)
     for tv in mapping_spec:
         solutions = mapping_wrapper(
                                         base=tv["input"]["base"], 

@@ -138,7 +138,8 @@ def create_json_for_ci():
     
 
 if __name__ == '__main__':
-    create_json_for_ci()
+    pass
+    # create_json_for_ci()
 
     # freq = Frequencies('jsons/merged/20%/all_1m_filter_3.json', 0)
     # freq.write_order_json('jsons/merged/20%/all_1m_filter_3_sort.json')

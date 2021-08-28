@@ -410,7 +410,8 @@ def mapping_wrapper(base: List[str],
     data_collector = DataCollector(quasimodo=quasimodo)
     model = SentenceEmbedding(model=model_name, data_collector=data_collector)
     if not freq:
-        freq = Frequencies('jsons/merged/20%/all_1m_filter_3_sort.json', threshold=threshold)
+        pass_for_json = 'jsons/merged/20%/ci.json' if 'CI' in os.environ else 'jsons/merged/20%/all_1m_filter_3_sort.json'
+        freq = Frequencies(pass_for_json, threshold=threshold)
 
     cache = {}
     mapping(base, target, available_pairs, solutions, data_collector, model, freq, [], [], [], [], 0, cache, depth=depth)

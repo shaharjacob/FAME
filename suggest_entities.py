@@ -1,3 +1,4 @@
+import os
 import json
 from typing import List, Dict
 
@@ -89,7 +90,8 @@ def get_suggestions_for_missing_entities(data_collector: DataCollector, base_not
 def get_score_between_two_entitites(entity1: str, entity2: str, model: SentenceEmbedding = None, data_collector: DataCollector = None, freq: Frequencies = None) -> float:
     model = SentenceEmbedding()
     data_collector = DataCollector()
-    freq = Frequencies('jsons/merged/20%/all_1m_filter_3_sort.json', threshold=200)
+    pass_for_json = 'jsons/merged/20%/ci.json' if 'CI' in os.environ else 'jsons/merged/20%/all_1m_filter_3_sort.json'
+    freq = Frequencies(pass_for_json, threshold=200)
         
     props1 = data_collector.get_entitiy_props(entity1)
     props2 = data_collector.get_entitiy_props(entity2)
