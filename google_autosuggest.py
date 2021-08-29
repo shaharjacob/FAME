@@ -27,7 +27,7 @@ class GoogleAutoSuggestEntityProps(object):
     def init_suggestions(self) -> List[Tuple[str]]:
         sugges: List[str] = []
         keyword = f"{self.entity} {self.prop}".replace(" ", "+")
-        url = f"http://suggestqueries.google.com/complete/search?client={self.browser}&q={keyword}&hl=us"
+        url = f"http://suggestqueries.google.com/complete/search?client={self.browser}&q={keyword}&hl=en"
         response = requests.get(url)
         suggestions = json.loads(response.text)[1]
         for suggestion in suggestions:
@@ -59,7 +59,7 @@ class GoogleAutoSuggestOneEntity(object):
         sugges: List[str] = []
         for keyword_, regex_ in zip(self.keywords, self.regexs):
             keyword = keyword_.replace(" ", "+")
-            url = f"http://suggestqueries.google.com/complete/search?client={self.browser}&q={keyword}&hl=us"
+            url = f"http://suggestqueries.google.com/complete/search?client={self.browser}&q={keyword}&hl=en"
             response = requests.get(url)
             suggestions = json.loads(response.text)[1]
             for suggestion in suggestions:
@@ -89,7 +89,9 @@ class GoogleAutoSuggestTwoEntities(object):
         already_seen = set()
         sugges: List[Tuple[str]] = []
         keyword = self.keyword.replace(" ", "+")
-        url = f"http://suggestqueries.google.com/complete/search?client={self.browser}&q={keyword}&hl=us"
+        curser = len(self.question) + len(self.entity1) + 2
+        language = 'en'
+        url = f"http://suggestqueries.google.com/complete/search?client={self.browser}&q={keyword}&hl={language}&cp={curser}"
         response = requests.get(url)
         suggestions = json.loads(response.text)[1]
         for suggestion in suggestions:
@@ -251,5 +253,5 @@ if __name__ == '__main__':
     # res = get_entity_suggestions("electricity", "discovered")
     # res = get_entity_props("sun")
     # res = get_entities_relations("electricity", "cell", verbose=True).get("props")
-    res = get_entities_relations("rain", "winter", verbose=True).get("props")
+    res = get_entities_relations("air", "sounds", verbose=True).get("props")
     print(res)

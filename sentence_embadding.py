@@ -32,7 +32,8 @@ class SentenceEmbedding(SentenceTransformer):
         if verbose:
             secho(f"{sentence1} ~ {sentence2},  ", fg='blue', nl=False)
             secho(f'Similarity: {similarity}', fg='blue', bold=True)
-        return similarity if similarity > 0.9 else 0
+        return similarity
+        # return similarity if similarity > 0.9 else 0
     
 
     def clustering(self, edge: Tuple[str], distance_threshold: float) -> Dict[int, List[str]]:

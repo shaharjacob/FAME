@@ -4565,12 +4565,14 @@
 		"a transverse"
 	],
 	"air#sounds": [
-		"affect",
-		"density affect",
-		"make",
-		"move",
-		"particles help make",
-		"pressure affect"
+		"make", 
+		"particles help make", 
+		"temperature affect the speed of", 
+		"pressure affect", 
+		"pressure affect speed of", 
+		"density affect speed of", 
+		"affect", 
+		"temp affect the speed of"
 	],
 	"sounds#wall": [
 		"like someone is knocking on my"
@@ -6077,5 +6079,7 @@
 	"an atom#electrons": [
 		"have the same number of protons and"
 	],
-	"electrons#heart": []
+	"electrons#heart": [],
+	"wall#ear": [],
+	"ear#wall": []
 }

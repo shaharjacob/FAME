@@ -42,27 +42,26 @@ mapping:
         - sunscreen --> umbrella
   
   - input:
-      base: [water, pressure, water tower, bucket, pipe]
-      target: [heat, temperature, burner, kettle, iron]
+      base: [water, pressure, bucket, pipe]
+      target: [heat, temperature, kettle, iron]
       depth: 4
     output:
       mapping:
         - water --> heat
         - pressure --> temperature
-        - water tower --> burner
         - bucket --> kettle
         - pipe --> iron
   
   - input:
       base: [waves, water, shore, breakwater]
-      target: [sounds, air, wall, earplugs]
+      target: [sounds, air, wall, ear]
       depth: 4
     output:
       mapping:
         - waves --> sounds
         - water --> air
-        - shore --> wall
-        - breakwater --> earplugs
+        - shore --> ear
+        - breakwater --> wall
 
   - input:
       base: [respiration, animal, food, breathing]

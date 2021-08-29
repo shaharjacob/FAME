@@ -119,9 +119,9 @@ def evaluate(model_name: str, threshold: float):
 # 'LaBSE'                                  --> to big
 
 @click.command()
-@click.option('--model', default="msmarco-distilbert-base-v4", type=str, help="The model for sBERT: https://huggingface.co/sentence-transformers")
-@click.option('--threshold', default=200, type=float, help="Threshold for % to take from json frequencies")
-@click.option('--comment', default="", type=str, help="Additional comment for the job")
+@click.option('-m', '--model', default="msmarco-distilbert-base-v4", type=str, help="The model for sBERT: https://huggingface.co/sentence-transformers")
+@click.option('-t', '--threshold', default=200, type=float, help="Threshold for % to take from json frequencies")
+@click.option('-c', '--comment', default="", type=str, help="Additional comment for the job")
 def run(model, threshold, comment):
     torch.cuda.empty_cache()
     evaluate(model, threshold)
