@@ -531,5 +531,28 @@
 		"earthed",
 		"grounded",
 		"smell"
-	]
+	],
+	"thoughts#avoid": [],
+	"brain#affect": [
+		"virus",
+		"behavior",
+		"personality"
+	],
+	"brain#be created in": [],
+	"brain#be important in": [
+		"psychology"
+	],
+	"brain#be important to": [
+		"nervous system",
+		"human being"
+	],
+	"brain#form in": [],
+	"brain#formed in": [],
+	"brain#made in": [],
+	"brain#move normally through": [],
+	"brain#move through": [],
+	"brain#occur in": [],
+	"brain#take people to": [],
+	"brain#twist": [],
+	"brain#work in": []
 }

@@ -32,7 +32,7 @@ mapping:
         - [[earth, sun], [electrons, nucleus]]
         - [[earth, gravity], [electrons, electricity]]
         - [[gravity, newton], [electricity, faraday]]
-      score: 7.282
+      score: 7.223
     ignore: False
 
   - input:
@@ -49,7 +49,7 @@ mapping:
         - [[earth, sun], [electrons, nucleus]]
         - [[earth, gravity], [electrons, electricity]]
         - [[gravity, newton], [electricity, humans]]
-      score: 8.246
+      score: 8.175
     ignore: False
 
   - input:
@@ -66,7 +66,7 @@ mapping:
         - [[earth, gravity], [electrons, electricity]]
         - [[newton, gravity], [faraday, electricity]]
         - [[earth, sun], [electrons, nucleus]]
-      score: 7.282
+      score: 7.223
     ignore: False
 
   - input:
@@ -82,7 +82,7 @@ mapping:
         - [[thoughts, brain], [astronaut, space]]
         - [[brain, neurons], [space, black hole]]
       score: 5.062
-    ignore: False
+    ignore: True
   
   - input:
       base: [cars, road, wheels]
@@ -96,7 +96,7 @@ mapping:
       relations: 
         - [[cars, road], [boats, river]]
         - [[cars, wheels], [boats, sail]]
-      score: 2.152
+      score: 1.96
     ignore: False
   
   - input:
@@ -107,11 +107,11 @@ mapping:
       mapping:
         - cars --> boats
         - road --> river
-        - wheels --> buoyancy  # steering wheel
+        - wheels --> water  # steering wheel
       relations: 
         - [[cars, road], [boats, river]]
-        - [[cars, wheels], [boats, buoyancy]]
-      score: 2.963
+        - [[cars, wheels], [boats, water]]
+      score: 2.787
     ignore: False
 
   - input:
@@ -126,7 +126,7 @@ mapping:
       relations: 
         - [[sun, summer], [rain, winter]]
         - [[sun, sunscreen], [rain, mountains]]
-      score: 1.807
+      score: 1.622
     ignore: False
   
 

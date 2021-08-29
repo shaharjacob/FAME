@@ -938,5 +938,56 @@
 		"deku",
 		"they",
 		"clouds"
+	],
+	"thoughts#avoid": [
+		"you"
+	],
+	"brain#affect": [
+		"covid",
+		"strokes",
+		"uti",
+		"pregnancy",
+		"exercise",
+		"nutrition",
+		"hormones",
+		"drugs",
+		"genes",
+		"experiences",
+		"aces",
+		"nicotine",
+		"genetics"
+	],
+	"brain#be created in": [],
+	"brain#be important in": [],
+	"brain#be important to": [],
+	"brain#form in": [
+		"clot",
+		"blood clots",
+		"clots",
+		"blood clot",
+		"cysts"
+	],
+	"brain#formed in": [
+		"soil"
+	],
+	"brain#made in": [],
+	"brain#move normally through": [],
+	"brain#move through": [],
+	"brain#occur in": [
+		"necrosis",
+		"breakdown of communication",
+		"blood clot"
+	],
+	"brain#take people to": [],
+	"brain#twist": [],
+	"brain#work in": [
+		"gabapentin",
+		"memory",
+		"imagination",
+		"serotonin",
+		"cbd",
+		"addiction",
+		"alcohol",
+		"lithium"
 	]
 }

@@ -64,15 +64,14 @@ mapping:
         - breakwater --> wall
 
   - input:
-      base: [respiration, animal, food, breathing]
-      target: [combustion, fire, fuel, burning]
+      base: [respiration, animal, food]
+      target: [combustion, fire, fuel]
       depth: 4
     output:
       mapping:
         - respiration --> combustion
         - animal --> fire
         - food --> fuel
-        - breathing --> burning
 
   - input:
       base: [light, bright, lens]
@@ -83,18 +82,6 @@ mapping:
         - light --> sound
         - bright --> loud
         - lens --> horn
-
-  - input:
-      base: [projectile, earth, parabolic, air, trajectory]
-      target: [planet, sun, elliptical, space, orbit]
-      depth: 4
-    output:
-      mapping:
-        - projectile --> planet
-        - earth --> sun
-        - parabolic --> elliptical
-        - air --> space
-        - trajectory --> orbit
 
   - input:
       base: [species, competition, adaptation, natural, fitness]

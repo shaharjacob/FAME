@@ -4629,5 +4629,310 @@
 	"an atom#electrons": [],
 	"electrons#heart": [],
 	"wall#ear": [],
-	"ear#wall": []
+	"ear#wall": [],
+	"thoughts#personality": [],
+	"personality#thoughts": [],
+	"thoughts#strokes": [],
+	"strokes#thoughts": [],
+	"thoughts#gabapentin": [],
+	"gabapentin#thoughts": [],
+	"thoughts#memory": [],
+	"memory#thoughts": [],
+	"thoughts#pregnancy": [],
+	"pregnancy#thoughts": [],
+	"thoughts#drugs": [],
+	"drugs#thoughts": [],
+	"thoughts#experiences": [],
+	"experiences#thoughts": [],
+	"thoughts#human being": [],
+	"human being#thoughts": [],
+	"thoughts#necrosis": [],
+	"necrosis#thoughts": [],
+	"thoughts#soil": [],
+	"soil#thoughts": [],
+	"thoughts#lithium": [],
+	"lithium#thoughts": [],
+	"thoughts#nervous system": [],
+	"nervous system#thoughts": [],
+	"thoughts#virus": [],
+	"virus#thoughts": [
+		"has property"
+	],
+	"thoughts#clot": [],
+	"clot#thoughts": [],
+	"thoughts#serotonin": [],
+	"serotonin#thoughts": [],
+	"thoughts#genes": [],
+	"genes#thoughts": [],
+	"thoughts#psychology": [],
+	"psychology#thoughts": [],
+	"thoughts#addiction": [],
+	"addiction#thoughts": [],
+	"thoughts#nicotine": [],
+	"nicotine#thoughts": [],
+	"thoughts#cysts": [],
+	"cysts#thoughts": [],
+	"thoughts#covid": [],
+	"covid#thoughts": [],
+	"thoughts#uti": [],
+	"uti#thoughts": [],
+	"thoughts#behavior": [
+		"affect",
+		"influence"
+	],
+	"behavior#thoughts": [],
+	"thoughts#nutrition": [],
+	"nutrition#thoughts": [],
+	"thoughts#imagination": [],
+	"imagination#thoughts": [],
+	"thoughts#cbd": [],
+	"cbd#thoughts": [],
+	"thoughts#breakdown of communication": [],
+	"breakdown of communication#thoughts": [],
+	"thoughts#exercise": [],
+	"exercise#thoughts": [],
+	"thoughts#blood clots": [],
+	"blood clots#thoughts": [],
+	"thoughts#clots": [],
+	"clots#thoughts": [],
+	"thoughts#hormones": [],
+	"hormones#thoughts": [],
+	"thoughts#blood clot": [],
+	"blood clot#thoughts": [],
+	"thoughts#aces": [],
+	"aces#thoughts": [],
+	"thoughts#alcohol": [],
+	"alcohol#thoughts": [],
+	"thoughts#genetics": [],
+	"genetics#thoughts": [],
+	"brain#personality": [
+		"affect"
+	],
+	"personality#brain": [],
+	"brain#strokes": [
+		"can recover from"
+	],
+	"strokes#brain": [
+		"affect",
+		"happen in"
+	],
+	"brain#gabapentin": [],
+	"gabapentin#brain": [
+		"affect"
+	],
+	"brain#memory": [
+		"keep"
+	],
+	"memory#brain": [
+		"be formed in",
+		"be presented in",
+		"be processed in",
+		"be related to",
+		"be stored in",
+		"encoded in",
+		"form in",
+		"get stored in",
+		"stored in",
+		"work in"
+	],
+	"brain#pregnancy": [
+		"shrink during"
+	],
+	"pregnancy#brain": [],
+	"brain#drugs": [],
+	"drugs#brain": [
+		"act on",
+		"affect",
+		"can influence",
+		"can interfere in",
+		"change",
+		"enter",
+		"hijack",
+		"negatively affect",
+		"reach",
+		"work in"
+	],
+	"brain#experiences": [],
+	"experiences#brain": [
+		"affect",
+		"be represented in",
+		"can modify"
+	],
+	"brain#human being": [
+		"be important to"
+	],
+	"human being#brain": [],
+	"brain#necrosis": [],
+	"necrosis#brain": [
+		"occur in"
+	],
+	"brain#soil": [],
+	"soil#brain": [],
+	"brain#lithium": [],
+	"lithium#brain": [
+		"affect"
+	],
+	"brain#nervous system": [
+		"be important to"
+	],
+	"nervous system#brain": [],
+	"brain#virus": [
+		"affect"
+	],
+	"virus#brain": [
+		"enter"
+	],
+	"brain#clot": [],
+	"clot#brain": [
+		"form in"
+	],
+	"brain#serotonin": [],
+	"serotonin#brain": [
+		"affect",
+		"be important in",
+		"get into"
+	],
+	"brain#genes": [],
+	"genes#brain": [],
+	"brain#psychology": [
+		"be important in",
+		"has property"
+	],
+	"psychology#brain": [
+		"affect"
+	],
+	"brain#addiction": [],
+	"addiction#brain": [
+		"affect",
+		"be disorder of",
+		"change",
+		"develop in",
+		"get into",
+		"happen in",
+		"occur in",
+		"physically change",
+		"work in"
+	],
+	"brain#nicotine": [],
+	"nicotine#brain": [
+		"affect",
+		"get to",
+		"negatively affect",
+		"reach"
+	],
+	"brain#cysts": [],
+	"cysts#brain": [],
+	"brain#covid": [],
+	"covid#brain": [],
+	"brain#uti": [],
+	"uti#brain": [],
+	"brain#behavior": [
+		"affect"
+	],
+	"behavior#brain": [
+		"affect",
+		"change"
+	],
+	"brain#nutrition": [],
+	"nutrition#brain": [
+		"affect",
+		"be important for",
+		"be related to",
+		"help"
+	],
+	"brain#imagination": [],
+	"imagination#brain": [
+		"affect",
+		"help"
+	],
+	"brain#cbd": [],
+	"cbd#brain": [],
+	"brain#breakdown of communication": [],
+	"breakdown of communication#brain": [],
+	"brain#exercise": [
+		"can"
+	],
+	"exercise#brain": [
+		"affect",
+		"be good for",
+		"help",
+		"stimulate"
+	],
+	"brain#blood clots": [],
+	"blood clots#brain": [
+		"affect",
+		"be formed in",
+		"be in",
+		"be removed from",
+		"dissolve in",
+		"form in",
+		"get to",
+		"happen in",
+		"occur in",
+		"travel to"
+	],
+	"brain#clots": [],
+	"clots#brain": [
+		"form in"
+	],
+	"brain#hormones": [],
+	"hormones#brain": [
+		"affect"
+	],
+	"brain#blood clot": [],
+	"blood clot#brain": [
+		"affect",
+		"be formed in",
+		"be in",
+		"be removed from",
+		"dissolve in",
+		"form in",
+		"get to",
+		"happen in",
+		"occur in",
+		"travel to"
+	],
+	"brain#aces": [],
+	"aces#brain": [
+		"affect"
+	],
+	"brain#alcohol": [],
+	"alcohol#brain": [
+		"affect",
+		"be bad for",
+		"damage",
+		"find",
+		"get to",
+		"go quickly to",
+		"impact",
+		"negatively affect",
+		"reach",
+		"shrink"
+	],
+	"brain#genetics": [],
+	"genetics#brain": [],
+	"living#animal": [
+		"has property"
+	],
+	"hot#fire": [],
+	"animal#living": [],
+	"fire#hot": [
+		"has temperature"
+	],
+	"hot#fuel": [],
+	"fuel#hot": [],
+	"living#food": [],
+	"food#living": [],
+	"planet#elliptic": [],
+	"elliptic#planet": [],
+	"sun#elliptic": [],
+	"elliptic#sun": [],
+	"elliptic#space": [],
+	"space#elliptic": [],
+	"combustion#hot": [],
+	"hot#combustion": [],
+	"respiration#living": [
+		"be necessary"
+	],
+	"living#respiration": []
 }

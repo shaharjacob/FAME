@@ -4565,13 +4565,13 @@
 		"a transverse"
 	],
 	"air#sounds": [
-		"make", 
-		"particles help make", 
-		"temperature affect the speed of", 
-		"pressure affect", 
-		"pressure affect speed of", 
-		"density affect speed of", 
-		"affect", 
+		"make",
+		"particles help make",
+		"temperature affect the speed of",
+		"pressure affect",
+		"pressure affect speed of",
+		"density affect speed of",
+		"affect",
 		"temp affect the speed of"
 	],
 	"sounds#wall": [
@@ -6081,5 +6081,512 @@
 	],
 	"electrons#heart": [],
 	"wall#ear": [],
-	"ear#wall": []
+	"ear#wall": [],
+	"thoughts#personality": [],
+	"personality#thoughts": [],
+	"thoughts#strokes": [],
+	"strokes#thoughts": [],
+	"thoughts#gabapentin": [],
+	"gabapentin#thoughts": [],
+	"thoughts#memory": [],
+	"memory#thoughts": [],
+	"thoughts#pregnancy": [
+		"affect"
+	],
+	"pregnancy#thoughts": [
+		"affect"
+	],
+	"thoughts#drugs": [],
+	"drugs#thoughts": [],
+	"thoughts#experiences": [],
+	"experiences#thoughts": [],
+	"thoughts#human being": [],
+	"human being#thoughts": [],
+	"thoughts#necrosis": [],
+	"necrosis#thoughts": [],
+	"thoughts#soil": [],
+	"soil#thoughts": [],
+	"thoughts#lithium": [],
+	"lithium#thoughts": [
+		"stop suicidal"
+	],
+	"thoughts#nervous system": [],
+	"nervous system#thoughts": [],
+	"thoughts#virus": [],
+	"virus#thoughts": [],
+	"thoughts#clot": [],
+	"clot#thoughts": [],
+	"thoughts#serotonin": [],
+	"serotonin#thoughts": [],
+	"thoughts#genes": [],
+	"genes#thoughts": [],
+	"thoughts#psychology": [],
+	"psychology#thoughts": [],
+	"thoughts#addiction": [],
+	"addiction#thoughts": [],
+	"thoughts#nicotine": [],
+	"nicotine#thoughts": [],
+	"thoughts#cysts": [],
+	"cysts#thoughts": [],
+	"thoughts#covid": [],
+	"covid#thoughts": [],
+	"thoughts#uti": [],
+	"uti#thoughts": [],
+	"thoughts#behavior": [
+		"affect"
+	],
+	"behavior#thoughts": [
+		"affect"
+	],
+	"thoughts#nutrition": [],
+	"nutrition#thoughts": [],
+	"thoughts#imagination": [],
+	"imagination#thoughts": [],
+	"thoughts#cbd": [],
+	"cbd#thoughts": [],
+	"thoughts#breakdown of communication": [],
+	"breakdown of communication#thoughts": [],
+	"thoughts#exercise": [],
+	"exercise#thoughts": [],
+	"thoughts#blood clots": [],
+	"blood clots#thoughts": [],
+	"thoughts#clots": [],
+	"clots#thoughts": [],
+	"thoughts#hormones": [],
+	"hormones#thoughts": [
+		"affect"
+	],
+	"thoughts#blood clot": [],
+	"blood clot#thoughts": [],
+	"thoughts#aces": [],
+	"aces#thoughts": [],
+	"thoughts#alcohol": [],
+	"alcohol#thoughts": [],
+	"thoughts#genetics": [],
+	"genetics#thoughts": [],
+	"brain#personality": [
+		"affect",
+		"cancer affect your",
+		"create multiple",
+		"damage affect",
+		"tumors affect"
+	],
+	"personality#brain": [
+		"disorder affect the",
+		"disorders affect the"
+	],
+	"brain#strokes": [
+		"affected by a",
+		"bleed after",
+		"heal after",
+		"swell after"
+	],
+	"strokes#brain": [
+		"affect the",
+		"damage affect the",
+		"occur"
+	],
+	"brain#gabapentin": [],
+	"gabapentin#brain": [
+		"affect the",
+		"affect your",
+		"work in the",
+		"work in your"
+	],
+	"brain#memory": [
+		"affect",
+		"cancer affect",
+		"cells retain",
+		"cells store",
+		"create false",
+		"development affect",
+		"games improve",
+		"make",
+		"process",
+		"recall",
+		"remember",
+		"repress",
+		"retrieve",
+		"store",
+		"store and retrieve",
+		"tumor affect",
+		"tumors affect"
+	],
+	"memory#brain": [
+		"affect the",
+		"alter the",
+		"encoded in the",
+		"get stored in the",
+		"loss affect the",
+		"measured in the",
+		"store in the",
+		"stored in the",
+		"work in the"
+	],
+	"brain#pregnancy": [
+		"increase the respiration rate and depth during",
+		"shrink during"
+	],
+	"pregnancy#brain": [
+		"affect",
+		"affect your",
+		"change your",
+		"hormones affect the"
+	],
+	"brain#drugs": [
+		"adapt to the presence of"
+	],
+	"drugs#brain": [
+		"addiction change the",
+		"affect adolescent",
+		"affect my",
+		"affect the teenage",
+		"and alcohol affect the",
+		"and alcohol affect your",
+		"damage the",
+		"dependence result to chemical imbalance to",
+		"tolerance work in the",
+		"work in the"
+	],
+	"brain#experiences": [
+		"affected by adverse childhood",
+		"differentiate sensory",
+		"protect itself from traumatic"
+	],
+	"experiences#brain": [
+		"affect the",
+		"change the",
+		"in life alter our",
+		"represented in the",
+		"shape the",
+		"shape the developing",
+		"shape the human"
+	],
+	"brain#human being": [
+		"important to"
+	],
+	"human being#brain": [],
+	"brain#necrosis": [
+		"have liquefactive",
+		"undergo liquefactive"
+	],
+	"necrosis#brain": [
+		"occur in"
+	],
+	"brain#soil": [],
+	"soil#brain": [],
+	"brain#lithium": [],
+	"lithium#brain": [
+		"affect the",
+		"help the",
+		"orotate work in the",
+		"toxicity affect the",
+		"work in the"
+	],
+	"brain#nervous system": [
+		"and",
+		"and central",
+		"cancer affect the",
+		"considered as the master control of the",
+		"damage affect the",
+		"important in the",
+		"injury affect the",
+		"injury classified as an injury of the peripheral",
+		"known as the master control of the",
+		"primarily interpret the strength of a stimulus in the",
+		"related to the"
+	],
+	"nervous system#brain": [
+		"affect your"
+	],
+	"brain#virus": [
+		"affect"
+	],
+	"virus#brain": [
+		"affect",
+		"affect the",
+		"affect your",
+		"get into the"
+	],
+	"brain#clot": [],
+	"clot#brain": [
+		"form in",
+		"form in the"
+	],
+	"brain#serotonin": [
+		"absorb",
+		"make",
+		"produce",
+		"reuptake",
+		"stop producing"
+	],
+	"serotonin#brain": [
+		"affect the",
+		"get from gut to",
+		"get into the",
+		"get to the",
+		"made in the",
+		"measured in the",
+		"produced in the",
+		"released in the",
+		"work in the",
+		"work in your"
+	],
+	"brain#genes": [],
+	"genes#brain": [
+		"childhood experiences and environment affect the adolescent"
+	],
+	"brain#psychology": [
+		"change during adolescence quizlet",
+		"important in",
+		"on fire connect to",
+		"plasticity relate to",
+		"process visual information",
+		"relate to",
+		"related to",
+		"work"
+	],
+	"psychology#brain": [
+		"affect the"
+	],
+	"brain#addiction": [
+		"affected by an",
+		"affected during"
+	],
+	"addiction#brain": [
+		"affect the",
+		"affect your",
+		"alter the",
+		"change the",
+		"change the structure of the",
+		"hijack the",
+		"occur in the",
+		"rewire the",
+		"work in the",
+		"work in the teenage"
+	],
+	"brain#nicotine": [
+		"crave",
+		"like"
+	],
+	"nicotine#brain": [
+		"act in the",
+		"affect",
+		"affect teenage",
+		"affect the",
+		"affect the body and",
+		"affect the teenage",
+		"and caffeine affects the",
+		"bad for the",
+		"bad for the teenage",
+		"bad for your",
+		"change the",
+		"damage the",
+		"harmful to the teenage",
+		"negatively affect the",
+		"work in the"
+	],
+	"brain#cysts": [],
+	"cysts#brain": [
+		"form in",
+		"form in the"
+	],
+	"brain#covid": [],
+	"covid#brain": [
+		"19 attack the",
+		"affect the",
+		"affecting",
+		"affecting the",
+		"attack the",
+		"change your"
+	],
+	"brain#uti": [],
+	"uti#brain": [
+		"affect the"
+	],
+	"brain#behavior": [
+		"affect",
+		"affect human",
+		"damage affect",
+		"development affect",
+		"development affect a child's",
+		"development affect adolescent",
+		"development related to fetal capacities and",
+		"function contribute to criminal",
+		"structure affect",
+		"tumors affect"
+	],
+	"behavior#brain": [
+		"affect the",
+		"change the"
+	],
+	"brain#nutrition": [],
+	"nutrition#brain": [
+		"affect the",
+		"important for the",
+		"important for the developing"
+	],
+	"brain#imagination": [],
+	"imagination#brain": [
+		"affect the",
+		"work in the"
+	],
+	"brain#cbd": [],
+	"cbd#brain": [
+		"affect the",
+		"affect your",
+		"work in the"
+	],
+	"brain#breakdown of communication": [],
+	"breakdown of communication#brain": [],
+	"brain#exercise": [],
+	"exercise#brain": [
+		"affect the",
+		"change the",
+		"good for the",
+		"good for your",
+		"help your",
+		"impact the",
+		"important for the",
+		"improve"
+	],
+	"brain#blood clots": [],
+	"blood clots#brain": [
+		"affect the",
+		"dissolve in the",
+		"form in",
+		"form in the",
+		"form in your",
+		"formed in",
+		"get to",
+		"get to the",
+		"in",
+		"occur in the",
+		"removed from",
+		"travel to"
+	],
+	"brain#clots": [],
+	"clots#brain": [
+		"form in",
+		"form in the"
+	],
+	"brain#hormones": [
+		"affected by",
+		"release"
+	],
+	"hormones#brain": [
+		"affect the",
+		"affect the teenage",
+		"affect your",
+		"and genetic activity shape the male and female",
+		"help the",
+		"work on the"
+	],
+	"brain#blood clot": [],
+	"blood clot#brain": [
+		"affect the",
+		"dissolve in the",
+		"form in",
+		"form in the",
+		"form in your",
+		"formed in",
+		"get to",
+		"get to the",
+		"in",
+		"occur in the",
+		"removed from",
+		"travel to"
+	],
+	"brain#aces": [],
+	"aces#brain": [
+		"affect the",
+		"change the"
+	],
+	"brain#alcohol": [
+		"affected by",
+		"crave"
+	],
+	"alcohol#brain": [
+		"affect children's",
+		"affect the",
+		"affect the teenage",
+		"affect young",
+		"affect your",
+		"bad for the",
+		"bad for your",
+		"damage the",
+		"poisoning affect the",
+		"quick to find its way to the",
+		"shrink the",
+		"work in the"
+	],
+	"brain#genetics": [],
+	"genetics#brain": [
+		"affect the",
+		"disorder affect the"
+	],
+	"living#animal": [
+		"in captivity affect",
+		"in groups help"
+	],
+	"hot#fire": [
+		"air balloon need",
+		"air balloons catch",
+		"air balloons not catch on",
+		"cheetos catch on",
+		"cheetos light on",
+		"water extinguish",
+		"weather cause",
+		"weather start"
+	],
+	"animal#living": [],
+	"fire#hot": [
+		"so",
+		"stick get",
+		"stick getting",
+		"sticks get"
+	],
+	"hot#fuel": [],
+	"fuel#hot": [
+		"pump get",
+		"pump relay get"
+	],
+	"living#food": [
+		"beings get energy from",
+		"organism need a constant supply of",
+		"organisms extract energy from",
+		"organisms harness energy from",
+		"organisms need",
+		"organisms obtain energy from",
+		"organisms store",
+		"things eat",
+		"things get",
+		"things get energy from",
+		"things get their",
+		"things need"
+	],
+	"food#living": [],
+	"planet#elliptic": [],
+	"elliptic#planet": [],
+	"sun#elliptic": [],
+	"elliptic#sun": [],
+	"elliptic#space": [],
+	"space#elliptic": [],
+	"combustion#hot": [],
+	"hot#combustion": [],
+	"respiration#living": [],
+	"living#respiration": [
+		"organism conduct cellular",
+		"organisms carry out cellular",
+		"organisms carry out the process of",
+		"organisms need cellular",
+		"organisms obtain energy in cellular",
+		"organisms use the energy released by",
+		"things carry out",
+		"things carry out cellular",
+		"things do",
+		"things need",
+		"things need cellular",
+		"things need to carry out"
+	]
 }
