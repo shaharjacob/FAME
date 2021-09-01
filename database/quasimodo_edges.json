@@ -4934,5 +4934,157 @@
 	"respiration#living": [
 		"be necessary"
 	],
-	"living#respiration": []
+	"living#respiration": [],
+	"brain#thinking": [],
+	"thinking#brain": [
+		"affect"
+	],
+	"brain#mistake": [
+		"make"
+	],
+	"mistake#brain": [],
+	"brain#confused": [],
+	"confused#brain": [],
+	"mistake#confused": [],
+	"confused#mistake": [],
+	"computer#broken": [],
+	"broken#computer": [],
+	"processing#broken": [],
+	"broken#processing": [],
+	"bug#broken": [],
+	"broken#bug": [],
+	"judgment#lawyer": [],
+	"lawyer#judgment": [],
+	"judgment#logic": [],
+	"logic#judgment": [],
+	"lawyer#logic": [],
+	"logic#lawyer": [],
+	"court#lawyer": [],
+	"lawyer#court": [
+		"argue in",
+		"be addressed in",
+		"dress in",
+		"lie in",
+		"object in",
+		"refer in",
+		"settle out of",
+		"talk in",
+		"wear robes in",
+		"wear wigs in"
+	],
+	"court#logic": [],
+	"logic#court": [],
+	"lawyer#manipulation": [],
+	"manipulation#lawyer": [],
+	"lawyer#Evidence": [],
+	"Evidence#lawyer": [],
+	"lawyer#evidence": [
+		"obtain",
+		"present"
+	],
+	"evidence#lawyer": [],
+	"court#evidence": [],
+	"evidence#court": [
+		"be important in",
+		"be introduced in",
+		"be labeled in",
+		"be presented in",
+		"be used in",
+		"get thrown out of"
+	],
+	"theories#experiments": [],
+	"experiments#theories": [],
+	"theories#scientists": [
+		"be accepted by"
+	],
+	"scientists#theories": [
+		"develop",
+		"discard",
+		"evaluate",
+		"form",
+		"make",
+		"revise",
+		"support",
+		"test",
+		"validate",
+		"write"
+	],
+	"experiments#scientists": [
+		"be done by",
+		"be valuable to"
+	],
+	"scientists#experiments": [
+		"carry out",
+		"conduct",
+		"conduct in",
+		"design",
+		"do",
+		"perform",
+		"repeat",
+		"replicate",
+		"use control in",
+		"use groups in"
+	],
+	"buildings#workers": [],
+	"workers#buildings": [],
+	"foundations#workers": [],
+	"workers#foundations": [],
+	"theories#proofs": [],
+	"proofs#theories": [],
+	"article#sections": [],
+	"sections#article": [],
+	"article#scientists": [],
+	"scientists#article": [],
+	"sections#scientists": [],
+	"scientists#sections": [],
+	"paper#sections": [],
+	"sections#paper": [],
+	"blood#vein": [
+		"be bright red in",
+		"be drawn from",
+		"be in",
+		"be more routinely collected from",
+		"be moved forward in",
+		"be moved through",
+		"be taken from",
+		"flow through",
+		"get to"
+	],
+	"vein#blood": [
+		"carry",
+		"collect",
+		"get back",
+		"give",
+		"has body part",
+		"keep",
+		"move",
+		"pump back",
+		"return",
+		"transport back"
+	],
+	"people#elevators": [],
+	"elevators#people": [],
+	"people#elevator": [],
+	"elevator#people": [],
+	"people#train": [],
+	"train#people": [],
+	"people#bus": [],
+	"bus#people": [
+		"carry"
+	],
+	"people#garage": [],
+	"garage#people": [],
+	"bus#garage": [],
+	"garage#bus": [],
+	"blood#hospital": [
+		"be centrifuged in"
+	],
+	"hospital#blood": [
+		"charge for",
+		"draw",
+		"get",
+		"take"
+	],
+	"vein#hospital": [],
+	"hospital#vein": []
 }

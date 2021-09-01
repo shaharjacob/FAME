@@ -84,56 +84,32 @@ mapping:
         - lens --> horn
 
   - input:
-      base: [species, competition, adaptation, natural, fitness]
-      target: [breeds, selection, conformance, artificial, popularity]
+      base: [computer, processing, bug, broken]
+      target: [brain, thinking, mistake, confused]
       depth: 4
     output:
       mapping:
-        - species --> breeds
-        - competition --> selection
-        - adaptation --> conformance
-        - natural --> artificial
-        - fitness --> popularity
-
-  - input:
-      base: [computer, processing, erasing, bug]
-      target: [mind, thinking, forgetting, mistake]
-      depth: 4
-    output:
-      mapping:
-        - computer --> mind
+        - computer --> brain
         - processing --> thinking
-        - erasing --> forgetting
         - bug --> mistake
-
-  - input:
-      base: [machine, working, broken, repair]
-      target: [mind, thinking, confused, therapy]
-      depth: 4
-    output:
-      mapping:
-        - machine --> mind
-        - working --> thinking
         - broken --> confused
-        - repair --> therapy
 
   - input:
       base: [war, soldiers, weapon]
-      target: [argument, debater, logic] 
+      target: [court, lawyer, evidence] 
       depth: 4
     output:
       mapping:
-        - war --> argument
-        - soldiers --> debater
-        - weapon --> logic
+        - war --> court
+        - soldiers --> lawyer
+        - weapon --> evidence
 
   - input:
-      base: [buildings, foundations, solid, weak]
-      target: [theories, reasons, rational, dubious] 
+      base: [blood, vein, hospital]
+      target: [people, bus, garage] 
       depth: 4
     output:
       mapping:
-        - buildings --> theories
-        - foundations --> reasons
-        - solid --> rational
-        - weak --> dubious
+        - blood --> people
+        - vein --> bus
+        - hospital --> garage

@@ -447,8 +447,8 @@ def mapping_wrapper(base: List[str],
             mapping_suggestions_wrapper(base, "actual_base", "actual_target", solution, data_collector, model, freq, suggestions_solutions, cache, num_of_suggestions, verbose)
             mapping_suggestions_wrapper(target, "actual_target", "actual_base", solution, data_collector, model, freq, suggestions_solutions, cache, num_of_suggestions, verbose)
 
-    # all_solutions = sorted(solutions + suggestions_solutions, key=lambda x: (x.length, x.score), reverse=True)
-    all_solutions = sorted(solutions + suggestions_solutions, key=lambda x: x.score, reverse=True)
+    all_solutions = sorted(solutions + suggestions_solutions, key=lambda x: (x.length, x.score), reverse=True)
+    # all_solutions = sorted(solutions + suggestions_solutions, key=lambda x: x.score, reverse=True)
     if not all_solutions:
         if verbose:
             secho("No solution found")

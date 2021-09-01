@@ -2623,7 +2623,6 @@
 	"hot#fire": [],
 	"animal#living": [],
 	"fire#hot": [
-		"",
 		"burn very"
 	],
 	"hot#fuel": [],
@@ -2639,5 +2638,99 @@
 	"combustion#hot": [],
 	"hot#combustion": [],
 	"respiration#living": [],
-	"living#respiration": []
+	"living#respiration": [],
+	"thinking#brain": [],
+	"brain#mistake": [],
+	"mistake#brain": [],
+	"brain#confused": [],
+	"confused#brain": [],
+	"mistake#confused": [],
+	"confused#mistake": [],
+	"computer#broken": [],
+	"broken#computer": [],
+	"processing#broken": [],
+	"broken#processing": [],
+	"bug#broken": [],
+	"broken#bug": [],
+	"judgment#lawyer": [],
+	"lawyer#judgment": [],
+	"judgment#logic": [],
+	"logic#judgment": [],
+	"lawyer#logic": [],
+	"logic#lawyer": [],
+	"court#lawyer": [],
+	"lawyer#court": [
+		"object in",
+		"present your case to the",
+		"represent you in",
+		"rest his case in",
+		"star in"
+	],
+	"court#logic": [],
+	"logic#court": [],
+	"brain#thinking": [],
+	"lawyer#manipulation": [],
+	"manipulation#lawyer": [],
+	"lawyer#Evidence": [],
+	"Evidence#lawyer": [],
+	"lawyer#evidence": [
+		"produce"
+	],
+	"evidence#lawyer": [],
+	"court#evidence": [],
+	"evidence#court": [],
+	"theories#experiments": [],
+	"experiments#theories": [],
+	"theories#scientists": [],
+	"scientists#theories": [
+		"prove",
+		"question the"
+	],
+	"experiments#scientists": [],
+	"scientists#experiments": [],
+	"buildings#workers": [
+		"providing a workplace for office"
+	],
+	"workers#buildings": [],
+	"foundations#workers": [],
+	"workers#foundations": [],
+	"theories#proofs": [],
+	"proofs#theories": [],
+	"article#sections": [],
+	"sections#article": [],
+	"article#scientists": [],
+	"scientists#article": [],
+	"sections#scientists": [],
+	"scientists#sections": [],
+	"paper#sections": [],
+	"sections#paper": [],
+	"blood#vein": [],
+	"vein#blood": [],
+	"people#elevators": [],
+	"elevators#people": [
+		"lift",
+		"lower"
+	],
+	"people#elevator": [],
+	"elevator#people": [
+		"lift",
+		"lower"
+	],
+	"people#train": [
+		"board a"
+	],
+	"train#people": [],
+	"people#bus": [],
+	"bus#people": [
+		"carry",
+		"transport"
+	],
+	"people#garage": [],
+	"garage#people": [],
+	"bus#garage": [],
+	"garage#bus": [],
+	"blood#hospital": [],
+	"hospital#blood": [],
+	"vein#hospital": [],
+	"hospital#vein": []
 }

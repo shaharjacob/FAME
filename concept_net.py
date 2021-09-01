@@ -70,7 +70,7 @@ def extend_and_extract_props(engine: inflect.engine, which: str, entity1: str, n
     
     # sorting by the weight that extracted with the prop
     all_props = sorted(all_props, key=lambda x: -x[1])
-    all_props = [val[0] for val in all_props[:n] if val != ""]
+    all_props = [val[0] for val in all_props[:n] if val[0] and val[0] != entity1 and val[0] != entity2]
 
     # we will take only props that end with the entity2. 
     # we will find pattern like <entity1> .* <entity2>
