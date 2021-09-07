@@ -148,7 +148,7 @@ def get_pair_mapping(model: SentenceEmbedding, data_collector: DataCollector, fr
     # now we want to get the maximum weighted match, which hold the constraint that each cluster has no more than one edge.
     # we will look only on edges that appear in cluster_edges_weights
     edges = utils.get_maximum_weighted_match(model, clustered_sentences_1, clustered_sentences_2, weights=cluster_edges_weights)
-    sorted(edges, key=lambda x: x[2], reverse=True)
+    edges = sorted(edges, key=lambda x: x[2], reverse=True)
     return {
         "graph": edges,
         "clusters1": clustered_sentences_1,
@@ -188,9 +188,9 @@ def get_best_pair_mapping(model: SentenceEmbedding, freq: Frequencies, data_coll
             # now we want to get the maximum weighted match, which hold the constraint that each cluster has no more than one edge.
             # we will look only on edges that appear in cluster_edges_weights
             edges = utils.get_maximum_weighted_match(model, clustered_sentences_1, clustered_sentences_2, weights=cluster_edges_weights)
+            edges = sorted(edges, key=lambda x: x[2], reverse=True)
             
             # score is just the sum of all the edges (edges between clusters)
-            edges = sorted(edges, key=lambda x: x[2], reverse=True)
             mapping_score += round(sum([edge[2] for edge in edges[:NUM_OF_SOLUTIONS_TO_CALC] if edge[2] > EDGE_THRESHOLD]), 3)
 
         mappings.append((mapping[0], mapping_score))
@@ -446,7 +446,8 @@ def mapping_wrapper(base: List[str],
     # array of addition solutions for the suggestions if some entities have missing mappings.
     suggestions_solutions = []
     if suggestions and num_of_suggestions > 0:
-        solutions = sorted(solutions, key=lambda x: (x.length, x.score), reverse=True)
+        # solutions = sorted(solutions, key=lambda x: (x.length, x.score), reverse=True)
+        solutions = sorted(solutions, key=lambda x: x.score, reverse=True)
         number_of_solutions_for_suggestions = 5
         # the idea is to iterate over the founded solutions, and check if there are entities are not mapped.
         # this logic is checked only if ONE entity have missing mapping (from base or target)
@@ -454,8 +455,8 @@ def mapping_wrapper(base: List[str],
             mapping_suggestions_wrapper(base, "actual_base", "actual_target", solution, data_collector, model, freq, suggestions_solutions, cache, num_of_suggestions, verbose)
             mapping_suggestions_wrapper(target, "actual_target", "actual_base", solution, data_collector, model, freq, suggestions_solutions, cache, num_of_suggestions, verbose)
 
-    all_solutions = sorted(solutions + suggestions_solutions, key=lambda x: (x.length, x.score), reverse=True)
-    # all_solutions = sorted(solutions + suggestions_solutions, key=lambda x: x.score, reverse=True)
+    # all_solutions = sorted(solutions + suggestions_solutions, key=lambda x: (x.length, x.score), reverse=True)
+    all_solutions = sorted(solutions + suggestions_solutions, key=lambda x: x.score, reverse=True)
     if not all_solutions:
         if verbose:
             secho("No solution found")

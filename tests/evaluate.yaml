@@ -113,3 +113,22 @@ mapping:
         - blood --> people
         - vein --> bus
         - hospital --> garage
+
+  - input:
+      base: [law, crime]
+      target: [medicine, illness] 
+      depth: 4
+    output:
+      mapping:
+        - law --> medicine
+        - crime --> illness
+
+  - input:
+      base: [seeds, fruit, bloom]
+      target: [ideas, product, success] 
+      depth: 4
+    output:
+      mapping:
+        - seeds --> ideas
+        - fruit --> product
+        - bloom --> success

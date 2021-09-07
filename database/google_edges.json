@@ -7127,5 +7127,145 @@
 	"boats#perf de castro": [],
 	"perf de castro#boats": [],
 	"boats#cole sprouse": [],
-	"cole sprouse#boats": []
+	"cole sprouse#boats": [],
+	"law#crime": [
+		"enforcement affect",
+		"enforcement agencies struggle to cope with computer",
+		"enforcement fight cyber",
+		"enforcement handle cyber",
+		"enforcement investigate cyber",
+		"enforcement investigate white collar",
+		"enforcement play the role as prime responder on a",
+		"enforcement prevent",
+		"enforcement reduce",
+		"prevent"
+	],
+	"crime#law": [
+		"relate to"
+	],
+	"seeds#fruit": [
+		"a",
+		"become",
+		"grow inside",
+		"not germinate in the"
+	],
+	"ideas#product": [
+		"become a"
+	],
+	"fruit#seeds": [
+		"benefit",
+		"contain",
+		"contains",
+		"disperse",
+		"disperse its",
+		"disperse their",
+		"get",
+		"grow without",
+		"have",
+		"have different number of",
+		"have multiple",
+		"help a plant spread its",
+		"not have",
+		"ordinarily contain",
+		"protect"
+	],
+	"product#ideas": [],
+	"ideas#success": [],
+	"success#ideas": [],
+	"ideas#failure": [],
+	"failure#ideas": [],
+	"product#success": [
+		"managers measure",
+		"owner measure",
+		"strategy central to business performance and"
+	],
+	"success#product": [],
+	"product#failure": [],
+	"failure#product": [],
+	"success#failure": [
+		"come from",
+		"follow naturally from the causes of business"
+	],
+	"failure#success": [
+		"a better teacher than",
+		"a crucial ingredient for",
+		"a key to",
+		"good for",
+		"important for",
+		"important to",
+		"lead to",
+		"not lead to",
+		"part of",
+		"the pillar of"
+	],
+	"seeds#bloom": [],
+	"bloom#seeds": [],
+	"seeds#wither": [],
+	"wither#seeds": [],
+	"fruit#bloom": [],
+	"bloom#fruit": [],
+	"fruit#wither": [],
+	"wither#fruit": [],
+	"bloom#wither": [],
+	"wither#bloom": [],
+	"seeds#blossom": [],
+	"blossom#seeds": [],
+	"fruit#blossom": [
+		"trees"
+	],
+	"blossom#fruit": [
+		"become"
+	],
+	"ideas#develop": [
+		"of human rights protection",
+		"of pan-africanism",
+		"of welfare"
+	],
+	"develop#ideas": [],
+	"product#develop": [],
+	"develop#product": [],
+	"success#develop": [],
+	"develop#success": [],
+	"failure#develop": [],
+	"develop#failure": [],
+	"seeds#grow": [
+		"die before they",
+		"germinate and",
+		"help plants",
+		"know when to",
+		"know which way to",
+		"need light to",
+		"need room in order to",
+		"need soil to",
+		"need sunlight to",
+		"need water to",
+		"potatoes",
+		"vegetables",
+		"warts"
+	],
+	"grow#seeds": [
+		"avocado from"
+	],
+	"fruit#grow": [
+		"and vegetables",
+		"flies",
+		"help plants",
+		"mold",
+		"take so long to",
+		"trees",
+		"trees take so long to"
+	],
+	"grow#fruit": [
+		"dragon"
+	],
+	"blossom#wither": [],
+	"wither#blossom": [],
+	"blossom#grow": [
+		"trees"
+	],
+	"grow#blossom": [],
+	"wither#grow": [
+		"storm"
+	],
+	"grow#wither": []
 }

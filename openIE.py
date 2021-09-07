@@ -32,10 +32,9 @@ def get_entities_relations(relations: List[str], entity1: str, entity2: str, cur
     relations_parser = relations_parser.find_all('li', attrs={'class': 'hidden-phone'})
     for relation in relations_parser:
         curr_relation = relation.text.split()
-        relations.append(" ".join([curr_relation[i].strip() for i in range(len(curr_relation) - 1)]))
+        relations.append(" ".join([curr_relation[i].strip().lower() for i in range(len(curr_relation) - 1)]))
         if n > 0 and  len(relations) == n:
             break
-    relations = [word.lower() for word in relations]
     # pages = soup.find('div', attrs={'class': 'pagination'})
     # if pages:
     #     lis = pages.find_all('li')

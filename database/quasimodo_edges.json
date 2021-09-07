@@ -5330,5 +5330,102 @@
 	"boats#perf de castro": [],
 	"perf de castro#boats": [],
 	"boats#cole sprouse": [],
-	"cole sprouse#boats": []
+	"cole sprouse#boats": [],
+	"law#crime": [],
+	"crime#law": [
+		"relate to"
+	],
+	"seeds#fruit": [
+		"be inside",
+		"be inside of",
+		"germinate inside",
+		"grow into",
+		"has property"
+	],
+	"ideas#product": [
+		"has property"
+	],
+	"fruit#seeds": [
+		"be different from",
+		"be grown without",
+		"be useful to",
+		"benefit",
+		"disperse",
+		"have",
+		"have anymore",
+		"ordinarily contain",
+		"produce",
+		"protect"
+	],
+	"product#ideas": [],
+	"ideas#success": [],
+	"success#ideas": [],
+	"ideas#failure": [],
+	"failure#ideas": [],
+	"product#success": [],
+	"success#product": [],
+	"product#failure": [],
+	"failure#product": [],
+	"success#failure": [
+		"be more important than",
+		"be worst type of"
+	],
+	"failure#success": [
+		"be better teacher than",
+		"be important to",
+		"be key to",
+		"be more important than",
+		"be part of",
+		"be path to",
+		"be pillar of",
+		"be the pillar of",
+		"be valuable part of",
+		"step stone to"
+	],
+	"seeds#bloom": [],
+	"bloom#seeds": [],
+	"seeds#wither": [],
+	"wither#seeds": [],
+	"fruit#bloom": [],
+	"bloom#fruit": [],
+	"fruit#wither": [],
+	"wither#fruit": [],
+	"bloom#wither": [],
+	"wither#bloom": [],
+	"seeds#blossom": [],
+	"blossom#seeds": [],
+	"fruit#blossom": [],
+	"blossom#fruit": [
+		"be important for",
+		"become"
+	],
+	"ideas#develop": [],
+	"develop#ideas": [],
+	"product#develop": [],
+	"develop#product": [],
+	"success#develop": [],
+	"develop#success": [],
+	"failure#develop": [],
+	"develop#failure": [],
+	"seeds#grow": [
+		"can",
+		"know",
+		"need oxygen",
+		"need seeds",
+		"need sun",
+		"need water"
+	],
+	"grow#seeds": [],
+	"fruit#grow": [
+		"can"
+	],
+	"grow#fruit": [],
+	"blossom#wither": [],
+	"wither#blossom": [],
+	"blossom#grow": [
+		"can"
+	],
+	"grow#blossom": [],
+	"wither#grow": [],
+	"grow#wither": []
 }

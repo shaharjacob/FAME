@@ -335,7 +335,7 @@
 		"discovered the law of",
 		"discovered the principle of",
 		"explored the meaning of",
-		"formulated the Law of",
+		"formulated the law of",
 		"had",
 		"had a theory of",
 		"identified",
@@ -370,7 +370,7 @@
 	],
 	"astronaut#space": [
 		"are in",
-		"became the first American in",
+		"became the first american in",
 		"died in",
 		"explore",
 		"flew in",
@@ -607,9 +607,9 @@
 		"trim"
 	],
 	"sail#boats": [
-		"Get Into",
 		"are an investment in",
 		"drew",
+		"get into",
 		"have",
 		"is",
 		"is for",
@@ -650,7 +650,7 @@
 		"lost",
 		"needs",
 		"pull",
-		"put America on",
+		"put america on",
 		"remove",
 		"runs on",
 		"spins",
@@ -659,7 +659,6 @@
 		"was sex on"
 	],
 	"wheels#cars": [
-		"Drive",
 		"are an investment in",
 		"are attached to",
 		"are correct for",
@@ -668,6 +667,7 @@
 		"break",
 		"brought",
 		"came off",
+		"drive",
 		"fell off",
 		"find",
 		"fit",
@@ -681,7 +681,6 @@
 		"turns"
 	],
 	"road#wheels": [
-		"Get behind",
 		"are passable only with",
 		"are suitable for",
 		"avoid",
@@ -689,6 +688,7 @@
 		"can be impassable for",
 		"can only be accessed by",
 		"fitted with",
+		"get behind",
 		"have raced",
 		"is",
 		"is able to be driven in",
@@ -725,12 +725,12 @@
 		"went off"
 	],
 	"sunscreen#sun": [
-		"Has",
 		"as are",
 		"avoid",
 		"avoid being in",
 		"combines",
 		"get out of",
+		"has",
 		"help protect the hair from",
 		"helps prevent",
 		"is the best way to prevent",
@@ -755,8 +755,7 @@
 		"will cost more in"
 	],
 	"sun#sunscreen": [
-		"Always make sure",
-		"Remember to wear",
+		"always make sure",
 		"apply",
 		"dont forget",
 		"is a standard measurement of",
@@ -766,6 +765,7 @@
 		"needs",
 		"put on",
 		"rehearse",
+		"remember to wear",
 		"slop on",
 		"so be smart about",
 		"so bring",
@@ -969,14 +969,14 @@
 		"turned up"
 	],
 	"heat#iron": [
-		"Watch out for",
 		"cast",
 		"contains",
 		"is 1/20th of",
 		"is applied with",
 		"is cast",
 		"makes",
-		"was"
+		"was",
+		"watch out for"
 	],
 	"iron#heat": [
 		"absorbs",
@@ -1451,7 +1451,7 @@
 		"create",
 		"had",
 		"is protected from",
-		"is the Mecca of",
+		"is the mecca of",
 		"is washed by",
 		"mounted",
 		"protects the beach from",
@@ -1666,26 +1666,26 @@
 		"will attract"
 	],
 	"light#bright": [
-		"Creates",
-		"LED",
-		"Steps forth",
 		"are",
 		"comes",
 		"comes from",
 		"contains",
+		"creates",
 		"engulfed",
 		"fare just fine in",
 		"feature",
 		"goes from",
 		"has",
 		"involves exposure to",
+		"led",
 		"produces",
 		"provides",
 		"puts out",
 		"reflect off",
 		"shall ever be",
 		"shines",
-		"shows"
+		"shows",
+		"steps forth"
 	],
 	"sound#loud": [
 		"came in",
@@ -1699,24 +1699,23 @@
 		"starts playing"
 	],
 	"bright#light": [
-		"LED",
-		"LED as",
-		"LED with",
-		"So turn out",
-		"Used",
 		"always look on",
 		"are balls of",
 		"could travel faster than",
 		"grow",
 		"has",
 		"led",
+		"led as",
+		"led with",
 		"might be filled with",
 		"proceed to",
 		"provide lots of",
 		"provide working",
 		"reflected",
 		"shined in",
+		"so turn out",
 		"traveled much faster than",
+		"used",
 		"was much faster than",
 		"will survive in"
 	],
@@ -1777,7 +1776,6 @@
 		"strikes"
 	],
 	"lens#light": [
-		"LED",
 		"adapt to changing",
 		"are",
 		"bends",
@@ -1790,6 +1788,7 @@
 		"is ideal for",
 		"is to focus",
 		"is used to focus",
+		"led",
 		"lets in",
 		"provides",
 		"reduce",
@@ -1886,7 +1885,6 @@
 		"was superior to"
 	],
 	"thinking#brain": [
-		"Use",
 		"affects",
 		"begins as soon as",
 		"can affect",
@@ -1900,7 +1898,8 @@
 		"is intrinsic to",
 		"is the best way to train",
 		"left",
-		"takes place in"
+		"takes place in",
+		"use"
 	],
 	"brain#mistake": [
 		"are built to make",
@@ -1933,13 +1932,13 @@
 		"makes"
 	],
 	"computer#bug": [
-		"Take",
 		"are called",
 		"can have",
 		"checked for",
 		"has",
 		"is",
-		"reset"
+		"reset",
+		"take"
 	],
 	"bug#computer": [
 		"can get into",
@@ -1959,8 +1958,8 @@
 		"will be closed over"
 	],
 	"broken#computer": [
-		"Is",
 		"get away from",
+		"is",
 		"turn off"
 	],
 	"processing#bug": [
@@ -1984,10 +1983,10 @@
 		"worked out of"
 	],
 	"processing#broken": [
-		"IS",
-		"Take",
 		"executed",
-		"sends on"
+		"is",
+		"sends on",
+		"take"
 	],
 	"broken#processing": [
 		"aids",
@@ -2049,7 +2048,6 @@
 		"wore a deserted look as"
 	],
 	"soldiers#war": [
-		"Died in",
 		"are returning from",
 		"came home from",
 		"died during",
@@ -2189,7 +2187,7 @@
 		"was to destroy"
 	],
 	"weapon#war": [
-		"Can Break The Cycle Of",
+		"can break the cycle of",
 		"constitutes",
 		"could lead to",
 		"ease",
@@ -2291,7 +2289,6 @@
 		"were waiting for"
 	],
 	"vein#blood": [
-		"Promote",
 		"are filled with",
 		"carry",
 		"carry more than simply",
@@ -2307,6 +2304,7 @@
 		"is to carry",
 		"prevent",
 		"prevent backflow of",
+		"promote",
 		"pump",
 		"ran",
 		"shed",
@@ -2542,15 +2540,14 @@
 		"exerts a force of",
 		"has",
 		"is",
-		"is Wrong With",
 		"is affected by",
 		"is held together by",
 		"is the acceleration due to",
+		"is wrong with",
 		"lost",
 		"relies on"
 	],
 	"gravity#earth": [
-		"IS relatively attractive on",
 		"affects our lives on",
 		"assist from",
 		"causes",
@@ -2559,6 +2556,7 @@
 		"holds",
 		"is caused by",
 		"is one sixth of",
+		"is relatively attractive on",
 		"is similar to",
 		"is stronger than",
 		"is the same as",
@@ -2865,7 +2863,6 @@
 	"electricity#the romans not": [],
 	"the romans not#electricity": [],
 	"electricity#plants": [
-		"Must Travel from",
 		"comes from",
 		"flows from",
 		"fuel",
@@ -2884,6 +2881,7 @@
 		"is transported from",
 		"leaves",
 		"moves from",
+		"must travel from",
 		"produced at"
 	],
 	"plants#electricity": [
@@ -2895,7 +2893,7 @@
 		"converts the fuel to",
 		"generate",
 		"generate 20 % of",
-		"generated 10.0GWh of",
+		"generated 10.0gwh of",
 		"have sold",
 		"help keep",
 		"is expected to produce",
@@ -3070,7 +3068,6 @@
 		"were increased greatly upon"
 	],
 	"earth#wind": [
-		"Then came",
 		"called",
 		"cause",
 		"creates",
@@ -3085,6 +3082,7 @@
 		"is still inside",
 		"receives",
 		"see",
+		"then came",
 		"was subject to"
 	],
 	"wind#earth": [
@@ -3245,7 +3243,6 @@
 	"earth#long wave radiation": [],
 	"long wave radiation#earth": [],
 	"earth#dinosaurs": [
-		"WALKING WITH",
 		"called",
 		"caused the demise of",
 		"caused the extinction of",
@@ -3254,6 +3251,7 @@
 		"included",
 		"killed",
 		"killed off",
+		"walking with",
 		"was dominated by",
 		"was inhabited by",
 		"was occupied by",
@@ -3262,8 +3260,6 @@
 		"wiped out"
 	],
 	"dinosaurs#earth": [
-		"RULED",
-		"Roamed",
 		"appeared on",
 		"disappeared from",
 		"dominated",
@@ -3300,9 +3296,9 @@
 	"earth#a satellite": [],
 	"a satellite#earth": [],
 	"earth#space shuttle": [
-		"Turn your monitor into",
 		"is a collection of",
-		"onboard"
+		"onboard",
+		"turn your monitor into"
 	],
 	"space shuttle#earth": [
 		"brought back to",
@@ -3319,9 +3315,9 @@
 		"returned to"
 	],
 	"earth#space shuttles": [
-		"Turn your monitor into",
 		"is a collection of",
-		"onboard"
+		"onboard",
+		"turn your monitor into"
 	],
 	"space shuttles#earth": [
 		"brought back to",
@@ -3615,7 +3611,6 @@
 		"pulls on"
 	],
 	"moon#gravity": [
-		"HAS",
 		"does have",
 		"has",
 		"reduced",
@@ -3853,7 +3848,7 @@
 	],
 	"objects#newton": [],
 	"electrons#mitochondria": [
-		"Shows"
+		"shows"
 	],
 	"mitochondria#electrons": [
 		"contain"
@@ -4064,7 +4059,7 @@
 	"earth#we need to": [],
 	"we need to#earth": [],
 	"earth#faults": [
-		"Can Trigger",
+		"can trigger",
 		"is riddled with",
 		"moved along"
 	],
@@ -4098,7 +4093,6 @@
 	"earth#normal fault": [],
 	"normal fault#earth": [],
 	"earth#god": [
-		"Thank",
 		"also was corrupt before",
 		"be to",
 		"belongs to",
@@ -4114,6 +4108,7 @@
 		"is to serve",
 		"serve",
 		"shall see the salvation of",
+		"thank",
 		"was corrupt in",
 		"was created by",
 		"was made by",
@@ -4131,13 +4126,13 @@
 		"has come to",
 		"has put on",
 		"indeed dwell on",
-		"is THE creator of",
 		"is on",
-		"is the King of",
+		"is the creator of",
+		"is the king of",
 		"laid the foundations of",
 		"lived on",
 		"made",
-		"sent Jesus to",
+		"sent jesus to",
 		"shakes",
 		"walked"
 	],
@@ -4277,14 +4272,13 @@
 	"earth#the presence of sinkholes": [],
 	"the presence of sinkholes#earth": [],
 	"earth#gold": [
-		"Check",
-		"IS OF",
-		"Turns to",
 		"adorned with",
 		"be covered with",
+		"check",
 		"could be transformed into",
 		"covered",
 		"is",
+		"is of",
 		"may shine like",
 		"spills out",
 		"turns to",
@@ -4314,7 +4308,7 @@
 		"won from"
 	],
 	"earth#fault": [
-		"Can Trigger",
+		"can trigger",
 		"is riddled with",
 		"moved along"
 	],
@@ -4334,9 +4328,9 @@
 	"earth#movements along faults": [],
 	"movements along faults#earth": [],
 	"earth#charged": [
-		"Get",
 		"carried",
 		"face",
+		"get",
 		"has",
 		"have gods in",
 		"is in",
@@ -4384,7 +4378,7 @@
 		"ends up on",
 		"expressed in",
 		"is",
-		"is A LOT bigger than",
+		"is a lot bigger than",
 		"is closer to",
 		"is from",
 		"is in",
@@ -4423,12 +4417,12 @@
 		"passes between"
 	],
 	"mars#earth": [
-		"Invaded",
 		"came closer to",
 		"collided with",
 		"crashed into",
 		"have been found on",
 		"hit",
+		"invaded",
 		"is",
 		"is from",
 		"is longer than on",
@@ -4525,7 +4519,6 @@
 		"was brought down to"
 	],
 	"gravity#space": [
-		"Merging",
 		"adds a whole new dynamic to",
 		"bends",
 		"bends more than just",
@@ -4541,13 +4534,14 @@
 		"is reduced in",
 		"is the bending of",
 		"is the curvature of",
+		"merging",
 		"shapes",
 		"still exists in",
 		"transcends",
 		"warps"
 	],
 	"space#gravity": [
-		"Can use in",
+		"can use in",
 		"gives rise to",
 		"is",
 		"is a square of",
@@ -4596,9 +4590,9 @@
 		"was powered by"
 	],
 	"god#gravity": [
-		"Is",
 		"created",
 		"have power over",
+		"is",
 		"is like",
 		"made",
 		"should be marked with"
@@ -4721,7 +4715,6 @@
 		"was put in"
 	],
 	"water#boats": [
-		"Take",
 		"always finds a way into",
 		"began filling",
 		"carried",
@@ -4738,6 +4731,7 @@
 		"rocked",
 		"sink",
 		"supports",
+		"take",
 		"walked back to",
 		"was pouring into",
 		"was too rough for"
@@ -4899,15 +4893,13 @@
 		"wear"
 	],
 	"life#boats": [
-		"IS better with",
-		"Is",
 		"are required in",
 		"floats",
 		"is",
-		"is Better with",
-		"is Like",
 		"is better on",
+		"is better with",
 		"is just so rough ...especially after",
+		"is like",
 		"is like waiting for",
 		"is too short to own",
 		"must be present on",
@@ -4941,27 +4933,27 @@
 		"weighed"
 	],
 	"anchors#boats": [
-		"Will Work on",
 		"holds",
-		"is PVC-coated to protect",
+		"is pvc-coated to protect",
 		"is sized appropriately for",
 		"is specifically designed with",
 		"keep",
 		"make up the rest of",
 		"pulled",
 		"should be enough for",
-		"was on"
+		"was on",
+		"will work on"
 	],
 	"river#to the right": [],
 	"to the right#river": [],
 	"river#brown": [
-		"Try",
 		"contains",
 		"has",
 		"has been known for",
 		"holds the record for",
 		"is renowned for",
 		"is stocked with",
+		"try",
 		"was"
 	],
 	"brown#river": [
@@ -4979,7 +4971,6 @@
 		"will colonise"
 	],
 	"river#water": [
-		"Tap",
 		"are filled with",
 		"are ideal for",
 		"bring",
@@ -4997,6 +4988,7 @@
 		"offers much",
 		"provides",
 		"raised",
+		"tap",
 		"was full of",
 		"was under"
 	],
@@ -5023,13 +5015,12 @@
 		"runs off into"
 	],
 	"river#green": [
-		"Gets",
-		"Is",
 		"are lined with",
 		"feeds into",
 		"filled the very air with",
 		"flows into",
 		"forms",
+		"gets",
 		"has",
 		"is",
 		"is a major tributary of",
@@ -5131,7 +5122,6 @@
 		"watch"
 	],
 	"wildlife#river": [
-		"Took a tour on",
 		"abounds around",
 		"abounds on",
 		"can be seen along",
@@ -5142,7 +5132,8 @@
 		"is abundant along",
 		"is attracted to",
 		"is located east of",
-		"rely on"
+		"rely on",
+		"took a tour on"
 	],
 	"river#multiple waves": [],
 	"multiple waves#river": [],
@@ -5186,7 +5177,6 @@
 		"uses"
 	],
 	"red#river": [
-		"MO",
 		"also called",
 		"are feeding around",
 		"come down to",
@@ -5196,6 +5186,7 @@
 		"is",
 		"is laid out along",
 		"joins",
+		"mo",
 		"retreated behind",
 		"sped up",
 		"takes place at",
@@ -5213,9 +5204,9 @@
 		"turns"
 	],
 	"chicago#river": [
-		"Get across",
 		"died",
 		"dyes",
+		"get across",
 		"has been dying",
 		"has dyed",
 		"is located in",
@@ -5227,9 +5218,9 @@
 	"river#rubidium not used to": [],
 	"rubidium not used to#river": [],
 	"river#life": [
-		"Called",
 		"affects",
 		"brings",
+		"called",
 		"comes back to",
 		"gives",
 		"has",
@@ -5246,10 +5237,9 @@
 		"vividly brings to",
 		"was brought back to",
 		"was the center of",
-		"was there the Tree of"
+		"was there the tree of"
 	],
 	"life#river": [
-		"Is",
 		"depends on",
 		"flows as",
 		"flows like",
@@ -5346,7 +5336,7 @@
 	],
 	"joshua#river": [
 		"crossed",
-		"led the Israelites across",
+		"led the israelites across",
 		"reviews"
 	],
 	"river#a caterpillar": [],
@@ -5409,5 +5399,465 @@
 	"boats#cole sprouse": [],
 	"cole sprouse#boats": [],
 	"boats#the israelites": [],
-	"the israelites#boats": []
+	"the israelites#boats": [],
+	"law#crime": [
+		"are involved in",
+		"commit",
+		"constitutes",
+		"covers",
+		"created",
+		"defines",
+		"detect",
+		"hate",
+		"have",
+		"help reduce",
+		"help solve",
+		"investigate",
+		"is",
+		"is considered",
+		"is guilty of",
+		"made",
+		"prevent",
+		"prosecute",
+		"reduce",
+		"solve"
+	],
+	"medicine#illness": [
+		"attempts to heal",
+		"can cure",
+		"can stop",
+		"causes",
+		"classifies",
+		"controls",
+		"covers a huge range of",
+		"cure",
+		"emphasizes the prevention of",
+		"has treated",
+		"is",
+		"is an invaluable modality for",
+		"is used to treat",
+		"is worse than",
+		"prevent",
+		"treats"
+	],
+	"crime#law": [
+		"are already covered by existing",
+		"are reported to",
+		"are set by",
+		"are the most serious under",
+		"break",
+		"cooperate with",
+		"enforce",
+		"is",
+		"is a breaking of",
+		"is a violation of",
+		"is against",
+		"is defined by",
+		"is prohibited by",
+		"is punished by",
+		"is the breach of",
+		"must be reported to",
+		"must have been reported to",
+		"reported to",
+		"violate",
+		"was signed into"
+	],
+	"illness#medicine": [
+		"be cured with",
+		"is applied during",
+		"is called the practice of",
+		"is lingering in",
+		"is treated with"
+	],
+	"seeds#fruit": [
+		"are enclosed in",
+		"are extracted from",
+		"are harvested from",
+		"are inside",
+		"are removed from",
+		"are separated from",
+		"bear",
+		"becomes",
+		"begin to bear",
+		"brings forth",
+		"comes from",
+		"dried",
+		"give",
+		"gives birth to",
+		"has borne",
+		"increase",
+		"is",
+		"is enclosed within",
+		"produce",
+		"will bear"
+	],
+	"ideas#product": [
+		"are important for",
+		"are transformed into",
+		"are translated into",
+		"are turned into",
+		"build",
+		"can be for",
+		"create",
+		"develop",
+		"improve",
+		"is",
+		"is in",
+		"is to get",
+		"is to make",
+		"is to produce",
+		"is to sell",
+		"makes",
+		"promote",
+		"provides",
+		"sell",
+		"turned into"
+	],
+	"fruit#seeds": [
+		"are known as",
+		"bears",
+		"carry",
+		"contains",
+		"contains hundreds of",
+		"disperse",
+		"drop",
+		"go to",
+		"guard",
+		"has",
+		"is",
+		"is a capsule with",
+		"is allowed to dry on",
+		"is filled with",
+		"is full of",
+		"is made by",
+		"only release",
+		"protects",
+		"remove",
+		"sprouted"
+	],
+	"product#ideas": [
+		"began as",
+		"begins with",
+		"evaluate",
+		"feature",
+		"found",
+		"have",
+		"is",
+		"is more than",
+		"is rarely",
+		"looks like",
+		"love",
+		"makes",
+		"provide",
+		"search",
+		"seems like",
+		"sell",
+		"sounds like",
+		"start with",
+		"take to turn",
+		"would be"
+	],
+	"ideas#success": [
+		"become",
+		"bring",
+		"builds on",
+		"celebrate",
+		"drive",
+		"finds",
+		"has been",
+		"have",
+		"is critical to",
+		"is essential for",
+		"is the key to",
+		"is to duplicate",
+		"leads to",
+		"met with",
+		"proved",
+		"seemed to be",
+		"stemmed from",
+		"was",
+		"was based on",
+		"was inspired by"
+	],
+	"success#ideas": [
+		"begins with",
+		"came from",
+		"depends on",
+		"derives from",
+		"has proved",
+		"have",
+		"include",
+		"is",
+		"is built on",
+		"is linked to",
+		"is more than",
+		"is related to",
+		"is to embrace",
+		"led to",
+		"search the site for",
+		"starts out as",
+		"starts with",
+		"stimulate",
+		"there have been",
+		"was mostly attributed to"
+	],
+	"ideas#failure": [
+		"can be the difference between",
+		"caused",
+		"could account for",
+		"is",
+		"is a recipe for",
+		"is destined for",
+		"is doomed to",
+		"is to avoid",
+		"lay",
+		"learn from",
+		"proved"
+	],
+	"failure#ideas": [
+		"is",
+		"is essential to generating",
+		"passed for"
+	],
+	"product#success": [
+		"achieve",
+		"also comes with",
+		"are responsible for",
+		"became",
+		"break",
+		"brought",
+		"builds on",
+		"enjoyed",
+		"guarantee",
+		"has",
+		"has achieved",
+		"has been",
+		"have had",
+		"have met with",
+		"is certain to be",
+		"is critical to",
+		"is the key to",
+		"proves to be",
+		"was",
+		"will be"
+	],
+	"success#product": [
+		"becomes",
+		"combines",
+		"continued",
+		"create interest in",
+		"enhance",
+		"has been in selling",
+		"hinged on",
+		"is",
+		"is guaranteed with",
+		"is in",
+		"is measured in",
+		"is the freshness of",
+		"is the high quality of",
+		"is the proof of",
+		"is the result of",
+		"is the role of",
+		"lies in",
+		"partially depends on",
+		"rests almost exclusively on"
+	],
+	"product#failure": [
+		"are doomed to",
+		"are subject to",
+		"are warranted against",
+		"can be the difference between",
+		"differ from",
+		"had",
+		"should be tested for",
+		"was"
+	],
+	"failure#product": [
+		"are caused by",
+		"derived",
+		"failed",
+		"is",
+		"is a by",
+		"operate",
+		"submit",
+		"test"
+	],
+	"success#failure": [
+		"avoid",
+		"becomes",
+		"can compensate for",
+		"can lead to",
+		"depends on",
+		"far outnumber",
+		"has been",
+		"is",
+		"is as dangerous as",
+		"is built on",
+		"is followed by",
+		"is going from",
+		"is more complex than",
+		"is paved with",
+		"is the fear of",
+		"leads to",
+		"outweigh",
+		"punish",
+		"so does",
+		"turned into"
+	],
+	"failure#success": [
+		"are as important as",
+		"becomes",
+		"can lead to",
+		"comes",
+		"far outweigh",
+		"is",
+		"is a better teacher than",
+		"is a step to",
+		"is a stepping stone to",
+		"is more important than",
+		"is necessary for",
+		"is one step closer to",
+		"is only postponed",
+		"is part of",
+		"is the foundation of",
+		"is the key to",
+		"is the mother of",
+		"is the path to",
+		"leads to",
+		"led to"
+	],
+	"seeds#bloom": [
+		"remain in",
+		"was in"
+	],
+	"bloom#seeds": [
+		"go to",
+		"is progressing to",
+		"produces",
+		"set"
+	],
+	"seeds#wither": [],
+	"wither#seeds": [],
+	"fruit#bloom": [
+		"are in",
+		"return"
+	],
+	"bloom#fruit": [
+		"are succeeded by",
+		"bear",
+		"becomes",
+		"can have a season-long effect on",
+		"develop into",
+		"dropped",
+		"examine",
+		"offers",
+		"yield"
+	],
+	"fruit#wither": [],
+	"wither#fruit": [],
+	"bloom#wither": [],
+	"wither#bloom": [],
+	"seeds#blossom": [
+		"are just beginning to"
+	],
+	"blossom#seeds": [
+		"discard",
+		"have gone to"
+	],
+	"fruit#blossom": [
+		"are coming into",
+		"are covered in",
+		"are in",
+		"are starting to",
+		"follow",
+		"grows from",
+		"produce",
+		"spread"
+	],
+	"blossom#fruit": [
+		"allow",
+		"bear",
+		"become",
+		"can occur on",
+		"exists to create",
+		"goes on as",
+		"is producing",
+		"lychee",
+		"ripens into",
+		"sets into",
+		"turns into",
+		"will set"
+	],
+	"ideas#develop": [
+		"change as",
+		"is in"
+	],
+	"develop#ideas": [
+		"explore",
+		"validates"
+	],
+	"product#develop": [
+		"are appropriate for",
+		"have deleterious effects on",
+		"helps"
+	],
+	"develop#product": [
+		"customized",
+		"distribute",
+		"get a better deal for",
+		"import",
+		"improve",
+		"launch",
+		"otherwise exploit",
+		"plans for",
+		"produces",
+		"rely on",
+		"supported",
+		"upgrade"
+	],
+	"success#develop": [],
+	"develop#success": [
+		"are keys to",
+		"have had limited",
+		"have leveraged",
+		"have met only",
+		"needed for",
+		"owes",
+		"will guarantee"
+	],
+	"failure#develop": [],
+	"develop#failure": [],
+	"seeds#grow": [
+		"are fresh for",
+		"are now farming in",
+		"extend",
+		"is a promise of",
+		"is one of",
+		"join",
+		"should be germinated in"
+	],
+	"grow#seeds": [
+		"found on",
+		"makes",
+		"produce",
+		"promotes",
+		"save",
+		"sell",
+		"separate",
+		"use the same variety of"
+	],
+	"fruit#grow": [
+		"are borne throughout"
+	],
+	"grow#fruit": [
+		"allowed for fully",
+		"concentrated",
+		"may help to minimize"
+	],
+	"blossom#wither": [],
+	"wither#blossom": [],
+	"blossom#grow": [],
+	"grow#blossom": [],
+	"wither#grow": [],
+	"grow#wither": []
 }

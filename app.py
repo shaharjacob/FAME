@@ -123,8 +123,6 @@ def single_mapping():
                 d[edge_idx][thresh] = {
                     "graph": {},
                     "options": {},
-                    "edges_score": [],
-                    "edges_equation": "",
                     "score": 0
                 }
             continue
@@ -148,6 +146,7 @@ def single_mapping():
                 
             # now we want to get the maximum weighted match, which hold the constraint that each cluster has no more than one edge.
             edges = utils.get_maximum_weighted_match(model, clustered_sentences_1, clustered_sentences_2, weights=cluster_edges_weights)
+            edges = sorted(edges, key=lambda x: x[2], reverse=True)
             
             # we doing this process for each threshold for the slider in the app
             d[edge_idx][thresh] = {
@@ -156,8 +155,6 @@ def single_mapping():
                     "edges": python2react.get_edges_for_app(edges, spaces=40),
                 },
                 "options": python2react.get_options(len(clustered_sentences_1) + len(clustered_sentences_2)),
-                "edges_score": [edge[2] for edge in edges],
-                "edges_equation": "+".join([f'edge{i}' for i in range(len(edges))]),
                 "score": round(sum([edge[2] for edge in edges[:mapping.NUM_OF_SOLUTIONS_TO_CALC] if edge[2] > mapping.EDGE_THRESHOLD]), 3)
             }
     return jsonify(d)
