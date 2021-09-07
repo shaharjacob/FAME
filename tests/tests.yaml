@@ -15,7 +15,7 @@ mapping:
         - [[solar system, planet], [atom, electron]]
         - [[planet, gravity], [electron, electricity]]
         - [[gravity, newton], [electricity, faraday]]
-      score: 20.927
+      score: 21.168
     ignore: False
 
   - input:
@@ -81,7 +81,7 @@ mapping:
       relations: 
         - [[thoughts, brain], [astronaut, space]]
         - [[brain, neurons], [space, black hole]]
-      score: 5.338
+      score: 5.315
     ignore: False
   
   - input:

@@ -93,7 +93,10 @@ class GoogleAutoSuggestTwoEntities(object):
         language = 'en'
         url = f"http://suggestqueries.google.com/complete/search?client={self.browser}&q={keyword}&hl={language}&cp={curser}"
         response = requests.get(url)
-        suggestions = json.loads(response.text)[1]
+        try:
+            suggestions = json.loads(response.text)[1]
+        except:
+            suggestions = []
         for suggestion in suggestions:
             match = re.match(self.regex, suggestion)
             if match:

@@ -5427,5 +5427,655 @@
 	],
 	"grow#blossom": [],
 	"wither#grow": [],
-	"grow#wither": []
+	"grow#wither": [],
+	"electron#benjamin": [],
+	"benjamin#electron": [],
+	"electron#chemistry": [
+		"be important in"
+	],
+	"chemistry#electron": [],
+	"electron#equality": [],
+	"equality#electron": [],
+	"electron#static electricity": [
+		"be important part in",
+		"move in"
+	],
+	"static electricity#electron": [],
+	"electron#magnetism": [
+		"be generated from",
+		"cause"
+	],
+	"magnetism#electron": [],
+	"electron#magnets": [
+		"behave like"
+	],
+	"magnets#electron": [
+		"move"
+	],
+	"electron#climate change": [],
+	"climate change#electron": [],
+	"electron#franklin": [],
+	"franklin#electron": [],
+	"electron#humans": [],
+	"humans#electron": [],
+	"electron#benjamin franklin want to": [],
+	"benjamin franklin want to#electron": [],
+	"electron#einstein": [],
+	"einstein#electron": [],
+	"electron#atoms": [
+		"be attracted to",
+		"be in",
+		"be most important part of",
+		"be part of",
+		"fill up orbitals in",
+		"fly off",
+		"leave",
+		"move in",
+		"move to",
+		"travel in"
+	],
+	"atoms#electron": [
+		"attract",
+		"can share",
+		"give away",
+		"give up",
+		"have",
+		"lose",
+		"move around",
+		"need",
+		"share",
+		"shared"
+	],
+	"electron#alexander lodygin": [],
+	"alexander lodygin#electron": [],
+	"electron#thales": [],
+	"thales#electron": [],
+	"electron#benjamin franklin": [],
+	"benjamin franklin#electron": [],
+	"electron#ben franklin": [],
+	"ben franklin#electron": [],
+	"electron#it take so long to": [],
+	"it take so long to#electron": [],
+	"electron#subatomic particles": [],
+	"subatomic particles#electron": [],
+	"electron#tesla": [],
+	"tesla#electron": [],
+	"electron#ecology": [],
+	"ecology#electron": [],
+	"electron#windmill": [],
+	"windmill#electron": [],
+	"electron#plants": [],
+	"plants#electron": [],
+	"electron#edison": [],
+	"edison#electron": [],
+	"electron#thomas edison": [],
+	"thomas edison#electron": [],
+	"electron#the romans not": [],
+	"the romans not#electron": [],
+	"atom#benjamin": [],
+	"benjamin#atom": [],
+	"atom#chemistry": [
+		"be useful in"
+	],
+	"chemistry#atom": [],
+	"atom#equality": [],
+	"equality#atom": [],
+	"atom#static electricity": [],
+	"static electricity#atom": [],
+	"atom#magnetism": [],
+	"magnetism#atom": [],
+	"atom#magnets": [
+		"be in",
+		"be like",
+		"behave like"
+	],
+	"magnets#atom": [],
+	"atom#climate change": [],
+	"climate change#atom": [],
+	"atom#franklin": [],
+	"franklin#atom": [],
+	"atom#humans": [],
+	"humans#atom": [
+		"be made of",
+		"can relate to"
+	],
+	"atom#benjamin franklin want to": [],
+	"benjamin franklin want to#atom": [],
+	"atom#einstein": [],
+	"einstein#atom": [],
+	"atom#atoms": [
+		"be called",
+		"differ from"
+	],
+	"atoms#atom": [
+		"be called",
+		"differ from"
+	],
+	"atom#alexander lodygin": [],
+	"alexander lodygin#atom": [],
+	"atom#thales": [],
+	"thales#atom": [],
+	"atom#benjamin franklin": [],
+	"benjamin franklin#atom": [],
+	"atom#ben franklin": [],
+	"ben franklin#atom": [],
+	"atom#it take so long to": [],
+	"it take so long to#atom": [],
+	"atom#subatomic particles": [
+		"contain",
+		"have"
+	],
+	"subatomic particles#atom": [
+		"be arranged in",
+		"be in",
+		"relate with"
+	],
+	"atom#tesla": [],
+	"tesla#atom": [],
+	"atom#ecology": [],
+	"ecology#atom": [],
+	"atom#windmill": [],
+	"windmill#atom": [],
+	"atom#plants": [],
+	"plants#atom": [],
+	"atom#edison": [],
+	"edison#atom": [],
+	"atom#thomas edison": [],
+	"thomas edison#atom": [],
+	"atom#the romans not": [],
+	"the romans not#atom": [],
+	"planet#galileo galilei": [],
+	"galileo galilei#planet": [],
+	"solar system#galileo galilei": [],
+	"galileo galilei#solar system": [],
+	"nucleus#cation": [],
+	"cation#nucleus": [],
+	"nucleus#ionization": [],
+	"ionization#nucleus": [],
+	"nucleus#solar system": [],
+	"solar system#nucleus": [],
+	"nucleus#scientists": [],
+	"scientists#nucleus": [
+		"see"
+	],
+	"nucleus#reactivity": [],
+	"reactivity#nucleus": [],
+	"nucleus#radiation": [],
+	"radiation#nucleus": [],
+	"nucleus#we use models to": [],
+	"we use models to#nucleus": [],
+	"nucleus#electronegativity": [],
+	"electronegativity#nucleus": [],
+	"nucleus#elements": [],
+	"elements#nucleus": [],
+	"nucleus#moles": [],
+	"moles#nucleus": [],
+	"nucleus#the law of multiple proportions": [],
+	"the law of multiple proportions#nucleus": [],
+	"nucleus#democritus": [],
+	"democritus#nucleus": [],
+	"nucleus#science": [],
+	"science#nucleus": [],
+	"nucleus#isotopes": [],
+	"isotopes#nucleus": [],
+	"nucleus#the number of protons": [],
+	"the number of protons#nucleus": [],
+	"nucleus#dalton": [],
+	"dalton#nucleus": [],
+	"nucleus#particles": [],
+	"particles#nucleus": [
+		"enter"
+	],
+	"electron#cation": [],
+	"cation#electron": [
+		"attract",
+		"lose"
+	],
+	"electron#ionization": [
+		"has property"
+	],
+	"ionization#electron": [],
+	"electron#solar system": [],
+	"solar system#electron": [],
+	"electron#scientists": [],
+	"scientists#electron": [
+		"can disregard"
+	],
+	"electron#reactivity": [],
+	"reactivity#electron": [
+		"affect"
+	],
+	"electron#radiation": [
+		"emit"
+	],
+	"radiation#electron": [],
+	"electron#we use models to": [],
+	"we use models to#electron": [],
+	"electron#electronegativity": [],
+	"electronegativity#electron": [],
+	"electron#elements": [
+		"be excited in"
+	],
+	"elements#electron": [
+		"gain",
+		"lose",
+		"need",
+		"share",
+		"steal",
+		"typically give up"
+	],
+	"electron#moles": [],
+	"moles#electron": [],
+	"electron#the law of multiple proportions": [],
+	"the law of multiple proportions#electron": [],
+	"electron#democritus": [],
+	"democritus#electron": [],
+	"electron#science": [],
+	"science#electron": [],
+	"electron#isotopes": [],
+	"isotopes#electron": [],
+	"electron#the number of protons": [],
+	"the number of protons#electron": [],
+	"electron#dalton": [],
+	"dalton#electron": [],
+	"electron#particles": [
+		"behave like",
+		"can behave like",
+		"has property"
+	],
+	"particles#electron": [],
+	"atom#cation": [
+		"become"
+	],
+	"cation#atom": [
+		"be related to",
+		"be smaller than"
+	],
+	"atom#ionization": [],
+	"ionization#atom": [],
+	"atom#solar system": [
+		"be different to",
+		"be similar to",
+		"look like",
+		"relate to"
+	],
+	"solar system#atom": [
+		"look like"
+	],
+	"atom#scientists": [],
+	"scientists#atom": [
+		"can observe",
+		"can see",
+		"can see inside",
+		"move",
+		"see",
+		"split",
+		"store information on",
+		"view"
+	],
+	"atom#reactivity": [],
+	"reactivity#atom": [],
+	"atom#radiation": [
+		"emit",
+		"give off",
+		"give out",
+		"ionized by"
+	],
+	"radiation#atom": [
+		"affect",
+		"can ionize"
+	],
+	"atom#cell": [
+		"be bigger than",
+		"be related to",
+		"relate to"
+	],
+	"cell#atom": [
+		"be made of",
+		"be similar to",
+		"contain"
+	],
+	"atom#isotopes": [
+		"be different from",
+		"become",
+		"can",
+		"has property",
+		"have"
+	],
+	"isotopes#atom": [
+		"be different from",
+		"be different to",
+		"compare to"
+	],
+	"atom#particles": [
+		"be charged",
+		"can spread apart in",
+		"has property",
+		"relate to"
+	],
+	"particles#atom": [
+		"be arranged in"
+	],
+	"atom#the law of multiple proportions": [],
+	"the law of multiple proportions#atom": [],
+	"atom#moles": [],
+	"moles#atom": [],
+	"atom#elements": [
+		"be",
+		"be different from",
+		"be related to",
+		"be smallest particle of",
+		"be smallest particles of",
+		"become",
+		"define",
+		"determine",
+		"differ from",
+		"has property"
+	],
+	"elements#atom": [
+		"be different from",
+		"consist of",
+		"differ from",
+		"has property"
+	],
+	"atom#the number of protons": [],
+	"the number of protons#atom": [],
+	"atom#we use models to": [],
+	"we use models to#atom": [],
+	"atom#democritus": [],
+	"democritus#atom": [],
+	"atom#electronegativity": [],
+	"electronegativity#atom": [
+		"affect"
+	],
+	"atom#science": [
+		"be important to",
+		"be useful in",
+		"relate to"
+	],
+	"science#atom": [],
+	"atom#dalton": [],
+	"dalton#atom": [],
+	"electricity#isotopes": [],
+	"isotopes#electricity": [
+		"create"
+	],
+	"electricity#particles": [],
+	"particles#electricity": [],
+	"electricity#the law of multiple proportions": [],
+	"the law of multiple proportions#electricity": [],
+	"electricity#moles": [],
+	"moles#electricity": [],
+	"electricity#solar system": [],
+	"solar system#electricity": [],
+	"electricity#radiation": [],
+	"radiation#electricity": [
+		"be turned into"
+	],
+	"electricity#scientists": [],
+	"scientists#electricity": [
+		"change energy into"
+	],
+	"electricity#elements": [
+		"has property"
+	],
+	"elements#electricity": [
+		"conduct"
+	],
+	"electricity#the number of protons": [],
+	"the number of protons#electricity": [],
+	"electricity#we use models to": [],
+	"we use models to#electricity": [],
+	"electricity#cation": [],
+	"cation#electricity": [
+		"conduct"
+	],
+	"electricity#democritus": [],
+	"democritus#electricity": [],
+	"electricity#ionization": [],
+	"ionization#electricity": [],
+	"electricity#electronegativity": [],
+	"electronegativity#electricity": [],
+	"electricity#reactivity": [],
+	"reactivity#electricity": [],
+	"electricity#science": [
+		"be part of",
+		"be related to",
+		"be used in"
+	],
+	"science#electricity": [],
+	"electricity#dalton": [],
+	"dalton#electricity": [],
+	"sun#it take so long to": [],
+	"it take so long to#sun": [],
+	"sun#scientists": [],
+	"scientists#sun": [
+		"get information from",
+		"measure distance from",
+		"study"
+	],
+	"sun#weathering": [],
+	"weathering#sun": [],
+	"sun#erosion": [],
+	"erosion#sun": [],
+	"sun#isaac": [],
+	"isaac#sun": [],
+	"sun#einstein": [],
+	"einstein#sun": [],
+	"sun#effects of erosion": [],
+	"effects of erosion#sun": [],
+	"sun#isaac newton": [],
+	"isaac newton#sun": [],
+	"sun#deposition": [],
+	"deposition#sun": [],
+	"sun#glaciers": [],
+	"glaciers#sun": [],
+	"sun#normal pen": [],
+	"normal pen#sun": [],
+	"sun#world": [],
+	"world#sun": [],
+	"sun#galileo": [],
+	"galileo#sun": [],
+	"sun#physics": [],
+	"physics#sun": [],
+	"sun#brahmagupta": [],
+	"brahmagupta#sun": [],
+	"planet#it take so long to": [],
+	"it take so long to#planet": [],
+	"planet#scientists": [],
+	"scientists#planet": [
+		"can find",
+		"classify",
+		"consider",
+		"detect",
+		"discover",
+		"know about",
+		"look on",
+		"name",
+		"named",
+		"study"
+	],
+	"planet#weathering": [],
+	"weathering#planet": [],
+	"planet#we need to": [],
+	"we need to#planet": [],
+	"planet#erosion": [],
+	"erosion#planet": [],
+	"planet#isaac": [],
+	"isaac#planet": [],
+	"planet#einstein": [],
+	"einstein#planet": [],
+	"planet#effects of erosion": [],
+	"effects of erosion#planet": [],
+	"planet#isaac newton": [],
+	"isaac newton#planet": [],
+	"planet#deposition": [],
+	"deposition#planet": [],
+	"planet#glaciers": [],
+	"glaciers#planet": [],
+	"planet#normal pen": [],
+	"normal pen#planet": [],
+	"planet#world": [],
+	"world#planet": [],
+	"planet#earth": [
+		"affect",
+		"appear from",
+		"be named",
+		"be visible from",
+		"influence life on",
+		"look from",
+		"revolve instead of"
+	],
+	"earth#planet": [
+		"be called",
+		"be considered",
+		"be different from",
+		"be known as",
+		"be referred as",
+		"be same as",
+		"be unique from",
+		"be unique out of",
+		"compare to",
+		"has property"
+	],
+	"planet#galileo": [],
+	"galileo#planet": [],
+	"planet#physics": [],
+	"physics#planet": [],
+	"planet#brahmagupta": [],
+	"brahmagupta#planet": [],
+	"solar system#it take so long to": [],
+	"it take so long to#solar system": [],
+	"solar system#scientists": [],
+	"scientists#solar system": [
+		"be interested in",
+		"know about",
+		"learn about",
+		"measure distances in",
+		"study"
+	],
+	"solar system#weathering": [],
+	"weathering#solar system": [],
+	"solar system#we need to": [],
+	"we need to#solar system": [],
+	"solar system#erosion": [],
+	"erosion#solar system": [],
+	"solar system#isaac": [],
+	"isaac#solar system": [],
+	"solar system#einstein": [],
+	"einstein#solar system": [],
+	"solar system#effects of erosion": [],
+	"effects of erosion#solar system": [],
+	"solar system#isaac newton": [],
+	"isaac newton#solar system": [],
+	"solar system#deposition": [],
+	"deposition#solar system": [],
+	"solar system#glaciers": [],
+	"glaciers#solar system": [],
+	"solar system#normal pen": [],
+	"normal pen#solar system": [],
+	"solar system#world": [],
+	"world#solar system": [],
+	"solar system#galileo": [],
+	"galileo#solar system": [],
+	"solar system#physics": [],
+	"physics#solar system": [],
+	"solar system#brahmagupta": [],
+	"brahmagupta#solar system": [],
+	"gravity#it take so long to": [],
+	"it take so long to#gravity": [],
+	"gravity#scientists": [],
+	"scientists#gravity": [
+		"can create"
+	],
+	"gravity#weathering": [
+		"contribute",
+		"contribute to"
+	],
+	"weathering#gravity": [],
+	"gravity#erosion": [
+		"affect",
+		"cause",
+		"contribute to",
+		"play part in"
+	],
+	"erosion#gravity": [
+		"need",
+		"relate to"
+	],
+	"gravity#isaac": [],
+	"isaac#gravity": [],
+	"gravity#einstein": [],
+	"einstein#gravity": [
+		"be involved in",
+		"explain"
+	],
+	"gravity#effects of erosion": [
+		"contribute to"
+	],
+	"effects of erosion#gravity": [],
+	"gravity#isaac newton": [],
+	"isaac newton#gravity": [
+		"be linked to",
+		"find out about"
+	],
+	"gravity#deposition": [
+		"contribute to"
+	],
+	"deposition#gravity": [],
+	"gravity#glaciers": [
+		"affect",
+		"study"
+	],
+	"glaciers#gravity": [],
+	"gravity#normal pen": [
+		"be important to"
+	],
+	"normal pen#gravity": [],
+	"gravity#world": [
+		"affect",
+		"be strongest force in",
+		"contribute to"
+	],
+	"world#gravity": [],
+	"gravity#galileo": [],
+	"galileo#gravity": [],
+	"gravity#physics": [
+		"be important to",
+		"be related to"
+	],
+	"physics#gravity": [],
+	"gravity#brahmagupta": [],
+	"brahmagupta#gravity": [],
+	"sun#it important to": [],
+	"it important to#sun": [],
+	"planet#it important to": [],
+	"it important to#planet": [],
+	"gravity#it important to": [],
+	"it important to#gravity": [],
+	"solar system#it important to": [],
+	"it important to#solar system": [],
+	"boats#on the right": [
+		"drive",
+		"sail",
+		"steer",
+		"travel"
+	],
+	"on the right#boats": [],
+	"boats#jet": [
+		"can"
+	],
+	"jet#boats": [],
+	"boats#from the right side": [
+		"be driven",
+		"drive",
+		"steer"
+	],
+	"from the right side#boats": [],
+	"river#on the right": [],
+	"on the right#river": [],
+	"river#jet": [],
+	"jet#river": [],
+	"river#from the right side": [],
+	"from the right side#river": []
 }

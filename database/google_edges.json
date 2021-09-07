@@ -7267,5 +7267,1027 @@
 	"wither#grow": [
 		"storm"
 	],
-	"grow#wither": []
+	"grow#wither": [],
+	"electron#benjamin": [],
+	"benjamin#electron": [],
+	"electron#chemistry": [],
+	"chemistry#electron": [],
+	"electron#equality": [],
+	"equality#electron": [],
+	"electron#static electricity": [
+		"jump",
+		"move in"
+	],
+	"static electricity#electron": [],
+	"electron#magnetism": [
+		"cause",
+		"produce",
+		"spin cause",
+		"spin related to"
+	],
+	"magnetism#electron": [
+		"related to",
+		"related to unpaired"
+	],
+	"electron#magnets": [
+		"behave like",
+		"behave like tiny",
+		"move in"
+	],
+	"magnets#electron": [
+		"affect",
+		"affect the movement of",
+		"attract",
+		"move",
+		"work"
+	],
+	"electron#climate change": [],
+	"climate change#electron": [],
+	"electron#franklin": [],
+	"franklin#electron": [],
+	"electron#humans": [],
+	"humans#electron": [],
+	"electron#benjamin franklin want to": [],
+	"benjamin franklin want to#electron": [],
+	"electron#einstein": [],
+	"einstein#electron": [],
+	"electron#atoms": [
+		"affect",
+		"become delocalised in metallic",
+		"change the model of an",
+		"configuration influence the chemical behavior of an",
+		"distribute themselves in the shells of",
+		"distribution affect the charges of the bonded",
+		"distribution affect the nature of an",
+		"fill energy levels in",
+		"in",
+		"interact with other",
+		"leave",
+		"move around",
+		"move between",
+		"move in",
+		"not fly off their",
+		"not need to be considered when comparing the masses of",
+		"relate to",
+		"travel easily between"
+	],
+	"atoms#electron": [
+		"affect",
+		"attain an octet of",
+		"become positive when it loses an",
+		"contain equal numbers of protons and",
+		"gain",
+		"get extra",
+		"give",
+		"have valence",
+		"lose",
+		"lose an",
+		"lose energy when they gain an",
+		"lose or gain",
+		"need",
+		"relate to",
+		"release energy when they gain an",
+		"share",
+		"share more than one pair of",
+		"want 8 valence",
+		"want to",
+		"without 8 electrons get 8"
+	],
+	"electron#alexander lodygin": [],
+	"alexander lodygin#electron": [],
+	"electron#thales": [],
+	"thales#electron": [],
+	"electron#benjamin franklin": [],
+	"benjamin franklin#electron": [],
+	"electron#ben franklin": [],
+	"ben franklin#electron": [],
+	"electron#it take so long to": [],
+	"it take so long to#electron": [],
+	"electron#subatomic particles": [],
+	"subatomic particles#electron": [],
+	"electron#tesla": [],
+	"tesla#electron": [],
+	"electron#ecology": [],
+	"ecology#electron": [],
+	"electron#windmill": [],
+	"windmill#electron": [],
+	"electron#plants": [],
+	"plants#electron": [],
+	"electron#edison": [],
+	"edison#electron": [],
+	"electron#thomas edison": [],
+	"thomas edison#electron": [],
+	"electron#the romans not": [],
+	"the romans not#electron": [],
+	"atom#benjamin": [],
+	"benjamin#atom": [],
+	"atom#chemistry": [],
+	"chemistry#atom": [],
+	"atom#equality": [],
+	"equality#atom": [],
+	"atom#static electricity": [],
+	"static electricity#atom": [],
+	"atom#magnetism": [],
+	"magnetism#atom": [],
+	"atom#magnets": [
+		"behave like",
+		"like a",
+		"like a tiny"
+	],
+	"magnets#atom": [],
+	"atom#climate change": [],
+	"climate change#atom": [],
+	"atom#franklin": [],
+	"franklin#atom": [],
+	"atom#humans": [],
+	"humans#atom": [
+		"have",
+		"lose"
+	],
+	"atom#benjamin franklin want to": [],
+	"benjamin franklin want to#atom": [],
+	"atom#einstein": [],
+	"einstein#atom": [
+		"calculate the size of",
+		"discover",
+		"mathematically prove the existence of"
+	],
+	"atom#atoms": [
+		"behave and act with other",
+		"bond with other",
+		"combine with other",
+		"form bonds with other",
+		"form chemical bonds with other",
+		"form compounds instead of existing as single",
+		"form to",
+		"tend to be bonded to other"
+	],
+	"atoms#atom": [
+		"bond with other",
+		"combine with other",
+		"form bonds with other",
+		"form chemical bonds with other",
+		"form compounds instead of existing as single",
+		"form to",
+		"tend to be bonded to other"
+	],
+	"atom#alexander lodygin": [],
+	"alexander lodygin#atom": [],
+	"atom#thales": [],
+	"thales#atom": [],
+	"atom#benjamin franklin": [],
+	"benjamin franklin#atom": [],
+	"atom#ben franklin": [],
+	"ben franklin#atom": [],
+	"atom#it take so long to": [],
+	"it take so long to#atom": [],
+	"atom#subatomic particles": [
+		"contain",
+		"have no overall charge"
+	],
+	"subatomic particles#atom": [
+		"affect the",
+		"affect the properties of an",
+		"coexist in an electrically neutral",
+		"combine to make"
+	],
+	"atom#tesla": [],
+	"tesla#atom": [],
+	"atom#ecology": [],
+	"ecology#atom": [],
+	"atom#windmill": [],
+	"windmill#atom": [],
+	"atom#plants": [],
+	"plants#atom": [
+		"get more",
+		"need to obtain carbon",
+		"obtain carbon"
+	],
+	"atom#edison": [],
+	"edison#atom": [],
+	"atom#thomas edison": [],
+	"thomas edison#atom": [],
+	"atom#the romans not": [],
+	"the romans not#atom": [],
+	"planet#galileo galilei": [],
+	"galileo galilei#planet": [],
+	"solar system#galileo galilei": [],
+	"galileo galilei#solar system": [],
+	"nucleus#cation": [],
+	"cation#nucleus": [],
+	"nucleus#ionization": [],
+	"ionization#nucleus": [],
+	"nucleus#solar system": [],
+	"solar system#nucleus": [],
+	"nucleus#scientists": [],
+	"scientists#nucleus": [
+		"discover that atoms contained a",
+		"discover that atoms had tiny",
+		"discover the importance of the",
+		"remove a donor cells",
+		"say that most of the mass of an atom is located in the",
+		"use"
+	],
+	"nucleus#reactivity": [],
+	"reactivity#nucleus": [],
+	"nucleus#radiation": [
+		"emit",
+		"of radioactive substances emit"
+	],
+	"radiation#nucleus": [],
+	"nucleus#we use models to": [],
+	"we use models to#nucleus": [],
+	"nucleus#electronegativity": [],
+	"electronegativity#nucleus": [],
+	"nucleus#elements": [
+		"affect chemical properties of an"
+	],
+	"elements#nucleus": [],
+	"nucleus#moles": [],
+	"moles#nucleus": [],
+	"nucleus#the law of multiple proportions": [],
+	"the law of multiple proportions#nucleus": [],
+	"nucleus#democritus": [],
+	"democritus#nucleus": [],
+	"nucleus#science": [],
+	"science#nucleus": [],
+	"nucleus#isotopes": [],
+	"isotopes#nucleus": [],
+	"nucleus#the number of protons": [],
+	"the number of protons#nucleus": [],
+	"nucleus#dalton": [],
+	"dalton#nucleus": [],
+	"nucleus#particles": [
+		"emits alpha",
+		"repel alpha"
+	],
+	"particles#nucleus": [
+		"orbit"
+	],
+	"electron#cation": [],
+	"cation#electron": [],
+	"electron#ionization": [],
+	"ionization#electron": [
+		"energies provide evidence for the quantization of the energies of",
+		"energy increase as you remove",
+		"energy related to"
+	],
+	"electron#solar system": [],
+	"solar system#electron": [],
+	"electron#scientists": [
+		"microscopes help"
+	],
+	"scientists#electron": [
+		"currently describe the movement of",
+		"determine the wave like nature of",
+		"discover that atoms contain",
+		"discovered",
+		"see",
+		"shoot",
+		"use models to show the motion and location of an"
+	],
+	"electron#reactivity": [
+		"affect",
+		"affect chemical",
+		"affinity affect",
+		"affinity related to",
+		"configuration affect",
+		"configuration relate to",
+		"determine",
+		"determine chemical",
+		"of an element determine that element's"
+	],
+	"reactivity#electron": [
+		"affect",
+		"of elements related to valence",
+		"relate to"
+	],
+	"electron#radiation": [
+		"affect electromagnetic",
+		"emit"
+	],
+	"radiation#electron": [
+		"excite"
+	],
+	"electron#we use models to": [],
+	"we use models to#electron": [],
+	"electron#electronegativity": [
+		"affinity affect",
+		"affinity differ from",
+		"affinity different from",
+		"configuration affect",
+		"density related to",
+		"gain enthalpy differ from",
+		"gain enthalpy different from",
+		"shielding effect"
+	],
+	"electronegativity#electron": [],
+	"electron#elements": [
+		"configuration affect chemical and physical properties of",
+		"give scientists information on different types of"
+	],
+	"elements#electron": [
+		"gain",
+		"gain or lose",
+		"have",
+		"in an ionic bond transfer",
+		"lose",
+		"lose or gain",
+		"on the right side of the periodic table gain",
+		"share",
+		"want 8 valence",
+		"want to lose"
+	],
+	"electron#moles": [],
+	"moles#electron": [],
+	"electron#the law of multiple proportions": [],
+	"the law of multiple proportions#electron": [],
+	"electron#democritus": [],
+	"democritus#electron": [],
+	"electron#science": [
+		"microscope change"
+	],
+	"science#electron": [],
+	"electron#isotopes": [],
+	"isotopes#electron": [],
+	"electron#the number of protons": [],
+	"the number of protons#electron": [],
+	"electron#dalton": [],
+	"dalton#electron": [
+		"model not include"
+	],
+	"electron#particles": [
+		"a",
+		"a charged",
+		"act as waves and",
+		"act like",
+		"act like waves and",
+		"behave as a",
+		"behave like",
+		"called a fundamental",
+		"in a stable atom similar to a beta",
+		"known as universal",
+		"not"
+	],
+	"particles#electron": [],
+	"atom#cation": [
+		"become",
+		"become a"
+	],
+	"cation#atom": [
+		"differ from",
+		"relate to",
+		"smaller than its corresponding",
+		"smaller than its parent",
+		"smaller than neutral"
+	],
+	"atom#ionization": [],
+	"ionization#atom": [
+		"energy affect",
+		"energy lower in larger",
+		"energy quantitatively measure about an",
+		"enthalpy of an"
+	],
+	"atom#solar system": [
+		"relate to the",
+		"similar to the"
+	],
+	"solar system#atom": [
+		"look like an"
+	],
+	"atom#scientists": [],
+	"scientists#atom": [
+		"change the model of the",
+		"count",
+		"determine the number of neutrons in an isotope of an",
+		"discover",
+		"discover models of the",
+		"discover that metals are crystals with an orderly arrangement of",
+		"discover the",
+		"discover the structure of an",
+		"don't trust",
+		"explain the potential locations of electrons within an",
+		"identify an element when they look at an",
+		"investigate the structure of an",
+		"know the number of protons in an",
+		"measure the mass of an",
+		"not like",
+		"see",
+		"split",
+		"split an",
+		"split the",
+		"study",
+		"think that there was electric charge inside",
+		"think there were negative particles in an",
+		"use model of an",
+		"use models",
+		"use models of",
+		"use models to study",
+		"weigh"
+	],
+	"atom#reactivity": [
+		"affect"
+	],
+	"reactivity#atom": [
+		"of elements related to valence electrons in"
+	],
+	"atom#radiation": [
+		"absorb",
+		"become ionised by",
+		"become ions when bombarded with",
+		"emit",
+		"emit and absorb electromagnetic",
+		"emit electromagnetic",
+		"emit gamma",
+		"of some substances give out",
+		"only absorb certain frequencies of electromagnetic",
+		"produce"
+	],
+	"radiation#atom": [
+		"affect",
+		"ionise an",
+		"occur in"
+	],
+	"atom#cell": [
+		"and molecules related to the",
+		"become a",
+		"relate to"
+	],
+	"cell#atom": [
+		"the basic unit of life and not an"
+	],
+	"atom#isotopes": [
+		"become",
+		"become an",
+		"form",
+		"form an",
+		"have",
+		"have different",
+		"related to",
+		"turn into"
+	],
+	"isotopes#atom": [
+		"deuterium differ from an ordinary hydrogen",
+		"differ from",
+		"differ from a normal",
+		"differ from neutral",
+		"different from an",
+		"have",
+		"of"
+	],
+	"atom#particles": [
+		"considered as a neutral",
+		"contain subatomic",
+		"emit alpha",
+		"have no overall charge subatomic",
+		"relate to",
+		"the smallest"
+	],
+	"particles#atom": [
+		"an"
+	],
+	"atom#the law of multiple proportions": [],
+	"the law of multiple proportions#atom": [],
+	"atom#moles": [],
+	"moles#atom": [
+		"used to measure the"
+	],
+	"atom#elements": [
+		"a",
+		"an",
+		"are",
+		"differ from an",
+		"different from an",
+		"form",
+		"form bonds with other atoms of other",
+		"relate to",
+		"that decays become a different",
+		"the smallest",
+		"the smallest particle of an"
+	],
+	"elements#atom": [
+		"at the bottom of the periodic table have the biggest",
+		"differ from",
+		"in group 0 exist as single",
+		"react",
+		"relate to",
+		"related to"
+	],
+	"atom#the number of protons": [],
+	"the number of protons#atom": [],
+	"atom#we use models to": [],
+	"we use models to#atom": [],
+	"atom#democritus": [],
+	"democritus#atom": [
+		"and leucippus come up with the idea of the",
+		"and leucippus discover the",
+		"believe in",
+		"come to his conclusions about the",
+		"come up with the first model of an",
+		"contribute to the structure of the",
+		"contribute to the understanding of the",
+		"define the",
+		"describe",
+		"discover",
+		"discover the",
+		"explain the properties of materials using",
+		"find",
+		"know about",
+		"known as the father of the",
+		"reason for the existence of"
+	],
+	"atom#electronegativity": [
+		"affect",
+		"have",
+		"have different",
+		"with a smaller radius have a larger",
+		"with greater numbers of protons have greater"
+	],
+	"electronegativity#atom": [
+		"affect",
+		"affect the polarity of the bond between two",
+		"affect the type of bond formed between",
+		"change as principal energy levels are added to an",
+		"relate to",
+		"relate to the type of bond found between",
+		"related to covalent bonding"
+	],
+	"atom#science": [
+		"relate to",
+		"related to"
+	],
+	"science#atom": [
+		"based on",
+		"based on the"
+	],
+	"atom#dalton": [],
+	"dalton#atom": [
+		"change the model of the",
+		"change understandings about the",
+		"describe",
+		"describe the",
+		"discover",
+		"discover the",
+		"thomson rutherford and bohr develop ideas about the",
+		"use data to support the existence of"
+	],
+	"electricity#isotopes": [],
+	"isotopes#electricity": [],
+	"electricity#particles": [],
+	"particles#electricity": [],
+	"electricity#the law of multiple proportions": [],
+	"the law of multiple proportions#electricity": [],
+	"electricity#moles": [],
+	"moles#electricity": [],
+	"electricity#solar system": [],
+	"solar system#electricity": [],
+	"electricity#radiation": [],
+	"radiation#electricity": [
+		"affect",
+		"turned into"
+	],
+	"electricity#scientists": [],
+	"scientists#electricity": [
+		"discover",
+		"discover new ways to generate",
+		"think graphene would conduct",
+		"think static",
+		"use"
+	],
+	"electricity#elements": [
+		"help scientists discover new",
+		"not an"
+	],
+	"elements#electricity": [
+		"conduct",
+		"like copper conduct"
+	],
+	"electricity#the number of protons": [],
+	"the number of protons#electricity": [],
+	"electricity#we use models to": [],
+	"we use models to#electricity": [],
+	"electricity#cation": [],
+	"cation#electricity": [
+		"conduct"
+	],
+	"electricity#democritus": [],
+	"democritus#electricity": [],
+	"electricity#ionization": [],
+	"ionization#electricity": [],
+	"electricity#electronegativity": [],
+	"electronegativity#electricity": [],
+	"electricity#reactivity": [],
+	"reactivity#electricity": [],
+	"electricity#science": [
+		"relate to",
+		"related to",
+		"used in",
+		"used in medicine and"
+	],
+	"science#electricity": [],
+	"electricity#dalton": [],
+	"dalton#electricity": [],
+	"sun#it take so long to": [],
+	"it take so long to#sun": [],
+	"sun#scientists": [],
+	"scientists#sun": [
+		"approximate the earth's distance to the",
+		"calculate the age of the",
+		"calculate the distance from the earth to the",
+		"construct models of the",
+		"determine the age of the",
+		"discover the layers of the",
+		"discovered helium in the",
+		"feel it is important to study the",
+		"know the age of the",
+		"know the moon reflects light from the",
+		"look at the",
+		"measure the distance to the",
+		"study the"
+	],
+	"sun#weathering": [
+		"affect the process of",
+		"cause",
+		"contribute to physical",
+		"water and wind affect the process of"
+	],
+	"weathering#sun": [],
+	"sun#erosion": [],
+	"erosion#sun": [],
+	"sun#isaac": [],
+	"isaac#sun": [],
+	"sun#einstein": [],
+	"einstein#sun": [],
+	"sun#effects of erosion": [],
+	"effects of erosion#sun": [],
+	"sun#isaac newton": [],
+	"isaac newton#sun": [],
+	"sun#deposition": [],
+	"deposition#sun": [],
+	"sun#glaciers": [],
+	"glaciers#sun": [],
+	"sun#normal pen": [],
+	"normal pen#sun": [],
+	"sun#world": [
+		"called the gardener of the",
+		"the source of all the energy in the",
+		"tzu change the"
+	],
+	"world#sun": [
+		"move around the",
+		"need the",
+		"rotate around the"
+	],
+	"sun#galileo": [],
+	"galileo#sun": [
+		"discover that the earth orbits the"
+	],
+	"sun#physics": [],
+	"physics#sun": [],
+	"sun#brahmagupta": [],
+	"brahmagupta#sun": [],
+	"planet#it take so long to": [],
+	"it take so long to#planet": [],
+	"planet#scientists": [
+		"classified by the"
+	],
+	"scientists#planet": [
+		"believe that life originated from other",
+		"call earth the blue",
+		"call earth the goldilocks",
+		"call mars the red",
+		"call pluto a dwarf",
+		"classify",
+		"classify whether or not an object is a",
+		"decide pluto is not a",
+		"determine the mass of a",
+		"discover",
+		"discover new",
+		"discover other",
+		"know about other",
+		"know pluto is not a",
+		"learn about",
+		"learn about the moon and the other",
+		"look for water on other",
+		"make pluto a dwarf",
+		"measure the temperature of a",
+		"name",
+		"no longer consider pluto a",
+		"reclassify pluto as a dwarf",
+		"spend time looking for water on other",
+		"study",
+		"think pluto is not a",
+		"think pluto was a",
+		"think that pluto is no longer a"
+	],
+	"planet#weathering": [],
+	"weathering#planet": [],
+	"planet#we need to": [],
+	"we need to#planet": [
+		"colonize other",
+		"explore other",
+		"go to other",
+		"know about",
+		"protect our",
+		"save our",
+		"save the",
+		"study",
+		"study other",
+		"study the movement of the",
+		"take care of our",
+		"take care of the"
+	],
+	"planet#erosion": [],
+	"erosion#planet": [
+		"affect landforms across the surface of the"
+	],
+	"planet#isaac": [],
+	"isaac#planet": [],
+	"planet#einstein": [],
+	"einstein#planet": [],
+	"planet#effects of erosion": [],
+	"effects of erosion#planet": [],
+	"planet#isaac newton": [],
+	"isaac newton#planet": [],
+	"planet#deposition": [],
+	"deposition#planet": [],
+	"planet#glaciers": [],
+	"glaciers#planet": [],
+	"planet#normal pen": [],
+	"normal pen#planet": [],
+	"planet#world": [],
+	"world#planet": [
+		"environment day help our"
+	],
+	"planet#earth": [
+		"affect the",
+		"differ from",
+		"earth named",
+		"in the solar system compare to communities on",
+		"look from",
+		"look like stars from",
+		"move around the",
+		"orbit the sun and not the"
+	],
+	"earth#planet": [
+		"a",
+		"a dynamic",
+		"a unique",
+		"and venus called twin",
+		"became the most habitable",
+		"become a",
+		"become living",
+		"called a terrestrial",
+		"called a unique",
+		"called blue",
+		"called the living",
+		"compared to other",
+		"differ from all the other",
+		"differ from other",
+		"differ from other inner",
+		"different from all the other",
+		"different from other",
+		"different from other terrestrial",
+		"habitable than other",
+		"have a temperate climate versus other",
+		"have less craters than other",
+		"have more gravity than other",
+		"is called a unique",
+		"like other",
+		"resemble from other",
+		"similar to other",
+		"so different from other"
+	],
+	"planet#galileo": [],
+	"galileo#planet": [
+		"discover"
+	],
+	"planet#physics": [
+		"do not twinkle class 10"
+	],
+	"physics#planet": [],
+	"planet#brahmagupta": [],
+	"brahmagupta#planet": [],
+	"solar system#it take so long to": [],
+	"it take so long to#solar system": [],
+	"solar system#scientists": [],
+	"scientists#solar system": [
+		"change the model of our",
+		"classify small objects in the",
+		"consider the moon important for mankind to explore the",
+		"describe the atom was like a miniature",
+		"detect more distant planets outside of our",
+		"determine the age of the",
+		"discover the",
+		"explore the",
+		"find earth-like planets beyond our",
+		"know that voyager 1 has left the",
+		"learn about the",
+		"look for water in other places in the",
+		"look for water when searching for life in the",
+		"measure the age of the",
+		"now accept the heliocentric theory of the",
+		"sometimes classify objects in the",
+		"struggle for thousands of years to accurately describe the",
+		"think the",
+		"use models of the",
+		"use scale to study the"
+	],
+	"solar system#weathering": [],
+	"weathering#solar system": [],
+	"solar system#we need to": [],
+	"we need to#solar system": [
+		"explore the",
+		"know the origin and the evolution of our galaxy and",
+		"learn about the",
+		"research about space and",
+		"study the",
+		"study the minor members of the",
+		"study the other members of the"
+	],
+	"solar system#erosion": [],
+	"erosion#solar system": [],
+	"solar system#isaac": [],
+	"isaac#solar system": [
+		"newton's discoveries contribute to the current model of the"
+	],
+	"solar system#einstein": [],
+	"einstein#solar system": [],
+	"solar system#effects of erosion": [],
+	"effects of erosion#solar system": [],
+	"solar system#isaac newton": [],
+	"isaac newton#solar system": [],
+	"solar system#deposition": [],
+	"deposition#solar system": [],
+	"solar system#glaciers": [],
+	"glaciers#solar system": [],
+	"solar system#normal pen": [],
+	"normal pen#solar system": [],
+	"solar system#world": [],
+	"world#solar system": [],
+	"solar system#galileo": [],
+	"galileo#solar system": [],
+	"solar system#physics": [],
+	"physics#solar system": [
+		"relate to the"
+	],
+	"solar system#brahmagupta": [],
+	"brahmagupta#solar system": [],
+	"gravity#it take so long to": [],
+	"it take so long to#gravity": [],
+	"gravity#scientists": [
+		"help rationalize all the previous"
+	],
+	"scientists#gravity": [
+		"create zero",
+		"measure",
+		"study",
+		"use"
+	],
+	"gravity#weathering": [
+		"affect",
+		"cause",
+		"contribute to"
+	],
+	"weathering#gravity": [],
+	"gravity#erosion": [
+		"affect",
+		"affect stream",
+		"affect the rate of",
+		"cause",
+		"one of the main sources of weathering and"
+	],
+	"erosion#gravity": [
+		"relate to",
+		"related to"
+	],
+	"gravity#isaac": [],
+	"isaac#gravity": [
+		"newton call it",
+		"newton define",
+		"newton discover",
+		"newton explain",
+		"newton invented",
+		"newton measure",
+		"newton really discover",
+		"newton test his theory of"
+	],
+	"gravity#einstein": [
+		"work"
+	],
+	"einstein#gravity": [
+		"define",
+		"discover",
+		"explain",
+		"view"
+	],
+	"gravity#effects of erosion": [],
+	"effects of erosion#gravity": [],
+	"gravity#isaac newton": [],
+	"isaac newton#gravity": [
+		"call it",
+		"define",
+		"discover",
+		"explain",
+		"invented",
+		"measure",
+		"really discover",
+		"test his theory of"
+	],
+	"gravity#deposition": [
+		"cause",
+		"play in"
+	],
+	"deposition#gravity": [],
+	"gravity#glaciers": [
+		"affect"
+	],
+	"glaciers#gravity": [],
+	"gravity#normal pen": [],
+	"normal pen#gravity": [],
+	"gravity#world": [
+		"affect the",
+		"change the",
+		"different around the",
+		"effect the",
+		"relate to the",
+		"vary around the"
+	],
+	"world#gravity": [],
+	"gravity#galileo": [],
+	"galileo#gravity": [
+		"calculate",
+		"determine acceleration due to",
+		"discover",
+		"explain",
+		"find the acceleration of",
+		"galilei discovered",
+		"prove"
+	],
+	"gravity#physics": [
+		"important in",
+		"related to"
+	],
+	"physics#gravity": [],
+	"gravity#brahmagupta": [],
+	"brahmagupta#gravity": [
+		"discover"
+	],
+	"sun#it important to": [],
+	"it important to#sun": [
+		"learn about the",
+		"protect your skin from the",
+		"study and track the",
+		"wear a hat in the",
+		"wear sunglasses in the"
+	],
+	"planet#it important to": [],
+	"it important to#planet": [
+		"explore other",
+		"find earth like",
+		"know about",
+		"know the movement of the",
+		"learn about",
+		"protect our",
+		"protect the",
+		"save our",
+		"save the",
+		"study other",
+		"study the biodiversity of our",
+		"take care of our"
+	],
+	"gravity#it important to": [],
+	"it important to#gravity": [
+		"know the center of",
+		"learn about",
+		"understand"
+	],
+	"solar system#it important to": [],
+	"it important to#solar system": [
+		"know about the",
+		"know the other members of the",
+		"learn about the",
+		"study the",
+		"study the other planets in the",
+		"study the universe and",
+		"use a scale model to describe the"
+	],
+	"boats#on the right": [
+		"drive",
+		"have the steering wheel",
+		"pass",
+		"steering",
+		"travel"
+	],
+	"on the right#boats": [],
+	"boats#jet": [],
+	"jet#boats": [],
+	"boats#from the right side": [],
+	"from the right side#boats": [],
+	"river#on the right": [],
+	"on the right#river": [],
+	"river#jet": [],
+	"jet#river": [],
+	"river#from the right side": [],
+	"from the right side#river": []
 }

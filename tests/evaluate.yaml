@@ -132,3 +132,44 @@ mapping:
         - seeds --> ideas
         - fruit --> product
         - bloom --> success
+
+  - input:
+      base: [route, destination]
+      target: [plan, goal] 
+      depth: 4
+    output:
+      mapping:
+        - route --> plan
+        - destination --> goal
+
+  - input:
+      base: [buildings, foundations, crack]
+      target: [theories, reasons, flaw] 
+      depth: 4
+    output:
+      mapping:
+        - buildings --> theories
+        - foundations --> reasons
+        - crack --> flaw
+
+  - input:
+      base: [room, apartment, building, neighborhood]
+      target: [leaf, branch, tree, forest] 
+      depth: 4
+    output:
+      mapping:
+        - room --> leaf
+        - apartment --> branch
+        - building --> tree
+        - neighborhood --> forest
+
+  - input:
+      base: [gate, football, pendel, grass]
+      target: [basket, basketball, penalty, parquet] 
+      depth: 4
+    output:
+      mapping:
+        - gate --> basket
+        - football --> basketball
+        - pendel --> penalty
+        - grass --> parquet
