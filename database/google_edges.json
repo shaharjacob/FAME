@@ -8289,5 +8289,116 @@
 	"river#jet": [],
 	"jet#river": [],
 	"river#from the right side": [],
-	"from the right side#river": []
+	"from the right side#river": [],
+	"route#destination": [],
+	"plan#goal": [
+		"to achieve these"
+	],
+	"destination#route": [],
+	"goal#plan": [
+		"differ from career"
+	],
+	"theories#flaw": [],
+	"flaw#theories": [],
+	"reasons#flaw": [],
+	"flaw#reasons": [],
+	"buildings#crack": [
+		"have"
+	],
+	"crack#buildings": [
+		"appear in new",
+		"occur in"
+	],
+	"foundations#crack": [
+		"walls"
+	],
+	"crack#foundations": [],
+	"room#apartment": [],
+	"leaf#branch": [],
+	"apartment#room": [],
+	"branch#leaf": [],
+	"leaf#tree": [
+		"fall down from the",
+		"fall from",
+		"fall off bonsai",
+		"fall off my avocado",
+		"fall off my lemon",
+		"help a",
+		"miners affect",
+		"or fruits for on the ground after breaking from the",
+		"turn yellow on lemon"
+	],
+	"tree#leaf": [
+		"drop",
+		"have",
+		"lose their",
+		"need"
+	],
+	"leaf#forest": [
+		"indicates the adaptation of trees in temperate deciduous",
+		"litter important to a deciduous",
+		"of conifer trees affect the soil in the coniferous"
+	],
+	"forest#leaf": [],
+	"branch#tree": [
+		"form on a"
+	],
+	"tree#branch": [
+		"have"
+	],
+	"branch#forest": [],
+	"forest#branch": [],
+	"tree#forest": [
+		"bridge work in the",
+		"bridges work in the",
+		"fall down in the",
+		"grow back in the",
+		"grow in a natural",
+		"grow in the",
+		"grow straight and tall in a",
+		"grow taller in a",
+		"regrow in the",
+		"shed their leaves in tropical deciduous"
+	],
+	"forest#tree": [
+		"app plant"
+	],
+	"room#building": [],
+	"building#room": [],
+	"room#neighborhood": [],
+	"neighborhood#room": [],
+	"apartment#building": [],
+	"building#apartment": [],
+	"apartment#neighborhood": [],
+	"neighborhood#apartment": [],
+	"building#neighborhood": [],
+	"neighborhood#building": [],
+	"gate#football": [],
+	"basket#basketball": [],
+	"football#gate": [],
+	"basketball#basket": [],
+	"basket#penalty": [],
+	"penalty#basket": [],
+	"basket#parquet": [],
+	"parquet#basket": [],
+	"basketball#penalty": [],
+	"penalty#basketball": [
+		"work in"
+	],
+	"basketball#parquet": [],
+	"parquet#basketball": [],
+	"penalty#parquet": [],
+	"parquet#penalty": [],
+	"gate#pendel": [],
+	"pendel#gate": [],
+	"gate#grass": [],
+	"grass#gate": [],
+	"football#pendel": [],
+	"pendel#football": [],
+	"football#grass": [
+		"played on"
+	],
+	"grass#football": [],
+	"pendel#grass": [],
+	"grass#pendel": []
 }

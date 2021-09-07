@@ -6077,5 +6077,129 @@
 	"river#jet": [],
 	"jet#river": [],
 	"river#from the right side": [],
-	"from the right side#river": []
+	"from the right side#river": [],
+	"route#destination": [],
+	"plan#goal": [
+		"achieve"
+	],
+	"destination#route": [],
+	"goal#plan": [],
+	"theories#flaw": [],
+	"flaw#theories": [],
+	"reasons#flaw": [],
+	"flaw#reasons": [],
+	"buildings#crack": [
+		"can",
+		"develop",
+		"have"
+	],
+	"crack#buildings": [
+		"occur in"
+	],
+	"foundations#crack": [
+		"can"
+	],
+	"crack#foundations": [],
+	"room#apartment": [
+		"has property"
+	],
+	"leaf#branch": [],
+	"apartment#room": [],
+	"branch#leaf": [],
+	"leaf#tree": [
+		"be arranged in",
+		"be on",
+		"can identify",
+		"fall off",
+		"fall off as",
+		"fall out of",
+		"grow back on",
+		"help",
+		"stay longer on",
+		"stay on"
+	],
+	"tree#leaf": [
+		"do have",
+		"do photosynthesis without",
+		"drop",
+		"grow",
+		"has property",
+		"have",
+		"keep",
+		"live without",
+		"lose",
+		"need"
+	],
+	"leaf#forest": [],
+	"forest#leaf": [
+		"shed"
+	],
+	"branch#tree": [
+		"be attached to",
+		"die on",
+		"fall from",
+		"fall off",
+		"grow in",
+		"grow on"
+	],
+	"tree#branch": [
+		"can",
+		"drop",
+		"grow",
+		"have",
+		"make"
+	],
+	"branch#forest": [],
+	"forest#branch": [],
+	"tree#forest": [
+		"be in",
+		"be located within",
+		"be naturally located within",
+		"can get sunlight in",
+		"grow in",
+		"help animals in",
+		"move out into"
+	],
+	"forest#tree": [
+		"can"
+	],
+	"room#building": [],
+	"building#room": [],
+	"room#neighborhood": [],
+	"neighborhood#room": [],
+	"apartment#building": [
+		"has property"
+	],
+	"building#apartment": [],
+	"apartment#neighborhood": [],
+	"neighborhood#apartment": [],
+	"building#neighborhood": [],
+	"neighborhood#building": [],
+	"gate#football": [],
+	"basket#basketball": [],
+	"football#gate": [],
+	"basketball#basket": [],
+	"basket#penalty": [],
+	"penalty#basket": [],
+	"basket#parquet": [],
+	"parquet#basket": [],
+	"basketball#penalty": [],
+	"penalty#basketball": [],
+	"basketball#parquet": [],
+	"parquet#basketball": [],
+	"penalty#parquet": [],
+	"parquet#penalty": [],
+	"gate#pendel": [],
+	"pendel#gate": [],
+	"gate#grass": [],
+	"grass#gate": [],
+	"football#pendel": [],
+	"pendel#football": [],
+	"football#grass": [
+		"be on",
+		"played on"
+	],
+	"grass#football": [],
+	"pendel#grass": [],
+	"grass#pendel": []
 }

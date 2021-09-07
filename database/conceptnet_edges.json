@@ -3344,5 +3344,85 @@
 	"river#jet": [],
 	"jet#river": [],
 	"river#from the right side": [],
-	"from the right side#river": []
+	"from the right side#river": [],
+	"route#destination": [
+		"driving to a"
+	],
+	"plan#goal": [],
+	"destination#route": [],
+	"goal#plan": [],
+	"theories#flaw": [],
+	"flaw#theories": [],
+	"reasons#flaw": [],
+	"flaw#reasons": [],
+	"buildings#crack": [],
+	"crack#buildings": [],
+	"foundations#crack": [],
+	"crack#foundations": [],
+	"room#apartment": [],
+	"leaf#branch": [],
+	"apartment#room": [],
+	"branch#leaf": [],
+	"leaf#tree": [
+		"a part of a",
+		"a small part of a",
+		"fall from",
+		"fall from a",
+		"making food for the"
+	],
+	"tree#leaf": [],
+	"leaf#forest": [],
+	"forest#leaf": [],
+	"branch#tree": [],
+	"tree#branch": [
+		"grow a"
+	],
+	"branch#forest": [],
+	"forest#branch": [],
+	"tree#forest": [],
+	"forest#tree": [],
+	"room#building": [
+		"a part of a"
+	],
+	"building#room": [],
+	"room#neighborhood": [],
+	"neighborhood#room": [],
+	"apartment#building": [
+		"a part of a larger"
+	],
+	"building#apartment": [],
+	"apartment#neighborhood": [],
+	"neighborhood#apartment": [],
+	"building#neighborhood": [],
+	"neighborhood#building": [],
+	"gate#football": [],
+	"basket#basketball": [
+		"play"
+	],
+	"football#gate": [],
+	"basketball#basket": [
+		"making a",
+		"shooting a",
+		"throwing through a hoop or"
+	],
+	"basket#penalty": [],
+	"penalty#basket": [],
+	"basket#parquet": [],
+	"parquet#basket": [],
+	"basketball#penalty": [],
+	"penalty#basketball": [],
+	"basketball#parquet": [],
+	"parquet#basketball": [],
+	"penalty#parquet": [],
+	"parquet#penalty": [],
+	"gate#pendel": [],
+	"pendel#gate": [],
+	"gate#grass": [],
+	"grass#gate": [],
+	"football#pendel": [],
+	"pendel#football": [],
+	"football#grass": [],
+	"grass#football": [],
+	"pendel#grass": [],
+	"grass#pendel": []
 }
