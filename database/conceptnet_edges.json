@@ -3424,5 +3424,9 @@
 	"football#grass": [],
 	"grass#football": [],
 	"pendel#grass": [],
-	"grass#pendel": []
+	"grass#pendel": [],
+	"goal#football": [],
+	"football#goal": [],
+	"goal#grass": [],
+	"grass#goal": []
 }

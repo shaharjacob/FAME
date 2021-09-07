@@ -6201,5 +6201,12 @@
 	],
 	"grass#football": [],
 	"pendel#grass": [],
-	"grass#pendel": []
+	"grass#pendel": [],
+	"goal#football": [
+		"be scored in",
+		"everything in"
+	],
+	"football#goal": [],
+	"goal#grass": [],
+	"grass#goal": []
 }

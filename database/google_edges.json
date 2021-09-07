@@ -8400,5 +8400,15 @@
 	],
 	"grass#football": [],
 	"pendel#grass": [],
-	"grass#pendel": []
+	"grass#pendel": [],
+	"goal#football": [
+		"difference work in",
+		"line technology influence",
+		"line technology work in"
+	],
+	"football#goal": [
+		"matches predict goal"
+	],
+	"goal#grass": [],
+	"grass#goal": []
 }

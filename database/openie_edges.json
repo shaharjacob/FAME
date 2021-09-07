@@ -7788,5 +7788,29 @@
 	],
 	"grass#football": [],
 	"pendel#grass": [],
-	"grass#pendel": []
+	"grass#pendel": [],
+	"goal#football": [
+		"is a method used in",
+		"is as",
+		"is scored in",
+		"is to make",
+		"is to play",
+		"is to win"
+	],
+	"football#goal": [
+		"attempts",
+		"came from",
+		"can be found at",
+		"has",
+		"is",
+		"is about",
+		"is all about",
+		"kick",
+		"kicked for",
+		"stupidly sized"
+	],
+	"goal#grass": [],
+	"grass#goal": [
+		"is"
+	]
 }
