@@ -125,26 +125,3 @@ class TestMapping(unittest.TestCase):
 if __name__ == '__main__':
     # os.environ['CI'] = 'true'
     unittest.main()
-    # threshold = 200
-    # quasimodo = Quasimodo()
-    # pass_for_json = 'jsons/merged/20%/ci.json' if 'CI' in os.environ else 'jsons/merged/20%/all_1m_filter_3_sort.json'
-    # freq = Frequencies(pass_for_json, threshold=threshold)
-    # with open(TEST_FOLDER / 'tests.yaml', 'r') as y:
-    #     spec = yaml.load(y, Loader=yaml.SafeLoader)
-    # mapping_spec = spec["mapping"]
-    # for tv in mapping_spec:
-    #     if tv["ignore"]:
-    #         continue
-
-    #     solutions = mapping_wrapper(
-    #                                     base=tv["input"]["base"], 
-    #                                     target=tv["input"]["target"], 
-    #                                     suggestions=True, 
-    #                                     depth=tv["input"]["depth"], 
-    #                                     top_n=1, 
-    #                                     verbose=True,
-    #                                     quasimodo=quasimodo,
-    #                                     freq=freq,
-    #                                     model_name='msmarco-distilbert-base-v4',
-    #                                     threshold=threshold)
-    #     solution = solutions[0]

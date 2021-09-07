@@ -1,12 +1,11 @@
 import json
-from typing import List, Optional
+from typing import List, Optional, Dict, Set
 
+import openIE
 import inflect
 import concept_net
 import google_autosuggest
 from quasimodo import Quasimodo
-
-IGNORE = ["has property", "can", "be in", "get", "be", "a"]
 
 class DataCollector(object):
     def __init__(self, quasimodo: Optional[Quasimodo] = None, engine: Optional[inflect.engine] = None, save_database: bool = True, override_database: bool = False):
@@ -17,6 +16,8 @@ class DataCollector(object):
         self.quasimodo_edges = read_json('database/quasimodo_edges.json') if save_database else {}
         self.google_edges = read_json('database/google_edges.json') if save_database else {}
         self.conceptnet_edges = read_json('database/conceptnet_edges.json') if save_database else {}
+        self.openie = read_json('database/openie_edges.json') if save_database else {}
+        self.stopwords = read_stopwords('stopwords.txt')
 
 
     def get_entities_relations(self, entity1: str, entity2: str, from_where: bool = False) -> List[str]:
@@ -46,21 +47,30 @@ class DataCollector(object):
             self.conceptnet_edges[f"{entity1}#{entity2}"] = sorted(concept_net_props)
             should_save = True
 
+        if f"{entity1}#{entity2}" in self.openie and not self.override_database:
+            openie_props = self.openie[f"{entity1}#{entity2}"]
+        else:
+            openie_props = openIE.entities_relations_wrapper(entity1, entity2, n=0)
+            self.openie[f"{entity1}#{entity2}"] = sorted(openie_props)
+            should_save = True
+            
         if should_save:
             self.save_database_()
         
-        quasimodo_props = [prop for prop in quasimodo_props if prop not in IGNORE]
-        autosuggets_props = [prop for prop in autosuggets_props if prop not in IGNORE]
-        concept_net_props = [prop for prop in concept_net_props if prop not in IGNORE]
+        quasimodo_props = [prop for prop in quasimodo_props if prop not in self.stopwords]
+        autosuggets_props = [prop for prop in autosuggets_props if prop not in self.stopwords]
+        concept_net_props = [prop for prop in concept_net_props if prop not in self.stopwords]
+        openie_props = [prop for prop in openie_props if prop not in self.stopwords]
 
         if from_where:
             return {
+                "openie": sorted(list(set(openie_props))),
                 "quasimodo": sorted(list(set(quasimodo_props))),
                 "concept_net": sorted(list(set(concept_net_props))),
                 "google_autosuggest": sorted(list(set(autosuggets_props))),
             }
 
-        return sorted(list(set(quasimodo_props + autosuggets_props + concept_net_props)))
+        return sorted(list(set(quasimodo_props + autosuggets_props + concept_net_props + openie_props)))
     
 
     def get_entitiy_props(self, entity: str, from_where: bool = False) -> List[str]:
@@ -93,12 +103,19 @@ class DataCollector(object):
             json.dump(self.google_edges, f2, indent='\t')
         with open('database/conceptnet_edges.json', 'w') as f3:
             json.dump(self.conceptnet_edges, f3, indent='\t')
+        with open('database/openie_edges.json', 'w') as f3:
+            json.dump(self.openie, f3, indent='\t')
 
 
-def read_json(path: str) -> dict:
+def read_json(path: str) -> Dict[str, List[str]]:
     with open(path, 'r') as f:
         return json.load(f)
     
+
+def read_stopwords(path: str) -> Set[str]:
+    with open(path, 'r') as f:
+        return set([word.strip() for word in f.read().split('\n')])
+
 
 if __name__ == '__main__':
     data_collector = DataCollector()

@@ -1,22 +1,22 @@
 mapping:
   - input:
       base: [solar system, sun, planet, gravity, newton]
-      target: [cell, nucleus, electron, electricity, faraday]
+      target: [atom, nucleus, electron, electricity, faraday]
       depth: 4
     output:
       mapping:
         - sun --> nucleus
         - planet --> electron
-        - solar system --> cell
+        - solar system --> atom
         - gravity --> electricity
         - newton --> faraday
       relations: 
         - [[sun, planet], [nucleus, electron]]
-        - [[solar system, sun], [cell, nucleus]]
+        - [[solar system, planet], [atom, electron]]
         - [[planet, gravity], [electron, electricity]]
         - [[gravity, newton], [electricity, faraday]]
-      score: 8.105
-    ignore: True
+      score: 20.927
+    ignore: False
 
   - input:
       base: [earth, sun, gravity, newton]
@@ -32,7 +32,7 @@ mapping:
         - [[earth, sun], [electrons, nucleus]]
         - [[earth, gravity], [electrons, electricity]]
         - [[gravity, newton], [electricity, faraday]]
-      score: 7.223
+      score: 9.548
     ignore: False
 
   - input:
@@ -44,12 +44,12 @@ mapping:
         - earth --> electrons
         - sun --> nucleus
         - gravity --> electricity
-        - newton --> humans
+        - newton --> benjamin franklin
       relations: 
         - [[earth, sun], [electrons, nucleus]]
         - [[earth, gravity], [electrons, electricity]]
-        - [[gravity, newton], [electricity, humans]]
-      score: 8.175
+        - [[gravity, newton], [electricity, benjamin franklin]]
+      score: 11.215
     ignore: False
 
   - input:
@@ -66,7 +66,7 @@ mapping:
         - [[earth, gravity], [electrons, electricity]]
         - [[newton, gravity], [faraday, electricity]]
         - [[earth, sun], [electrons, nucleus]]
-      score: 7.223
+      score: 9.548
     ignore: False
 
   - input:
@@ -81,8 +81,8 @@ mapping:
       relations: 
         - [[thoughts, brain], [astronaut, space]]
         - [[brain, neurons], [space, black hole]]
-      score: 5.062
-    ignore: True
+      score: 5.338
+    ignore: False
   
   - input:
       base: [cars, road, wheels]
@@ -96,7 +96,7 @@ mapping:
       relations: 
         - [[cars, road], [boats, river]]
         - [[cars, wheels], [boats, sail]]
-      score: 1.96
+      score: 9.371
     ignore: False
   
   - input:
@@ -107,11 +107,11 @@ mapping:
       mapping:
         - cars --> boats
         - road --> river
-        - wheels --> water  # steering wheel
+        - wheels --> anchors
       relations: 
         - [[cars, road], [boats, river]]
-        - [[cars, wheels], [boats, water]]
-      score: 2.787
+        - [[cars, wheels], [boats, anchors]]
+      score: 9.336
     ignore: False
 
   - input:
@@ -122,11 +122,11 @@ mapping:
       mapping:
         - sun --> rain
         - summer --> winter
-        - sunscreen --> mountains
+        - sunscreen --> umbrella
       relations: 
         - [[sun, summer], [rain, winter]]
-        - [[sun, sunscreen], [rain, mountains]]
-      score: 1.622
+        - [[sunscreen, sun], [umbrella, rain]]
+      score: 6.999
     ignore: False
   
 

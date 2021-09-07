@@ -14,6 +14,11 @@ from data_collector import DataCollector
 from sentence_embadding import SentenceEmbedding
 
 
+NUM_OF_SOLUTIONS_TO_CALC = 3
+EDGE_THRESHOLD = 0.2
+DEFAULT_DIST_THRESHOLD_FOR_CLUSTERS = 0.8
+FREQUENCY_THRESHOLD = 500
+
 class Solution:
     def __init__(self, mapping, relations, scores, score, actual_base, actual_target, length):
         self.mapping = mapping
@@ -134,8 +139,8 @@ def get_pair_mapping(model: SentenceEmbedding, data_collector: DataCollector, fr
     similatiry_edges = [(prop1, prop2, get_edge_score(prop1, prop2, model, freq)) for prop1 in props_edge1 for prop2 in props_edge2]
 
     # we want the cluster similar properties
-    clustered_sentences_1: Dict[int, List[str]] = model.clustering(mapping[0], distance_threshold=0.8)
-    clustered_sentences_2: Dict[int, List[str]] = model.clustering(mapping[1], distance_threshold=0.8)
+    clustered_sentences_1: Dict[int, List[str]] = model.clustering(mapping[0], distance_threshold=DEFAULT_DIST_THRESHOLD_FOR_CLUSTERS)
+    clustered_sentences_2: Dict[int, List[str]] = model.clustering(mapping[1], distance_threshold=DEFAULT_DIST_THRESHOLD_FOR_CLUSTERS)
 
     # for each two clusters (from the opposite side of the bipartite) we will take only one edge, which is the maximum weighted.
     cluster_edges_weights = get_edges_with_maximum_weight(similatiry_edges, clustered_sentences_1, clustered_sentences_2)
@@ -143,11 +148,12 @@ def get_pair_mapping(model: SentenceEmbedding, data_collector: DataCollector, fr
     # now we want to get the maximum weighted match, which hold the constraint that each cluster has no more than one edge.
     # we will look only on edges that appear in cluster_edges_weights
     edges = utils.get_maximum_weighted_match(model, clustered_sentences_1, clustered_sentences_2, weights=cluster_edges_weights)
+    sorted(edges, key=lambda x: x[2], reverse=True)
     return {
         "graph": edges,
         "clusters1": clustered_sentences_1,
         "clusters2": clustered_sentences_2,
-        "score": round(sum([edge[2] for edge in edges]), 3)
+        "score": round(sum([edge[2] for edge in edges[:NUM_OF_SOLUTIONS_TO_CALC] if edge[2] > EDGE_THRESHOLD]), 3)
     }
 
 
@@ -173,8 +179,8 @@ def get_best_pair_mapping(model: SentenceEmbedding, freq: Frequencies, data_coll
             similatiry_edges = [(prop1, prop2, get_edge_score(prop1, prop2, model, freq)) for prop1 in props_edge1 for prop2 in props_edge2]
 
             # we want the cluster similar properties
-            clustered_sentences_1: Dict[int, List[str]] = model.clustering(direction[0], distance_threshold=0.8)
-            clustered_sentences_2: Dict[int, List[str]] = model.clustering(direction[1], distance_threshold=0.8)
+            clustered_sentences_1: Dict[int, List[str]] = model.clustering(direction[0], distance_threshold=DEFAULT_DIST_THRESHOLD_FOR_CLUSTERS)
+            clustered_sentences_2: Dict[int, List[str]] = model.clustering(direction[1], distance_threshold=DEFAULT_DIST_THRESHOLD_FOR_CLUSTERS)
 
             # for each two clusters (from the opposite side of the bipartite) we will take only one edge, which is the maximum weighted.
             cluster_edges_weights = get_edges_with_maximum_weight(similatiry_edges, clustered_sentences_1, clustered_sentences_2)
@@ -184,7 +190,8 @@ def get_best_pair_mapping(model: SentenceEmbedding, freq: Frequencies, data_coll
             edges = utils.get_maximum_weighted_match(model, clustered_sentences_1, clustered_sentences_2, weights=cluster_edges_weights)
             
             # score is just the sum of all the edges (edges between clusters)
-            mapping_score += round(sum([edge[2] for edge in edges]), 3)
+            edges = sorted(edges, key=lambda x: x[2], reverse=True)
+            mapping_score += round(sum([edge[2] for edge in edges[:NUM_OF_SOLUTIONS_TO_CALC] if edge[2] > EDGE_THRESHOLD]), 3)
 
         mappings.append((mapping[0], mapping_score))
         cache[((mapping[0][0][0], mapping[0][0][1]),(mapping[0][1][0], mapping[0][1][1]))] = mapping_score
@@ -415,7 +422,7 @@ def mapping_wrapper(base: List[str],
                     quasimodo: Quasimodo = None, 
                     freq: Frequencies = None, 
                     model_name: str = 'msmarco-distilbert-base-v4',
-                    threshold: Union[float, int] = 200) -> List[Solution]:
+                    threshold: Union[float, int] = FREQUENCY_THRESHOLD) -> List[Solution]:
 
     # we want all the possible pairs.
     # general there are (n choose 2) * (n choose 2) * 2 pairs.

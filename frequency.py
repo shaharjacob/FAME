@@ -7,20 +7,23 @@ from sklearn.feature_extraction.text import CountVectorizer
 
 import utils
 
-
-STOP_WORDS = ['affect']
-
 class Frequencies():
     def __init__(self, path: str, threshold: float):
         self.data = utils.read_json(path)
         self.stopwords = {}
         self.apply_threshold(threshold)
+        self.manual_stopwords()
     
     def apply_threshold(self, threshold):
         target_value = threshold if threshold >= 1 else int(threshold * len(self.data))
         self.stopwords = {k: v for i, (k, v) in enumerate(self.data.items()) if i < target_value}
-        for word in STOP_WORDS:
-            self.stopwords[word] = self.data.get(word, 1)
+    
+    def manual_stopwords(self):
+        with open('stopwords.txt', 'r') as f:
+            words = [word.strip() for word in f.read().split('\n')]
+        for word in words:
+            if word not in self.stopwords:
+                self.stopwords[word] = self.data.get(word, 1)
     
     def get(self, sequence: str):
         if sequence in self.stopwords:

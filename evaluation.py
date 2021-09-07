@@ -120,7 +120,7 @@ def evaluate(model_name: str, threshold: float):
 
 @click.command()
 @click.option('-m', '--model', default="msmarco-distilbert-base-v4", type=str, help="The model for sBERT: https://huggingface.co/sentence-transformers")
-@click.option('-t', '--threshold', default=200, type=float, help="Threshold for % to take from json frequencies")
+@click.option('-t', '--threshold', default=500, type=float, help="Threshold for % to take from json frequencies")
 @click.option('-c', '--comment', default="", type=str, help="Additional comment for the job")
 def run(model, threshold, comment):
     torch.cuda.empty_cache()

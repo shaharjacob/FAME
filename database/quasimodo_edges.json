@@ -5086,5 +5086,249 @@
 		"take"
 	],
 	"vein#hospital": [],
-	"hospital#vein": []
+	"hospital#vein": [],
+	"earth#oceans stay on": [],
+	"oceans stay on#earth": [],
+	"gravity#oceans stay on": [],
+	"oceans stay on#gravity": [],
+	"newton#oceans stay on": [],
+	"oceans stay on#newton": [],
+	"earth#not all movement along faults": [],
+	"not all movement along faults#earth": [],
+	"earth#faults": [],
+	"faults#earth": [
+		"be in",
+		"shape"
+	],
+	"earth#normal fault": [],
+	"normal fault#earth": [],
+	"earth#warmer": [
+		"become"
+	],
+	"warmer#earth": [],
+	"earth#volcanoes": [
+		"have"
+	],
+	"volcanoes#earth": [
+		"affect",
+		"be beneficial to",
+		"be bigger than",
+		"be harmful to",
+		"be on",
+		"can cool",
+		"change",
+		"help",
+		"pollute",
+		"tell about"
+	],
+	"earth#movements along fault lines": [],
+	"movements along fault lines#earth": [],
+	"earth#plate boundaries": [],
+	"plate boundaries#earth": [],
+	"earth#thinner due to ozone layer": [
+		"become"
+	],
+	"thinner due to ozone layer#earth": [],
+	"earth#movements along faults": [],
+	"movements along faults#earth": [],
+	"earth#charged": [
+		"become",
+		"has property"
+	],
+	"charged#earth": [],
+	"earth#a fault": [],
+	"a fault#earth": [],
+	"gravity#not all movement along faults": [],
+	"not all movement along faults#gravity": [],
+	"gravity#electricity": [],
+	"electricity#gravity": [],
+	"gravity#we need to": [],
+	"we need to#gravity": [],
+	"gravity#faults": [],
+	"faults#gravity": [],
+	"gravity#density": [
+		"be effected by",
+		"be related to",
+		"have effect on",
+		"relate to"
+	],
+	"density#gravity": [
+		"affect",
+		"be called",
+		"be stronger than",
+		"create"
+	],
+	"gravity#we not feel": [],
+	"we not feel#gravity": [],
+	"gravity#normal fault": [],
+	"normal fault#gravity": [],
+	"gravity#god": [],
+	"god#gravity": [],
+	"gravity#warmer": [],
+	"warmer#gravity": [],
+	"gravity#the mantle so important to": [],
+	"the mantle so important to#gravity": [],
+	"gravity#oxygen": [],
+	"oxygen#gravity": [],
+	"gravity#volcanoes": [],
+	"volcanoes#gravity": [],
+	"gravity#elliptical galaxies": [],
+	"elliptical galaxies#gravity": [],
+	"gravity#nelson": [],
+	"nelson#gravity": [],
+	"gravity#magnetic field": [],
+	"magnetic field#gravity": [
+		"be related to"
+	],
+	"gravity#movements along fault lines": [],
+	"movements along fault lines#gravity": [],
+	"gravity#plate boundaries": [],
+	"plate boundaries#gravity": [],
+	"gravity#tsunami": [],
+	"tsunami#gravity": [],
+	"gravity#the presence of sinkholes": [],
+	"the presence of sinkholes#gravity": [],
+	"gravity#gold": [],
+	"gold#gravity": [],
+	"gravity#fault": [],
+	"fault#gravity": [],
+	"gravity#thinner due to ozone layer": [],
+	"thinner due to ozone layer#gravity": [],
+	"gravity#fracking": [],
+	"fracking#gravity": [],
+	"gravity#movements along faults": [],
+	"movements along faults#gravity": [],
+	"gravity#charged": [],
+	"charged#gravity": [],
+	"gravity#senator nelson": [],
+	"senator nelson#gravity": [],
+	"gravity#cocoon": [],
+	"cocoon#gravity": [],
+	"gravity#oil": [],
+	"oil#gravity": [],
+	"gravity#a fault": [],
+	"a fault#gravity": [],
+	"gravity#biology": [],
+	"biology#gravity": [],
+	"gravity#in space create cycles we all experience": [],
+	"in space create cycles we all experience#gravity": [],
+	"gravity#seasons": [
+		"play role in"
+	],
+	"seasons#gravity": [],
+	"boats#to the right": [
+		"keep",
+		"pull"
+	],
+	"to the right#boats": [],
+	"boats#brown": [],
+	"brown#boats": [],
+	"boats#green": [],
+	"green#boats": [
+		"be unlucky on"
+	],
+	"boats#wood used to": [],
+	"wood used to#boats": [],
+	"boats#native american": [],
+	"native american#boats": [],
+	"boats#blood red": [],
+	"blood red#boats": [],
+	"boats#always": [
+		"break"
+	],
+	"always#boats": [],
+	"boats#it called flop": [],
+	"it called flop#boats": [],
+	"boats#wildlife": [],
+	"wildlife#boats": [],
+	"boats#multiple waves": [
+		"make"
+	],
+	"multiple waves#boats": [],
+	"boats#vikings": [],
+	"vikings#boats": [
+		"have"
+	],
+	"boats#red": [
+		"be painted",
+		"has color"
+	],
+	"red#boats": [],
+	"boats#chicago": [],
+	"chicago#boats": [],
+	"boats#rubidium not used to": [],
+	"rubidium not used to#boats": [],
+	"boats#life": [],
+	"life#boats": [],
+	"river#to the right": [],
+	"to the right#river": [],
+	"river#brown": [
+		"appear",
+		"has color",
+		"look",
+		"turn"
+	],
+	"brown#river": [],
+	"river#green": [
+		"be dyed",
+		"be in",
+		"has color",
+		"look",
+		"turn"
+	],
+	"green#river": [],
+	"river#wood used to": [],
+	"wood used to#river": [],
+	"river#native american": [],
+	"native american#river": [],
+	"river#blood red": [
+		"turn"
+	],
+	"blood red#river": [],
+	"river#always": [
+		"flow"
+	],
+	"always#river": [],
+	"river#it called flop": [],
+	"it called flop#river": [],
+	"river#wildlife": [
+		"support"
+	],
+	"wildlife#river": [],
+	"river#multiple waves": [],
+	"multiple waves#river": [],
+	"river#vikings": [],
+	"vikings#river": [],
+	"river#red": [
+		"has color",
+		"turn"
+	],
+	"red#river": [],
+	"river#chicago": [
+		"be green in",
+		"be in"
+	],
+	"chicago#river": [
+		"get out of"
+	],
+	"river#rubidium not used to": [],
+	"rubidium not used to#river": [],
+	"river#life": [
+		"affect",
+		"be important for",
+		"support"
+	],
+	"life#river": [],
+	"river#bamboo": [],
+	"bamboo#river": [],
+	"river#perf de castro": [],
+	"perf de castro#river": [],
+	"river#cole sprouse": [],
+	"cole sprouse#river": [],
+	"boats#bamboo": [],
+	"bamboo#boats": [],
+	"boats#perf de castro": [],
+	"perf de castro#boats": [],
+	"boats#cole sprouse": [],
+	"cole sprouse#boats": []
 }

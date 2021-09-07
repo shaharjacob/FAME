@@ -20,7 +20,7 @@ def mapping_entities():
     model_name = 'msmarco-distilbert-base-v4'
     model = SentenceEmbedding(model=model_name, data_collector=data_collector)
     threshold = request.args.get('threshold')
-    threshold = threshold if threshold else 200
+    threshold = threshold if threshold else mapping.FREQUENCY_THRESHOLD
     freq = Frequencies('jsons/merged/20%/all_1m_filter_3_sort.json', threshold=float(threshold))
     base = [b.strip() for b in request.args.get('base').split(',')]
     target = [t.strip() for t in request.args.get('target').split(',')]
@@ -112,7 +112,7 @@ def single_mapping():
     d = {0: {}, 1: {}, 2: {}, 3: {}}
     
     threshold = request.args.get('threshold')
-    threshold = threshold if threshold else 200
+    threshold = threshold if threshold else mapping.FREQUENCY_THRESHOLD
     freq = Frequencies('jsons/merged/20%/all_1m_filter_3_sort.json', threshold=float(threshold))
 
     for edge_idx, edge_ in enumerate(utils.get_edges_combinations(edge1, edge2)):   
@@ -158,7 +158,7 @@ def single_mapping():
                 "options": python2react.get_options(len(clustered_sentences_1) + len(clustered_sentences_2)),
                 "edges_score": [edge[2] for edge in edges],
                 "edges_equation": "+".join([f'edge{i}' for i in range(len(edges))]),
-                "score": round(sum([edge[2] for edge in edges]), 3)
+                "score": round(sum([edge[2] for edge in edges[:mapping.NUM_OF_SOLUTIONS_TO_CALC] if edge[2] > mapping.EDGE_THRESHOLD]), 3)
             }
     return jsonify(d)
 
@@ -193,7 +193,7 @@ def bipartite_graph():
     data_collector = DataCollector()
     model = SentenceEmbedding(data_collector=data_collector)
     threshold = request.args.get('threshold')
-    threshold = threshold if threshold else 0.00001
+    threshold = threshold if threshold else mapping.FREQUENCY_THRESHOLD
     freq = Frequencies('jsons/merged/20%/all_1m_filter_3_sort.json', threshold=float(threshold))
 
     if not utils.is_none(base1) and not utils.is_none(base2) and not utils.is_none(target1) and not utils.is_none(target2):

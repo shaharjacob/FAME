@@ -5,9 +5,8 @@ README_md = Path(__file__).parent / "README.md"
 README = README_md.read_text(encoding='utf-8')
 
 setup(
-  name='qaboard',
-  version="0.8.13", # __version__ needs to be updated in qaboard/__init__.py as well
-  license="Apache-2.0",
+  name='mapping-entities',
+  version="1.0.0",
 
   url="https://github.com/shaharjacob/mapping-entities",
   description="Mapping entities project",
