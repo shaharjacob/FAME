@@ -127,4 +127,5 @@ def run(model, threshold, comment):
     evaluate(model, threshold)
 
 if __name__ == '__main__':
+    # os.environ['CI'] = 'true'
     run()

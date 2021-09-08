@@ -8,7 +8,7 @@ import concept_net
 import suggest_entities
 import google_autosuggest
 from frequency import Frequencies
-from mapping import mapping_wrapper
+from mapping import mapping_wrapper, FREQUENCY_THRESHOLD
 from quasimodo import Quasimodo, merge_tsvs
 
 
@@ -82,10 +82,9 @@ class TestFunctions(unittest.TestCase):
 class TestMapping(unittest.TestCase):
 
     def test_mapping(self):
-        threshold = 200
         quasimodo = Quasimodo()
         pass_for_json = 'jsons/merged/20%/ci.json' if 'CI' in os.environ else 'jsons/merged/20%/all_1m_filter_3_sort.json'
-        freq = Frequencies(pass_for_json, threshold=threshold)
+        freq = Frequencies(pass_for_json, threshold=FREQUENCY_THRESHOLD)
         with open(TEST_FOLDER / 'tests.yaml', 'r') as y:
             spec = yaml.load(y, Loader=yaml.SafeLoader)
         mapping_spec = spec["mapping"]
@@ -103,7 +102,7 @@ class TestMapping(unittest.TestCase):
                                         quasimodo=quasimodo,
                                         freq=freq,
                                         model_name='msmarco-distilbert-base-v4',
-                                        threshold=threshold)
+                                        threshold=FREQUENCY_THRESHOLD)
             solution = solutions[0]
 
             # check the mapping

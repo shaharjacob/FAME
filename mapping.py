@@ -437,8 +437,8 @@ def mapping_wrapper(base: List[str],
     data_collector = DataCollector(quasimodo=quasimodo)
     model = SentenceEmbedding(model=model_name, data_collector=data_collector)
     if not freq:
-        pass_for_json = 'jsons/merged/20%/ci.json' if 'CI' in os.environ else 'jsons/merged/20%/all_1m_filter_3_sort.json'
-        freq = Frequencies(pass_for_json, threshold=threshold)
+        path_for_json = 'jsons/merged/20%/ci.json' if 'CI' in os.environ else 'jsons/merged/20%/all_1m_filter_3_sort.json'
+        freq = Frequencies(path_for_json, threshold=threshold)
 
     cache = {}
     mapping(base, target, available_pairs, solutions, data_collector, model, freq, [], [], [], [], 0, cache, depth=depth)
@@ -464,7 +464,7 @@ def mapping_wrapper(base: List[str],
     if verbose:
         secho(f"\nBase: {base}", fg="blue", bold=True)
         secho(f"Target: {target}\n", fg="blue", bold=True)
-        solutions_to_print = 20 if os.environ.get("CI", False) else top_n
+        solutions_to_print = 20 if os.environ.get('CI', False) else top_n
         for i, solution in enumerate(all_solutions[:solutions_to_print]):
             secho(f"#{i+1}", fg="blue", bold=True)
             print_solution(solution)

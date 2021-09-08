@@ -15,7 +15,7 @@ mapping:
         - [[solar system, planet], [atom, electron]]
         - [[planet, gravity], [electron, electricity]]
         - [[gravity, newton], [electricity, faraday]]
-      score: 21.168
+      score: 21.04
     ignore: False
 
   - input:
@@ -96,7 +96,7 @@ mapping:
       relations: 
         - [[cars, road], [boats, river]]
         - [[cars, wheels], [boats, sail]]
-      score: 9.371
+      score: 9.369
     ignore: False
   
   - input:

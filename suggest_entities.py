@@ -5,7 +5,7 @@ from typing import List, Dict
 from click import secho
 
 import utils
-import concept_net
+import mapping
 import google_autosuggest
 from quasimodo import Quasimodo
 from frequency import Frequencies
@@ -90,8 +90,8 @@ def get_suggestions_for_missing_entities(data_collector: DataCollector, base_not
 def get_score_between_two_entitites(entity1: str, entity2: str, model: SentenceEmbedding = None, data_collector: DataCollector = None, freq: Frequencies = None) -> float:
     model = SentenceEmbedding()
     data_collector = DataCollector()
-    pass_for_json = 'jsons/merged/20%/ci.json' if 'CI' in os.environ else 'jsons/merged/20%/all_1m_filter_3_sort.json'
-    freq = Frequencies(pass_for_json, threshold=200)
+    path_for_json = 'jsons/merged/20%/ci.json' if 'CI' in os.environ else 'jsons/merged/20%/all_1m_filter_3_sort.json'
+    freq = Frequencies(path_for_json, threshold=mapping.FREQUENCY_THRESHOLD)
         
     props1 = data_collector.get_entitiy_props(entity1)
     props2 = data_collector.get_entitiy_props(entity2)

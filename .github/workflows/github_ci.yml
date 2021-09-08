@@ -24,4 +24,4 @@ jobs:
         CI: True
     - name: Evaluation
       run: |
-        python evaluation.py --model "msmarco-distilbert-base-v4" --threshold 200
+        python evaluation.py --model "msmarco-distilbert-base-v4" --threshold 500
