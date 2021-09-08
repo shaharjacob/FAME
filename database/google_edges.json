@@ -8410,5 +8410,314 @@
 		"matches predict goal"
 	],
 	"goal#grass": [],
-	"grass#goal": []
+	"grass#goal": [],
+	"cover#book": [],
+	"pillowcase#pillow": [],
+	"book#cover": [
+		"have a back",
+		"have different",
+		"say a novel on the"
+	],
+	"pillow#pillowcase": [],
+	"pillowcase#feather": [],
+	"feather#pillowcase": [],
+	"pillow#feather": [],
+	"feather#pillow": [],
+	"cover#paper": [],
+	"paper#cover": [],
+	"book#paper": [
+		"fall faster than"
+	],
+	"paper#book": [
+		"fall slower than a",
+		"towns end",
+		"towns end in the",
+		"used for"
+	],
+	"captain#ship": [
+		"cook get his",
+		"cook prevent scurvy on his",
+		"go down with",
+		"go down with the",
+		"goes down with the",
+		"have to go down with the",
+		"last to abandon",
+		"leave",
+		"marvel destroy thanos",
+		"nemo sink",
+		"of a",
+		"of costa concordia leave the",
+		"of the",
+		"of the costa concordia abandon",
+		"of the titanic go down with the",
+		"smith go down with the",
+		"swain hesitate to help the other",
+		"the last to leave a sinking"
+	],
+	"pilot#airplane": [],
+	"ship#captain": [],
+	"airplane#pilot": [],
+	"pilot#air": [
+		"make up time in the",
+		"navigate in the",
+		"shoot at targets in the"
+	],
+	"air#pilot": [
+		"traffic controllers communicate with"
+	],
+	"pilot#airport": [
+		"find an",
+		"get to the",
+		"know that he had landed at the",
+		"locate",
+		"navigate from airport to"
+	],
+	"airport#pilot": [],
+	"airplane#air": [
+		"circulate",
+		"filter",
+		"get fresh",
+		"recirculate",
+		"recycle",
+		"refuel in the",
+		"repo go off the",
+		"stand still in the",
+		"stay in the",
+		"stay still in the",
+		"stop in mid",
+		"turn in",
+		"turn in the"
+	],
+	"air#airplane": [
+		"brakes work on",
+		"circulate in",
+		"circulate in an",
+		"circulated in an",
+		"conditioning work in",
+		"filtered on",
+		"filtered on an",
+		"flow in an",
+		"get circulated on an",
+		"move through an",
+		"pressure affect",
+		"pressure maintained in an",
+		"recycled in",
+		"resistance affect paper",
+		"resistance friction not useful for an",
+		"work in an"
+	],
+	"airplane#airport": [],
+	"airport#airplane": [],
+	"air#airport": [],
+	"airport#air": [],
+	"captain#water": [
+		"america put the plane in the"
+	],
+	"water#captain": [],
+	"captain#harbor": [],
+	"harbor#captain": [],
+	"ship#water": [
+		"anchor in deep",
+		"anchor work in deep",
+		"and pontoons float on",
+		"built of iron not sink in",
+		"carry",
+		"desalinate",
+		"float on",
+		"float while an iron nail sinks in",
+		"floating in",
+		"get drinking",
+		"get fresh",
+		"get in the",
+		"get into the",
+		"made of iron float on",
+		"make fresh",
+		"move on",
+		"moves in",
+		"pump out",
+		"spray",
+		"stay on",
+		"use ballast"
+	],
+	"water#ship": [
+		"come out of",
+		"come out of the side of a",
+		"pour out of",
+		"pumped out of"
+	],
+	"ship#harbor": [],
+	"harbor#ship": [
+		"freight",
+		"freight take so long to"
+	],
+	"water#harbor": [],
+	"harbor#water": [
+		"seals slap the"
+	],
+	"word#sentence": [
+		"black being capitalized in a",
+		"clamoured likely mean in the",
+		"flourishing function grammatically in this",
+		"strolled and asked change the tone of the",
+		"vigorous affect the meaning of the",
+		"when used change the meaning of the"
+	],
+	"number#equation": [],
+	"sentence#word": [
+		"disappear in"
+	],
+	"equation#number": [],
+	"number#math": [],
+	"math#number": [],
+	"equation#math": [],
+	"math#equation": [],
+	"word#language": [
+		"automatically change",
+		"change",
+		"changing",
+		"enter the english",
+		"for mother similar in so many",
+		"for mother so similar in different",
+		"gain meaning in a",
+		"keep changing",
+		"keep changing my",
+		"keep changing my proofing",
+		"loganberry come into our",
+		"no similar in so many",
+		"of affirmation my love",
+		"radio enter the english",
+		"randomly change",
+		"wellington come into our"
+	],
+	"language#word": [
+		"change from word to",
+		"change in",
+		"keep changing in"
+	],
+	"sentence#language": [
+		"defined in written and spoken"
+	],
+	"language#sentence": [],
+	"morning#breakfast": [],
+	"evening#dinner": [
+		"meal called"
+	],
+	"breakfast#morning": [
+		"important in the",
+		"so important in the"
+	],
+	"dinner#evening": [],
+	"evening#end": [
+		"and the morning"
+	],
+	"end#evening": [],
+	"dinner#end": [
+		"for schmucks",
+		"of herbs"
+	],
+	"end#dinner": [],
+	"morning#start": [
+		"brew",
+		"joe",
+		"sickness"
+	],
+	"start#morning": [],
+	"breakfast#start": [
+		"at tiffany's",
+		"cereals",
+		"club"
+	],
+	"start#breakfast": [],
+	"education#teacher": [
+		"budget cuts affect"
+	],
+	"healthcare#doctor": [],
+	"teacher#education": [
+		"absenteeism affect south african",
+		"affect",
+		"and educators view such kind of delivering",
+		"equip the students using the four pillars of",
+		"feel about",
+		"interpret and transform entrepreneurship",
+		"keep abreast of recent development in",
+		"leave",
+		"mentorship important in",
+		"need a philosophy of",
+		"stay current in the field of",
+		"study comparative",
+		"study economics of",
+		"study history of",
+		"study philosophy of",
+		"study sociology of",
+		"study special",
+		"unions affect"
+	],
+	"doctor#healthcare": [
+		"feel about universal",
+		"get paid in countries with free",
+		"get paid with free"
+	],
+	"healthcare#hospital": [
+		"reform affect"
+	],
+	"hospital#healthcare": [],
+	"doctor#hospital": [
+		"and nurse kill the patients in the",
+		"bill when they go to the",
+		"get privileges at a",
+		"recommend that mama go to the",
+		"send a urine sample to the",
+		"take so long in",
+		"treat covid-19 in the",
+		"wear scrubs outside of the"
+	],
+	"hospital#doctor": [],
+	"education#school": [
+		"act 2002 affect",
+		"act 2011 affect",
+		"differ between a deaf school and a hearing",
+		"of females differ from that of males in humanist"
+	],
+	"school#education": [
+		"a",
+		"affect",
+		"bus improve",
+		"care more about uniform than",
+		"choice help",
+		"funding affect",
+		"have physical",
+		"have special",
+		"help in gaining health",
+		"implement inclusive",
+		"improvement is an integral part of",
+		"lunches affect",
+		"need music",
+		"need vocational",
+		"teach religious",
+		"uniforms negatively affect",
+		"uniforms undermine free",
+		"use technology to enhance"
+	],
+	"teacher#school": [
+		"affect",
+		"feel about going back to",
+		"get mad at scout on the first day of",
+		"live far away from the",
+		"not want to go back to",
+		"not want to return to",
+		"play leadership roles in the community and",
+		"stay after",
+		"unions hate charter",
+		"wear sunglasses to"
+	],
+	"school#teacher": [
+		"affect",
+		"cook become a history",
+		"counselors support",
+		"decide which child gets which",
+		"funding affect",
+		"principal supervise his",
+		"profile connect to the philippine professional standards for",
+		"violence affect"
+	]
 }

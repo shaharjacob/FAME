@@ -1,89 +1,89 @@
 mapping:
-  - input:
-      base: [solar system, sun, planet, gravity, newton]
-      target: [atom, nucleus, electron, electricity, faraday]
-      depth: 4
-    output:
-      mapping:
-        - sun --> nucleus
-        - planet --> electron
-        - solar system --> atom
-        - gravity --> electricity
-        - newton --> faraday
+  # - input:
+  #     base: [solar system, sun, planet, gravity, newton]
+  #     target: [atom, nucleus, electron, electricity, faraday]
+  #     depth: 4
+  #   output:
+  #     mapping:
+  #       - sun --> nucleus
+  #       - planet --> electron
+  #       - solar system --> atom
+  #       - gravity --> electricity
+  #       - newton --> faraday
   
-  - input:
-      base: [thoughts, brain, neurons]
-      target: [astronaut, space, black hole]
-      depth: 2
-    output:
-      mapping:
-        - thoughts --> astronaut
-        - brain --> space
-        - neurons --> black hole
+  # - input:
+  #     base: [thoughts, brain, neurons]
+  #     target: [astronaut, space, black hole]
+  #     depth: 2
+  #   output:
+  #     mapping:
+  #       - thoughts --> astronaut
+  #       - brain --> space
+  #       - neurons --> black hole
   
-  - input:
-      base: [cars, road, wheels]
-      target: [boats, river, sail]
-      depth: 2
-    output:
-      mapping:
-        - cars --> boats
-        - road --> river
-        - wheels --> sail
+  # - input:
+  #     base: [cars, road, wheels]
+  #     target: [boats, river, sail]
+  #     depth: 2
+  #   output:
+  #     mapping:
+  #       - cars --> boats
+  #       - road --> river
+  #       - wheels --> sail
   
-  - input:
-      base: [sunscreen, sun, summer]
-      target: [umbrella, rain, winter]
-      depth: 2
-    output:
-      mapping:
-        - sun --> rain
-        - summer --> winter
-        - sunscreen --> umbrella
+  # - input:
+  #     base: [sunscreen, sun, summer]
+  #     target: [umbrella, rain, winter]
+  #     depth: 2
+  #   output:
+  #     mapping:
+  #       - sun --> rain
+  #       - summer --> winter
+  #       - sunscreen --> umbrella
   
-  - input:
-      base: [water, pressure, bucket, pipe]
-      target: [heat, temperature, kettle, iron]
-      depth: 4
-    output:
-      mapping:
-        - water --> heat
-        - pressure --> temperature
-        - bucket --> kettle
-        - pipe --> iron
+  # - input:
+  #     base: [water, pressure, bucket, pipe]
+  #     target: [heat, temperature, kettle, iron]
+  #     depth: 4
+  #   output:
+  #     mapping:
+  #       - water --> heat
+  #       - pressure --> temperature
+  #       - bucket --> kettle
+  #       - pipe --> iron
   
-  - input:
-      base: [waves, water, shore, breakwater]
-      target: [sounds, air, wall, ear]
-      depth: 4
-    output:
-      mapping:
-        - waves --> sounds
-        - water --> air
-        - shore --> ear
-        - breakwater --> wall
+  # - input:
+  #     base: [waves, water, shore, breakwater]
+  #     target: [sounds, air, wall, ear]
+  #     depth: 4
+  #   output:
+  #     mapping:
+  #       - waves --> sounds
+  #       - water --> air
+  #       - shore --> ear
+  #       - breakwater --> wall
 
-  - input:
-      base: [respiration, animal, food]
-      target: [combustion, fire, fuel]
-      depth: 4
-    output:
-      mapping:
-        - respiration --> combustion
-        - animal --> fire
-        - food --> fuel
+  # - input:
+  #     base: [respiration, animal, food]
+  #     target: [combustion, fire, fuel]
+  #     depth: 4
+  #   output:
+  #     mapping:
+  #       - respiration --> combustion
+  #       - animal --> fire
+  #       - food --> fuel
 
-  - input:
-      base: [light, bright, lens]
-      target: [sound, loud, horn]
-      depth: 4
-    output:
-      mapping:
-        - light --> sound
-        - bright --> loud
-        - lens --> horn
+  # - input:
+  #     base: [light, bright, lens]
+  #     target: [sound, loud, horn]
+  #     depth: 4
+  #   output:
+  #     mapping:
+  #       - light --> sound
+  #       - bright --> loud
+  #       - lens --> horn
 
-  - input:
+  - input: # TODO
       base: [computer, processing, bug, broken]
       target: [brain, thinking, mistake, confused]
       depth: 4
@@ -94,65 +94,56 @@ mapping:
         - bug --> mistake
         - broken --> confused
 
-  - input:
-      base: [war, soldiers, weapon]
-      target: [court, lawyer, evidence] 
-      depth: 4
-    output:
-      mapping:
-        - war --> court
-        - soldiers --> lawyer
-        - weapon --> evidence
+  # - input:
+  #     base: [war, soldiers, weapon]
+  #     target: [court, lawyer, evidence] 
+  #     depth: 4
+  #   output:
+  #     mapping:
+  #       - war --> court
+  #       - soldiers --> lawyer
+  #       - weapon --> evidence
 
-  - input:
-      base: [blood, vein, hospital]
-      target: [people, bus, garage] 
-      depth: 4
-    output:
-      mapping:
-        - blood --> people
-        - vein --> bus
-        - hospital --> garage
+  # - input:
+  #     base: [blood, vein, hospital]
+  #     target: [people, bus, garage] 
+  #     depth: 4
+  #   output:
+  #     mapping:
+  #       - blood --> people
+  #       - vein --> bus
+  #       - hospital --> garage
 
-  - input:
-      base: [law, crime]
-      target: [medicine, illness] 
-      depth: 4
-    output:
-      mapping:
-        - law --> medicine
-        - crime --> illness
+  # - input:
+  #     base: [law, crime]
+  #     target: [medicine, illness] 
+  #     depth: 4
+  #   output:
+  #     mapping:
+  #       - law --> medicine
+  #       - crime --> illness
 
-  - input:
-      base: [seeds, fruit, bloom]
-      target: [ideas, product, success] 
-      depth: 4
-    output:
-      mapping:
-        - seeds --> ideas
-        - fruit --> product
-        - bloom --> success
+  # - input:
+  #     base: [seeds, fruit, bloom]
+  #     target: [ideas, product, success] 
+  #     depth: 4
+  #   output:
+  #     mapping:
+  #       - seeds --> ideas
+  #       - fruit --> product
+  #       - bloom --> success
 
-  - input:
-      base: [route, destination]
-      target: [plan, goal] 
-      depth: 4
-    output:
-      mapping:
-        - route --> plan
-        - destination --> goal
+  # - input:
+  #     base: [buildings, foundations, crack]
+  #     target: [theories, reasons, flaw] 
+  #     depth: 4
+  #   output:
+  #     mapping:
+  #       - buildings --> theories
+  #       - foundations --> reasons
+  #       - crack --> flaw
 
-  - input:
-      base: [buildings, foundations, crack]
-      target: [theories, reasons, flaw] 
-      depth: 4
-    output:
-      mapping:
-        - buildings --> theories
-        - foundations --> reasons
-        - crack --> flaw
-
-  - input:
+  - input: # TODO
       base: [room, apartment, building, neighborhood]
       target: [leaf, branch, tree, forest] 
       depth: 4
@@ -163,13 +154,63 @@ mapping:
         - building --> tree
         - neighborhood --> forest
 
-  - input:
-      base: [gate, football, pendel, grass]
-      target: [basket, basketball, penalty, parquet] 
-      depth: 4
-    output:
-      mapping:
-        - gate --> basket
-        - football --> basketball
-        - pendel --> penalty
-        - grass --> parquet
+  # - input:
+  #     base: [goal, football, grass]
+  #     target: [basket, basketball, parquet] 
+  #     depth: 4
+  #   output:
+  #     mapping:
+  #       - goal --> basket
+  #       - football --> basketball
+  #       - grass --> parquet
+
+  # - input:
+  #     base: [cover, book, paper]
+  #     target: [pillowcase, pillow, feather] 
+  #     depth: 4
+  #   output:
+  #     mapping:
+  #       - cover --> pillowcase
+  #       - book --> pillow
+  #       - paper --> feather
+
+  # - input:
+  #     base: [captain, ship, water, harbor]
+  #     target: [pilot, airplane, air, airport] 
+  #     depth: 4
+  #   output:
+  #     mapping:
+  #       - captain --> pilot
+  #       - ship --> airplane
+  #       - water --> air
+  #       - harbor --> airport
+
+  # - input:
+  #     base: [word, sentence, language]
+  #     target: [number, equation, math] 
+  #     depth: 4
+  #   output:
+  #     mapping:
+  #       - word --> number
+  #       - sentence --> equation
+  #       - language --> math
+
+  # - input:
+  #     base: [morning, breakfast, start]
+  #     target: [evening, dinner, end] 
+  #     depth: 4
+  #   output:
+  #     mapping:
+  #       - morning --> evening
+  #       - breakfast --> dinner
+  #       - start --> end
+
+  # - input:
+  #     base: [education, teacher, school]
+  #     target: [healthcare, doctor, hospital] 
+  #     depth: 4
+  #   output:
+  #     mapping:
+  #       - education --> healthcare
+  #       - teacher --> doctor
+  #       - school --> hospital

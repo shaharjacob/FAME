@@ -3428,5 +3428,134 @@
 	"goal#football": [],
 	"football#goal": [],
 	"goal#grass": [],
-	"grass#goal": []
+	"grass#goal": [],
+	"cover#book": [
+		"covering pages in a"
+	],
+	"pillowcase#pillow": [
+		"a cover for a",
+		"coverning a",
+		"decorating a",
+		"protecting the fabric of a",
+		"surrounding a"
+	],
+	"book#cover": [],
+	"pillow#pillowcase": [],
+	"pillowcase#feather": [],
+	"feather#pillowcase": [],
+	"pillow#feather": [],
+	"feather#pillow": [
+		"filling a",
+		"stuffing a"
+	],
+	"cover#paper": [],
+	"paper#cover": [],
+	"book#paper": [
+		"made of",
+		"printed"
+	],
+	"paper#book": [],
+	"captain#ship": [
+		"a",
+		"captain a",
+		"command a",
+		"commanding a",
+		"commanding a star",
+		"final authority aboard",
+		"leader",
+		"man a",
+		"shore the"
+	],
+	"pilot#airplane": [
+		"bank an",
+		"fly",
+		"flying in his or her",
+		"land an",
+		"land the",
+		"man an",
+		"work in an"
+	],
+	"ship#captain": [],
+	"airplane#pilot": [],
+	"pilot#air": [],
+	"air#pilot": [],
+	"pilot#airport": [
+		"circle an"
+	],
+	"airport#pilot": [],
+	"airplane#air": [
+		"heavier than"
+	],
+	"air#airplane": [],
+	"airplane#airport": [
+		"arrive at the",
+		"circle an",
+		"circle around the"
+	],
+	"airport#airplane": [],
+	"air#airport": [],
+	"airport#air": [],
+	"captain#water": [],
+	"water#captain": [],
+	"captain#harbor": [],
+	"harbor#captain": [],
+	"ship#water": [
+		"swim on",
+		"travel over"
+	],
+	"water#ship": [],
+	"ship#harbor": [],
+	"harbor#ship": [],
+	"water#harbor": [],
+	"harbor#water": [],
+	"word#sentence": [
+		"a piece of a",
+		"begin a"
+	],
+	"number#equation": [],
+	"sentence#word": [],
+	"equation#number": [],
+	"number#math": [],
+	"math#number": [],
+	"equation#math": [],
+	"math#equation": [],
+	"word#language": [
+		"a unit of"
+	],
+	"language#word": [],
+	"sentence#language": [
+		"a unit of"
+	],
+	"language#sentence": [],
+	"morning#breakfast": [],
+	"evening#dinner": [],
+	"breakfast#morning": [],
+	"dinner#evening": [],
+	"evening#end": [],
+	"end#evening": [],
+	"dinner#end": [],
+	"end#dinner": [],
+	"morning#start": [],
+	"start#morning": [],
+	"breakfast#start": [],
+	"start#breakfast": [],
+	"education#teacher": [],
+	"healthcare#doctor": [],
+	"teacher#education": [],
+	"doctor#healthcare": [],
+	"healthcare#hospital": [],
+	"hospital#healthcare": [],
+	"doctor#hospital": [],
+	"hospital#doctor": [
+		"page a"
+	],
+	"education#school": [],
+	"school#education": [
+		"get an",
+		"provide"
+	],
+	"teacher#school": [
+		"work in a"
+	],
+	"school#teacher": []
 }

@@ -483,8 +483,8 @@ def print_solution(solution: Solution):
         secho(f"{score}", fg="blue", bold=True)
     print()
 
-    secho(f"Total score: {solution.score}", fg="blue", bold=True)
-    secho(f"Old score: {round(sum(solution.scores), 3)}", fg="blue", bold=True)
+    secho(f"Score: {solution.score}", fg="blue", bold=True)
+    # secho(f"Old score: {round(sum(solution.scores), 3)}", fg="blue", bold=True)
     print()
 
 

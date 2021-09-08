@@ -6208,5 +6208,191 @@
 	],
 	"football#goal": [],
 	"goal#grass": [],
-	"grass#goal": []
+	"grass#goal": [],
+	"cover#book": [],
+	"pillowcase#pillow": [],
+	"book#cover": [
+		"change",
+		"have",
+		"have at all"
+	],
+	"pillow#pillowcase": [],
+	"pillowcase#feather": [],
+	"feather#pillowcase": [],
+	"pillow#feather": [
+		"have"
+	],
+	"feather#pillow": [
+		"be collected for",
+		"be used in",
+		"come out of"
+	],
+	"cover#paper": [],
+	"paper#cover": [],
+	"book#paper": [
+		"be made from"
+	],
+	"paper#book": [
+		"can"
+	],
+	"captain#ship": [
+		"can abandon",
+		"go down with",
+		"sink with"
+	],
+	"pilot#airplane": [],
+	"ship#captain": [],
+	"airplane#pilot": [
+		"be partially controlled by"
+	],
+	"pilot#air": [
+		"communicate in",
+		"has property"
+	],
+	"air#pilot": [],
+	"pilot#airport": [
+		"get to"
+	],
+	"airport#pilot": [],
+	"airplane#air": [
+		"be in",
+		"can",
+		"can float in",
+		"can fly in",
+		"fly around in",
+		"hold on",
+		"pollute",
+		"recycled",
+		"stay in",
+		"stay up in"
+	],
+	"air#airplane": [],
+	"airplane#airport": [
+		"move slowly around"
+	],
+	"airport#airplane": [],
+	"air#airport": [],
+	"airport#air": [],
+	"captain#water": [],
+	"water#captain": [],
+	"captain#harbor": [],
+	"harbor#captain": [],
+	"ship#water": [
+		"float in",
+		"float on",
+		"get into",
+		"pump",
+		"pump out",
+		"release",
+		"sink below",
+		"sink more in",
+		"spray",
+		"survive in"
+	],
+	"water#ship": [
+		"be out of",
+		"pour out of"
+	],
+	"ship#harbor": [
+		"enter"
+	],
+	"harbor#ship": [],
+	"water#harbor": [],
+	"harbor#water": [],
+	"word#sentence": [],
+	"number#equation": [],
+	"sentence#word": [],
+	"equation#number": [],
+	"number#math": [
+		"be related to",
+		"be used in"
+	],
+	"math#number": [],
+	"equation#math": [
+		"be important in"
+	],
+	"math#equation": [],
+	"word#language": [
+		"be added to",
+		"enter",
+		"randomly change"
+	],
+	"language#word": [
+		"have masculine",
+		"have rendered",
+		"have sworn"
+	],
+	"sentence#language": [],
+	"language#sentence": [],
+	"morning#breakfast": [],
+	"evening#dinner": [],
+	"breakfast#morning": [
+		"be destined",
+		"be good in",
+		"be in"
+	],
+	"dinner#evening": [],
+	"evening#end": [
+		"can"
+	],
+	"end#evening": [],
+	"dinner#end": [],
+	"end#dinner": [],
+	"morning#start": [
+		"can"
+	],
+	"start#morning": [],
+	"breakfast#start": [],
+	"start#breakfast": [],
+	"education#teacher": [],
+	"healthcare#doctor": [],
+	"teacher#education": [
+		"be important in",
+		"can improve",
+		"care for",
+		"leave",
+		"study"
+	],
+	"doctor#healthcare": [],
+	"healthcare#hospital": [],
+	"hospital#healthcare": [],
+	"doctor#hospital": [
+		"be affiliated with",
+		"get affiliated with",
+		"wear scrubs outside of",
+		"work in"
+	],
+	"hospital#doctor": [
+		"employ",
+		"hire",
+		"pay"
+	],
+	"education#school": [
+		"be at",
+		"be important in",
+		"has property"
+	],
+	"school#education": [
+		"have",
+		"need",
+		"teach"
+	],
+	"teacher#school": [
+		"be important in",
+		"blame in",
+		"can chew gum in",
+		"can pray in",
+		"come to",
+		"leave",
+		"move",
+		"stay after",
+		"switch",
+		"transfer"
+	],
+	"school#teacher": [
+		"assign students to",
+		"hire",
+		"pay less",
+		"recruit"
+	]
 }
