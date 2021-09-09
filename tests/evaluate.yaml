@@ -1,5 +1,5 @@
 mapping:
-  - input:
+  - input: #1
       base: [solar system, sun, planet, gravity, newton]
       target: [atom, nucleus, electron, electricity, faraday]
       depth: 4
@@ -11,7 +11,7 @@ mapping:
         - gravity --> electricity
         - newton --> faraday
   
-  - input:
+  - input: #2
       base: [thoughts, brain, neurons]
       target: [astronaut, space, black hole]
       depth: 2
@@ -21,7 +21,7 @@ mapping:
         - brain --> space
         - neurons --> black hole
   
-  - input:
+  - input: #3
       base: [cars, road, wheels]
       target: [boats, river, sail]
       depth: 2
@@ -31,7 +31,7 @@ mapping:
         - road --> river
         - wheels --> sail
   
-  - input:
+  - input: #4
       base: [sunscreen, sun, summer]
       target: [umbrella, rain, winter]
       depth: 2
@@ -41,7 +41,7 @@ mapping:
         - summer --> winter
         - sunscreen --> umbrella
   
-  - input:
+  - input: #5
       base: [water, pressure, bucket, pipe]
       target: [heat, temperature, kettle, iron]
       depth: 4
@@ -52,7 +52,7 @@ mapping:
         - bucket --> kettle
         - pipe --> iron
   
-  - input:
+  - input: #6
       base: [waves, water, shore, breakwater]
       target: [sounds, air, wall, ear]
       depth: 4
@@ -63,7 +63,7 @@ mapping:
         - shore --> ear
         - breakwater --> wall
 
-  - input:
+  - input: #7
       base: [respiration, animal, food]
       target: [combustion, fire, fuel]
       depth: 4
@@ -73,7 +73,7 @@ mapping:
         - animal --> fire
         - food --> fuel
 
-  - input:
+  - input: #8
       base: [light, bright, lens]
       target: [sound, loud, horn]
       depth: 4
@@ -83,7 +83,7 @@ mapping:
         - bright --> loud
         - lens --> horn
 
-  - input:
+  - input: #9
       base: [computer, processing, bug]
       target: [brain, thinking, mistake]
       depth: 4
@@ -93,7 +93,7 @@ mapping:
         - processing --> thinking
         - bug --> mistake
 
-  - input:
+  - input: #10
       base: [war, soldiers, weapon]
       target: [court, lawyer, evidence] 
       depth: 4
@@ -103,7 +103,7 @@ mapping:
         - soldiers --> lawyer
         - weapon --> evidence
 
-  - input:
+  - input: #11
       base: [blood, vein, hospital]
       target: [people, bus, garage] 
       depth: 4
@@ -113,7 +113,7 @@ mapping:
         - vein --> bus
         - hospital --> garage
 
-  - input:
+  - input: #12
       base: [law, crime, death]
       target: [medicine, illness, life] 
       depth: 4
@@ -123,27 +123,7 @@ mapping:
         - crime --> illness
         - death --> life
 
-  - input:
-      base: [seeds, fruit, bloom]
-      target: [ideas, product, success] 
-      depth: 4
-    output:
-      mapping:
-        - seeds --> ideas
-        - fruit --> product
-        - bloom --> success
-
-  - input:
-      base: [buildings, foundations, crack]
-      target: [theories, reasons, flaw] 
-      depth: 4
-    output:
-      mapping:
-        - buildings --> theories
-        - foundations --> reasons
-        - crack --> flaw
-
-  - input: # TODO
+  - input: #13 TODO
       base: [room, apartment, building, neighborhood]
       target: [leaf, branch, tree, forest] 
       depth: 4
@@ -154,7 +134,7 @@ mapping:
         - building --> tree
         - neighborhood --> forest
 
-  - input:
+  - input: #14
       base: [goal, football, grass, feet]
       target: [basket, basketball, parquet, hands] 
       depth: 4
@@ -165,7 +145,27 @@ mapping:
         - grass --> parquet
         - feet --> hands
 
-  - input:
+  - input: #15
+      base: [seeds, fruit, bloom]
+      target: [ideas, product, success] 
+      depth: 4
+    output:
+      mapping:
+        - seeds --> ideas
+        - fruit --> product
+        - bloom --> success
+
+  - input: #16
+      base: [buildings, foundations, crack]
+      target: [theories, reasons, flaw] 
+      depth: 4
+    output:
+      mapping:
+        - buildings --> theories
+        - foundations --> reasons
+        - crack --> flaw
+
+  - input: #17
       base: [cover, book, paper, wood]
       target: [pillowcase, pillow, feather, chicken] 
       depth: 4
@@ -176,7 +176,7 @@ mapping:
         - paper --> feather
         - wood --> chicken
 
-  - input:
+  - input: #18
       base: [captain, ship, water, harbor]
       target: [pilot, airplane, air, airport] 
       depth: 4
@@ -187,7 +187,7 @@ mapping:
         - water --> air
         - harbor --> airport
 
-  - input:
+  - input: #19
       base: [letter, word, sentence, language]
       target: [digit, number, equation, math] 
       depth: 4
@@ -198,7 +198,7 @@ mapping:
         - language --> math
         - letter --> digit
 
-  - input:
+  - input: #20
       base: [morning, breakfast, start, coffee]
       target: [evening, dinner, end, wine] 
       depth: 4
@@ -209,7 +209,7 @@ mapping:
         - start --> end
         - coffee --> wine
 
-  - input:
+  - input: #21
       base: [education, teacher, school]
       target: [healthcare, doctor, hospital] 
       depth: 4
