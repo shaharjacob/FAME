@@ -3627,5 +3627,27 @@
 	"crime#death": [
 		"punishable by"
 	],
-	"death#crime": []
+	"death#crime": [],
+	"vacuum cleaner#dust": [],
+	"black hole#planet": [],
+	"dust#vacuum cleaner": [],
+	"planet#black hole": [],
+	"black hole#gravity": [],
+	"gravity#black hole": [],
+	"vacuum cleaner#electricity": [],
+	"electricity#vacuum cleaner": [],
+	"dust#electricity": [],
+	"electricity#dust": [],
+	"motorcycle#motorcyclist": [],
+	"singer#microphone": [],
+	"motorcyclist#motorcycle": [],
+	"microphone#singer": [],
+	"singer#electricity": [],
+	"electricity#singer": [],
+	"microphone#electricity": [],
+	"electricity#microphone": [],
+	"motorcycle#fuel": [],
+	"fuel#motorcycle": [],
+	"motorcyclist#fuel": [],
+	"fuel#motorcyclist": []
 }

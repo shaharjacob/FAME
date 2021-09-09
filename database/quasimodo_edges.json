@@ -6495,5 +6495,48 @@
 	"law#death": [],
 	"death#law": [],
 	"crime#death": [],
-	"death#crime": []
+	"death#crime": [],
+	"vacuum cleaner#dust": [],
+	"black hole#planet": [
+		"be different from",
+		"destroy"
+	],
+	"dust#vacuum cleaner": [],
+	"planet#black hole": [],
+	"black hole#gravity": [
+		"can emit",
+		"have"
+	],
+	"gravity#black hole": [
+		"affect light in",
+		"be related to",
+		"be strongest in",
+		"can escape",
+		"escape",
+		"get out of",
+		"propagate from"
+	],
+	"vacuum cleaner#electricity": [],
+	"electricity#vacuum cleaner": [],
+	"dust#electricity": [],
+	"electricity#dust": [],
+	"motorcycle#motorcyclist": [],
+	"singer#microphone": [
+		"put on",
+		"tap",
+		"use"
+	],
+	"motorcyclist#motorcycle": [],
+	"microphone#singer": [],
+	"singer#electricity": [],
+	"electricity#singer": [],
+	"microphone#electricity": [],
+	"electricity#microphone": [],
+	"motorcycle#fuel": [
+		"be efficient",
+		"be more efficient"
+	],
+	"fuel#motorcycle": [],
+	"motorcyclist#fuel": [],
+	"fuel#motorcyclist": []
 }

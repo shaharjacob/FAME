@@ -9779,5 +9779,101 @@
 		"was a disproportionate penalty for",
 		"was abolished for",
 		"was applied to"
-	]
+	],
+	"vacuum cleaner#dust": [
+		"can be used to remove",
+		"contain",
+		"is great at picking up",
+		"is great at removing",
+		"picks up",
+		"removed",
+		"sucks up",
+		"will effectively remove"
+	],
+	"black hole#planet": [
+		"are also",
+		"dwarf",
+		"sucked up"
+	],
+	"dust#vacuum cleaner": [
+		"can be removed with",
+		"is",
+		"picked up by",
+		"sucked into",
+		"use"
+	],
+	"planet#black hole": [
+		"has been destroyed by",
+		"is being drawn towards",
+		"sucked into"
+	],
+	"black hole#gravity": [
+		"have",
+		"is",
+		"is an object with"
+	],
+	"gravity#black hole": [
+		"called",
+		"escape from",
+		"get sucked into",
+		"go for",
+		"is indeed destroyed through",
+		"predicts the possibility of"
+	],
+	"vacuum cleaner#electricity": [
+		"are also"
+	],
+	"electricity#vacuum cleaner": [],
+	"dust#electricity": [],
+	"electricity#dust": [
+		"attracts"
+	],
+	"motorcycle#motorcyclist": [
+		"allows",
+		"left"
+	],
+	"singer#microphone": [
+		"gets to hit",
+		"grabbed",
+		"has ever stood before",
+		"is standing with",
+		"is using",
+		"leans into",
+		"moved to",
+		"moves",
+		"packed",
+		"shared",
+		"sings into",
+		"sings with",
+		"stepped up to",
+		"will reach out for"
+	],
+	"motorcyclist#motorcycle": [
+		"has been injured in",
+		"laid",
+		"lost control of",
+		"was killed in",
+		"was thrown from"
+	],
+	"microphone#singer": [
+		"are used for",
+		"was"
+	],
+	"singer#electricity": [],
+	"electricity#singer": [],
+	"microphone#electricity": [
+		"requires"
+	],
+	"electricity#microphone": [],
+	"motorcycle#fuel": [
+		"are",
+		"is low on",
+		"typically sits immediately under"
+	],
+	"fuel#motorcycle": [
+		"injected",
+		"powered"
+	],
+	"motorcyclist#fuel": [],
+	"fuel#motorcyclist": []
 }

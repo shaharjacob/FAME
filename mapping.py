@@ -447,16 +447,15 @@ def mapping_wrapper(base: List[str],
     suggestions_solutions = []
     if suggestions and num_of_suggestions > 0:
         solutions = sorted(solutions, key=lambda x: (x.length, x.score), reverse=True)
-        # solutions = sorted(solutions, key=lambda x: x.score, reverse=True)
-        number_of_solutions_for_suggestions = 5
-        # the idea is to iterate over the founded solutions, and check if there are entities are not mapped.
-        # this logic is checked only if ONE entity have missing mapping (from base or target)
-        for solution in solutions[:number_of_solutions_for_suggestions]:
-            mapping_suggestions_wrapper(base, "actual_base", "actual_target", solution, data_collector, model, freq, suggestions_solutions, cache, num_of_suggestions, verbose)
-            mapping_suggestions_wrapper(target, "actual_target", "actual_base", solution, data_collector, model, freq, suggestions_solutions, cache, num_of_suggestions, verbose)
+        if solutions and solutions[0].length < len(base):
+            number_of_solutions_for_suggestions = 5
+            # the idea is to iterate over the founded solutions, and check if there are entities are not mapped.
+            # this logic is checked only if ONE entity have missing mapping (from base or target)
+            for solution in solutions[:number_of_solutions_for_suggestions]:
+                mapping_suggestions_wrapper(base, "actual_base", "actual_target", solution, data_collector, model, freq, suggestions_solutions, cache, num_of_suggestions, verbose)
+                mapping_suggestions_wrapper(target, "actual_target", "actual_base", solution, data_collector, model, freq, suggestions_solutions, cache, num_of_suggestions, verbose)
 
     all_solutions = sorted(solutions + suggestions_solutions, key=lambda x: (x.length, x.score), reverse=True)
-    # all_solutions = sorted(solutions + suggestions_solutions, key=lambda x: x.score, reverse=True)
     if not all_solutions:
         if verbose:
             secho("No solution found")

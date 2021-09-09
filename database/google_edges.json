@@ -8861,5 +8861,49 @@
 		"penalty not deter",
 		"penalty prevent",
 		"penalty reduce"
-	]
+	],
+	"vacuum cleaner#dust": [],
+	"black hole#planet": [
+		"like a"
+	],
+	"dust#vacuum cleaner": [],
+	"planet#black hole": [],
+	"black hole#gravity": [
+		"affect",
+		"have",
+		"have high",
+		"have so much",
+		"have strong",
+		"related to"
+	],
+	"gravity#black hole": [
+		"create",
+		"escape a",
+		"related to",
+		"so intense near a",
+		"so strong in a",
+		"work in a"
+	],
+	"vacuum cleaner#electricity": [],
+	"electricity#vacuum cleaner": [],
+	"dust#electricity": [],
+	"electricity#dust": [],
+	"motorcycle#motorcyclist": [],
+	"singer#microphone": [
+		"have a screen in front of",
+		"put their mouth on the",
+		"sing so close to the"
+	],
+	"motorcyclist#motorcycle": [],
+	"microphone#singer": [],
+	"singer#electricity": [],
+	"electricity#singer": [],
+	"microphone#electricity": [],
+	"electricity#microphone": [],
+	"motorcycle#fuel": [],
+	"fuel#motorcycle": [
+		"injection work on a"
+	],
+	"motorcyclist#fuel": [],
+	"fuel#motorcyclist": []
 }

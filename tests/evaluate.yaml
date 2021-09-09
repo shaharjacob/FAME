@@ -218,3 +218,23 @@ mapping:
         - education --> healthcare
         - teacher --> doctor
         - school --> hospital
+
+  - input: #22
+      base: [vacuum cleaner, dust, electricity]
+      target: [black hole, planet, gravity] 
+      depth: 4
+    output:
+      mapping:
+        - vacuum cleaner --> black hole
+        - dust --> planet
+        - electricity --> gravity
+
+  - input: #23
+      base: [motorcycle, motorcyclist, fuel]
+      target: [singer, microphone, electricity] 
+      depth: 4
+    output:
+      mapping:
+        - motorcyclist --> singer
+        - motorcycle --> microphone
+        - fuel --> electricity
