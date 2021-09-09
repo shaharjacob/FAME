@@ -8719,5 +8719,147 @@
 		"principal supervise his",
 		"profile connect to the philippine professional standards for",
 		"violence affect"
+	],
+	"letter#word": [
+		"disappear when i type in",
+		"get cut off in"
+	],
+	"digit#number": [],
+	"word#letter": [
+		"beauty begin with a capital",
+		"cut off the bottom of",
+		"start with a capital"
+	],
+	"number#digit": [],
+	"digit#equation": [],
+	"equation#digit": [],
+	"digit#math": [],
+	"math#digit": [],
+	"letter#sentence": [
+		"i capitalized in a"
+	],
+	"sentence#letter": [
+		"start with a capital"
+	],
+	"letter#language": [],
+	"language#letter": [],
+	"evening#wine": [],
+	"wine#evening": [],
+	"dinner#wine": [],
+	"wine#dinner": [],
+	"end#wine": [],
+	"wine#end": [
+		"country"
+	],
+	"morning#coffee": [],
+	"coffee#morning": [
+		"bad for you in the",
+		"give me diarrhea in the",
+		"good in the",
+		"help in the",
+		"make me dizzy in the",
+		"make me gag in the",
+		"make me nauseous in the",
+		"make me sick in the",
+		"make you poop in the",
+		"taste better in the",
+		"upset my stomach in the"
+	],
+	"breakfast#coffee": [],
+	"coffee#breakfast": [
+		"good for"
+	],
+	"start#coffee": [],
+	"coffee#start": [
+		"beans",
+		"meets bagel",
+		"morning",
+		"shops",
+		"trade"
+	],
+	"pillowcase#chicken": [],
+	"chicken#pillowcase": [],
+	"pillow#chicken": [],
+	"chicken#pillow": [],
+	"feather#chicken": [],
+	"chicken#feather": [
+		"eat",
+		"eat their",
+		"have",
+		"lose",
+		"lose their",
+		"losing",
+		"losing her",
+		"pulling out"
+	],
+	"cover#wood": [],
+	"wood#cover": [],
+	"book#wood": [
+		"called norwegian"
+	],
+	"wood#book": [],
+	"paper#wood": [
+		"burn faster than",
+		"come from",
+		"made from",
+		"made out of",
+		"wasps like"
+	],
+	"wood#paper": [
+		"get made into",
+		"made into",
+		"turn into",
+		"turn to",
+		"used for",
+		"used to make"
+	],
+	"basket#hands": [],
+	"hands#basket": [],
+	"basketball#hands": [
+		"players blow on their",
+		"players have big",
+		"players lick their",
+		"players put powder on their",
+		"players shoot with one"
+	],
+	"hands#basketball": [
+		"eye coordination important in",
+		"signals are important in the game"
+	],
+	"parquet#hands": [],
+	"hands#parquet": [],
+	"goal#feet": [],
+	"feet#goal": [],
+	"football#feet": [
+		"players tape their"
+	],
+	"feet#football": [],
+	"grass#feet": [],
+	"feet#grass": [],
+	"medicine#life": [
+		"change",
+		"save"
+	],
+	"life#medicine": [
+		"science important in"
+	],
+	"illness#life": [
+		"affect quality of",
+		"affect social"
+	],
+	"life#illness": [],
+	"law#death": [
+		"called the surgeon of",
+		"of attraction explain",
+		"of attraction work with"
+	],
+	"death#law": [],
+	"crime#death": [],
+	"death#crime": [
+		"penalty deter",
+		"penalty increase",
+		"penalty not deter",
+		"penalty prevent",
+		"penalty reduce"
 	]
 }

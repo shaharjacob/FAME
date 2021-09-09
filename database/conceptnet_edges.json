@@ -3557,5 +3557,75 @@
 	"teacher#school": [
 		"work in a"
 	],
-	"school#teacher": []
+	"school#teacher": [],
+	"letter#word": [
+		"change the spelling of a",
+		"spelling a"
+	],
+	"digit#number": [],
+	"word#letter": [],
+	"number#digit": [],
+	"digit#equation": [],
+	"equation#digit": [],
+	"digit#math": [],
+	"math#digit": [],
+	"letter#sentence": [],
+	"sentence#letter": [],
+	"letter#language": [],
+	"language#letter": [],
+	"evening#wine": [],
+	"wine#evening": [],
+	"dinner#wine": [
+		"include"
+	],
+	"wine#dinner": [],
+	"end#wine": [],
+	"wine#end": [],
+	"morning#coffee": [],
+	"coffee#morning": [
+		"good in the",
+		"waking up in the"
+	],
+	"breakfast#coffee": [],
+	"coffee#breakfast": [],
+	"start#coffee": [],
+	"coffee#start": [],
+	"pillowcase#chicken": [],
+	"chicken#pillowcase": [],
+	"pillow#chicken": [],
+	"chicken#pillow": [],
+	"feather#chicken": [],
+	"chicken#feather": [],
+	"cover#wood": [],
+	"wood#cover": [],
+	"book#wood": [],
+	"wood#book": [],
+	"paper#wood": [],
+	"wood#paper": [
+		"creating"
+	],
+	"basket#hands": [],
+	"hands#basket": [],
+	"basketball#hands": [],
+	"hands#basketball": [],
+	"parquet#hands": [],
+	"hands#parquet": [],
+	"goal#feet": [],
+	"feet#goal": [],
+	"football#feet": [],
+	"feet#football": [
+		"kick a"
+	],
+	"grass#feet": [],
+	"feet#grass": [],
+	"medicine#life": [],
+	"life#medicine": [],
+	"illness#life": [],
+	"life#illness": [],
+	"law#death": [],
+	"death#law": [],
+	"crime#death": [
+		"punishable by"
+	],
+	"death#crime": []
 }

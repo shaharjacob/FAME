@@ -6394,5 +6394,106 @@
 		"hire",
 		"pay less",
 		"recruit"
-	]
+	],
+	"letter#word": [
+		"be cut off in",
+		"be doubled in",
+		"be silent in",
+		"be spaced out in",
+		"get cut off in",
+		"has property"
+	],
+	"digit#number": [
+		"can",
+		"has property"
+	],
+	"word#letter": [
+		"be spent with",
+		"have"
+	],
+	"number#digit": [
+		"be called"
+	],
+	"digit#equation": [],
+	"equation#digit": [],
+	"digit#math": [],
+	"math#digit": [],
+	"letter#sentence": [],
+	"sentence#letter": [],
+	"letter#language": [],
+	"language#letter": [],
+	"evening#wine": [],
+	"wine#evening": [],
+	"dinner#wine": [],
+	"wine#dinner": [],
+	"end#wine": [],
+	"wine#end": [],
+	"morning#coffee": [],
+	"coffee#morning": [
+		"be in",
+		"hurt in",
+		"make in"
+	],
+	"breakfast#coffee": [],
+	"coffee#breakfast": [],
+	"start#coffee": [],
+	"coffee#start": [],
+	"pillowcase#chicken": [],
+	"chicken#pillowcase": [],
+	"pillow#chicken": [],
+	"chicken#pillow": [],
+	"feather#chicken": [
+		"be removed from",
+		"fall out of"
+	],
+	"chicken#feather": [
+		"eat",
+		"has property",
+		"have",
+		"lose",
+		"peck off",
+		"pick out",
+		"puff out",
+		"puff up",
+		"pull out",
+		"shed"
+	],
+	"cover#wood": [],
+	"wood#cover": [
+		"have"
+	],
+	"book#wood": [],
+	"wood#book": [],
+	"paper#wood": [
+		"be made from"
+	],
+	"wood#paper": [
+		"be made into",
+		"be turned into",
+		"be used for",
+		"become",
+		"make"
+	],
+	"basket#hands": [],
+	"hands#basket": [],
+	"basketball#hands": [
+		"go hand in"
+	],
+	"hands#basketball": [],
+	"parquet#hands": [],
+	"hands#parquet": [],
+	"goal#feet": [],
+	"feet#goal": [],
+	"football#feet": [],
+	"feet#football": [],
+	"grass#feet": [],
+	"feet#grass": [],
+	"medicine#life": [],
+	"life#medicine": [],
+	"illness#life": [],
+	"life#illness": [],
+	"law#death": [],
+	"death#law": [],
+	"crime#death": [],
+	"death#crime": []
 }

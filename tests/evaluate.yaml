@@ -114,13 +114,14 @@ mapping:
         - hospital --> garage
 
   - input:
-      base: [law, crime]
-      target: [medicine, illness] 
+      base: [law, crime, death]
+      target: [medicine, illness, life] 
       depth: 4
     output:
       mapping:
         - law --> medicine
         - crime --> illness
+        - death --> life
 
   - input:
       base: [seeds, fruit, bloom]
@@ -154,24 +155,26 @@ mapping:
         - neighborhood --> forest
 
   - input:
-      base: [goal, football, grass]
-      target: [basket, basketball, parquet] 
+      base: [goal, football, grass, feet]
+      target: [basket, basketball, parquet, hands] 
       depth: 4
     output:
       mapping:
         - goal --> basket
         - football --> basketball
         - grass --> parquet
+        - feet --> hands
 
   - input:
-      base: [cover, book, paper]
-      target: [pillowcase, pillow, feather] 
+      base: [cover, book, paper, wood]
+      target: [pillowcase, pillow, feather, chicken] 
       depth: 4
     output:
       mapping:
         - cover --> pillowcase
         - book --> pillow
         - paper --> feather
+        - wood --> chicken
 
   - input:
       base: [captain, ship, water, harbor]
@@ -185,24 +188,26 @@ mapping:
         - harbor --> airport
 
   - input:
-      base: [word, sentence, language]
-      target: [number, equation, math] 
+      base: [letter, word, sentence, language]
+      target: [digit, number, equation, math] 
       depth: 4
     output:
       mapping:
         - word --> number
         - sentence --> equation
         - language --> math
+        - letter --> digit
 
   - input:
-      base: [morning, breakfast, start]
-      target: [evening, dinner, end] 
+      base: [morning, breakfast, start, coffee]
+      target: [evening, dinner, end, wine] 
       depth: 4
     output:
       mapping:
         - morning --> evening
         - breakfast --> dinner
         - start --> end
+        - coffee --> wine
 
   - input:
       base: [education, teacher, school]
