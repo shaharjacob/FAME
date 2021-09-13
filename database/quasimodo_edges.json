@@ -6538,5 +6538,95 @@
 	],
 	"fuel#motorcycle": [],
 	"motorcyclist#fuel": [],
-	"fuel#motorcyclist": []
+	"fuel#motorcyclist": [],
+	"refrigerator#cold": [
+		"get",
+		"has temperature",
+		"make",
+		"stay",
+		"work in"
+	],
+	"oven#hot": [
+		"get",
+		"run"
+	],
+	"cold#refrigerator": [],
+	"hot#oven": [],
+	"oven#heater": [],
+	"heater#oven": [],
+	"hot#heater": [],
+	"heater#hot": [
+		"get",
+		"has temperature"
+	],
+	"refrigerator#air conditioner": [],
+	"air conditioner#refrigerator": [
+		"be similar to"
+	],
+	"cold#air conditioner": [],
+	"air conditioner#cold": [
+		"condition air",
+		"get",
+		"has temperature"
+	],
+	"singer#song": [
+		"buy",
+		"can remember",
+		"come up with",
+		"make",
+		"match perfectly",
+		"remake",
+		"remember",
+		"remember words to",
+		"swear in",
+		"write"
+	],
+	"song#singer": [],
+	"programmer#logic": [],
+	"logic#programmer": [],
+	"code#logic": [],
+	"logic#code": [],
+	"singer#lyrics": [
+		"can",
+		"can remember",
+		"come up with",
+		"learn",
+		"memorize",
+		"remember",
+		"write"
+	],
+	"lyrics#singer": [],
+	"song#lyrics": [
+		"can",
+		"has property",
+		"have",
+		"have overlapping",
+		"need",
+		"repeat"
+	],
+	"lyrics#song": [
+		"be important in",
+		"be repeated in"
+	],
+	"eraser#pencil": [],
+	"delete#keyboard": [],
+	"pencil#eraser": [
+		"have"
+	],
+	"keyboard#delete": [],
+	"delete#screen": [],
+	"screen#delete": [],
+	"keyboard#screen": [],
+	"screen#keyboard": [],
+	"eraser#paper": [
+		"affect",
+		"erase pencil marks on",
+		"remove graphite from"
+	],
+	"paper#eraser": [],
+	"pencil#paper": [
+		"leave mark on",
+		"write on"
+	],
+	"paper#pencil": []
 }

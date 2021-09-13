@@ -3649,5 +3649,61 @@
 	"motorcycle#fuel": [],
 	"fuel#motorcycle": [],
 	"motorcyclist#fuel": [],
-	"fuel#motorcyclist": []
+	"fuel#motorcyclist": [],
+	"refrigerator#cold": [
+		"keep food",
+		"keep food",
+		"keep ice",
+		"keep perishable items",
+		"keeping food"
+	],
+	"oven#hot": [
+		"very"
+	],
+	"cold#refrigerator": [],
+	"hot#oven": [],
+	"oven#heater": [],
+	"heater#oven": [],
+	"hot#heater": [],
+	"heater#hot": [],
+	"refrigerator#air conditioner": [],
+	"air conditioner#refrigerator": [],
+	"cold#air conditioner": [],
+	"air conditioner#cold": [],
+	"singer#song": [
+		"one who sings a",
+		"record a"
+	],
+	"song#singer": [],
+	"programmer#logic": [],
+	"logic#programmer": [],
+	"code#logic": [],
+	"logic#code": [],
+	"singer#lyrics": [],
+	"lyrics#singer": [],
+	"song#lyrics": [],
+	"lyrics#song": [],
+	"eraser#pencil": [
+		"correcting error made with a",
+		"erase things written in"
+	],
+	"delete#keyboard": [],
+	"pencil#eraser": [],
+	"keyboard#delete": [],
+	"delete#screen": [],
+	"screen#delete": [],
+	"keyboard#screen": [],
+	"screen#keyboard": [],
+	"eraser#paper": [
+		"remove graphite from",
+		"rome graphite from"
+	],
+	"paper#eraser": [],
+	"pencil#paper": [
+		"leave marks on",
+		"mark a",
+		"mark a piece of",
+		"write something on"
+	],
+	"paper#pencil": []
 }

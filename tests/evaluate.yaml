@@ -238,3 +238,33 @@ mapping:
         - motorcyclist --> singer
         - motorcycle --> microphone
         - fuel --> electricity
+
+  - input: #24
+      base: [refrigerator, cold, air conditioner]
+      target: [oven, hot, heater] 
+      depth: 4
+    output:
+      mapping:
+        - refrigerator --> oven
+        - cold --> hot
+        - air conditioner --> heater
+
+  - input: #25
+      base: [singer, song, lyrics]
+      target: [programmer, code, logic] 
+      depth: 4
+    output:
+      mapping:
+        - singer --> programmer
+        - song --> code
+        - lyrics --> logic
+
+  - input: #26
+      base: [eraser, pencil, paper]
+      target: [delete, keyboard, screen] 
+      depth: 4
+    output:
+      mapping:
+        - eraser --> delete
+        - pencil --> keyboard
+        - paper --> screen

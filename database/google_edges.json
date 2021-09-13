@@ -8905,5 +8905,102 @@
 		"injection work on a"
 	],
 	"motorcyclist#fuel": [],
-	"fuel#motorcyclist": []
+	"fuel#motorcyclist": [],
+	"refrigerator#cold": [
+		"get",
+		"get too",
+		"keep food",
+		"make",
+		"not",
+		"not get",
+		"not getting",
+		"not work in the",
+		"stay",
+		"stop getting",
+		"too",
+		"warm and freezer",
+		"water not"
+	],
+	"oven#hot": [
+		"not getting",
+		"too"
+	],
+	"cold#refrigerator": [
+		"air circulates in the",
+		"air get from the freezer to the",
+		"air get into a"
+	],
+	"hot#oven": [],
+	"oven#heater": [],
+	"heater#oven": [],
+	"hot#heater": [],
+	"heater#hot": [
+		"cords get",
+		"plugs get"
+	],
+	"refrigerator#air conditioner": [],
+	"air conditioner#refrigerator": [],
+	"cold#air conditioner": [],
+	"air conditioner#cold": [
+		"get",
+		"give me a"
+	],
+	"singer#song": [
+		"make a",
+		"of the",
+		"perform the",
+		"relay the message of the",
+		"sing the",
+		"wrote the"
+	],
+	"song#singer": [],
+	"programmer#logic": [],
+	"logic#programmer": [],
+	"code#logic": [],
+	"logic#code": [],
+	"singer#lyrics": [
+		"come up with",
+		"remember",
+		"remember all their",
+		"think of",
+		"write"
+	],
+	"lyrics#singer": [],
+	"song#lyrics": [
+		"have",
+		"repeat"
+	],
+	"lyrics#song": [],
+	"eraser#pencil": [
+		"work"
+	],
+	"delete#keyboard": [],
+	"pencil#eraser": [
+		"feel sorry about the"
+	],
+	"keyboard#delete": [],
+	"delete#screen": [
+		"split"
+	],
+	"screen#delete": [],
+	"keyboard#screen": [
+		"appear on lock",
+		"go to top of",
+		"in middle of",
+		"on ipad in middle of",
+		"pop up on",
+		"split on",
+		"split on ipad"
+	],
+	"screen#keyboard": [],
+	"eraser#paper": [
+		"remove graphite from"
+	],
+	"paper#eraser": [],
+	"pencil#paper": [
+		"lead marks cling to",
+		"leave a mark on",
+		"write on"
+	],
+	"paper#pencil": []
 }
