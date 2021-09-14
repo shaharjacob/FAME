@@ -447,7 +447,7 @@ def mapping_wrapper(base: List[str],
     suggestions_solutions = []
     if suggestions and num_of_suggestions > 0:
         solutions = sorted(solutions, key=lambda x: (x.length, x.score), reverse=True)
-        if solutions and solutions[0].length < len(base):
+        if solutions and solutions[0].length < max(len(base), len(target)):
             number_of_solutions_for_suggestions = 5
             # the idea is to iterate over the founded solutions, and check if there are entities are not mapped.
             # this logic is checked only if ONE entity have missing mapping (from base or target)

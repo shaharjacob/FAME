@@ -3705,5 +3705,53 @@
 		"mark a piece of",
 		"write something on"
 	],
-	"paper#pencil": []
+	"paper#pencil": [],
+	"flowers#bouquet": [],
+	"players#team": [
+		"belong to a"
+	],
+	"bouquet#flowers": [
+		"a bunch of"
+	],
+	"team#players": [],
+	"players#coach": [],
+	"coach#players": [
+		"condition",
+		"push his"
+	],
+	"team#coach": [],
+	"coach#team": [
+		"be coaching a",
+		"field his",
+		"lead her"
+	],
+	"flowers#ribbon": [],
+	"ribbon#flowers": [],
+	"bouquet#ribbon": [],
+	"ribbon#bouquet": [],
+	"feet#socks": [],
+	"hands#gloves": [],
+	"socks#feet": [
+		"cover cold"
+	],
+	"gloves#hands": [
+		"protecting your",
+		"warm cold"
+	],
+	"hands#pants": [],
+	"pants#hands": [],
+	"gloves#pants": [],
+	"pants#gloves": [],
+	"gloves#basketball": [],
+	"basketball#gloves": [],
+	"pants#basketball": [],
+	"basketball#pants": [],
+	"feet#shirt": [],
+	"shirt#feet": [],
+	"socks#shirt": [],
+	"shirt#socks": [],
+	"socks#football": [],
+	"football#socks": [],
+	"shirt#football": [],
+	"football#shirt": []
 }

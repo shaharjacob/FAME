@@ -6628,5 +6628,80 @@
 		"leave mark on",
 		"write on"
 	],
-	"paper#pencil": []
+	"paper#pencil": [],
+	"flowers#bouquet": [
+		"has property"
+	],
+	"players#team": [
+		"be chosen for",
+		"leave",
+		"switch"
+	],
+	"bouquet#flowers": [],
+	"team#players": [
+		"get",
+		"has property",
+		"switch",
+		"waive"
+	],
+	"players#coach": [
+		"dump gatorade on",
+		"leave to",
+		"pour gatorade on"
+	],
+	"coach#players": [
+		"bench",
+		"can motivate",
+		"communicate with",
+		"cut",
+		"help",
+		"influence",
+		"motivate",
+		"pick",
+		"recruit",
+		"yell at"
+	],
+	"team#coach": [
+		"dump gatorade on",
+		"have",
+		"need at all",
+		"pour gatorade on"
+	],
+	"coach#team": [
+		"help",
+		"walk out of"
+	],
+	"flowers#ribbon": [],
+	"ribbon#flowers": [],
+	"bouquet#ribbon": [],
+	"ribbon#bouquet": [],
+	"feet#socks": [
+		"stink without",
+		"sweat less on with"
+	],
+	"hands#gloves": [],
+	"socks#feet": [],
+	"gloves#hands": [
+		"keep"
+	],
+	"hands#pants": [],
+	"pants#hands": [],
+	"gloves#pants": [],
+	"pants#gloves": [],
+	"gloves#basketball": [],
+	"basketball#gloves": [],
+	"pants#basketball": [],
+	"basketball#pants": [],
+	"feet#shirt": [],
+	"shirt#feet": [],
+	"socks#shirt": [],
+	"shirt#socks": [],
+	"socks#football": [],
+	"football#socks": [
+		"make holes in"
+	],
+	"shirt#football": [],
+	"football#shirt": [
+		"has property"
+	]
 }

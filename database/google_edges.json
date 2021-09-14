@@ -9002,5 +9002,119 @@
 		"leave a mark on",
 		"write on"
 	],
-	"paper#pencil": []
+	"paper#pencil": [],
+	"flowers#bouquet": [],
+	"players#team": [
+		"get picked for the england",
+		"make the ryder cup"
+	],
+	"bouquet#flowers": [],
+	"team#players": [
+		"buyout",
+		"franchise tag",
+		"have 11",
+		"mcewen only have 3",
+		"pay their",
+		"trade",
+		"usa need another",
+		"waive"
+	],
+	"players#coach": [
+		"become a",
+		"dump gatorade on",
+		"get paid more than",
+		"listen to"
+	],
+	"coach#players": [
+		"bench good",
+		"carter motivate his",
+		"carter save the life of one of his",
+		"communicate with",
+		"gaines inspire his",
+		"hayes punches clemson",
+		"help",
+		"influence",
+		"inspire",
+		"motivate",
+		"motivate his",
+		"not play good",
+		"pick",
+		"recruit",
+		"redshirt",
+		"yell at",
+		"yell at their"
+	],
+	"team#coach": [
+		"dump gatorade on"
+	],
+	"coach#team": [
+		"convince castle to join the",
+		"convince castle to join the track",
+		"kick cinderella off the",
+		"work in fifa ultimate"
+	],
+	"flowers#ribbon": [],
+	"ribbon#flowers": [],
+	"bouquet#ribbon": [],
+	"ribbon#bouquet": [],
+	"feet#socks": [
+		"get sweat without",
+		"stink without",
+		"sweat without"
+	],
+	"hands#gloves": [
+		"bell ringers wear",
+		"hygiene important after removing",
+		"hygiene required after removing",
+		"sweat in latex"
+	],
+	"socks#feet": [
+		"affect",
+		"bother my",
+		"hurt my",
+		"irritate my",
+		"not warm my",
+		"stick to your",
+		"twist on your"
+	],
+	"gloves#hands": [],
+	"hands#pants": [],
+	"pants#hands": [],
+	"gloves#pants": [],
+	"pants#gloves": [],
+	"gloves#basketball": [],
+	"basketball#gloves": [],
+	"pants#basketball": [],
+	"basketball#pants": [
+		"players wear compression",
+		"players wear long"
+	],
+	"feet#shirt": [],
+	"shirt#feet": [],
+	"socks#shirt": [],
+	"shirt#socks": [],
+	"socks#football": [],
+	"football#socks": [
+		"boots have",
+		"boots have ankle",
+		"players cut holes in their",
+		"players cut their",
+		"players have holes in their",
+		"players wear 2",
+		"players wear their",
+		"players wear two"
+	],
+	"shirt#football": [
+		"numbers work in",
+		"sales work in"
+	],
+	"football#shirt": [
+		"players change blood",
+		"players have numbers on their",
+		"players put vaseline on their",
+		"players put vicks on their",
+		"players swap",
+		"players wear belly",
+		"teams have stars on their"
+	]
 }
