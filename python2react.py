@@ -33,9 +33,8 @@ def get_edges_for_app(edges: List[str], spaces: int = 80) -> List[Dict]:
         for i, edge in enumerate(edges)]
 
 
-def get_single_edge_for_app(edge: Tuple[str, str], label: str, value: float, count: int) -> List[Dict]:
-    return [
-        {
+def get_single_edge_for_app(edge: Tuple[str, str], label: str, value: float, count: int) -> dict:
+    return {
             "id": f"{edge[0]}:{edge[1]}",
             "from": edge[0], 
             "to": edge[1], 
@@ -66,7 +65,6 @@ def get_single_edge_for_app(edge: Tuple[str, str], label: str, value: float, cou
                 "to": { "enabled": True },
             },
         }
-    ]
 
 
 def get_nodes_for_app(props: List[str], start_idx: int) -> List[Dict]:

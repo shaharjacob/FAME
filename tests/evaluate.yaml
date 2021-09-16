@@ -289,3 +289,23 @@ mapping:
         - socks --> gloves
         - shirt --> pants
         - football --> basketball
+
+  - input: #29
+      base: [clock, dial, time]
+      target: [radio, frequency, audio] 
+      depth: 4
+    output:
+      mapping:
+        - clock --> radio
+        - dial --> frequency
+        - time --> audio
+
+  - input: #30
+      base: [king, kingdom, crown]
+      target: [motorcyclist, motorcycle, helmet] 
+      depth: 4
+    output:
+      mapping:
+        - king --> motorcyclist
+        - kingdom --> motorcycle
+        - crown --> helmet

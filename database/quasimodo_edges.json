@@ -6703,5 +6703,64 @@
 	"shirt#football": [],
 	"football#shirt": [
 		"has property"
-	]
+	],
+	"clock#hand": [
+		"has body part"
+	],
+	"radio#frequency": [
+		"change",
+		"has property"
+	],
+	"hand#clock": [],
+	"frequency#radio": [],
+	"radio#audio": [],
+	"audio#radio": [],
+	"frequency#audio": [],
+	"audio#frequency": [],
+	"clock#time": [
+		"automatically set",
+		"can",
+		"gain",
+		"has property",
+		"keep",
+		"lose",
+		"lost",
+		"move ahead in",
+		"stop at",
+		"tell"
+	],
+	"time#clock": [
+		"has property"
+	],
+	"hand#time": [
+		"has property",
+		"hurt"
+	],
+	"time#hand": [],
+	"clock#dial": [],
+	"dial#clock": [],
+	"dial#time": [],
+	"time#dial": [],
+	"king#kingdom": [
+		"rule"
+	],
+	"kingdom#king": [],
+	"motorcyclist#helmet": [
+		"remove",
+		"wear"
+	],
+	"helmet#motorcyclist": [],
+	"motorcycle#helmet": [
+		"has property"
+	],
+	"helmet#motorcycle": [],
+	"king#crown": [
+		"be",
+		"has body part",
+		"wear",
+		"wear anymore"
+	],
+	"crown#king": [],
+	"kingdom#crown": [],
+	"crown#kingdom": []
 }

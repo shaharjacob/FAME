@@ -24,9 +24,9 @@ COLORS_DARK = [
     "#0000ff", # Blue
     "#8a2be2", # BlueViolet
     "#a52a2a", # Brown
+    "#008000", # Green
     "#dc143c", # Crimson
     "#4b0082", # Indigo
-    "#008000", # Green
 ]
 
 
@@ -72,8 +72,6 @@ def get_edge_score(prop1: str, prop2: str, model: SentenceEmbedding, freq) -> fl
         return 0
     else:
         return model.similarity(prop1, prop2)
-    # return model.similarity(prop1, prop2)
-    # return freq.get(prop1) * model.similarity(prop1, prop2) * freq.get(prop2)
 
 
 def get_maximum_weighted_match(model: SentenceEmbedding, 

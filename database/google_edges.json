@@ -9116,5 +9116,93 @@
 		"players swap",
 		"players wear belly",
 		"teams have stars on their"
+	],
+	"clock#hand": [
+		"have",
+		"work"
+	],
+	"radio#frequency": [
+		"receiver",
+		"stations change",
+		"stations have different",
+		"waves have low",
+		"waves have the lowest"
+	],
+	"hand#clock": [],
+	"frequency#radio": [],
+	"radio#audio": [],
+	"audio#radio": [],
+	"frequency#audio": [],
+	"audio#frequency": [],
+	"clock#time": [
+		"automatically set",
+		"change over",
+		"count",
+		"gain",
+		"in car lose",
+		"keep",
+		"lose",
+		"loses",
+		"measure",
+		"on my computer keeps changing the",
+		"tells",
+		"widget show wrong"
+	],
+	"time#clock": [
+		"go slow when you look at the",
+		"go slower when you look at the"
+	],
+	"hand#time": [
+		"fall asleep all the",
+		"grip strength decrease over",
+		"hurt all the",
+		"shake all the"
+	],
+	"time#hand": [],
+	"clock#dial": [],
+	"dial#clock": [],
+	"dial#time": [],
+	"time#dial": [],
+	"king#kingdom": [
+		"alfred die in the last",
+		"arthur rule his",
+		"arthur rush back to his",
+		"become a zombie in",
+		"edward die in the last",
+		"ezekiel leave the",
+		"in his",
+		"lear decide to divide his",
+		"lear divide his",
+		"lear give up his",
+		"rule his",
+		"saul lose his",
+		"sent messengers throughout the",
+		"sent two messengers throughout his"
+	],
+	"kingdom#king": [],
+	"motorcyclist#helmet": [
+		"tap their"
+	],
+	"helmet#motorcyclist": [],
+	"motorcycle#helmet": [
+		"cops wear half",
+		"riders tap their"
+	],
+	"helmet#motorcycle": [],
+	"king#crown": [
+		"die in the",
+		"edward abdicate the",
+		"edward give up the",
+		"george die in the",
+		"george get the",
+		"george's brother give up the",
+		"stutter in the",
+		"wear",
+		"wear a"
+	],
+	"crown#king": [],
+	"kingdom#crown": [],
+	"crown#kingdom": [
+		"prince commit treason"
 	]
 }

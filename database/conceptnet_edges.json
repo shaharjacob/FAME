@@ -3753,5 +3753,49 @@
 	"socks#football": [],
 	"football#socks": [],
 	"shirt#football": [],
-	"football#shirt": []
+	"football#shirt": [],
+	"clock#hand": [],
+	"radio#frequency": [],
+	"hand#clock": [],
+	"frequency#radio": [],
+	"radio#audio": [],
+	"audio#radio": [],
+	"frequency#audio": [],
+	"audio#frequency": [],
+	"clock#time": [
+		"check the",
+		"clock",
+		"get to events on",
+		"indicate the",
+		"indicate the passage of",
+		"indicating",
+		"keeping",
+		"keeping track of",
+		"know the",
+		"measure",
+		"measuring the passage of",
+		"tell"
+	],
+	"time#clock": [],
+	"hand#time": [],
+	"time#hand": [],
+	"clock#dial": [],
+	"dial#clock": [],
+	"dial#time": [],
+	"time#dial": [],
+	"king#kingdom": [
+		"govern his",
+		"ruling a"
+	],
+	"kingdom#king": [
+		"house a"
+	],
+	"motorcyclist#helmet": [],
+	"helmet#motorcyclist": [],
+	"motorcycle#helmet": [],
+	"helmet#motorcycle": [],
+	"king#crown": [],
+	"crown#king": [],
+	"kingdom#crown": [],
+	"crown#kingdom": []
 }

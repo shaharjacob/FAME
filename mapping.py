@@ -14,7 +14,7 @@ from data_collector import DataCollector
 from sentence_embadding import SentenceEmbedding
 
 
-NUM_OF_SOLUTIONS_TO_CALC = 3
+NUM_OF_CLUSTERS_TO_CALC = 3
 EDGE_THRESHOLD = 0.2
 DEFAULT_DIST_THRESHOLD_FOR_CLUSTERS = 0.8
 FREQUENCY_THRESHOLD = 500
@@ -42,8 +42,6 @@ def get_edge_score(prop1: str, prop2: str, model: SentenceEmbedding, freq: Frequ
         return 0
     else:
         return model.similarity(prop1, prop2)
-    # return model.similarity(prop1, prop2)
-    # return freq.get(prop1) * model.similarity(prop1, prop2) * freq.get(prop2)
     
 
 def get_all_possible_pairs_map(base: List[str], target: List[str]) -> List[List[List[Tuple[str, str]]]]:
@@ -153,7 +151,7 @@ def get_pair_mapping(model: SentenceEmbedding, data_collector: DataCollector, fr
         "graph": edges,
         "clusters1": clustered_sentences_1,
         "clusters2": clustered_sentences_2,
-        "score": round(sum([edge[2] for edge in edges[:NUM_OF_SOLUTIONS_TO_CALC] if edge[2] > EDGE_THRESHOLD]), 3)
+        "score": round(sum([edge[2] for edge in edges[:NUM_OF_CLUSTERS_TO_CALC] if edge[2] > EDGE_THRESHOLD]), 3)
     }
 
 
@@ -191,7 +189,7 @@ def get_best_pair_mapping(model: SentenceEmbedding, freq: Frequencies, data_coll
             edges = sorted(edges, key=lambda x: x[2], reverse=True)
             
             # score is just the sum of all the edges (edges between clusters)
-            mapping_score += round(sum([edge[2] for edge in edges[:NUM_OF_SOLUTIONS_TO_CALC] if edge[2] > EDGE_THRESHOLD]), 3)
+            mapping_score += round(sum([edge[2] for edge in edges[:NUM_OF_CLUSTERS_TO_CALC] if edge[2] > EDGE_THRESHOLD]), 3)
 
         mappings.append((mapping[0], mapping_score))
         cache[((mapping[0][0][0], mapping[0][0][1]),(mapping[0][1][0], mapping[0][1][1]))] = mapping_score

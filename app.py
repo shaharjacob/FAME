@@ -75,9 +75,11 @@ def mapping_entities():
                 for i, cluster_edge in enumerate(graph["graph"]):
                     props = utils.get_ordered_edges_similarity(model, graph["clusters1"][cluster_edge[0]], graph["clusters2"][cluster_edge[1] - len(graph["clusters1"])])
                     label.append(f"{relation[0][0]} {props[0][0]} {relation[0][1]} :: {relation[1][0]} {props[0][1]} {relation[1][1]} :: {cluster_edge[2]}")
-                edges.extend(python2react.get_single_edge_for_app(edge, "\n".join(sorted(label, key=lambda x: x.split('::')[2], reverse=True)), graph["score"], i))
+                label = sorted(label, key=lambda x: x.split('::')[2], reverse=True)[:mapping.NUM_OF_CLUSTERS_TO_CALC]
+                label = [l for l in label if float(l.split('::')[2]) > mapping.EDGE_THRESHOLD]
+                edges.append(python2react.get_single_edge_for_app(edge, "\n".join(label), graph["score"], len(edges)))
                 max_score_for_scaling = max(max_score_for_scaling, graph["score"])
-        
+
         # for scaling
         for edge in edges:
             edge["scaling"]["max"] = max_score_for_scaling
@@ -155,7 +157,7 @@ def single_mapping():
                     "edges": python2react.get_edges_for_app(edges, spaces=40),
                 },
                 "options": python2react.get_options(len(clustered_sentences_1) + len(clustered_sentences_2)),
-                "score": round(sum([edge[2] for edge in edges[:mapping.NUM_OF_SOLUTIONS_TO_CALC] if edge[2] > mapping.EDGE_THRESHOLD]), 3)
+                "score": round(sum([edge[2] for edge in edges[:mapping.NUM_OF_CLUSTERS_TO_CALC] if edge[2] > mapping.EDGE_THRESHOLD]), 3)
             }
     return jsonify(d)
 
