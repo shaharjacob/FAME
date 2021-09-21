@@ -309,3 +309,24 @@ mapping:
         - king --> motorcyclist
         - kingdom --> motorcycle
         - crown --> helmet
+
+  - input: #31
+      base: [ski, skis, snow, funicular]
+      target: [golf, club, grass, cart] 
+      depth: 4
+    output:
+      mapping:
+        - ski --> golf
+        - skis --> club
+        - snow --> grass
+        - funicular --> cart
+  
+  - input: #32
+      base: [tv, picture, living room]
+      target: [radio, sound, car] 
+      depth: 4
+    output:
+      mapping:
+        - tv --> radio
+        - picture --> sound
+        - living room --> car

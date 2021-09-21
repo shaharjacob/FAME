@@ -9204,5 +9204,130 @@
 	"kingdom#crown": [],
 	"crown#kingdom": [
 		"prince commit treason"
-	]
+	],
+	"ski#skis": [
+		"bindings attach to",
+		"boots attach to"
+	],
+	"golf#club": [
+		"announcers know what",
+		"pros grip the"
+	],
+	"skis#ski": [],
+	"club#golf": [],
+	"golf#grass": [
+		"courses cut their",
+		"courses get green",
+		"courses grow",
+		"courses have perfect",
+		"courses maintain their",
+		"courses plant",
+		"courses use bermuda"
+	],
+	"grass#golf": [],
+	"golf#cart": [],
+	"cart#golf": [],
+	"club#grass": [],
+	"grass#club": [],
+	"club#cart": [],
+	"cart#club": [],
+	"grass#cart": [],
+	"cart#grass": [],
+	"ski#snow": [
+		"dubai make",
+		"hills make fake",
+		"lodges make",
+		"resorts make",
+		"resorts make fake",
+		"slide on",
+		"work on"
+	],
+	"snow#ski": [
+		"stick to my cross country",
+		"sticking to my cross country"
+	],
+	"ski#funicular": [],
+	"funicular#ski": [],
+	"skis#snow": [
+		"dubai make",
+		"hills make fake",
+		"lodges make",
+		"resorts make",
+		"resorts make fake",
+		"slide on",
+		"work on"
+	],
+	"snow#skis": [
+		"stick to my cross country",
+		"sticking to my cross country"
+	],
+	"skis#funicular": [],
+	"funicular#skis": [],
+	"snow#funicular": [],
+	"funicular#snow": [],
+	"tv#picture": [
+		"have no",
+		"have sound but no",
+		"not have picture in",
+		"not showing"
+	],
+	"radio#sound": [
+		"create",
+		"journalists include ambient",
+		"make",
+		"transmit",
+		"waves carry",
+		"waves transmit",
+		"waves turn into"
+	],
+	"picture#tv": [
+		"break up on",
+		"go out on my",
+		"go out on my samsung",
+		"go out on my vizio",
+		"in picture work on",
+		"in picture work on apple",
+		"not showing on"
+	],
+	"sound#radio": [
+		"recording survive the advent of",
+		"recording survive the coming of"
+	],
+	"radio#car": [
+		"work in"
+	],
+	"car#radio": [
+		"charger interfere with"
+	],
+	"sound#car": [
+		"like something is dragging under my",
+		"like something is loose under my",
+		"like there is water in my",
+		"like water running when i start my",
+		"like water sloshing in my"
+	],
+	"car#sound": [
+		"alarms have different",
+		"brake make",
+		"horns",
+		"horns make",
+		"make",
+		"make a",
+		"make a popping",
+		"make a vroom",
+		"make squeaking",
+		"make that popping"
+	],
+	"tv#living room": [],
+	"living room#tv": [],
+	"picture#living room": [],
+	"living room#picture": [],
+	"amusement park#slide": [],
+	"application#feature": [],
+	"slide#amusement park": [],
+	"feature#application": [],
+	"amusement park#roller coaster": [],
+	"roller coaster#amusement park": [],
+	"disneyland#roller coaster": [],
+	"roller coaster#disneyland": []
 }

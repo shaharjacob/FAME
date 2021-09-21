@@ -110,10 +110,15 @@ const Mapping = () => {
                             />
                         </div>
                     </div>
-                    <div>
-                        <div><i className="far fa-lightbulb gold"></i>&nbsp;<span className="mapping-titles">Suggestions</span></div>
-                        <div><code>{topSuggestions.join(",")}</code></div>
-                    </div>
+                    {topSuggestions.length > 0
+                    ?
+                        <div>
+                            <div><i className="far fa-lightbulb gold"></i>&nbsp;<span className="mapping-titles">Suggestions</span></div>
+                            <div><code>{topSuggestions.join(",")}</code></div>
+                        </div>
+                    :
+                        <div></div>
+                    }
                     <div></div>
                 </div>
                 <Graph

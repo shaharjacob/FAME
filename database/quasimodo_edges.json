@@ -6762,5 +6762,74 @@
 	],
 	"crown#king": [],
 	"kingdom#crown": [],
-	"crown#kingdom": []
+	"crown#kingdom": [],
+	"ski#skis": [
+		"can"
+	],
+	"golf#club": [],
+	"skis#ski": [
+		"can"
+	],
+	"club#golf": [],
+	"golf#grass": [],
+	"grass#golf": [],
+	"golf#cart": [],
+	"cart#golf": [],
+	"club#grass": [],
+	"grass#club": [],
+	"club#cart": [],
+	"cart#club": [],
+	"grass#cart": [],
+	"cart#grass": [],
+	"ski#snow": [
+		"be good for",
+		"slide on",
+		"work on"
+	],
+	"snow#ski": [],
+	"ski#funicular": [],
+	"funicular#ski": [],
+	"skis#snow": [
+		"be good for",
+		"slide on",
+		"work on"
+	],
+	"snow#skis": [],
+	"skis#funicular": [],
+	"funicular#skis": [],
+	"snow#funicular": [],
+	"funicular#snow": [],
+	"tv#picture": [
+		"handle poorly"
+	],
+	"radio#sound": [
+		"transmit"
+	],
+	"picture#tv": [
+		"come on",
+		"has property"
+	],
+	"sound#radio": [],
+	"radio#car": [
+		"be in"
+	],
+	"car#radio": [
+		"have"
+	],
+	"sound#car": [],
+	"car#sound": [],
+	"tv#living room": [],
+	"living room#tv": [
+		"be on"
+	],
+	"picture#living room": [],
+	"living room#picture": [],
+	"amusement park#slide": [],
+	"application#feature": [],
+	"slide#amusement park": [],
+	"feature#application": [],
+	"amusement park#roller coaster": [],
+	"roller coaster#amusement park": [],
+	"disneyland#roller coaster": [],
+	"roller coaster#disneyland": []
 }
