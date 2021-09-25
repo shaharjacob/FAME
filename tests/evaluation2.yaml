@@ -1,0 +1,367 @@
+mapping:
+  # - input: #1
+  #     base: [answer, riddle]
+  #     target: [key, lock]
+  #     depth: 4
+  #   output:
+  #     mapping:
+  #     - answer --> key
+  #     - riddle --> lock
+
+  # - input: #2
+  #     base: [ash, fireplace]
+  #     target: [lint, pocket]
+  #     depth: 4
+  #   output:
+  #     mapping:
+  #     - ash --> lint
+  #     - fireplace --> pocket
+
+  # - input: #3
+  #     base: [aspirin, pain]
+  #     target: [muffler, noise]
+  #     depth: 4
+  #   output:
+  #     mapping:
+  #     - aspirin --> muffler
+  #     - pain --> noise
+
+  - input: #4
+      base: [baker, cake, recipe] 
+      target: [scientist, discovery, research]
+      depth: 4
+    output:
+      mapping:
+      - baker --> scientist
+      - cake --> discovery
+      - recipe --> research
+
+  # - input: #5
+  #     base: [basket, picnic]
+  #     target: [holster, gun] 
+  #     depth: 4
+  #   output:
+  #     mapping:
+  #     - basket --> holster
+  #     - picnic --> gun
+      
+  # - input: #6
+  #     base: [basketball, hoop]
+  #     target: [traveler, destination]
+  #     depth: 4
+  #   output:
+  #     mapping:
+  #     - basketball --> traveler
+  #     - hoop --> destination
+
+  # - input: #7
+  #     base: [blindness, sight] 
+  #     target: [poverty, money] 
+  #     depth: 4
+  #   output:
+  #     mapping:
+  #     - blindness --> poverty
+  #     - sight --> money
+
+  - input: #8 No solution found
+      base: [snow, snowflake, winter] # blizzard
+      target: [army, soldier, war]
+      depth: 4
+    output:
+      mapping:
+      - snow --> army # blizzard
+      - snowflake --> soldier
+      - winter --> war
+
+  # - input: #9
+  #     base: [bracelet, wrist] 
+  #     target: [moat, castle]
+  #     depth: 4
+  #   output:
+  #     mapping:
+  #     - bracelet --> moat
+  #     - wrist --> castle
+
+  - input: #10
+      base: [burger, bun, meat, appetite]
+      target: [book, cover, words, leisure]
+      depth: 4
+    output:
+      mapping:
+      - burger --> book
+      - bun --> cover
+      - meat --> words
+      - appetite --> leisure
+
+  # - input: #11
+  #     base: [cleanser, face]
+  #     target: [soap, body]
+  #     # target: [absolution, sinner] No solution found
+  #     depth: 4
+  #   output:
+  #     mapping:
+  #     - cleanser --> soap # absolution
+  #     - face --> body # sinner
+
+  # - input: #12
+  #     base: [eraser, pencil]
+  #     target: [amnesia, memory]
+  #     depth: 4
+  #   output:
+  #     mapping:
+  #     - eraser --> amnesia
+  #     - pencil --> memory
+
+  # - input: #13
+  #     base: [father, son]
+  #     target: [inventor, invention]
+  #     depth: 4
+  #   output:
+  #     mapping:
+  #     - father --> inventor
+  #     - son --> invention
+
+  # - input: #14
+  #     base: [flock, goose]
+  #     target: [constellation, star]
+  #     depth: 4
+  #   output:
+  #     mapping:
+  #     - flock --> constellation
+  #     - goose --> star
+
+  # - input: #15
+  #     base: [foresight, future] 
+  #     target: [x-ray, bone]
+  #     depth: 4
+  #   output:
+  #     mapping:
+  #     - foresight --> x-ray
+  #     - future --> bone
+
+  # - input: #16
+  #     base: [foundation, house]
+  #     target: [premise, argument] 
+  #     depth: 4
+  #   output:
+  #     mapping:
+  #     - foundation --> premise
+  #     - house --> argument
+
+  - input: #17
+      base: [furnace, coal, combustion]
+      target: [stomach, food, digestion]
+      depth: 4
+    output:
+      mapping:
+      - furnace --> stomach
+      - coal --> food
+      - combustion --> digestion
+
+  # - input: #18 No solution found
+  #     base: [hoof, hoofprint]
+  #     target: [introduction, impression]
+  #     depth: 4
+  #   output:
+  #     mapping:
+  #     - hoof --> introduction
+  #     - hoofprint --> impression
+
+  # - input: #19 No solution found
+  #     base: [immunization, disease]
+  #     target: [forewarning, surprise]
+  #     depth: 4
+  #   output:
+  #     mapping:
+  #     - immunization --> forewarning
+  #     - disease --> surprise
+
+  # - input: #20
+  #     base: [jacket, zipper]
+  #     target: [wound, suture]
+  #     depth: 4
+  #   output:
+  #     mapping:
+  #     - jacket --> wound
+  #     - zipper --> suture
+
+  # - input: #21
+  #     base: [ketchup, tomato]
+  #     target: [fuel, petroleum]
+  #     depth: 4
+  #   output:
+  #     mapping:
+  #     - ketchup --> fuel
+  #     - tomato --> petroleum
+
+  # - input: #22
+  #     base: [kitten, cat]
+  #     target: [spark, fire]
+  #     depth: 4
+  #   output:
+  #     mapping:
+  #     - kitten --> spark
+  #     - cat --> fire
+
+  # - input: #23
+  #     base: [knee, kneepad]
+  #     target: [snail, shell]
+  #     depth: 4
+  #   output:
+  #     mapping:
+  #     - knee --> snail
+  #     - kneepad --> shell
+
+  # - input: #24 No solution found
+  #     base: [lambchop, lamb]
+  #     target: [chapter, book]
+  #     depth: 4
+  #   output:
+  #     mapping:
+  #     - lambchop --> chapter
+  #     - lamb --> book
+
+  # - input: #25
+  #     base: [landscaper, lawn]
+  #     target: [stylist, hair]
+  #     depth: 4
+  #   output:
+  #     mapping:
+  #     - landscaper --> stylist
+  #     - lawn --> hair
+
+  # - input: #26 No solution found
+  #     base: [launchpad, helicopter]
+  #     target: [divingboard, diver]
+  #     depth: 4
+  #   output:
+  #     mapping:
+  #     - launchpad --> divingboard
+  #     - helicopter --> diver
+
+  # - input: #27 No solution found
+  #     base: [lawschool, lawyer]
+  #     target: [vineyard, wine]
+  #     depth: 4
+  #   output:
+  #     mapping:
+  #     - lawschool --> vineyard
+  #     - lawyer --> wine
+
+  # - input: #28
+  #     base: [movie, screen]
+  #     target: [lightning, sky]
+  #     depth: 4
+  #   output:
+  #     mapping:
+  #     - movie --> lightning
+  #     - screen --> sky
+
+  # - input: #29
+  #     base: [multiplication, product]
+  #     target: [brewing, beer]
+  #     depth: 4
+  #   output:
+  #     mapping:
+  #     - multiplication --> brewing
+  #     - product --> beer
+
+  # - input: #30
+  #     base: [nose, scent]
+  #     target: [antenna, signal]
+  #     depth: 4
+  #   output:
+  #     mapping:
+  #     - nose --> antenna
+  #     - scent --> signal
+
+  - input: #31
+      base: [orchard, apple, agriculture]
+      target: [neighborhood, apartment, construction]
+      depth: 4
+    output:
+      mapping:
+      - orchard --> neighborhood
+      - apple --> apartment
+      - agriculture --> construction
+
+  # - input: #32
+  #     base: [painting, canvas]
+  #     target: [birthmark, skin]
+  #     depth: 4
+  #   output:
+  #     mapping:
+  #     - painting --> birthmark
+  #     - canvas --> skin
+
+  # - input: #33
+  #     base: [pen, pig]
+  #     target: [reservoir, water]
+  #     depth: 4
+  #   output:
+  #     mapping:
+  #     - pen --> reservoir
+  #     - pig --> water
+      
+  # - input: #34 No solution found
+  #     base: [rectangle, perimeter]
+  #     target: [nation, border]
+  #     depth: 4
+  #   output:
+  #     mapping:
+  #     - rectangle --> nation
+  #     - perimeter --> border
+
+  # - input: #35 No solution found
+  #     base: [revising, manuscript]
+  #     target: [evolving, species]
+  #     depth: 4
+  #   output:
+  #     mapping:
+  #     - revising --> evolving
+  #     - manuscript --> species
+
+  # - input: #36 No solution found
+  #     base: [saxophone, jazz]
+  #     target: [typewriter, poetry]
+  #     depth: 4
+  #   output:
+  #     mapping:
+  #     - saxophone --> typewriter
+  #     - jazz --> poetry
+
+  # - input: #37
+  #     base: [sugar, coffee]
+  #     target: [incentive, deal]
+  #     depth: 4
+  #   output:
+  #     mapping:
+  #     - sugar --> incentive
+  #     - coffee --> deal
+
+  # - input: #38 No solution found
+  #     base: [thermometer, temperature]
+  #     target: [polygraph, honesty]
+  #     depth: 4
+  #   output:
+  #     mapping:
+  #     - thermometer --> polygraph
+  #     - temperature --> honesty
+
+  # - input: #39
+  #     base: [train, track]
+  #     target: [signal, wire]
+  #     depth: 4
+  #   output:
+  #     mapping:
+  #     - train --> signal
+  #     - track --> wire
+
+  # - input: #40 No solution found
+  #     base: [watermelon, rind]
+  #     target: [cigarette, butt]
+  #     depth: 4
+  #   output:
+  #     mapping:
+  #     - watermelon --> cigarette
+  #     - rind --> butt

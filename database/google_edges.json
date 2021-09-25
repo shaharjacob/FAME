@@ -9329,5 +9329,662 @@
 	"amusement park#roller coaster": [],
 	"roller coaster#amusement park": [],
 	"disneyland#roller coaster": [],
-	"roller coaster#disneyland": []
+	"roller coaster#disneyland": [],
+	"answer#riddle": [],
+	"key#lock": [
+		"get stuck in",
+		"stuck in"
+	],
+	"riddle#answer": [],
+	"lock#key": [
+		"and"
+	],
+	"ash#fireplace": [],
+	"lint#pocket": [],
+	"fireplace#ash": [],
+	"pocket#lint": [],
+	"aspirin#pain": [
+		"and ibuprofen lessen the sensation of",
+		"cause epigastric",
+		"cause stomach",
+		"given for chest",
+		"given to patients with chest",
+		"good for chest",
+		"help",
+		"help chest",
+		"help my chest",
+		"reduce",
+		"relieve",
+		"relieve chest",
+		"stop chest",
+		"work for chest"
+	],
+	"muffler#noise": [
+		"make",
+		"quiet exhaust",
+		"reduce"
+	],
+	"pain#aspirin": [],
+	"noise#muffler": [],
+	"baker#cake": [
+		"add simple syrup to",
+		"freeze",
+		"make",
+		"put simple syrup on",
+		"put sugar syrup on"
+	],
+	"scientist#discovery": [
+		"make",
+		"respond to copernicus",
+		"try to replicate and duplicate a"
+	],
+	"cake#baker": [],
+	"discovery#scientist": [],
+	"basket#picnic": [],
+	"holster#gun": [],
+	"picnic#basket": [],
+	"gun#holster": [],
+	"basketball#hoop": [
+		"bounce out of the"
+	],
+	"traveler#destination": [],
+	"hoop#basketball": [],
+	"destination#traveler": [],
+	"blindness#sight": [],
+	"poverty#money": [
+		"more than a lack of"
+	],
+	"sight#blindness": [],
+	"money#poverty": [],
+	"blizzard#snowflake": [],
+	"army#soldier": [
+		"called",
+		"guard the tomb of the unknown",
+		"medics lie to dying",
+		"train"
+	],
+	"snowflake#blizzard": [],
+	"soldier#army": [
+		"desert the russian",
+		"from the empire join the british",
+		"get promoted in the",
+		"join the",
+		"join the continental",
+		"join the roman",
+		"leave the",
+		"leave the continental",
+		"wake up in the"
+	],
+	"bracelet#wrist": [],
+	"moat#castle": [
+		"defend a",
+		"protect a"
+	],
+	"wrist#bracelet": [],
+	"castle#moat": [
+		"have",
+		"have a"
+	],
+	"burger#bun": [],
+	"bun#burger": [],
+	"cleanser#face": [
+		"helps your",
+		"work on"
+	],
+	"absolution#sinner": [],
+	"face#cleanser": [],
+	"sinner#absolution": [],
+	"amnesia#memory": [
+		"actually interfere with",
+		"affect",
+		"affect episodic",
+		"affect implicit",
+		"interfere with"
+	],
+	"memory#amnesia": [
+		"come back after"
+	],
+	"father#son": [
+		"and",
+		"call their sons",
+		"forgive the prodigal",
+		"hate",
+		"hate their",
+		"respond to the prodigal",
+		"run to the prodigal",
+		"show his great love to his",
+		"want to build a relationship with the"
+	],
+	"inventor#invention": [
+		"create the"
+	],
+	"son#father": [
+		"need his",
+		"show submission to the"
+	],
+	"invention#inventor": [],
+	"flock#goose": [],
+	"constellation#star": [
+		"differ from",
+		"relate to the pattern of"
+	],
+	"goose#flock": [
+		"fly in a"
+	],
+	"star#constellation": [
+		"differ from",
+		"have",
+		"that are different colors appear in the same"
+	],
+	"foresight#future": [],
+	"x-ray#bone": [
+		"show"
+	],
+	"future#foresight": [],
+	"bone#x-ray": [
+		"appear white on",
+		"appear white on an",
+		"show up white in"
+	],
+	"foundation#house": [],
+	"premise#argument": [
+		"help create an"
+	],
+	"house#foundation": [
+		"attached to",
+		"need a"
+	],
+	"argument#premise": [],
+	"furnace#coal": [
+		"charged with coke and not"
+	],
+	"stomach#food": [
+		"acid break down",
+		"acid digest",
+		"burn after eating spicy",
+		"churn",
+		"digest",
+		"gurgle after",
+		"help in digestion of",
+		"hurt after eating fast",
+		"hurt after eating spicy",
+		"hurt after spicy",
+		"mix",
+		"pain after eating",
+		"reject"
+	],
+	"coal#furnace": [],
+	"food#stomach": [
+		"allergies affect the",
+		"digest in the",
+		"digested in the",
+		"enter the",
+		"exit the",
+		"feel heavy in my",
+		"get stuck in my",
+		"hurt my",
+		"leave the",
+		"look in your",
+		"not digesting in my",
+		"sit in my",
+		"stay so long in the",
+		"travel from the mouth to the",
+		"upset my",
+		"vacuole of amoeba called temporary"
+	],
+	"hoof#hoofprint": [],
+	"introduction#impression": [],
+	"hoofprint#hoof": [],
+	"impression#introduction": [],
+	"immunization#disease": [
+		"control communicable",
+		"effective in preventing",
+		"help prevent the",
+		"helpful in preventing",
+		"programs help prevent the spread of",
+		"work to prevent and possibly eradicate a",
+		"work to protect against"
+	],
+	"forewarning#surprise": [],
+	"disease#immunization": [],
+	"surprise#forewarning": [],
+	"jacket#zipper": [
+		"have two"
+	],
+	"wound#suture": [],
+	"zipper#jacket": [],
+	"suture#wound": [],
+	"ketchup#tomato": [
+		"made from",
+		"not taste like"
+	],
+	"fuel#petroleum": [],
+	"tomato#ketchup": [
+		"sauce called"
+	],
+	"petroleum#fuel": [
+		"a fossil",
+		"better than coal as a",
+		"called a fossil",
+		"called fossil",
+		"considered a fossil",
+		"formed fossil",
+		"known as fossil",
+		"used in"
+	],
+	"kitten#cat": [
+		"sounds attract",
+		"turn into"
+	],
+	"spark#fire": [
+		"plug know when to",
+		"plugs",
+		"plugs know when to"
+	],
+	"cat#kitten": [
+		"abandon",
+		"abandon one",
+		"bite",
+		"bring you their",
+		"carry their",
+		"eat",
+		"eat its own",
+		"eat their",
+		"eat their own",
+		"food bad for",
+		"hates",
+		"have",
+		"hide her",
+		"hide their",
+		"hiss at a new",
+		"hiss at new",
+		"hissing at her",
+		"keep moving",
+		"kill",
+		"kill her",
+		"kill their",
+		"lick",
+		"lick my",
+		"move",
+		"move her",
+		"move only one",
+		"move their",
+		"moving her",
+		"only have one",
+		"react to a new",
+		"reject"
+	],
+	"fire#spark": [],
+	"knee#kneepad": [],
+	"snail#shell": [
+		"build their",
+		"eat their own",
+		"find their",
+		"fit in its",
+		"get its",
+		"get out of their",
+		"get their",
+		"grow a",
+		"grow its",
+		"have",
+		"have a",
+		"leave its",
+		"leave their",
+		"lose their",
+		"need a"
+	],
+	"kneepad#knee": [],
+	"shell#snail": [],
+	"lambchop#lamb": [],
+	"chapter#book": [
+		"1 end in the",
+		"2 differ from the",
+		"2 end in the"
+	],
+	"lamb#lambchop": [],
+	"book#chapter": [],
+	"landscaper#lawn": [],
+	"stylist#hair": [
+		"color",
+		"color before cutting",
+		"cut too much",
+		"highlight",
+		"thin",
+		"thin out"
+	],
+	"lawn#landscaper": [],
+	"hair#stylist": [],
+	"launchpad#helicopter": [],
+	"divingboard#diver": [],
+	"helicopter#launchpad": [],
+	"diver#divingboard": [],
+	"lawschool#lawyer": [],
+	"vineyard#wine": [
+		"make"
+	],
+	"lawyer#lawschool": [],
+	"wine#vineyard": [],
+	"movie#screen": [
+		"makers use green",
+		"not fill the whole",
+		"not play full",
+		"studios use green",
+		"use blue",
+		"use green"
+	],
+	"lightning#sky": [
+		"appear in the",
+		"caused in the",
+		"come from the",
+		"come out of the",
+		"created in the",
+		"form in the",
+		"formed in the",
+		"go across the",
+		"happen in",
+		"in the",
+		"light up the",
+		"look like it comes from the",
+		"made in the",
+		"occur in the",
+		"produced between clouds in the"
+	],
+	"screen#movie": [],
+	"sky#lightning": [
+		"make",
+		"turn red in black"
+	],
+	"multiplication#product": [
+		"called"
+	],
+	"brewing#beer": [],
+	"product#multiplication": [],
+	"beer#brewing": [],
+	"nose#scent": [],
+	"antenna#signal": [
+		"add gain to a wireless",
+		"create gain in the received",
+		"pick up radio",
+		"receive",
+		"transmit"
+	],
+	"scent#nose": [],
+	"signal#antenna": [],
+	"orchard#apple": [],
+	"apple#orchard": [],
+	"painting#canvas": [
+		"on a wall different conceptually from painting on a"
+	],
+	"birthmark#skin": [],
+	"canvas#painting": [
+		"used for"
+	],
+	"skin#birthmark": [],
+	"pen#pig": [],
+	"reservoir#water": [
+		"get"
+	],
+	"pig#pen": [],
+	"water#reservoir": [
+		"distributed in",
+		"get into a",
+		"get into the groundwater",
+		"get to a",
+		"levels fluctuate in"
+	],
+	"rectangle#perimeter": [],
+	"nation#border": [],
+	"perimeter#rectangle": [],
+	"border#nation": [],
+	"revising#manuscript": [],
+	"evolving#species": [],
+	"manuscript#revising": [],
+	"species#evolving": [
+		"go extinct instead of",
+		"stop"
+	],
+	"saxophone#jazz": [
+		"so popular in",
+		"used in"
+	],
+	"typewriter#poetry": [],
+	"jazz#saxophone": [
+		"player change as he plays on the"
+	],
+	"poetry#typewriter": [],
+	"sugar#coffee": [
+		"affect the taste of your morning",
+		"dissolve",
+		"dissolve in"
+	],
+	"incentive#deal": [],
+	"coffee#sugar": [
+		"affect blood",
+		"cause low blood",
+		"creamer raise my blood",
+		"lower my blood",
+		"make me crave",
+		"raise blood",
+		"taste without",
+		"with cream affect blood"
+	],
+	"deal#incentive": [],
+	"thermometer#temperature": [
+		"gauge",
+		"measure",
+		"register",
+		"shows different",
+		"with liquid in glass measure"
+	],
+	"polygraph#honesty": [],
+	"temperature#thermometer": [
+		"decrease on the wet-bulb",
+		"measured with a",
+		"read on an electronic",
+		"scales depend on the type of"
+	],
+	"honesty#polygraph": [],
+	"train#track": [
+		"change",
+		"get on the",
+		"grip the",
+		"move on",
+		"runs on",
+		"sit on the",
+		"stay on",
+		"stay on the",
+		"stop on the",
+		"stopped on",
+		"switch",
+		"wheels grip the",
+		"wheels sit on the",
+		"wheels stay on",
+		"wheels stay on the"
+	],
+	"signal#wire": [],
+	"track#train": [
+		"and field athletes",
+		"athletes",
+		"cyclists",
+		"runners",
+		"stars"
+	],
+	"wire#signal": [],
+	"watermelon#rind": [],
+	"cigarette#butt": [],
+	"rind#watermelon": [],
+	"butt#cigarette": [],
+	"soap#body": [
+		"clean the",
+		"clean your",
+		"remove dirt from the"
+	],
+	"body#soap": [
+		"wash better than"
+	],
+	"pow#powprint": [],
+	"powprint#pow": [],
+	"holster#crime scene": [],
+	"crime scene#holster": [],
+	"gun#crime scene": [
+		"collected at a"
+	],
+	"crime scene#gun": [],
+	"basket#park": [],
+	"park#basket": [],
+	"picnic#park": [],
+	"park#picnic": [],
+	"scientist#research": [
+		"communicate information about their",
+		"conduct",
+		"counter the charges of groups who oppose animal",
+		"develop a hypothesis before conducting",
+		"do",
+		"favor operationalizing terms used in their",
+		"get funding for their",
+		"get recognition for their scientific",
+		"often use thermoacidophile group of archaebacteria for",
+		"use animals in",
+		"want to be able to clone cells for"
+	],
+	"research#scientist": [],
+	"discovery#research": [],
+	"research#discovery": [],
+	"baker#recipe": [],
+	"recipe#baker": [],
+	"cake#recipe": [],
+	"recipe#cake": [],
+	"snow#snowflake": [
+		"form"
+	],
+	"snowflake#snow": [],
+	"army#war": [
+		"communicate during the civil",
+		"fight during the revolutionary",
+		"prepare for",
+		"transport soldiers and supplies during the civil",
+		"travel from battle to battle in the civil",
+		"typically fight in the civil"
+	],
+	"war#army": [
+		"affect the"
+	],
+	"snow#winter": [
+		"at the top of mauna loa in the",
+		"dogs survive in",
+		"fall in",
+		"fall instead of rain in",
+		"in",
+		"leopards survive in the",
+		"tires reduce the risk of traffic accidents in the"
+	],
+	"winter#snow": [],
+	"snowflake#winter": [],
+	"winter#snowflake": [],
+	"book#words": [
+		"fold work in"
+	],
+	"words#book": [],
+	"book#leisure": [],
+	"leisure#book": [],
+	"cover#words": [],
+	"words#cover": [],
+	"cover#leisure": [],
+	"leisure#cover": [],
+	"words#leisure": [],
+	"leisure#words": [],
+	"burger#meat": [
+		"king cook their",
+		"king get their",
+		"king slaughter their",
+		"king use horse"
+	],
+	"meat#burger": [],
+	"burger#appetite": [],
+	"appetite#burger": [],
+	"bun#meat": [],
+	"meat#bun": [],
+	"bun#appetite": [],
+	"appetite#bun": [],
+	"meat#appetite": [],
+	"appetite#meat": [],
+	"stomach#digestion": [
+		"acid aid",
+		"acid help",
+		"adapted for",
+		"and small intestine help in",
+		"cancer affect",
+		"help in",
+		"help with",
+		"muscles aid",
+		"muscles work during",
+		"perform mechanical and chemical",
+		"prevent self",
+		"protected from self",
+		"stop",
+		"suitable for protein",
+		"ulcers affect"
+	],
+	"digestion#stomach": [
+		"begin in",
+		"occur in",
+		"occurs in the",
+		"of protein occurs in the",
+		"of starch stop in the",
+		"take place in the",
+		"take place in your",
+		"work in the"
+	],
+	"food#digestion": [
+		"help",
+		"mechanically broken down during"
+	],
+	"digestion#food": [
+		"affect",
+		"of"
+	],
+	"furnace#combustion": [],
+	"combustion#furnace": [],
+	"coal#combustion": [
+		"pulverized before"
+	],
+	"combustion#coal": [
+		"of"
+	],
+	"neighborhood#construction": [],
+	"construction#neighborhood": [],
+	"apartment#construction": [],
+	"construction#apartment": [],
+	"orchard#agriculture": [],
+	"agriculture#orchard": [],
+	"apple#agriculture": [],
+	"agriculture#apple": [],
+	"book#pleasure": [],
+	"pleasure#book": [],
+	"cover#pleasure": [],
+	"pleasure#cover": [],
+	"words#pleasure": [],
+	"pleasure#words": [],
+	"tree#apple": [],
+	"apple#tree": [
+		"fall from a",
+		"fall from the",
+		"fall off the",
+		"go rotten on the",
+		"grow on a",
+		"keep falling off the",
+		"rot on the",
+		"split on the"
+	],
+	"tree#agriculture": [
+		"affect",
+		"planting bar used in"
+	],
+	"agriculture#tree": [],
+	"burger#satiety": [],
+	"satiety#burger": [],
+	"bun#satiety": [],
+	"satiety#bun": [],
+	"meat#satiety": [],
+	"satiety#meat": []
 }

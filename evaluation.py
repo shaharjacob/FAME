@@ -65,8 +65,8 @@ def update_result(corrent_mapping: List[str], solutions: List[Solution], result:
         
 
 
-def evaluate(model_name: str, threshold: float):
-    with open(TEST_FOLDER / 'evaluate.yaml', 'r') as y:
+def evaluate(model_name: str, threshold: float, path: str):
+    with open(TEST_FOLDER / path, 'r') as y:
         spec = yaml.load(y, Loader=yaml.SafeLoader)
     mapping_spec = spec["mapping"]
     results = Results()
@@ -121,10 +121,11 @@ def evaluate(model_name: str, threshold: float):
 @click.command()
 @click.option('-m', '--model', default="msmarco-distilbert-base-v4", type=str, help="The model for sBERT: https://huggingface.co/sentence-transformers")
 @click.option('-t', '--threshold', default=FREQUENCY_THRESHOLD, type=float, help="Threshold for % to take from json frequencies")
+@click.option('-y', '--yaml', default='evaluation.yaml', type=str, help="Path for the yaml for evaluation")
 @click.option('-c', '--comment', default="", type=str, help="Additional comment for the job")
-def run(model, threshold, comment):
+def run(model, threshold, comment, yaml):
     torch.cuda.empty_cache()
-    evaluate(model, threshold)
+    evaluate(model, threshold, yaml)
 
 if __name__ == '__main__':
     # os.environ['CI'] = 'true'

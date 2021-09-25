@@ -6831,5 +6831,523 @@
 	"amusement park#roller coaster": [],
 	"roller coaster#amusement park": [],
 	"disneyland#roller coaster": [],
-	"roller coaster#disneyland": []
+	"roller coaster#disneyland": [],
+	"answer#riddle": [
+		"be to"
+	],
+	"key#lock": [
+		"be stuck in",
+		"break in",
+		"get stuck in",
+		"stick in"
+	],
+	"riddle#answer": [
+		"has property"
+	],
+	"lock#key": [
+		"have"
+	],
+	"ash#fireplace": [],
+	"lint#pocket": [
+		"collect in"
+	],
+	"fireplace#ash": [
+		"has property"
+	],
+	"pocket#lint": [],
+	"aspirin#pain": [
+		"kill",
+		"reduce",
+		"stop"
+	],
+	"muffler#noise": [
+		"make",
+		"reduce"
+	],
+	"pain#aspirin": [],
+	"noise#muffler": [],
+	"baker#cake": [
+		"freeze",
+		"put syrup on",
+		"put water on",
+		"soak",
+		"spray",
+		"use syrup on"
+	],
+	"scientist#discovery": [],
+	"cake#baker": [],
+	"discovery#scientist": [],
+	"basket#picnic": [],
+	"holster#gun": [],
+	"picnic#basket": [],
+	"gun#holster": [],
+	"basketball#hoop": [
+		"go in"
+	],
+	"traveler#destination": [],
+	"hoop#basketball": [],
+	"destination#traveler": [],
+	"blindness#sight": [],
+	"poverty#money": [],
+	"sight#blindness": [],
+	"money#poverty": [],
+	"blizzard#snowflake": [],
+	"army#soldier": [],
+	"snowflake#blizzard": [],
+	"soldier#army": [
+		"join",
+		"leave"
+	],
+	"bracelet#wrist": [],
+	"moat#castle": [
+		"be around",
+		"defend",
+		"protect"
+	],
+	"wrist#bracelet": [],
+	"castle#moat": [
+		"have"
+	],
+	"burger#bun": [],
+	"bun#burger": [
+		"has property"
+	],
+	"cleanser#face": [],
+	"absolution#sinner": [],
+	"face#cleanser": [],
+	"sinner#absolution": [],
+	"amnesia#memory": [],
+	"memory#amnesia": [
+		"come back after"
+	],
+	"father#son": [
+		"feel about",
+		"fight with",
+		"has property",
+		"hate",
+		"hit",
+		"influence",
+		"leave",
+		"love",
+		"treat",
+		"yell at"
+	],
+	"inventor#invention": [
+		"protect"
+	],
+	"son#father": [
+		"hate",
+		"look like",
+		"love",
+		"need",
+		"resent"
+	],
+	"invention#inventor": [],
+	"flock#goose": [],
+	"constellation#star": [
+		"be different from",
+		"differ from",
+		"has property",
+		"relate to"
+	],
+	"goose#flock": [
+		"can"
+	],
+	"star#constellation": [
+		"be arranged in",
+		"be in",
+		"be ranked in",
+		"become",
+		"come into",
+		"form",
+		"has property",
+		"make",
+		"turn into"
+	],
+	"foresight#future": [],
+	"x-ray#bone": [],
+	"future#foresight": [],
+	"bone#x-ray": [
+		"absorb",
+		"appear on",
+		"be white on",
+		"show up best in",
+		"show up on"
+	],
+	"foundation#house": [],
+	"premise#argument": [],
+	"house#foundation": [
+		"have",
+		"need"
+	],
+	"argument#premise": [],
+	"furnace#coal": [],
+	"stomach#food": [
+		"break down",
+		"mechanically break down"
+	],
+	"coal#furnace": [],
+	"food#stomach": [
+		"be broken down in",
+		"be held in",
+		"be kept in",
+		"be transferred into",
+		"get to",
+		"leave",
+		"reach",
+		"sit in"
+	],
+	"hoof#hoofprint": [],
+	"introduction#impression": [],
+	"hoofprint#hoof": [],
+	"impression#introduction": [],
+	"immunization#disease": [
+		"can prevent",
+		"prevent",
+		"protect against",
+		"protect from"
+	],
+	"forewarning#surprise": [],
+	"disease#immunization": [],
+	"surprise#forewarning": [],
+	"jacket#zipper": [
+		"have"
+	],
+	"wound#suture": [],
+	"zipper#jacket": [
+		"be on"
+	],
+	"suture#wound": [],
+	"ketchup#tomato": [
+		"has property"
+	],
+	"fuel#petroleum": [
+		"be called"
+	],
+	"tomato#ketchup": [
+		"has property"
+	],
+	"petroleum#fuel": [
+		"be better as",
+		"has property"
+	],
+	"kitten#cat": [
+		"be different from",
+		"be friendlier than",
+		"be more affectionate than",
+		"has property"
+	],
+	"spark#fire": [],
+	"cat#kitten": [
+		"abort",
+		"absorb",
+		"eat",
+		"have",
+		"ignore",
+		"kill",
+		"move",
+		"reject",
+		"wean",
+		"wrestle"
+	],
+	"fire#spark": [
+		"can"
+	],
+	"knee#kneepad": [],
+	"snail#shell": [
+		"change",
+		"come out of",
+		"get",
+		"have",
+		"have coiled",
+		"leave",
+		"lose",
+		"make",
+		"need",
+		"stay in"
+	],
+	"kneepad#knee": [],
+	"shell#snail": [
+		"protect"
+	],
+	"lambchop#lamb": [],
+	"chapter#book": [
+		"be in",
+		"bring",
+		"has property"
+	],
+	"lamb#lambchop": [],
+	"book#chapter": [
+		"be written in",
+		"have"
+	],
+	"landscaper#lawn": [],
+	"stylist#hair": [
+		"burn",
+		"cut",
+		"cut too short"
+	],
+	"lawn#landscaper": [],
+	"hair#stylist": [],
+	"launchpad#helicopter": [],
+	"divingboard#diver": [],
+	"helicopter#launchpad": [],
+	"diver#divingboard": [],
+	"lawschool#lawyer": [],
+	"vineyard#wine": [
+		"make"
+	],
+	"lawyer#lawschool": [],
+	"wine#vineyard": [],
+	"movie#screen": [
+		"fill"
+	],
+	"lightning#sky": [
+		"be created in",
+		"come from",
+		"go across",
+		"occur in",
+		"strike horizontally"
+	],
+	"screen#movie": [],
+	"sky#lightning": [],
+	"multiplication#product": [],
+	"brewing#beer": [
+		"has property"
+	],
+	"product#multiplication": [],
+	"beer#brewing": [],
+	"nose#scent": [],
+	"antenna#signal": [
+		"had lost",
+		"receive"
+	],
+	"scent#nose": [],
+	"signal#antenna": [],
+	"orchard#apple": [
+		"harvest",
+		"pick"
+	],
+	"apple#orchard": [],
+	"painting#canvas": [
+		"be on"
+	],
+	"birthmark#skin": [
+		"can",
+		"come about"
+	],
+	"canvas#painting": [
+		"be used for",
+		"can"
+	],
+	"skin#birthmark": [],
+	"pen#pig": [
+		"be transparent",
+		"can",
+		"has property"
+	],
+	"reservoir#water": [
+		"collect",
+		"get"
+	],
+	"pig#pen": [
+		"can",
+		"has property"
+	],
+	"water#reservoir": [
+		"be distributed in"
+	],
+	"rectangle#perimeter": [
+		"have"
+	],
+	"nation#border": [
+		"build",
+		"have",
+		"need"
+	],
+	"perimeter#rectangle": [],
+	"border#nation": [],
+	"revising#manuscript": [],
+	"evolving#species": [],
+	"manuscript#revising": [],
+	"species#evolving": [
+		"stop"
+	],
+	"saxophone#jazz": [
+		"be popular in",
+		"be used in"
+	],
+	"typewriter#poetry": [],
+	"jazz#saxophone": [],
+	"poetry#typewriter": [],
+	"sugar#coffee": [],
+	"incentive#deal": [],
+	"coffee#sugar": [],
+	"deal#incentive": [],
+	"thermometer#temperature": [
+		"detect",
+		"measure",
+		"read",
+		"work with"
+	],
+	"polygraph#honesty": [],
+	"temperature#thermometer": [
+		"be in"
+	],
+	"honesty#polygraph": [],
+	"train#track": [
+		"change",
+		"cross",
+		"get on",
+		"go on",
+		"keep on",
+		"move on",
+		"run on",
+		"stay on",
+		"stop on",
+		"switch"
+	],
+	"signal#wire": [],
+	"track#train": [],
+	"wire#signal": [
+		"transmit"
+	],
+	"watermelon#rind": [],
+	"cigarette#butt": [],
+	"rind#watermelon": [],
+	"butt#cigarette": [],
+	"soap#body": [],
+	"body#soap": [],
+	"pow#powprint": [],
+	"powprint#pow": [],
+	"holster#crime scene": [],
+	"crime scene#holster": [],
+	"gun#crime scene": [],
+	"crime scene#gun": [],
+	"basket#park": [],
+	"park#basket": [],
+	"picnic#park": [],
+	"park#picnic": [],
+	"scientist#research": [
+		"can",
+		"conduct",
+		"do",
+		"get inspiration to",
+		"go for"
+	],
+	"research#scientist": [
+		"can"
+	],
+	"discovery#research": [],
+	"research#discovery": [],
+	"baker#recipe": [
+		"come up with",
+		"create",
+		"get",
+		"memorize"
+	],
+	"recipe#baker": [],
+	"cake#recipe": [],
+	"recipe#cake": [],
+	"snow#snowflake": [],
+	"snowflake#snow": [
+		"can"
+	],
+	"army#war": [
+		"be sent on",
+		"have"
+	],
+	"war#army": [],
+	"snow#winter": [],
+	"winter#snow": [],
+	"snowflake#winter": [
+		"accumulate during"
+	],
+	"winter#snowflake": [],
+	"book#words": [
+		"have"
+	],
+	"words#book": [
+		"be italic in",
+		"be italicized in"
+	],
+	"book#leisure": [],
+	"leisure#book": [],
+	"cover#words": [],
+	"words#cover": [],
+	"cover#leisure": [],
+	"leisure#cover": [],
+	"words#leisure": [],
+	"leisure#words": [],
+	"burger#meat": [],
+	"meat#burger": [],
+	"burger#appetite": [],
+	"appetite#burger": [],
+	"bun#meat": [],
+	"meat#bun": [],
+	"bun#appetite": [],
+	"appetite#bun": [],
+	"meat#appetite": [],
+	"appetite#meat": [],
+	"stomach#digestion": [
+		"has property"
+	],
+	"digestion#stomach": [
+		"be in",
+		"begin in",
+		"happen in",
+		"occur in",
+		"start in",
+		"take place in"
+	],
+	"food#digestion": [
+		"be good for",
+		"help",
+		"help with"
+	],
+	"digestion#food": [
+		"break down",
+		"has property"
+	],
+	"furnace#combustion": [],
+	"combustion#furnace": [],
+	"coal#combustion": [
+		"be pulverized before"
+	],
+	"combustion#coal": [],
+	"neighborhood#construction": [],
+	"construction#neighborhood": [],
+	"apartment#construction": [],
+	"construction#apartment": [],
+	"orchard#agriculture": [],
+	"agriculture#orchard": [],
+	"apple#agriculture": [],
+	"agriculture#apple": [],
+	"book#pleasure": [],
+	"pleasure#book": [],
+	"cover#pleasure": [],
+	"pleasure#cover": [],
+	"words#pleasure": [],
+	"pleasure#words": [],
+	"tree#apple": [],
+	"apple#tree": [
+		"drop off",
+		"fall from",
+		"fall off",
+		"fall off early",
+		"fall off prematurely",
+		"fall out of",
+		"go on",
+		"grow on",
+		"has property",
+		"split on"
+	],
+	"tree#agriculture": [],
+	"agriculture#tree": [],
+	"burger#satiety": [],
+	"satiety#burger": [],
+	"bun#satiety": [],
+	"satiety#bun": [],
+	"meat#satiety": [],
+	"satiety#meat": []
 }
