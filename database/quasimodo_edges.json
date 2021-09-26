@@ -7349,5 +7349,198 @@
 	"bun#satiety": [],
 	"satiety#bun": [],
 	"meat#satiety": [],
-	"satiety#meat": []
+	"satiety#meat": [],
+	"lint#wallet": [],
+	"wallet#lint": [],
+	"pocket#wallet": [],
+	"wallet#pocket": [],
+	"ash#wood": [
+		"be lighter than"
+	],
+	"wood#ash": [
+		"be called"
+	],
+	"fireplace#wood": [],
+	"wood#fireplace": [],
+	"lint#storage": [],
+	"storage#lint": [],
+	"pocket#storage": [],
+	"storage#pocket": [],
+	"ash#heating": [],
+	"heating#ash": [],
+	"fireplace#heating": [],
+	"heating#fireplace": [],
+	"muffler#trumpet": [],
+	"trumpet#muffler": [],
+	"noise#trumpet": [],
+	"trumpet#noise": [
+		"make"
+	],
+	"aspirin#hit": [
+		"has property"
+	],
+	"hit#aspirin": [],
+	"pain#hit": [
+		"has property"
+	],
+	"hit#pain": [],
+	"holster#bullets": [],
+	"bullets#holster": [],
+	"gun#bullets": [
+		"put spin on"
+	],
+	"bullets#gun": [
+		"be shot out of",
+		"be traced to",
+		"be used for",
+		"can"
+	],
+	"basket#food": [],
+	"food#basket": [],
+	"picnic#food": [
+		"has property"
+	],
+	"food#picnic": [],
+	"holster#cop": [],
+	"cop#holster": [],
+	"gun#cop": [],
+	"cop#gun": [
+		"carry",
+		"carry instead",
+		"have",
+		"hold",
+		"match bullets to",
+		"need",
+		"use lasers instead of"
+	],
+	"basket#family": [],
+	"family#basket": [],
+	"picnic#family": [],
+	"family#picnic": [],
+	"key#mechanism": [],
+	"mechanism#key": [],
+	"lock#mechanism": [],
+	"mechanism#lock": [],
+	"answer#logic": [],
+	"logic#answer": [],
+	"riddle#logic": [],
+	"logic#riddle": [],
+	"scientist#data": [
+		"analyze",
+		"collect",
+		"compare",
+		"falsify",
+		"interpret",
+		"organize",
+		"quantify",
+		"share",
+		"use",
+		"use more"
+	],
+	"data#scientist": [],
+	"discovery#data": [],
+	"data#discovery": [],
+	"research#data": [],
+	"data#research": [
+		"be analyzed in",
+		"be collected in",
+		"be important in",
+		"be in"
+	],
+	"baker#ingredients": [
+		"measure",
+		"use rocks for",
+		"weigh"
+	],
+	"ingredients#baker": [],
+	"cake#ingredients": [],
+	"ingredients#cake": [],
+	"recipe#ingredients": [
+		"put first"
+	],
+	"ingredients#recipe": [
+		"be get",
+		"be listed in",
+		"has property",
+		"work in"
+	],
+	"traveler#travel": [
+		"can"
+	],
+	"travel#traveler": [],
+	"destination#travel": [],
+	"travel#destination": [],
+	"basketball#throwing": [],
+	"throwing#basketball": [],
+	"hoop#throwing": [],
+	"throwing#hoop": [],
+	"poverty#work": [
+		"can"
+	],
+	"work#poverty": [],
+	"money#work": [
+		"can",
+		"shot"
+	],
+	"work#money": [],
+	"blindness#surgery": [],
+	"surgery#blindness": [],
+	"sight#surgery": [],
+	"surgery#sight": [],
+	"stomach#energy": [],
+	"energy#stomach": [],
+	"food#energy": [
+		"be converted into",
+		"be turned into",
+		"be used for",
+		"become",
+		"can give",
+		"give",
+		"has property",
+		"have",
+		"provide"
+	],
+	"energy#food": [
+		"be associated with",
+		"be contained in",
+		"be from",
+		"be in",
+		"be measured in",
+		"be obtained from",
+		"be released in",
+		"be stored in",
+		"be value of",
+		"has property"
+	],
+	"digestion#energy": [
+		"convert carbohydrates into"
+	],
+	"energy#digestion": [],
+	"furnace#heat": [
+		"create"
+	],
+	"heat#furnace": [],
+	"coal#heat": [],
+	"heat#coal": [],
+	"combustion#heat": [
+		"give out",
+		"produce",
+		"require"
+	],
+	"heat#combustion": [
+		"be needed for",
+		"be released in"
+	],
+	"traveler#abroad": [],
+	"abroad#traveler": [],
+	"destination#abroad": [],
+	"abroad#destination": [],
+	"basketball#hall": [],
+	"hall#basketball": [],
+	"hoop#hall": [],
+	"hall#hoop": [],
+	"traveler#nature": [],
+	"nature#traveler": [],
+	"destination#nature": [],
+	"nature#destination": []
 }

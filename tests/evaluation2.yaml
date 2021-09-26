@@ -1,16 +1,17 @@
 mapping:
-  # - input: #1
-  #     base: [answer, riddle]
-  #     target: [key, lock]
+  # - input: #1 -- riddle:logic ??
+  #     base: [answer, riddle, logic]
+  #     target: [key, lock, mechanism]
   #     depth: 4
   #   output:
   #     mapping:
   #     - answer --> key
   #     - riddle --> lock
+  #     - logic --> mechanism
 
-  # - input: #2
-  #     base: [ash, fireplace]
-  #     target: [lint, pocket]
+  # - input: #2 -- very weak coverage
+  #     base: [ash, fireplace] # no fireplace#ash
+  #     target: [lint, pocket] # no lint#pocket
   #     depth: 4
   #   output:
   #     mapping:
@@ -26,17 +27,18 @@ mapping:
   #     - aspirin --> muffler
   #     - pain --> noise
 
-  - input: #4
-      base: [baker, cake, recipe] 
-      target: [scientist, discovery, research]
-      depth: 4
-    output:
-      mapping:
-      - baker --> scientist
-      - cake --> discovery
-      - recipe --> research
+  # - input: #4
+  #     base: [baker, cake, recipe, ingredients] 
+  #     target: [scientist, discovery, research, data]
+  #     depth: 4
+  #   output:
+  #     mapping:
+  #     - baker --> scientist
+  #     - cake --> discovery
+  #     - recipe --> research
+  #     - ingredients --> data
 
-  # - input: #5
+  # - input: #5 -- the semantic is not clear
   #     base: [basket, picnic]
   #     target: [holster, gun] 
   #     depth: 4
@@ -54,24 +56,25 @@ mapping:
   #     - basketball --> traveler
   #     - hoop --> destination
 
-  # - input: #7
-  #     base: [blindness, sight] 
-  #     target: [poverty, money] 
-  #     depth: 4
-  #   output:
-  #     mapping:
-  #     - blindness --> poverty
-  #     - sight --> money
-
-  - input: #8 No solution found
-      base: [snow, snowflake, winter] # blizzard
-      target: [army, soldier, war]
+  - input: #7
+      base: [blindness, sight, surgery] 
+      target: [poverty, money, work]
       depth: 4
     output:
       mapping:
-      - snow --> army # blizzard
-      - snowflake --> soldier
-      - winter --> war
+      - blindness --> poverty
+      - sight --> money
+      - surgery --> work
+
+  # - input: #8 No solution found
+  #     base: [snow, snowflake, winter] # blizzard
+  #     target: [army, soldier, war]
+  #     depth: 4
+  #   output:
+  #     mapping:
+  #     - snow --> army # blizzard
+  #     - snowflake --> soldier
+  #     - winter --> war
 
   # - input: #9
   #     base: [bracelet, wrist] 
@@ -82,16 +85,16 @@ mapping:
   #     - bracelet --> moat
   #     - wrist --> castle
 
-  - input: #10
-      base: [burger, bun, meat, appetite]
-      target: [book, cover, words, leisure]
-      depth: 4
-    output:
-      mapping:
-      - burger --> book
-      - bun --> cover
-      - meat --> words
-      - appetite --> leisure
+  # - input: #10
+  #     base: [burger, bun, meat, appetite]
+  #     target: [book, cover, words, leisure]
+  #     depth: 4
+  #   output:
+  #     mapping:
+  #     - burger --> book
+  #     - bun --> cover
+  #     - meat --> words
+  #     - appetite --> leisure
 
   # - input: #11
   #     base: [cleanser, face]
@@ -148,15 +151,15 @@ mapping:
   #     - foundation --> premise
   #     - house --> argument
 
-  - input: #17
-      base: [furnace, coal, combustion]
-      target: [stomach, food, digestion]
-      depth: 4
-    output:
-      mapping:
-      - furnace --> stomach
-      - coal --> food
-      - combustion --> digestion
+  # - input: #17
+  #     base: [furnace, coal, heat]
+  #     target: [stomach, food, energy]
+  #     depth: 4
+  #   output:
+  #     mapping:
+  #     - furnace --> stomach
+  #     - coal --> food
+  #     - heat --> energy
 
   # - input: #18 No solution found
   #     base: [hoof, hoofprint]
@@ -275,15 +278,15 @@ mapping:
   #     - nose --> antenna
   #     - scent --> signal
 
-  - input: #31
-      base: [orchard, apple, agriculture]
-      target: [neighborhood, apartment, construction]
-      depth: 4
-    output:
-      mapping:
-      - orchard --> neighborhood
-      - apple --> apartment
-      - agriculture --> construction
+  # - input: #31
+  #     base: [orchard, apple, agriculture]
+  #     target: [neighborhood, apartment, construction]
+  #     depth: 4
+  #   output:
+  #     mapping:
+  #     - orchard --> neighborhood
+  #     - apple --> apartment
+  #     - agriculture --> construction
 
   # - input: #32
   #     base: [painting, canvas]

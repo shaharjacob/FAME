@@ -9986,5 +9986,279 @@
 	"bun#satiety": [],
 	"satiety#bun": [],
 	"meat#satiety": [],
-	"satiety#meat": []
+	"satiety#meat": [],
+	"lint#wallet": [],
+	"wallet#lint": [],
+	"pocket#wallet": [],
+	"wallet#pocket": [
+		"go in the back"
+	],
+	"ash#wood": [
+		"weigh less than"
+	],
+	"wood#ash": [
+		"burn better on a bed of",
+		"leave",
+		"turn into",
+		"turn to"
+	],
+	"fireplace#wood": [],
+	"wood#fireplace": [
+		"burn faster in",
+		"crackle in a",
+		"pop in the",
+		"smoke in"
+	],
+	"lint#storage": [],
+	"storage#lint": [],
+	"pocket#storage": [],
+	"storage#pocket": [],
+	"ash#heating": [],
+	"heating#ash": [],
+	"fireplace#heating": [],
+	"heating#fireplace": [],
+	"muffler#trumpet": [],
+	"trumpet#muffler": [],
+	"noise#trumpet": [],
+	"trumpet#noise": [
+		"make"
+	],
+	"aspirin#hit": [],
+	"hit#aspirin": [],
+	"pain#hit": [],
+	"hit#pain": [],
+	"holster#bullets": [],
+	"bullets#holster": [],
+	"gun#bullets": [
+		"far heavier than a",
+		"fire",
+		"mark",
+		"ranges stop",
+		"shoot"
+	],
+	"bullets#gun": [
+		"get matched to",
+		"get traced to a",
+		"leave the",
+		"move farther than the",
+		"move faster than the",
+		"traced to a"
+	],
+	"basket#food": [],
+	"food#basket": [
+		"stick to deep fryer"
+	],
+	"picnic#food": [],
+	"food#picnic": [],
+	"holster#cop": [],
+	"cop#holster": [],
+	"gun#cop": [],
+	"cop#gun": [
+		"carry their",
+		"confuse a taser with a",
+		"hold",
+		"match bullets to a"
+	],
+	"basket#family": [],
+	"family#basket": [],
+	"picnic#family": [],
+	"family#picnic": [],
+	"key#mechanism": [],
+	"mechanism#key": [],
+	"lock#mechanism": [],
+	"mechanism#lock": [],
+	"answer#logic": [],
+	"logic#answer": [],
+	"riddle#logic": [],
+	"logic#riddle": [],
+	"scientist#data": [
+		"analyze",
+		"collect",
+		"collect and use",
+		"collect the zebra mussel",
+		"compare",
+		"falsify",
+		"interpret",
+		"need to represent",
+		"organize",
+		"prefer quantitative",
+		"record",
+		"share",
+		"use",
+		"use graphs or charts for their"
+	],
+	"data#scientist": [
+		"valuable to"
+	],
+	"discovery#data": [],
+	"data#discovery": [],
+	"research#data": [
+		"analyze the",
+		"design a systematic way of collecting",
+		"in a quantitative study gather",
+		"instrument help in collecting",
+		"writers visually display quantitative"
+	],
+	"data#research": [
+		"analysis important in",
+		"analysis in quantitative",
+		"analysis is considered as the most important component of",
+		"analyzed in qualitative",
+		"analyzed in quantitative",
+		"collected in qualitative",
+		"collected in quantitative",
+		"collection and analysis occur simultaneously in qualitative",
+		"collection important in",
+		"fabrication occur in",
+		"from qualitative research differs from data in quantitative",
+		"important in",
+		"literacy support action",
+		"mining differ from traditional marketing",
+		"protection affect"
+	],
+	"baker#ingredients": [
+		"weigh"
+	],
+	"ingredients#baker": [],
+	"cake#ingredients": [],
+	"ingredients#cake": [
+		"affect"
+	],
+	"recipe#ingredients": [],
+	"ingredients#recipe": [],
+	"traveler#travel": [],
+	"travel#traveler": [
+		"writing help the writer as well as the other"
+	],
+	"destination#travel": [],
+	"travel#destination": [],
+	"basketball#throwing": [],
+	"throwing#basketball": [],
+	"hoop#throwing": [],
+	"throwing#hoop": [],
+	"poverty#work": [
+		"affect social",
+		"cycle",
+		"guidelines",
+		"line",
+		"relate to social"
+	],
+	"work#poverty": [],
+	"money#work": [
+		"flipping",
+		"game",
+		"grams",
+		"in crew",
+		"laundering",
+		"line",
+		"lines",
+		"market",
+		"market account",
+		"market accounts",
+		"market fund",
+		"market funds",
+		"markets",
+		"order",
+		"orders",
+		"trees"
+	],
+	"work#money": [
+		"agencies make",
+		"get",
+		"work to make"
+	],
+	"blindness#surgery": [],
+	"surgery#blindness": [],
+	"sight#surgery": [],
+	"surgery#sight": [],
+	"stomach#energy": [],
+	"energy#stomach": [
+		"drinks affect your",
+		"drinks burn my",
+		"drinks burn your",
+		"drinks hurt my",
+		"drinks upset my"
+	],
+	"food#energy": [
+		"a source of",
+		"chain lose",
+		"chemical",
+		"converted into",
+		"drain my",
+		"get converted into",
+		"give me",
+		"give us",
+		"give you",
+		"have",
+		"have chemical",
+		"have potential",
+		"molecules contain",
+		"molecules provide my body with",
+		"not give me",
+		"provide",
+		"scientist measure food",
+		"webs show the flow of",
+		"yield"
+	],
+	"energy#food": [
+		"converted from",
+		"from",
+		"stored in",
+		"value of"
+	],
+	"digestion#energy": [
+		"converts carbohydrates into",
+		"of food provide the body with",
+		"provide"
+	],
+	"energy#digestion": [
+		"released during",
+		"transferred in",
+		"transformation occur during"
+	],
+	"furnace#heat": [
+		"run but not"
+	],
+	"heat#furnace": [
+		"exchanger work in",
+		"loss prevented in a blast",
+		"pump different from a",
+		"pump work with",
+		"pump work with an electric",
+		"pump work with gas",
+		"pumps work with forced air",
+		"transferred in a vacuum"
+	],
+	"coal#heat": [
+		"a good conductor of",
+		"formed",
+		"produce"
+	],
+	"heat#coal": [
+		"generated using"
+	],
+	"combustion#heat": [
+		"generate",
+		"need",
+		"produce",
+		"relate to",
+		"release"
+	],
+	"heat#combustion": [
+		"engines all involve",
+		"needed for",
+		"released in"
+	],
+	"traveler#abroad": [],
+	"abroad#traveler": [],
+	"destination#abroad": [],
+	"abroad#destination": [],
+	"basketball#hall": [],
+	"hall#basketball": [],
+	"hoop#hall": [],
+	"hall#hoop": [],
+	"traveler#nature": [],
+	"nature#traveler": [],
+	"destination#nature": [],
+	"nature#destination": []
 }
