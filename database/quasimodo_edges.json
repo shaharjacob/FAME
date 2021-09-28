@@ -7542,5 +7542,41 @@
 	"traveler#nature": [],
 	"nature#traveler": [],
 	"destination#nature": [],
-	"nature#destination": []
+	"nature#destination": [],
+	"website#internet": [
+		"get on",
+		"work on"
+	],
+	"wave#sea": [
+		"be in",
+		"come in",
+		"form in",
+		"occur in"
+	],
+	"internet#website": [],
+	"sea#wave": [
+		"have"
+	],
+	"client#internet": [],
+	"surfer#sea": [],
+	"internet#client": [],
+	"sea#surfer": [],
+	"surfer#wave": [
+		"catch",
+		"describe",
+		"get into",
+		"go under",
+		"measure",
+		"put in",
+		"ride",
+		"survive",
+		"touch"
+	],
+	"wave#surfer": [
+		"kill"
+	],
+	"client#website": [
+		"can update"
+	],
+	"website#client": []
 }

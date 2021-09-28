@@ -330,3 +330,13 @@ mapping:
         - tv --> radio
         - picture --> sound
         - living room --> car
+
+  - input: #33
+      base: [client, internet, website]  # website
+      target: [surfer, sea, wave]   # wave
+      depth: 4
+    output:
+      mapping:
+        - client --> surfer
+        - internet --> sea
+        - website --> wave

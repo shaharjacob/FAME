@@ -10260,5 +10260,47 @@
 	"traveler#nature": [],
 	"nature#traveler": [],
 	"destination#nature": [],
-	"nature#destination": []
+	"nature#destination": [],
+	"website#internet": [
+		"get on the",
+		"hosted on the",
+		"work on the"
+	],
+	"wave#sea": [
+		"affect the",
+		"form in",
+		"occur in"
+	],
+	"internet#website": [
+		"explorer block some",
+		"explorer blocking my",
+		"explorer not open some",
+		"find a",
+		"search engines store data about"
+	],
+	"sea#wave": [
+		"anemones protect themselves from crashing",
+		"have",
+		"have big"
+	],
+	"client#internet": [],
+	"surfer#sea": [],
+	"internet#client": [],
+	"sea#surfer": [
+		"foam dangerous for",
+		"foam kills"
+	],
+	"surfer#wave": [
+		"catch a",
+		"dive into the",
+		"get into an ocean",
+		"know when to stand up on the board to catch a",
+		"pick a",
+		"put their hand in the",
+		"ride a",
+		"touch the"
+	],
+	"wave#surfer": [],
+	"client#website": [],
+	"website#client": []
 }

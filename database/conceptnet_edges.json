@@ -4267,5 +4267,21 @@
 	"traveler#nature": [],
 	"nature#traveler": [],
 	"destination#nature": [],
-	"nature#destination": []
+	"nature#destination": [],
+	"website#internet": [],
+	"wave#sea": [],
+	"internet#website": [
+		"find a"
+	],
+	"sea#wave": [],
+	"client#internet": [],
+	"surfer#sea": [],
+	"internet#client": [],
+	"sea#surfer": [],
+	"surfer#wave": [
+		"ride a"
+	],
+	"wave#surfer": [],
+	"client#website": [],
+	"website#client": []
 }
