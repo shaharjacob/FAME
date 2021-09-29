@@ -65,7 +65,7 @@ def update_result(corrent_mapping: List[str], solutions: List[Solution], result:
         
 
 
-def evaluate(model_name: str, threshold: float, path: str):
+def evaluate(model_name: str, threshold: float, path: str, specify: int):
     with open(TEST_FOLDER / path, 'r') as y:
         spec = yaml.load(y, Loader=yaml.SafeLoader)
     mapping_spec = spec["mapping"]
@@ -73,7 +73,9 @@ def evaluate(model_name: str, threshold: float, path: str):
     quasimodo = Quasimodo()
     pass_for_json = 'jsons/merged/20%/ci.json' if 'CI' in os.environ else 'jsons/merged/20%/all_1m_filter_3_sort.json'
     freq = Frequencies(pass_for_json, threshold=threshold)
-    for tv in mapping_spec:
+    for i, tv in enumerate(mapping_spec):
+        if specify and i + 1 not in specify:
+            continue
         solutions = mapping_wrapper(
                                         base=tv["input"]["base"], 
                                         target=tv["input"]["target"], 
@@ -123,9 +125,10 @@ def evaluate(model_name: str, threshold: float, path: str):
 @click.option('-t', '--threshold', default=FREQUENCY_THRESHOLD, type=float, help="Threshold for % to take from json frequencies")
 @click.option('-y', '--yaml', default='evaluation.yaml', type=str, help="Path for the yaml for evaluation")
 @click.option('-c', '--comment', default="", type=str, help="Additional comment for the job")
-def run(model, threshold, comment, yaml):
+@click.option('-s', '--specify', default=[], type=int, multiple=True, help="Specify which entry of the yaml file to evaluate")
+def run(model, threshold, yaml, comment, specify):
     torch.cuda.empty_cache()
-    evaluate(model, threshold, yaml)
+    evaluate(model, threshold, yaml, list(specify))
 
 if __name__ == '__main__':
     # os.environ['CI'] = 'true'

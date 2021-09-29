@@ -7578,5 +7578,88 @@
 	"client#website": [
 		"can update"
 	],
-	"website#client": []
+	"website#client": [],
+	"lint#washer": [],
+	"washer#lint": [],
+	"pocket#washer": [],
+	"washer#pocket": [],
+	"ash#chimney": [],
+	"chimney#ash": [],
+	"fireplace#chimney": [],
+	"chimney#fireplace": [],
+	"moat#wall": [],
+	"wall#moat": [],
+	"castle#wall": [],
+	"wall#castle": [],
+	"bracelet#gypsum": [],
+	"gypsum#bracelet": [],
+	"wrist#gypsum": [],
+	"gypsum#wrist": [],
+	"divingboard#fins": [],
+	"fins#divingboard": [],
+	"diver#fins": [],
+	"fins#diver": [],
+	"launchpad#rotor": [],
+	"rotor#launchpad": [],
+	"helicopter#rotor": [],
+	"rotor#helicopter": [
+		"turn in",
+		"work on"
+	],
+	"lightning#thunder": [
+		"be",
+		"be accompanied by",
+		"be followed by",
+		"be with",
+		"can",
+		"come before",
+		"happen before",
+		"happen without",
+		"have",
+		"make"
+	],
+	"thunder#lightning": [
+		"be after",
+		"be associated by",
+		"be followed by",
+		"be heard after",
+		"be longer than",
+		"be without",
+		"come after",
+		"come before",
+		"god of is",
+		"occur after"
+	],
+	"sky#thunder": [],
+	"thunder#sky": [
+		"come from"
+	],
+	"movie#sound": [],
+	"sound#movie": [
+		"be important in",
+		"be very important to",
+		"work on"
+	],
+	"screen#sound": [
+		"record"
+	],
+	"sound#screen": [],
+	"incentive#benefit": [],
+	"benefit#incentive": [],
+	"deal#benefit": [],
+	"benefit#deal": [],
+	"sugar#vigilance": [],
+	"vigilance#sugar": [],
+	"coffee#vigilance": [],
+	"vigilance#coffee": [],
+	"movie#voice": [],
+	"voice#movie": [
+		"be in",
+		"be low in",
+		"be quiet in"
+	],
+	"screen#voice": [],
+	"voice#screen": [],
+	"poverty#poor": [],
+	"poor#poverty": []
 }

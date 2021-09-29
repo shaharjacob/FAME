@@ -10302,5 +10302,133 @@
 	],
 	"wave#surfer": [],
 	"client#website": [],
-	"website#client": []
+	"website#client": [],
+	"lint#washer": [],
+	"washer#lint": [],
+	"pocket#washer": [],
+	"washer#pocket": [],
+	"ash#chimney": [],
+	"chimney#ash": [],
+	"fireplace#chimney": [],
+	"chimney#fireplace": [],
+	"moat#wall": [],
+	"wall#moat": [],
+	"castle#wall": [
+		"have strong high"
+	],
+	"wall#castle": [],
+	"bracelet#gypsum": [],
+	"gypsum#bracelet": [],
+	"wrist#gypsum": [],
+	"gypsum#wrist": [],
+	"divingboard#fins": [],
+	"fins#divingboard": [],
+	"diver#fins": [],
+	"fins#diver": [],
+	"launchpad#rotor": [],
+	"rotor#launchpad": [],
+	"helicopter#rotor": [
+		"fly without a tail",
+		"have",
+		"have 2",
+		"have a tail",
+		"have tail",
+		"have two",
+		"need at least two"
+	],
+	"rotor#helicopter": [
+		"work on a"
+	],
+	"lightning#thunder": [
+		"always accompanied by",
+		"and",
+		"before",
+		"but no",
+		"cause",
+		"come before",
+		"comes first before",
+		"happen without",
+		"hit before the sound of",
+		"make",
+		"makes",
+		"seen before",
+		"sometimes not have",
+		"travel faster than",
+		"without"
+	],
+	"thunder#lightning": [
+		"after",
+		"always follow",
+		"and",
+		"come after",
+		"come before",
+		"comes first before",
+		"follow",
+		"happen without",
+		"heard after",
+		"related to",
+		"usually occur during storms that have"
+	],
+	"sky#thunder": [
+		"flashing but no",
+		"make"
+	],
+	"thunder#sky": [
+		"made in the"
+	],
+	"movie#sound": [
+		"capture",
+		"have"
+	],
+	"sound#movie": [
+		"affect a",
+		"effects help",
+		"important in",
+		"of music a christmas",
+		"of music became a christmas",
+		"recorded in",
+		"work at a drive in",
+		"work at drive in"
+	],
+	"screen#sound": [
+		"mirroring not have",
+		"mirroring only play",
+		"record not record",
+		"record with",
+		"recording have no",
+		"recording not have",
+		"recording not record",
+		"recording not recording",
+		"recording record",
+		"recording without",
+		"recordings have no"
+	],
+	"sound#screen": [],
+	"incentive#benefit": [],
+	"benefit#incentive": [],
+	"deal#benefit": [],
+	"benefit#deal": [],
+	"sugar#vigilance": [],
+	"vigilance#sugar": [],
+	"coffee#vigilance": [],
+	"vigilance#coffee": [],
+	"movie#voice": [],
+	"voice#movie": [
+		"recorded in"
+	],
+	"screen#voice": [],
+	"voice#screen": [],
+	"poverty#poor": [
+		"a violation and abuse of the dignity of the"
+	],
+	"poor#poverty": [
+		"education a cause of",
+		"education affect",
+		"education cause",
+		"governance cause",
+		"health lead to",
+		"infrastructure cause",
+		"infrastructure lead to",
+		"management of resources cause"
+	]
 }
