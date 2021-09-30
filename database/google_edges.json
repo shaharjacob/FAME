@@ -10430,5 +10430,74 @@
 		"infrastructure cause",
 		"infrastructure lead to",
 		"management of resources cause"
-	]
+	],
+	"money#poor": [
+		"make you"
+	],
+	"poor#money": [
+		"countries don't print more",
+		"countries not print more",
+		"spend their"
+	],
+	"blindness#blind": [],
+	"blind#blindness": [],
+	"sight#blind": [],
+	"blind#sight": [
+		"carpenter regain his",
+		"girl on bgt lose her"
+	],
+	"premise#punctuation": [],
+	"punctuation#premise": [],
+	"argument#punctuation": [],
+	"punctuation#argument": [],
+	"foundation#stairs": [],
+	"stairs#foundation": [],
+	"house#stairs": [
+		"have 13"
+	],
+	"stairs#house": [],
+	"fuel#dinosaurs": [],
+	"dinosaurs#fuel": [
+		"become fossil"
+	],
+	"petroleum#dinosaurs": [],
+	"dinosaurs#petroleum": [],
+	"ketchup#seeds": [],
+	"seeds#ketchup": [],
+	"tomato#seeds": [
+		"disperse its",
+		"disperse their",
+		"grow from",
+		"have",
+		"have black",
+		"have green",
+		"have so many",
+		"plants disperse their",
+		"spread their"
+	],
+	"seeds#tomato": [
+		"sprout inside the"
+	],
+	"brewing#brewer": [],
+	"brewer#brewing": [],
+	"beer#brewer": [],
+	"brewer#beer": [
+		"add sugar to",
+		"measure the alcohol in",
+		"remove alcohol from"
+	],
+	"multiplication#mathematician": [],
+	"mathematician#multiplication": [],
+	"product#mathematician": [],
+	"mathematician#product": [],
+	"incentive#interest": [],
+	"interest#incentive": [],
+	"deal#interest": [],
+	"interest#deal": [],
+	"sugar#aroma": [
+		"affect"
+	],
+	"aroma#sugar": [],
+	"coffee#aroma": [],
+	"aroma#coffee": []
 }
