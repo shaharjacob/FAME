@@ -7,6 +7,8 @@ from sentence_transformers import SentenceTransformer, util
 
 from data_collector import DataCollector
 
+import warnings
+warnings.filterwarnings("ignore")
 class SentenceEmbedding(SentenceTransformer):
     def __init__(self, model: str = 'msmarco-distilbert-base-v4', data_collector: DataCollector = None):
         super().__init__(model)

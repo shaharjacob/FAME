@@ -11,6 +11,8 @@ from quasimodo import Quasimodo
 from frequency import Frequencies
 from mapping import mapping_wrapper, Solution, FREQUENCY_THRESHOLD
 
+import warnings
+warnings.filterwarnings("ignore")
 
 TEST_FOLDER = Path('tests')
 COLORS = {
