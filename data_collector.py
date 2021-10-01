@@ -38,14 +38,14 @@ class DataCollector(object):
             self.google_edges[f"{entity1}#{entity2}"] = sorted(autosuggets_props) 
             should_save = True
 
-        if f"{entity1}#{entity2}" in self.conceptnet_edges and not self.override_database:
-            concept_net_props = self.conceptnet_edges[f"{entity1}#{entity2}"]
-        else:
-            if not self.engine:
-                self.engine = inflect.engine()
-            concept_net_props = concept_net.get_entities_relations(entity1, entity2, self.engine, plural_and_singular=True)
-            self.conceptnet_edges[f"{entity1}#{entity2}"] = sorted(concept_net_props)
-            should_save = True
+        # if f"{entity1}#{entity2}" in self.conceptnet_edges and not self.override_database:
+        #     concept_net_props = self.conceptnet_edges[f"{entity1}#{entity2}"]
+        # else:
+        #     if not self.engine:
+        #         self.engine = inflect.engine()
+        #     concept_net_props = concept_net.get_entities_relations(entity1, entity2, self.engine, plural_and_singular=True)
+        #     self.conceptnet_edges[f"{entity1}#{entity2}"] = sorted(concept_net_props)
+        #     should_save = True
 
         if f"{entity1}#{entity2}" in self.openie and not self.override_database:
             openie_props = self.openie[f"{entity1}#{entity2}"]
@@ -59,18 +59,19 @@ class DataCollector(object):
         
         quasimodo_props = [prop for prop in quasimodo_props if prop not in self.stopwords]
         autosuggets_props = [prop for prop in autosuggets_props if prop not in self.stopwords]
-        concept_net_props = [prop for prop in concept_net_props if prop not in self.stopwords]
+        # concept_net_props = [prop for prop in concept_net_props if prop not in self.stopwords]
         openie_props = [prop for prop in openie_props if prop not in self.stopwords]
 
         if from_where:
             return {
                 "openie": sorted(list(set(openie_props))),
                 "quasimodo": sorted(list(set(quasimodo_props))),
-                "concept_net": sorted(list(set(concept_net_props))),
+                # "concept_net": sorted(list(set(concept_net_props))),
                 "google_autosuggest": sorted(list(set(autosuggets_props))),
             }
 
-        return sorted(list(set(quasimodo_props + autosuggets_props + concept_net_props + openie_props)))
+        # return sorted(list(set(quasimodo_props + autosuggets_props + concept_net_props + openie_props)))
+        return sorted(list(set(quasimodo_props + autosuggets_props + openie_props)))
     
 
     def get_entitiy_props(self, entity: str, from_where: bool = False) -> List[str]:

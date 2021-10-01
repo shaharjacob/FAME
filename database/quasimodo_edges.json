@@ -7709,5 +7709,1371 @@
 	"sugar#aroma": [],
 	"aroma#sugar": [],
 	"coffee#aroma": [],
-	"aroma#coffee": []
+	"aroma#coffee": [],
+	"nucleus#proton": [
+		"be made up of"
+	],
+	"proton#nucleus": [
+		"be held together in",
+		"be in",
+		"be situated in",
+		"behave in",
+		"can exist together in",
+		"can stay together in",
+		"repel in",
+		"stay close together in",
+		"stay in",
+		"stay together in"
+	],
+	"nucleus#neutron": [
+		"be made up of",
+		"lose"
+	],
+	"neutron#nucleus": [
+		"be important in",
+		"be in",
+		"be present in",
+		"be stable in",
+		"exist in",
+		"hold together",
+		"role of is",
+		"stabilize",
+		"stay in",
+		"stay together in"
+	],
+	"nucleus#excitation": [],
+	"excitation#nucleus": [],
+	"nucleus#resonance": [],
+	"resonance#nucleus": [],
+	"nucleus#photon": [],
+	"photon#nucleus": [],
+	"nucleus#dipole": [],
+	"dipole#nucleus": [],
+	"nucleus#scattering": [],
+	"scattering#nucleus": [],
+	"nucleus#valence": [],
+	"valence#nucleus": [],
+	"nucleus#helium": [],
+	"helium#nucleus": [
+		"has property"
+	],
+	"nucleus#coupling": [],
+	"coupling#nucleus": [],
+	"nucleus#decay": [
+		"can"
+	],
+	"decay#nucleus": [],
+	"nucleus#particle": [],
+	"particle#nucleus": [
+		"enter"
+	],
+	"nucleus#spin": [
+		"can"
+	],
+	"spin#nucleus": [],
+	"nucleus#spectroscopy": [],
+	"spectroscopy#nucleus": [],
+	"nucleus#hydrogen": [],
+	"hydrogen#nucleus": [],
+	"nucleus#phosphorylation": [],
+	"phosphorylation#nucleus": [],
+	"nucleus#gamma": [],
+	"gamma#nucleus": [],
+	"electrons#neutron": [
+		"be different from",
+		"be smaller than",
+		"differ from"
+	],
+	"neutron#electrons": [
+		"can",
+		"can emit"
+	],
+	"electrons#excitation": [],
+	"excitation#electrons": [],
+	"electrons#resonance": [],
+	"resonance#electrons": [],
+	"electrons#photon": [
+		"absorb",
+		"create",
+		"emit",
+		"have",
+		"produce",
+		"turn into"
+	],
+	"photon#electrons": [
+		"affect",
+		"be absorbed by",
+		"become",
+		"can excite",
+		"eject",
+		"excite",
+		"interact with",
+		"knock free",
+		"move",
+		"relate to"
+	],
+	"electrons#dipole": [],
+	"dipole#electrons": [],
+	"electrons#scattering": [],
+	"scattering#electrons": [],
+	"electrons#valence": [],
+	"valence#electrons": [
+		"has property"
+	],
+	"electrons#helium": [],
+	"helium#electrons": [],
+	"electrons#coupling": [],
+	"coupling#electrons": [],
+	"electrons#decay": [
+		"can",
+		"orbit"
+	],
+	"decay#electrons": [],
+	"electrons#particle": [
+		"behave like",
+		"can behave like",
+		"has property"
+	],
+	"particle#electrons": [],
+	"electrons#spin": [
+		"can",
+		"has movement"
+	],
+	"spin#electrons": [],
+	"electrons#spectroscopy": [],
+	"spectroscopy#electrons": [],
+	"electrons#hydrogen": [],
+	"hydrogen#electrons": [
+		"lose"
+	],
+	"electrons#phosphorylation": [],
+	"phosphorylation#electrons": [],
+	"electrons#gamma": [],
+	"gamma#electrons": [],
+	"proton#neutron": [
+		"attract",
+		"be attracted to",
+		"be different from",
+		"be similar to",
+		"be smaller than",
+		"be than",
+		"become",
+		"differ from",
+		"repel",
+		"turn into"
+	],
+	"neutron#proton": [
+		"be attracted to",
+		"be heavier than",
+		"be than",
+		"become",
+		"can become",
+		"change to",
+		"convert to",
+		"converted to",
+		"stick to",
+		"turn into"
+	],
+	"proton#atom": [
+		"affect",
+		"be arranged in",
+		"be equal in",
+		"be important in",
+		"be important to",
+		"be in",
+		"give identity to",
+		"has property",
+		"identify",
+		"take up in"
+	],
+	"atom#proton": [
+		"can gain",
+		"have",
+		"lose"
+	],
+	"proton#excitation": [],
+	"excitation#proton": [],
+	"proton#resonance": [],
+	"resonance#proton": [],
+	"proton#photon": [],
+	"photon#proton": [],
+	"proton#dipole": [],
+	"dipole#proton": [],
+	"proton#scattering": [],
+	"scattering#proton": [],
+	"proton#valence": [],
+	"valence#proton": [],
+	"proton#helium": [],
+	"helium#proton": [],
+	"proton#coupling": [],
+	"coupling#proton": [],
+	"proton#decay": [
+		"can"
+	],
+	"decay#proton": [],
+	"proton#particle": [],
+	"particle#proton": [],
+	"proton#spin": [
+		"can",
+		"has movement"
+	],
+	"spin#proton": [],
+	"proton#spectroscopy": [],
+	"spectroscopy#proton": [],
+	"proton#hydrogen": [
+		"has property"
+	],
+	"hydrogen#proton": [
+		"be called",
+		"be referred as",
+		"has property"
+	],
+	"proton#phosphorylation": [],
+	"phosphorylation#proton": [],
+	"proton#gamma": [],
+	"gamma#proton": [],
+	"neutron#atom": [
+		"affect",
+		"be important in",
+		"be in",
+		"be needed in",
+		"be present in",
+		"be stable inside",
+		"cause",
+		"exist in",
+		"split",
+		"stay stick in"
+	],
+	"atom#neutron": [
+		"gain",
+		"have",
+		"lose",
+		"need",
+		"require"
+	],
+	"neutron#excitation": [],
+	"excitation#neutron": [],
+	"neutron#resonance": [],
+	"resonance#neutron": [],
+	"neutron#photon": [],
+	"photon#neutron": [],
+	"neutron#dipole": [],
+	"dipole#neutron": [],
+	"neutron#scattering": [
+		"can"
+	],
+	"scattering#neutron": [],
+	"neutron#valence": [],
+	"valence#neutron": [],
+	"neutron#helium": [],
+	"helium#neutron": [],
+	"neutron#coupling": [],
+	"coupling#neutron": [],
+	"neutron#decay": [
+		"can"
+	],
+	"decay#neutron": [],
+	"neutron#particle": [],
+	"particle#neutron": [],
+	"neutron#spin": [
+		"has movement"
+	],
+	"spin#neutron": [],
+	"neutron#spectroscopy": [],
+	"spectroscopy#neutron": [],
+	"neutron#hydrogen": [
+		"be absent in"
+	],
+	"hydrogen#neutron": [
+		"do have",
+		"has property",
+		"have",
+		"need"
+	],
+	"neutron#phosphorylation": [],
+	"phosphorylation#neutron": [],
+	"neutron#gamma": [],
+	"gamma#neutron": [],
+	"atom#excitation": [
+		"emit line spectra following"
+	],
+	"excitation#atom": [],
+	"atom#resonance": [],
+	"resonance#atom": [],
+	"atom#photon": [
+		"absorb",
+		"can absorb",
+		"emit"
+	],
+	"photon#atom": [
+		"affect",
+		"be absorbed by",
+		"be emitted from",
+		"hit",
+		"interact with",
+		"ionize",
+		"knock electrons from",
+		"relate to"
+	],
+	"atom#dipole": [],
+	"dipole#atom": [],
+	"atom#scattering": [],
+	"scattering#atom": [],
+	"atom#valence": [],
+	"valence#atom": [],
+	"atom#helium": [],
+	"helium#atom": [
+		"exist as",
+		"exist of",
+		"has property"
+	],
+	"atom#coupling": [],
+	"coupling#atom": [],
+	"atom#decay": [
+		"can",
+		"undergo"
+	],
+	"decay#atom": [],
+	"atom#particle": [
+		"be charged",
+		"can spread apart in",
+		"has property",
+		"relate to"
+	],
+	"particle#atom": [
+		"be arranged in"
+	],
+	"atom#spin": [
+		"can"
+	],
+	"spin#atom": [],
+	"atom#spectroscopy": [],
+	"spectroscopy#atom": [],
+	"atom#hydrogen": [],
+	"hydrogen#atom": [
+		"has property",
+		"have"
+	],
+	"atom#phosphorylation": [],
+	"phosphorylation#atom": [],
+	"atom#gamma": [],
+	"gamma#atom": [],
+	"excitation#resonance": [],
+	"resonance#excitation": [],
+	"excitation#photon": [],
+	"photon#excitation": [],
+	"excitation#dipole": [],
+	"dipole#excitation": [],
+	"excitation#scattering": [],
+	"scattering#excitation": [],
+	"excitation#valence": [],
+	"valence#excitation": [],
+	"excitation#helium": [],
+	"helium#excitation": [],
+	"excitation#coupling": [],
+	"coupling#excitation": [],
+	"excitation#decay": [],
+	"decay#excitation": [],
+	"excitation#particle": [],
+	"particle#excitation": [],
+	"excitation#spin": [],
+	"spin#excitation": [],
+	"excitation#spectroscopy": [],
+	"spectroscopy#excitation": [],
+	"excitation#hydrogen": [],
+	"hydrogen#excitation": [],
+	"excitation#phosphorylation": [],
+	"phosphorylation#excitation": [],
+	"excitation#gamma": [],
+	"gamma#excitation": [],
+	"resonance#photon": [],
+	"photon#resonance": [],
+	"resonance#dipole": [],
+	"dipole#resonance": [],
+	"resonance#scattering": [],
+	"scattering#resonance": [],
+	"resonance#valence": [],
+	"valence#resonance": [],
+	"resonance#helium": [],
+	"helium#resonance": [],
+	"resonance#coupling": [],
+	"coupling#resonance": [],
+	"resonance#decay": [],
+	"decay#resonance": [],
+	"resonance#particle": [],
+	"particle#resonance": [],
+	"resonance#spin": [],
+	"spin#resonance": [],
+	"resonance#spectroscopy": [],
+	"spectroscopy#resonance": [],
+	"resonance#hydrogen": [],
+	"hydrogen#resonance": [],
+	"resonance#phosphorylation": [],
+	"phosphorylation#resonance": [],
+	"resonance#gamma": [],
+	"gamma#resonance": [],
+	"photon#dipole": [],
+	"dipole#photon": [],
+	"photon#scattering": [],
+	"scattering#photon": [],
+	"photon#valence": [],
+	"valence#photon": [],
+	"photon#helium": [],
+	"helium#photon": [],
+	"photon#coupling": [],
+	"coupling#photon": [],
+	"photon#decay": [
+		"can"
+	],
+	"decay#photon": [],
+	"photon#particle": [
+		"act like",
+		"be considered",
+		"has property"
+	],
+	"particle#photon": [],
+	"photon#spin": [
+		"can",
+		"has movement"
+	],
+	"spin#photon": [],
+	"photon#spectroscopy": [],
+	"spectroscopy#photon": [],
+	"photon#hydrogen": [],
+	"hydrogen#photon": [],
+	"photon#phosphorylation": [],
+	"phosphorylation#photon": [],
+	"photon#gamma": [],
+	"gamma#photon": [],
+	"dipole#scattering": [],
+	"scattering#dipole": [],
+	"dipole#valence": [],
+	"valence#dipole": [],
+	"dipole#helium": [],
+	"helium#dipole": [],
+	"dipole#coupling": [],
+	"coupling#dipole": [],
+	"dipole#decay": [],
+	"decay#dipole": [],
+	"dipole#particle": [],
+	"particle#dipole": [],
+	"dipole#spin": [],
+	"spin#dipole": [],
+	"dipole#spectroscopy": [],
+	"spectroscopy#dipole": [],
+	"dipole#hydrogen": [],
+	"hydrogen#dipole": [],
+	"dipole#phosphorylation": [],
+	"phosphorylation#dipole": [],
+	"dipole#gamma": [],
+	"gamma#dipole": [],
+	"scattering#valence": [],
+	"valence#scattering": [],
+	"scattering#helium": [],
+	"helium#scattering": [],
+	"scattering#coupling": [],
+	"coupling#scattering": [],
+	"scattering#decay": [],
+	"decay#scattering": [],
+	"scattering#particle": [],
+	"particle#scattering": [],
+	"scattering#spin": [],
+	"spin#scattering": [],
+	"scattering#spectroscopy": [],
+	"spectroscopy#scattering": [],
+	"scattering#hydrogen": [],
+	"hydrogen#scattering": [],
+	"scattering#phosphorylation": [],
+	"phosphorylation#scattering": [],
+	"scattering#gamma": [],
+	"gamma#scattering": [],
+	"valence#helium": [],
+	"helium#valence": [],
+	"valence#coupling": [],
+	"coupling#valence": [],
+	"valence#decay": [],
+	"decay#valence": [],
+	"valence#particle": [],
+	"particle#valence": [],
+	"valence#spin": [],
+	"spin#valence": [],
+	"valence#spectroscopy": [],
+	"spectroscopy#valence": [],
+	"valence#hydrogen": [],
+	"hydrogen#valence": [],
+	"valence#phosphorylation": [],
+	"phosphorylation#valence": [],
+	"valence#gamma": [],
+	"gamma#valence": [],
+	"helium#coupling": [],
+	"coupling#helium": [],
+	"helium#decay": [],
+	"decay#helium": [],
+	"helium#particle": [],
+	"particle#helium": [],
+	"helium#spin": [],
+	"spin#helium": [],
+	"helium#spectroscopy": [],
+	"spectroscopy#helium": [],
+	"helium#hydrogen": [
+		"be better than",
+		"be different from",
+		"be larger than",
+		"be less reactive than",
+		"be lighter than",
+		"be more dense than",
+		"be more stable than",
+		"be safer than",
+		"fill",
+		"has property"
+	],
+	"hydrogen#helium": [
+		"be better than",
+		"be bigger than",
+		"be converted to",
+		"be less dense than",
+		"be more flammable than",
+		"be smaller than",
+		"become",
+		"can replace",
+		"make",
+		"turn into"
+	],
+	"helium#phosphorylation": [],
+	"phosphorylation#helium": [],
+	"helium#gamma": [],
+	"gamma#helium": [],
+	"coupling#decay": [],
+	"decay#coupling": [],
+	"coupling#particle": [],
+	"particle#coupling": [],
+	"coupling#spin": [],
+	"spin#coupling": [],
+	"coupling#spectroscopy": [],
+	"spectroscopy#coupling": [],
+	"coupling#hydrogen": [],
+	"hydrogen#coupling": [],
+	"coupling#phosphorylation": [],
+	"phosphorylation#coupling": [],
+	"coupling#gamma": [],
+	"gamma#coupling": [],
+	"decay#particle": [],
+	"particle#decay": [
+		"can"
+	],
+	"decay#spin": [],
+	"spin#decay": [],
+	"decay#spectroscopy": [],
+	"spectroscopy#decay": [],
+	"decay#hydrogen": [],
+	"hydrogen#decay": [
+		"become after"
+	],
+	"decay#phosphorylation": [],
+	"phosphorylation#decay": [],
+	"decay#gamma": [],
+	"gamma#decay": [],
+	"particle#spin": [
+		"can",
+		"has movement"
+	],
+	"spin#particle": [],
+	"particle#spectroscopy": [],
+	"spectroscopy#particle": [],
+	"particle#hydrogen": [],
+	"hydrogen#particle": [],
+	"particle#phosphorylation": [],
+	"phosphorylation#particle": [],
+	"particle#gamma": [],
+	"gamma#particle": [],
+	"spin#spectroscopy": [],
+	"spectroscopy#spin": [],
+	"spin#hydrogen": [],
+	"hydrogen#spin": [],
+	"spin#phosphorylation": [],
+	"phosphorylation#spin": [],
+	"spin#gamma": [],
+	"gamma#spin": [],
+	"spectroscopy#hydrogen": [],
+	"hydrogen#spectroscopy": [],
+	"spectroscopy#phosphorylation": [],
+	"phosphorylation#spectroscopy": [],
+	"spectroscopy#gamma": [],
+	"gamma#spectroscopy": [],
+	"hydrogen#phosphorylation": [],
+	"phosphorylation#hydrogen": [],
+	"hydrogen#gamma": [],
+	"gamma#hydrogen": [],
+	"phosphorylation#gamma": [],
+	"gamma#phosphorylation": [],
+	"sun#kepler": [],
+	"kepler#sun": [],
+	"sun#comet": [],
+	"comet#sun": [
+		"can approach",
+		"face away from",
+		"go around",
+		"move faster near",
+		"point away from",
+		"revolve around",
+		"speed up near",
+		"travel faster near",
+		"travel faster nearer"
+	],
+	"sun#equator": [
+		"be hotter at",
+		"be more intense at",
+		"be stronger at",
+		"be stronger closer to",
+		"be stronger near",
+		"rotate faster at"
+	],
+	"equator#sun": [
+		"be closest to"
+	],
+	"sun#zodiac": [],
+	"zodiac#sun": [],
+	"sun#saturn": [],
+	"saturn#sun": [],
+	"sun#venus": [],
+	"venus#sun": [
+		"be brighter than",
+		"be brightest planet after",
+		"be closest to",
+		"be found as",
+		"be hotter than",
+		"be near",
+		"be second planet from",
+		"orbit",
+		"revolve around",
+		"rotate around"
+	],
+	"sun#neptune": [],
+	"neptune#sun": [
+		"be 8th planet from",
+		"be away",
+		"be furthest away from",
+		"be sometime eighth planet from",
+		"revolve around",
+		"rotate around"
+	],
+	"sun#nebula": [],
+	"nebula#sun": [],
+	"sun#eccentricity": [],
+	"eccentricity#sun": [],
+	"sun#radius": [],
+	"radius#sun": [],
+	"sun#eclipse": [
+		"be brighter during",
+		"be stronger during",
+		"get during",
+		"has property",
+		"look at during"
+	],
+	"eclipse#sun": [
+		"be brighter than",
+		"be more dangerous than"
+	],
+	"sun#astronomer": [],
+	"astronomer#sun": [
+		"can detect neutrinos from",
+		"observe"
+	],
+	"sun#asteroid": [],
+	"asteroid#sun": [
+		"revolve around"
+	],
+	"planet#kepler": [
+		"be named",
+		"move according to"
+	],
+	"kepler#planet": [
+		"find"
+	],
+	"planet#moon": [
+		"actually catch",
+		"be different from",
+		"capture",
+		"get",
+		"have",
+		"have around",
+		"have round",
+		"need",
+		"stay around"
+	],
+	"moon#planet": [
+		"affect",
+		"be called",
+		"be considered",
+		"be different from",
+		"be important to",
+		"be natural satellites to",
+		"has property",
+		"have",
+		"revolve around",
+		"stay around"
+	],
+	"planet#jupiter": [
+		"can",
+		"has property"
+	],
+	"jupiter#planet": [
+		"be",
+		"be call",
+		"be called",
+		"be classified as",
+		"be considered",
+		"be different from",
+		"be same as",
+		"has property",
+		"protect",
+		"swallow in"
+	],
+	"planet#comet": [],
+	"comet#planet": [
+		"be different from",
+		"be similar to",
+		"collide with",
+		"has property"
+	],
+	"planet#equator": [
+		"bulge around",
+		"bulge at"
+	],
+	"equator#planet": [],
+	"planet#zodiac": [],
+	"zodiac#planet": [
+		"have"
+	],
+	"planet#saturn": [],
+	"saturn#planet": [
+		"be called",
+		"be considered",
+		"be different from",
+		"be unique among",
+		"can",
+		"has property"
+	],
+	"planet#venus": [],
+	"venus#planet": [
+		"be as hot as",
+		"be called",
+		"be known as",
+		"can",
+		"has property"
+	],
+	"planet#neptune": [],
+	"neptune#planet": [
+		"be called",
+		"be furthest away from",
+		"be named",
+		"has property"
+	],
+	"planet#pluto": [],
+	"pluto#planet": [
+		"be a name of",
+		"be as",
+		"be classed as",
+		"be classified anymore as",
+		"be considered",
+		"be considered as",
+		"be currently considered",
+		"be different from",
+		"differ from",
+		"has property"
+	],
+	"planet#nebula": [],
+	"nebula#planet": [],
+	"planet#eccentricity": [],
+	"eccentricity#planet": [],
+	"planet#radius": [],
+	"radius#planet": [
+		"affect"
+	],
+	"planet#eclipse": [],
+	"eclipse#planet": [],
+	"planet#astronomer": [],
+	"astronomer#planet": [
+		"classify",
+		"consider",
+		"find",
+		"name",
+		"study"
+	],
+	"planet#asteroid": [
+		"be compared to"
+	],
+	"asteroid#planet": [
+		"be classified as",
+		"be considered",
+		"be different from",
+		"be similar to",
+		"be smaller than",
+		"compare to",
+		"differ from",
+		"has property",
+		"hit",
+		"leave"
+	],
+	"orbit#kepler": [],
+	"kepler#orbit": [],
+	"orbit#moon": [],
+	"moon#orbit": [
+		"can",
+		"have",
+		"stay in"
+	],
+	"orbit#jupiter": [],
+	"jupiter#orbit": [
+		"can",
+		"take",
+		"take long to",
+		"take longer"
+	],
+	"orbit#comet": [],
+	"comet#orbit": [
+		"can",
+		"can have",
+		"have",
+		"stay in"
+	],
+	"orbit#equator": [
+		"be above"
+	],
+	"equator#orbit": [],
+	"orbit#zodiac": [],
+	"zodiac#orbit": [],
+	"orbit#saturn": [],
+	"saturn#orbit": [
+		"can"
+	],
+	"orbit#venus": [],
+	"venus#orbit": [
+		"can",
+		"take longer",
+		"take time"
+	],
+	"orbit#neptune": [],
+	"neptune#orbit": [
+		"can",
+		"have",
+		"take",
+		"take long",
+		"take longer"
+	],
+	"orbit#pluto": [],
+	"pluto#orbit": [
+		"can",
+		"have",
+		"stay in",
+		"take",
+		"take longer",
+		"take much longer"
+	],
+	"orbit#nebula": [],
+	"nebula#orbit": [],
+	"orbit#eccentricity": [],
+	"eccentricity#orbit": [
+		"affect"
+	],
+	"orbit#earth": [
+		"affect"
+	],
+	"earth#orbit": [
+		"can",
+		"have",
+		"remain in",
+		"stay"
+	],
+	"orbit#radius": [],
+	"radius#orbit": [],
+	"orbit#eclipse": [],
+	"eclipse#orbit": [],
+	"orbit#astronomer": [],
+	"astronomer#orbit": [],
+	"orbit#asteroid": [],
+	"asteroid#orbit": [
+		"break out of",
+		"can",
+		"can break out of",
+		"stay in"
+	],
+	"kepler#moon": [],
+	"moon#kepler": [],
+	"kepler#jupiter": [],
+	"jupiter#kepler": [],
+	"kepler#comet": [],
+	"comet#kepler": [],
+	"kepler#equator": [],
+	"equator#kepler": [],
+	"kepler#zodiac": [],
+	"zodiac#kepler": [],
+	"kepler#saturn": [],
+	"saturn#kepler": [],
+	"kepler#venus": [],
+	"venus#kepler": [],
+	"kepler#neptune": [],
+	"neptune#kepler": [],
+	"kepler#pluto": [],
+	"pluto#kepler": [],
+	"kepler#nebula": [],
+	"nebula#kepler": [],
+	"kepler#eccentricity": [],
+	"eccentricity#kepler": [],
+	"kepler#earth": [],
+	"earth#kepler": [],
+	"kepler#radius": [],
+	"radius#kepler": [],
+	"kepler#eclipse": [],
+	"eclipse#kepler": [],
+	"kepler#astronomer": [],
+	"astronomer#kepler": [],
+	"kepler#asteroid": [],
+	"asteroid#kepler": [],
+	"moon#jupiter": [
+		"stay around"
+	],
+	"jupiter#moon": [
+		"be next to",
+		"have"
+	],
+	"moon#comet": [],
+	"comet#moon": [
+		"be different from"
+	],
+	"moon#equator": [],
+	"equator#moon": [],
+	"moon#zodiac": [],
+	"zodiac#moon": [],
+	"moon#saturn": [],
+	"saturn#moon": [
+		"have"
+	],
+	"moon#venus": [],
+	"venus#moon": [
+		"be brightest after",
+		"be brightest planet after",
+		"be close to",
+		"be near",
+		"have"
+	],
+	"moon#neptune": [],
+	"neptune#moon": [
+		"have"
+	],
+	"moon#pluto": [],
+	"pluto#moon": [
+		"can",
+		"has property",
+		"have"
+	],
+	"moon#nebula": [],
+	"nebula#moon": [],
+	"moon#eccentricity": [],
+	"eccentricity#moon": [],
+	"moon#radius": [],
+	"radius#moon": [],
+	"moon#eclipse": [
+		"be perfect size",
+		"be red during",
+		"exactly cover sun in",
+		"has property",
+		"turn during"
+	],
+	"eclipse#moon": [
+		"happen on"
+	],
+	"moon#astronomer": [],
+	"astronomer#moon": [
+		"can use rocks from",
+		"consider"
+	],
+	"moon#asteroid": [],
+	"asteroid#moon": [
+		"be considered",
+		"be different from",
+		"can have",
+		"have",
+		"hit"
+	],
+	"jupiter#comet": [],
+	"comet#jupiter": [],
+	"jupiter#equator": [
+		"bulge out at"
+	],
+	"equator#jupiter": [],
+	"jupiter#zodiac": [],
+	"zodiac#jupiter": [],
+	"jupiter#saturn": [
+		"be better than",
+		"be bigger than",
+		"be brighter than",
+		"be denser than",
+		"be different from",
+		"be located between",
+		"be more dense than",
+		"be more massive than",
+		"be much more dense than",
+		"be much more massive than"
+	],
+	"saturn#jupiter": [
+		"be as big as",
+		"be less dense than",
+		"be less massive than",
+		"be more oblate than",
+		"be similar to",
+		"compare with"
+	],
+	"jupiter#venus": [
+		"be darker than"
+	],
+	"venus#jupiter": [
+		"be as bright as",
+		"be brighter than",
+		"be hotter than",
+		"be much brighter than"
+	],
+	"jupiter#neptune": [
+		"be different from"
+	],
+	"neptune#jupiter": [
+		"be similar to",
+		"be smaller than"
+	],
+	"jupiter#pluto": [],
+	"pluto#jupiter": [],
+	"jupiter#nebula": [],
+	"nebula#jupiter": [],
+	"jupiter#eccentricity": [],
+	"eccentricity#jupiter": [],
+	"jupiter#radius": [],
+	"radius#jupiter": [],
+	"jupiter#eclipse": [],
+	"eclipse#jupiter": [],
+	"jupiter#astronomer": [],
+	"astronomer#jupiter": [],
+	"jupiter#asteroid": [
+		"protect earth from",
+		"protect from"
+	],
+	"asteroid#jupiter": [
+		"be between",
+		"be found between",
+		"be located between",
+		"lie between"
+	],
+	"comet#equator": [],
+	"equator#comet": [],
+	"comet#zodiac": [],
+	"zodiac#comet": [],
+	"comet#saturn": [],
+	"saturn#comet": [],
+	"comet#venus": [],
+	"venus#comet": [],
+	"comet#neptune": [],
+	"neptune#comet": [],
+	"comet#pluto": [],
+	"pluto#comet": [
+		"be like",
+		"resemble"
+	],
+	"comet#nebula": [],
+	"nebula#comet": [],
+	"comet#eccentricity": [],
+	"eccentricity#comet": [],
+	"comet#earth": [
+		"affect",
+		"be different from",
+		"be important to",
+		"can affect",
+		"come to",
+		"come toward",
+		"come towards",
+		"crash into",
+		"fall to",
+		"hit"
+	],
+	"earth#comet": [],
+	"comet#radius": [],
+	"radius#comet": [],
+	"comet#eclipse": [],
+	"eclipse#comet": [],
+	"comet#astronomer": [
+		"be to",
+		"interest to"
+	],
+	"astronomer#comet": [
+		"name",
+		"study"
+	],
+	"comet#asteroid": [
+		"be different from",
+		"be more dangerous than",
+		"be similar to",
+		"differ from",
+		"has property"
+	],
+	"asteroid#comet": [
+		"be different from",
+		"differ from"
+	],
+	"equator#zodiac": [],
+	"zodiac#equator": [],
+	"equator#saturn": [],
+	"saturn#equator": [],
+	"equator#venus": [],
+	"venus#equator": [],
+	"equator#neptune": [],
+	"neptune#equator": [],
+	"equator#pluto": [],
+	"pluto#equator": [],
+	"equator#nebula": [],
+	"nebula#equator": [],
+	"equator#eccentricity": [],
+	"eccentricity#equator": [],
+	"equator#earth": [
+		"be hottest part of",
+		"be hottest place on",
+		"divide"
+	],
+	"earth#equator": [
+		"be hotter at",
+		"be warmer at",
+		"be warmer near"
+	],
+	"equator#radius": [],
+	"radius#equator": [],
+	"equator#eclipse": [],
+	"eclipse#equator": [],
+	"equator#astronomer": [],
+	"astronomer#equator": [],
+	"equator#asteroid": [],
+	"asteroid#equator": [],
+	"zodiac#saturn": [],
+	"saturn#zodiac": [],
+	"zodiac#venus": [],
+	"venus#zodiac": [
+		"has property"
+	],
+	"zodiac#neptune": [],
+	"neptune#zodiac": [],
+	"zodiac#pluto": [],
+	"pluto#zodiac": [],
+	"zodiac#nebula": [],
+	"nebula#zodiac": [],
+	"zodiac#eccentricity": [],
+	"eccentricity#zodiac": [],
+	"zodiac#earth": [],
+	"earth#zodiac": [],
+	"zodiac#radius": [],
+	"radius#zodiac": [],
+	"zodiac#eclipse": [],
+	"eclipse#zodiac": [],
+	"zodiac#astronomer": [
+		"be important to"
+	],
+	"astronomer#zodiac": [],
+	"zodiac#asteroid": [],
+	"asteroid#zodiac": [],
+	"saturn#venus": [],
+	"venus#saturn": [],
+	"saturn#neptune": [
+		"be different from"
+	],
+	"neptune#saturn": [
+		"be denser than",
+		"be same gravity as"
+	],
+	"saturn#pluto": [
+		"differ from"
+	],
+	"pluto#saturn": [],
+	"saturn#nebula": [],
+	"nebula#saturn": [],
+	"saturn#eccentricity": [],
+	"eccentricity#saturn": [],
+	"saturn#earth": [
+		"affect",
+		"be alike",
+		"be compare",
+		"be different from",
+		"be important to",
+		"be less dense than",
+		"be like",
+		"be similar to",
+		"be visible from",
+		"have"
+	],
+	"earth#saturn": [
+		"be compared with",
+		"be different from",
+		"be like"
+	],
+	"saturn#radius": [],
+	"radius#saturn": [],
+	"saturn#eclipse": [],
+	"eclipse#saturn": [],
+	"saturn#astronomer": [],
+	"astronomer#saturn": [],
+	"saturn#asteroid": [],
+	"asteroid#saturn": [],
+	"venus#neptune": [
+		"be hotter than",
+		"has property"
+	],
+	"neptune#venus": [],
+	"venus#pluto": [
+		"be warmer than",
+		"shoot"
+	],
+	"pluto#venus": [],
+	"venus#nebula": [],
+	"nebula#venus": [],
+	"venus#eccentricity": [],
+	"eccentricity#venus": [],
+	"venus#earth": [
+		"affect",
+		"be different from",
+		"be important to",
+		"be like",
+		"be normally visible on",
+		"be same size as",
+		"be similar to",
+		"be twin planet of",
+		"be twin sister of",
+		"observe from"
+	],
+	"earth#venus": [
+		"be more livable than",
+		"be same as",
+		"have carbon dioxide compared to"
+	],
+	"venus#radius": [],
+	"radius#venus": [],
+	"venus#eclipse": [
+		"cause"
+	],
+	"eclipse#venus": [],
+	"venus#astronomer": [],
+	"astronomer#venus": [],
+	"venus#asteroid": [],
+	"asteroid#venus": [],
+	"neptune#pluto": [
+		"be brighter than"
+	],
+	"pluto#neptune": [
+		"be as bright as",
+		"be warmer than"
+	],
+	"neptune#nebula": [],
+	"nebula#neptune": [],
+	"neptune#eccentricity": [],
+	"eccentricity#neptune": [],
+	"neptune#earth": [
+		"affect",
+		"be closer to",
+		"be different from",
+		"be important to",
+		"be like",
+		"be to",
+		"compare to"
+	],
+	"earth#neptune": [
+		"be denser than",
+		"be different from",
+		"be smaller than"
+	],
+	"neptune#radius": [],
+	"radius#neptune": [],
+	"neptune#eclipse": [],
+	"eclipse#neptune": [],
+	"neptune#astronomer": [],
+	"astronomer#neptune": [],
+	"neptune#asteroid": [],
+	"asteroid#neptune": [],
+	"pluto#nebula": [],
+	"nebula#pluto": [],
+	"pluto#eccentricity": [],
+	"eccentricity#pluto": [],
+	"pluto#radius": [],
+	"radius#pluto": [],
+	"pluto#eclipse": [],
+	"eclipse#pluto": [],
+	"pluto#astronomer": [],
+	"astronomer#pluto": [
+		"consider",
+		"hate"
+	],
+	"pluto#asteroid": [
+		"be considered as",
+		"be different from"
+	],
+	"asteroid#pluto": [],
+	"nebula#eccentricity": [],
+	"eccentricity#nebula": [],
+	"nebula#earth": [],
+	"earth#nebula": [],
+	"nebula#radius": [],
+	"radius#nebula": [],
+	"nebula#eclipse": [],
+	"eclipse#nebula": [],
+	"nebula#astronomer": [],
+	"astronomer#nebula": [],
+	"nebula#asteroid": [],
+	"asteroid#nebula": [],
+	"eccentricity#earth": [],
+	"earth#eccentricity": [],
+	"eccentricity#radius": [],
+	"radius#eccentricity": [],
+	"eccentricity#eclipse": [],
+	"eclipse#eccentricity": [],
+	"eccentricity#astronomer": [],
+	"astronomer#eccentricity": [],
+	"eccentricity#asteroid": [],
+	"asteroid#eccentricity": [],
+	"earth#radius": [],
+	"radius#earth": [],
+	"earth#eclipse": [],
+	"eclipse#earth": [
+		"affect"
+	],
+	"earth#astronomer": [],
+	"astronomer#earth": [
+		"measure distance from",
+		"solve problems with"
+	],
+	"earth#asteroid": [
+		"be different from",
+		"protect from"
+	],
+	"asteroid#earth": [
+		"affect",
+		"can affect",
+		"come to",
+		"destroy",
+		"fall to",
+		"get to",
+		"has property",
+		"hit",
+		"miss",
+		"reach"
+	],
+	"radius#eclipse": [],
+	"eclipse#radius": [],
+	"radius#astronomer": [],
+	"astronomer#radius": [],
+	"radius#asteroid": [],
+	"asteroid#radius": [],
+	"eclipse#astronomer": [],
+	"astronomer#eclipse": [
+		"can predict",
+		"predict",
+		"study"
+	],
+	"eclipse#asteroid": [],
+	"asteroid#eclipse": [],
+	"astronomer#asteroid": [
+		"classify"
+	],
+	"asteroid#astronomer": []
 }
