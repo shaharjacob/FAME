@@ -99,20 +99,20 @@ mapping:
   #     score: 9.019
   #   ignore: False
   
-  - input:
-      base: [cars, road, wheels]
-      target: [boats, river]
-      depth: 2
-    output:
-      mapping:
-        - cars --> boats
-        - road --> river
-        - wheels --> anchors
-      relations: 
-        - [[cars, road], [boats, river]]
-        - [[cars, wheels], [boats, anchors]]
-      score: 9.336
-    ignore: False
+  # - input:
+  #     base: [cars, road, wheels]
+  #     target: [boats, river]
+  #     depth: 2
+  #   output:
+  #     mapping:
+  #       - cars --> boats
+  #       - road --> river
+  #       - wheels --> anchors
+  #     relations: 
+  #       - [[cars, road], [boats, river]]
+  #       - [[cars, wheels], [boats, anchors]]
+  #     score: 8.986
+  #   ignore: False
 
   - input:
       base: [sunscreen, sun, summer]
