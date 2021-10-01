@@ -1,4 +1,5 @@
 import os
+import time
 import copy
 from itertools import combinations
 from typing import List, Dict, Tuple, Optional, Union
@@ -217,6 +218,7 @@ def mapping(
     scores: List[float],
     new_score: float,
     cache: dict,
+    calls: List[int],
     depth: int = 2):
     
     # in the end we will sort by the length and the score. So its ok to add all of them
@@ -289,7 +291,7 @@ def mapping(
             # pairs that already maps. in our example it can be one of the following:
             # (a->1, c->3) or (b->2, c->3).
             available_pairs_copy = update_paris_map(available_pairs_copy, base_already_mapping_new, target_already_mapping_new)
-            
+            calls[0] += 1
             mapping(
                 base=base, 
                 target=target,
@@ -304,6 +306,7 @@ def mapping(
                 scores=scores_copy,
                 new_score=new_score+score,
                 cache=cache,
+                calls=calls,
                 depth=depth
             )
     
@@ -439,7 +442,8 @@ def mapping_wrapper(base: List[str],
         freq = Frequencies(path_for_json, threshold=threshold)
 
     cache = {}
-    mapping(base, target, available_pairs, solutions, data_collector, model, freq, [], [], [], [], 0, cache, depth=depth)
+    calls = [0]
+    mapping(base, target, available_pairs, solutions, data_collector, model, freq, [], [], [], [], 0, cache, calls, depth=depth)
     
     # array of addition solutions for the suggestions if some entities have missing mappings.
     suggestions_solutions = []
@@ -465,6 +469,9 @@ def mapping_wrapper(base: List[str],
         for i, solution in enumerate(all_solutions[:solutions_to_print]):
             secho(f"#{i+1}", fg="blue", bold=True)
             print_solution(solution)
+    print("########################")
+    print(calls[0])
+    print("########################")
     return all_solutions[:top_n]
 
 
@@ -486,6 +493,40 @@ def print_solution(solution: Solution):
 
 
 if __name__ == "__main__":
-    base = ["respiration", "animal", "food", "breathing"]
-    target = ["combustion", "fire", "fuel", "burning"]
-    solutions = mapping_wrapper(base, target, suggestions=False, depth=4, top_n=10, verbose=True)
+    # base = ['sun', 'planet' 'orbit', 'kepler', 'moon', 'jupiter', 'comet', 'equator', 'zodiac', 'saturn', 'venus', 
+    #         'neptune', 'pluto', 'nebula', 'eccentricity', 'earth', 'radius', 'eclipse', 'astronomer', 'asteroid', 
+    #         'mercury', 'supernova', 'constellation', 'astrology', 'circling', 'orb', 'brightness', 'atmosphere', 
+    #         'helium', 'sol', 'spacecraft', 'cloud', 'mars', 'disk', 'star', 'hyperion', 'galileo', 'au', 'belt']
+    
+    # target = ['nucleus', 'electrons', 'proton', 'neutron', 'atom', 'excitation', 'resonance', 'photon', 'dipole', 
+    #           'scattering', 'valence', 'helium', 'coupling', 'decay', 'particle', 'spin', 'spectroscopy', 'hydrogen', 
+    #           'phosphorylation', 'gamma', 'ionization', 'molecule', 'isotope', 'localization', 'accelerator', 'emission', 
+    #           'polarization', 'momentum', 'bonding', 'plasma', 'carbon', 'energy', 'interaction', 'membrane', 'radiation', 
+    #           'filament', 'collision', 'fission', 'vesicle', 'spectrometer', 'quark', 'ligand', 'relaxation', 
+    #           'solid', 'lithium', 'fragmentation', 'recoil', 'abbreviation', 'spectrum', 'subunit', 'radius', 'beta']
+    
+    # base = ['sun', 'planet', 'orbit', 'kepler', 'moon', 'jupiter', 'comet', 'equator', 'zodiac', 'saturn', 'venus', 'neptune', 'pluto', 'nebula', 'eccentricity', 'earth', 'radius', 'eclipse', 'astronomer', 'asteroid']
+    # target = ['nucleus', 'electrons', 'proton', 'neutron', 'atom', 'excitation', 'resonance', 'photon', 'dipole', 'scattering', 'valence', 'helium', 'coupling', 'decay', 'particle', 'spin', 'spectroscopy', 'hydrogen', 'phosphorylation', 'gamma']
+    
+    base = ['sun', 'planet', 'orbit', 'kepler', 'moon', 'jupiter', 'comet', 'equator', 'zodiac', 'saturn']
+    target = ['nucleus', 'electrons', 'proton', 'neutron', 'atom', 'excitation', 'resonance', 'photon', 'dipole', 'scattering']
+
+    start_time = time.time()
+    solutions = mapping_wrapper(base, target, suggestions=False, depth=4, top_n=20, verbose=True)
+    print(f"Time execuation: {time.time() - start_time}")
+    base_comb = list(combinations(base, 2))
+    target_comb = list(combinations(target, 2))
+    target_comb += [(val[1], val[0]) for val in target_comb]
+    print(f"Number of combinations in the first iteration: {len(base_comb) * len(target_comb)}")
+
+    # 5x5
+    # Time execuation: 348[sec]
+    
+    # 6x6
+    # Time execuation: 556[sec]
+    
+    # 8x8
+    # Time execuation: 1451[sec]
+    
+    # 10x10
+    # Time execuation: 3387[sec]
