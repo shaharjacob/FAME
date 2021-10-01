@@ -14,8 +14,6 @@ from frequency import Frequencies
 from data_collector import DataCollector
 from sentence_embadding import SentenceEmbedding
 
-import warnings
-warnings.filterwarnings("ignore")
 
 NUM_OF_CLUSTERS_TO_CALC = 3
 EDGE_THRESHOLD = 0.2

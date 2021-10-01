@@ -11,8 +11,6 @@ from frequency import Frequencies
 from mapping import mapping_wrapper, FREQUENCY_THRESHOLD
 from quasimodo import Quasimodo, merge_tsvs
 
-import warnings
-warnings.filterwarnings("ignore")
 
 TEST_FOLDER = Path('tests')
 
