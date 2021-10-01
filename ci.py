@@ -42,7 +42,7 @@ class TestFunctions(unittest.TestCase):
         self.assertEqual(sorted(reference), sorted(actual))
 
         # testing google_autosuggest.get_entity_suggestions
-        reference = ['benjamin franklin', 'edison', 'faraday', 'they']
+        reference = ['benjamin franklin', 'edison', 'faraday']
         actual = google_autosuggest.get_entity_suggestions("electricity", "discovered")
         self.assertEqual(sorted(reference), sorted(actual))
 
