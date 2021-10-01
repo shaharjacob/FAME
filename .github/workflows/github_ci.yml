@@ -17,11 +17,11 @@ jobs:
       run: |
         python -m pip install --upgrade pip
         pip install -r requirements.txt
-    # - name: Running unit-tests
-    #   run: |
-    #     python ci.py
-    #   env:
-    #     CI: True
+    - name: Running unit-tests
+      run: |
+        python ci.py
+      env:
+        CI: True
     # - name: Evaluation
     #   run: |
     #     python evaluation.py --model "msmarco-distilbert-base-v4" --threshold 500
