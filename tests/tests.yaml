@@ -81,7 +81,7 @@ mapping:
       relations: 
         - [[thoughts, brain], [astronaut, space]]
         - [[brain, neurons], [space, black hole]]
-      score: 5.315
+      score: 5.135
     ignore: False
   
   - input:
