@@ -49,7 +49,7 @@ mapping:
         - [[earth, sun], [electrons, nucleus]]
         - [[earth, gravity], [electrons, electricity]]
         - [[gravity, newton], [electricity, benjamin franklin]]
-      score: 11.215
+      score: 11.149
     ignore: False
 
   - input:
