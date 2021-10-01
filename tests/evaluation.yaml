@@ -332,8 +332,8 @@ mapping:
         - living room --> car
 
   - input: #33
-      base: [client, internet, website]  # website
-      target: [surfer, sea, wave]   # wave
+      base: [client, internet, website]
+      target: [surfer, sea, wave]
       depth: 4
     output:
       mapping:
