@@ -32,7 +32,7 @@ mapping:
         - [[earth, sun], [electrons, nucleus]]
         - [[earth, gravity], [electrons, electricity]]
         - [[gravity, newton], [electricity, faraday]]
-      score: 9.548
+      score: 9.482
     ignore: False
 
   - input:
@@ -66,7 +66,7 @@ mapping:
         - [[earth, gravity], [electrons, electricity]]
         - [[newton, gravity], [faraday, electricity]]
         - [[earth, sun], [electrons, nucleus]]
-      score: 9.548
+      score: 9.482
     ignore: False
 
   - input:
