@@ -248,13 +248,14 @@ mapping:
       - rotor --> fins
 
   - input: #27 No solution found
-      base: [lawschool, lawyer]
-      target: [vineyard, wine]
+      base: [lawschool, lawyer, experience]
+      target: [vineyard, wine, aging]
       depth: 4
     output:
       mapping:
       - lawschool --> vineyard
       - lawyer --> wine
+      - experience --> aging
 
   - input: #28
       base: [movie, screen]
@@ -295,31 +296,34 @@ mapping:
       - agriculture --> construction
 
   - input: #32
-      base: [painting, canvas]
-      target: [birthmark, skin]
+      base: [painting, canvas, dust]
+      target: [birthmark, skin, sweat]
       depth: 4
     output:
       mapping:
       - painting --> birthmark
       - canvas --> skin
+      - dust --> sweat
 
   - input: #33
-      base: [pen, pig]
-      target: [reservoir, water]
+      base: [pen, pig, food]
+      target: [reservoir, water, drink]
       depth: 4
     output:
       mapping:
       - pen --> reservoir
       - pig --> water
+      - food --> drink
       
   - input: #34 No solution found
-      base: [rectangle, perimeter]
-      target: [nation, border]
+      base: [rectangle, perimeter, centroid]
+      target: [nation, border, cities]
       depth: 4
     output:
       mapping:
       - rectangle --> nation
       - perimeter --> border
+      - centroid --> cities
 
   - input: #35 No solution found
       base: [revising, manuscript]
@@ -349,14 +353,15 @@ mapping:
       - coffee --> deal
       - aroma --> interest
 
-  - input: #38 No solution found
-      base: [thermometer, temperature]
-      target: [polygraph, honesty]
+  - input: # 38 No solution found
+      base: [thermometer, temperature, mercury]
+      target: [polygraph, honesty, pulse]
       depth: 4
     output:
       mapping:
       - thermometer --> polygraph
       - temperature --> honesty
+      - mercury --> pulse
 
   - input: #39
       base: [train, track]
@@ -368,10 +373,11 @@ mapping:
       - track --> wire
 
   - input: #40 No solution found
-      base: [watermelon, rind]
-      target: [cigarette, butt]
+      base: [watermelon, rind, sugar]
+      target: [cigarette, butt, nicotine]
       depth: 4
     output:
       mapping:
       - watermelon --> cigarette
       - rind --> butt
+      - sugar --> nicotine

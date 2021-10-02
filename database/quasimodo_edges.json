@@ -9075,5 +9075,112 @@
 	"astronomer#asteroid": [
 		"classify"
 	],
-	"asteroid#astronomer": []
+	"asteroid#astronomer": [],
+	"vineyard#aging": [],
+	"aging#vineyard": [],
+	"wine#aging": [],
+	"aging#wine": [
+		"be for"
+	],
+	"lawschool#experience": [],
+	"experience#lawschool": [],
+	"lawyer#experience": [],
+	"experience#lawyer": [],
+	"birthmark#sweat": [],
+	"sweat#birthmark": [],
+	"skin#sweat": [],
+	"sweat#skin": [
+		"be good for",
+		"cool",
+		"get trapped under"
+	],
+	"painting#dust": [],
+	"dust#painting": [],
+	"canvas#dust": [],
+	"dust#canvas": [],
+	"reservoir#drink": [],
+	"drink#reservoir": [],
+	"water#drink": [
+		"be best thing"
+	],
+	"drink#water": [
+		"be better than",
+		"can",
+		"distilled",
+		"has property"
+	],
+	"pen#food": [],
+	"food#pen": [],
+	"pig#food": [
+		"be killed for",
+		"be slaughtered for",
+		"chew",
+		"digest",
+		"eat",
+		"find",
+		"get",
+		"has property",
+		"roll in"
+	],
+	"food#pig": [
+		"can",
+		"has property"
+	],
+	"nation#cities": [],
+	"cities#nation": [],
+	"border#cities": [],
+	"cities#border": [],
+	"rectangle#centroid": [],
+	"centroid#rectangle": [],
+	"perimeter#centroid": [],
+	"centroid#perimeter": [],
+	"polygraph#pulse": [],
+	"pulse#polygraph": [],
+	"honesty#pulse": [],
+	"pulse#honesty": [],
+	"thermometer#mercury": [
+		"be in",
+		"be used in",
+		"contain",
+		"have",
+		"use",
+		"use alcohol instead of"
+	],
+	"mercury#thermometer": [
+		"be filled in",
+		"be in",
+		"be preferred in",
+		"be red in",
+		"be used for",
+		"be used in",
+		"go up in",
+		"look in",
+		"separated in",
+		"used in"
+	],
+	"temperature#mercury": [
+		"be higher than"
+	],
+	"mercury#temperature": [
+		"be magnetic at",
+		"differ in",
+		"have",
+		"tell",
+		"undergo extremes in"
+	],
+	"cigarette#nicotine": [
+		"contain",
+		"have"
+	],
+	"nicotine#cigarette": [
+		"be in",
+		"be measured in",
+		"be put into"
+	],
+	"butt#nicotine": [],
+	"nicotine#butt": [],
+	"watermelon#sugar": [],
+	"sugar#watermelon": [],
+	"rind#sugar": [],
+	"sugar#rind": []
 }

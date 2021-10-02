@@ -12295,5 +12295,164 @@
 	"eclipse#asteroid": [],
 	"asteroid#eclipse": [],
 	"astronomer#asteroid": [],
-	"asteroid#astronomer": []
+	"asteroid#astronomer": [],
+	"vineyard#aging": [],
+	"aging#vineyard": [],
+	"wine#aging": [],
+	"aging#wine": [
+		"affect",
+		"change",
+		"improve",
+		"in oak affect the flavor of a"
+	],
+	"lawschool#experience": [],
+	"experience#lawschool": [],
+	"lawyer#experience": [],
+	"experience#lawyer": [],
+	"birthmark#sweat": [],
+	"sweat#birthmark": [],
+	"skin#sweat": [
+		"excrete",
+		"folds",
+		"produce"
+	],
+	"sweat#skin": [
+		"affect your",
+		"and sebum differ in their protective functions of the",
+		"bad for your",
+		"burn my",
+		"burning my",
+		"come out of your",
+		"cool the",
+		"get trapped under",
+		"good for your",
+		"irritate",
+		"irritate my",
+		"reaches the surface of the",
+		"released through the",
+		"use soccer"
+	],
+	"painting#dust": [],
+	"dust#painting": [],
+	"canvas#dust": [],
+	"dust#canvas": [],
+	"reservoir#drink": [],
+	"drink#reservoir": [],
+	"water#drink": [
+		"a",
+		"better than other",
+		"better than sports",
+		"collect on cold",
+		"collect on the outside of cold",
+		"condense on the outside of a glass containing an iced",
+		"differ from sports",
+		"important to",
+		"the best",
+		"the healthiest"
+	],
+	"drink#water": [
+		"more",
+		"so much"
+	],
+	"pen#food": [],
+	"food#pen": [],
+	"pig#food": [
+		"chew their",
+		"digest",
+		"digest their",
+		"eat their",
+		"find",
+		"get",
+		"get their",
+		"roll in their"
+	],
+	"food#pig": [],
+	"nation#cities": [],
+	"cities#nation": [
+		"of philadelphia celebrate the new"
+	],
+	"border#cities": [],
+	"cities#border": [],
+	"rectangle#centroid": [],
+	"centroid#rectangle": [],
+	"perimeter#centroid": [],
+	"centroid#perimeter": [],
+	"polygraph#pulse": [],
+	"pulse#polygraph": [],
+	"honesty#pulse": [],
+	"pulse#honesty": [],
+	"thermometer#mercury": [
+		"contain",
+		"in",
+		"use",
+		"use alcohol instead of",
+		"work with"
+	],
+	"mercury#thermometer": [
+		"and alcohol used in",
+		"and not water used in",
+		"commonly used in",
+		"expand in a",
+		"in",
+		"is used as thermometric liquid in",
+		"is used in",
+		"look red in a",
+		"move in a",
+		"not fall or rise in a clinical",
+		"or alcohol used in a",
+		"preferred to alcohol in",
+		"react to temperatures inside a",
+		"red in",
+		"red in a",
+		"rise in",
+		"rise in a",
+		"separated in",
+		"use in",
+		"used as an indicator in a",
+		"used in",
+		"used in clinical"
+	],
+	"temperature#mercury": [
+		"of venus higher than"
+	],
+	"mercury#temperature": [
+		"a solid at room",
+		"evaporate at room",
+		"exist as liquid at room",
+		"have a greater range of",
+		"have a very high",
+		"have extreme",
+		"have such extreme",
+		"liquid at room",
+		"measure",
+		"melt at room",
+		"not solid at room",
+		"the only metal that is liquid at room",
+		"undergo extremes in",
+		"used to measure"
+	],
+	"cigarette#nicotine": [
+		"effects"
+	],
+	"nicotine#cigarette": [
+		"added to",
+		"get into",
+		"gum compared to",
+		"in",
+		"make it difficult for a smoker to quit using",
+		"put in"
+	],
+	"butt#nicotine": [],
+	"nicotine#butt": [],
+	"watermelon#sugar": [
+		"affect blood",
+		"affect your blood",
+		"have so much",
+		"raise blood"
+	],
+	"sugar#watermelon": [
+		"on cucumber taste like"
+	],
+	"rind#sugar": [],
+	"sugar#rind": []
 }

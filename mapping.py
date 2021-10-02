@@ -156,7 +156,23 @@ def get_pair_mapping(model: SentenceEmbedding, data_collector: DataCollector, fr
     }
 
 
-def get_best_pair_mapping(model: SentenceEmbedding, freq: Frequencies, data_collector: DataCollector, available_maps: List[List[List[Tuple[str, str]]]], cache: dict, depth: int = 2) -> Dict:
+def get_best_pair_mapping_for_current_iteration(available_maps: List[List[List[Tuple[str, str]]]], initial_results: List[Dict[str, Union[int, List[Tuple[str, str]]]]], depth: int):
+    available_maps_flatten = set()
+    for available_map in available_maps:
+        available_maps_flatten.add(tuple(available_map[0]))
+        available_maps_flatten.add(tuple(available_map[1]))
+    
+    results_for_current_iteration = []
+    for result in initial_results:
+        if tuple(result["best_mapping"]) in available_maps_flatten:
+            results_for_current_iteration.append(result)
+            if len(results_for_current_iteration) == depth:
+                break
+    
+    return results_for_current_iteration
+
+
+def get_best_pair_mapping(model: SentenceEmbedding, freq: Frequencies, data_collector: DataCollector, available_maps: List[List[List[Tuple[str, str]]]], cache: dict, depth: int = 0) -> List[Dict[str, Union[int, List[Tuple[str, str]]]]]:
     mappings = []
 
     # we will iterate over all the possible pairs mapping ((n choose 2)*(n choose 2)*2), 2->2, 3->18, 4->72
@@ -197,7 +213,9 @@ def get_best_pair_mapping(model: SentenceEmbedding, freq: Frequencies, data_coll
         cache[((mapping[1][0][0], mapping[1][0][1]),(mapping[1][1][0], mapping[1][1][1]))] = mapping_score
 
     mappings = sorted(mappings, key=lambda x: x[1], reverse=True)
-    return [{"best_mapping": mapping[0], "best_score": mapping[1]} for mapping in mappings[:depth]]
+    if depth > 0:
+        mappings = mappings[:depth]
+    return [{"best_mapping": mapping[0], "best_score": mapping[1]} for mapping in mappings]
 
 
 def get_score(base: List[str], target: List[str], base_entity: str, target_entity: str, cache: dict) -> float:
@@ -208,6 +226,7 @@ def mapping(
     base: List[str], 
     target: List[str],
     available_pairs: List[List[List[Tuple[str, str]]]],
+    best_results: List[Dict[str, Union[int, List[Tuple[str, str]]]]],
     solutions: List[Solution],
     data_collector: DataCollector,
     model: SentenceEmbedding,
@@ -259,7 +278,8 @@ def mapping(
         return
 
     # we will get the top-depth pairs with the best score.
-    best_results_for_current_iteration = get_best_pair_mapping(model, freq, data_collector, available_pairs, cache, depth)
+    # best_results_for_current_iteration = get_best_pair_mapping(model, freq, data_collector, available_pairs, cache, depth) # TODO
+    best_results_for_current_iteration = get_best_pair_mapping_for_current_iteration(available_pairs, best_results, depth)
     for result in best_results_for_current_iteration:
         # if the best score is > 0, we will update the base and target lists of the already mapping entities.
         # otherwise, if the best score is 0, we have no more mappings to do.
@@ -296,6 +316,7 @@ def mapping(
                 base=base, 
                 target=target,
                 available_pairs=available_pairs_copy,
+                best_results=best_results,
                 solutions=solutions,
                 data_collector=data_collector,
                 model=model,
@@ -443,7 +464,8 @@ def mapping_wrapper(base: List[str],
 
     cache = {}
     calls = [0]
-    mapping(base, target, available_pairs, solutions, data_collector, model, freq, [], [], [], [], 0, cache, calls, depth=depth)
+    best_results = get_best_pair_mapping(model, freq, data_collector, available_pairs, cache)
+    mapping(base, target, available_pairs, best_results, solutions, data_collector, model, freq, [], [], [], [], 0, cache, calls, depth=depth)
     
     # array of addition solutions for the suggestions if some entities have missing mappings.
     suggestions_solutions = []
@@ -469,9 +491,8 @@ def mapping_wrapper(base: List[str],
         for i, solution in enumerate(all_solutions[:solutions_to_print]):
             secho(f"#{i+1}", fg="blue", bold=True)
             print_solution(solution)
-    print("########################")
-    print(calls[0])
-    print("########################")
+
+    secho(f"Number of recursive calls: {calls[0]}")
     return all_solutions[:top_n]
 
 
