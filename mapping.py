@@ -238,7 +238,12 @@ def mapping(
     new_score: float,
     cache: dict,
     calls: List[int],
+    depths: List[int],
     depth: int = 2):
+
+    calls[0] += 1
+    if len(available_pairs) not in depths:
+        depths.append(len(available_pairs))
     
     # in the end we will sort by the length and the score. So its ok to add all of them
     if base_already_mapping:
@@ -311,7 +316,7 @@ def mapping(
             # pairs that already maps. in our example it can be one of the following:
             # (a->1, c->3) or (b->2, c->3).
             available_pairs_copy = update_paris_map(available_pairs_copy, base_already_mapping_new, target_already_mapping_new)
-            calls[0] += 1
+            
             mapping(
                 base=base, 
                 target=target,
@@ -328,6 +333,7 @@ def mapping(
                 new_score=new_score+score,
                 cache=cache,
                 calls=calls,
+                depths=depths,
                 depth=depth
             )
     
@@ -464,8 +470,9 @@ def mapping_wrapper(base: List[str],
 
     cache = {}
     calls = [0]
+    depths = []
     best_results = get_best_pair_mapping(model, freq, data_collector, available_pairs, cache)
-    mapping(base, target, available_pairs, best_results, solutions, data_collector, model, freq, [], [], [], [], 0, cache, calls, depth=depth)
+    mapping(base, target, available_pairs, best_results, solutions, data_collector, model, freq, [], [], [], [], 0, cache, calls, depths, depth=depth)
     
     # array of addition solutions for the suggestions if some entities have missing mappings.
     suggestions_solutions = []
@@ -493,6 +500,7 @@ def mapping_wrapper(base: List[str],
             print_solution(solution)
 
     secho(f"Number of recursive calls: {calls[0]}")
+    secho(f"depths: {sorted(depths, reverse=True)}")
     return all_solutions[:top_n]
 
 
@@ -530,8 +538,8 @@ if __name__ == "__main__":
     # base = ['sun', 'planet', 'orbit', 'kepler', 'moon', 'jupiter', 'comet', 'equator', 'zodiac', 'saturn', 'venus', 'neptune', 'pluto', 'nebula', 'eccentricity', 'earth', 'radius', 'eclipse', 'astronomer', 'asteroid']
     # target = ['nucleus', 'electrons', 'proton', 'neutron', 'atom', 'excitation', 'resonance', 'photon', 'dipole', 'scattering', 'valence', 'helium', 'coupling', 'decay', 'particle', 'spin', 'spectroscopy', 'hydrogen', 'phosphorylation', 'gamma']
     
-    base = ['sun', 'planet', 'orbit', 'kepler', 'moon', 'jupiter', 'comet', 'equator', 'zodiac', 'saturn', 'venus', 'neptune', 'pluto']
-    target = ['nucleus', 'electrons', 'proton', 'neutron', 'atom', 'excitation', 'resonance', 'photon', 'dipole', 'scattering', 'valence', 'helium', 'coupling']
+    base = ['sun', 'planet', 'orbit', 'kepler', 'moon', 'jupiter', 'comet', 'equator', 'zodiac', 'saturn']
+    target = ['nucleus', 'electrons', 'proton', 'neutron', 'atom', 'excitation', 'resonance', 'photon', 'dipole', 'scattering']
 
     start_time = time.time()
     solutions = mapping_wrapper(base, target, suggestions=False, depth=4, top_n=20, verbose=True)
