@@ -22,12 +22,12 @@ jobs:
         python ci.py
       env:
         CI: True
-    # - name: Evaluation
-    #   run: |
-    #     python evaluation.py --model "msmarco-distilbert-base-v4" --threshold 500
-    # - name: Evaluation 2
-    #   run: |
-    #     python evaluation.py --model "msmarco-distilbert-base-v4" --threshold 500 --yaml evaluation2.yaml
-    - name: Mapping-test
+    - name: Evaluation
       run: |
-        python mapping.py
+        python evaluation.py --model "msmarco-distilbert-base-v4" --threshold 500
+    - name: Evaluation 2
+      run: |
+        python evaluation.py --model "msmarco-distilbert-base-v4" --threshold 500 --yaml evaluation2.yaml
+    # - name: Mapping-test
+    #   run: |
+    #     python mapping.py

@@ -14,6 +14,9 @@ from frequency import Frequencies
 from data_collector import DataCollector
 from sentence_embadding import SentenceEmbedding
 
+Pair = Tuple[str, str] # two entities: (b1,b2)
+TwoPairs = List[Pair] # [(b1,b2), (t1,t2)]
+SingleMapping = List[TwoPairs] # both directions --> [[(b1,b2), (t1,t2)], [(b2,b1), (t2,t1)]]
 
 NUM_OF_CLUSTERS_TO_CALC = 3
 EDGE_THRESHOLD = 0.2
@@ -63,41 +66,43 @@ def get_all_possible_pairs_map(base: List[str], target: List[str]) -> List[List[
     return all_mapping
 
 
-def update_paris_map(pairs_map: List[List[List[Tuple[str, str]]]], base_already_mapping: List[str], target_already_mapping: List[str]) -> List[List[List[Tuple[str, str]]]]:
-    new_pairs_map = []
-    for mapping in pairs_map:
-        one_direction = mapping[0]
+def check_if_valid(first_direction: TwoPairs, base_already_mapping: List[str], target_already_mapping: List[str]) -> bool:
+    b1, b2 = first_direction[0][0], first_direction[0][1]
+    t1, t2 = first_direction[1][0], first_direction[1][1]
 
-        if one_direction[0][0] in base_already_mapping and one_direction[0][1] in base_already_mapping:
-            # we already map base1 and base2
-            continue
-        
-        if one_direction[0][0] in base_already_mapping:
-            if one_direction[1][0] != target_already_mapping[base_already_mapping.index(one_direction[0][0])]:
-                # the match of mapping that already mapped is not true (base1->target1)
-                continue
-        
-        if one_direction[0][1] in base_already_mapping:
-            if one_direction[1][1] != target_already_mapping[base_already_mapping.index(one_direction[0][1])]:
-                # the match of mapping that already mapped is not true (base2->target2)
-                continue
-        
-        if one_direction[1][0] in target_already_mapping and one_direction[1][1] in target_already_mapping:
-            # we already map target1 and target2
-            continue
+    if b1 in base_already_mapping and b2 in base_already_mapping:
+        # we already map base1 and base2
+        return False
+    
+    if b1 in base_already_mapping:
+        if t1 != target_already_mapping[base_already_mapping.index(b1)]:
+            # the match of mapping that already mapped is not true (base1->target1)
+            return False
+    
+    if b2 in base_already_mapping:
+        if t2 != target_already_mapping[base_already_mapping.index(b2)]:
+            # the match of mapping that already mapped is not true (base2->target2)
+            return False
+    
+    if t1 in target_already_mapping and t2 in target_already_mapping:
+        # we already map target1 and target2
+        return False
 
-        if one_direction[1][0] in target_already_mapping:
-            if one_direction[0][0] != base_already_mapping[target_already_mapping.index(one_direction[1][0])]:
-                # the match of mapping that already mapped is not true (base1->target1)
-                continue
-        
-        if one_direction[1][1] in target_already_mapping:
-            if one_direction[0][1] != base_already_mapping[target_already_mapping.index(one_direction[1][1])]:
-                # the match of mapping that already mapped is not true (base2->target2)
-                continue
-        
-        new_pairs_map.append(mapping)
-    return new_pairs_map
+    if t1 in target_already_mapping:
+        if b1 != base_already_mapping[target_already_mapping.index(t1)]:
+            # the match of mapping that already mapped is not true (base1->target1)
+            return False
+    
+    if t2 in target_already_mapping:
+        if b2 != base_already_mapping[target_already_mapping.index(t2)]:
+            # the match of mapping that already mapped is not true (base2->target2)
+            return False
+    
+    return True
+
+
+def update_paris_map(pairs_map: List[SingleMapping], base_already_mapping: List[str], target_already_mapping: List[str]) -> List[SingleMapping]:
+    return [mapping for mapping in pairs_map if check_if_valid(mapping[0], base_already_mapping, target_already_mapping)]
 
 
 def get_edges_with_maximum_weight(similatiry_edges: List[Tuple[str, str, float]], 
@@ -248,31 +253,29 @@ def mapping(
     
     # in the end we will sort by the length and the score. So its ok to add all of them
     if base_already_mapping:
-        start_time = time.time()
         mapping_repr = [f"{b} --> {t}" for b, t in zip(base_already_mapping, target_already_mapping)]
         for solution in solutions:
             if sorted(relations) == sorted(solution.relations):
                 return
             if sorted(mapping_repr) == sorted(solution.mapping):
                 return
-        times[0].append(time.time() - start_time)
-        start_time = time.time()
+        # start_time = time.time()
         new_mapping = True
-        for i, solution in enumerate(solutions):
-            if relations[:-1] == solution.relations:
-                solutions[i] = Solution(
-                    mapping=mapping_repr,
-                    relations=relations,
-                    scores=scores,
-                    score=round(new_score, 3),
-                    actual_base=base_already_mapping,
-                    actual_target=target_already_mapping,
-                    length=len(base_already_mapping),
-                )
-                new_mapping = False
-                break
-        times[1].append(time.time() - start_time)
-        start_time = time.time()
+        # for i, solution in enumerate(solutions):
+        #     if relations[:-1] == solution.relations:
+        #         # print(i)
+        #         solutions[i] = Solution(
+        #             mapping=mapping_repr,
+        #             relations=relations,
+        #             scores=scores,
+        #             score=round(new_score, 3),
+        #             actual_base=base_already_mapping,
+        #             actual_target=target_already_mapping,
+        #             length=len(base_already_mapping),
+        #         )
+        #         new_mapping = False
+        #         break
+        # times[0].append(time.time() - start_time)
         if new_mapping:
             solutions.append(Solution(
                 mapping=mapping_repr,
@@ -283,7 +286,6 @@ def mapping(
                 actual_target=target_already_mapping,
                 length=len(base_already_mapping),
             ))
-        times[2].append(time.time() - start_time)
     
     # base case for recursive function. there is no more available pairs to match (base->target)
     if len(base_already_mapping) == min(len(base), len(target)):
@@ -296,6 +298,7 @@ def mapping(
         # if the best score is > 0, we will update the base and target lists of the already mapping entities.
         # otherwise, if the best score is 0, we have no more mappings to do.
         if result["best_score"] > 0:
+            start_time = time.time()
             # deepcopy is more safe when working with recursive functions
             available_pairs_copy = copy.deepcopy(available_pairs)
             relations_copy = copy.deepcopy(relations)
@@ -306,24 +309,27 @@ def mapping(
             # we will add the new mapping to the already mapping lists. 
             base_already_mapping_new = copy.deepcopy(base_already_mapping)
             target_already_mapping_new = copy.deepcopy(target_already_mapping)
-
+            times[0].append(time.time() - start_time)
+            start_time = time.time()
             score = 0
             if result["best_mapping"][0][0] not in base_already_mapping_new and result["best_mapping"][1][0] not in target_already_mapping_new:
                 score += get_score(base_already_mapping_new, target_already_mapping_new, result["best_mapping"][0][0], result["best_mapping"][1][0], cache)
                 base_already_mapping_new.append(result["best_mapping"][0][0])
                 target_already_mapping_new.append(result["best_mapping"][1][0])
-            
+            times[1].append(time.time() - start_time)
+            start_time = time.time()
             if result["best_mapping"][0][1] not in base_already_mapping_new and result["best_mapping"][1][1] not in target_already_mapping_new:
                 score += get_score(base_already_mapping_new, target_already_mapping_new, result["best_mapping"][0][1], result["best_mapping"][1][1], cache)
                 base_already_mapping_new.append(result["best_mapping"][0][1])
                 target_already_mapping_new.append(result["best_mapping"][1][1])
-
+            times[2].append(time.time() - start_time)
+            start_time = time.time()
             # here we update the possible/available pairs.
             # for example, if we already map a->1, b->2, we will looking only for pairs which respect the 
             # pairs that already maps. in our example it can be one of the following:
             # (a->1, c->3) or (b->2, c->3).
             available_pairs_copy = update_paris_map(available_pairs_copy, base_already_mapping_new, target_already_mapping_new)
-
+            times[3].append(time.time() - start_time)
             mapping(
                 base=base, 
                 target=target,
@@ -479,7 +485,7 @@ def mapping_wrapper(base: List[str],
     cache = {}
     calls = [0]
     depths = []
-    times = [[], [], []]
+    times = [[], [], [], []]
     best_results = get_best_pair_mapping(model, freq, data_collector, available_pairs, cache)
     mapping(base, target, available_pairs, best_results, solutions, data_collector, model, freq, [], [], [], [], 0, cache, calls, depths, times, depth=depth)
     
@@ -510,7 +516,10 @@ def mapping_wrapper(base: List[str],
 
     secho(f"Number of recursive calls: {calls[0]}")
     secho(f"depths: {sorted(depths, reverse=True)}")
-    secho(f"times: {sum(times[0]), sum(times[1]), sum(times[2]), sum(times[3])}")
+    secho(f"times: ", nl=False)
+    for time in times:
+        secho(f"{round(sum(time), 2)}, ", nl=False)
+    print()
     return all_solutions[:top_n]
 
 
@@ -552,15 +561,3 @@ if __name__ == "__main__":
     target = ['nucleus', 'electrons', 'proton', 'neutron', 'atom', 'excitation', 'resonance', 'photon', 'dipole', 'scattering']
 
     solutions = mapping_wrapper(base, target, suggestions=False, depth=4, top_n=20, verbose=True)
-
-    # 5x5
-    # Time execuation: 348[sec]
-    
-    # 6x6
-    # Time execuation: 556[sec]
-    
-    # 8x8
-    # Time execuation: 1451[sec]
-    
-    # 10x10
-    # Time execuation: 3387[sec]
