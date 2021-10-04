@@ -246,15 +246,17 @@ def mapping(
     if len(available_pairs) not in depths:
         depths.append(len(available_pairs))
     
-    start_time = time.time()
     # in the end we will sort by the length and the score. So its ok to add all of them
     if base_already_mapping:
+        start_time = time.time()
         mapping_repr = [f"{b} --> {t}" for b, t in zip(base_already_mapping, target_already_mapping)]
         for solution in solutions:
             if sorted(relations) == sorted(solution.relations):
                 return
             if sorted(mapping_repr) == sorted(solution.mapping):
                 return
+        times[0].append(time.time() - start_time)
+        start_time = time.time()
         new_mapping = True
         for i, solution in enumerate(solutions):
             if relations[:-1] == solution.relations:
@@ -269,6 +271,8 @@ def mapping(
                 )
                 new_mapping = False
                 break
+        times[1].append(time.time() - start_time)
+        start_time = time.time()
         if new_mapping:
             solutions.append(Solution(
                 mapping=mapping_repr,
@@ -279,21 +283,19 @@ def mapping(
                 actual_target=target_already_mapping,
                 length=len(base_already_mapping),
             ))
-    times[0].append(time.time() - start_time)
+        times[2].append(time.time() - start_time)
+    
     # base case for recursive function. there is no more available pairs to match (base->target)
     if len(base_already_mapping) == min(len(base), len(target)):
         return
 
-    start_time = time.time()
     # we will get the top-depth pairs with the best score.
     # best_results_for_current_iteration = get_best_pair_mapping(model, freq, data_collector, available_pairs, cache, depth) # TODO
     best_results_for_current_iteration = get_best_pair_mapping_for_current_iteration(available_pairs, best_results, depth)
-    times[1].append(time.time() - start_time)
     for result in best_results_for_current_iteration:
         # if the best score is > 0, we will update the base and target lists of the already mapping entities.
         # otherwise, if the best score is 0, we have no more mappings to do.
         if result["best_score"] > 0:
-            start_time = time.time()
             # deepcopy is more safe when working with recursive functions
             available_pairs_copy = copy.deepcopy(available_pairs)
             relations_copy = copy.deepcopy(relations)
@@ -315,14 +317,13 @@ def mapping(
                 score += get_score(base_already_mapping_new, target_already_mapping_new, result["best_mapping"][0][1], result["best_mapping"][1][1], cache)
                 base_already_mapping_new.append(result["best_mapping"][0][1])
                 target_already_mapping_new.append(result["best_mapping"][1][1])
-            times[2].append(time.time() - start_time)
-            start_time = time.time()
+
             # here we update the possible/available pairs.
             # for example, if we already map a->1, b->2, we will looking only for pairs which respect the 
             # pairs that already maps. in our example it can be one of the following:
             # (a->1, c->3) or (b->2, c->3).
             available_pairs_copy = update_paris_map(available_pairs_copy, base_already_mapping_new, target_already_mapping_new)
-            times[3].append(time.time() - start_time)
+
             mapping(
                 base=base, 
                 target=target,
@@ -478,7 +479,7 @@ def mapping_wrapper(base: List[str],
     cache = {}
     calls = [0]
     depths = []
-    times = [[], [], [], []]
+    times = [[], [], []]
     best_results = get_best_pair_mapping(model, freq, data_collector, available_pairs, cache)
     mapping(base, target, available_pairs, best_results, solutions, data_collector, model, freq, [], [], [], [], 0, cache, calls, depths, times, depth=depth)
     
