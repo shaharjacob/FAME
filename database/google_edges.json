@@ -12811,5 +12811,140 @@
 	"sun#not all movement along faults": [],
 	"not all movement along faults#sun": [],
 	"sun#faults": [],
-	"faults#sun": []
+	"faults#sun": [],
+	"nucleus#most of mass of atom": [],
+	"most of mass of atom#nucleus": [],
+	"nucleus#standing waves": [],
+	"standing waves#nucleus": [],
+	"nucleus#mrna transported": [],
+	"mrna transported#nucleus": [
+		"out of the"
+	],
+	"nucleus#mrna exported": [],
+	"mrna exported#nucleus": [
+		"from"
+	],
+	"nucleus#ganglion different": [],
+	"ganglion different#nucleus": [
+		"from"
+	],
+	"nucleus#nucleus different": [],
+	"nucleus different#nucleus": [],
+	"nucleus#dna": [
+		"contain",
+		"protect"
+	],
+	"dna#nucleus": [
+		"arranged in the",
+		"direct protein synthesis from inside the",
+		"enter the",
+		"fit inside a cell",
+		"found in the",
+		"in chloroplast different to dna in",
+		"in the",
+		"leave the",
+		"located in the",
+		"molecules stay in the",
+		"never leave the",
+		"not able to leave the",
+		"only found in the",
+		"organised inside the cell",
+		"organized in the",
+		"packaged in the",
+		"replicate in the",
+		"replication occur in the",
+		"replication take place in the",
+		"send a copy out of the",
+		"stay in the",
+		"stored in the",
+		"stored inside the",
+		"viruses replicate in the"
+	],
+	"nucleus#cells": [
+		"absent in red blood",
+		"affect",
+		"and mitochondria important in all",
+		"called controller of the",
+		"called controller or brain of the",
+		"called director of the",
+		"called the brain of the",
+		"called the control centre of the",
+		"command",
+		"considered the brain center of the",
+		"controls",
+		"direct",
+		"evolve in",
+		"help",
+		"important for a",
+		"important to",
+		"important to eukaryotic",
+		"interact with other parts of",
+		"need to be removed from the egg",
+		"of a sperm cell different to body",
+		"plant",
+		"so significant in a",
+		"the control center of the",
+		"work with other"
+	],
+	"cells#nucleus": [
+		"contain",
+		"divide",
+		"have a",
+		"have more than one",
+		"have multiple",
+		"have several",
+		"keep dna in the",
+		"keep dna in their",
+		"lack",
+		"lose",
+		"membrane",
+		"need",
+		"need a",
+		"needs",
+		"of tapetum have more than one",
+		"only have one",
+		"use"
+	],
+	"nucleus#side of plant cell": [],
+	"side of plant cell#nucleus": [],
+	"nucleus#nucleoid different": [],
+	"nucleoid different#nucleus": [
+		"from"
+	],
+	"electrons#most of mass of atom": [],
+	"most of mass of atom#electrons": [],
+	"electrons#standing waves": [
+		"form"
+	],
+	"standing waves#electrons": [],
+	"electrons#mrna transported": [],
+	"mrna transported#electrons": [],
+	"electrons#mrna exported": [],
+	"mrna exported#electrons": [],
+	"electrons#ganglion different": [],
+	"ganglion different#electrons": [],
+	"electrons#nucleus different": [],
+	"nucleus different#electrons": [
+		"from"
+	],
+	"electrons#dna": [],
+	"dna#electrons": [],
+	"electrons#cells": [
+		"flow from anode to cathode in galvanic",
+		"flow in a concentration",
+		"flow in a galvanic",
+		"flow in a voltaic",
+		"flow in an electrolytic",
+		"microscope affect",
+		"microscopes affect",
+		"microscopes make them useful for studying",
+		"move in an electrolytic"
+	],
+	"cells#electrons": [
+		"use"
+	],
+	"electrons#side of plant cell": [],
+	"side of plant cell#electrons": [],
+	"electrons#nucleoid different": [],
+	"nucleoid different#electrons": []
 }

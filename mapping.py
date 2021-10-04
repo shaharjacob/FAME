@@ -2,7 +2,7 @@ import os
 import time
 import copy
 from itertools import combinations
-from typing import List, Dict, Tuple, Optional, Union
+from typing import List, Dict, Tuple, Optional, Union, Set
 
 from tqdm import tqdm
 from click import secho
@@ -15,8 +15,8 @@ from data_collector import DataCollector
 from sentence_embadding import SentenceEmbedding
 
 Pair = Tuple[str, str] # two entities: (b1,b2)
-TwoPairs = List[Pair] # [(b1,b2), (t1,t2)]
-SingleMapping = List[TwoPairs] # both directions --> [[(b1,b2), (t1,t2)], [(b2,b1), (t2,t1)]]
+SingleMapping = List[Pair] # [(b1,b2), (t1,t2)]
+MultiMapping = List[SingleMapping] # both directions --> [[(b1,b2), (t1,t2)], [(b2,b1), (t2,t1)]]
 
 NUM_OF_CLUSTERS_TO_CALC = 3
 EDGE_THRESHOLD = 0.2
@@ -25,8 +25,8 @@ FREQUENCY_THRESHOLD = 500
 
 class Solution:
     def __init__(self, mapping, relations, scores, score, actual_base, actual_target, length):
-        self.mapping = mapping
-        self.relations = relations
+        self.mapping: List[str] = mapping
+        self.relations: MultiMapping = relations
         self.scores = scores
         self.score = score
         self.actual_base = actual_base
@@ -48,7 +48,7 @@ def get_edge_score(prop1: str, prop2: str, model: SentenceEmbedding, freq: Frequ
         return model.similarity(prop1, prop2)
     
 
-def get_all_possible_pairs_map(base: List[str], target: List[str]) -> List[List[List[Tuple[str, str]]]]:
+def get_all_possible_pairs_map(base: List[str], target: List[str]) -> List[MultiMapping]:
     # complexity: (n choose 2) * (n choose 2) * 2
 
     base_comb = list(combinations(base, 2))
@@ -66,7 +66,7 @@ def get_all_possible_pairs_map(base: List[str], target: List[str]) -> List[List[
     return all_mapping
 
 
-def check_if_valid(first_direction: TwoPairs, base_already_mapping: List[str], target_already_mapping: List[str]) -> bool:
+def check_if_valid(first_direction: SingleMapping, base_already_mapping: List[str], target_already_mapping: List[str]) -> bool:
     b1, b2 = first_direction[0][0], first_direction[0][1]
     t1, t2 = first_direction[1][0], first_direction[1][1]
 
@@ -101,7 +101,8 @@ def check_if_valid(first_direction: TwoPairs, base_already_mapping: List[str], t
     return True
 
 
-def update_paris_map(pairs_map: List[SingleMapping], base_already_mapping: List[str], target_already_mapping: List[str]) -> List[SingleMapping]:
+def update_paris_map(pairs_map: List[MultiMapping], base_already_mapping: List[str], target_already_mapping: List[str]) -> List[MultiMapping]:
+    # This is MultiMapping because there is two directions. But actully this is SingleMapping.
     return [mapping for mapping in pairs_map if check_if_valid(mapping[0], base_already_mapping, target_already_mapping)]
 
 
@@ -131,7 +132,7 @@ def get_edges_with_maximum_weight(similatiry_edges: List[Tuple[str, str, float]]
     return cluster_edges_weights
 
 
-def get_pair_mapping(model: SentenceEmbedding, data_collector: DataCollector, freq: Frequencies, mapping: List[Tuple[str, str]]):
+def get_pair_mapping(model: SentenceEmbedding, data_collector: DataCollector, freq: Frequencies, mapping: SingleMapping):
 
     props_edge1 = data_collector.get_entities_relations(mapping[0][0], mapping[0][1])
     props_edge2 = data_collector.get_entities_relations(mapping[1][0], mapping[1][1])
@@ -161,7 +162,7 @@ def get_pair_mapping(model: SentenceEmbedding, data_collector: DataCollector, fr
     }
 
 
-def get_best_pair_mapping_for_current_iteration(available_maps: List[List[List[Tuple[str, str]]]], initial_results: List[Dict[str, Union[int, List[Tuple[str, str]]]]], depth: int):
+def get_best_pair_mapping_for_current_iteration(available_maps: List[MultiMapping], initial_results: List[Dict[str, Union[int, SingleMapping]]], depth: int):
     available_maps_flatten = set()
     for available_map in available_maps:
         available_maps_flatten.add(tuple(available_map[0]))
@@ -177,7 +178,7 @@ def get_best_pair_mapping_for_current_iteration(available_maps: List[List[List[T
     return results_for_current_iteration
 
 
-def get_best_pair_mapping(model: SentenceEmbedding, freq: Frequencies, data_collector: DataCollector, available_maps: List[List[List[Tuple[str, str]]]], cache: dict, depth: int = 0) -> List[Dict[str, Union[int, List[Tuple[str, str]]]]]:
+def get_best_pair_mapping(model: SentenceEmbedding, freq: Frequencies, data_collector: DataCollector, available_maps: List[MultiMapping], cache: dict, depth: int = 0) -> List[Dict[str, Union[int, SingleMapping]]]:
     mappings = []
 
     # we will iterate over all the possible pairs mapping ((n choose 2)*(n choose 2)*2), 2->2, 3->18, 4->72
@@ -230,70 +231,55 @@ def get_score(base: List[str], target: List[str], base_entity: str, target_entit
 def mapping(
     base: List[str], 
     target: List[str],
-    available_pairs: List[List[List[Tuple[str, str]]]],
-    best_results: List[Dict[str, Union[int, List[Tuple[str, str]]]]],
+    available_pairs: List[MultiMapping],
+    best_results: List[Dict[str, Union[int, SingleMapping]]],
     solutions: List[Solution],
-    data_collector: DataCollector,
-    model: SentenceEmbedding,
     freq: Frequencies,
     base_already_mapping: List[str],
     target_already_mapping: List[str],
-    relations: List[List[Tuple[str, str]]],
+    relations: MultiMapping,
+    relations_already_seen: Set[Tuple[Tuple[Tuple[str, str]]]],
+    mappings_already_seen: Set[Tuple[str]],
     scores: List[float],
     new_score: float,
     cache: dict,
-    calls: List[int],
-    depths: List[int],
-    times: List[List[int]],
+    calls: List[int], # debug
+    times: List[List[int]], # debug
     depth: int = 2):
 
     calls[0] += 1
-    if len(available_pairs) not in depths:
-        depths.append(len(available_pairs))
-    
     # in the end we will sort by the length and the score. So its ok to add all of them
     if base_already_mapping:
         mapping_repr = [f"{b} --> {t}" for b, t in zip(base_already_mapping, target_already_mapping)]
-        for solution in solutions:
-            if sorted(relations) == sorted(solution.relations):
-                return
-            if sorted(mapping_repr) == sorted(solution.mapping):
-                return
-        # start_time = time.time()
-        new_mapping = True
-        # for i, solution in enumerate(solutions):
-        #     if relations[:-1] == solution.relations:
-        #         # print(i)
-        #         solutions[i] = Solution(
-        #             mapping=mapping_repr,
-        #             relations=relations,
-        #             scores=scores,
-        #             score=round(new_score, 3),
-        #             actual_base=base_already_mapping,
-        #             actual_target=target_already_mapping,
-        #             length=len(base_already_mapping),
-        #         )
-        #         new_mapping = False
-        #         break
-        # times[0].append(time.time() - start_time)
-        if new_mapping:
-            solutions.append(Solution(
-                mapping=mapping_repr,
-                relations=relations,
-                scores=scores,
-                score=round(new_score, 3),
-                actual_base=base_already_mapping,
-                actual_target=target_already_mapping,
-                length=len(base_already_mapping),
-            ))
-    
+        start_time_ = time.time()
+        relations_as_tuple = tuple([tuple(relation) for relation in sorted(relations)])
+        mapping_repr_as_tuple = tuple(sorted(mapping_repr))
+        if relations_as_tuple in relations_already_seen:
+            return
+        if mapping_repr_as_tuple in mappings_already_seen:
+            return
+        
+        relations_already_seen.add(relations_as_tuple)
+        mappings_already_seen.add(mapping_repr_as_tuple)
+
+        # new solution
+        solutions.append(Solution(
+            mapping=mapping_repr,
+            relations=relations,
+            scores=scores,
+            score=round(new_score, 3),
+            actual_base=base_already_mapping,
+            actual_target=target_already_mapping,
+            length=len(base_already_mapping),
+        ))
+        times[0].append(time.time() - start_time_)
     # base case for recursive function. there is no more available pairs to match (base->target)
     if len(base_already_mapping) == min(len(base), len(target)):
         return
-
+    start_time = time.time()
     # we will get the top-depth pairs with the best score.
-    # best_results_for_current_iteration = get_best_pair_mapping(model, freq, data_collector, available_pairs, cache, depth) # TODO
     best_results_for_current_iteration = get_best_pair_mapping_for_current_iteration(available_pairs, best_results, depth)
+    times[1].append(time.time() - start_time)
     for result in best_results_for_current_iteration:
         # if the best score is > 0, we will update the base and target lists of the already mapping entities.
         # otherwise, if the best score is 0, we have no more mappings to do.
@@ -309,51 +295,52 @@ def mapping(
             # we will add the new mapping to the already mapping lists. 
             base_already_mapping_new = copy.deepcopy(base_already_mapping)
             target_already_mapping_new = copy.deepcopy(target_already_mapping)
-            times[0].append(time.time() - start_time)
-            start_time = time.time()
-            score = 0
-            if result["best_mapping"][0][0] not in base_already_mapping_new and result["best_mapping"][1][0] not in target_already_mapping_new:
-                score += get_score(base_already_mapping_new, target_already_mapping_new, result["best_mapping"][0][0], result["best_mapping"][1][0], cache)
-                base_already_mapping_new.append(result["best_mapping"][0][0])
-                target_already_mapping_new.append(result["best_mapping"][1][0])
-            times[1].append(time.time() - start_time)
-            start_time = time.time()
-            if result["best_mapping"][0][1] not in base_already_mapping_new and result["best_mapping"][1][1] not in target_already_mapping_new:
-                score += get_score(base_already_mapping_new, target_already_mapping_new, result["best_mapping"][0][1], result["best_mapping"][1][1], cache)
-                base_already_mapping_new.append(result["best_mapping"][0][1])
-                target_already_mapping_new.append(result["best_mapping"][1][1])
             times[2].append(time.time() - start_time)
-            start_time = time.time()
+
+            b1, b2 = result["best_mapping"][0][0], result["best_mapping"][0][1]
+            t1, t2 = result["best_mapping"][1][0], result["best_mapping"][1][1]
+            score = 0
+            if b1 not in base_already_mapping_new and t1 not in target_already_mapping_new:
+                score += get_score(base_already_mapping_new, target_already_mapping_new, b1, t1, cache)
+                base_already_mapping_new.append(b1)
+                target_already_mapping_new.append(t1)
+
+            if b2 not in base_already_mapping_new and t2 not in target_already_mapping_new:
+                score += get_score(base_already_mapping_new, target_already_mapping_new, b2, t2, cache)
+                base_already_mapping_new.append(b2)
+                target_already_mapping_new.append(t2)
+
             # here we update the possible/available pairs.
             # for example, if we already map a->1, b->2, we will looking only for pairs which respect the 
             # pairs that already maps. in our example it can be one of the following:
             # (a->1, c->3) or (b->2, c->3).
+            start_time = time.time()
             available_pairs_copy = update_paris_map(available_pairs_copy, base_already_mapping_new, target_already_mapping_new)
             times[3].append(time.time() - start_time)
+            
             mapping(
                 base=base, 
                 target=target,
                 available_pairs=available_pairs_copy,
                 best_results=best_results,
                 solutions=solutions,
-                data_collector=data_collector,
-                model=model,
                 freq=freq,
                 base_already_mapping=base_already_mapping_new,
                 target_already_mapping=target_already_mapping_new,
                 relations=relations_copy,
+                relations_already_seen=relations_already_seen,
+                mappings_already_seen=mappings_already_seen,
                 scores=scores_copy,
                 new_score=new_score+score,
                 cache=cache,
                 calls=calls,
-                depths=depths,
                 times=times,
                 depth=depth
             )
     
 
 def mapping_suggestions(
-    available_pairs: List[List[List[Tuple[str, str]]]],
+    available_pairs: List[MultiMapping],
     current_solution: Solution,
     solutions: List[Solution],
     data_collector: DataCollector,
@@ -484,11 +471,13 @@ def mapping_wrapper(base: List[str],
 
     cache = {}
     calls = [0]
-    depths = []
     times = [[], [], [], []]
     best_results = get_best_pair_mapping(model, freq, data_collector, available_pairs, cache)
-    mapping(base, target, available_pairs, best_results, solutions, data_collector, model, freq, [], [], [], [], 0, cache, calls, depths, times, depth=depth)
-    
+
+    start_time = time.time()
+    mapping(base, target, available_pairs, best_results, solutions, freq, [], [], [], set(), set(), [], 0, cache, calls, times, depth=depth)
+    mapping_total_time = time.time() - start_time
+
     # array of addition solutions for the suggestions if some entities have missing mappings.
     suggestions_solutions = []
     if suggestions and num_of_suggestions > 0:
@@ -515,10 +504,10 @@ def mapping_wrapper(base: List[str],
             print_solution(solution)
 
     secho(f"Number of recursive calls: {calls[0]}")
-    secho(f"depths: {sorted(depths, reverse=True)}")
+    print(f"mapping total time: {mapping_total_time}")
     secho(f"times: ", nl=False)
-    for time in times:
-        secho(f"{round(sum(time), 2)}, ", nl=False)
+    for time_ in times:
+        secho(f"{round(sum(time_), 2)}, ", nl=False)
     print()
     return all_solutions[:top_n]
 
@@ -557,6 +546,15 @@ if __name__ == "__main__":
     # base = ['sun', 'planet', 'orbit', 'kepler', 'moon', 'jupiter', 'comet', 'equator', 'zodiac', 'saturn', 'venus', 'neptune', 'pluto', 'nebula', 'eccentricity', 'earth', 'radius', 'eclipse', 'astronomer', 'asteroid']
     # target = ['nucleus', 'electrons', 'proton', 'neutron', 'atom', 'excitation', 'resonance', 'photon', 'dipole', 'scattering', 'valence', 'helium', 'coupling', 'decay', 'particle', 'spin', 'spectroscopy', 'hydrogen', 'phosphorylation', 'gamma']
     
+    # # 12
+    # base = ['sun', 'planet', 'orbit', 'kepler', 'moon', 'jupiter', 'comet', 'equator', 'zodiac', 'saturn', 'venus', 'neptune']
+    # target = ['nucleus', 'electrons', 'proton', 'neutron', 'atom', 'excitation', 'resonance', 'photon', 'dipole', 'scattering', 'valence', 'helium']
+    
+    # # 11
+    # base = ['sun', 'planet', 'orbit', 'kepler', 'moon', 'jupiter', 'comet', 'equator', 'zodiac', 'saturn', 'venus']
+    # target = ['nucleus', 'electrons', 'proton', 'neutron', 'atom', 'excitation', 'resonance', 'photon', 'dipole', 'scattering', 'valence']
+    
+    # 10
     base = ['sun', 'planet', 'orbit', 'kepler', 'moon', 'jupiter', 'comet', 'equator', 'zodiac', 'saturn']
     target = ['nucleus', 'electrons', 'proton', 'neutron', 'atom', 'excitation', 'resonance', 'photon', 'dipole', 'scattering']
 
