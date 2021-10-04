@@ -96,6 +96,7 @@ class GoogleAutoSuggestTwoEntities(object):
         try:
             suggestions = json.loads(response.text)[1]
         except:
+            secho(f"[WARNING] cannot access to {url}", fg="yellow", bold=True)
             suggestions = []
         for suggestion in suggestions:
             match = re.match(self.regex, suggestion)
@@ -256,5 +257,5 @@ if __name__ == '__main__':
     # res = get_entity_suggestions("electricity", "discovered")
     # res = get_entity_props("sun")
     # res = get_entities_relations("electricity", "cell", verbose=True).get("props")
-    res = get_entities_relations("air", "sounds", verbose=True).get("props")
+    res = get_entities_relations("sun", "earth", verbose=True).get("props")
     print(res)

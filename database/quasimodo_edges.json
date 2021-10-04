@@ -9182,5 +9182,227 @@
 	"watermelon#sugar": [],
 	"sugar#watermelon": [],
 	"rind#sugar": [],
-	"sugar#rind": []
+	"sugar#rind": [],
+	"electrons#potential difference": [],
+	"potential difference#electrons": [],
+	"nucleus#potential difference": [],
+	"potential difference#nucleus": [],
+	"electrons#science": [],
+	"science#electrons": [],
+	"electrons#democritus": [],
+	"democritus#electrons": [],
+	"electrons#john dalton": [],
+	"john dalton#electrons": [],
+	"electrons#solar system": [],
+	"solar system#electrons": [],
+	"electrons#particles": [
+		"behave like",
+		"can behave like",
+		"has property"
+	],
+	"particles#electrons": [],
+	"electrons#substance": [],
+	"substance#electrons": [],
+	"electrons#the law of multiple proportions": [],
+	"the law of multiple proportions#electrons": [],
+	"electrons#octet": [],
+	"octet#electrons": [],
+	"electrons#molecules": [
+		"affect shape in",
+		"transfer through"
+	],
+	"molecules#electrons": [
+		"lose",
+		"share"
+	],
+	"electrons#dalton": [],
+	"dalton#electrons": [],
+	"electrons#scientists": [],
+	"scientists#electrons": [
+		"can disregard"
+	],
+	"electrons#electronegativity": [],
+	"electronegativity#electrons": [],
+	"electrons#elements": [
+		"be excited in"
+	],
+	"elements#electrons": [
+		"gain",
+		"lose",
+		"need",
+		"share",
+		"steal",
+		"typically give up"
+	],
+	"electrons#compound": [
+		"be shared in"
+	],
+	"compound#electrons": [
+		"share"
+	],
+	"nucleus#john dalton": [],
+	"john dalton#nucleus": [],
+	"nucleus#substance": [],
+	"substance#nucleus": [],
+	"nucleus#octet": [],
+	"octet#nucleus": [],
+	"nucleus#molecules": [],
+	"molecules#nucleus": [
+		"enter"
+	],
+	"nucleus#compound": [],
+	"compound#nucleus": [],
+	"atoms#science": [
+		"be important to",
+		"be useful in",
+		"relate to"
+	],
+	"science#atoms": [],
+	"atoms#democritus": [],
+	"democritus#atoms": [],
+	"atoms#john dalton": [],
+	"john dalton#atoms": [],
+	"atoms#solar system": [
+		"be different to",
+		"be similar to",
+		"look like",
+		"relate to"
+	],
+	"solar system#atoms": [
+		"look like"
+	],
+	"atoms#particles": [
+		"be charged",
+		"can spread apart in",
+		"has property",
+		"relate to"
+	],
+	"particles#atoms": [
+		"be arranged in"
+	],
+	"atoms#substance": [
+		"can make up around",
+		"have"
+	],
+	"substance#atoms": [],
+	"atoms#einstein": [],
+	"einstein#atoms": [],
+	"atoms#the law of multiple proportions": [],
+	"the law of multiple proportions#atoms": [],
+	"atoms#octet": [
+		"achieve",
+		"can expand",
+		"reach",
+		"want"
+	],
+	"octet#atoms": [],
+	"atoms#molecules": [
+		"be different from",
+		"be held together in",
+		"be in",
+		"be related to",
+		"become",
+		"differ from",
+		"exist as",
+		"form",
+		"make",
+		"turn into"
+	],
+	"molecules#atoms": [
+		"be bigger than",
+		"be called",
+		"be differed from",
+		"be different from",
+		"be related to",
+		"be same as",
+		"be similar to",
+		"differ from",
+		"has property",
+		"relate to"
+	],
+	"atoms#cell": [
+		"be bigger than",
+		"be related to",
+		"relate to"
+	],
+	"cell#atoms": [
+		"be made of",
+		"be similar to",
+		"contain"
+	],
+	"atoms#dalton": [],
+	"dalton#atoms": [],
+	"atoms#scientists": [],
+	"scientists#atoms": [
+		"can observe",
+		"can see",
+		"can see inside",
+		"move",
+		"see",
+		"split",
+		"store information on",
+		"view"
+	],
+	"atoms#electronegativity": [],
+	"electronegativity#atoms": [
+		"affect"
+	],
+	"atoms#elements": [
+		"be",
+		"be different from",
+		"be related to",
+		"be smallest particle of",
+		"be smallest particles of",
+		"become",
+		"define",
+		"determine",
+		"differ from",
+		"has property"
+	],
+	"elements#atoms": [
+		"be different from",
+		"consist of",
+		"differ from",
+		"has property"
+	],
+	"atoms#compound": [
+		"be arranged in",
+		"be different from",
+		"be held together in",
+		"be in",
+		"be related to",
+		"can form",
+		"combine",
+		"form",
+		"join together in",
+		"unite into"
+	],
+	"compound#atoms": [
+		"be more complex than",
+		"relate to"
+	],
+	"sun#movements along faults": [],
+	"movements along faults#sun": [],
+	"sun#charged": [],
+	"charged#sun": [],
+	"sun#a fault": [],
+	"a fault#sun": [],
+	"sun#warmer": [],
+	"warmer#sun": [],
+	"sun#movements along fault lines": [],
+	"movements along fault lines#sun": [],
+	"sun#plate boundaries": [],
+	"plate boundaries#sun": [],
+	"sun#thinner due to ozone layer": [],
+	"thinner due to ozone layer#sun": [],
+	"sun#volcanoes": [],
+	"volcanoes#sun": [],
+	"sun#buildings": [],
+	"buildings#sun": [],
+	"sun#normal fault": [],
+	"normal fault#sun": [],
+	"sun#not all movement along faults": [],
+	"not all movement along faults#sun": [],
+	"sun#faults": [],
+	"faults#sun": []
 }

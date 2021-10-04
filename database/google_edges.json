@@ -12454,5 +12454,362 @@
 		"on cucumber taste like"
 	],
 	"rind#sugar": [],
-	"sugar#rind": []
+	"sugar#rind": [],
+	"electrons#potential difference": [],
+	"potential difference#electrons": [
+		"create a flow of"
+	],
+	"nucleus#potential difference": [],
+	"potential difference#nucleus": [],
+	"electrons#science": [
+		"microscope change"
+	],
+	"science#electrons": [],
+	"electrons#democritus": [],
+	"democritus#electrons": [],
+	"electrons#john dalton": [],
+	"john dalton#electrons": [],
+	"electrons#solar system": [],
+	"solar system#electrons": [],
+	"electrons#particles": [
+		"act as waves and",
+		"act like",
+		"behave like"
+	],
+	"particles#electrons": [],
+	"electrons#substance": [],
+	"substance#electrons": [],
+	"electrons#the law of multiple proportions": [],
+	"the law of multiple proportions#electrons": [],
+	"electrons#octet": [],
+	"octet#electrons": [
+		"of",
+		"rule relate to valence"
+	],
+	"electrons#molecules": [
+		"affect the bond formed between",
+		"affect the shape of a",
+		"affect the structure of a",
+		"distribution affect these"
+	],
+	"molecules#electrons": [
+		"need"
+	],
+	"electrons#dalton": [],
+	"dalton#electrons": [
+		"model not include"
+	],
+	"electrons#scientists": [
+		"microscopes help"
+	],
+	"scientists#electrons": [
+		"currently describe the movement of",
+		"discover that atoms contain",
+		"discovered",
+		"see",
+		"shoot",
+		"use models to show the motion and location of an"
+	],
+	"electrons#electronegativity": [
+		"affinity affect",
+		"affinity differ from",
+		"affinity different from",
+		"configuration affect",
+		"density related to",
+		"gain enthalpy different from",
+		"shielding effect"
+	],
+	"electronegativity#electrons": [],
+	"electrons#elements": [
+		"affect an",
+		"configuration affect chemical and physical properties of",
+		"give scientists information on different types of"
+	],
+	"elements#electrons": [
+		"gain",
+		"gain or lose",
+		"have",
+		"in an ionic bond transfer",
+		"lose",
+		"lose or gain",
+		"on the right side of the periodic table gain",
+		"share",
+		"want 8 valence",
+		"want to lose"
+	],
+	"electrons#compound": [
+		"behave in an ionic",
+		"behave in metallic"
+	],
+	"compound#electrons": [
+		"share"
+	],
+	"nucleus#john dalton": [],
+	"john dalton#nucleus": [],
+	"nucleus#substance": [],
+	"substance#nucleus": [
+		"get into and out of the",
+		"such as mrna exit the"
+	],
+	"nucleus#octet": [],
+	"octet#nucleus": [],
+	"nucleus#molecules": [],
+	"molecules#nucleus": [
+		"enter the",
+		"get in and out of the",
+		"get into the",
+		"move in and out of the"
+	],
+	"nucleus#compound": [],
+	"compound#nucleus": [],
+	"atoms#science": [
+		"relate to",
+		"related to"
+	],
+	"science#atoms": [
+		"based on",
+		"based on the"
+	],
+	"atoms#democritus": [],
+	"democritus#atoms": [
+		"and leucippus come up with the idea of the",
+		"and leucippus discover the",
+		"believe in",
+		"come to his conclusions about the",
+		"contribute to the structure of the",
+		"contribute to the understanding of the",
+		"define the",
+		"describe",
+		"discover",
+		"discover the",
+		"explain the properties of materials using",
+		"find",
+		"find out about the",
+		"known as the father of the",
+		"reason for the existence of"
+	],
+	"atoms#john dalton": [],
+	"john dalton#atoms": [
+		"contribute to our understanding of the",
+		"contribute to the structure of the",
+		"describe",
+		"described the",
+		"discover the",
+		"make his discovery about"
+	],
+	"atoms#solar system": [
+		"look like",
+		"relate to the",
+		"similar to the"
+	],
+	"solar system#atoms": [
+		"look like",
+		"look like an"
+	],
+	"atoms#particles": [
+		"contain subatomic",
+		"emit alpha",
+		"have no overall charge subatomic",
+		"relate to"
+	],
+	"particles#atoms": [],
+	"atoms#substance": [
+		"a",
+		"and molecules of elements interact to create",
+		"bond together to produce new",
+		"combine to form new",
+		"combine to make new",
+		"form a new",
+		"form new",
+		"molecules and extended structures make up",
+		"rearrange to form new"
+	],
+	"substance#atoms": [
+		"a",
+		"relate to"
+	],
+	"atoms#einstein": [],
+	"einstein#atoms": [
+		"calculate the size of",
+		"discover",
+		"mathematically prove the existence of"
+	],
+	"atoms#the law of multiple proportions": [],
+	"the law of multiple proportions#atoms": [],
+	"atoms#octet": [
+		"attain stable",
+		"complete its",
+		"form",
+		"in a covalent bond get a full",
+		"in an ionic bond get a full",
+		"seek",
+		"try to have a full",
+		"want",
+		"want a full"
+	],
+	"octet#atoms": [],
+	"atoms#molecules": [
+		"become",
+		"bond to form",
+		"bond together to form",
+		"bond together to form a",
+		"combine to form",
+		"differ from",
+		"form",
+		"join to form",
+		"make",
+		"make up",
+		"of elements try to combine and form",
+		"readily combine to form",
+		"relate to",
+		"related to"
+	],
+	"molecules#atoms": [
+		"depend on",
+		"differ from",
+		"have",
+		"have more than one central",
+		"made of",
+		"need",
+		"of hydrogen formed from two hydrogen",
+		"of oxygen have to have an even number of",
+		"relate to"
+	],
+	"atoms#cell": [
+		"and molecules related to the",
+		"become a",
+		"form",
+		"make",
+		"make up",
+		"relate to",
+		"smaller than a",
+		"turn into"
+	],
+	"cell#atoms": [
+		"similar to",
+		"the basic unit of life and not an"
+	],
+	"atoms#dalton": [],
+	"dalton#atoms": [
+		"change the model of the",
+		"change understandings about the",
+		"describe",
+		"describe the",
+		"discover the",
+		"thomson rutherford and bohr develop ideas about the",
+		"use data to support the existence of",
+		"use the word"
+	],
+	"atoms#scientists": [],
+	"scientists#atoms": [
+		"change the model of the",
+		"count",
+		"determine the number of neutrons in an isotope of an",
+		"discover",
+		"discover models of the",
+		"discover that metals are crystals with an orderly arrangement of",
+		"discover the",
+		"discover the structure of an",
+		"don't trust",
+		"explain the potential locations of electrons within an",
+		"investigate the structure of an",
+		"know the existence of the",
+		"know the number of protons in an",
+		"measure the mass of an",
+		"measure the temperature of cold",
+		"not like",
+		"see",
+		"split",
+		"split the",
+		"study",
+		"think that there was electric charge inside",
+		"think there were negative particles in an",
+		"use model of an",
+		"use models",
+		"use models of",
+		"use models to study"
+	],
+	"atoms#electronegativity": [
+		"affect",
+		"have",
+		"have different",
+		"with a smaller radius have a larger",
+		"with greater numbers of protons have greater",
+		"with larger size tend to have low"
+	],
+	"electronegativity#atoms": [
+		"affect",
+		"affect the polarity of the bond between two",
+		"affect the type of bond formed between",
+		"change as principal energy levels are added to an",
+		"relate to",
+		"relate to the type of bond found between",
+		"related to covalent bonding"
+	],
+	"atoms#elements": [
+		"a",
+		"are",
+		"form",
+		"form bonds with other atoms of other",
+		"of metalloids behave when combining with atoms of other",
+		"of one element compare to that of another",
+		"relate to",
+		"relate to an",
+		"related to"
+	],
+	"elements#atoms": [
+		"at the bottom of the periodic table have the biggest",
+		"in group 0 exist as single",
+		"react",
+		"relate to",
+		"related to"
+	],
+	"atoms#compound": [
+		"become more stable when they form",
+		"bond to form",
+		"bond together to form",
+		"combine to form",
+		"combine to form molecules and",
+		"compared to a",
+		"different from a",
+		"form",
+		"form many organic",
+		"join together in a",
+		"join together to form",
+		"make",
+		"of nonmetal elements from their",
+		"react with other atoms to create",
+		"react with other atoms to form chemical",
+		"relate to",
+		"relate to molecules and"
+	],
+	"compound#atoms": [
+		"different from",
+		"form",
+		"relate to"
+	],
+	"sun#movements along faults": [],
+	"movements along faults#sun": [],
+	"sun#charged": [],
+	"charged#sun": [],
+	"sun#a fault": [],
+	"a fault#sun": [],
+	"sun#warmer": [],
+	"warmer#sun": [],
+	"sun#movements along fault lines": [],
+	"movements along fault lines#sun": [],
+	"sun#plate boundaries": [],
+	"plate boundaries#sun": [],
+	"sun#thinner due to ozone layer": [],
+	"thinner due to ozone layer#sun": [],
+	"sun#volcanoes": [],
+	"volcanoes#sun": [],
+	"sun#buildings": [],
+	"buildings#sun": [],
+	"sun#normal fault": [],
+	"normal fault#sun": [],
+	"sun#not all movement along faults": [],
+	"not all movement along faults#sun": [],
+	"sun#faults": [],
+	"faults#sun": []
 }
