@@ -239,12 +239,14 @@ def mapping(
     cache: dict,
     calls: List[int],
     depths: List[int],
+    times: List[List[int]],
     depth: int = 2):
 
     calls[0] += 1
     if len(available_pairs) not in depths:
         depths.append(len(available_pairs))
     
+    start_time = time.time()
     # in the end we will sort by the length and the score. So its ok to add all of them
     if base_already_mapping:
         mapping_repr = [f"{b} --> {t}" for b, t in zip(base_already_mapping, target_already_mapping)]
@@ -277,18 +279,21 @@ def mapping(
                 actual_target=target_already_mapping,
                 length=len(base_already_mapping),
             ))
-
+    times[0].append(time.time() - start_time)
     # base case for recursive function. there is no more available pairs to match (base->target)
     if len(base_already_mapping) == min(len(base), len(target)):
         return
 
+    start_time = time.time()
     # we will get the top-depth pairs with the best score.
     # best_results_for_current_iteration = get_best_pair_mapping(model, freq, data_collector, available_pairs, cache, depth) # TODO
     best_results_for_current_iteration = get_best_pair_mapping_for_current_iteration(available_pairs, best_results, depth)
+    times[1].append(time.time() - start_time)
     for result in best_results_for_current_iteration:
         # if the best score is > 0, we will update the base and target lists of the already mapping entities.
         # otherwise, if the best score is 0, we have no more mappings to do.
         if result["best_score"] > 0:
+            start_time = time.time()
             # deepcopy is more safe when working with recursive functions
             available_pairs_copy = copy.deepcopy(available_pairs)
             relations_copy = copy.deepcopy(relations)
@@ -310,13 +315,14 @@ def mapping(
                 score += get_score(base_already_mapping_new, target_already_mapping_new, result["best_mapping"][0][1], result["best_mapping"][1][1], cache)
                 base_already_mapping_new.append(result["best_mapping"][0][1])
                 target_already_mapping_new.append(result["best_mapping"][1][1])
-            
+            times[2].append(time.time() - start_time)
+            start_time = time.time()
             # here we update the possible/available pairs.
             # for example, if we already map a->1, b->2, we will looking only for pairs which respect the 
             # pairs that already maps. in our example it can be one of the following:
             # (a->1, c->3) or (b->2, c->3).
             available_pairs_copy = update_paris_map(available_pairs_copy, base_already_mapping_new, target_already_mapping_new)
-            
+            times[3].append(time.time() - start_time)
             mapping(
                 base=base, 
                 target=target,
@@ -334,6 +340,7 @@ def mapping(
                 cache=cache,
                 calls=calls,
                 depths=depths,
+                times=times,
                 depth=depth
             )
     
@@ -471,8 +478,9 @@ def mapping_wrapper(base: List[str],
     cache = {}
     calls = [0]
     depths = []
+    times = [[], [], [], []]
     best_results = get_best_pair_mapping(model, freq, data_collector, available_pairs, cache)
-    mapping(base, target, available_pairs, best_results, solutions, data_collector, model, freq, [], [], [], [], 0, cache, calls, depths, depth=depth)
+    mapping(base, target, available_pairs, best_results, solutions, data_collector, model, freq, [], [], [], [], 0, cache, calls, depths, times, depth=depth)
     
     # array of addition solutions for the suggestions if some entities have missing mappings.
     suggestions_solutions = []
@@ -501,6 +509,7 @@ def mapping_wrapper(base: List[str],
 
     secho(f"Number of recursive calls: {calls[0]}")
     secho(f"depths: {sorted(depths, reverse=True)}")
+    secho(f"times: {sum(times[0]), sum(times[1]), sum(times[2]), sum(times[3])}")
     return all_solutions[:top_n]
 
 
@@ -522,7 +531,7 @@ def print_solution(solution: Solution):
 
 
 if __name__ == "__main__":
-    os.environ['CI'] = 'true'
+    # os.environ['CI'] = 'true'
     # base = ['sun', 'planet' 'orbit', 'kepler', 'moon', 'jupiter', 'comet', 'equator', 'zodiac', 'saturn', 'venus', 
     #         'neptune', 'pluto', 'nebula', 'eccentricity', 'earth', 'radius', 'eclipse', 'astronomer', 'asteroid', 
     #         'mercury', 'supernova', 'constellation', 'astrology', 'circling', 'orb', 'brightness', 'atmosphere', 
@@ -538,16 +547,10 @@ if __name__ == "__main__":
     # base = ['sun', 'planet', 'orbit', 'kepler', 'moon', 'jupiter', 'comet', 'equator', 'zodiac', 'saturn', 'venus', 'neptune', 'pluto', 'nebula', 'eccentricity', 'earth', 'radius', 'eclipse', 'astronomer', 'asteroid']
     # target = ['nucleus', 'electrons', 'proton', 'neutron', 'atom', 'excitation', 'resonance', 'photon', 'dipole', 'scattering', 'valence', 'helium', 'coupling', 'decay', 'particle', 'spin', 'spectroscopy', 'hydrogen', 'phosphorylation', 'gamma']
     
-    base = ['sun', 'planet', 'orbit', 'kepler', 'moon', 'jupiter', 'comet', 'equator']
-    target = ['nucleus', 'electrons', 'proton', 'neutron', 'atom', 'excitation', 'resonance', 'photon']
+    base = ['sun', 'planet', 'orbit', 'kepler', 'moon', 'jupiter', 'comet', 'equator', 'zodiac', 'saturn', 'venus']
+    target = ['nucleus', 'electrons', 'proton', 'neutron', 'atom', 'excitation', 'resonance', 'photon', 'dipole', 'scattering', 'valence']
 
-    start_time = time.time()
     solutions = mapping_wrapper(base, target, suggestions=False, depth=4, top_n=20, verbose=True)
-    print(f"Time execuation: {time.time() - start_time}")
-    base_comb = list(combinations(base, 2))
-    target_comb = list(combinations(target, 2))
-    target_comb += [(val[1], val[0]) for val in target_comb]
-    print(f"Number of combinations in the first iteration: {len(base_comb) * len(target_comb)}")
 
     # 5x5
     # Time execuation: 348[sec]
