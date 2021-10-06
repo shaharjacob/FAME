@@ -99,7 +99,7 @@ def check_if_valid(first_direction: SingleMapping,
             return False
     
     if t2 in target_already_mapping_as_set:
-        if b2 != base_already_mapping[actual_mapping_indecies['target'][t1]]:
+        if b2 != base_already_mapping[actual_mapping_indecies['target'][t2]]:
             # the match of mapping that already mapped is not true (base2->target2)
             return False
     
@@ -312,6 +312,7 @@ def mapping(
             scores_copy.append(round(result["best_score"], 3))
 
             # we will add the new mapping to the already mapping lists. 
+            # TODO: put all these in one dictionary
             base_already_mapping_new = copy.deepcopy(base_already_mapping)
             target_already_mapping_new = copy.deepcopy(target_already_mapping)
             actual_mapping_indecies_new = copy.deepcopy(actual_mapping_indecies)
@@ -324,15 +325,15 @@ def mapping(
                 score += get_score(base_already_mapping_new, target_already_mapping_new, b1, t1, cache)
                 base_already_mapping_new.append(b1)
                 target_already_mapping_new.append(t1)
-                actual_mapping_indecies_new['base'][b1] = len(base_already_mapping_new)
-                actual_mapping_indecies_new['target'][t1] = len(target_already_mapping_new)
+                actual_mapping_indecies_new['base'][b1] = len(base_already_mapping_new) - 1
+                actual_mapping_indecies_new['target'][t1] = len(target_already_mapping_new) - 1
 
             if b2 not in base_already_mapping_new and t2 not in target_already_mapping_new:
                 score += get_score(base_already_mapping_new, target_already_mapping_new, b2, t2, cache)
                 base_already_mapping_new.append(b2)
                 target_already_mapping_new.append(t2)
-                actual_mapping_indecies_new['base'][b2] = len(base_already_mapping_new)
-                actual_mapping_indecies_new['target'][t2] = len(target_already_mapping_new)
+                actual_mapping_indecies_new['base'][b2] = len(base_already_mapping_new) - 1
+                actual_mapping_indecies_new['target'][t2] = len(target_already_mapping_new) - 1
 
             # here we update the possible/available pairs.
             # for example, if we already map a->1, b->2, we will looking only for pairs which respect the 
