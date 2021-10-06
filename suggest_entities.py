@@ -62,7 +62,7 @@ def get_suggestions_for_missing_entities(data_collector: DataCollector, base_not
     # we need all the relations between the entity (the one that not mapped) to the entities that already mapped (again - in the same domain)
     for idx, base_entity in enumerate(base_already_mapping):
         if verbose: 
-            secho(f"^{(base_not_mapped_entity, base_entity)}", fg="blue", bold=True)
+            secho(f"(^{base_not_mapped_entity}, {base_entity})", fg="blue", bold=True)
 
         props_entity_1 = data_collector.get_entities_relations(base_entity, base_not_mapped_entity)
         props_entity_2 = data_collector.get_entities_relations(base_not_mapped_entity, base_entity)
