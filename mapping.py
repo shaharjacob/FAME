@@ -305,10 +305,10 @@ def mapping(
         # otherwise, if the best score is 0, we have no more mappings to do.
         if result["best_score"] > 0:
             # deepcopy is more safe when working with recursive functions
-            relations_copy = copy.deepcopy(relations)
-            relations_copy.append(result["best_mapping"])
-            scores_copy = copy.deepcopy(scores)
-            scores_copy.append(round(result["best_score"], 3))
+            # relations_copy = copy.deepcopy(relations)
+            relations.append(result["best_mapping"])
+            # scores_copy = copy.deepcopy(scores)
+            scores.append(round(result["best_score"], 3))
 
             # # we will add the new mapping to the already mapping lists. They must be in the same shape.
             # # TODO: put all these in one dictionary
@@ -353,10 +353,10 @@ def mapping(
                 base_already_mapping=copy.deepcopy(base_already_mapping),
                 target_already_mapping=copy.deepcopy(target_already_mapping),
                 actual_mapping_indecies=copy.deepcopy(actual_mapping_indecies),
-                relations=relations_copy,
+                relations=copy.deepcopy(relations),
                 relations_already_seen=relations_already_seen,
                 mappings_already_seen=mappings_already_seen,
-                scores=scores_copy,
+                scores=copy.deepcopy(scores),
                 new_score=new_score+score,
                 cache=cache,
                 calls=calls,
