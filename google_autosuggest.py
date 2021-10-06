@@ -97,7 +97,7 @@ class GoogleAutoSuggestTwoEntities(object):
             suggestions = json.loads(response.text)[1]
         except:
             secho(f"[WARNING] cannot access to {url}", fg="yellow", bold=True)
-            suggestions = []
+            exit(1)
         for suggestion in suggestions:
             match = re.match(self.regex, suggestion)
             if match:
