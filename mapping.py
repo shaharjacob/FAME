@@ -16,7 +16,6 @@ from sentence_embadding import SentenceEmbedding
 
 Pair = Tuple[str, str] # two entities: (b1,b2)
 SingleMapping = List[Pair] # [(b1,b2), (t1,t2)]
-MultiMapping = List[SingleMapping] # both directions --> [[(b1,b2), (t1,t2)], [(b2,b1), (t2,t1)]]
 
 NUM_OF_CLUSTERS_TO_CALC = 3
 EDGE_THRESHOLD = 0.2
@@ -26,7 +25,7 @@ FREQUENCY_THRESHOLD = 500
 class Solution:
     def __init__(self, mapping, relations, scores, score, actual_base, actual_target, length):
         self.mapping: List[str] = mapping
-        self.relations: MultiMapping = relations
+        self.relations: List[SingleMapping] = relations
         self.scores = scores
         self.score = score
         self.actual_base = actual_base
@@ -48,7 +47,7 @@ def get_edge_score(prop1: str, prop2: str, model: SentenceEmbedding, freq: Frequ
         return model.similarity(prop1, prop2)
     
 
-def get_all_possible_pairs_map(base: List[str], target: List[str]) -> List[MultiMapping]:
+def get_all_possible_pairs_map(base: List[str], target: List[str]) -> List[List[SingleMapping]]:
     # complexity: (n choose 2) * (n choose 2) * 2
 
     base_comb = list(combinations(base, 2))
@@ -70,9 +69,9 @@ def check_if_valid(first_direction: SingleMapping, base_already_mapping: List[st
     b1, b2 = first_direction[0][0], first_direction[0][1]
     t1, t2 = first_direction[1][0], first_direction[1][1]
 
-    if b1 in base_already_mapping and b2 in base_already_mapping:
-        # we already map base1 and base2
-        return False
+    # if b1 in base_already_mapping and b2 in base_already_mapping:
+    #     # we already map base1 and base2
+    #     return False
     
     if b1 in base_already_mapping:
         if t1 != target_already_mapping[base_already_mapping.index(b1)]:
@@ -84,9 +83,9 @@ def check_if_valid(first_direction: SingleMapping, base_already_mapping: List[st
             # the match of mapping that already mapped is not true (base2->target2)
             return False
     
-    if t1 in target_already_mapping and t2 in target_already_mapping:
-        # we already map target1 and target2
-        return False
+    # if t1 in target_already_mapping and t2 in target_already_mapping:
+    #     # we already map target1 and target2
+    #     return False
 
     if t1 in target_already_mapping:
         if b1 != base_already_mapping[target_already_mapping.index(t1)]:
@@ -101,8 +100,8 @@ def check_if_valid(first_direction: SingleMapping, base_already_mapping: List[st
     return True
 
 
-def update_paris_map(pairs_map: List[MultiMapping], base_already_mapping: List[str], target_already_mapping: List[str]) -> List[MultiMapping]:
-    # This is MultiMapping because there is two directions. But actully this is SingleMapping.
+def update_paris_map(pairs_map: List[List[SingleMapping]], base_already_mapping: List[str], target_already_mapping: List[str]) -> List[List[SingleMapping]]:
+    # This is List[SingleMapping] because there is two directions. But actully this is SingleMapping.
     return [mapping for mapping in pairs_map if check_if_valid(mapping[0], base_already_mapping, target_already_mapping)]
 
 
@@ -162,25 +161,28 @@ def get_pair_mapping(model: SentenceEmbedding, data_collector: DataCollector, fr
     }
 
 
-def get_best_pair_mapping_for_current_iteration(available_maps: List[MultiMapping], initial_results: List[Dict[str, Union[int, SingleMapping]]], depth: int):
+def get_best_pair_mapping_for_current_iteration(available_maps: List[List[SingleMapping]], initial_results: List[Dict[str, Union[int, SingleMapping]]], depth: int, times: List[int]):
     available_maps_flatten = set()
     for available_map in available_maps:
         available_maps_flatten.add(tuple(available_map[0]))
         available_maps_flatten.add(tuple(available_map[1]))
     
-    results_for_current_iteration = []
-    for result in initial_results:
-        if tuple(result["best_mapping"]) in available_maps_flatten:
-            results_for_current_iteration.append(result)
-            if len(results_for_current_iteration) == depth:
-                break
+    start_time = time.time()
+    modified_results = [result for result in initial_results if tuple(result["best_mapping"]) in available_maps_flatten]
+    results_for_current_iteration = [result for result in modified_results[:depth]]
+    times[4].append(time.time() - start_time)
+    return results_for_current_iteration, modified_results
+
+
+def get_best_pair_mapping(model: SentenceEmbedding, 
+                          freq: Frequencies, 
+                          data_collector: DataCollector, 
+                          available_maps: List[List[SingleMapping]], 
+                          cache: dict, 
+                          depth: int = 0
+                        ) -> List[Dict[str, Union[int, SingleMapping]]]:
     
-    return results_for_current_iteration
-
-
-def get_best_pair_mapping(model: SentenceEmbedding, freq: Frequencies, data_collector: DataCollector, available_maps: List[MultiMapping], cache: dict, depth: int = 0) -> List[Dict[str, Union[int, SingleMapping]]]:
     mappings = []
-
     # we will iterate over all the possible pairs mapping ((n choose 2)*(n choose 2)*2), 2->2, 3->18, 4->72
     iterator = available_maps if os.environ.get('CI', False) else tqdm(available_maps)
     for mapping in iterator:
@@ -231,13 +233,13 @@ def get_score(base: List[str], target: List[str], base_entity: str, target_entit
 def mapping(
     base: List[str], 
     target: List[str],
-    available_pairs: List[MultiMapping],
-    best_results: List[Dict[str, Union[int, SingleMapping]]],
+    available_pairs: List[List[SingleMapping]],
+    sorted_results: List[Dict[str, Union[int, SingleMapping]]],
     solutions: List[Solution],
     freq: Frequencies,
     base_already_mapping: List[str],
     target_already_mapping: List[str],
-    relations: MultiMapping,
+    relations: List[SingleMapping],
     relations_already_seen: Set[Tuple[Tuple[Tuple[str, str]]]],
     mappings_already_seen: Set[Tuple[str]],
     scores: List[float],
@@ -278,7 +280,7 @@ def mapping(
         return
     start_time = time.time()
     # we will get the top-depth pairs with the best score.
-    best_results_for_current_iteration = get_best_pair_mapping_for_current_iteration(available_pairs, best_results, depth)
+    best_results_for_current_iteration, modified_results = get_best_pair_mapping_for_current_iteration(available_pairs, sorted_results, depth, times)
     times[1].append(time.time() - start_time)
     for result in best_results_for_current_iteration:
         # if the best score is > 0, we will update the base and target lists of the already mapping entities.
@@ -321,7 +323,7 @@ def mapping(
                 base=base, 
                 target=target,
                 available_pairs=new_available_pairs,
-                best_results=best_results,
+                sorted_results=modified_results,
                 solutions=solutions,
                 freq=freq,
                 base_already_mapping=base_already_mapping_new,
@@ -339,7 +341,7 @@ def mapping(
     
 
 def mapping_suggestions(
-    available_pairs: List[MultiMapping],
+    available_pairs: List[List[SingleMapping]],
     current_solution: Solution,
     solutions: List[Solution],
     data_collector: DataCollector,
@@ -359,17 +361,19 @@ def mapping_suggestions(
             # we will add the new mapping to the already mapping lists. 
             base_already_mapping_new = copy.deepcopy(current_solution.actual_base)
             target_already_mapping_new = copy.deepcopy(current_solution.actual_target)
+            b1, b2 = result["best_mapping"][0][0], result["best_mapping"][0][1]
+            t1, t2 = result["best_mapping"][1][0], result["best_mapping"][1][1]
             
             score = 0
-            if result["best_mapping"][0][0] not in base_already_mapping_new and result["best_mapping"][1][0] not in target_already_mapping_new:
-                score += get_score(base_already_mapping_new, target_already_mapping_new, result["best_mapping"][0][0], result["best_mapping"][1][0], cache)
-                base_already_mapping_new.append(result["best_mapping"][0][0])
-                target_already_mapping_new.append(result["best_mapping"][1][0])
+            if b1 not in base_already_mapping_new and t1 not in target_already_mapping_new:
+                score += get_score(base_already_mapping_new, target_already_mapping_new, b1, t1, cache)
+                base_already_mapping_new.append(b1)
+                target_already_mapping_new.append(t1)
             
-            if result["best_mapping"][0][1] not in base_already_mapping_new and result["best_mapping"][1][1] not in target_already_mapping_new:
-                score += get_score(base_already_mapping_new, target_already_mapping_new, result["best_mapping"][0][1], result["best_mapping"][1][1], cache)
-                base_already_mapping_new.append(result["best_mapping"][0][1])
-                target_already_mapping_new.append(result["best_mapping"][1][1])
+            if b2 not in base_already_mapping_new and t2 not in target_already_mapping_new:
+                score += get_score(base_already_mapping_new, target_already_mapping_new, b2, t2, cache)
+                base_already_mapping_new.append(b2)
+                target_already_mapping_new.append(t2)
             
             # updating the top suggestions for the GUI
             if domain == "actual_base":
@@ -409,8 +413,12 @@ def mapping_suggestions_wrapper(
     
     first_domain_not_mapped_entities = [entity for entity in domain if entity not in solution.get_actual(first_domain)]
     for first_domain_not_mapped_entity in first_domain_not_mapped_entities:
-        # suggestion for mapping an entity. a list of strings.
-        entities_suggestions = suggest_entities.get_suggestions_for_missing_entities(data_collector, first_domain_not_mapped_entity, solution.get_actual(first_domain), solution.get_actual(second_domain), verbose=verbose)
+        entities_suggestions: List[str] = suggest_entities.get_suggestions_for_missing_entities(
+                                                                                                data_collector, 
+                                                                                                first_domain_not_mapped_entity, 
+                                                                                                solution.get_actual(first_domain), 
+                                                                                                solution.get_actual(second_domain), 
+                                                                                                verbose=verbose)
         if not entities_suggestions:
             continue  # no suggestion found :(
         if first_domain == "actual_base":
@@ -470,8 +478,10 @@ def mapping_wrapper(base: List[str],
 
     cache = {}
     calls = [0]
-    times = [[], [], [], []]
+    times = [[], [], [], [], []]
+    start_time = time.time()
     best_results = get_best_pair_mapping(model, freq, data_collector, available_pairs, cache)
+    first_iteration = time.time() - start_time
 
     start_time = time.time()
     mapping(base, target, available_pairs, best_results, solutions, freq, [], [], [], set(), set(), [], 0, cache, calls, times, depth=depth)
@@ -503,10 +513,11 @@ def mapping_wrapper(base: List[str],
             print_solution(solution)
 
     secho(f"Number of recursive calls: {calls[0]}")
-    print(f"mapping total time: {mapping_total_time}")
+    secho(f"first iteration time: {round(first_iteration, 2)}[sec]")
+    secho(f"mapping total time: {round(mapping_total_time, 2)}[sec]")
     secho(f"times: ", nl=False)
     for time_ in times:
-        secho(f"{round(sum(time_), 2)}, ", nl=False)
+        secho(f"{round(sum(time_), 2)}[sec], ", nl=False)
     print()
     return all_solutions[:top_n]
 
@@ -530,31 +541,11 @@ def print_solution(solution: Solution):
 
 if __name__ == "__main__":
     # os.environ['CI'] = 'true'
-    # base = ['sun', 'planet' 'orbit', 'kepler', 'moon', 'jupiter', 'comet', 'equator', 'zodiac', 'saturn', 'venus', 
-    #         'neptune', 'pluto', 'nebula', 'eccentricity', 'earth', 'radius', 'eclipse', 'astronomer', 'asteroid', 
-    #         'mercury', 'supernova', 'constellation', 'astrology', 'circling', 'orb', 'brightness', 'atmosphere', 
-    #         'helium', 'sol', 'spacecraft', 'cloud', 'mars', 'disk', 'star', 'hyperion', 'galileo', 'au', 'belt']
-    
-    # target = ['nucleus', 'electrons', 'proton', 'neutron', 'atom', 'excitation', 'resonance', 'photon', 'dipole', 
-    #           'scattering', 'valence', 'helium', 'coupling', 'decay', 'particle', 'spin', 'spectroscopy', 'hydrogen', 
-    #           'phosphorylation', 'gamma', 'ionization', 'molecule', 'isotope', 'localization', 'accelerator', 'emission', 
-    #           'polarization', 'momentum', 'bonding', 'plasma', 'carbon', 'energy', 'interaction', 'membrane', 'radiation', 
-    #           'filament', 'collision', 'fission', 'vesicle', 'spectrometer', 'quark', 'ligand', 'relaxation', 
-    #           'solid', 'lithium', 'fragmentation', 'recoil', 'abbreviation', 'spectrum', 'subunit', 'radius', 'beta']
-    
-    # base = ['sun', 'planet', 'orbit', 'kepler', 'moon', 'jupiter', 'comet', 'equator', 'zodiac', 'saturn', 'venus', 'neptune', 'pluto', 'nebula', 'eccentricity', 'earth', 'radius', 'eclipse', 'astronomer', 'asteroid']
-    # target = ['nucleus', 'electrons', 'proton', 'neutron', 'atom', 'excitation', 'resonance', 'photon', 'dipole', 'scattering', 'valence', 'helium', 'coupling', 'decay', 'particle', 'spin', 'spectroscopy', 'hydrogen', 'phosphorylation', 'gamma']
-    
-    # 12
-    base = ['sun', 'planet', 'orbit', 'kepler', 'moon', 'jupiter', 'comet', 'equator', 'zodiac', 'saturn', 'venus', 'neptune', 'pluto', 'nebula']
-    target = ['nucleus', 'electrons', 'proton', 'neutron', 'atom', 'excitation', 'resonance', 'photon', 'dipole', 'scattering', 'valence', 'helium', 'coupling', 'decay']
-    
-    # # 11
-    # base = ['sun', 'planet', 'orbit', 'kepler', 'moon', 'jupiter', 'comet', 'equator', 'zodiac', 'saturn', 'venus']
-    # target = ['nucleus', 'electrons', 'proton', 'neutron', 'atom', 'excitation', 'resonance', 'photon', 'dipole', 'scattering', 'valence']
-    
-    # # 10
-    # base = ['sun', 'planet', 'orbit', 'kepler', 'moon', 'jupiter', 'comet', 'equator', 'zodiac', 'saturn']
-    # target = ['nucleus', 'electrons', 'proton', 'neutron', 'atom', 'excitation', 'resonance', 'photon', 'dipole', 'scattering']
 
+    # 20x20
+    base = ['sun', 'planet', 'orbit', 'kepler', 'moon', 'jupiter', 'comet', 'equator', 'zodiac', 'saturn', 'venus', 'neptune', 'pluto', 'nebula', 'eccentricity', 'earth', 'radius', 'eclipse', 'astronomer', 'asteroid']
+    target = ['nucleus', 'electrons', 'proton', 'neutron', 'atom', 'excitation', 'resonance', 'photon', 'dipole', 'scattering', 'valence', 'helium', 'coupling', 'decay', 'particle', 'spin', 'spectroscopy', 'hydrogen', 'phosphorylation', 'gamma']
+    
+    base = base[:18]
+    target = target[:18]
     solutions = mapping_wrapper(base, target, suggestions=False, depth=4, top_n=20, verbose=True)
