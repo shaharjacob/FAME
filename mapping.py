@@ -310,37 +310,37 @@ def mapping(
             scores_copy = copy.deepcopy(scores)
             scores_copy.append(round(result["best_score"], 3))
 
-            # we will add the new mapping to the already mapping lists. They must be in the same shape.
-            # TODO: put all these in one dictionary
-            base_already_mapping_new = copy.deepcopy(base_already_mapping)
-            target_already_mapping_new = copy.deepcopy(target_already_mapping)
-            actual_mapping_indecies_new = copy.deepcopy(actual_mapping_indecies)
+            # # we will add the new mapping to the already mapping lists. They must be in the same shape.
+            # # TODO: put all these in one dictionary
+            # base_already_mapping_new = copy.deepcopy(base_already_mapping)
+            # target_already_mapping_new = copy.deepcopy(target_already_mapping)
+            # actual_mapping_indecies_new = copy.deepcopy(actual_mapping_indecies)
 
             b1, b2 = result["best_mapping"][0][0], result["best_mapping"][0][1]
             t1, t2 = result["best_mapping"][1][0], result["best_mapping"][1][1]
             score = 0
-            if b1 not in base_already_mapping_new and t1 not in target_already_mapping_new:
-                score += get_score(base_already_mapping_new, target_already_mapping_new, b1, t1, cache)
-                base_already_mapping_new.append(b1)
-                target_already_mapping_new.append(t1)
+            if b1 not in base_already_mapping and t1 not in target_already_mapping:
+                score += get_score(base_already_mapping, target_already_mapping, b1, t1, cache)
+                base_already_mapping.append(b1)
+                target_already_mapping.append(t1)
                 # using for quick exists-check
-                actual_mapping_indecies_new['base'][b1] = len(base_already_mapping_new) - 1
-                actual_mapping_indecies_new['target'][t1] = len(target_already_mapping_new) - 1
+                actual_mapping_indecies['base'][b1] = len(base_already_mapping) - 1
+                actual_mapping_indecies['target'][t1] = len(target_already_mapping) - 1
 
-            if b2 not in base_already_mapping_new and t2 not in target_already_mapping_new:
-                score += get_score(base_already_mapping_new, target_already_mapping_new, b2, t2, cache)
-                base_already_mapping_new.append(b2)
-                target_already_mapping_new.append(t2)
+            if b2 not in base_already_mapping and t2 not in target_already_mapping:
+                score += get_score(base_already_mapping, target_already_mapping, b2, t2, cache)
+                base_already_mapping.append(b2)
+                target_already_mapping.append(t2)
                 # using for quick exists-check
-                actual_mapping_indecies_new['base'][b2] = len(base_already_mapping_new) - 1
-                actual_mapping_indecies_new['target'][t2] = len(target_already_mapping_new) - 1
+                actual_mapping_indecies['base'][b2] = len(base_already_mapping) - 1
+                actual_mapping_indecies['target'][t2] = len(target_already_mapping) - 1
 
             # here we update the possible/available pairs.
             # for example, if we already map a->1, b->2, we will looking only for pairs which respect the 
             # pairs that already maps. in our example it can be one of the following:
             # (a->1, c->3) or (b->2, c->3).
             start_time = time.time()
-            new_available_pairs = update_paris_map(available_pairs, base_already_mapping_new, target_already_mapping_new, actual_mapping_indecies_new)
+            new_available_pairs = update_paris_map(available_pairs, base_already_mapping, target_already_mapping, actual_mapping_indecies)
             times[2].append(time.time() - start_time)
             
             mapping(
@@ -350,9 +350,9 @@ def mapping(
                 sorted_results=modified_results,
                 solutions=solutions,
                 freq=freq,
-                base_already_mapping=base_already_mapping_new,
-                target_already_mapping=target_already_mapping_new,
-                actual_mapping_indecies=actual_mapping_indecies_new,
+                base_already_mapping=copy.deepcopy(base_already_mapping),
+                target_already_mapping=copy.deepcopy(target_already_mapping),
+                actual_mapping_indecies=copy.deepcopy(actual_mapping_indecies),
                 relations=relations_copy,
                 relations_already_seen=relations_already_seen,
                 mappings_already_seen=mappings_already_seen,
