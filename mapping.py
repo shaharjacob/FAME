@@ -65,44 +65,61 @@ def get_all_possible_pairs_map(base: List[str], target: List[str]) -> List[List[
     return all_mapping
 
 
-def check_if_valid(first_direction: SingleMapping, base_already_mapping: List[str], target_already_mapping: List[str]) -> bool:
+def check_if_valid(first_direction: SingleMapping, 
+                   base_already_mapping: List[str],
+                   base_already_mapping_as_set: Set[str],
+                   target_already_mapping: List[str],
+                   target_already_mapping_as_set: Set[str], 
+                   actual_mapping_indecies: Dict[str, Dict[str, int]]
+                   ) -> bool:
     b1, b2 = first_direction[0][0], first_direction[0][1]
     t1, t2 = first_direction[1][0], first_direction[1][1]
 
-    # if b1 in base_already_mapping and b2 in base_already_mapping:
-    #     # we already map base1 and base2
-    #     return False
+    if b1 in base_already_mapping_as_set and b2 in base_already_mapping_as_set:
+        # we already map base1 and base2
+        return False
     
-    if b1 in base_already_mapping:
-        if t1 != target_already_mapping[base_already_mapping.index(b1)]:
+    if b1 in base_already_mapping_as_set:
+        if t1 != target_already_mapping[actual_mapping_indecies['base'][b1]]:
             # the match of mapping that already mapped is not true (base1->target1)
             return False
     
-    if b2 in base_already_mapping:
-        if t2 != target_already_mapping[base_already_mapping.index(b2)]:
+    if b2 in base_already_mapping_as_set:
+        if t2 != target_already_mapping[actual_mapping_indecies['base'][b2]]:
             # the match of mapping that already mapped is not true (base2->target2)
             return False
     
-    # if t1 in target_already_mapping and t2 in target_already_mapping:
-    #     # we already map target1 and target2
-    #     return False
+    if t1 in target_already_mapping_as_set and t2 in target_already_mapping_as_set:
+        # we already map target1 and target2
+        return False
 
-    if t1 in target_already_mapping:
-        if b1 != base_already_mapping[target_already_mapping.index(t1)]:
+    if t1 in target_already_mapping_as_set:
+        if b1 != base_already_mapping[actual_mapping_indecies['target'][t1]]:
             # the match of mapping that already mapped is not true (base1->target1)
             return False
     
-    if t2 in target_already_mapping:
-        if b2 != base_already_mapping[target_already_mapping.index(t2)]:
+    if t2 in target_already_mapping_as_set:
+        if b2 != base_already_mapping[actual_mapping_indecies['target'][t1]]:
             # the match of mapping that already mapped is not true (base2->target2)
             return False
     
     return True
 
 
-def update_paris_map(pairs_map: List[List[SingleMapping]], base_already_mapping: List[str], target_already_mapping: List[str]) -> List[List[SingleMapping]]:
+def update_paris_map(pairs_map: List[List[SingleMapping]], 
+                     base_already_mapping: List[str], 
+                     target_already_mapping: List[str], 
+                     actual_mapping_indecies: Dict[str, Dict[str, int]]
+                     ) -> List[List[SingleMapping]]:
     # This is List[SingleMapping] because there is two directions. But actully this is SingleMapping.
-    return [mapping for mapping in pairs_map if check_if_valid(mapping[0], base_already_mapping, target_already_mapping)]
+    return [mapping for mapping in pairs_map 
+            if check_if_valid(mapping[0], 
+                              base_already_mapping, 
+                              set(base_already_mapping), 
+                              target_already_mapping, 
+                              set(target_already_mapping), 
+                              actual_mapping_indecies)
+            ]
 
 
 def get_edges_with_maximum_weight(similatiry_edges: List[Tuple[str, str, float]], 
@@ -239,6 +256,7 @@ def mapping(
     freq: Frequencies,
     base_already_mapping: List[str],
     target_already_mapping: List[str],
+    actual_mapping_indecies: Dict[str, Dict[str, int]],
     relations: List[SingleMapping],
     relations_already_seen: Set[Tuple[Tuple[Tuple[str, str]]]],
     mappings_already_seen: Set[Tuple[str]],
@@ -296,6 +314,7 @@ def mapping(
             # we will add the new mapping to the already mapping lists. 
             base_already_mapping_new = copy.deepcopy(base_already_mapping)
             target_already_mapping_new = copy.deepcopy(target_already_mapping)
+            actual_mapping_indecies_new = copy.deepcopy(actual_mapping_indecies)
             times[2].append(time.time() - start_time)
 
             b1, b2 = result["best_mapping"][0][0], result["best_mapping"][0][1]
@@ -305,18 +324,22 @@ def mapping(
                 score += get_score(base_already_mapping_new, target_already_mapping_new, b1, t1, cache)
                 base_already_mapping_new.append(b1)
                 target_already_mapping_new.append(t1)
+                actual_mapping_indecies_new['base'][b1] = len(base_already_mapping_new)
+                actual_mapping_indecies_new['target'][t1] = len(target_already_mapping_new)
 
             if b2 not in base_already_mapping_new and t2 not in target_already_mapping_new:
                 score += get_score(base_already_mapping_new, target_already_mapping_new, b2, t2, cache)
                 base_already_mapping_new.append(b2)
                 target_already_mapping_new.append(t2)
+                actual_mapping_indecies_new['base'][b2] = len(base_already_mapping_new)
+                actual_mapping_indecies_new['target'][t2] = len(target_already_mapping_new)
 
             # here we update the possible/available pairs.
             # for example, if we already map a->1, b->2, we will looking only for pairs which respect the 
             # pairs that already maps. in our example it can be one of the following:
             # (a->1, c->3) or (b->2, c->3).
             start_time = time.time()
-            new_available_pairs = update_paris_map(available_pairs, base_already_mapping_new, target_already_mapping_new)
+            new_available_pairs = update_paris_map(available_pairs, base_already_mapping_new, target_already_mapping_new, actual_mapping_indecies_new)
             times[3].append(time.time() - start_time)
             
             mapping(
@@ -328,6 +351,7 @@ def mapping(
                 freq=freq,
                 base_already_mapping=base_already_mapping_new,
                 target_already_mapping=target_already_mapping_new,
+                actual_mapping_indecies=actual_mapping_indecies_new,
                 relations=relations_copy,
                 relations_already_seen=relations_already_seen,
                 mappings_already_seen=mappings_already_seen,
@@ -484,7 +508,24 @@ def mapping_wrapper(base: List[str],
     first_iteration = time.time() - start_time
 
     start_time = time.time()
-    mapping(base, target, available_pairs, best_results, solutions, freq, [], [], [], set(), set(), [], 0, cache, calls, times, depth=depth)
+    mapping(base=base, 
+            target=target, 
+            available_pairs=available_pairs, 
+            sorted_results=best_results, 
+            solutions=solutions, 
+            freq=freq, 
+            base_already_mapping=[], 
+            target_already_mapping=[], 
+            actual_mapping_indecies={'base': {}, 'target': {}},
+            relations=[], 
+            relations_already_seen=set(), 
+            mappings_already_seen=set(), 
+            scores=[], 
+            new_score=0, 
+            cache=cache, 
+            calls=calls, 
+            times=times, 
+            depth=depth)
     mapping_total_time = time.time() - start_time
 
     # array of addition solutions for the suggestions if some entities have missing mappings.
