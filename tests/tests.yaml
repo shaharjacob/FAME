@@ -35,39 +35,39 @@ mapping:
       score: 9.482
     ignore: False
 
-  # - input:
-  #     base: [earth, sun, gravity, newton]
-  #     target: [electrons, nucleus, electricity]
-  #     depth: 2
-  #   output:
-  #     mapping:
-  #       - earth --> electrons
-  #       - sun --> nucleus
-  #       - gravity --> electricity
-  #       - newton --> benjamin franklin
-  #     relations: 
-  #       - [[earth, sun], [electrons, nucleus]]
-  #       - [[earth, gravity], [electrons, electricity]]
-  #       - [[gravity, newton], [electricity, benjamin franklin]]
-  #     score: 11.149
-  #   ignore: False
+  - input:
+      base: [earth, sun, gravity, newton]
+      target: [electrons, nucleus, electricity]
+      depth: 2
+    output:
+      mapping:
+        - earth --> electrons
+        - sun --> nucleus
+        - gravity --> electricity
+        - newton --> benjamin franklin
+      relations: 
+        - [[earth, sun], [electrons, nucleus]]
+        - [[earth, gravity], [electrons, electricity]]
+        - [[gravity, newton], [electricity, benjamin franklin]]
+      score: 11.149
+    ignore: False
 
-  # - input:
-  #     base: [earth, newton, gravity]
-  #     target: [electrons, nucleus, electricity, faraday]
-  #     depth: 4
-  #   output:
-  #     mapping:
-  #       - earth --> electrons
-  #       - gravity --> electricity
-  #       - newton --> faraday
-  #       - sun --> nucleus
-  #     relations: 
-  #       - [[earth, gravity], [electrons, electricity]]
-  #       - [[newton, gravity], [faraday, electricity]]
-  #       - [[earth, sun], [electrons, nucleus]]
-  #     score: 9.482
-  #   ignore: False
+  - input:
+      base: [earth, newton, gravity]
+      target: [electrons, nucleus, electricity, faraday]
+      depth: 4
+    output:
+      mapping:
+        - earth --> electrons
+        - gravity --> electricity
+        - newton --> faraday
+        - sun --> nucleus
+      relations: 
+        - [[earth, gravity], [electrons, electricity]]
+        - [[newton, gravity], [faraday, electricity]]
+        - [[earth, sun], [electrons, nucleus]]
+      score: 9.482
+    ignore: False
 
   - input:
       base: [thoughts, brain, neurons]
@@ -99,20 +99,20 @@ mapping:
       score: 9.019
     ignore: False
   
-  # - input:
-  #     base: [cars, road, wheels]
-  #     target: [boats, river]
-  #     depth: 2
-  #   output:
-  #     mapping:
-  #       - cars --> boats
-  #       - road --> river
-  #       - wheels --> anchors
-  #     relations: 
-  #       - [[cars, road], [boats, river]]
-  #       - [[cars, wheels], [boats, anchors]]
-  #     score: 8.986
-  #   ignore: False
+  - input:
+      base: [cars, road, wheels]
+      target: [boats, river]
+      depth: 2
+    output:
+      mapping:
+        - cars --> boats
+        - road --> river
+        - wheels --> anchors
+      relations: 
+        - [[cars, road], [boats, river]]
+        - [[cars, wheels], [boats, anchors]]
+      score: 8.986
+    ignore: False
 
   - input:
       base: [sunscreen, sun, summer]

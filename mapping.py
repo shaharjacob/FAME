@@ -268,7 +268,7 @@ def mapping(
     target_already_mapping: List[str],
     actual_mapping_indecies: Dict[str, Dict[str, int]],
     relations: List[SingleMapping],
-    relations_already_seen: Set[Tuple[Tuple[Tuple[str, str]]]],
+    relations_already_seen: Set[Tuple[Tuple[Pair]]],
     mappings_already_seen: Set[Tuple[str]],
     scores: List[float],
     new_score: float,
@@ -473,6 +473,11 @@ def mapping_suggestions_wrapper(
                 solution.top_suggestions = top_suggestions
 
 
+def mapping_new():
+    pass
+
+
+
 def mapping_wrapper(base: List[str], 
                     target: List[str], 
                     suggestions: bool = True, 
@@ -529,8 +534,10 @@ def mapping_wrapper(base: List[str],
         if solutions and solutions[0].length < max(len(base), len(target)):
             number_of_solutions_for_suggestions = 5
             # the idea is to iterate over the founded solutions, and check if there are entities are not mapped.
-            # this logic is checked only if ONE entity have missing mapping (from base or target)
             for solution in solutions[:number_of_solutions_for_suggestions]:
+                if solution.length < max(len(base), len(target)) - 1:
+                    # this logic is checked only if ONE entity have missing mapping (from base or target)
+                    continue
                 mapping_suggestions_wrapper(base, "actual_base", "actual_target", solution, data_collector, model, freq, suggestions_solutions, cache, num_of_suggestions, verbose)
                 mapping_suggestions_wrapper(target, "actual_target", "actual_base", solution, data_collector, model, freq, suggestions_solutions, cache, num_of_suggestions, verbose)
 

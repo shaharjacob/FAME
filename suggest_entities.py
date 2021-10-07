@@ -12,7 +12,7 @@ from frequency import Frequencies
 from data_collector import DataCollector
 from sentence_embadding import SentenceEmbedding
 
-IGNORE_SUGGESTION = ["the", "they", "us", "we", "you"]
+IGNORE_SUGGESTION = ["the", "they", "us", "we", "you", 'i']
 
 class Suggestions(object):
     def __init__(self, entity: str, prop: str, save_db: bool = True, override_database: bool = False, quasimodo: Quasimodo = None):
@@ -70,7 +70,7 @@ def get_suggestions_for_missing_entities(data_collector: DataCollector, base_not
         # we we use the map that we already know (base_entity->target_already_mapping[idx])
         if verbose: 
             secho(f"  {target_already_mapping[idx]}", fg="red", bold=True)
-        for prop in (props_entity_1 + props_entity_2):
+        for prop in set(props_entity_1 + props_entity_2):
             suggestions_model = Suggestions(target_already_mapping[idx], prop, quasimodo=data_collector.quasimodo)
             props = suggestions_model.get_suggestions()
             if props:

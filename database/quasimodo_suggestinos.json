@@ -1085,5 +1085,51 @@
 	"dna#saw": [],
 	"dna#thought of": [],
 	"dna#understood": [],
-	"dna#was wrong about": []
+	"dna#was wrong about": [],
+	"sun#are harnessed as": [],
+	"sun#be involved with": [],
+	"sun#become": [],
+	"sun#carry": [],
+	"sun#conduct": [],
+	"sun#create": [
+		"wind",
+		"emission nebula",
+		"energy"
+	],
+	"sun#creates": [],
+	"sun#creates a flow of": [],
+	"sun#generate": [],
+	"sun#hence conduct": [],
+	"sun#in conducting": [],
+	"sun#is also the fundamental unit of": [],
+	"sun#move in": [],
+	"sun#not conduct": [],
+	"sun#produce": [
+		"uv rays",
+		"continuous spectrum",
+		"light"
+	],
+	"sun#produces": [],
+	"sun#relate to": [],
+	"sun#related to": [],
+	"sun#be created by": [],
+	"sun#be made out of": [],
+	"sun#be related to": [],
+	"sun#comes from": [],
+	"sun#created by": [],
+	"sun#involves the flow of": [],
+	"sun#is carried by": [],
+	"sun#is caused by": [],
+	"sun#is composed of": [],
+	"sun#is made of": [],
+	"sun#is the flow of": [],
+	"sun#is the movement of": [],
+	"sun#made": [],
+	"sun#produced in": [],
+	"sun#the flow of": [],
+	"sun#the movement of": [],
+	"sun#work": [
+		"in the witness"
+	],
+	"sun#work with": []
 }
