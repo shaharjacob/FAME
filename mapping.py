@@ -656,6 +656,8 @@ def beam_search_wrapper(base: List[str],
         secho(f"\nBase: {base}", fg="blue", bold=True)
         secho(f"Target: {target}\n", fg="blue", bold=True)
         for i, solution in enumerate(all_solutions):
+            if solution.score == 0:
+                break
             secho(f"#{i+1}", fg="blue", bold=True)
             solution.print_solution()
 
