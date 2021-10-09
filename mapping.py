@@ -547,7 +547,7 @@ def beam_search(
                 if mapping_repr_as_tuple in mappings_already_seen:
                     continue
                 mappings_already_seen.add(mapping_repr_as_tuple)
-                
+
                 solution_copy.mapping = mapping_repr
 
                 # here we update the possible/available pairs.
@@ -580,6 +580,8 @@ def beam_search(
 
 def beam_search_wrapper(base: List[str], 
                         target: List[str], 
+                        suggestions: bool = False, 
+                        num_of_suggestions: int = 1,
                         N: int = 4, 
                         verbose: bool = False, 
                         quasimodo: Quasimodo = None, 
@@ -630,8 +632,22 @@ def beam_search_wrapper(base: List[str],
                 cache=cache, 
                 N=N
             )
+    
+    # array of addition solutions for the suggestions if some entities have missing mappings.
+    suggestions_solutions = []
+    if suggestions and num_of_suggestions > 0:
+        solutions = sorted(solutions, key=lambda x: (x.length, x.score), reverse=True)
+        if solutions and solutions[0].length < max(len(base), len(target)):
+            number_of_solutions_for_suggestions = 5
+            # the idea is to iterate over the founded solutions, and check if there are entities are not mapped.
+            for solution in solutions[:number_of_solutions_for_suggestions]:
+                if solution.length < max(len(base), len(target)) - 1:
+                    # this logic is checked only if ONE entity have missing mapping (from base or target)
+                    continue
+                mapping_suggestions_wrapper(base, "actual_base", "actual_target", solution, data_collector, model, freq, suggestions_solutions, cache, num_of_suggestions, verbose)
+                mapping_suggestions_wrapper(target, "actual_target", "actual_base", solution, data_collector, model, freq, suggestions_solutions, cache, num_of_suggestions, verbose)
 
-    all_solutions = sorted(solutions, key=lambda x: (x.length, x.score), reverse=True)
+    all_solutions = sorted(solutions + suggestions_solutions, key=lambda x: (x.length, x.score), reverse=True)
     if not all_solutions:
         if verbose:
             secho("No solution found")

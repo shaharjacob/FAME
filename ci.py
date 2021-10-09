@@ -8,7 +8,7 @@ import concept_net
 import suggest_entities
 import google_autosuggest
 from frequency import Frequencies
-from mapping import mapping_wrapper, FREQUENCY_THRESHOLD
+from mapping import beam_search_wrapper, mapping_wrapper, FREQUENCY_THRESHOLD
 from quasimodo import Quasimodo, merge_tsvs
 
 
@@ -93,17 +93,29 @@ class TestMapping(unittest.TestCase):
             if tv["ignore"]:
                 continue
             
-            solutions = mapping_wrapper(
-                                        base=tv["input"]["base"], 
-                                        target=tv["input"]["target"], 
-                                        suggestions=True, 
-                                        depth=tv["input"]["depth"], 
-                                        top_n=1, 
-                                        verbose=True,
-                                        quasimodo=quasimodo,
-                                        freq=freq,
-                                        model_name='msmarco-distilbert-base-v4',
-                                        threshold=FREQUENCY_THRESHOLD)
+            solutions = beam_search_wrapper(
+                                            base=tv["input"]["base"], 
+                                            target=tv["input"]["target"], 
+                                            suggestions=True, 
+                                            N=20, 
+                                            verbose=True, 
+                                            quasimodo=quasimodo, 
+                                            freq=freq, 
+                                            model_name='msmarco-distilbert-base-v4',
+                                            threshold=FREQUENCY_THRESHOLD
+                                        )
+
+            # solutions = mapping_wrapper(
+            #                             base=tv["input"]["base"], 
+            #                             target=tv["input"]["target"], 
+            #                             suggestions=True, 
+            #                             depth=tv["input"]["depth"], 
+            #                             top_n=1, 
+            #                             verbose=True,
+            #                             quasimodo=quasimodo,
+            #                             freq=freq,
+            #                             model_name='msmarco-distilbert-base-v4',
+            #                             threshold=FREQUENCY_THRESHOLD)
             solution = solutions[0]
 
             # check the mapping
