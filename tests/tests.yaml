@@ -16,7 +16,7 @@ mapping:
         - [[planet, gravity], [electron, electricity]]
         - [[gravity, newton], [electricity, faraday]]
       score: 21.04
-    ignore: False
+    ignore: True
 
   - input:
       base: [earth, sun, gravity, newton]
