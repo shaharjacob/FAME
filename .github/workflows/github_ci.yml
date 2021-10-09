@@ -24,10 +24,10 @@ jobs:
         CI: True
     - name: Evaluation
       run: |
-        python evaluation.py --model "msmarco-distilbert-base-v4" --threshold 500
+        python evaluation.py --model "msmarco-distilbert-base-v4" --threshold 500 --freq ci.json --algo beam
     - name: Evaluation 2
       run: |
-        python evaluation.py --model "msmarco-distilbert-base-v4" --threshold 500 --yaml evaluation2.yaml
+        python evaluation.py --model "msmarco-distilbert-base-v4" --threshold 500 --yaml evaluation2.yaml --freq ci.json --algo beam
     # - name: Mapping-test
     #   run: |
     #     python mapping.py

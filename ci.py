@@ -83,7 +83,8 @@ class TestMapping(unittest.TestCase):
 
     def test_mapping(self):
         quasimodo = Quasimodo()
-        pass_for_json = 'jsons/merged/20%/ci.json' if 'CI' in os.environ else 'jsons/merged/20%/all_1m_filter_3_sort.json'
+        freq_json_folder = 'jsons/merged/20%'
+        pass_for_json = f'{freq_json_folder}/ci.json' if 'CI' in os.environ else f'{freq_json_folder}/all_1m_filter_3_sort.json'
         freq = Frequencies(pass_for_json, threshold=FREQUENCY_THRESHOLD)
         with open(TEST_FOLDER / 'tests.yaml', 'r') as y:
             spec = yaml.load(y, Loader=yaml.SafeLoader)

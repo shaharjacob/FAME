@@ -9,7 +9,7 @@ from click import secho
 import torch
 from quasimodo import Quasimodo
 from frequency import Frequencies
-from mapping import mapping_wrapper, Solution, FREQUENCY_THRESHOLD
+from mapping import beam_search_wrapper, mapping_wrapper, Solution, FREQUENCY_THRESHOLD
 
 
 TEST_FOLDER = Path('tests')
@@ -65,29 +65,46 @@ def update_result(corrent_mapping: List[str], solutions: List[Solution], result:
         
 
 
-def evaluate(model_name: str, threshold: float, path: str, specify: int):
+def evaluate(model_name: str, threshold: float, path: str, specify: int, freq_path: str, algorithm: str):
     with open(TEST_FOLDER / path, 'r') as y:
         spec = yaml.load(y, Loader=yaml.SafeLoader)
     mapping_spec = spec["mapping"]
     results = Results()
     quasimodo = Quasimodo()
-    pass_for_json = 'jsons/merged/20%/ci.json' if 'CI' in os.environ else 'jsons/merged/20%/all_1m_filter_3_sort.json'
-    freq = Frequencies(pass_for_json, threshold=threshold)
+    freq_json_folder = f'jsons/merged/20%'
+    path_for_json = f'{freq_json_folder}/{freq_path}'
+    freq = Frequencies(path_for_json, threshold=threshold)
     for i, tv in enumerate(mapping_spec):
         if specify and i + 1 not in specify:
             continue
-        solutions = mapping_wrapper(
-                                        base=tv["input"]["base"], 
-                                        target=tv["input"]["target"], 
-                                        suggestions=False, 
-                                        depth=tv["input"]["depth"], 
-                                        top_n=5, 
-                                        verbose=True, 
-                                        quasimodo=quasimodo, 
-                                        freq=freq, 
-                                        model_name=model_name,
-                                        threshold=threshold
-                                    )
+        
+        if algorithm == 'beam':
+            solutions = beam_search_wrapper(
+                                            base=tv["input"]["base"], 
+                                            target=tv["input"]["target"], 
+                                            N=20, 
+                                            verbose=True, 
+                                            quasimodo=quasimodo, 
+                                            freq=freq, 
+                                            model_name=model_name,
+                                            threshold=threshold
+                                        )
+        elif algorithm == 'dfs':
+            solutions = mapping_wrapper(
+                                            base=tv["input"]["base"], 
+                                            target=tv["input"]["target"], 
+                                            suggestions=False, 
+                                            depth=tv["input"]["depth"], 
+                                            top_n=5, 
+                                            verbose=True, 
+                                            quasimodo=quasimodo, 
+                                            freq=freq, 
+                                            model_name=model_name,
+                                            threshold=threshold
+                                        )
+        else:
+            secho("[ERROR] unsupported algorithm. (supported are 'beam' or 'dfs').")
+            exit(1)
         result = Result()
         current_maps = len(tv["output"]["mapping"])
         result.num_of_maps = current_maps
@@ -126,9 +143,11 @@ def evaluate(model_name: str, threshold: float, path: str, specify: int):
 @click.option('-y', '--yaml', default='evaluation.yaml', type=str, help="Path for the yaml for evaluation")
 @click.option('-c', '--comment', default="", type=str, help="Additional comment for the job")
 @click.option('-s', '--specify', default=[], type=int, multiple=True, help="Specify which entry of the yaml file to evaluate")
-def run(model, threshold, yaml, comment, specify):
+@click.option('-j', '--freq', default='all_1m_filter_3_sort.json', type=str, help="Which json to use for frequency file")
+@click.option('-a', '--algo', default='dfs', type=str, help="Which algorithm to use")
+def run(model, threshold, yaml, comment, specify, freq, algo):
     torch.cuda.empty_cache()
-    evaluate(model, threshold, yaml, list(specify))
+    evaluate(model, threshold, yaml, list(specify), freq, algo)
 
 if __name__ == '__main__':
     # os.environ['CI'] = 'true'

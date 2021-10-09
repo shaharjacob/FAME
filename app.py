@@ -21,7 +21,8 @@ def mapping_entities():
     model = SentenceEmbedding(model=model_name, data_collector=data_collector)
     threshold = request.args.get('threshold')
     threshold = threshold if threshold else mapping.FREQUENCY_THRESHOLD
-    freq = Frequencies('jsons/merged/20%/all_1m_filter_3_sort.json', threshold=float(threshold))
+    freq_json_folder = 'jsons/merged/20%'
+    freq = Frequencies(f'{freq_json_folder}/all_1m_filter_3_sort.json', threshold=float(threshold))
     base = [b.strip() for b in request.args.get('base').split(',')]
     target = [t.strip() for t in request.args.get('target').split(',')]
     depth = utils.get_int(request.args.get('depth'), 4)
@@ -63,7 +64,7 @@ def mapping_entities():
                     relation = [(relation[0][1], relation[0][0]), (relation[1][1], relation[1][0])]
 
                 # now we extract information of the relation. 
-                # actually we already did it in mapping.mapping(base, target), but this is very quick since we already saved all the props.
+                # actually we already did it in mapping.mapping_wrapper(base, target), but this is very quick since we already saved all the props.
                 # and it more readable to do it here again.
                 graph = mapping.get_pair_mapping(model, data_collector, freq, relation)
                 if not graph:
@@ -115,7 +116,8 @@ def single_mapping():
     
     threshold = request.args.get('threshold')
     threshold = threshold if threshold else mapping.FREQUENCY_THRESHOLD
-    freq = Frequencies('jsons/merged/20%/all_1m_filter_3_sort.json', threshold=float(threshold))
+    freq_json_folder = 'jsons/merged/20%'
+    freq = Frequencies(f'{freq_json_folder}/all_1m_filter_3_sort.json', threshold=float(threshold))
 
     for edge_idx, edge_ in enumerate(utils.get_edges_combinations(edge1, edge2)):   
         props_edge1 = data_collector.get_entities_relations(edge_[0][0], edge_[0][1])
@@ -193,7 +195,8 @@ def bipartite_graph():
     model = SentenceEmbedding(data_collector=data_collector)
     threshold = request.args.get('threshold')
     threshold = threshold if threshold else mapping.FREQUENCY_THRESHOLD
-    freq = Frequencies('jsons/merged/20%/all_1m_filter_3_sort.json', threshold=float(threshold))
+    freq_json_folder = 'jsons/merged/20%'
+    freq = Frequencies(f'{freq_json_folder}/all_1m_filter_3_sort.json', threshold=float(threshold))
 
     if not utils.is_none(base1) and not utils.is_none(base2) and not utils.is_none(target1) and not utils.is_none(target2):
         props_edge1 = data_collector.get_entities_relations(base1, base2)

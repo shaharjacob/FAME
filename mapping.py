@@ -23,9 +23,20 @@ DEFAULT_DIST_THRESHOLD_FOR_CLUSTERS = 0.8
 FREQUENCY_THRESHOLD = 500
 
 class Solution:
-    def __init__(self, mapping, relations, scores, score, actual_base, actual_target, actual_indecies, length):
-        self.mapping: List[str] = mapping
-        self.relations: List[SingleMapping] = relations
+    def __init__(self, 
+                mapping: List[str], 
+                relations: List[SingleMapping], 
+                scores: List[float], 
+                score: float, 
+                actual_base: List[str], 
+                actual_target: List[str], 
+                actual_indecies: Dict[str, Dict[str, int]], 
+                length: int,
+                availables: List[List[SingleMapping]] = None,
+                sorted_results: List[Dict[str, Union[int, SingleMapping]]] = None,
+                ):
+        self.mapping = mapping
+        self.relations = relations
         self.scores = scores
         self.score = score
         self.actual_base = actual_base
@@ -33,12 +44,29 @@ class Solution:
         self.actual_indecies = actual_indecies
         self.length = length
         self.top_suggestions = []
+        self.availables = availables
+        self.sorted_results = sorted_results
     
     def get_actual(self, which: str):
         if which == 'actual_base':
             return self.actual_base
         elif which == 'actual_target':
             return self.actual_target
+    
+    def print_solution(self):
+        secho("mapping", fg="blue", bold=True)
+        for mapping in self.mapping:
+            secho(f"\t{mapping}", fg="blue")
+        print()
+
+        secho("relations", fg="blue", bold=True)
+        for relations, score in zip(self.relations, self.scores):
+            secho(f"\t{relations}   ", fg="blue", nl=False)
+            secho(f"{score}", fg="blue", bold=True)
+        print()
+
+        secho(f"Score: {self.score}", fg="blue", bold=True)
+        print()
 
 
 def get_edge_score(prop1: str, prop2: str, model: SentenceEmbedding, freq: Frequencies) -> float:
@@ -257,7 +285,7 @@ def update_already_mapping(b: str, t: str, B: List[str], T: List[str], indecies:
     indecies['target'][t] = len(T) - 1
 
 
-def mapping(
+def dfs(
     base: List[str], 
     target: List[str],
     available_pairs: List[List[SingleMapping]],
@@ -343,7 +371,7 @@ def mapping(
             # (a->1, c->3) or (b->2, c->3).
             new_available_pairs = update_paris_map(available_pairs, base_already_mapping_new, target_already_mapping_new, actual_mapping_indecies_new)
             
-            mapping(
+            dfs(
                 base=base, 
                 target=target,
                 available_pairs=new_available_pairs,
@@ -473,9 +501,149 @@ def mapping_suggestions_wrapper(
                 solution.top_suggestions = top_suggestions
 
 
-def mapping_new():
-    pass
+def beam_search(
+    base: List[str], 
+    target: List[str],
+    solutions: List[Solution],
+    relations_already_seen: Set[Tuple[Tuple[Pair]]],
+    mappings_already_seen: Set[Tuple[str]],
+    freq: Frequencies,
+    cache: dict,
+    N: int = 4):
 
+    curr_solutions = []
+    for solution in solutions:
+        # we will get the top-depth pairs with the best score.
+        best_results_for_current_iteration, modified_results = get_best_pair_mapping_for_current_iteration(solution.availables, solution.sorted_results, N)
+        solution.sorted_results = modified_results
+        for result in best_results_for_current_iteration:
+            # if the best score is > 0, we will update the base and target lists of the already mapping entities.
+            # otherwise, if the best score is 0, we have no more mappings to do.
+            if result["best_score"] > 0:
+                solution_copy = copy.deepcopy(solution)
+                
+                solution_copy.relations.append(result["best_mapping"])
+                relations_as_tuple = tuple([tuple(relation) for relation in sorted(solution_copy.relations)])
+                if relations_as_tuple in relations_already_seen:
+                    continue
+                relations_already_seen.add(relations_as_tuple)
+
+                solution_copy.scores.append(round(result["best_score"], 3))
+
+                b1, b2 = result["best_mapping"][0][0], result["best_mapping"][0][1]
+                t1, t2 = result["best_mapping"][1][0], result["best_mapping"][1][1]
+                score = 0
+                if b1 not in solution_copy.actual_base and t1 not in solution_copy.actual_target:
+                    score += get_score(solution_copy.actual_base, solution_copy.actual_target, b1, t1, cache)
+                    update_already_mapping(b1, t1, solution_copy.actual_base, solution_copy.actual_target, solution_copy.actual_indecies)
+
+                if b2 not in solution_copy.actual_base and t2 not in solution_copy.actual_target:
+                    score += get_score(solution_copy.actual_base, solution_copy.actual_target, b2, t2, cache)
+                    update_already_mapping(b2, t2, solution_copy.actual_base, solution_copy.actual_target, solution_copy.actual_indecies)
+
+                solution_copy.score += score
+                mapping_repr = [f"{b} --> {t}" for b, t in zip(solution_copy.actual_base, solution_copy.actual_target)]
+                mapping_repr_as_tuple = tuple(sorted(mapping_repr))
+                if mapping_repr_as_tuple in mappings_already_seen:
+                    continue
+                mappings_already_seen.add(mapping_repr_as_tuple)
+                
+                solution_copy.mapping = mapping_repr
+
+                # here we update the possible/available pairs.
+                # for example, if we already map a->1, b->2, we will looking only for pairs which respect the 
+                # pairs that already maps. in our example it can be one of the following:
+                # (a->1, c->3) or (b->2, c->3).
+                new_available_pairs = update_paris_map(solution_copy.availables, solution_copy.actual_base, solution_copy.actual_target, solution_copy.actual_indecies)
+                solution_copy.availables = new_available_pairs
+                solution_copy.length = len(solution_copy.actual_base)
+                curr_solutions.append(solution_copy)
+
+    if not curr_solutions:
+        return
+    
+    solutions_ = sorted(solutions + curr_solutions, key=lambda x: (x.length, x.score), reverse=True)[:N]
+    for i, solution_ in enumerate(solutions_):
+        solutions[i] = solution_
+
+    beam_search(
+        base=base, 
+        target=target,
+        solutions=solutions,
+        relations_already_seen=relations_already_seen,
+        mappings_already_seen=mappings_already_seen,
+        freq=freq,
+        cache=cache,
+        N=N
+    )
+
+
+def beam_search_wrapper(base: List[str], 
+                        target: List[str], 
+                        N: int = 4, 
+                        verbose: bool = False, 
+                        quasimodo: Quasimodo = None, 
+                        freq: Frequencies = None, 
+                        model_name: str = 'msmarco-distilbert-base-v4',
+                        threshold: Union[float, int] = FREQUENCY_THRESHOLD) -> List[Solution]:
+
+    # we want all the possible pairs.
+    # general there are (n choose 2) * (n choose 2) * 2 pairs.
+    available_pairs = get_all_possible_pairs_map(base, target)
+
+    # better to init all the objects here, since they are not changed in the run
+    if not quasimodo:
+        quasimodo = Quasimodo()
+    data_collector = DataCollector(quasimodo=quasimodo)
+    model = SentenceEmbedding(model=model_name, data_collector=data_collector)
+    if not freq:
+        path_for_json = 'jsons/merged/20%/ci.json' if 'CI' in os.environ else 'jsons/merged/20%/all_1m_filter_3_sort.json'
+        freq = Frequencies(path_for_json, threshold=threshold)
+
+    cache = {}
+    best_results = get_best_pair_mapping(model, freq, data_collector, available_pairs, cache)
+
+    # this is an array of solutions we going to update in the mapping function.
+    solutions = []
+    for i in range(N):
+        solutions.append(
+            Solution(
+                mapping=[], 
+                relations=[], 
+                scores=[], 
+                score=0, 
+                actual_base=[], 
+                actual_target=[], 
+                actual_indecies={'base': {}, 'target': {}}, 
+                length=0,
+                availables=copy.deepcopy(available_pairs),
+                sorted_results=copy.deepcopy(best_results)
+            )
+        )
+
+    beam_search(base=base, 
+                target=target, 
+                solutions=solutions, 
+                mappings_already_seen=set(),
+                relations_already_seen=set(),
+                freq=freq, 
+                cache=cache, 
+                N=N
+            )
+
+    all_solutions = sorted(solutions, key=lambda x: (x.length, x.score), reverse=True)
+    if not all_solutions:
+        if verbose:
+            secho("No solution found")
+        return []
+    if verbose:
+        secho(f"\nBase: {base}", fg="blue", bold=True)
+        secho(f"Target: {target}\n", fg="blue", bold=True)
+        for i, solution in enumerate(all_solutions):
+            secho(f"#{i+1}", fg="blue", bold=True)
+            solution.print_solution()
+
+    return all_solutions
 
 
 def mapping_wrapper(base: List[str], 
@@ -509,23 +677,24 @@ def mapping_wrapper(base: List[str],
     cache = {}
     calls = [0]
     best_results = get_best_pair_mapping(model, freq, data_collector, available_pairs, cache)
-    mapping(base=base, 
-            target=target, 
-            available_pairs=available_pairs, 
-            sorted_results=best_results, 
-            solutions=solutions, 
-            freq=freq, 
-            base_already_mapping=[], 
-            target_already_mapping=[], 
-            actual_mapping_indecies={'base': {}, 'target': {}},
-            relations=[], 
-            relations_already_seen=set(), 
-            mappings_already_seen=set(), 
-            scores=[], 
-            new_score=0, 
-            cache=cache, 
-            calls=calls, 
-            depth=depth)
+    dfs(base=base, 
+        target=target, 
+        available_pairs=available_pairs, 
+        sorted_results=best_results, 
+        solutions=solutions, 
+        freq=freq, 
+        base_already_mapping=[], 
+        target_already_mapping=[], 
+        actual_mapping_indecies={'base': {}, 'target': {}},
+        relations=[], 
+        relations_already_seen=set(), 
+        mappings_already_seen=set(), 
+        scores=[], 
+        new_score=0, 
+        cache=cache, 
+        calls=calls, 
+        depth=depth
+    )
 
     # array of addition solutions for the suggestions if some entities have missing mappings.
     suggestions_solutions = []
@@ -552,32 +721,10 @@ def mapping_wrapper(base: List[str],
         solutions_to_print = 20 if os.environ.get('CI', False) else top_n
         for i, solution in enumerate(all_solutions[:solutions_to_print]):
             secho(f"#{i+1}", fg="blue", bold=True)
-            print_solution(solution)
+            solution.print_solution()
 
-    secho(f"Number of recursive calls: {calls[0]}")
-    # secho(f"first iteration time: {round(first_iteration, 2)}[sec]")
-    # secho(f"mapping total time: {round(mapping_total_time, 2)}[sec]")
-    # secho(f"times: ", nl=False)
-    # for time_ in times:
-    #     secho(f"{round(sum(time_), 2)}[sec], ", nl=False)
-    print()
+    secho(f"Number of recursive calls: {calls[0]}\n")
     return all_solutions[:top_n]
-
-
-def print_solution(solution: Solution):
-    secho("mapping", fg="blue", bold=True)
-    for mapping in solution.mapping:
-        secho(f"\t{mapping}", fg="blue")
-    print()
-
-    secho("relations", fg="blue", bold=True)
-    for relations, score in zip(solution.relations, solution.scores):
-        secho(f"\t{relations}   ", fg="blue", nl=False)
-        secho(f"{score}", fg="blue", bold=True)
-    print()
-
-    secho(f"Score: {solution.score}", fg="blue", bold=True)
-    print()
 
 
 if __name__ == "__main__":
