@@ -10007,5 +10007,304 @@
 	],
 	"emission nebula#sun": [],
 	"sun#hadith": [],
-	"hadith#sun": []
+	"hadith#sun": [],
+	"electricity#from coal": [
+		"made"
+	],
+	"from coal#electricity": [],
+	"electrons#from coal": [],
+	"from coal#electrons": [],
+	"nucleus#from coal": [],
+	"from coal#nucleus": [],
+	"electricity#light": [
+		"be distributed to",
+		"be slower than",
+		"be turned into",
+		"create",
+		"make"
+	],
+	"light#electricity": [],
+	"electricity#thunderstorms": [
+		"relate to"
+	],
+	"thunderstorms#electricity": [],
+	"electricity#j.j thomson": [],
+	"j.j thomson#electricity": [],
+	"electricity#spectrum": [],
+	"spectrum#electricity": [],
+	"electricity#jj thomson": [],
+	"jj thomson#electricity": [],
+	"electricity#the electron cloud model": [],
+	"the electron cloud model#electricity": [],
+	"electricity#bohr": [],
+	"bohr#electricity": [],
+	"electricity#quantum mechanical model": [],
+	"quantum mechanical model#electricity": [],
+	"electricity#electron cloud model": [],
+	"electron cloud model#electricity": [],
+	"electricity#frequency": [
+		"have"
+	],
+	"frequency#electricity": [
+		"be important in"
+	],
+	"electricity#math": [],
+	"math#electricity": [],
+	"electricity#rutherford": [],
+	"rutherford#electricity": [],
+	"electricity#quantum": [],
+	"quantum#electricity": [],
+	"electricity#protons": [
+		"be related to"
+	],
+	"protons#electricity": [
+		"can conduct",
+		"relate to"
+	],
+	"electricity#cathode rays": [],
+	"cathode rays#electricity": [],
+	"electricity#photons": [],
+	"photons#electricity": [
+		"create",
+		"generate"
+	],
+	"electricity#energy level": [],
+	"energy level#electricity": [],
+	"electricity#lightning": [
+		"be produced in"
+	],
+	"lightning#electricity": [
+		"affect",
+		"be from",
+		"can produce",
+		"get",
+		"has property",
+		"have"
+	],
+	"electricity#thomson": [],
+	"thomson#electricity": [],
+	"electricity#the electron-cloud model": [],
+	"the electron-cloud model#electricity": [],
+	"electricity#the bohr model": [],
+	"the bohr model#electricity": [],
+	"electricity#chemical bonding": [],
+	"chemical bonding#electricity": [],
+	"electrons#thunderstorms": [
+		"relate to"
+	],
+	"thunderstorms#electrons": [],
+	"electrons#j.j thomson": [],
+	"j.j thomson#electrons": [],
+	"electrons#spectrum": [],
+	"spectrum#electrons": [],
+	"electrons#jj thomson": [],
+	"jj thomson#electrons": [],
+	"electrons#the electron cloud model": [],
+	"the electron cloud model#electrons": [],
+	"electrons#bohr": [],
+	"bohr#electrons": [],
+	"electrons#quantum mechanical model": [],
+	"quantum mechanical model#electrons": [],
+	"electrons#electron cloud model": [],
+	"electron cloud model#electrons": [],
+	"electrons#math": [],
+	"math#electrons": [
+		"relate to"
+	],
+	"electrons#rutherford": [],
+	"rutherford#electrons": [],
+	"electrons#quantum": [],
+	"quantum#electrons": [
+		"relate to"
+	],
+	"electrons#protons": [
+		"actually move around",
+		"attract to",
+		"be attracted to",
+		"be lighter than",
+		"be rather than",
+		"be smaller than",
+		"differ from",
+		"fall into",
+		"stick to",
+		"touch"
+	],
+	"protons#electrons": [
+		"attract",
+		"be",
+		"be attracted to",
+		"be different from",
+		"be equal to",
+		"be heavier than",
+		"be related to",
+		"differ from",
+		"have called",
+		"stick to"
+	],
+	"electrons#cathode rays": [
+		"be produced from"
+	],
+	"cathode rays#electrons": [],
+	"electrons#energy level": [
+		"can change",
+		"change",
+		"drop",
+		"exist in",
+		"fill",
+		"fill up",
+		"have",
+		"jump",
+		"move between",
+		"relate to"
+	],
+	"energy level#electrons": [
+		"fill up with"
+	],
+	"electrons#lightning": [
+		"relate to"
+	],
+	"lightning#electrons": [],
+	"electrons#thomson": [],
+	"thomson#electrons": [],
+	"electrons#the electron-cloud model": [],
+	"the electron-cloud model#electrons": [],
+	"electrons#the bohr model": [],
+	"the bohr model#electrons": [],
+	"electrons#chemical bonding": [
+		"be responsible for",
+		"relate to"
+	],
+	"chemical bonding#electrons": [],
+	"nucleus#thunderstorms": [],
+	"nucleus#cathode rays": [],
+	"cathode rays#nucleus": [],
+	"nucleus#the bohr model": [],
+	"the bohr model#nucleus": [],
+	"nucleus#rutherford": [],
+	"rutherford#nucleus": [],
+	"nucleus#frequency": [],
+	"frequency#nucleus": [],
+	"nucleus#chemical bonding": [],
+	"chemical bonding#nucleus": [],
+	"nucleus#quantum": [],
+	"quantum#nucleus": [],
+	"nucleus#spectrum": [],
+	"spectrum#nucleus": [],
+	"nucleus#math": [],
+	"math#nucleus": [],
+	"nucleus#the electron-cloud model": [],
+	"the electron-cloud model#nucleus": [],
+	"nucleus#the electron cloud model": [],
+	"the electron cloud model#nucleus": [],
+	"thunderstorms#nucleus": [],
+	"nucleus#electron cloud model": [],
+	"electron cloud model#nucleus": [],
+	"nucleus#thomson": [],
+	"thomson#nucleus": [],
+	"nucleus#bohr": [],
+	"bohr#nucleus": [],
+	"nucleus#lightning": [],
+	"lightning#nucleus": [],
+	"nucleus#jj thomson": [],
+	"jj thomson#nucleus": [],
+	"nucleus#protons": [
+		"be made up of"
+	],
+	"protons#nucleus": [
+		"be held together in",
+		"be in",
+		"be situated in",
+		"behave in",
+		"can exist together in",
+		"can stay together in",
+		"repel in",
+		"stay close together in",
+		"stay in",
+		"stay together in"
+	],
+	"nucleus#quantum mechanical model": [],
+	"quantum mechanical model#nucleus": [],
+	"nucleus#j.j thomson": [],
+	"j.j thomson#nucleus": [],
+	"nucleus#energy level": [],
+	"energy level#nucleus": [],
+	"boats#barnacles": [],
+	"barnacles#boats": [
+		"attach to",
+		"be bad for",
+		"destroy",
+		"form on",
+		"get on",
+		"grow on",
+		"stick to"
+	],
+	"boats#spiders": [],
+	"spiders#boats": [],
+	"boats#whales not": [],
+	"whales not#boats": [],
+	"boats#whales": [],
+	"whales#boats": [
+		"approach",
+		"be attracted to",
+		"breach near",
+		"follow",
+		"jump near",
+		"jump on",
+		"knock over",
+		"tip over"
+	],
+	"boats#rats": [],
+	"rats#boats": [
+		"get on"
+	],
+	"boats#roaches": [],
+	"roaches#boats": [],
+	"river#barnacles": [],
+	"barnacles#river": [],
+	"river#spiders": [],
+	"spiders#river": [],
+	"river#whales not": [],
+	"whales not#river": [],
+	"river#whales": [],
+	"whales#river": [
+		"swim up"
+	],
+	"river#rats": [],
+	"rats#river": [],
+	"river#roaches": [],
+	"roaches#river": [],
+	"river#good boundaries": [
+		"make"
+	],
+	"good boundaries#river": [],
+	"river#dollywood": [],
+	"dollywood#river": [],
+	"river#electricity": [
+		"generate",
+		"make",
+		"produce"
+	],
+	"electricity#river": [
+		"come from"
+	],
+	"river#you find the": [],
+	"you find the#river": [],
+	"river#it called the old and": [],
+	"it called the old and#river": [],
+	"river#land fertile": [
+		"make"
+	],
+	"land fertile#river": [],
+	"river#soil fertile": [
+		"make"
+	],
+	"soil fertile#river": [],
+	"river#netflix": [],
+	"netflix#river": [],
+	"river#yiruma": [],
+	"yiruma#river": [],
+	"river#estuaries": [
+		"make"
+	],
+	"estuaries#river": []
 }

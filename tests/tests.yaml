@@ -2,7 +2,9 @@ mapping:
   - input:
       base: [solar system, sun, planet, gravity, newton]
       target: [atom, nucleus, electron, electricity, faraday]
-      depth: 4
+      depth:
+        dfs: 4
+        beam: 20
     output:
       mapping:
         - sun --> nucleus
@@ -11,17 +13,24 @@ mapping:
         - gravity --> electricity
         - newton --> faraday
       relations: 
-        - [[sun, planet], [nucleus, electron]]
-        - [[solar system, planet], [atom, electron]]
-        - [[planet, gravity], [electron, electricity]]
-        - [[gravity, newton], [electricity, faraday]]
+        dfs:
+          - [[sun, planet], [nucleus, electron]]
+          - [[solar system, planet], [atom, electron]]
+          - [[planet, gravity], [electron, electricity]]
+          - [[gravity, newton], [electricity, faraday]]
+        beam:
+          - [[sun, planet], [nucleus, electron]]
+          - [['solar system', 'gravity'], ['atom', 'electricity']]
+          - [[gravity, newton], [electricity, faraday]]
       score: 21.04
-    ignore: True
+    ignore: False
 
   - input:
       base: [earth, sun, gravity, newton]
       target: [electrons, nucleus, electricity, faraday]
-      depth: 2
+      depth:
+        dfs: 2
+        beam: 20
     output:
       mapping:
         - earth --> electrons
@@ -29,16 +38,22 @@ mapping:
         - gravity --> electricity
         - newton --> faraday
       relations: 
-        - [[earth, sun], [electrons, nucleus]]
-        - [[earth, gravity], [electrons, electricity]]
-        - [[gravity, newton], [electricity, faraday]]
+        dfs:
+          - [[earth, sun], [electrons, nucleus]]
+          - [[earth, gravity], [electrons, electricity]]
+          - [[gravity, newton], [electricity, faraday]]
+        beam:
+          - [[earth, sun], [electrons, nucleus]]
+          - [[gravity, newton], [electricity, faraday]]
       score: 9.482
     ignore: False
 
   - input:
       base: [earth, sun, gravity, newton]
       target: [electrons, nucleus, electricity]
-      depth: 2
+      depth:
+        dfs: 2
+        beam: 20
     output:
       mapping:
         - earth --> electrons
@@ -46,16 +61,23 @@ mapping:
         - gravity --> electricity
         - newton --> benjamin franklin
       relations: 
-        - [[earth, sun], [electrons, nucleus]]
-        - [[earth, gravity], [electrons, electricity]]
-        - [[gravity, newton], [electricity, benjamin franklin]]
+        dfs:
+          - [[earth, sun], [electrons, nucleus]]
+          - [[earth, gravity], [electrons, electricity]]
+          - [[gravity, newton], [electricity, benjamin franklin]]
+        beam:
+          - [[earth, sun], [electrons, nucleus]]
+          - [[earth, gravity], [electrons, electricity]]
+          - [[gravity, newton], [electricity, benjamin franklin]]
       score: 11.149
     ignore: False
 
   - input:
       base: [earth, newton, gravity]
       target: [electrons, nucleus, electricity, faraday]
-      depth: 4
+      depth:
+        dfs: 4
+        beam: 20
     output:
       mapping:
         - earth --> electrons
@@ -63,69 +85,98 @@ mapping:
         - newton --> faraday
         - sun --> nucleus
       relations: 
-        - [[earth, gravity], [electrons, electricity]]
-        - [[newton, gravity], [faraday, electricity]]
-        - [[earth, sun], [electrons, nucleus]]
+        dfs:
+          - [[earth, gravity], [electrons, electricity]]
+          - [[newton, gravity], [faraday, electricity]]
+          - [[earth, sun], [electrons, nucleus]]
+        beam:
+          - [[earth, gravity], [electrons, electricity]]
+          - [[newton, gravity], [faraday, electricity]]
+          - [[earth, sun], [electrons, nucleus]]
       score: 9.482
     ignore: False
 
   - input:
       base: [thoughts, brain, neurons]
       target: [astronaut, space, black hole]
-      depth: 2
+      depth:
+        dfs: 2
+        beam: 20
     output:
       mapping:
         - thoughts --> astronaut
         - brain --> space
         - neurons --> black hole
       relations: 
-        - [[thoughts, brain], [astronaut, space]]
-        - [[brain, neurons], [space, black hole]]
+        dfs:
+          - [[thoughts, brain], [astronaut, space]]
+          - [[brain, neurons], [space, black hole]]
+        beam:
+          - [[thoughts, brain], [astronaut, space]]
+          - [[brain, neurons], [space, black hole]]
       score: 5.135
     ignore: False
   
   - input:
       base: [cars, road, wheels]
       target: [boats, river, sail]
-      depth: 2
+      depth:
+        dfs: 2
+        beam: 20
     output:
       mapping:
         - cars --> boats
         - road --> river
         - wheels --> sail
       relations: 
-        - [[cars, road], [boats, river]]
-        - [[cars, wheels], [boats, sail]]
+        dfs:
+          - [[cars, road], [boats, river]]
+          - [[cars, wheels], [boats, sail]]
+        beam:
+          - [[cars, road], [boats, river]]
+          - [[cars, wheels], [boats, sail]]
       score: 9.019
     ignore: False
   
-  - input:
-      base: [cars, road, wheels]
-      target: [boats, river]
-      depth: 2
-    output:
-      mapping:
-        - cars --> boats
-        - road --> river
-        - wheels --> anchors
-      relations: 
-        - [[cars, road], [boats, river]]
-        - [[cars, wheels], [boats, anchors]]
-      score: 8.986
-    ignore: False
+  # - input:
+  #     base: [cars, road, wheels]
+  #     target: [boats, river]
+  #     depth:
+  #       dfs: 2
+  #       beam: 20
+  #   output:
+  #     mapping:
+  #       - cars --> boats
+  #       - road --> river
+  #       - wheels --> anchors
+  #     relations: 
+  #       dfs:
+  #         - [[cars, road], [boats, river]]
+  #         - [[cars, wheels], [boats, anchors]]
+  #       beam:
+  #         - [[cars, road], [boats, river]]
+  #         - [[cars, wheels], [boats, anchors]]
+  #     score: 8.986
+  #   ignore: False
 
   - input:
       base: [sunscreen, sun, summer]
       target: [umbrella, rain, winter]
-      depth: 2
+      depth:
+        dfs: 2
+        beam: 20
     output:
       mapping:
         - sun --> rain
         - summer --> winter
         - sunscreen --> umbrella
       relations: 
-        - [[sun, summer], [rain, winter]]
-        - [[sunscreen, sun], [umbrella, rain]]
+        dfs:
+          - [[sun, summer], [rain, winter]]
+          - [[sunscreen, sun], [umbrella, rain]]
+        beam:
+          - [[sun, summer], [rain, winter]]
+          - [[sunscreen, sun], [umbrella, rain]]
       score: 7.082
     ignore: False
   

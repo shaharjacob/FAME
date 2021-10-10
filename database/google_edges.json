@@ -13926,5 +13926,408 @@
 	"sun#emission nebula": [],
 	"emission nebula#sun": [],
 	"sun#hadith": [],
-	"hadith#sun": []
+	"hadith#sun": [],
+	"electricity#from coal": [
+		"come",
+		"generate",
+		"generated"
+	],
+	"from coal#electricity": [],
+	"electrons#from coal": [],
+	"from coal#electrons": [],
+	"nucleus#from coal": [],
+	"from coal#nucleus": [],
+	"electricity#light": [
+		"converted into",
+		"converted to",
+		"create",
+		"make",
+		"produce",
+		"travel at the speed of",
+		"turn into"
+	],
+	"light#electricity": [
+		"bulb cause",
+		"convert to",
+		"converted into",
+		"converted to",
+		"create",
+		"energy converted into",
+		"generate",
+		"need",
+		"produce",
+		"turn into"
+	],
+	"electricity#thunderstorms": [
+		"go out during",
+		"made in a"
+	],
+	"thunderstorms#electricity": [
+		"generate"
+	],
+	"electricity#j.j thomson": [],
+	"j.j thomson#electricity": [],
+	"electricity#spectrum": [],
+	"spectrum#electricity": [],
+	"electricity#jj thomson": [],
+	"jj thomson#electricity": [],
+	"electricity#the electron cloud model": [],
+	"the electron cloud model#electricity": [],
+	"electricity#bohr": [],
+	"bohr#electricity": [],
+	"electricity#quantum mechanical model": [],
+	"quantum mechanical model#electricity": [],
+	"electricity#electron cloud model": [],
+	"electron cloud model#electricity": [],
+	"electricity#frequency": [
+		"affect",
+		"related to",
+		"transmitted at low"
+	],
+	"frequency#electricity": [
+		"affect",
+		"important in",
+		"matter in"
+	],
+	"electricity#math": [],
+	"math#electricity": [],
+	"electricity#rutherford": [],
+	"rutherford#electricity": [],
+	"electricity#quantum": [],
+	"quantum#electricity": [],
+	"electricity#protons": [],
+	"protons#electricity": [
+		"and electrons impact the movement of",
+		"move in",
+		"produce",
+		"related to"
+	],
+	"electricity#cathode rays": [],
+	"cathode rays#electricity": [],
+	"electricity#photons": [],
+	"photons#electricity": [
+		"generate"
+	],
+	"electricity#energy level": [],
+	"energy level#electricity": [],
+	"electricity#lightning": [
+		"get into",
+		"get into the sky to make",
+		"in"
+	],
+	"lightning#electricity": [
+		"affect",
+		"an example of static",
+		"an unusable form of",
+		"considered static",
+		"create",
+		"different from",
+		"generate",
+		"get",
+		"not",
+		"produce",
+		"related to",
+		"related to static",
+		"rods use static",
+		"static",
+		"trip",
+		"work static"
+	],
+	"electricity#thomson": [],
+	"thomson#electricity": [],
+	"electricity#the electron-cloud model": [],
+	"the electron-cloud model#electricity": [],
+	"electricity#the bohr model": [],
+	"the bohr model#electricity": [],
+	"electricity#chemical bonding": [],
+	"chemical bonding#electricity": [],
+	"electrons#thunderstorms": [],
+	"thunderstorms#electrons": [],
+	"electrons#j.j thomson": [],
+	"j.j thomson#electrons": [
+		"discover"
+	],
+	"electrons#spectrum": [
+		"create the",
+		"create the colors in a line-emission"
+	],
+	"spectrum#electrons": [
+		"related to"
+	],
+	"electrons#jj thomson": [],
+	"jj thomson#electrons": [
+		"determine the charge of an",
+		"discovered",
+		"discovered the",
+		"find out about",
+		"find the mass of an"
+	],
+	"electrons#the electron cloud model": [],
+	"the electron cloud model#electrons": [],
+	"electrons#bohr": [],
+	"bohr#electrons": [
+		"assume about the motion of",
+		"discover"
+	],
+	"electrons#quantum mechanical model": [
+		"travel around the nucleus in the",
+		"travel in the"
+	],
+	"quantum mechanical model#electrons": [
+		"describe",
+		"describe the energies and positions of the",
+		"of the atom describe",
+		"of the atom describe the energies and position of the",
+		"of the atom describe the paths of an atom\u2019s"
+	],
+	"electrons#electron cloud model": [],
+	"electron cloud model#electrons": [
+		"describe"
+	],
+	"electrons#math": [],
+	"math#electrons": [],
+	"electrons#rutherford": [],
+	"rutherford#electrons": [
+		"discover",
+		"discover the"
+	],
+	"electrons#quantum": [],
+	"quantum#electrons": [
+		"concept used to explain the behavior of",
+		"mechanical model describe",
+		"mechanical model describe the energies and positions of the",
+		"mechanical model of the atom describe",
+		"mechanics describe an",
+		"numbers relate to",
+		"relate to"
+	],
+	"electrons#protons": [
+		"differ from",
+		"move",
+		"move and not",
+		"move more easily than",
+		"move towards positive",
+		"orbit",
+		"relate to",
+		"transport chain move",
+		"transport chain pump"
+	],
+	"protons#electrons": [
+		"and",
+		"equal",
+		"repel protons but attract",
+		"weigh more than"
+	],
+	"electrons#cathode rays": [],
+	"cathode rays#electrons": [
+		"discovered",
+		"tube experiment proved the existence of",
+		"tube show evidence of"
+	],
+	"electrons#energy level": [
+		"change",
+		"drop",
+		"fill",
+		"have different",
+		"have discrete",
+		"jump",
+		"jump to a higher",
+		"move between",
+		"move to a higher",
+		"move to a higher or a lower",
+		"move to a lower",
+		"move to higher",
+		"relate to",
+		"transition between"
+	],
+	"energy level#electrons": [
+		"fill up with",
+		"of an atom's valence",
+		"relate to"
+	],
+	"electrons#lightning": [],
+	"lightning#electrons": [
+		"have"
+	],
+	"electrons#thomson": [],
+	"thomson#electrons": [
+		"discover",
+		"discovered the",
+		"measure the charge to mass ratio of the"
+	],
+	"electrons#the electron-cloud model": [],
+	"the electron-cloud model#electrons": [
+		"describe"
+	],
+	"electrons#the bohr model": [
+		"cause specific spectral lines according to"
+	],
+	"the bohr model#electrons": [],
+	"electrons#chemical bonding": [
+		"affect",
+		"configurations determine",
+		"configurations relate to",
+		"distance from the nucleus impact",
+		"dot diagrams help predict"
+	],
+	"chemical bonding#electrons": [],
+	"nucleus#thunderstorms": [],
+	"nucleus#cathode rays": [],
+	"cathode rays#nucleus": [],
+	"nucleus#the bohr model": [],
+	"the bohr model#nucleus": [
+		"represent electrons around the central"
+	],
+	"nucleus#rutherford": [],
+	"rutherford#nucleus": [
+		"conclude that atoms contain a",
+		"describe the",
+		"determine the size of the",
+		"discover the",
+		"experiment proved the existence of the",
+		"infer the presence of a tiny"
+	],
+	"nucleus#frequency": [],
+	"frequency#nucleus": [],
+	"nucleus#chemical bonding": [],
+	"chemical bonding#nucleus": [],
+	"nucleus#quantum": [],
+	"quantum#nucleus": [],
+	"nucleus#spectrum": [],
+	"spectrum#nucleus": [],
+	"nucleus#math": [],
+	"math#nucleus": [],
+	"nucleus#the electron-cloud model": [],
+	"the electron-cloud model#nucleus": [],
+	"nucleus#the electron cloud model": [],
+	"the electron cloud model#nucleus": [],
+	"thunderstorms#nucleus": [],
+	"nucleus#electron cloud model": [],
+	"electron cloud model#nucleus": [],
+	"nucleus#thomson": [],
+	"thomson#nucleus": [],
+	"nucleus#bohr": [],
+	"bohr#nucleus": [
+		"considered electrons as particles moving around the",
+		"model represent electrons around the central",
+		"propose that electrons move around the"
+	],
+	"nucleus#lightning": [],
+	"lightning#nucleus": [],
+	"nucleus#jj thomson": [],
+	"jj thomson#nucleus": [],
+	"nucleus#protons": [
+		"not disintegrate in spite of repulsion among the",
+		"tend to have more neutrons than",
+		"with"
+	],
+	"protons#nucleus": [
+		"and neutrons stay together in a",
+		"in the",
+		"not fly apart in",
+		"stay together in the",
+		"stick together in a"
+	],
+	"nucleus#quantum mechanical model": [],
+	"quantum mechanical model#nucleus": [],
+	"nucleus#j.j thomson": [],
+	"j.j thomson#nucleus": [],
+	"nucleus#energy level": [],
+	"energy level#nucleus": [],
+	"boats#barnacles": [
+		"get"
+	],
+	"barnacles#boats": [
+		"attach to",
+		"damage",
+		"destroy",
+		"stick to"
+	],
+	"boats#spiders": [],
+	"spiders#boats": [
+		"get on",
+		"like"
+	],
+	"boats#whales not": [],
+	"whales not#boats": [
+		"hit"
+	],
+	"boats#whales": [
+		"affect",
+		"noise affect"
+	],
+	"whales#boats": [
+		"approach",
+		"attack",
+		"breach near",
+		"follow",
+		"hit",
+		"jump near",
+		"jump on",
+		"not hit"
+	],
+	"boats#rats": [],
+	"rats#boats": [
+		"get on"
+	],
+	"boats#roaches": [],
+	"roaches#boats": [
+		"get on"
+	],
+	"river#barnacles": [],
+	"barnacles#river": [],
+	"river#spiders": [],
+	"spiders#river": [
+		"man cross the"
+	],
+	"river#whales not": [],
+	"whales not#river": [],
+	"river#whales": [],
+	"whales#river": [
+		"swim up"
+	],
+	"river#rats": [],
+	"rats#river": [
+		"like",
+		"live near"
+	],
+	"river#roaches": [],
+	"roaches#river": [],
+	"river#good boundaries": [
+		"make"
+	],
+	"good boundaries#river": [],
+	"river#dollywood": [],
+	"dollywood#river": [],
+	"river#electricity": [
+		"generate",
+		"make"
+	],
+	"electricity#river": [
+		"like a"
+	],
+	"river#you find the": [],
+	"you find the#river": [
+		"source of a"
+	],
+	"river#it called the old and": [],
+	"it called the old and#river": [],
+	"river#land fertile": [
+		"in the ancient middle east make the",
+		"of northern plains makes the",
+		"of the northern plains make the"
+	],
+	"land fertile#river": [],
+	"river#soil fertile": [
+		"make the"
+	],
+	"soil fertile#river": [],
+	"river#netflix": [],
+	"netflix#river": [
+		"cancel virgin"
+	],
+	"river#yiruma": [],
+	"yiruma#river": [],
+	"river#estuaries": [],
+	"estuaries#river": []
 }

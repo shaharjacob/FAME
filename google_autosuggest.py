@@ -1,4 +1,5 @@
 import re
+import time
 import json
 from typing import List, Dict, Tuple
 
@@ -183,6 +184,7 @@ def get_entity_suggestions(entity: str, prop: str, plural_and_singular: bool = F
         engine = inflect.engine()
     suggestions = []
     for question in ["why do", "why is", "why does", "why does it",  "why did", "how do", "how is", "how does", "how does it", "how did"]:
+        time.sleep(1) # google policy
         model = GoogleAutoSuggestOneEntity(question, entity, prop)
         suggestions.extend(model.suggestinos)
         if plural_and_singular:
