@@ -138,26 +138,26 @@ mapping:
       score: 9.019
     ignore: False
   
-  # - input:
-  #     base: [cars, road, wheels]
-  #     target: [boats, river]
-  #     depth:
-  #       dfs: 2
-  #       beam: 20
-  #   output:
-  #     mapping:
-  #       - cars --> boats
-  #       - road --> river
-  #       - wheels --> anchors
-  #     relations: 
-  #       dfs:
-  #         - [[cars, road], [boats, river]]
-  #         - [[cars, wheels], [boats, anchors]]
-  #       beam:
-  #         - [[cars, road], [boats, river]]
-  #         - [[cars, wheels], [boats, anchors]]
-  #     score: 8.986
-  #   ignore: False
+  - input:
+      base: [cars, road, wheels]
+      target: [boats, river]
+      depth:
+        dfs: 2
+        beam: 20
+    output:
+      mapping:
+        - cars --> boats
+        - road --> river
+        - wheels --> anchors
+      relations: 
+        dfs:
+          - [[cars, road], [boats, river]]
+          - [[cars, wheels], [boats, anchors]]
+        beam:
+          - [[cars, road], [boats, river]]
+          - [[cars, wheels], [boats, anchors]]
+      score: 8.986
+    ignore: False
 
   - input:
       base: [sunscreen, sun, summer]
