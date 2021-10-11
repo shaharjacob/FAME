@@ -288,29 +288,22 @@ def update_already_mapping(b: str, t: str, B: List[str], T: List[str], indecies:
 def dfs(
     base: List[str], 
     target: List[str],
-    available_pairs: List[List[SingleMapping]],
-    sorted_results: List[Dict[str, Union[int, SingleMapping]]],
     solutions: List[Solution],
     freq: Frequencies,
-    base_already_mapping: List[str],
-    target_already_mapping: List[str],
-    actual_mapping_indecies: Dict[str, Dict[str, int]],
-    relations: List[SingleMapping],
+    curr_solution: Solution,
     relations_already_seen: Set[Tuple[Tuple[Pair]]],
     mappings_already_seen: Set[Tuple[str]],
-    scores: List[float],
-    new_score: float,
     cache: dict,
     calls: List[int], # debug
     depth: int = 2):
 
     calls[0] += 1 # just to print the total recursive calls
-    if base_already_mapping:
+    if curr_solution.actual_base:
         # first we will check if this node already seen in different variation
-        relations_as_tuple = tuple([tuple(relation) for relation in sorted(relations)])
+        relations_as_tuple = tuple([tuple(relation) for relation in sorted(curr_solution.relations)])
         if relations_as_tuple in relations_already_seen:
             return
-        mapping_repr = [f"{b} --> {t}" for b, t in zip(base_already_mapping, target_already_mapping)]
+        mapping_repr = [f"{b} --> {t}" for b, t in zip(curr_solution.actual_base, curr_solution.actual_target)]
         mapping_repr_as_tuple = tuple(sorted(mapping_repr))
         if mapping_repr_as_tuple in mappings_already_seen:
             return
@@ -318,74 +311,56 @@ def dfs(
         # the following sets using only for quick exists-check.
         relations_already_seen.add(relations_as_tuple)
         mappings_already_seen.add(mapping_repr_as_tuple)
-
+        curr_solution.mapping = mapping_repr
         # new solution
         # in the end we will sort by the length and the score. So its ok to add all solutions
-        solutions.append(Solution(
-            mapping=mapping_repr,
-            relations=relations,
-            scores=scores,
-            score=round(new_score, 3),
-            actual_base=base_already_mapping,
-            actual_target=target_already_mapping,
-            actual_indecies=actual_mapping_indecies,
-            length=len(base_already_mapping),
-        ))
+        solutions.append(curr_solution)
 
     # base case for recursive function. there is no more available pairs to match (base->target)
-    if len(base_already_mapping) == min(len(base), len(target)):
+    if len(curr_solution.actual_base) == min(len(base), len(target)):
         return
 
     # we will get the top-depth pairs with the best score.
-    best_results_for_current_iteration, modified_results = get_best_pair_mapping_for_current_iteration(available_pairs, sorted_results, depth)
+    best_results_for_current_iteration, modified_results = get_best_pair_mapping_for_current_iteration(curr_solution.availables, curr_solution.sorted_results, depth)
     for result in best_results_for_current_iteration:
         # if the best score is > 0, we will update the base and target lists of the already mapping entities.
         # otherwise, if the best score is 0, we have no more mappings to do.
         if result["best_score"] > 0:
             # deepcopy is more safe when working with recursive functions
-            relations_copy = copy.deepcopy(relations)
-            relations_copy.append(result["best_mapping"])
-            scores_copy = copy.deepcopy(scores)
-            scores_copy.append(round(result["best_score"], 3))
+            solution_copy = copy.deepcopy(curr_solution)
+            solution_copy.relations.append(result["best_mapping"])
+            solution_copy.scores.append(round(result["best_score"], 3))
 
             # we will add the new mapping to the already mapping lists. They must be in the same shape.
-            # TODO: put all these in one dictionary
-            base_already_mapping_new = copy.deepcopy(base_already_mapping)
-            target_already_mapping_new = copy.deepcopy(target_already_mapping)
-            actual_mapping_indecies_new = copy.deepcopy(actual_mapping_indecies)
-
             b1, b2 = result["best_mapping"][0][0], result["best_mapping"][0][1]
             t1, t2 = result["best_mapping"][1][0], result["best_mapping"][1][1]
             score = 0
-            if b1 not in base_already_mapping_new and t1 not in target_already_mapping_new:
-                score += get_score(base_already_mapping_new, target_already_mapping_new, b1, t1, cache)
-                update_already_mapping(b1, t1, base_already_mapping_new, target_already_mapping_new, actual_mapping_indecies_new)
+            if b1 not in solution_copy.actual_base and t1 not in solution_copy.actual_target:
+                score += get_score(solution_copy.actual_base, solution_copy.actual_target, b1, t1, cache)
+                update_already_mapping(b1, t1, solution_copy.actual_base, solution_copy.actual_target, solution_copy.actual_indecies)
 
-            if b2 not in base_already_mapping_new and t2 not in target_already_mapping_new:
-                score += get_score(base_already_mapping_new, target_already_mapping_new, b2, t2, cache)
-                update_already_mapping(b2, t2, base_already_mapping_new, target_already_mapping_new, actual_mapping_indecies_new)
-
+            if b2 not in solution_copy.actual_base and t2 not in solution_copy.actual_target:
+                score += get_score(solution_copy.actual_base, solution_copy.actual_target, b2, t2, cache)
+                update_already_mapping(b2, t2, solution_copy.actual_base, solution_copy.actual_target, solution_copy.actual_indecies)
+            
+            solution_copy.score += round(score, 3)
+            
             # here we update the possible/available pairs.
             # for example, if we already map a->1, b->2, we will looking only for pairs which respect the 
             # pairs that already maps. in our example it can be one of the following:
             # (a->1, c->3) or (b->2, c->3).
-            new_available_pairs = update_paris_map(available_pairs, base_already_mapping_new, target_already_mapping_new, actual_mapping_indecies_new)
+            solution_copy.availables = update_paris_map(solution_copy.availables, solution_copy.actual_base, solution_copy.actual_target, solution_copy.actual_indecies)
+            solution_copy.length = len(solution_copy.actual_base)
+            solution_copy.sorted_results = modified_results
             
             dfs(
                 base=base, 
                 target=target,
-                available_pairs=new_available_pairs,
-                sorted_results=modified_results,
                 solutions=solutions,
                 freq=freq,
-                base_already_mapping=base_already_mapping_new,
-                target_already_mapping=target_already_mapping_new,
-                actual_mapping_indecies=actual_mapping_indecies_new,
-                relations=relations_copy,
+                curr_solution=solution_copy,
                 relations_already_seen=relations_already_seen,
                 mappings_already_seen=mappings_already_seen,
-                scores=scores_copy,
-                new_score=new_score+score,
                 cache=cache,
                 calls=calls,
                 depth=depth
@@ -655,7 +630,7 @@ def beam_search_wrapper(base: List[str],
     if verbose:
         secho(f"\nBase: {base}", fg="blue", bold=True)
         secho(f"Target: {target}\n", fg="blue", bold=True)
-        for i, solution in enumerate(all_solutions):
+        for i, solution in enumerate(all_solutions[:10]):
             if solution.score == 0:
                 break
             secho(f"#{i+1}", fg="blue", bold=True)
@@ -668,7 +643,7 @@ def mapping_wrapper(base: List[str],
                     target: List[str], 
                     suggestions: bool = True, 
                     depth: int = 2, 
-                    top_n: int = 1, 
+                    top_n: int = 10, 
                     num_of_suggestions: int = 1, 
                     verbose: bool = False, 
                     quasimodo: Quasimodo = None, 
@@ -695,20 +670,25 @@ def mapping_wrapper(base: List[str],
     cache = {}
     calls = [0]
     best_results = get_best_pair_mapping(model, freq, data_collector, available_pairs, cache)
+    initial_solution = Solution(
+                            mapping=[], 
+                            relations=[], 
+                            scores=[], 
+                            score=0, 
+                            actual_base=[], 
+                            actual_target=[], 
+                            actual_indecies={'base': {}, 'target': {}}, 
+                            length=0,
+                            sorted_results=best_results,
+                            availables=copy.deepcopy(available_pairs)
+                        )
     dfs(base=base, 
         target=target, 
-        available_pairs=available_pairs, 
-        sorted_results=best_results, 
         solutions=solutions, 
         freq=freq, 
-        base_already_mapping=[], 
-        target_already_mapping=[], 
-        actual_mapping_indecies={'base': {}, 'target': {}},
-        relations=[], 
+        curr_solution=initial_solution,
         relations_already_seen=set(), 
         mappings_already_seen=set(), 
-        scores=[], 
-        new_score=0, 
         cache=cache, 
         calls=calls, 
         depth=depth
@@ -736,7 +716,7 @@ def mapping_wrapper(base: List[str],
     if verbose:
         secho(f"\nBase: {base}", fg="blue", bold=True)
         secho(f"Target: {target}\n", fg="blue", bold=True)
-        solutions_to_print = 20 if os.environ.get('CI', False) else top_n
+        solutions_to_print = 10 if os.environ.get('CI', False) else top_n
         for i, solution in enumerate(all_solutions[:solutions_to_print]):
             secho(f"#{i+1}", fg="blue", bold=True)
             solution.print_solution()
@@ -752,6 +732,7 @@ if __name__ == "__main__":
     base = ['sun', 'planet', 'orbit', 'kepler', 'moon', 'jupiter', 'comet', 'equator', 'zodiac', 'saturn', 'venus', 'neptune', 'pluto', 'nebula', 'eccentricity', 'earth', 'radius', 'eclipse', 'astronomer', 'asteroid']
     target = ['nucleus', 'electrons', 'proton', 'neutron', 'atom', 'excitation', 'resonance', 'photon', 'dipole', 'scattering', 'valence', 'helium', 'coupling', 'decay', 'particle', 'spin', 'spectroscopy', 'hydrogen', 'phosphorylation', 'gamma']
     
-    base = base[:17]
-    target = target[:17]
-    solutions = mapping_wrapper(base, target, suggestions=False, depth=4, top_n=20, verbose=True)
+    base = base[:18]
+    target = target[:18]
+    # solutions = mapping_wrapper(base, target, suggestions=False, depth=4, top_n=20, verbose=True)
+    solutions = beam_search_wrapper(base, target, suggestions=False, N=20, verbose=True)
