@@ -14371,5 +14371,256 @@
 		"generated on a",
 		"work on",
 		"work on a"
-	]
+	],
+	"spark#water": [],
+	"water#spark": [],
+	"fire#water": [
+		"affect",
+		"ants float on",
+		"boats spray",
+		"burn on",
+		"engines fill up with",
+		"extinguisher",
+		"get bigger with",
+		"happen in",
+		"hydrants get",
+		"make",
+		"need",
+		"not burn in",
+		"planes collect",
+		"planes drop red",
+		"planes fill up with",
+		"planes pick up",
+		"produce",
+		"signs like",
+		"signs love",
+		"start on"
+	],
+	"water#fire": [
+		"and carbon dioxide gas help in extinguishing",
+		"and foam unsuitable for electrical",
+		"and hot oil cause",
+		"boils in a pot sitting over",
+		"cannot be used to put out oil",
+		"catch on",
+		"effective at putting out",
+		"effective in controlling",
+		"effective in fighting",
+		"extinguish",
+		"extinguisher put out a",
+		"heaters catch",
+		"heaters catch on",
+		"help in extinguishing",
+		"not put out a grease",
+		"not used in controlling electrical",
+		"on",
+		"prohibited to quench class d",
+		"put out",
+		"set on",
+		"stop",
+		"stronger than",
+		"tower survived the chicago",
+		"used to extinguish"
+	],
+	"kitten#dog": [
+		"like"
+	],
+	"dog#kitten": [
+		"eat",
+		"keep licking",
+		"lick"
+	],
+	"cat#dog": [
+		"attack",
+		"flu affect",
+		"flu spread in",
+		"food affect",
+		"food bad for",
+		"food harm",
+		"grieve the loss of a",
+		"hate",
+		"hiss at",
+		"lick",
+		"licking",
+		"live longer than",
+		"lovers hate",
+		"pant like a"
+	],
+	"dog#cat": [
+		"bark at",
+		"better than",
+		"chase",
+		"eat",
+		"food affect",
+		"food bad for",
+		"hate",
+		"hump",
+		"lick",
+		"love",
+		"lovers dislike",
+		"lovers hate",
+		"nibble on",
+		"run after",
+		"whine at"
+	],
+	"signal#copper": [],
+	"copper#signal": [],
+	"wire#copper": [
+		"made of",
+		"use"
+	],
+	"copper#wire": [
+		"a",
+		"a preferred choice in making electrical",
+		"made into",
+		"not used for making potentiometer",
+		"used for",
+		"used for making electric",
+		"used in",
+		"used instead of silver for electrical",
+		"used to make electric"
+	],
+	"train#steel": [],
+	"steel#train": [],
+	"track#steel": [],
+	"steel#track": [
+		"used for railway"
+	],
+	"amnesia#mind": [],
+	"mind#amnesia": [],
+	"memory#mind": [
+		"affect"
+	],
+	"mind#memory": [
+		"block",
+		"create false",
+		"map enhance",
+		"repress",
+		"search our",
+		"store"
+	],
+	"wound#pollution": [],
+	"pollution#wound": [],
+	"suture#pollution": [],
+	"pollution#suture": [],
+	"jacket#chilling": [],
+	"chilling#jacket": [],
+	"zipper#chilling": [],
+	"chilling#zipper": [],
+	"muffler#night": [],
+	"night#muffler": [],
+	"noise#night": [
+		"carry at",
+		"louder at",
+		"seem louder at",
+		"sound louder at",
+		"travel further at"
+	],
+	"night#noise": [
+		"make",
+		"vision goggles make"
+	],
+	"aspirin#childbirth": [],
+	"childbirth#aspirin": [],
+	"pain#childbirth": [],
+	"childbirth#pain": [
+		"pain differ from other types of"
+	],
+	"typewriter#anthology": [],
+	"anthology#typewriter": [],
+	"typewriter#sholes": [],
+	"sholes#typewriter": [
+		"invent the"
+	],
+	"poetry#anthology": [],
+	"anthology#poetry": [],
+	"poetry#sholes": [],
+	"sholes#poetry": [],
+	"anthology#sholes": [],
+	"sholes#anthology": [],
+	"saxophone#orchestra": [
+		"not in the"
+	],
+	"orchestra#saxophone": [],
+	"saxophone#sax": [],
+	"sax#saxophone": [],
+	"jazz#orchestra": [],
+	"orchestra#jazz": [],
+	"jazz#sax": [],
+	"sax#jazz": [],
+	"orchestra#sax": [],
+	"sax#orchestra": [],
+	"incentive#money": [],
+	"money#incentive": [
+		"an attractive",
+		"such an",
+		"such an attractive",
+		"used as a positive",
+		"used as an"
+	],
+	"deal#money": [
+		"or no deal make",
+		"websites make"
+	],
+	"money#deal": [],
+	"interest#money": [
+		"free banks make",
+		"free finance companies make",
+		"free loans make",
+		"groups get",
+		"groups raise",
+		"rate affect the three kinds of demand for",
+		"rate affect velocity of",
+		"rate the opportunity cost of holding",
+		"rates affect demand for"
+	],
+	"money#interest": [
+		"build",
+		"draw",
+		"earn",
+		"gain",
+		"grow with simple",
+		"market accounts pay",
+		"market accounts pay higher",
+		"market funds calculate",
+		"market funds pay",
+		"markets accrue",
+		"markets pay"
+	],
+	"sugar#caffeine": [
+		"free red bull have more"
+	],
+	"caffeine#sugar": [
+		"affect",
+		"affect blood",
+		"affect low blood",
+		"cause low blood",
+		"drop my blood",
+		"lower blood",
+		"raise blood"
+	],
+	"coffee#caffeine": [
+		"and tea compare for",
+		"and tea plants produce",
+		"beans get",
+		"beans have",
+		"contain",
+		"get",
+		"have",
+		"lose",
+		"make",
+		"plants produce"
+	],
+	"caffeine#coffee": [
+		"added to",
+		"get in",
+		"get into",
+		"get removed from",
+		"in",
+		"in tea compared to",
+		"in tea different than",
+		"removed from"
+	],
+	"aroma#caffeine": [],
+	"caffeine#aroma": []
 }

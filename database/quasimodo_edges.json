@@ -10336,5 +10336,155 @@
 	"boats#electricity": [
 		"have"
 	],
-	"electricity#boats": []
+	"electricity#boats": [],
+	"spark#water": [],
+	"water#spark": [],
+	"fire#water": [
+		"be better than",
+		"get with",
+		"make",
+		"put out"
+	],
+	"water#fire": [
+		"can put out",
+		"catch",
+		"kill",
+		"put out",
+		"put out chemically",
+		"stop"
+	],
+	"kitten#dog": [],
+	"dog#kitten": [
+		"kill"
+	],
+	"cat#dog": [
+		"be as loyal as",
+		"be as varied as",
+		"can",
+		"fear",
+		"get excited like",
+		"hate",
+		"hump like",
+		"learn like",
+		"listen like",
+		"understand like"
+	],
+	"dog#cat": [
+		"be better than",
+		"dislike",
+		"eat",
+		"fight",
+		"get along with",
+		"has property",
+		"hate",
+		"hump",
+		"kill",
+		"sit on"
+	],
+	"signal#copper": [],
+	"copper#signal": [],
+	"wire#copper": [
+		"be made from",
+		"be made of",
+		"be made out of",
+		"be usually made of",
+		"has property"
+	],
+	"copper#wire": [
+		"be mainly used in",
+		"be prevalent in",
+		"be used for",
+		"be used in",
+		"connect",
+		"make"
+	],
+	"train#steel": [],
+	"steel#train": [],
+	"track#steel": [],
+	"steel#track": [],
+	"amnesia#mind": [],
+	"mind#amnesia": [],
+	"memory#mind": [],
+	"mind#memory": [],
+	"wound#pollution": [],
+	"pollution#wound": [],
+	"suture#pollution": [],
+	"pollution#suture": [],
+	"jacket#chilling": [],
+	"chilling#jacket": [],
+	"zipper#chilling": [],
+	"chilling#zipper": [],
+	"muffler#night": [],
+	"night#muffler": [],
+	"noise#night": [
+		"be at",
+		"be louder at",
+		"carry at",
+		"seem at"
+	],
+	"night#noise": [],
+	"aspirin#childbirth": [],
+	"childbirth#aspirin": [],
+	"pain#childbirth": [],
+	"childbirth#pain": [],
+	"typewriter#anthology": [],
+	"anthology#typewriter": [],
+	"typewriter#sholes": [],
+	"sholes#typewriter": [],
+	"poetry#anthology": [],
+	"anthology#poetry": [],
+	"poetry#sholes": [],
+	"sholes#poetry": [],
+	"anthology#sholes": [],
+	"sholes#anthology": [],
+	"saxophone#orchestra": [
+		"be in"
+	],
+	"orchestra#saxophone": [
+		"have"
+	],
+	"saxophone#sax": [],
+	"sax#saxophone": [],
+	"jazz#orchestra": [],
+	"orchestra#jazz": [],
+	"jazz#sax": [],
+	"sax#jazz": [],
+	"orchestra#sax": [],
+	"sax#orchestra": [],
+	"incentive#money": [],
+	"money#incentive": [
+		"be used as"
+	],
+	"deal#money": [
+		"make"
+	],
+	"money#deal": [],
+	"interest#money": [
+		"affect saving",
+		"make"
+	],
+	"money#interest": [
+		"be created with",
+		"earn"
+	],
+	"sugar#caffeine": [],
+	"caffeine#sugar": [],
+	"coffee#caffeine": [
+		"get",
+		"have"
+	],
+	"caffeine#coffee": [
+		"be in",
+		"be measured in",
+		"be put in",
+		"be removed from",
+		"be separated from",
+		"be taken out of",
+		"get in",
+		"get into",
+		"get removed from",
+		"has property"
+	],
+	"aroma#caffeine": [],
+	"caffeine#aroma": []
 }

@@ -32,6 +32,7 @@ class Result:
         self.num_of_maps = 0
         self.best = 0 # the map that give maximum match with the correct mapping
         self.best_idx = -1
+        self.full_map = 0
 
 
 class Results:
@@ -40,19 +41,23 @@ class Results:
         self.correct_anywhere = 0
         self.total_maps = 0
         self.total_guesses = 0
+        self.total_full_maps_correct = 0
+        self.total_full_maps = 0
+        
     
     def update_results(self, result: Result):
         self.correct_answers += result.correct_answers
         self.correct_anywhere += result.best
         self.total_maps += result.num_of_maps
         self.total_guesses += result.num_of_guesses
+        self.total_full_maps_correct += result.full_map
 
 
-def update_result(corrent_mapping: List[str], solutions: List[Solution], result: Result):
+def update_result(correct_mapping: List[str], solutions: List[Solution], result: Result):
     for i, solution in enumerate(solutions):
         current_good = 0
         actual = sorted(solution.mapping)
-        reference = sorted(corrent_mapping)
+        reference = sorted(correct_mapping)
         for mapping in reference:
             if mapping in actual:
                 current_good += 1
@@ -62,6 +67,9 @@ def update_result(corrent_mapping: List[str], solutions: List[Solution], result:
         if i == 0:
             result.correct_answers = current_good
             result.num_of_guesses = len(actual)
+            if current_good == len(reference):
+                result.full_map = 1
+            
         
 
 
@@ -111,6 +119,7 @@ def evaluate(model_name: str, threshold: float, path: str, specify: int, freq_pa
         if solutions:
             update_result(tv["output"]["mapping"], solutions, result) 
         results.update_results(result)
+        results.total_full_maps += 1
         
         print(f'{COLORS["OKBLUE"]}Base: {tv["input"]["base"]}{COLORS["ENDC"]}')
         print(f'{COLORS["OKBLUE"]}Target: {tv["input"]["target"]}{COLORS["ENDC"]}')
@@ -121,7 +130,8 @@ def evaluate(model_name: str, threshold: float, path: str, specify: int, freq_pa
         print()
     print(f'{COLORS["OKGREEN"]}Total: {results.correct_answers}/{results.total_maps}{COLORS["ENDC"]}')
     print(f'{COLORS["OKGREEN"]}Total (anywhere): {results.correct_anywhere}/{results.total_maps}{COLORS["ENDC"]}')
-    print(f'{COLORS["OKGREEN"]}Total correct from active mapping: {results.correct_answers}/{results.total_guesses}{COLORS["ENDC"]}\n')
+    print(f'{COLORS["OKGREEN"]}Total correct from active mapping: {results.correct_answers}/{results.total_guesses}{COLORS["ENDC"]}')
+    print(f'{COLORS["OKGREEN"]}Total full mappings: {results.total_full_maps_correct}/{results.total_full_maps}{COLORS["ENDC"]}\n')
 
 
 # 'msmarco-distilbert-base-v4'            #1 - 34
