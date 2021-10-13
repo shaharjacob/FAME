@@ -14622,5 +14622,612 @@
 		"removed from"
 	],
 	"aroma#caffeine": [],
-	"caffeine#aroma": []
+	"caffeine#aroma": [],
+	"traveler#driver": [],
+	"driver#traveler": [],
+	"destination#driver": [],
+	"driver#destination": [],
+	"basketball#coach": [],
+	"coach#basketball": [
+		"call timeouts in"
+	],
+	"hoop#coach": [],
+	"coach#hoop": [],
+	"basketball#point guard": [],
+	"point guard#basketball": [],
+	"hoop#point guard": [],
+	"point guard#hoop": [],
+	"traveler#bus": [],
+	"bus#traveler": [],
+	"destination#bus": [],
+	"bus#destination": [
+		"change"
+	],
+	"basketball#air": [
+		"bounce higher with more",
+		"lose",
+		"players hang in the",
+		"players jump straight up into the"
+	],
+	"air#basketball": [
+		"pressure affect the bounce of a"
+	],
+	"hoop#air": [
+		"gliders stay in the"
+	],
+	"air#hoop": [],
+	"inventor#idea": [
+		"come up with this"
+	],
+	"idea#inventor": [
+		"of glow paper came to the young"
+	],
+	"invention#idea": [
+		"of movable type help increase the spread of",
+		"of the printing press affect the dissemination of knowledge and",
+		"of the printing press contribute to the spread of renaissance",
+		"of the printing press influence the renaissance"
+	],
+	"idea#invention": [],
+	"father#mother": [
+		"better than"
+	],
+	"mother#father": [
+		"better than",
+		"differ from",
+		"dog attack the",
+		"dogs attack the",
+		"dogs growl at the",
+		"dogs protect puppies from",
+		"get custody over",
+		"keep child away"
+	],
+	"son#mother": [],
+	"mother#son": [
+		"cry after kissing the hands of his",
+		"sexually abuse a"
+	],
+	"snail#protectoin": [],
+	"protectoin#snail": [],
+	"shell#protectoin": [],
+	"protectoin#shell": [],
+	"knee#protectoin": [],
+	"protectoin#knee": [],
+	"kneepad#protectoin": [],
+	"protectoin#kneepad": [],
+	"chapter#words": [
+		"97 only two",
+		"the sky stealer emphasize the theme of the power of"
+	],
+	"words#chapter": [
+		"change occur so frequently in this"
+	],
+	"lambchop#fat": [],
+	"fat#lambchop": [],
+	"lamb#fat": [
+		"have so much"
+	],
+	"fat#lamb": [],
+	"chapter#publishing": [],
+	"publishing#chapter": [],
+	"book#publishing": [],
+	"publishing#book": [
+		"companies market",
+		"companies print",
+		"companies promote"
+	],
+	"lambchop#grill": [],
+	"grill#lambchop": [],
+	"lamb#grill": [],
+	"grill#lamb": [],
+	"basketball#steph curry": [],
+	"steph curry#basketball": [
+		"changed",
+		"changed the game of",
+		"get into",
+		"play",
+		"start playing"
+	],
+	"basketball#scouts": [],
+	"scouts#basketball": [],
+	"basketball#stephen curry": [],
+	"stephen curry#basketball": [
+		"changed",
+		"changed the game of",
+		"play",
+		"quit",
+		"shoot a",
+		"so good at",
+		"start playing"
+	],
+	"basketball#michael jordan": [],
+	"michael jordan#basketball": [
+		"changed",
+		"changed the game of",
+		"choose to play",
+		"chose",
+		"decide to play",
+		"get into",
+		"get so good at",
+		"go back to",
+		"impact the game of",
+		"learn to play",
+		"like",
+		"pickup",
+		"play",
+		"shoot a",
+		"so good at",
+		"start playing",
+		"train for",
+		"want to play"
+	],
+	"basketball#wilt chamberlain": [],
+	"wilt chamberlain#basketball": [
+		"changed",
+		"play"
+	],
+	"basketball#it so hard to": [],
+	"it so hard to#basketball": [],
+	"basketball#elgin baylor": [],
+	"elgin baylor#basketball": [
+		"changed"
+	],
+	"basketball#curry": [],
+	"curry#basketball": [
+		"changed"
+	],
+	"hoop#steph curry": [],
+	"steph curry#hoop": [],
+	"hoop#scouts": [],
+	"scouts#hoop": [],
+	"hoop#stephen curry": [],
+	"stephen curry#hoop": [],
+	"hoop#michael jordan": [],
+	"michael jordan#hoop": [],
+	"hoop#wilt chamberlain": [],
+	"wilt chamberlain#hoop": [],
+	"hoop#it so hard to": [],
+	"it so hard to#hoop": [],
+	"hoop#elgin baylor": [],
+	"elgin baylor#hoop": [],
+	"hoop#curry": [],
+	"curry#hoop": [],
+	"basketball#kobe bryant": [],
+	"kobe bryant#basketball": [
+		"change the game of",
+		"choose to play",
+		"get into",
+		"get so good at",
+		"impact",
+		"learn",
+		"like",
+		"play",
+		"select",
+		"shoot a",
+		"start playing",
+		"want to play"
+	],
+	"basketball#james naismith": [],
+	"james naismith#basketball": [
+		"create",
+		"create rules for",
+		"get the idea of",
+		"invent",
+		"invented the game of",
+		"think of"
+	],
+	"hoop#kobe bryant": [],
+	"kobe bryant#hoop": [],
+	"hoop#james naismith": [],
+	"james naismith#hoop": [],
+	"inventor#patent": [],
+	"patent#inventor": [
+		"and copyright protect the rights of an",
+		"exclusions affect african american",
+		"help",
+		"important for",
+		"laws help an",
+		"protect"
+	],
+	"invention#patent": [
+		"qualify for a"
+	],
+	"patent#invention": [
+		"protect an",
+		"related to"
+	],
+	"father#lines color and rhythm": [],
+	"lines color and rhythm#father": [],
+	"father#spotify add their": [],
+	"spotify add their#father": [],
+	"father#babies as": [],
+	"babies as#father": [],
+	"father#you never": [],
+	"you never#father": [],
+	"father#spiderman": [],
+	"spiderman#father": [],
+	"father#god sacrifice his": [],
+	"god sacrifice his#father": [],
+	"father#the father forsake his": [],
+	"the father forsake his#father": [],
+	"father#omni man kill his": [],
+	"omni man kill his#father": [],
+	"father#palpatine kill his": [],
+	"palpatine kill his#father": [],
+	"father#abraham sacrifice his": [],
+	"abraham sacrifice his#father": [],
+	"father#musicians": [],
+	"musicians#father": [],
+	"father#summer": [],
+	"summer#father": [],
+	"father#samuel adams": [],
+	"samuel adams#father": [
+		"a founding",
+		"considered a founding"
+	],
+	"father#feel to be on your": [],
+	"feel to be on your#father": [],
+	"father#shakespeare": [],
+	"shakespeare#father": [],
+	"father#artists not write their": [],
+	"artists not write their#father": [],
+	"father#rizal": [
+		"francisco de paula sanchez inspired jose"
+	],
+	"rizal#father": [],
+	"father#engineers develop and": [],
+	"engineers develop and#father": [],
+	"father#rene magritte": [],
+	"rene magritte#father": [],
+	"father#i hate my": [],
+	"i hate my#father": [
+		"child's"
+	],
+	"father#poets": [],
+	"poets#father": [
+		"address the captain as dear",
+		"describe the cremation ceremony of his"
+	],
+	"father#you password": [],
+	"you password#father": [],
+	"father#slaves": [],
+	"slaves#father": [],
+	"father#brecht": [],
+	"brecht#father": [],
+	"father#ivan the terrible kill his": [],
+	"ivan the terrible kill his#father": [],
+	"father#prudence": [
+		"blackwood hate"
+	],
+	"prudence#father": [],
+	"father#michael jackson": [],
+	"michael jackson#father": [],
+	"son#lines color and rhythm": [],
+	"lines color and rhythm#son": [],
+	"son#spotify add their": [],
+	"spotify add their#son": [],
+	"son#babies as": [],
+	"babies as#son": [],
+	"son#you never": [],
+	"you never#son": [
+		"see amy childs"
+	],
+	"son#spiderman": [],
+	"spiderman#son": [],
+	"son#god sacrifice his": [],
+	"god sacrifice his#son": [
+		"only",
+		"own"
+	],
+	"son#the father forsake his": [],
+	"the father forsake his#son": [],
+	"son#omni man kill his": [],
+	"omni man kill his#son": [],
+	"son#palpatine kill his": [],
+	"palpatine kill his#son": [
+		"own"
+	],
+	"son#abraham sacrifice his": [],
+	"abraham sacrifice his#son": [
+		"own"
+	],
+	"son#musicians": [],
+	"musicians#son": [],
+	"son#summer": [],
+	"summer#son": [],
+	"son#samuel adams": [],
+	"samuel adams#son": [],
+	"son#feel to be on your": [],
+	"feel to be on your#son": [],
+	"son#shakespeare": [],
+	"shakespeare#son": [],
+	"son#artists not write their": [],
+	"artists not write their#son": [],
+	"son#rizal": [],
+	"rizal#son": [
+		"as a"
+	],
+	"son#engineers develop and": [],
+	"engineers develop and#son": [],
+	"son#rene magritte": [],
+	"rene magritte#son": [],
+	"son#i hate my": [],
+	"i hate my#son": [
+		"12 year old",
+		"18 year old",
+		"boyfriend's",
+		"husband's",
+		"own",
+		"step",
+		"teenage"
+	],
+	"son#poets": [],
+	"poets#son": [],
+	"son#you password": [],
+	"you password#son": [],
+	"son#slaves": [],
+	"slaves#son": [],
+	"son#brecht": [],
+	"brecht#son": [],
+	"son#ivan the terrible kill his": [],
+	"ivan the terrible kill his#son": [],
+	"son#prudence": [],
+	"prudence#son": [],
+	"son#michael jackson": [],
+	"michael jackson#son": [],
+	"father#daughters": [
+		"abuse",
+		"affect their",
+		"bond with",
+		"favor their",
+		"feel about their",
+		"hate their",
+		"influence",
+		"influence his",
+		"love their",
+		"physically abuse their",
+		"protect their",
+		"sexually abuse their",
+		"show his love to his",
+		"sleep with their",
+		"spoil their"
+	],
+	"daughters#father": [
+		"fall in love with their",
+		"feel about their",
+		"hate their",
+		"look like their",
+		"looks more like their",
+		"need",
+		"need her",
+		"sleep with their"
+	],
+	"father#davido": [
+		"dmw meet"
+	],
+	"davido#father": [],
+	"father#paternity leave": [
+		"apply for",
+		"get less",
+		"need",
+		"not take"
+	],
+	"paternity leave#father": [],
+	"father#sons": [
+		"abuse their",
+		"and",
+		"feel about their",
+		"forgive the prodigal",
+		"hate",
+		"hate their",
+		"influence their",
+		"leave their",
+		"respond to the prodigal",
+		"show his great love to his",
+		"want",
+		"write letter to his"
+	],
+	"sons#father": [
+		"disrespect their",
+		"hate",
+		"hate their",
+		"look like",
+		"look like their",
+		"love their",
+		"need his",
+		"need their",
+		"show submission to the"
+	],
+	"father#valak": [],
+	"valak#father": [],
+	"father#antenatal classes": [],
+	"antenatal classes#father": [
+		"help"
+	],
+	"father#it": [],
+	"it#father": [
+		"a",
+		"call catholic priest",
+		"call priests",
+		"feel to be a",
+		"feel to become a",
+		"film like",
+		"kill gibbs",
+		"kill off dawson's",
+		"kill off gibbs",
+		"like to be a",
+		"make aang a bad",
+		"make naruto a bad",
+		"possible for twins to have different",
+		"say",
+		"say how's your",
+		"to be a"
+	],
+	"son#daughters": [],
+	"daughters#son": [],
+	"son#davido": [],
+	"davido#son": [],
+	"son#paternity leave": [],
+	"paternity leave#son": [],
+	"son#sons": [],
+	"sons#son": [],
+	"son#valak": [],
+	"valak#son": [],
+	"son#antenatal classes": [],
+	"antenatal classes#son": [],
+	"son#it": [
+		"of sam do"
+	],
+	"it#son": [
+		"cancel prodigal",
+		"change diggle's daughter to a",
+		"change homelander's",
+		"film father soldier",
+		"find john walsh's",
+		"find naya",
+		"kill chalino sanchez",
+		"know naya saved her"
+	],
+	"father#bob dylan": [],
+	"bob dylan#father": [],
+	"father#tails": [],
+	"tails#father": [],
+	"father#shadow": [],
+	"shadow#father": [],
+	"father#harlem": [],
+	"harlem#father": [],
+	"father#eugene hate his": [],
+	"eugene hate his#father": [],
+	"father#time": [
+		"leave good",
+		"make an attempt to save the cat for the second"
+	],
+	"time#father": [],
+	"father#someone kill his": [],
+	"someone kill his#father": [],
+	"father#brando": [],
+	"brando#father": [],
+	"father#songwriters": [],
+	"songwriters#father": [],
+	"father#klaus kill his": [],
+	"klaus kill his#father": [
+		"biological",
+		"own",
+		"real"
+	],
+	"father#spencer": [],
+	"spencer#father": [],
+	"father#death": [
+		"allow jesus' suffering and"
+	],
+	"death#father": [],
+	"father#u": [
+		"die in the show this is",
+		"die in this is",
+		"draw",
+		"god beget"
+	],
+	"u#father": [
+		"love your"
+	],
+	"father#mayans": [],
+	"mayans#father": [],
+	"father#itunes": [
+		"stretch my hands not on"
+	],
+	"itunes#father": [],
+	"father#brooklyn": [],
+	"brooklyn#father": [],
+	"father#child directed speech": [],
+	"child directed speech#father": [],
+	"father#for 23k on lb right now": [],
+	"for 23k on lb right now#father": [],
+	"father#the mistress": [],
+	"the mistress#father": [],
+	"father#love": [
+		"show",
+		"show their"
+	],
+	"love#father": [],
+	"father#a son kill his": [],
+	"a son kill his#father": [],
+	"father#light yagami kill his": [],
+	"light yagami kill his#father": [],
+	"father#dell": [],
+	"dell#father": [],
+	"father#kareena": [],
+	"kareena#father": [],
+	"son#bob dylan": [],
+	"bob dylan#son": [],
+	"son#tails": [
+		"goku have a"
+	],
+	"tails#son": [],
+	"son#shadow": [],
+	"shadow#son": [],
+	"son#harlem": [],
+	"harlem#son": [],
+	"son#eugene hate his": [],
+	"eugene hate his#son": [],
+	"son#time": [],
+	"time#son": [],
+	"son#someone kill his": [],
+	"someone kill his#son": [],
+	"son#brando": [],
+	"brando#son": [],
+	"son#songwriters": [],
+	"songwriters#son": [],
+	"son#klaus kill his": [],
+	"klaus kill his#son": [],
+	"son#spencer": [],
+	"spencer#son": [],
+	"son#death": [],
+	"death#son": [
+		"of a father affect a",
+		"of a mother affect a"
+	],
+	"son#u": [
+		"know in",
+		"look at the mom at the end of"
+	],
+	"u#son": [
+		"pronounce",
+		"pronounce elon musk"
+	],
+	"son#mayans": [],
+	"mayans#son": [
+		"boss kill his",
+		"kill his",
+		"leader kill his"
+	],
+	"son#itunes": [],
+	"itunes#son": [],
+	"son#brooklyn": [],
+	"brooklyn#son": [],
+	"son#child directed speech": [],
+	"child directed speech#son": [],
+	"son#for 23k on lb right now": [],
+	"for 23k on lb right now#son": [],
+	"son#the mistress": [],
+	"the mistress#son": [],
+	"son#love": [
+		"die in endless"
+	],
+	"love#son": [],
+	"son#a son kill his": [],
+	"a son kill his#son": [],
+	"son#light yagami kill his": [],
+	"light yagami kill his#son": [],
+	"son#dell": [],
+	"dell#son": [],
+	"son#kareena": [],
+	"kareena#son": [],
+	"father#quentin agree to": [],
+	"quentin agree to#father": [],
+	"father#cloud": [],
+	"cloud#father": [],
+	"son#quentin agree to": [],
+	"quentin agree to#son": [],
+	"son#cloud": [],
+	"cloud#son": []
 }

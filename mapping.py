@@ -15,7 +15,7 @@ from data_collector import DataCollector
 from sentence_embadding import SentenceEmbedding
 
 Pair = Tuple[str, str] # two entities: (b1,b2)
-SingleMapping = List[Pair] # [(b1,b2), (t1,t2)]
+SingleMatch = List[Pair] # [(b1,b2), (t1,t2)]
 
 NUM_OF_CLUSTERS_TO_CALC = 3
 EDGE_THRESHOLD = 0.2
@@ -25,15 +25,15 @@ FREQUENCY_THRESHOLD = 500
 class Solution:
     def __init__(self, 
                 mapping: List[str], 
-                relations: List[SingleMapping], 
+                relations: List[SingleMatch], 
                 scores: List[float], 
                 score: float, 
                 actual_base: List[str], 
                 actual_target: List[str], 
                 actual_indecies: Dict[str, Dict[str, int]], 
                 length: int,
-                availables: List[List[SingleMapping]] = None,
-                sorted_results: List[Dict[str, Union[int, SingleMapping]]] = None,
+                availables: List[List[SingleMatch]] = None,
+                sorted_results: List[Dict[str, Union[int, SingleMatch]]] = None,
                 ):
         self.mapping = mapping
         self.relations = relations
@@ -65,7 +65,7 @@ class Solution:
             secho(f"{score}", fg="blue", bold=True)
         print()
 
-        secho(f"Score: {self.score}", fg="blue", bold=True)
+        secho(f"Score: {round(self.score, 3)}", fg="blue", bold=True)
         print()
 
 
@@ -76,7 +76,7 @@ def get_edge_score(prop1: str, prop2: str, model: SentenceEmbedding, freq: Frequ
         return model.similarity(prop1, prop2)
     
 
-def get_all_possible_pairs_map(base: List[str], target: List[str]) -> List[List[SingleMapping]]:
+def get_all_possible_pairs_map(base: List[str], target: List[str]) -> List[List[SingleMatch]]:
     # complexity: (n choose 2) * (n choose 2) * 2
 
     base_comb = list(combinations(base, 2))
@@ -94,7 +94,7 @@ def get_all_possible_pairs_map(base: List[str], target: List[str]) -> List[List[
     return all_mapping
 
 
-def check_if_valid(first_direction: SingleMapping, 
+def check_if_valid(first_direction: SingleMatch, 
                    base_already_mapping: List[str],
                    base_already_mapping_as_set: Set[str],
                    target_already_mapping: List[str],
@@ -135,12 +135,12 @@ def check_if_valid(first_direction: SingleMapping,
     return True
 
 
-def update_paris_map(pairs_map: List[List[SingleMapping]], 
+def update_paris_map(pairs_map: List[List[SingleMatch]], 
                      base_already_mapping: List[str], 
                      target_already_mapping: List[str], 
                      actual_mapping_indecies: Dict[str, Dict[str, int]]
-                     ) -> List[List[SingleMapping]]:
-    # This is List[SingleMapping] because there is two directions. But actully this is SingleMapping.
+                     ) -> List[List[SingleMatch]]:
+    # This is List[SingleMatch] because there is two directions. But actully this is SingleMatch.
     return [mapping for mapping in pairs_map 
             if check_if_valid(mapping[0], 
                               base_already_mapping, 
@@ -177,7 +177,7 @@ def get_edges_with_maximum_weight(similatiry_edges: List[Tuple[str, str, float]]
     return cluster_edges_weights
 
 
-def get_pair_mapping(model: SentenceEmbedding, data_collector: DataCollector, freq: Frequencies, mapping: SingleMapping):
+def get_pair_mapping(model: SentenceEmbedding, data_collector: DataCollector, freq: Frequencies, mapping: SingleMatch):
 
     props_edge1 = data_collector.get_entities_relations(mapping[0][0], mapping[0][1])
     props_edge2 = data_collector.get_entities_relations(mapping[1][0], mapping[1][1])
@@ -207,7 +207,7 @@ def get_pair_mapping(model: SentenceEmbedding, data_collector: DataCollector, fr
     }
 
 
-def get_best_pair_mapping_for_current_iteration(available_maps: List[List[SingleMapping]], initial_results: List[Dict[str, Union[int, SingleMapping]]], depth: int):
+def get_best_pair_mapping_for_current_iteration(available_maps: List[List[SingleMatch]], initial_results: List[Dict[str, Union[int, SingleMatch]]], depth: int):
     available_maps_flatten = set()
     for available_map in available_maps:
         available_maps_flatten.add(tuple(available_map[0]))
@@ -221,10 +221,10 @@ def get_best_pair_mapping_for_current_iteration(available_maps: List[List[Single
 def get_best_pair_mapping(model: SentenceEmbedding, 
                           freq: Frequencies, 
                           data_collector: DataCollector, 
-                          available_maps: List[List[SingleMapping]], 
+                          available_maps: List[List[SingleMatch]], 
                           cache: dict, 
                           depth: int = 0
-                        ) -> List[Dict[str, Union[int, SingleMapping]]]:
+                        ) -> List[Dict[str, Union[int, SingleMatch]]]:
     
     mappings = []
     # we will iterate over all the possible pairs mapping ((n choose 2)*(n choose 2)*2), 2->2, 3->18, 4->72
@@ -368,7 +368,7 @@ def dfs(
     
 
 def mapping_suggestions(
-    available_pairs: List[List[SingleMapping]],
+    available_pairs: List[List[SingleMatch]],
     current_solution: Solution,
     solutions: List[Solution],
     data_collector: DataCollector,
