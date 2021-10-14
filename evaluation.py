@@ -43,6 +43,7 @@ class Results:
         self.total_guesses = 0
         self.total_full_maps_correct = 0
         self.total_full_maps = 0
+        self.total_full_maps_from_active = 0
         
     
     def update_results(self, result: Result):
@@ -119,6 +120,7 @@ def evaluate(model_name: str, threshold: float, path: str, specify: int, freq_pa
         result.num_of_maps = current_maps
         if solutions:
             update_result(tv["output"]["mapping"], solutions, result) 
+            results.total_full_maps_from_active += 1
         results.update_results(result)
         results.total_full_maps += 1
         
@@ -132,7 +134,8 @@ def evaluate(model_name: str, threshold: float, path: str, specify: int, freq_pa
     print(f'{COLORS["OKGREEN"]}Total: {results.correct_answers}/{results.total_maps}{COLORS["ENDC"]}')
     print(f'{COLORS["OKGREEN"]}Total (anywhere): {results.correct_anywhere}/{results.total_maps}{COLORS["ENDC"]}')
     print(f'{COLORS["OKGREEN"]}Total correct from active mapping: {results.correct_answers}/{results.total_guesses}{COLORS["ENDC"]}')
-    print(f'{COLORS["OKGREEN"]}Total full mappings: {results.total_full_maps_correct}/{results.total_full_maps}{COLORS["ENDC"]}\n')
+    print(f'{COLORS["OKGREEN"]}Total full mappings: {results.total_full_maps_correct}/{results.total_full_maps}{COLORS["ENDC"]}')
+    print(f'{COLORS["OKGREEN"]}Total full mappings from active: {results.total_full_maps_correct}/{results.total_full_maps_from_active}{COLORS["ENDC"]}\n')
 
 
 # 'msmarco-distilbert-base-v4'            #1 - 34
