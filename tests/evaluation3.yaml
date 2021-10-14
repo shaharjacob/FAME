@@ -1,0 +1,360 @@
+mapping:
+  - input: #1 : 2/2
+      base: [answer, riddle]
+      target: [solution, problem]
+      depth: 4
+    output:
+      mapping:
+      - answer --> solution
+      - riddle --> problem
+
+  - input: #2 : 0/2
+      base: [ash, fireplace]
+      target: [soot, chimney]
+      depth: 4
+    output:
+      mapping:
+      - ash --> soot
+      - fireplace --> chimney
+
+  - input: #3 : 2/2
+      base: [aspirin, pain]
+      target: [antacid, heartburn]
+      depth: 4
+    output:
+      mapping:
+      - aspirin --> antacid
+      - pain --> heartburn
+
+  - input: #4 : 2/2
+      base: [baker, cake] 
+      target: [chef, meal]
+      depth: 4
+    output:
+      mapping:
+      - baker --> chef
+      - cake --> meal
+
+  - input: #5 : 0/2
+      base: [basket, picnic]
+      target: [lunchbox, lunch] 
+      depth: 4
+    output:
+      mapping:
+      - basket --> lunchbox
+      - picnic --> lunch
+      
+  - input: #6 : No solution found
+      base: [basketball, hoop]
+      target: [soccerball, goal]
+      depth: 4
+    output:
+      mapping:
+      - basketball --> soccerball
+      - hoop --> goal
+
+  - input: #7 : 0/2
+      base: [blindness, sight] 
+      target: [deafness, hearing]
+      depth: 4
+    output:
+      mapping:
+      - blindness --> deafness
+      - sight --> hearing
+
+  - input: #8 : No solution found
+      base: [blizzard, snowflake]
+      target: [monsoon, raindrop]
+      depth: 4
+    output:
+      mapping:
+      - blizzard --> monsoon
+      - snowflake --> raindrop
+
+  - input: #9 : 2/2
+      base: [bracelet, wrist] 
+      target: [ring, finger]
+      depth: 4
+    output:
+      mapping:
+      - bracelet --> ring
+      - wrist --> finger
+
+  - input: #10 : No solution found
+      base: [burger, bun]
+      target: [sub, roll]
+      depth: 4
+    output:
+      mapping:
+      - burger --> sub
+      - bun --> roll
+
+  - input: #11 : 2/2
+      base: [cleanser, face]
+      target: [soap, body]
+      depth: 4
+    output:
+      mapping:
+        - cleanser --> soap
+        - face --> body
+
+  - input: #12 : No solution found
+      base: [eraser, pencil]
+      target: [whiteout, pen]
+      depth: 4
+    output:
+      mapping:
+      - eraser --> whiteout
+      - pencil --> pen
+
+  - input: #13 : 2/2
+      base: [father, son]
+      target: [mother, daughter]
+      depth: 4
+    output:
+      mapping:
+      - father --> mother
+      - son --> daughter
+
+  - input: #14 : No solution found
+      base: [flock, goose]
+      target: [wolfpack, wolf]
+      depth: 4
+    output:
+      mapping:
+      - flock --> wolfpack
+      - goose --> wolf
+
+  - input: #15 : 2/2
+      base: [foresight, future] 
+      target: [hindsight, past]
+      depth: 4
+    output:
+      mapping:
+      - foresight --> hindsight
+      - future --> past
+
+  - input: #16 : 2/2
+      base: [foundation, house]
+      target: [base, structure] 
+      depth: 4
+    output:
+      mapping:
+      - foundation --> base
+      - house --> structure
+
+  - input: #17 : 2/2
+      base: [furnace, coal]
+      target: [woodstove, wood]
+      depth: 4
+    output:
+      mapping:
+      - furnace --> woodstove
+      - coal --> wood
+
+  - input: #18 : No solution found
+      base: [hoof, hoofprint]
+      target: [paw, pawprint]
+      depth: 4
+    output:
+      mapping:
+      - hoof --> paw
+      - hoofprint --> pawprint
+
+  - input: #19 : 0/2
+      base: [immunization, disease]
+      target: [vaccination, infection]
+      depth: 4
+    output:
+      mapping:
+      - immunization --> vaccination
+      - disease --> infection
+
+  - input: #20 : No solution found
+      base: [jacket, zipper]
+      target: [overcoat, button]
+      depth: 4
+    output:
+      mapping:
+      - jacket --> overcoat
+      - zipper --> button
+
+  - input: #21 : 0/2
+      base: [ketchup, tomato]
+      target: [guacamole, avocado]
+      depth: 4
+    output:
+      mapping:
+      - ketchup --> guacamole
+      - tomato --> avocado
+
+  - input: #22 : 2/2
+      base: [kitten, cat]
+      target: [puppy, dog]
+      depth: 4
+    output:
+      mapping:
+      - kitten --> puppy
+      - cat --> dog
+
+  - input: #23 : No solution found
+      base: [knee, kneepad]
+      target: [elbow, elbowpad]
+      depth: 4
+    output:
+      mapping:
+      - knee --> elbow
+      - kneepad --> elbowpad
+
+  - input: #24 : No solution found
+      base: [lambchop, lamb]
+      target: [porkchop, pig]
+      depth: 4
+    output:
+      mapping:
+      - lambchop --> porkchop
+      - lamb --> pig
+
+  - input: #25 : 2/2
+      base: [landscaper, lawn]
+      target: [gardener, garden]
+      depth: 4
+    output:
+      mapping:
+      - landscaper --> gardener
+      - lawn --> garden
+
+  - input: #26 : No solution found
+      base: [launchpad, helicopter]
+      target: [runway, airplane]
+      depth: 4
+    output:
+      mapping:
+      - launchpad --> runway
+      - helicopter --> airplane
+
+  - input: #27 : No solution found
+      base: [lawschool, lawyer]
+      target: [medschool, doctor]
+      depth: 4
+    output:
+      mapping:
+      - lawschool --> medschool
+      - lawyer --> doctor
+
+  - input: #28 : 2/2
+      base: [movie, screen]
+      target: [gameshow, television]
+      depth: 4
+    output:
+      mapping:
+      - movie --> gameshow
+      - screen --> television
+
+  - input: #29 : 2/2
+      base: [multiplication, product]
+      target: [addition, sum]
+      depth: 4
+    output:
+      mapping:
+      - multiplication --> addition
+      - product --> sum
+
+  - input: #30 : 2/2
+      base: [nose, scent]
+      target: [tongue, taste]
+      depth: 4
+    output:
+      mapping:
+      - nose --> tongue
+      - scent --> taste
+
+  - input: #31 : 0/2
+      base: [orchard, apple]
+      target: [grove, orange]
+      depth: 4
+    output:
+      mapping:
+      - orchard --> grove
+      - apple --> orange
+
+  - input: #32 : 2/2
+      base: [painting, canvas]
+      target: [drawing, paper]
+      depth: 4
+    output:
+      mapping:
+      - painting --> drawing
+      - canvas --> paper
+
+  - input: #33 : 2/2
+      base: [pen, pig]
+      target: [coop, chicken]
+      depth: 4
+    output:
+      mapping:
+      - pen --> coop
+      - pig --> chicken
+      
+  - input: #34 : No solution found
+      base: [rectangle, perimeter]
+      target: [circle, circumference]
+      depth: 4
+    output:
+      mapping:
+      - rectangle --> circle
+      - perimeter --> circumference
+
+  - input: #35 : No solution found
+      base: [revising, manuscript]
+      target: [editing, story]
+      depth: 4
+    output:
+      mapping:
+      - revising --> editing
+      - manuscript --> story
+
+  - input: #36 : 2/2
+      base: [saxophone, jazz]
+      target: [harmonica, blues]
+      depth: 4
+    output:
+      mapping:
+      - saxophone --> harmonica
+      - jazz --> blues
+
+  - input: #37 : 2/2
+      base: [sugar, coffee]
+      target: [honey, tea]
+      depth: 4
+    output:
+      mapping:
+      - sugar --> honey
+      - coffee --> tea
+
+  - input: # 38 : 2/2
+      base: [thermometer, temperature]
+      target: [barometer, pressure]
+      depth: 4
+    output:
+      mapping:
+      - thermometer --> barometer
+      - temperature --> pressure
+
+  - input: #39 : 2/2
+      base: [train, track]
+      target: [trolley, rail]
+      depth: 4
+    output:
+      mapping:
+      - train --> trolley
+      - track --> rail
+
+  - input: #40 : 2/2
+      base: [watermelon, rind]
+      target: [orange, peel]
+      depth: 4
+    output:
+      mapping:
+      - watermelon --> orange
+      - rind --> peel

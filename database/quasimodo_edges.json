@@ -10960,5 +10960,162 @@
 	"son#quentin agree to": [],
 	"quentin agree to#son": [],
 	"son#cloud": [],
-	"cloud#son": []
+	"cloud#son": [],
+	"solution#problem": [],
+	"problem#solution": [],
+	"soot#chimney": [
+		"fall down"
+	],
+	"chimney#soot": [],
+	"antacid#heartburn": [
+		"be recommended for",
+		"help",
+		"reduce",
+		"related to",
+		"stop"
+	],
+	"heartburn#antacid": [],
+	"chef#meal": [],
+	"meal#chef": [],
+	"lunchbox#lunch": [],
+	"lunch#lunchbox": [],
+	"soccerball#goal": [],
+	"goal#soccerball": [],
+	"deafness#hearing": [],
+	"hearing#deafness": [],
+	"monsoon#raindrop": [],
+	"raindrop#monsoon": [],
+	"ring#finger": [
+		"be on",
+		"get stuck on",
+		"go on",
+		"has body part",
+		"turn on"
+	],
+	"finger#ring": [
+		"be measured for",
+		"go with",
+		"swell around",
+		"turn from",
+		"turn under"
+	],
+	"sub#roll": [],
+	"roll#sub": [],
+	"whiteout#pen": [],
+	"pen#whiteout": [],
+	"mother#daughter": [
+		"be jealous of",
+		"be more critical of",
+		"control",
+		"favor sons over",
+		"hat",
+		"hate",
+		"lie to",
+		"love",
+		"pick on",
+		"turn on"
+	],
+	"daughter#mother": [
+		"be closer to",
+		"be mean to",
+		"be more closed to",
+		"compete with",
+		"dislike",
+		"fight with",
+		"hate",
+		"need",
+		"pull away from",
+		"turn on"
+	],
+	"wolfpack#wolf": [],
+	"wolf#wolfpack": [],
+	"hindsight#past": [],
+	"past#hindsight": [],
+	"base#structure": [],
+	"structure#base": [],
+	"woodstove#wood": [],
+	"wood#woodstove": [],
+	"paw#pawprint": [],
+	"pawprint#paw": [],
+	"vaccination#infection": [],
+	"infection#vaccination": [],
+	"overcoat#button": [],
+	"button#overcoat": [],
+	"guacamole#avocado": [],
+	"avocado#guacamole": [
+		"be called",
+		"feel about"
+	],
+	"puppy#dog": [
+		"be cuter than",
+		"be ok for",
+		"come out of",
+		"develop into",
+		"has property"
+	],
+	"dog#puppy": [
+		"abandon",
+		"absorb",
+		"be aggressive towards",
+		"eat",
+		"have",
+		"make",
+		"nudge"
+	],
+	"elbow#elbowpad": [],
+	"elbowpad#elbow": [],
+	"porkchop#pig": [],
+	"pig#porkchop": [],
+	"gardener#garden": [],
+	"garden#gardener": [],
+	"runway#airplane": [],
+	"airplane#runway": [],
+	"medschool#doctor": [],
+	"doctor#medschool": [],
+	"gameshow#television": [],
+	"television#gameshow": [],
+	"addition#sum": [],
+	"sum#addition": [
+		"has property"
+	],
+	"tongue#taste": [
+		"can"
+	],
+	"taste#tongue": [],
+	"grove#orange": [],
+	"orange#grove": [],
+	"drawing#paper": [],
+	"paper#drawing": [],
+	"coop#chicken": [],
+	"chicken#coop": [
+		"fly",
+		"need",
+		"stay in"
+	],
+	"circle#circumference": [],
+	"circumference#circle": [
+		"be used for"
+	],
+	"editing#story": [
+		"tell"
+	],
+	"story#editing": [],
+	"harmonica#blues": [],
+	"blues#harmonica": [],
+	"honey#tea": [
+		"be good in"
+	],
+	"tea#honey": [
+		"be with"
+	],
+	"barometer#pressure": [],
+	"pressure#barometer": [],
+	"trolley#rail": [],
+	"rail#trolley": [],
+	"orange#peel": [
+		"be individually sliced within",
+		"has property",
+		"have"
+	],
+	"peel#orange": []
 }

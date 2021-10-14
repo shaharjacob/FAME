@@ -15229,5 +15229,226 @@
 	"son#quentin agree to": [],
 	"quentin agree to#son": [],
 	"son#cloud": [],
-	"cloud#son": []
+	"cloud#son": [],
+	"solution#problem": [],
+	"problem#solution": [
+		"the"
+	],
+	"soot#chimney": [
+		"coming out of",
+		"fall down",
+		"falling down the"
+	],
+	"chimney#soot": [],
+	"antacid#heartburn": [
+		"help",
+		"help alleviate the pain of",
+		"help relieve indigestion and",
+		"recommended for",
+		"reduce",
+		"relieve",
+		"treat",
+		"work to relieve",
+		"work to treat"
+	],
+	"heartburn#antacid": [],
+	"chef#meal": [],
+	"meal#chef": [],
+	"lunchbox#lunch": [],
+	"lunch#lunchbox": [],
+	"soccerball#goal": [],
+	"goal#soccerball": [],
+	"deafness#hearing": [
+		"differ from the condition of hard of"
+	],
+	"hearing#deafness": [
+		"loss cause"
+	],
+	"monsoon#raindrop": [],
+	"raindrop#monsoon": [],
+	"ring#finger": [
+		"finger called ring",
+		"go on ring",
+		"go on the left ring",
+		"on left"
+	],
+	"finger#ring": [
+		"called",
+		"turn black from",
+		"turn black from gold",
+		"turn green from",
+		"turn green from gold"
+	],
+	"sub#roll": [],
+	"roll#sub": [],
+	"whiteout#pen": [],
+	"pen#whiteout": [],
+	"mother#daughter": [
+		"cat hiss at her",
+		"hate",
+		"hate her",
+		"hate their",
+		"hate their eldest",
+		"in the ring kill her",
+		"perceive her",
+		"reject her",
+		"sexually abused her",
+		"treat her 3"
+	],
+	"daughter#mother": [
+		"described her",
+		"hate their",
+		"in laws hate their",
+		"kill mother in i am",
+		"leave",
+		"pull away from their"
+	],
+	"wolfpack#wolf": [],
+	"wolf#wolfpack": [],
+	"hindsight#past": [],
+	"past#hindsight": [],
+	"base#structure": [
+		"pairing affect",
+		"pairing important in dna"
+	],
+	"structure#base": [],
+	"woodstove#wood": [],
+	"wood#woodstove": [],
+	"paw#pawprint": [],
+	"pawprint#paw": [],
+	"vaccination#infection": [
+		"break the chain of",
+		"different from a naturally acquired",
+		"prevent spread of",
+		"protect a human from having an",
+		"protect us from viral"
+	],
+	"infection#vaccination": [],
+	"overcoat#button": [],
+	"button#overcoat": [],
+	"guacamole#avocado": [],
+	"avocado#guacamole": [
+		"called",
+		"dip called"
+	],
+	"puppy#dog": [
+		"a",
+		"bark at older",
+		"bark at other",
+		"barking at other",
+		"jump on older",
+		"mills affect",
+		"mills breed",
+		"mills kill their",
+		"mills sell their",
+		"mills treat their",
+		"sit on my other"
+	],
+	"dog#puppy": [
+		"attack",
+		"bite",
+		"breeders name the",
+		"breeders ship",
+		"carry",
+		"chase their tails",
+		"deliver",
+		"drool when they meet a",
+		"eat",
+		"eat their",
+		"get",
+		"give birth to a",
+		"growl at",
+		"have",
+		"have more than one",
+		"moms eat their",
+		"moms kill their",
+		"move",
+		"only have one",
+		"react to a new",
+		"reject one"
+	],
+	"elbow#elbowpad": [],
+	"elbowpad#elbow": [],
+	"porkchop#pig": [],
+	"pig#porkchop": [],
+	"gardener#garden": [
+		"leave better homes and",
+		"put forks in the"
+	],
+	"garden#gardener": [],
+	"runway#airplane": [],
+	"airplane#runway": [
+		"land on",
+		"need a",
+		"use"
+	],
+	"medschool#doctor": [],
+	"doctor#medschool": [],
+	"gameshow#television": [],
+	"television#gameshow": [],
+	"addition#sum": [
+		"called"
+	],
+	"sum#addition": [
+		"4x3\u22125x+6 demonstrate the closure of polynomials under"
+	],
+	"tongue#taste": [
+		"affect",
+		"detect different",
+		"detect the sensation of",
+		"help in identifying different",
+		"help us to",
+		"loses",
+		"lost",
+		"more sensitive to bitter and sour",
+		"recognise different",
+		"recognize different"
+	],
+	"taste#tongue": [],
+	"grove#orange": [],
+	"orange#grove": [],
+	"drawing#paper": [],
+	"paper#drawing": [],
+	"coop#chicken": [],
+	"chicken#coop": [
+		"fly the",
+		"know to go back in the",
+		"lay eggs outside the",
+		"need a",
+		"not leave the",
+		"out of the",
+		"sleep in a",
+		"sleep on top of the",
+		"stop going in"
+	],
+	"circle#circumference": [],
+	"circumference#circle": [
+		"of",
+		"of a"
+	],
+	"editing#story": [],
+	"story#editing": [],
+	"harmonica#blues": [],
+	"blues#harmonica": [],
+	"honey#tea": [
+		"good in"
+	],
+	"tea#honey": [],
+	"barometer#pressure": [
+		"compare with air",
+		"measure",
+		"measure air",
+		"relate to air",
+		"used to measure air",
+		"used to measure atmospheric"
+	],
+	"pressure#barometer": [],
+	"trolley#rail": [],
+	"rail#trolley": [],
+	"orange#peel": [
+		"so easy to"
+	],
+	"peel#orange": [
+		"an"
+	]
 }

@@ -90,6 +90,7 @@ def evaluate(model_name: str, threshold: float, path: str, specify: int, freq_pa
             solutions = beam_search_wrapper(
                                             base=tv["input"]["base"], 
                                             target=tv["input"]["target"], 
+                                            suggestions=False, 
                                             N=20, 
                                             verbose=True, 
                                             quasimodo=quasimodo, 

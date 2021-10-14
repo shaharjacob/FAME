@@ -34,3 +34,6 @@ jobs:
     - name: Evaluation 2 - dfs
       run: |
         python evaluation.py --model "msmarco-distilbert-base-v4" --threshold 500 --yaml evaluation2.yaml --freq ci.json --algo dfs
+    - name: Evaluation 3 - beam
+      run: |
+        python evaluation.py --model "msmarco-distilbert-base-v4" --threshold 500 --yaml evaluation3.yaml --freq ci.json --algo beam
