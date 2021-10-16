@@ -74,7 +74,14 @@ def update_result(correct_mapping: List[str], solutions: List[Solution], result:
         
 
 
-def evaluate(model_name: str, threshold: float, path: str, specify: int, freq_path: str, algorithm: str):
+def evaluate(model_name: str, 
+             threshold: float, 
+             path: str, 
+             specify: int, 
+             freq_path: str, 
+             algorithm: str,
+             suggestions: bool = False):
+    
     with open(TEST_FOLDER / path, 'r') as y:
         spec = yaml.load(y, Loader=yaml.SafeLoader)
     mapping_spec = spec["mapping"]
@@ -91,7 +98,7 @@ def evaluate(model_name: str, threshold: float, path: str, specify: int, freq_pa
             solutions = beam_search_wrapper(
                                             base=tv["input"]["base"], 
                                             target=tv["input"]["target"], 
-                                            suggestions=False, 
+                                            suggestions=suggestions, 
                                             N=20, 
                                             verbose=True, 
                                             quasimodo=quasimodo, 
@@ -103,7 +110,7 @@ def evaluate(model_name: str, threshold: float, path: str, specify: int, freq_pa
             solutions = mapping_wrapper(
                                             base=tv["input"]["base"], 
                                             target=tv["input"]["target"], 
-                                            suggestions=False, 
+                                            suggestions=suggestions, 
                                             depth=tv["input"]["depth"], 
                                             top_n=5, 
                                             verbose=True, 
@@ -154,14 +161,15 @@ def evaluate(model_name: str, threshold: float, path: str, specify: int, freq_pa
 @click.command()
 @click.option('-m', '--model', default="msmarco-distilbert-base-v4", type=str, help="The model for sBERT: https://huggingface.co/sentence-transformers")
 @click.option('-t', '--threshold', default=FREQUENCY_THRESHOLD, type=float, help="Threshold for % to take from json frequencies")
-@click.option('-y', '--yaml', default='evaluation.yaml', type=str, help="Path for the yaml for evaluation")
+@click.option('-y', '--yaml', default='validation.yaml', type=str, help="Path for the yaml for evaluation")
 @click.option('-c', '--comment', default="", type=str, help="Additional comment for the job")
 @click.option('-s', '--specify', default=[], type=int, multiple=True, help="Specify which entry of the yaml file to evaluate")
 @click.option('-j', '--freq', default='all_1m_filter_3_sort.json', type=str, help="Which json to use for frequency file")
 @click.option('-a', '--algo', default='dfs', type=str, help="Which algorithm to use")
-def run(model, threshold, yaml, comment, specify, freq, algo):
+@click.option('-g', '--suggestinos', is_flag=True, help="Suggest entities if missing")
+def run(model, threshold, yaml, comment, specify, freq, algo, suggestinos):
     torch.cuda.empty_cache()
-    evaluate(model, threshold, yaml, list(specify), freq, algo)
+    evaluate(model, threshold, yaml, list(specify), freq, algo, suggestinos)
 
 if __name__ == '__main__':
     # os.environ['CI'] = 'true'

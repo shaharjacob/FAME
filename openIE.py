@@ -17,14 +17,85 @@ def read_page(entity1: str, entity2: str, page: int = 0) -> str:
         return ""
 
 
-def entities_relations_wrapper(entity1: str, entity2: str, n: int = 10) -> List[str]:
+def entities_relations_wrapper(entity1: str, 
+                               entity2: str, 
+                               n: int = 10, 
+                               full_search: bool = False
+                               ) -> List[str]:
+    if full_search and n < 20:
+        secho(f"[WARNING] Page has at most 20 lines, but you asked for ({n}) with full scan.", fg="yellow", bold=True)
     relations = []
-    get_entities_relations(relations, entity1, entity2, n=n)
-    return list(set(relations))
+    get_entities_relations(relations, entity1, entity2, n=n, full_search=full_search)
+    
+    # the following lines necessary for keep the order. 
+    # using list(set(relations)) will remove the order.
+    filtered_as_list = []
+    filtered_as_set = set() # for quick exists-check
+    for relation in relations:
+        if relation not in filtered_as_set:
+            filtered_as_set.add(relation)
+            filtered_as_list.append(relation)
+    return filtered_as_list
 
 
-def get_entities_relations(relations: List[str], entity1: str, entity2: str, current_page: int = 0, n: int = 10):
-    content = read_page(entity1, entity2)
+def get_entity_associations_wrapper(entity: str,
+                                    n: int = 10, 
+                                    full_search: bool = True
+                                    ) -> List[str]:
+
+    associations = []
+    get_entity_associations(associations, entity, n=n, full_search=full_search)
+    
+    # the following lines necessary for keep the order. 
+    # using list(set(relations)) will remove the order.
+    filtered_as_list = []
+    filtered_as_set = set() # for quick exists-check
+    for association in associations:
+        if association not in filtered_as_set:
+            filtered_as_set.add(association)
+            filtered_as_list.append(association)
+    return filtered_as_list
+
+
+def get_entity_associations(associations: List[str], 
+                            entity: str,
+                            current_page: int = 0, 
+                            n: int = 10,
+                            full_search: bool = True):
+    content = read_page(entity, "", current_page)
+    soup = BeautifulSoup(content, 'html.parser')
+    associations_parser = soup.find('div', attrs={'id': 'results-content'})
+    associations_parser = associations_parser.find('div', attrs={'class': 'tabbable tabs-left'})
+    associations_parser = associations_parser.find('ul', attrs={'class': 'nav nav-tabs'})
+    associations_parser = associations_parser.find_all('li', attrs={'class': 'hidden-phone'})
+    for association in associations_parser:
+        optional_entity = association.find('span', attrs={'class': 'title-entity'})
+        if optional_entity:
+            association_tokens = optional_entity.text.split()
+            association_tokens = [word.strip().lower() for word in association_tokens]
+            associations.append(" ".join([token for token in association_tokens if token[0] != '(' and token[-1] != ')']))
+
+        if n > 0 and len(associations) == n:
+            break
+    
+    if full_search:
+        pages = soup.find('div', attrs={'class': 'pagination'})
+        if pages:
+            lis = pages.find_all('li')
+            for li in lis:
+                if li.text.isnumeric() and int(li.text) == current_page + 1:
+                    get_entity_associations(associations, entity, current_page=current_page + 1, n=n, full_search=full_search)
+
+    
+
+def get_entities_relations(relations: List[str], 
+                           entity1: str, 
+                           entity2: str, 
+                           current_page: int = 0, 
+                           n: int = 10, 
+                           full_search: bool = False):
+    
+    content = read_page(entity1, entity2, current_page)
     soup = BeautifulSoup(content, 'html.parser')
     relations_parser = soup.find('div', attrs={'id': 'results-content'})
     relations_parser = relations_parser.find('div', attrs={'class': 'tabbable tabs-left'})
@@ -33,11 +104,19 @@ def get_entities_relations(relations: List[str], entity1: str, entity2: str, cur
     for relation in relations_parser:
         curr_relation = relation.text.split()
         relations.append(" ".join([curr_relation[i].strip().lower() for i in range(len(curr_relation) - 1)]))
+        
         if n > 0 and  len(relations) == n:
             break
-    # pages = soup.find('div', attrs={'class': 'pagination'})
-    # if pages:
-    #     lis = pages.find_all('li')
-    #     for li in lis:
-    #         if li.text.isnumeric() and int(li.text) == current_page + 1:
-    #             get_entities_relations(relations, entity1, entity2, current_page + 1)
+        
+    if full_search:
+        pages = soup.find('div', attrs={'class': 'pagination'})
+        if pages:
+            lis = pages.find_all('li')
+            for li in lis:
+                if li.text.isnumeric() and int(li.text) == current_page + 1:
+                    get_entities_relations(relations, entity1, entity2, current_page=current_page + 1, n=n, full_search=full_search)
+
+
+
+# associations = get_entity_associations_wrapper("sun")
+# print(associations)

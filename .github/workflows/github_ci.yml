@@ -30,10 +30,10 @@ jobs:
         python evaluation.py --model "msmarco-distilbert-base-v4" --threshold 500 --freq ci.json --algo dfs
     - name: Evaluation 2 - beam
       run: |
-        python evaluation.py --model "msmarco-distilbert-base-v4" --threshold 500 --yaml evaluation2.yaml --freq ci.json --algo beam
+        python evaluation.py --model "msmarco-distilbert-base-v4" --threshold 500 --yaml green_eval_far.yaml --freq ci.json --algo beam
     - name: Evaluation 2 - dfs
       run: |
-        python evaluation.py --model "msmarco-distilbert-base-v4" --threshold 500 --yaml evaluation2.yaml --freq ci.json --algo dfs
+        python evaluation.py --model "msmarco-distilbert-base-v4" --threshold 500 --yaml green_eval_far.yaml --freq ci.json --algo dfs
     - name: Evaluation 3 - beam
       run: |
-        python evaluation.py --model "msmarco-distilbert-base-v4" --threshold 500 --yaml evaluation3.yaml --freq ci.json --algo beam
+        python evaluation.py --model "msmarco-distilbert-base-v4" --threshold 500 --yaml green_eval_near.yaml --freq ci.json --algo beam

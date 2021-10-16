@@ -32,8 +32,9 @@ class Solution:
                 actual_target: List[str], 
                 actual_indecies: Dict[str, Dict[str, int]], 
                 length: int,
+                coverage: List[int],
                 availables: List[List[SingleMatch]] = None,
-                sorted_results: List[Dict[str, Union[int, SingleMatch]]] = None,
+                sorted_results: List[Dict[str, Union[int, SingleMatch]]] = None
                 ):
         self.mapping = mapping
         self.relations = relations
@@ -46,6 +47,7 @@ class Solution:
         self.top_suggestions = []
         self.availables = availables
         self.sorted_results = sorted_results
+        self.coverage = coverage
     
     def get_actual(self, which: str):
         if which == 'actual_base':
@@ -60,12 +62,14 @@ class Solution:
         print()
 
         secho("relations", fg="blue", bold=True)
-        for relations, score in zip(self.relations, self.scores):
-            secho(f"\t{relations}   ", fg="blue", nl=False)
-            secho(f"{score}", fg="blue", bold=True)
+        for relations, score, coverage in zip(self.relations, self.scores, self.coverage):
+            secho(f"\t{relations},   ", fg="blue", nl=False)
+            secho(f"Score: {score},  ", fg="blue", bold=True, nl=False)
+            secho(f"Coverage: {coverage}", fg="blue", bold=True)
         print()
 
         secho(f"Score: {round(self.score, 3)}", fg="blue", bold=True)
+        secho(f"Coverage: {sum(self.coverage)}", fg="blue", bold=True)
         print()
 
 
@@ -207,7 +211,9 @@ def get_pair_mapping(model: SentenceEmbedding, data_collector: DataCollector, fr
     }
 
 
-def get_best_pair_mapping_for_current_iteration(available_maps: List[List[SingleMatch]], initial_results: List[Dict[str, Union[int, SingleMatch]]], depth: int):
+def get_best_pair_mapping_for_current_iteration(available_maps: List[List[SingleMatch]], 
+                                                initial_results: List[Dict[str, Union[int, SingleMatch]]], 
+                                                depth: int):
     available_maps_flatten = set()
     for available_map in available_maps:
         available_maps_flatten.add(tuple(available_map[0]))
@@ -236,6 +242,7 @@ def get_best_pair_mapping(model: SentenceEmbedding,
         # for the mapping earth->electrons, sun->nucleus , we will calculate: 
         # earth .* sun, electrons .* nucleus AND sun .* earth, nucleus .* electrons
         mapping_score = 0
+        coverage = 0
         for direction in mapping:
             b1, b2 = direction[0][0], direction[0][1]
             t1, t2 = direction[1][0], direction[1][1]
@@ -262,15 +269,24 @@ def get_best_pair_mapping(model: SentenceEmbedding,
             
             # score is just the sum of all the edges (edges between clusters)
             mapping_score += round(sum([edge[2] for edge in edges[:NUM_OF_CLUSTERS_TO_CALC] if edge[2] > EDGE_THRESHOLD]), 3)
+            
+            # coverage messure
+            coverage += min(len(props_edge1), len(props_edge2))
 
-        mappings.append((mapping[0], mapping_score))
+        mappings.append((mapping[0], mapping_score, coverage))
         cache[((mapping[0][0][0], mapping[0][0][1]),(mapping[0][1][0], mapping[0][1][1]))] = mapping_score
         cache[((mapping[1][0][0], mapping[1][0][1]),(mapping[1][1][0], mapping[1][1][1]))] = mapping_score
 
     mappings = sorted(mappings, key=lambda x: x[1], reverse=True)
     if depth > 0:
         mappings = mappings[:depth]
-    return [{"best_mapping": mapping[0], "best_score": mapping[1]} for mapping in mappings]
+    return [
+        {
+            "best_mapping": mapping[0], 
+            "best_score": mapping[1],
+            "coverage": mapping[2],
+        } 
+        for mapping in mappings]
 
 
 def get_score(base: List[str], target: List[str], base_entity: str, target_entity: str, cache: dict) -> float:
@@ -330,6 +346,7 @@ def dfs(
             solution_copy = copy.deepcopy(curr_solution)
             solution_copy.relations.append(result["best_mapping"])
             solution_copy.scores.append(round(result["best_score"], 3))
+            solution_copy.coverage.append(result["coverage"])
 
             # we will add the new mapping to the already mapping lists. They must be in the same shape.
             b1, b2 = result["best_mapping"][0][0], result["best_mapping"][0][1]
@@ -413,6 +430,8 @@ def mapping_suggestions(
             relations.append(result["best_mapping"])
             scores_copy = copy.deepcopy(current_solution.scores)
             scores_copy.append(round(result["best_score"], 3))
+            coverage = copy.deepcopy(current_solution.coverage)
+            coverage.append(result["coverage"])
 
             solutions.append(Solution(
                 mapping=[f"{b} --> {t}" for b, t in zip(base_already_mapping_new, target_already_mapping_new)],
@@ -423,6 +442,7 @@ def mapping_suggestions(
                 actual_target=target_already_mapping_new,
                 actual_indecies=actual_mapping_indecies_new,
                 length=len(base_already_mapping_new),
+                coverage=coverage,
             ))
 
 
@@ -504,6 +524,7 @@ def beam_search(
                 relations_already_seen.add(relations_as_tuple)
 
                 solution_copy.scores.append(round(result["best_score"], 3))
+                solution_copy.coverage.append(result["coverage"])
 
                 b1, b2 = result["best_mapping"][0][0], result["best_mapping"][0][1]
                 t1, t2 = result["best_mapping"][1][0], result["best_mapping"][1][1]
@@ -593,6 +614,7 @@ def beam_search_wrapper(base: List[str],
                 actual_target=[], 
                 actual_indecies={'base': {}, 'target': {}}, 
                 length=0,
+                coverage=[],
                 availables=copy.deepcopy(available_pairs),
                 sorted_results=copy.deepcopy(best_results)
             )
@@ -679,6 +701,7 @@ def mapping_wrapper(base: List[str],
                             actual_target=[], 
                             actual_indecies={'base': {}, 'target': {}}, 
                             length=0,
+                            coverage=[],
                             sorted_results=best_results,
                             availables=copy.deepcopy(available_pairs)
                         )
