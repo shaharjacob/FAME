@@ -15670,5 +15670,104 @@
 		"help",
 		"help cool the",
 		"help the"
-	]
+	],
+	"nucleus#the salt be a better conductor of electricity": [],
+	"the salt be a better conductor of electricity#nucleus": [],
+	"nucleus#themselves": [
+		"affect the atom"
+	],
+	"themselves#nucleus": [],
+	"electrons#the salt be a better conductor of electricity": [],
+	"the salt be a better conductor of electricity#electrons": [],
+	"electrons#themselves": [
+		"arrange",
+		"distribute",
+		"interfere with"
+	],
+	"themselves#electrons": [],
+	"electrons#other organelles": [],
+	"other organelles#electrons": [],
+	"electrons#the nucleolus": [],
+	"the nucleolus#electrons": [],
+	"electrons#cell membrane": [],
+	"cell membrane#electrons": [],
+	"electrons#the cell membrane": [],
+	"the cell membrane#electrons": [],
+	"electrons#ribosomes": [
+		"microscope needed to see"
+	],
+	"ribosomes#electrons": [],
+	"nucleus#other organelles": [
+		"affect",
+		"communicate with",
+		"interact with",
+		"so much larger than the",
+		"work with"
+	],
+	"other organelles#nucleus": [],
+	"nucleus#the nucleolus": [],
+	"the nucleolus#nucleus": [
+		"help the",
+		"inside the",
+		"work with the"
+	],
+	"nucleus#cell membrane": [
+		"connected with the"
+	],
+	"cell membrane#nucleus": [
+		"compared to the",
+		"more important than the"
+	],
+	"nucleus#the cell membrane": [
+		"connected with"
+	],
+	"the cell membrane#nucleus": [
+		"compared to the",
+		"more important than the"
+	],
+	"nucleus#ribosomes": [
+		"communicate with the",
+		"control proteins are made by",
+		"make",
+		"relate to",
+		"work with"
+	],
+	"ribosomes#nucleus": [
+		"contribute to the functioning of the",
+		"exit the",
+		"help the",
+		"leave the",
+		"travel in and out of the",
+		"work with the"
+	],
+	"sun#horizon": [
+		"and moon look bigger on the",
+		"appear flat at the",
+		"bigger on the",
+		"look bigger on",
+		"look flattened near the",
+		"look slightly oval when it is near the",
+		"move on the"
+	],
+	"horizon#sun": [],
+	"earth#horizon": [],
+	"horizon#earth": [],
+	"nucleus#wires": [],
+	"wires#nucleus": [],
+	"electrons#wires": [
+		"flow through",
+		"flow through a",
+		"move along a",
+		"move in",
+		"move in copper",
+		"move through",
+		"move through a",
+		"pass through",
+		"travel in a"
+	],
+	"wires#electrons": [],
+	"electrons#rhenium": [],
+	"rhenium#electrons": [],
+	"nucleus#rhenium": [],
+	"rhenium#nucleus": []
 }

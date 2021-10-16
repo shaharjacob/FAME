@@ -11274,5 +11274,79 @@
 		"protect",
 		"reflect heat to",
 		"rotate with"
-	]
+	],
+	"nucleus#the salt be a better conductor of electricity": [],
+	"the salt be a better conductor of electricity#nucleus": [],
+	"nucleus#themselves": [],
+	"themselves#nucleus": [],
+	"electrons#the salt be a better conductor of electricity": [
+		"help"
+	],
+	"the salt be a better conductor of electricity#electrons": [],
+	"electrons#themselves": [
+		"interfere with",
+		"move by",
+		"rotate upon"
+	],
+	"themselves#electrons": [],
+	"electrons#other organelles": [],
+	"other organelles#electrons": [],
+	"electrons#the nucleolus": [],
+	"the nucleolus#electrons": [],
+	"electrons#cell membrane": [],
+	"cell membrane#electrons": [],
+	"electrons#the cell membrane": [],
+	"the cell membrane#electrons": [],
+	"electrons#ribosomes": [],
+	"ribosomes#electrons": [],
+	"nucleus#other organelles": [
+		"help"
+	],
+	"other organelles#nucleus": [],
+	"nucleus#the nucleolus": [],
+	"the nucleolus#nucleus": [],
+	"nucleus#cell membrane": [
+		"help"
+	],
+	"cell membrane#nucleus": [
+		"be more important than"
+	],
+	"nucleus#the cell membrane": [],
+	"the cell membrane#nucleus": [],
+	"nucleus#ribosomes": [
+		"relate to"
+	],
+	"ribosomes#nucleus": [
+		"be found near",
+		"get from",
+		"get out of",
+		"help",
+		"leave",
+		"move out of"
+	],
+	"sun#horizon": [
+		"be larger on",
+		"look on",
+		"look oval at"
+	],
+	"horizon#sun": [],
+	"earth#horizon": [],
+	"horizon#earth": [
+		"communicate with"
+	],
+	"nucleus#wires": [],
+	"wires#nucleus": [],
+	"electrons#wires": [
+		"flow through",
+		"move through",
+		"pass through",
+		"travel through"
+	],
+	"wires#electrons": [],
+	"electrons#rhenium": [
+		"look on"
+	],
+	"rhenium#electrons": [],
+	"nucleus#rhenium": [],
+	"rhenium#nucleus": []
 }
