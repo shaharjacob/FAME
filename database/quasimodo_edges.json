@@ -11117,5 +11117,162 @@
 		"has property",
 		"have"
 	],
-	"peel#orange": []
+	"peel#orange": [],
+	"sun#tomato": [],
+	"tomato#sun": [
+		"wilt in"
+	],
+	"earth#tomato": [],
+	"tomato#earth": [],
+	"electrons#the nucleus of an atom": [
+		"orbit"
+	],
+	"the nucleus of an atom#electrons": [],
+	"electrons#nucleus of atom": [
+		"be attracted to",
+		"be held around",
+		"fall into",
+		"go around",
+		"move around",
+		"revolve around",
+		"stay around"
+	],
+	"nucleus of atom#electrons": [],
+	"electrons#atoms nucleus": [
+		"move around"
+	],
+	"atoms nucleus#electrons": [],
+	"electrons#the nucleus": [
+		"be closer to",
+		"circle",
+		"orbit",
+		"touch"
+	],
+	"the nucleus#electrons": [],
+	"electrons#center of atom": [
+		"be attracted to"
+	],
+	"center of atom#electrons": [],
+	"nucleus#an atom": [],
+	"an atom#nucleus": [],
+	"nucleus#the nucleus of an atom": [],
+	"the nucleus of an atom#nucleus": [],
+	"nucleus#protons in nucleus": [],
+	"protons in nucleus#nucleus": [],
+	"nucleus#nucleus of atom": [],
+	"nucleus of atom#nucleus": [],
+	"nucleus#atoms nucleus": [],
+	"atoms nucleus#nucleus": [],
+	"nucleus#electromagnetic radiation": [],
+	"electromagnetic radiation#nucleus": [],
+	"nucleus#the nucleus": [],
+	"the nucleus#nucleus": [],
+	"nucleus#the nucleus of the atom": [],
+	"the nucleus of the atom#nucleus": [],
+	"nucleus#center of atom": [],
+	"center of atom#nucleus": [],
+	"nucleus#plant cell": [
+		"be important to",
+		"do in"
+	],
+	"plant cell#nucleus": [
+		"have",
+		"need"
+	],
+	"nucleus#bohr propose that electrons": [],
+	"bohr propose that electrons#nucleus": [],
+	"nucleus#living cell": [
+		"be important to"
+	],
+	"living cell#nucleus": [],
+	"nucleus#we know electrons": [],
+	"we know electrons#nucleus": [],
+	"nucleus#the wave model of electrons": [],
+	"the wave model of electrons#nucleus": [],
+	"nucleus#an electron emitted": [],
+	"an electron emitted#nucleus": [],
+	"nucleus#electrons stay in": [],
+	"electrons stay in#nucleus": [],
+	"nucleus#electrons not": [],
+	"electrons not#nucleus": [],
+	"nucleus#a beta particle emitted": [],
+	"a beta particle emitted#nucleus": [],
+	"nucleus#the electron": [],
+	"the electron#nucleus": [],
+	"nucleus#animal cell": [
+		"be important to"
+	],
+	"animal cell#nucleus": [],
+	"nucleus#an electron": [],
+	"an electron#nucleus": [],
+	"electrons#plant cell": [],
+	"plant cell#electrons": [],
+	"electrons#bohr propose that electrons": [],
+	"bohr propose that electrons#electrons": [],
+	"electrons#living cell": [],
+	"living cell#electrons": [],
+	"electrons#we know electrons": [],
+	"we know electrons#electrons": [],
+	"electrons#the wave model of electrons": [],
+	"the wave model of electrons#electrons": [],
+	"electrons#an electron emitted": [],
+	"an electron emitted#electrons": [],
+	"electrons#electrons stay in": [],
+	"electrons stay in#electrons": [],
+	"electrons#electrons not": [],
+	"electrons not#electrons": [],
+	"electrons#a beta particle emitted": [],
+	"a beta particle emitted#electrons": [],
+	"electrons#the electron": [],
+	"the electron#electrons": [],
+	"electrons#animal cell": [],
+	"animal cell#electrons": [],
+	"electrons#an electron": [],
+	"an electron#electrons": [],
+	"nucleus#nickel": [],
+	"nickel#nucleus": [],
+	"nucleus#negative end of battery": [],
+	"negative end of battery#nucleus": [],
+	"nucleus#filament of light bulb": [],
+	"filament of light bulb#nucleus": [],
+	"electrons#nickel": [
+		"fly off"
+	],
+	"nickel#electrons": [],
+	"electrons#negative end of battery": [
+		"leave"
+	],
+	"negative end of battery#electrons": [],
+	"electrons#filament of light bulb": [
+		"get to"
+	],
+	"filament of light bulb#electrons": [],
+	"electrons#the earth": [],
+	"the earth#electrons": [],
+	"nucleus#the earth": [],
+	"the earth#nucleus": [],
+	"sun#cloud": [
+		"evaporate"
+	],
+	"cloud#sun": [
+		"appear",
+		"appear behind",
+		"be behind",
+		"cover",
+		"go behind"
+	],
+	"earth#cloud": [
+		"have"
+	],
+	"cloud#earth": [
+		"affect",
+		"be above",
+		"be important to",
+		"fall to",
+		"help",
+		"move by",
+		"protect",
+		"reflect heat to",
+		"rotate with"
+	]
 }
