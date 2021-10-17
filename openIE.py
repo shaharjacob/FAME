@@ -5,8 +5,8 @@ from click import secho
 from bs4 import BeautifulSoup
 
 
-def read_page(entity1: str, entity2: str, page: int = 0) -> str:
-    url = f'https://openie.allenai.org/search/?arg1={entity1}&arg2={entity2}'
+def read_page(entity1: str, entity2: str, page: int = 0, predicate: str = "") -> str:
+    url = f'https://openie.allenai.org/search/?arg1={entity1}&rel={predicate}&arg2={entity2}'
     if page > 0:
         url = f'{url}&page={page}'
     try:
@@ -117,6 +117,47 @@ def get_entities_relations(relations: List[str],
                     get_entities_relations(relations, entity1, entity2, current_page=current_page + 1, n=n, full_search=full_search)
 
 
+def get_entity_suggestions_wrapper(entity: str,
+                                   predicate: str, 
+                                   n_largest: int = 5
+                                   ) -> List[str]:
+
+    predicate = predicate.replace('"', '')
+    entities = []
+    get_entity_suggestions(entities, entity, predicate, n_largest=n_largest)
+    
+    # the following lines necessary for keep the order. 
+    # using list(set(relations)) will remove the order.
+    filtered_as_list = []
+    filtered_as_set = set() # for quick exists-check
+    for e in entities:
+        if e not in filtered_as_set:
+            filtered_as_set.add(e)
+            filtered_as_list.append(e)
+    return filtered_as_list
+
+
+def get_entity_suggestions(entities: List[str], 
+                           entity: str, 
+                           predicate: str, 
+                           n_largest: int = 5
+                           ) -> List[str]:
+    content = read_page(entity1=entity, entity2="", predicate=predicate)
+    soup = BeautifulSoup(content, 'html.parser')
+    entities_suggestions = soup.find('div', attrs={'id': 'results-content'})
+    entities_suggestions = entities_suggestions.find('div', attrs={'class': 'tabbable tabs-left'})
+    entities_suggestions = entities_suggestions.find('ul', attrs={'class': 'nav nav-tabs'})
+    entities_suggestions = entities_suggestions.find_all('li', attrs={'class': 'hidden-phone'})
+    for entity_suggestions in entities_suggestions:
+        curr_relation = entity_suggestions.text.split()
+        entities.append(" ".join([curr_relation[i].strip().lower() for i in range(len(curr_relation) - 1)]))
+        
+        if n_largest > 0 and  len(entities) == n_largest:
+            break
+  
 
 # associations = get_entity_associations_wrapper("sun")
 # print(associations)
+
+# suggestions = get_entity_suggestions_wrapper("river", "take their hands off")
+# print(suggestions)

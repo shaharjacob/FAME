@@ -2,9 +2,11 @@ import os
 import json
 from typing import List, Dict
 
+from tqdm import tqdm
 from click import secho
 
 import utils
+import openIE
 import mapping
 import google_autosuggest
 from quasimodo import Quasimodo
@@ -23,6 +25,7 @@ class Suggestions(object):
         self.save_db = save_db
         self.google_suggestinos = utils.read_json('database/google_suggestinos.json') if save_db else {}
         self.quasimodo_suggestinos = utils.read_json('database/quasimodo_suggestinos.json') if save_db else {}
+        self.openie_suggestinos = utils.read_json('database/openie_suggestinos.json') if save_db else {}
     
 
     def get_suggestions(self):
@@ -42,11 +45,18 @@ class Suggestions(object):
             quasimodo_suggestinos = self.quasimodo.get_entity_suggestions(self.entity, self.prop, n_largest=5, plural_and_singular=True)
             self.quasimodo_suggestinos[f"{self.entity}#{self.prop}"] = quasimodo_suggestinos  
             should_save = True
+        
+        if f"{self.entity}#{self.prop}" in self.openie_suggestinos and not self.override_database:
+            openie_suggestinos = self.openie_suggestinos[f"{self.entity}#{self.prop}"]
+        else:
+            openie_suggestinos = openIE.get_entity_suggestions_wrapper(self.entity, self.prop, n_largest=5)
+            self.openie_suggestinos[f"{self.entity}#{self.prop}"] = openie_suggestinos  
+            should_save = True
 
         if should_save:
             self.save_database()
 
-        suggestions = list(set(google_suggestinos + quasimodo_suggestinos))
+        suggestions = list(set(google_suggestinos + quasimodo_suggestinos)) # + openie_suggestinos
         return [suggestion for suggestion in suggestions if suggestion not in IGNORE_SUGGESTION]
 
 
@@ -55,9 +65,16 @@ class Suggestions(object):
             json.dump(self.google_suggestinos, f1, indent='\t')
         with open('database/quasimodo_suggestinos.json', 'w') as f2:
             json.dump(self.quasimodo_suggestinos, f2, indent='\t')
+        with open('database/openie_suggestinos.json', 'w') as f3:
+            json.dump(self.openie_suggestinos, f3, indent='\t')
 
 
-def get_suggestions_for_missing_entities(data_collector: DataCollector, base_not_mapped_entity: str, base_already_mapping: List[str], target_already_mapping: List[str], verbose: bool = False) -> List[str]:
+def get_suggestions_for_missing_entities(data_collector: DataCollector, 
+                                         base_not_mapped_entity: str, 
+                                         base_already_mapping: List[str], 
+                                         target_already_mapping: List[str], 
+                                         verbose: bool = False
+                                         ) -> List[str]:
     suggests_list = []
     # we need all the relations between the entity (the one that not mapped) to the entities that already mapped (again - in the same domain)
     for idx, base_entity in enumerate(base_already_mapping):
