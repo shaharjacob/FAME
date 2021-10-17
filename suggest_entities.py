@@ -101,7 +101,7 @@ def get_suggestions_for_missing_entities(data_collector: DataCollector,
                 secho(f"    No match found!", fg="green")
             print()
 
-    return list(set(suggests_list))
+    return [suggest for suggest in list(set(suggests_list)) if len(suggest.split()) <= 2]
 
 
 def get_score_between_two_entitites(entity1: str, entity2: str, model: SentenceEmbedding = None, data_collector: DataCollector = None, freq: Frequencies = None) -> float:
