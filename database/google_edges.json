@@ -15769,5 +15769,449 @@
 	"electrons#rhenium": [],
 	"rhenium#electrons": [],
 	"nucleus#rhenium": [],
-	"rhenium#nucleus": []
+	"rhenium#nucleus": [],
+	"nucleus#alpha decay": [
+		"change in",
+		"of the parent nuclide change during"
+	],
+	"alpha decay#nucleus": [
+		"affect the",
+		"affect the mass number of a",
+		"alter the atomic number of the parent",
+		"change the"
+	],
+	"nucleus#cancer": [],
+	"cancer#nucleus": [
+		"affect the",
+		"cells have a large",
+		"cells have large",
+		"cells have multiple"
+	],
+	"nucleus#alcohol": [],
+	"alcohol#nucleus": [],
+	"nucleus#beta decay": [
+		"change in",
+		"of the parent nuclide change during"
+	],
+	"beta decay#nucleus": [
+		"affect the",
+		"affect the mass number of a",
+		"alter the atomic number of the parent",
+		"alter the mass number of the parent",
+		"change the",
+		"change the ratio of neutrons to protons in the",
+		"not change the mass number of a"
+	],
+	"nucleus#drugs": [],
+	"drugs#nucleus": [],
+	"nucleus#progeria": [],
+	"progeria#nucleus": [
+		"affect the"
+	],
+	"nucleus#electricity produced": [],
+	"electricity produced#nucleus": [],
+	"nucleus#the different sizes of subatomic particles": [],
+	"the different sizes of subatomic particles#nucleus": [],
+	"nucleus#electrostatic forces": [],
+	"electrostatic forces#nucleus": [],
+	"nucleus#milliamperage": [],
+	"milliamperage#nucleus": [],
+	"electrons#alpha decay": [],
+	"alpha decay#electrons": [],
+	"electrons#cancer": [],
+	"cancer#electrons": [],
+	"electrons#alcohol": [],
+	"alcohol#electrons": [],
+	"electrons#beta decay": [
+		"emitted in",
+		"go in"
+	],
+	"beta decay#electrons": [
+		"releases an"
+	],
+	"electrons#drugs": [],
+	"drugs#electrons": [],
+	"electrons#progeria": [],
+	"progeria#electrons": [],
+	"electrons#electricity produced": [],
+	"electricity produced#electrons": [
+		"in"
+	],
+	"electrons#the different sizes of subatomic particles": [],
+	"the different sizes of subatomic particles#electrons": [],
+	"electrons#electrostatic forces": [],
+	"electrostatic forces#electrons": [],
+	"electrons#milliamperage": [],
+	"milliamperage#electrons": [],
+	"electrons#translation happen": [],
+	"translation happen#electrons": [],
+	"electrons#mrna produced": [],
+	"mrna produced#electrons": [],
+	"electrons#the flow of charge in a metal wire rather than protons": [],
+	"the flow of charge in a metal wire rather than protons#electrons": [],
+	"electrons#dna kept": [],
+	"dna kept#electrons": [],
+	"electrons#dna located": [],
+	"dna located#electrons": [],
+	"electrons#gravitational force": [],
+	"gravitational force#electrons": [
+		"affect"
+	],
+	"electrons#the flow of charge in a metal wire": [],
+	"the flow of charge in a metal wire#electrons": [],
+	"electrons#the atomic number": [
+		"relate to"
+	],
+	"the atomic number#electrons": [
+		"equal to protons and",
+		"related to core",
+		"related to the",
+		"related to the number of",
+		"related to the number of protons and",
+		"related to the number of protons neutrons and"
+	],
+	"electrons#dna packaged": [],
+	"dna packaged#electrons": [],
+	"electrons#dna found": [],
+	"dna found#electrons": [],
+	"nucleus#translation happen": [],
+	"translation happen#nucleus": [
+		"in"
+	],
+	"nucleus#mrna produced": [],
+	"mrna produced#nucleus": [
+		"in the"
+	],
+	"nucleus#the flow of charge in a metal wire rather than protons": [],
+	"the flow of charge in a metal wire rather than protons#nucleus": [],
+	"nucleus#dna kept": [],
+	"dna kept#nucleus": [
+		"in"
+	],
+	"nucleus#dna located": [],
+	"dna located#nucleus": [
+		"in the"
+	],
+	"nucleus#gravitational force": [],
+	"gravitational force#nucleus": [],
+	"nucleus#the flow of charge in a metal wire": [],
+	"the flow of charge in a metal wire#nucleus": [],
+	"nucleus#the atomic number": [],
+	"the atomic number#nucleus": [],
+	"nucleus#dna packaged": [],
+	"dna packaged#nucleus": [
+		"in the",
+		"into a cell"
+	],
+	"nucleus#dna found": [],
+	"dna found#nucleus": [
+		"in the"
+	],
+	"electrons#in a torch": [],
+	"in a torch#electrons": [],
+	"electrons#the long strands of dna": [],
+	"the long strands of dna#electrons": [],
+	"electrons#long strands of double-helical dna": [],
+	"long strands of double-helical dna#electrons": [],
+	"electrons#in an atom": [
+		"arrange themselves",
+		"behave",
+		"give off light",
+		"move",
+		"stay"
+	],
+	"in an atom#electrons": [],
+	"electrons#you know where to": [],
+	"you know where to#electrons": [],
+	"electrons#through a vacuum": [],
+	"through a vacuum#electrons": [],
+	"electrons#in a circuit": [
+		"flow",
+		"flow from negative to positive",
+		"lose energy",
+		"move",
+		"power a light bulb",
+		"transfer energy",
+		"travel",
+		"work"
+	],
+	"in a circuit#electrons": [],
+	"electrons#a long strand of double helical dna": [],
+	"a long strand of double helical dna#electrons": [],
+	"electrons#long strands of dna": [],
+	"long strands of dna#electrons": [],
+	"electrons#around the nucleus": [
+		"behave",
+		"form a cloud",
+		"keep moving",
+		"move",
+		"orbit",
+		"revolve",
+		"revolving",
+		"spin",
+		"stay",
+		"stay in orbit"
+	],
+	"around the nucleus#electrons": [],
+	"nucleus#in a torch": [],
+	"in a torch#nucleus": [],
+	"nucleus#the long strands of dna": [],
+	"the long strands of dna#nucleus": [],
+	"nucleus#long strands of double-helical dna": [],
+	"long strands of double-helical dna#nucleus": [],
+	"nucleus#in an atom": [],
+	"in an atom#nucleus": [],
+	"nucleus#you know where to": [],
+	"you know where to#nucleus": [],
+	"nucleus#through a vacuum": [],
+	"through a vacuum#nucleus": [],
+	"nucleus#in a circuit": [],
+	"in a circuit#nucleus": [],
+	"nucleus#a long strand of double helical dna": [],
+	"a long strand of double helical dna#nucleus": [],
+	"nucleus#long strands of dna": [],
+	"long strands of dna#nucleus": [],
+	"nucleus#around the nucleus": [],
+	"around the nucleus#nucleus": [],
+	"nucleus#cytoplasm": [
+		"control protein synthesis in the",
+		"differ from",
+		"not part of the",
+		"stain darker than the"
+	],
+	"cytoplasm#nucleus": [],
+	"electrons#cytoplasm": [],
+	"cytoplasm#electrons": [],
+	"sun#a neon sign": [],
+	"a neon sign#sun": [],
+	"sun#the solar system that": [],
+	"the solar system that#sun": [],
+	"sun#shia": [],
+	"shia#sun": [],
+	"sun#shia islam": [],
+	"shia islam#sun": [],
+	"earth#a neon sign": [],
+	"a neon sign#earth": [],
+	"earth#the solar system that": [],
+	"the solar system that#earth": [],
+	"earth#shia": [],
+	"shia#earth": [],
+	"earth#shia islam": [],
+	"shia islam#earth": [],
+	"sun#roundworms": [],
+	"roundworms#sun": [],
+	"sun#space shuttle": [],
+	"space shuttle#sun": [],
+	"sun#the early atmosphere": [],
+	"the early atmosphere#sun": [],
+	"sun#other planets": [
+		"affect",
+		"affect the earth and",
+		"bigger than the",
+		"different from",
+		"look from"
+	],
+	"other planets#sun": [],
+	"sun#mars\u2019s surface and atmosphere": [],
+	"mars\u2019s surface and atmosphere#sun": [],
+	"sun#the model": [],
+	"the model#sun": [],
+	"sun#a meteors glow when it": [],
+	"a meteors glow when it#sun": [],
+	"sun#other inner planets": [],
+	"other inner planets#sun": [],
+	"sun#recorded history": [],
+	"recorded history#sun": [],
+	"sun#soil": [
+		"and wind influence the formation of"
+	],
+	"soil#sun": [
+		"need"
+	],
+	"sun#the mantle": [],
+	"the mantle#sun": [],
+	"sun#polychaetes": [],
+	"polychaetes#sun": [],
+	"earth#roundworms": [],
+	"roundworms#earth": [],
+	"earth#the early atmosphere": [],
+	"the early atmosphere#earth": [],
+	"earth#other planets": [
+		"compared to",
+		"differ from all the",
+		"different from",
+		"habitable than",
+		"have more gravity than",
+		"like",
+		"more fit for life than the",
+		"not have as dramatic changes in temperature as",
+		"resemble from",
+		"similar to",
+		"so different from"
+	],
+	"other planets#earth": [
+		"affect",
+		"compared to",
+		"have more moons than"
+	],
+	"earth#mars\u2019s surface and atmosphere": [],
+	"mars\u2019s surface and atmosphere#earth": [],
+	"earth#the model": [],
+	"the model#earth": [],
+	"earth#a meteors glow when it": [],
+	"a meteors glow when it#earth": [],
+	"earth#other inner planets": [
+		"differ from",
+		"different from the",
+		"like the",
+		"similar to the"
+	],
+	"other inner planets#earth": [],
+	"earth#recorded history": [],
+	"recorded history#earth": [],
+	"earth#soil": [],
+	"soil#earth": [
+		"affect the surface of",
+		"appear on",
+		"called the living skin of the",
+		"considered as the skin of the",
+		"differ from",
+		"form on",
+		"help in supporting life on",
+		"helps sustain life on",
+		"important for life on",
+		"incorporate all 4 spheres of the",
+		"support life on"
+	],
+	"earth#the mantle": [],
+	"the mantle#earth": [],
+	"earth#polychaetes": [],
+	"polychaetes#earth": [],
+	"sun#sita": [],
+	"sita#sun": [],
+	"sun#the sun emit ultra violet waves": [],
+	"the sun emit ultra violet waves#sun": [],
+	"sun#groundwater": [],
+	"groundwater#sun": [],
+	"sun#the sun": [
+		"become",
+		"revolve around"
+	],
+	"the sun#sun": [
+		"become the",
+		"revolve around the",
+		"the"
+	],
+	"sun#radio waves": [
+		"affect",
+		"produce"
+	],
+	"radio waves#sun": [],
+	"sun#space junk eventually": [],
+	"space junk eventually#sun": [],
+	"sun#a rocket": [],
+	"a rocket#sun": [],
+	"sun#the satellite": [],
+	"the satellite#sun": [],
+	"sun#influence climate on earth": [],
+	"influence climate on earth#sun": [],
+	"sun#things": [
+		"a",
+		"a living",
+		"bleach",
+		"fade",
+		"important to all living",
+		"important to living"
+	],
+	"things#sun": [
+		"fade in the",
+		"orbit the"
+	],
+	"sun#rockets": [],
+	"rockets#sun": [],
+	"sun#longer-wave radiation than the sun": [],
+	"longer-wave radiation than the sun#sun": [],
+	"sun#john glenn": [],
+	"john glenn#sun": [],
+	"sun#the sun emit visible light": [],
+	"the sun emit visible light#sun": [],
+	"sun#apollo 11": [],
+	"apollo 11#sun": [],
+	"sun#itself": [
+		"bears protect",
+		"fuel",
+		"power",
+		"replenish",
+		"sustain"
+	],
+	"itself#sun": [],
+	"sun#satellites": [
+		"affect"
+	],
+	"satellites#sun": [],
+	"sun#the sun at night": [],
+	"the sun at night#sun": [],
+	"sun#objects": [
+		"a luminous",
+		"considered a luminous",
+		"different from other space",
+		"heat"
+	],
+	"objects#sun": [
+		"in the milky way rotate near the",
+		"in the solar system orbit the",
+		"orbit the",
+		"revolve around the"
+	],
+	"sun#oceans stay on": [],
+	"oceans stay on#sun": [],
+	"sun#artificial satellites": [],
+	"artificial satellites#sun": [],
+	"sun#dinosaurs": [],
+	"dinosaurs#sun": [],
+	"sun#oxygen first": [],
+	"oxygen first#sun": [],
+	"sun#the international space station": [],
+	"the international space station#sun": [],
+	"sun#satellite": [
+		"affect"
+	],
+	"satellite#sun": [],
+	"sun#the moon not": [],
+	"the moon not#sun": [
+		"as bright as the",
+		"attracted towards the",
+		"orbit the",
+		"revolve around the"
+	],
+	"sun#the iss": [],
+	"the iss#sun": [],
+	"sun#water first": [],
+	"water first#sun": [],
+	"sun#long wave radiation": [],
+	"long wave radiation#sun": [],
+	"sun#a satellite": [],
+	"a satellite#sun": [],
+	"sun#around the sun": [
+		"revolve"
+	],
+	"around the sun#sun": [],
+	"sun#asteroids burn up as they": [],
+	"asteroids burn up as they#sun": [],
+	"sun#snowpiercer": [],
+	"snowpiercer#sun": [],
+	"sun#space shuttles": [],
+	"space shuttles#sun": [],
+	"sun#the sun not": [],
+	"the sun not#sun": [],
+	"sun#meteors burn up when they": [],
+	"meteors burn up when they#sun": [],
+	"sun#iss": [
+		"the color it"
+	],
+	"iss#sun": [
+		"the"
+	],
+	"sun#objects burn when they": [],
+	"objects burn when they#sun": []
 }
