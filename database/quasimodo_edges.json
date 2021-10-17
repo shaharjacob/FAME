@@ -11678,5 +11678,1458 @@
 	"sun#iss": [],
 	"iss#sun": [],
 	"sun#objects burn when they": [],
-	"objects burn when they#sun": []
+	"objects burn when they#sun": [],
+	"nucleus#anemia": [],
+	"anemia#nucleus": [],
+	"nucleus#hipaa": [],
+	"hipaa#nucleus": [],
+	"nucleus#nadh oxidized": [],
+	"nadh oxidized#nucleus": [],
+	"nucleus#arsenic": [],
+	"arsenic#nucleus": [],
+	"nucleus#hybridization": [],
+	"hybridization#nucleus": [],
+	"nucleus#atomic radius": [],
+	"atomic radius#nucleus": [],
+	"nucleus#dnp": [],
+	"dnp#nucleus": [],
+	"nucleus#gold": [],
+	"gold#nucleus": [],
+	"nucleus#quartz used": [],
+	"quartz used#nucleus": [],
+	"nucleus#silicon used": [],
+	"silicon used#nucleus": [],
+	"nucleus#rotenone": [],
+	"rotenone#nucleus": [],
+	"nucleus#gold used": [],
+	"gold used#nucleus": [],
+	"nucleus#carbon monoxide": [],
+	"carbon monoxide#nucleus": [],
+	"nucleus#rice": [],
+	"rice#nucleus": [],
+	"nucleus#cyanide": [],
+	"cyanide#nucleus": [],
+	"nucleus#chemistry used": [],
+	"chemistry used#nucleus": [],
+	"nucleus#atp produced": [],
+	"atp produced#nucleus": [],
+	"nucleus#nanotechnology used": [],
+	"nanotechnology used#nucleus": [],
+	"electron#anemia": [],
+	"anemia#electron": [],
+	"electron#alpha decay": [],
+	"alpha decay#electron": [],
+	"electron#beta decay": [],
+	"beta decay#electron": [],
+	"electron#the nucleolus": [],
+	"the nucleolus#electron": [],
+	"electron#we know electrons": [],
+	"we know electrons#electron": [],
+	"electron#hipaa": [],
+	"hipaa#electron": [],
+	"electron#nadh oxidized": [],
+	"nadh oxidized#electron": [],
+	"electron#progeria": [],
+	"progeria#electron": [],
+	"electron#alcohol": [],
+	"alcohol#electron": [],
+	"electron#electrons not": [],
+	"electrons not#electron": [],
+	"electron#arsenic": [
+		"be configuration of"
+	],
+	"arsenic#electron": [],
+	"electron#hybridization": [],
+	"hybridization#electron": [],
+	"electron#atomic radius": [
+		"affect"
+	],
+	"atomic radius#electron": [],
+	"electron#dnp": [],
+	"dnp#electron": [],
+	"electron#gold": [],
+	"gold#electron": [],
+	"electron#quartz used": [],
+	"quartz used#electron": [],
+	"electron#bohr propose that electrons": [],
+	"bohr propose that electrons#electron": [],
+	"electron#the salt be a better conductor of electricity": [
+		"help"
+	],
+	"the salt be a better conductor of electricity#electron": [],
+	"electron#silicon used": [],
+	"silicon used#electron": [],
+	"electron#rotenone": [],
+	"rotenone#electron": [],
+	"electron#gold used": [],
+	"gold used#electron": [],
+	"electron#the different sizes of subatomic particles": [],
+	"the different sizes of subatomic particles#electron": [],
+	"electron#carbon monoxide": [],
+	"carbon monoxide#electron": [],
+	"electron#electrons stay in": [],
+	"electrons stay in#electron": [],
+	"electron#cancer": [],
+	"cancer#electron": [],
+	"electron#electrostatic forces": [],
+	"electrostatic forces#electron": [],
+	"electron#rice": [],
+	"rice#electron": [],
+	"electron#drugs": [],
+	"drugs#electron": [],
+	"electron#nucleus of atom": [
+		"be attracted to",
+		"be held around",
+		"fall into",
+		"go around",
+		"move around",
+		"revolve around",
+		"stay around"
+	],
+	"nucleus of atom#electron": [],
+	"electron#cyanide": [],
+	"cyanide#electron": [],
+	"electron#the cell membrane": [],
+	"the cell membrane#electron": [],
+	"electron#chemistry used": [],
+	"chemistry used#electron": [],
+	"electron#atp produced": [],
+	"atp produced#electron": [],
+	"electron#an electron": [],
+	"sun#groundwater extraction": [],
+	"groundwater extraction#sun": [],
+	"sun#away from the sun": [],
+	"away from the sun#sun": [],
+	"sun#volcanic eruption": [],
+	"volcanic eruption#sun": [],
+	"sun#gaylord nelson": [],
+	"gaylord nelson#sun": [],
+	"sun#you think he": [],
+	"you think he#sun": [],
+	"sun#wastewater injection": [],
+	"wastewater injection#sun": [],
+	"sun#around in the solar system": [],
+	"around in the solar system#sun": [],
+	"sun#to the sun": [],
+	"to the sun#sun": [],
+	"sun#michael jackson": [],
+	"michael jackson#sun": [
+		"be allergic to",
+		"have umbrella in"
+	],
+	"sun#night": [
+		"appear at",
+		"be visible at",
+		"disappear at",
+		"go away at"
+	],
+	"night#sun": [],
+	"sun#continents move and what": [],
+	"continents move and what#sun": [],
+	"sun#melting ice caps": [],
+	"melting ice caps#sun": [],
+	"sun#day": [
+		"appear in",
+		"be visible during"
+	],
+	"day#sun": [],
+	"sun#poseidon": [],
+	"poseidon#sun": [],
+	"sun#lil dicky": [],
+	"lil dicky#sun": [],
+	"earth#groundwater extraction": [],
+	"groundwater extraction#earth": [],
+	"earth#away from the sun": [
+		"move"
+	],
+	"away from the sun#earth": [],
+	"earth#volcanic eruption": [
+		"be formed from"
+	],
+	"volcanic eruption#earth": [
+		"can effect",
+		"cool process for",
+		"help"
+	],
+	"earth#gaylord nelson": [],
+	"gaylord nelson#earth": [],
+	"earth#you think he": [],
+	"you think he#earth": [],
+	"earth#wastewater injection": [],
+	"wastewater injection#earth": [],
+	"earth#around in the solar system": [
+		"move"
+	],
+	"around in the solar system#earth": [],
+	"earth#to the sun": [
+		"move"
+	],
+	"to the sun#earth": [],
+	"earth#michael jackson": [],
+	"michael jackson#earth": [],
+	"earth#night": [
+		"be dark at",
+		"be responsible for",
+		"have",
+		"move"
+	],
+	"night#earth": [
+		"arise on",
+		"be on",
+		"happen on"
+	],
+	"earth#continents move and what": [],
+	"continents move and what#earth": [],
+	"earth#melting ice caps": [],
+	"melting ice caps#earth": [],
+	"earth#day": [
+		"be responsible for",
+		"has property",
+		"have",
+		"have in",
+		"make"
+	],
+	"day#earth": [
+		"happen on",
+		"occur on"
+	],
+	"earth#poseidon": [],
+	"poseidon#earth": [
+		"be god of"
+	],
+	"earth#lil dicky": [],
+	"lil dicky#earth": [],
+	"sun#skin darker": [
+		"make"
+	],
+	"skin darker#sun": [],
+	"sun#post malone": [],
+	"post malone#sun": [],
+	"sun#dried tomatoes": [],
+	"dried tomatoes#sun": [],
+	"sun#tea": [],
+	"tea#sun": [],
+	"sun#it d": [
+		"make"
+	],
+	"it d#sun": [],
+	"sun#ai weiwei": [],
+	"ai weiwei#sun": [],
+	"sun#us happy": [
+		"make"
+	],
+	"us happy#sun": [],
+	"sun#in little alchemy": [],
+	"in little alchemy#sun": [],
+	"sun#vitamin d": [
+		"give",
+		"make"
+	],
+	"vitamin d#sun": [
+		"be absorbed from",
+		"be from",
+		"get absorbed from"
+	],
+	"earth#skin darker": [],
+	"skin darker#earth": [],
+	"earth#post malone": [],
+	"post malone#earth": [],
+	"earth#dried tomatoes": [],
+	"dried tomatoes#earth": [],
+	"earth#tea": [],
+	"tea#earth": [],
+	"earth#it d": [],
+	"it d#earth": [],
+	"earth#ai weiwei": [],
+	"ai weiwei#earth": [],
+	"earth#us happy": [],
+	"us happy#earth": [],
+	"earth#in little alchemy": [],
+	"in little alchemy#earth": [],
+	"earth#vitamin d": [],
+	"vitamin d#earth": [],
+	"nucleus#wave": [],
+	"wave#nucleus": [],
+	"electrons#wave": [
+		"act like",
+		"be like",
+		"be treated as",
+		"behave as",
+		"behave like",
+		"can be",
+		"can behave like",
+		"has property",
+		"move like",
+		"travel in"
+	],
+	"wave#electrons": [],
+	"sun#the densest of the three": [],
+	"the densest of the three#sun": [],
+	"sun#like a magnet": [],
+	"like a magnet#sun": [],
+	"sun#a globe a": [],
+	"a globe a#sun": [],
+	"sun#the life": [],
+	"the life#sun": [],
+	"sun#like a giant magnet": [],
+	"like a giant magnet#sun": [],
+	"sun#a globe the most accurate": [],
+	"a globe the most accurate#sun": [],
+	"sun#island": [],
+	"island#sun": [
+		"be after"
+	],
+	"sun#the hikers": [],
+	"the hikers#sun": [],
+	"sun#living organism": [],
+	"living organism#sun": [],
+	"sun#jigsaw puzzle": [],
+	"jigsaw puzzle#sun": [],
+	"earth#orange": [
+		"be like",
+		"has color"
+	],
+	"orange#earth": [],
+	"earth#the densest of the three": [
+		"can be"
+	],
+	"the densest of the three#earth": [],
+	"earth#like a magnet": [
+		"behave",
+		"has property"
+	],
+	"like a magnet#earth": [],
+	"earth#a globe a": [],
+	"a globe a#earth": [],
+	"earth#the life": [],
+	"the life#earth": [],
+	"earth#like a giant magnet": [
+		"behave"
+	],
+	"like a giant magnet#earth": [],
+	"earth#a globe the most accurate": [],
+	"a globe the most accurate#earth": [],
+	"earth#island": [
+		"be compared with",
+		"be like"
+	],
+	"island#earth": [
+		"be important to"
+	],
+	"earth#the hikers": [],
+	"the hikers#earth": [],
+	"earth#living organism": [
+		"be like"
+	],
+	"living organism#earth": [],
+	"earth#jigsaw puzzle": [
+		"be like"
+	],
+	"jigsaw puzzle#earth": [],
+	"sun#ozone": [
+		"has property"
+	],
+	"ozone#sun": [
+		"interact with"
+	],
+	"sun#plants": [
+		"be important to"
+	],
+	"plants#sun": [
+		"absorb energy from",
+		"face",
+		"follow",
+		"grow towards",
+		"move towards",
+		"need",
+		"need energy from",
+		"tilt toward",
+		"turn away from",
+		"use energy from"
+	],
+	"earth#ozone": [],
+	"ozone#earth": [
+		"be bad for",
+		"be good for",
+		"be important to",
+		"help"
+	],
+	"earth#plants": [
+		"have"
+	],
+	"plants#earth": [
+		"adapt on",
+		"be important in",
+		"be important on",
+		"be important to",
+		"be lungs of",
+		"change",
+		"help",
+		"save"
+	],
+	"nucleus#wire": [],
+	"wire#nucleus": [],
+	"electrons#wire": [
+		"flow through",
+		"move through",
+		"pass through",
+		"travel through"
+	],
+	"wire#electrons": [],
+	"sun#current": [],
+	"current#sun": [],
+	"sun#matter and energy": [],
+	"matter and energy#sun": [],
+	"sun#seismic waves refract as they": [],
+	"seismic waves refract as they#sun": [],
+	"sun#seismic waves bend as they": [],
+	"seismic waves bend as they#sun": [],
+	"sun#carbon": [],
+	"carbon#sun": [],
+	"sun#seismic waves": [],
+	"seismic waves#sun": [],
+	"sun#p waves": [],
+	"p waves#sun": [],
+	"sun#waves": [],
+	"waves#sun": [],
+	"earth#current": [
+		"has time"
+	],
+	"current#earth": [
+		"influence life on"
+	],
+	"earth#matter and energy": [],
+	"matter and energy#earth": [],
+	"earth#seismic waves refract as they": [],
+	"seismic waves refract as they#earth": [],
+	"earth#seismic waves bend as they": [],
+	"seismic waves bend as they#earth": [],
+	"earth#carbon": [
+		"has property"
+	],
+	"carbon#earth": [
+		"be needed in",
+		"be stored on",
+		"enter",
+		"locked inside"
+	],
+	"earth#seismic waves": [],
+	"seismic waves#earth": [],
+	"earth#p waves": [],
+	"p waves#earth": [],
+	"earth#waves": [],
+	"waves#earth": [],
+	"cells#energy": [
+		"create",
+		"get",
+		"harvest",
+		"make",
+		"need",
+		"obtain",
+		"release",
+		"use",
+		"use glucose directly for",
+		"withdraw"
+	],
+	"energy#cells": [
+		"be carried around",
+		"be important in",
+		"be important to",
+		"be made in",
+		"be obtained by",
+		"be produced in",
+		"be stored in",
+		"be used in",
+		"get to",
+		"has property"
+	],
+	"cells#cytoplasm": [
+		"have",
+		"need"
+	],
+	"cytoplasm#cells": [
+		"be important component of",
+		"be important in",
+		"be in",
+		"be needed in",
+		"has property",
+		"help",
+		"relate to"
+	],
+	"cells#magnetic field": [],
+	"magnetic field#cells": [],
+	"energy#cytoplasm": [],
+	"cytoplasm#energy": [],
+	"energy#magnetic field": [],
+	"magnetic field#energy": [
+		"have"
+	],
+	"cytoplasm#magnetic field": [],
+	"magnetic field#cytoplasm": [],
+	"tomato#water": [
+		"float in",
+		"have",
+		"need"
+	],
+	"water#tomato": [],
+	"tomato#sunscreen": [],
+	"sunscreen#tomato": [],
+	"tomato#wind": [],
+	"wind#tomato": [],
+	"water#sunscreen": [],
+	"sunscreen#water": [],
+	"water#wind": [],
+	"wind#water": [
+		"be stronger over",
+		"make"
+	],
+	"sunscreen#wind": [],
+	"wind#sunscreen": [],
+	"cells#electricity": [
+		"produce"
+	],
+	"electricity#cells": [
+		"be produced from"
+	],
+	"energy#electricity": [
+		"be turned into"
+	],
+	"electricity#energy": [
+		"be",
+		"be a type of",
+		"be convenient form of",
+		"be good form of",
+		"be related to",
+		"be such useful source in",
+		"be such versatile form of",
+		"carry",
+		"give off",
+		"has property"
+	],
+	"cytoplasm#electricity": [],
+	"electricity#cytoplasm": [],
+	"water#altitude": [],
+	"altitude#water": [],
+	"pressure#altitude": [
+		"be at",
+		"decrease with",
+		"vary with"
+	],
+	"altitude#pressure": [
+		"affect",
+		"can",
+		"can affect",
+		"has property",
+		"relate to"
+	],
+	"water#force": [],
+	"force#water": [],
+	"pressure#force": [
+		"be better than",
+		"be different from",
+		"be more important than",
+		"be related",
+		"depend on",
+		"differ from",
+		"relate",
+		"vary with"
+	],
+	"force#pressure": [
+		"affect",
+		"be related to",
+		"has property"
+	],
+	"heat#increase in altitude in troposphere": [],
+	"increase in altitude in troposphere#heat": [],
+	"heat#a reaction of hydrochloric acid": [],
+	"a reaction of hydrochloric acid#heat": [],
+	"heat#equilibrium constants": [],
+	"equilibrium constants#heat": [],
+	"heat#nipples": [],
+	"nipples#heat": [
+		"expand in"
+	],
+	"heat#an exothermic reaction": [],
+	"an exothermic reaction#heat": [],
+	"heat#k": [],
+	"k#heat": [],
+	"heat#thermistor resistance": [],
+	"thermistor resistance#heat": [],
+	"heat#atmospheric pressure": [],
+	"atmospheric pressure#heat": [],
+	"heat#surface tension": [],
+	"surface tension#heat": [],
+	"heat#ksp": [],
+	"ksp#heat": [],
+	"heat#tensile strength": [],
+	"tensile strength#heat": [],
+	"heat#enthalpy": [],
+	"enthalpy#heat": [
+		"be different from",
+		"be interchanged with",
+		"be related to",
+		"relate to"
+	],
+	"heat#equilibrium constant": [],
+	"equilibrium constant#heat": [],
+	"heat#altitude": [],
+	"altitude#heat": [],
+	"heat#sublimation": [],
+	"sublimation#heat": [],
+	"heat#surface tension and viscosity": [],
+	"surface tension and viscosity#heat": [],
+	"heat#density": [
+		"affect"
+	],
+	"density#heat": [],
+	"heat#volume": [
+		"affect"
+	],
+	"volume#heat": [],
+	"heat#heart rate": [],
+	"heart rate#heat": [],
+	"heat#specific heat": [
+		"be different from"
+	],
+	"specific heat#heat": [],
+	"heat#molarity": [],
+	"molarity#heat": [],
+	"heat#the density": [],
+	"the density#heat": [],
+	"heat#reaction rates": [],
+	"reaction rates#heat": [],
+	"heat#insolation": [],
+	"insolation#heat": [],
+	"heat#the amount of dinitration": [],
+	"the amount of dinitration#heat": [],
+	"heat#height": [
+		"affect"
+	],
+	"height#heat": [],
+	"heat#depth lakes": [],
+	"depth lakes#heat": [],
+	"heat#resistivity of semiconductors": [],
+	"resistivity of semiconductors#heat": [],
+	"heat#snow": [],
+	"snow#heat": [],
+	"heat#enzyme activity": [],
+	"enzyme activity#heat": [],
+	"heat#diffusion coefficient": [],
+	"diffusion coefficient#heat": [],
+	"heat#equator high": [],
+	"equator high#heat": [],
+	"heat#ph": [],
+	"ph#heat": [],
+	"heat#water": [
+		"affect",
+		"be lost through",
+		"be transferred to",
+		"boil",
+		"create power from",
+		"has property",
+		"look like"
+	],
+	"water#heat": [
+		"absorb",
+		"be high specific important",
+		"be poor conductor of",
+		"have",
+		"hold",
+		"require energy to"
+	],
+	"heat#center of earth": [],
+	"center of earth#heat": [],
+	"heat#metals resistance": [],
+	"metals resistance#heat": [],
+	"heat#equilibrium constant only": [],
+	"equilibrium constant only#heat": [],
+	"heat#latitude": [],
+	"latitude#heat": [],
+	"heat#speed of sound": [],
+	"speed of sound#heat": [],
+	"heat#internal resistance": [],
+	"internal resistance#heat": [],
+	"heat#matter": [
+		"affect",
+		"be example of",
+		"change state",
+		"has property",
+		"have part within"
+	],
+	"matter#heat": [],
+	"heat#wind": [
+		"be measured by",
+		"can"
+	],
+	"wind#heat": [],
+	"heat#solubility of gas": [],
+	"solubility of gas#heat": [],
+	"heat#viscosity": [
+		"affect"
+	],
+	"viscosity#heat": [],
+	"heat#color": [
+		"affect"
+	],
+	"color#heat": [
+		"absorb",
+		"absorb differently",
+		"attract",
+		"reflect"
+	],
+	"heat#condensation": [],
+	"condensation#heat": [
+		"require"
+	],
+	"heat#the specific heat": [],
+	"the specific heat#heat": [],
+	"heat#kw": [],
+	"kw#heat": [],
+	"heat#evaporation": [],
+	"evaporation#heat": [
+		"relate to",
+		"remove"
+	],
+	"heat#life cycle of blowfly": [],
+	"life cycle of blowfly#heat": [],
+	"heat#energy": [
+		"be considered",
+		"be different from",
+		"be kinetic",
+		"be lowest form of",
+		"be related to",
+		"be transformed to",
+		"be turned into",
+		"has property"
+	],
+	"energy#heat": [
+		"be lost as",
+		"has property"
+	],
+	"heat#resistivity": [],
+	"resistivity#heat": [],
+	"heat#the rate of photosynthesis": [],
+	"the rate of photosynthesis#heat": [],
+	"heat#molecules": [],
+	"molecules#heat": [
+		"absorb",
+		"be related to",
+		"generate",
+		"move faster in",
+		"produce",
+		"react to"
+	],
+	"heat#kc": [],
+	"kc#heat": [],
+	"heat#vacancies": [],
+	"vacancies#heat": [],
+	"heat#internal energy only": [],
+	"internal energy only#heat": [],
+	"heat#solar cell efficiency": [],
+	"solar cell efficiency#heat": [],
+	"heat#conductivity": [],
+	"conductivity#heat": [],
+	"heat#salt": [],
+	"salt#heat": [
+		"absorb",
+		"react to"
+	],
+	"heat#solubility": [
+		"affect"
+	],
+	"solubility#heat": [],
+	"heat#luminosity": [],
+	"luminosity#heat": [],
+	"heat#greenhouse gases": [],
+	"greenhouse gases#heat": [
+		"absorb",
+		"let",
+		"reflect",
+		"retain",
+		"throw back"
+	],
+	"heat#aldol condensation": [],
+	"aldol condensation#heat": [],
+	"heat#thermal conductivity": [],
+	"thermal conductivity#heat": [],
+	"heat#humidity": [],
+	"humidity#heat": [],
+	"heat#esterification": [],
+	"esterification#heat": [],
+	"heat#dissolved oxygen concentration": [],
+	"dissolved oxygen concentration#heat": [],
+	"heat#vapour pressure": [],
+	"vapour pressure#heat": [],
+	"heat#state of matter": [
+		"be related to"
+	],
+	"state of matter#heat": [],
+	"heat#higher temperatures": [
+		"require"
+	],
+	"higher temperatures#heat": [],
+	"heat#kinetic energy": [
+		"be considered",
+		"be related to",
+		"create",
+		"has property",
+		"relate to"
+	],
+	"kinetic energy#heat": [
+		"be converted into",
+		"be converted to",
+		"be related to",
+		"be turned into",
+		"has property",
+		"relate to"
+	],
+	"heat#denature": [],
+	"denature#heat": [],
+	"heat#pressure": [
+		"be with"
+	],
+	"pressure#heat": [
+		"create"
+	],
+	"heat#osmotic pressure": [],
+	"osmotic pressure#heat": [],
+	"heat#enzymes": [],
+	"enzymes#heat": [
+		"be affected by",
+		"need",
+		"react to"
+	],
+	"heat#ph of water": [],
+	"ph of water#heat": [],
+	"heat#matter to change": [],
+	"matter to change#heat": [],
+	"heat#thermal energy": [
+		"be different from",
+		"be related to",
+		"differ from"
+	],
+	"thermal energy#heat": [
+		"be different from",
+		"be from",
+		"be related to",
+		"make",
+		"relate to"
+	],
+	"heat#the densities of most substances": [],
+	"the densities of most substances#heat": [],
+	"heat#the benedict's test": [],
+	"the benedict's test#heat": [],
+	"heat#depth": [],
+	"depth#heat": [],
+	"heat#transpiration": [
+		"affect"
+	],
+	"transpiration#heat": [],
+	"heat#density of water": [],
+	"density of water#heat": [],
+	"heat#chemisorption": [],
+	"chemisorption#heat": [],
+	"heat#elevation": [],
+	"elevation#heat": [],
+	"heat#entropy": [],
+	"entropy#heat": [
+		"has property",
+		"relate to"
+	],
+	"heat#resistance": [
+		"affect"
+	],
+	"resistance#heat": [
+		"create",
+		"produce"
+	],
+	"heat#keq": [],
+	"keq#heat": [],
+	"heat#endospore staining": [],
+	"endospore staining#heat": [],
+	"heat#physisorption and chemisorption": [],
+	"physisorption and chemisorption#heat": [],
+	"temperature#increase in altitude in troposphere": [
+		"decrease with"
+	],
+	"increase in altitude in troposphere#temperature": [],
+	"temperature#a reaction of hydrochloric acid": [
+		"can affect"
+	],
+	"a reaction of hydrochloric acid#temperature": [],
+	"temperature#equilibrium constants": [
+		"affect",
+		"change"
+	],
+	"equilibrium constants#temperature": [
+		"be affected by",
+		"be dependent on",
+		"change with",
+		"depend on",
+		"vary with"
+	],
+	"temperature#nipples": [],
+	"nipples#temperature": [
+		"change with",
+		"react to"
+	],
+	"temperature#an exothermic reaction": [],
+	"an exothermic reaction#temperature": [],
+	"temperature#k": [],
+	"k#temperature": [],
+	"temperature#thermistor resistance": [],
+	"thermistor resistance#temperature": [],
+	"temperature#atmospheric pressure": [],
+	"atmospheric pressure#temperature": [
+		"affect",
+		"be affected by",
+		"vary with"
+	],
+	"temperature#surface tension": [
+		"affect"
+	],
+	"surface tension#temperature": [
+		"be affected by",
+		"be related to",
+		"decrease with",
+		"depend on",
+		"vary with"
+	],
+	"temperature#ksp": [],
+	"ksp#temperature": [],
+	"temperature#tensile strength": [],
+	"tensile strength#temperature": [
+		"vary with"
+	],
+	"temperature#enthalpy": [],
+	"enthalpy#temperature": [
+		"be dependent on",
+		"be function of",
+		"be related to",
+		"be with",
+		"depend on",
+		"vary with"
+	],
+	"temperature#equilibrium constant": [
+		"affect",
+		"change"
+	],
+	"equilibrium constant#temperature": [
+		"be affected by",
+		"be dependent on",
+		"change with",
+		"depend on",
+		"vary with"
+	],
+	"temperature#altitude": [
+		"affect",
+		"be affected by",
+		"be lower at",
+		"be related to",
+		"decrease with",
+		"get affected by",
+		"go down with",
+		"has property",
+		"vary with"
+	],
+	"altitude#temperature": [
+		"affect",
+		"can change",
+		"relate to"
+	],
+	"temperature#sublimation": [
+		"remain during"
+	],
+	"sublimation#temperature": [],
+	"temperature#surface tension and viscosity": [],
+	"surface tension and viscosity#temperature": [],
+	"temperature#density": [
+		"affect",
+		"has property",
+		"relate to",
+		"usually affect"
+	],
+	"density#temperature": [
+		"affect",
+		"be inversely proportional to",
+		"be related to",
+		"be with",
+		"depend on",
+		"relate to",
+		"vary with"
+	],
+	"temperature#volume": [
+		"affect",
+		"relate to"
+	],
+	"volume#temperature": [
+		"affect",
+		"be affected by",
+		"be dependent on",
+		"be directly proportional to",
+		"be function of",
+		"be related to",
+		"be with",
+		"depend on",
+		"relate to",
+		"vary with"
+	],
+	"temperature#heart rate": [
+		"affect"
+	],
+	"heart rate#temperature": [
+		"be affected by"
+	],
+	"temperature#specific heat": [],
+	"specific heat#temperature": [
+		"affect",
+		"be related to",
+		"vary with"
+	],
+	"temperature#molarity": [],
+	"molarity#temperature": [
+		"be affected by",
+		"be dependent on",
+		"be related to",
+		"be with",
+		"depend on",
+		"depend upon",
+		"remain with",
+		"vary with"
+	],
+	"temperature#the density": [],
+	"the density#temperature": [],
+	"temperature#reaction rates": [
+		"affect",
+		"do affect",
+		"increase"
+	],
+	"reaction rates#temperature": [],
+	"temperature#insolation": [],
+	"insolation#temperature": [
+		"affect"
+	],
+	"temperature#the amount of dinitration": [],
+	"the amount of dinitration#temperature": [],
+	"temperature#height": [
+		"affect",
+		"typically increase with",
+		"vary with"
+	],
+	"height#temperature": [],
+	"temperature#depth lakes": [
+		"vary with"
+	],
+	"depth lakes#temperature": [],
+	"temperature#resistivity of semiconductors": [],
+	"resistivity of semiconductors#temperature": [],
+	"temperature#snow": [],
+	"snow#temperature": [
+		"vary with"
+	],
+	"temperature#enzyme activity": [
+		"affect"
+	],
+	"enzyme activity#temperature": [],
+	"temperature#diffusion coefficient": [],
+	"diffusion coefficient#temperature": [],
+	"temperature#equator high": [
+		"be at",
+		"be on"
+	],
+	"equator high#temperature": [],
+	"temperature#ph": [
+		"affect",
+		"can affect",
+		"has property"
+	],
+	"ph#temperature": [
+		"be affected by",
+		"be dependent on",
+		"be on",
+		"be with",
+		"depend on",
+		"vary with"
+	],
+	"temperature#water": [
+		"affect max brine saturation in",
+		"affect solubility in",
+		"be feel in",
+		"be important in",
+		"has property",
+		"seem in"
+	],
+	"water#temperature": [
+		"stabilize"
+	],
+	"temperature#center of earth": [
+		"be at"
+	],
+	"center of earth#temperature": [],
+	"temperature#metals resistance": [],
+	"metals resistance#temperature": [],
+	"temperature#equilibrium constant only": [],
+	"equilibrium constant only#temperature": [],
+	"temperature#latitude": [
+		"be affected by",
+		"depend on",
+		"vary according to",
+		"vary with"
+	],
+	"latitude#temperature": [
+		"affect",
+		"be related to",
+		"do affect",
+		"have effect on",
+		"relate to"
+	],
+	"temperature#speed of sound": [
+		"affect",
+		"can affect"
+	],
+	"speed of sound#temperature": [],
+	"temperature#internal resistance": [],
+	"internal resistance#temperature": [],
+	"temperature#matter": [
+		"affect",
+		"can",
+		"cause"
+	],
+	"matter#temperature": [],
+	"temperature#wind": [
+		"affect",
+		"be responsible for",
+		"get taken minus"
+	],
+	"wind#temperature": [
+		"affect",
+		"influence"
+	],
+	"temperature#solubility of gas": [],
+	"solubility of gas#temperature": [],
+	"temperature#viscosity": [
+		"affect"
+	],
+	"viscosity#temperature": [
+		"affect",
+		"be affected by",
+		"be related to",
+		"be vs",
+		"be with",
+		"decrease with",
+		"depend on",
+		"increase with",
+		"vary with",
+		"vary with respect to"
+	],
+	"temperature#color": [
+		"affect"
+	],
+	"color#temperature": [
+		"affect",
+		"be related to",
+		"change with",
+		"react differently to"
+	],
+	"temperature#condensation": [
+		"affect"
+	],
+	"condensation#temperature": [],
+	"temperature#the specific heat": [],
+	"the specific heat#temperature": [],
+	"temperature#kw": [],
+	"kw#temperature": [
+		"be affected by",
+		"vary with"
+	],
+	"temperature#evaporation": [
+		"affect",
+		"reduce during"
+	],
+	"evaporation#temperature": [
+		"affect",
+		"can occur at",
+		"occur at",
+		"occur in",
+		"reduce"
+	],
+	"temperature#life cycle of blowfly": [
+		"can affect"
+	],
+	"life cycle of blowfly#temperature": [],
+	"temperature#energy": [
+		"affect",
+		"be measure of",
+		"be related to",
+		"relate to"
+	],
+	"energy#temperature": [
+		"affect",
+		"be related to",
+		"depend on",
+		"has property",
+		"relate to"
+	],
+	"temperature#resistivity": [],
+	"resistivity#temperature": [
+		"be affected by",
+		"be related to",
+		"be with",
+		"decrease with",
+		"depend on",
+		"vary with"
+	],
+	"temperature#the rate of photosynthesis": [
+		"limit"
+	],
+	"the rate of photosynthesis#temperature": [],
+	"temperature#molecules": [
+		"affect"
+	],
+	"molecules#temperature": [
+		"change with",
+		"move in"
+	],
+	"temperature#kc": [
+		"affect",
+		"change"
+	],
+	"kc#temperature": [
+		"be affected by",
+		"change with"
+	],
+	"temperature#vacancies": [],
+	"vacancies#temperature": [],
+	"temperature#internal energy only": [],
+	"internal energy only#temperature": [],
+	"temperature#solar cell efficiency": [
+		"affect"
+	],
+	"solar cell efficiency#temperature": [],
+	"temperature#conductivity": [
+		"affect"
+	],
+	"conductivity#temperature": [
+		"affect",
+		"be affected by",
+		"be related to",
+		"depend on",
+		"increase with",
+		"vary with"
+	],
+	"temperature#salt": [
+		"decrease with"
+	],
+	"salt#temperature": [
+		"affect"
+	],
+	"temperature#solubility": [
+		"affect",
+		"be affected by",
+		"be mentioned with",
+		"be related to"
+	],
+	"solubility#temperature": [
+		"affect",
+		"be affected by",
+		"depend on",
+		"increase with",
+		"vary as",
+		"vary with"
+	],
+	"temperature#luminosity": [],
+	"luminosity#temperature": [
+		"affect",
+		"be related to",
+		"relate to"
+	],
+	"temperature#greenhouse gases": [],
+	"greenhouse gases#temperature": [
+		"affect",
+		"cause",
+		"increase",
+		"regulate"
+	],
+	"temperature#aldol condensation": [],
+	"aldol condensation#temperature": [],
+	"temperature#thermal conductivity": [],
+	"thermal conductivity#temperature": [],
+	"temperature#humidity": [
+		"affect",
+		"be related to"
+	],
+	"humidity#temperature": [
+		"affect",
+		"depend on",
+		"make",
+		"relate to",
+		"vary with"
+	],
+	"temperature#esterification": [],
+	"esterification#temperature": [],
+	"temperature#dissolved oxygen concentration": [],
+	"dissolved oxygen concentration#temperature": [],
+	"temperature#vapour pressure": [],
+	"vapour pressure#temperature": [
+		"be related to",
+		"increase with",
+		"vary with"
+	],
+	"temperature#state of matter": [
+		"affect",
+		"be related to",
+		"can affect",
+		"determine"
+	],
+	"state of matter#temperature": [
+		"affect"
+	],
+	"temperature#higher temperatures": [],
+	"higher temperatures#temperature": [],
+	"temperature#kinetic energy": [
+		"affect",
+		"be measure of",
+		"be related to",
+		"increase",
+		"relate to"
+	],
+	"kinetic energy#temperature": [
+		"affect",
+		"be affected by",
+		"be related to",
+		"depend on",
+		"has property",
+		"increase with",
+		"relate to"
+	],
+	"temperature#denature": [
+		"cause"
+	],
+	"denature#temperature": [],
+	"temperature#pressure": [
+		"affect",
+		"be directly proportional to",
+		"be related to",
+		"relate to"
+	],
+	"pressure#temperature": [
+		"affect",
+		"be directly proportional to",
+		"be proportional to",
+		"be related to",
+		"be with",
+		"relate to",
+		"vary with"
+	],
+	"temperature#osmotic pressure": [],
+	"osmotic pressure#temperature": [
+		"do vary with",
+		"vary with"
+	],
+	"temperature#enzymes": [
+		"affect",
+		"be important to",
+		"can denature",
+		"cause",
+		"denature",
+		"have effect on",
+		"slow down"
+	],
+	"enzymes#temperature": [
+		"be affected by",
+		"be damaged by",
+		"be highly sensitive to",
+		"denature at",
+		"have",
+		"react to",
+		"slow down in",
+		"work at",
+		"work best at",
+		"work better at"
+	],
+	"temperature#ph of water": [],
+	"ph of water#temperature": [],
+	"temperature#matter to change": [
+		"cause"
+	],
+	"matter to change#temperature": [],
+	"temperature#thermal energy": [
+		"affect",
+		"be different from",
+		"differ from",
+		"relate to"
+	],
+	"thermal energy#temperature": [
+		"affect",
+		"be different from",
+		"be related to",
+		"depend on",
+		"differ from",
+		"relate to"
+	],
+	"temperature#the densities of most substances": [
+		"affect"
+	],
+	"the densities of most substances#temperature": [],
+	"temperature#the benedict's test": [],
+	"the benedict's test#temperature": [],
+	"temperature#depth": [
+		"vary with"
+	],
+	"depth#temperature": [
+		"affect"
+	],
+	"temperature#transpiration": [
+		"affect",
+		"increase"
+	],
+	"transpiration#temperature": [
+		"be affected by",
+		"be influenced by"
+	],
+	"temperature#density of water": [],
+	"density of water#temperature": [],
+	"temperature#chemisorption": [],
+	"temperature#resistance": [
+		"affect",
+		"be coefficient of"
+	],
+	"resistance#temperature": [
+		"be affected by",
+		"be dependent on",
+		"be with",
+		"depend on",
+		"depend upon",
+		"do vary with",
+		"go up with",
+		"increase with",
+		"relate to",
+		"vary with"
+	],
+	"temperature#entropy": [],
+	"entropy#temperature": [
+		"affected by",
+		"be affected by",
+		"be dependent on",
+		"be divided by",
+		"be inversely proportional to",
+		"depend on",
+		"vary with"
+	],
+	"temperature#elevation": [
+		"be affected by"
+	],
+	"elevation#temperature": [
+		"affect",
+		"be in",
+		"have",
+		"relate to"
+	],
+	"temperature#endospore staining": [],
+	"endospore staining#temperature": [],
+	"temperature#keq": [],
+	"keq#temperature": [],
+	"chemisorption#temperature": [
+		"vary with"
+	]
 }
