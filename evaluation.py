@@ -166,10 +166,10 @@ def evaluate(model_name: str,
 @click.option('-s', '--specify', default=[], type=int, multiple=True, help="Specify which entry of the yaml file to evaluate")
 @click.option('-j', '--freq', default='all_1m_filter_3_sort.json', type=str, help="Which json to use for frequency file")
 @click.option('-a', '--algo', default='dfs', type=str, help="Which algorithm to use")
-@click.option('-g', '--suggestinos', is_flag=True, help="Suggest entities if missing")
-def run(model, threshold, yaml, comment, specify, freq, algo, suggestinos):
+@click.option('-g', '--suggestions', is_flag=True, help="Suggest entities if missing")
+def run(model, threshold, yaml, comment, specify, freq, algo, suggestions):
     torch.cuda.empty_cache()
-    evaluate(model, threshold, yaml, list(specify), freq, algo, suggestinos)
+    evaluate(model, threshold, yaml, list(specify), freq, algo, suggestions)
 
 if __name__ == '__main__':
     # os.environ['CI'] = 'true'
