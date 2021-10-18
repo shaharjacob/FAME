@@ -13131,5 +13131,498 @@
 	"keq#temperature": [],
 	"chemisorption#temperature": [
 		"vary with"
+	],
+	"temperature#carboxylic acids": [],
+	"carboxylic acids#temperature": [],
+	"temperature#salt water": [],
+	"salt water#temperature": [],
+	"temperature#ocean currents": [
+		"affect"
+	],
+	"ocean currents#temperature": [
+		"affect",
+		"can affect",
+		"influence"
+	],
+	"temperature#blood pressure": [
+		"affect"
+	],
+	"blood pressure#temperature": [],
+	"temperature#mass": [
+		"affect"
+	],
+	"mass#temperature": [],
+	"temperature#light": [],
+	"light#temperature": [
+		"affect"
+	],
+	"temperature#infrared radiation": [],
+	"infrared radiation#temperature": [
+		"depend on"
+	],
+	"temperature#air pressure": [
+		"affect",
+		"be related to"
+	],
+	"air pressure#temperature": [
+		"affect",
+		"be affected by",
+		"relate to",
+		"vary with"
+	],
+	"temperature#humans": [
+		"affect",
+		"be important to"
+	],
+	"humans#temperature": [
+		"feel",
+		"interpret",
+		"regulate"
+	],
+	"temperature#radiation": [],
+	"radiation#temperature": [],
+	"temperature#stability": [
+		"affect"
+	],
+	"stability#temperature": [],
+	"temperature#friction": [
+		"affect"
+	],
+	"friction#temperature": [
+		"raise",
+		"usually increase with"
+	],
+	"temperature#pure liquids": [],
+	"pure liquids#temperature": [],
+	"temperature#watts": [],
+	"watts#temperature": [
+		"relate to"
+	],
+	"heat#carboxylic acids": [],
+	"carboxylic acids#heat": [],
+	"heat#salt water": [],
+	"salt water#heat": [
+		"lose faster"
+	],
+	"heat#ocean currents": [
+		"be distributed by"
+	],
+	"ocean currents#heat": [
+		"distribute",
+		"redistribute",
+		"transfer"
+	],
+	"heat#blood pressure": [
+		"affect",
+		"raise"
+	],
+	"blood pressure#heat": [],
+	"heat#mass": [],
+	"mass#heat": [],
+	"heat#light": [
+		"become",
+		"create",
+		"give off"
+	],
+	"light#heat": [
+		"be converted to",
+		"create",
+		"give off",
+		"has property",
+		"make",
+		"produce"
+	],
+	"heat#infrared radiation": [],
+	"infrared radiation#heat": [
+		"be associated with",
+		"be related to"
+	],
+	"heat#air pressure": [],
+	"air pressure#heat": [],
+	"heat#humans": [],
+	"humans#heat": [
+		"be in",
+		"can dissipate well",
+		"emit",
+		"feel",
+		"generate",
+		"give off",
+		"go into",
+		"lose",
+		"radiate"
+	],
+	"heat#radiation": [
+		"be transferred by"
+	],
+	"radiation#heat": [
+		"be transformed into",
+		"produce"
+	],
+	"heat#stability": [
+		"be related to",
+		"relate to"
+	],
+	"stability#heat": [],
+	"heat#friction": [
+		"be produced during",
+		"be produced in",
+		"be transferred in"
+	],
+	"friction#heat": [
+		"create",
+		"has property",
+		"make"
+	],
+	"heat#pure liquids": [],
+	"pure liquids#heat": [],
+	"heat#watts": [],
+	"watts#heat": [
+		"relate to"
+	],
+	"heat#gravitational": [],
+	"gravitational#heat": [],
+	"heat#trees": [],
+	"trees#heat": [
+		"help against"
+	],
+	"heat#soil": [],
+	"soil#heat": [
+		"absorb"
+	],
+	"heat#athletes": [],
+	"athletes#heat": [
+		"can lose",
+		"lose",
+		"produce"
+	],
+	"heat#appetite": [
+		"kill",
+		"reduce",
+		"take away"
+	],
+	"appetite#heat": [],
+	"heat#black": [
+		"has color"
+	],
+	"black#heat": [
+		"attract",
+		"has property"
+	],
+	"heat#small ears": [],
+	"small ears#heat": [],
+	"heat#land": [
+		"affect"
+	],
+	"land#heat": [
+		"absorb fast",
+		"absorb faster",
+		"lose"
+	],
+	"heat#animals": [
+		"be important to"
+	],
+	"animals#heat": [
+		"adapt to",
+		"be in",
+		"can live in",
+		"cope with",
+		"go in",
+		"go into",
+		"lose",
+		"mate in",
+		"need",
+		"respond to"
+	],
+	"heat#plants": [
+		"affect",
+		"affect underwater",
+		"be important for",
+		"be important to"
+	],
+	"plants#heat": [
+		"give off",
+		"need",
+		"react to"
+	],
+	"heat#period pain": [
+		"be good for",
+		"help",
+		"reduce",
+		"relieve",
+		"stop"
+	],
+	"period pain#heat": [],
+	"heat#body": [
+		"be important in",
+		"be removed from",
+		"be transferred through",
+		"be transported around",
+		"be transported in",
+		"leave",
+		"lost in"
+	],
+	"body#heat": [
+		"be good absorbed of",
+		"can",
+		"create",
+		"generate",
+		"give off",
+		"lose",
+		"make",
+		"produce",
+		"radiate",
+		"swell in"
+	],
+	"heat#my car": [],
+	"my car#heat": [],
+	"heat#polar bears": [],
+	"polar bears#heat": [],
+	"heat#charcoal": [],
+	"charcoal#heat": [],
+	"heat#dryers": [],
+	"dryers#heat": [
+		"can",
+		"get",
+		"lose",
+		"produce",
+		"spin",
+		"use"
+	],
+	"heat#dogs": [
+		"can"
+	],
+	"dogs#heat": [
+		"act in",
+		"be in",
+		"bleed in",
+		"can get in",
+		"can get rabies shot in",
+		"feel in",
+		"go in",
+		"go on"
+	],
+	"heat#insulators": [],
+	"insulators#heat": [
+		"at transferring",
+		"be for",
+		"be good conductors of",
+		"be poor conductors of",
+		"conduct",
+		"keep in",
+		"prevent",
+		"retain"
+	],
+	"heat#objects": [
+		"be naturally transferred between",
+		"be transferred between",
+		"pass through"
+	],
+	"objects#heat": [
+		"be better radiators of",
+		"can",
+		"radiate",
+		"reflect"
+	],
+	"heat#carpets": [],
+	"carpets#heat": [
+		"keep in"
+	],
+	"heat#sweating": [],
+	"sweating#heat": [
+		"remove"
+	],
+	"heat#my iphone": [],
+	"my iphone#heat": [],
+	"heat#curtains": [],
+	"curtains#heat": [
+		"keep in"
+	],
+	"heat#vitamin c": [
+		"affect",
+		"break down",
+		"destroy",
+		"reduce"
+	],
+	"vitamin c#heat": [
+		"be destroyed by",
+		"be easily destroyed by"
+	],
+	"heat#newborns": [],
+	"newborns#heat": [
+		"lose"
+	],
+	"heat#pain": [
+		"alleviate",
+		"be good for",
+		"reduce",
+		"stop",
+		"take away"
+	],
+	"pain#heat": [],
+	"heat#things": [
+		"dissolve faster"
+	],
+	"things#heat": [
+		"conduct",
+		"dissolve faster in",
+		"gain",
+		"look wavy in"
+	],
+	"heat#liquid": [
+		"be transferred in",
+		"be transferred through",
+		"move more quickly than"
+	],
+	"liquid#heat": [
+		"absorb",
+		"be bad conductors of",
+		"be poor conductors of",
+		"can conduct",
+		"conduct",
+		"conduct better",
+		"conduct better then",
+		"lose"
+	],
+	"heat#cats": [
+		"affect outside"
+	],
+	"cats#heat": [
+		"be in",
+		"cry in",
+		"enjoy",
+		"feel in",
+		"go in",
+		"go into",
+		"lose",
+		"meow in",
+		"seek",
+		"yowl in"
+	],
+	"heat#swelling": [
+		"be bad for",
+		"make",
+		"reduce"
+	],
+	"swelling#heat": [],
+	"heat#babies": [],
+	"babies#heat": [],
+	"temperature#gravitational": [],
+	"gravitational#temperature": [],
+	"temperature#trees": [],
+	"trees#temperature": [
+		"affect",
+		"survive"
+	],
+	"temperature#soil": [
+		"affect"
+	],
+	"soil#temperature": [
+		"affect"
+	],
+	"temperature#athletes": [],
+	"athletes#temperature": [],
+	"temperature#appetite": [
+		"affect"
+	],
+	"appetite#temperature": [],
+	"temperature#black": [],
+	"black#temperature": [
+		"have"
+	],
+	"temperature#small ears": [],
+	"small ears#temperature": [],
+	"temperature#land": [],
+	"land#temperature": [
+		"affect"
+	],
+	"temperature#animals": [
+		"be important for",
+		"be important to"
+	],
+	"animals#temperature": [],
+	"temperature#plants": [
+		"affect",
+		"be important for",
+		"be important to"
+	],
+	"plants#temperature": [
+		"affect",
+		"maintain",
+		"need",
+		"sense"
+	],
+	"temperature#period pain": [],
+	"period pain#temperature": [],
+	"temperature#body": [
+		"affect",
+		"be kept in",
+		"be regulated in"
+	],
+	"body#temperature": [
+		"affect",
+		"can affect",
+		"fluctuate in",
+		"has property",
+		"maintain",
+		"regulate"
+	],
+	"temperature#my car": [],
+	"my car#temperature": [],
+	"temperature#polar bears": [
+		"limit factor for"
+	],
+	"polar bears#temperature": [],
+	"temperature#charcoal": [],
+	"charcoal#temperature": [],
+	"temperature#dryers": [],
+	"dryers#temperature": [],
+	"temperature#dogs": [],
+	"dogs#temperature": [],
+	"temperature#insulators": [],
+	"insulators#temperature": [],
+	"temperature#objects": [],
+	"objects#temperature": [],
+	"temperature#carpets": [],
+	"carpets#temperature": [],
+	"temperature#sweating": [],
+	"sweating#temperature": [],
+	"temperature#my iphone": [],
+	"my iphone#temperature": [],
+	"temperature#curtains": [],
+	"temperature#pain": [],
+	"pain#temperature": [],
+	"temperature#things": [],
+	"things#temperature": [
+		"change"
+	],
+	"temperature#vitamin c": [
+		"affect"
+	],
+	"vitamin c#temperature": [
+		"be affected by"
+	],
+	"temperature#newborns": [],
+	"newborns#temperature": [
+		"can regulate"
+	],
+	"temperature#babies": [],
+	"babies#temperature": [
+		"run"
+	],
+	"temperature#swelling": [],
+	"swelling#temperature": [],
+	"curtains#temperature": [],
+	"temperature#liquid": [
+		"affect",
+		"affect molecules in",
+		"affect solubility in"
+	],
+	"liquid#temperature": [
+		"boil at",
+		"freeze at"
+	],
+	"temperature#cats": [],
+	"cats#temperature": [
+		"regulate"
 	]
 }

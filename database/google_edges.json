@@ -18794,5 +18794,1098 @@
 	"chemisorption#temperature": [
 		"increases with increase in",
 		"vary with"
+	],
+	"temperature#carboxylic acids": [],
+	"carboxylic acids#temperature": [
+		"boil at higher"
+	],
+	"temperature#salt water": [],
+	"salt water#temperature": [
+		"boil at a higher",
+		"boil at a lower",
+		"freeze at a lower"
+	],
+	"temperature#ocean currents": [
+		"affect",
+		"affect deep",
+		"and salinity affect",
+		"and salinity differences cause vertical",
+		"cause",
+		"salinity and wind affect"
+	],
+	"ocean currents#temperature": [
+		"affect",
+		"affect air",
+		"affect land",
+		"influence the horizontal distribution of"
+	],
+	"temperature#blood pressure": [
+		"affect",
+		"affect heart rate and",
+		"lower"
+	],
+	"blood pressure#temperature": [
+		"affect body"
+	],
+	"temperature#mass": [
+		"affect",
+		"affect air",
+		"affect molar",
+		"affected by",
+		"decrease when the particles have more",
+		"fairly constant for land",
+		"humidity and pressure vary within an air",
+		"increase with"
+	],
+	"mass#temperature": [
+		"affect",
+		"affect final",
+		"affected by",
+		"and energy affect",
+		"diffusivity of a gas depends on pressure and",
+		"increase with",
+		"of water affect"
+	],
+	"temperature#light": [
+		"affect",
+		"affect absorbance of",
+		"affect speed of",
+		"relate to"
+	],
+	"light#temperature": [
+		"affect",
+		"independent reaction slow down at low",
+		"intensity affect"
+	],
+	"temperature#infrared radiation": [],
+	"infrared radiation#temperature": [
+		"depend on"
+	],
+	"temperature#air pressure": [
+		"affect",
+		"affect tire",
+		"affects",
+		"and",
+		"influence"
+	],
+	"air pressure#temperature": [
+		"affect",
+		"affected by",
+		"change with",
+		"relate to",
+		"related to",
+		"rise with fall in",
+		"vary with"
+	],
+	"temperature#humans": [
+		"affect",
+		"affect breathing rate in",
+		"affect metabolic rate in",
+		"affect oxygen consumption in",
+		"affect reaction time in",
+		"affect respiration in",
+		"affect the rate of respiration in",
+		"controlled in",
+		"important to",
+		"inversion affect",
+		"regulation important in"
+	],
+	"humans#temperature": [
+		"activity affect water",
+		"affect ocean",
+		"affect the",
+		"affect water",
+		"body",
+		"body maintain",
+		"body maintain constant",
+		"body regulate",
+		"differ from birds in maintaining body",
+		"feel",
+		"have",
+		"have a constant body",
+		"have body",
+		"keep body",
+		"lower body",
+		"maintain",
+		"maintain a constant body",
+		"maintain body",
+		"maintain homeostasis when exposed to cold",
+		"need",
+		"need to regulate their body",
+		"regulate their body",
+		"sense"
+	],
+	"temperature#radiation": [
+		"affect",
+		"affect solar",
+		"not affect"
+	],
+	"radiation#temperature": [
+		"affect",
+		"affecting the earth's",
+		"relate to heat and air"
+	],
+	"temperature#stability": [
+		"affect drug",
+		"affect emulsion",
+		"affect foam volume and"
+	],
+	"stability#temperature": [],
+	"temperature#friction": [
+		"affect",
+		"affect the coefficient of",
+		"of a lubricant affect the coefficient of dynamic"
+	],
+	"friction#temperature": [
+		"affect",
+		"increase"
+	],
+	"temperature#pure liquids": [],
+	"pure liquids#temperature": [],
+	"temperature#watts": [],
+	"watts#temperature": [
+		"relate to"
+	],
+	"heat#carboxylic acids": [],
+	"carboxylic acids#heat": [],
+	"heat#salt water": [
+		"affect",
+		"capacity of"
+	],
+	"salt water#heat": [],
+	"heat#ocean currents": [
+		"affect",
+		"cause",
+		"distributed by",
+		"flow in air and",
+		"from the sun drives wind and",
+		"transfer",
+		"transfer affect",
+		"transfer related to",
+		"transferred by"
+	],
+	"ocean currents#heat": [
+		"affect",
+		"distribute",
+		"help distribute the sun's",
+		"move",
+		"redistribute",
+		"transfer"
+	],
+	"heat#blood pressure": [
+		"affect",
+		"affect high",
+		"affect low",
+		"and humidity affect",
+		"exhaustion affect",
+		"lower",
+		"stroke cause high",
+		"stroke cause low"
+	],
+	"blood pressure#heat": [
+		"drop in"
+	],
+	"heat#mass": [
+		"affect",
+		"affect molar",
+		"depend on",
+		"increase with",
+		"relate to",
+		"required to melt the ice divided by the",
+		"transfer affect"
+	],
+	"mass#heat": [
+		"affect",
+		"affect specific"
+	],
+	"heat#light": [
+		"affect",
+		"affect led",
+		"bend",
+		"distort",
+		"emit",
+		"generate",
+		"give off",
+		"produce",
+		"refract",
+		"turn into",
+		"waves distort"
+	],
+	"light#heat": [
+		"bulb produce",
+		"bulbs give off",
+		"bulbs give off thermal",
+		"bulbs produce",
+		"colors absorb less",
+		"convert to",
+		"emit",
+		"generate",
+		"give off",
+		"have",
+		"produce",
+		"turn into"
+	],
+	"heat#infrared radiation": [
+		"lamp use",
+		"lamps and toaster use",
+		"transferred by"
+	],
+	"infrared radiation#heat": [
+		"associated with",
+		"cause"
+	],
+	"heat#air pressure": [
+		"affect"
+	],
+	"air pressure#heat": [
+		"affect",
+		"change with"
+	],
+	"heat#humans": [
+		"affect",
+		"and light help",
+		"balance achieved in",
+		"energy important to",
+		"help",
+		"important to",
+		"used by",
+		"waves affect",
+		"waves impact"
+	],
+	"humans#heat": [
+		"adapt to",
+		"bodies produce",
+		"body gains",
+		"body generate",
+		"body lose",
+		"body produce",
+		"body release",
+		"get",
+		"give off",
+		"have",
+		"like",
+		"lose",
+		"love",
+		"make",
+		"need",
+		"not go into",
+		"produce",
+		"radiate",
+		"release",
+		"use"
+	],
+	"heat#radiation": [
+		"affect",
+		"from the sun",
+		"lamp use infrared",
+		"lamps and toaster use infrared",
+		"lost through",
+		"move through",
+		"transfer by",
+		"transfer through",
+		"transferred by",
+		"transferred by conduction convection and",
+		"transferred by infrared",
+		"transferred through",
+		"transmitted through",
+		"travel by",
+		"travel by conduction convection and"
+	],
+	"radiation#heat": [
+		"differ from conduction and convection for the transference of",
+		"different from conduction and convection for transfer of",
+		"lose",
+		"move",
+		"produce",
+		"the fastest form of transfer of",
+		"transfer"
+	],
+	"heat#stability": [
+		"of combustion inversely proportional to",
+		"of combustion related to",
+		"of formation related to",
+		"of hydrogenation related to"
+	],
+	"stability#heat": [],
+	"heat#friction": [
+		"cause",
+		"generated by",
+		"increase",
+		"produced by"
+	],
+	"friction#heat": [
+		"cause",
+		"change",
+		"change kinetic energy into",
+		"convert kinetic energy into",
+		"create",
+		"increase with",
+		"produces",
+		"related to"
+	],
+	"heat#pure liquids": [],
+	"pure liquids#heat": [],
+	"heat#watts": [
+		"relate to"
+	],
+	"watts#heat": [
+		"relate to"
+	],
+	"heat#gravitational": [],
+	"gravitational#heat": [
+		"force produce",
+		"pressure produce",
+		"settling produce"
+	],
+	"heat#trees": [],
+	"trees#heat": [
+		"fall in the",
+		"reduce"
+	],
+	"heat#soil": [
+		"affect"
+	],
+	"soil#heat": [
+		"absorb"
+	],
+	"heat#athletes": [
+		"packs help"
+	],
+	"athletes#heat": [
+		"lose"
+	],
+	"heat#appetite": [
+		"affect",
+		"kill your",
+		"make me lose my",
+		"reduce",
+		"suppress"
+	],
+	"appetite#heat": [
+		"decrease in"
+	],
+	"heat#black": [
+		"attract to"
+	],
+	"black#heat": [
+		"a good absorber and emitter of",
+		"a good absorber of",
+		"a good conductor of",
+		"absorb",
+		"absorb more",
+		"attract",
+		"attract more",
+		"clothes absorb more",
+		"clothes attract",
+		"clothing absorb",
+		"clothing attract",
+		"color absorb more",
+		"color absorbs",
+		"colors absorb",
+		"colors absorb more",
+		"colour absorb",
+		"objects absorb more",
+		"paper absorb",
+		"paper absorb more",
+		"shirts absorb more",
+		"surfaces absorb more",
+		"things absorb more"
+	],
+	"heat#small ears": [],
+	"small ears#heat": [],
+	"heat#land": [
+		"affects"
+	],
+	"land#heat": [
+		"absorb"
+	],
+	"heat#animals": [
+		"affect",
+		"energy beneficial to",
+		"energy important to",
+		"important to",
+		"loss in",
+		"waves affect",
+		"work in"
+	],
+	"animals#heat": [
+		"adapt to",
+		"adapt to extreme",
+		"bleed when in",
+		"deal with",
+		"get in",
+		"go in",
+		"go into",
+		"lose",
+		"need",
+		"produce",
+		"survive extreme"
+	],
+	"heat#plants": [
+		"affect",
+		"affect a",
+		"affect tomato",
+		"good for",
+		"help",
+		"important for",
+		"stress affect",
+		"waves affect"
+	],
+	"plants#heat": [
+		"feel the",
+		"grow better in",
+		"need",
+		"produce",
+		"react to",
+		"reduce",
+		"respond to",
+		"transpire more in",
+		"wilt in the"
+	],
+	"heat#period pain": [
+		"good for",
+		"help",
+		"pack help",
+		"pack help with",
+		"packs help",
+		"soothe"
+	],
+	"period pain#heat": [],
+	"heat#body": [
+		"affect the human",
+		"affect your",
+		"affects the circulation of blood in the",
+		"and humidity affect the",
+		"come out of my",
+		"escape the",
+		"exhaustion affect the",
+		"flow from hot body to cold",
+		"generated in the",
+		"lost from the",
+		"produced by the",
+		"produced in our",
+		"produced in the",
+		"radiate from my",
+		"stress affect the",
+		"transferred around the"
+	],
+	"body#heat": [
+		"conserve",
+		"create",
+		"gain",
+		"generate",
+		"gets",
+		"lose",
+		"produce",
+		"radiate",
+		"regulate",
+		"release",
+		"swell in",
+		"swell in the"
+	],
+	"heat#my car": [
+		"blow cold air in",
+		"coming from under"
+	],
+	"my car#heat": [
+		"have no",
+		"lose",
+		"so slow in nfs",
+		"windows fog up when i turn on the"
+	],
+	"heat#polar bears": [],
+	"polar bears#heat": [
+		"conserve",
+		"deal with"
+	],
+	"heat#charcoal": [],
+	"charcoal#heat": [
+		"lose"
+	],
+	"heat#dryers": [],
+	"dryers#heat": [
+		"lose",
+		"produce",
+		"use"
+	],
+	"heat#dogs": [
+		"affect",
+		"affect a",
+		"affect my",
+		"affect older",
+		"and humidity affect",
+		"bad for",
+		"cycle affect",
+		"exhaustion affect",
+		"stroke affect",
+		"stroke kill",
+		"work for",
+		"work for a"
+	],
+	"dogs#heat": [
+		"act when in",
+		"bleed in",
+		"bleed when on",
+		"bleed when they are in",
+		"cool down in the",
+		"diapers work for",
+		"feel in",
+		"feel when in",
+		"get in",
+		"go into",
+		"have silent",
+		"like",
+		"lose",
+		"release",
+		"stay in"
+	],
+	"heat#insulators": [
+		"a",
+		"a thermal",
+		"affect"
+	],
+	"insulators#heat": [
+		"not conduct",
+		"prevent",
+		"transfer"
+	],
+	"heat#objects": [
+		"affect an",
+		"always transfer from a warmer object to a cooler",
+		"change",
+		"energy move between",
+		"flow from hot to cold",
+		"interact with different",
+		"move between",
+		"move from warmer to colder",
+		"transfer between",
+		"transfer from object to",
+		"transfer through",
+		"transfer work within the bulk of an",
+		"transferred between",
+		"transferred between two",
+		"travel in",
+		"waves heat up"
+	],
+	"objects#heat": [
+		"absorb",
+		"get",
+		"lose",
+		"radiate",
+		"transfer"
+	],
+	"heat#carpets": [],
+	"carpets#heat": [
+		"prevent"
+	],
+	"heat#sweating": [],
+	"sweating#heat": [
+		"an efficient way to lose",
+		"cause the body to lose",
+		"lose",
+		"reduce",
+		"release"
+	],
+	"heat#my iphone": [],
+	"my iphone#heat": [
+		"getting"
+	],
+	"heat#curtains": [],
+	"curtains#heat": [
+		"block"
+	],
+	"heat#vitamin c": [
+		"affect",
+		"degrade",
+		"destroy",
+		"reduce"
+	],
+	"vitamin c#heat": [
+		"degrade with",
+		"destroyed by",
+		"easily destroyed by",
+		"sensitive to"
+	],
+	"heat#newborns": [
+		"affect"
+	],
+	"newborns#heat": [
+		"babies lose",
+		"generate",
+		"infants produce",
+		"lose",
+		"produce"
+	],
+	"heat#pain": [
+		"bad for back",
+		"good for",
+		"good for back",
+		"help",
+		"help back",
+		"help ear",
+		"help gallbladder",
+		"help gas",
+		"help growing",
+		"help knee",
+		"help neck",
+		"help nerve",
+		"help period",
+		"help stomach",
+		"pack relieve",
+		"packs help",
+		"packs help period",
+		"packs relieve",
+		"packs work for back",
+		"pads help back",
+		"reduce"
+	],
+	"pain#heat": [
+		"cause"
+	],
+	"heat#things": [
+		"change",
+		"dry",
+		"helpful to living",
+		"important to living",
+		"make",
+		"melt",
+		"of vaporization important to living"
+	],
+	"things#heat": [
+		"dissolve faster in",
+		"expand in",
+		"have",
+		"look wavy in",
+		"lose",
+		"smell worse in"
+	],
+	"heat#liquid": [
+		"affect",
+		"affect the solubility of a substance in a",
+		"affect the viscosity of a",
+		"cause motion in a",
+		"convection only occur in gases and",
+		"move",
+		"propagated in",
+		"transferred in",
+		"transferred in a",
+		"travel in",
+		"travel through"
+	],
+	"liquid#heat": [
+		"a good conductor of",
+		"absorb",
+		"and gases conduct",
+		"and gases transfer",
+		"conduct",
+		"lose",
+		"water have a high specific",
+		"water have such a high specific"
+	],
+	"heat#cats": [
+		"affect",
+		"affect my",
+		"bother"
+	],
+	"cats#heat": [
+		"act when in",
+		"act when they're in",
+		"always in",
+		"be in",
+		"behave when they are in",
+		"cool off in the",
+		"cope with",
+		"feel when they are in",
+		"get in",
+		"go in",
+		"go into",
+		"howl when in",
+		"in",
+		"like",
+		"love",
+		"meow so much in",
+		"meow when in",
+		"regulate",
+		"stay cool in the"
+	],
+	"heat#swelling": [
+		"and humidity cause",
+		"bad for",
+		"cause",
+		"cause ankle",
+		"increase",
+		"reduce"
+	],
+	"swelling#heat": [
+		"cause"
+	],
+	"heat#babies": [
+		"affect",
+		"affect a",
+		"bumps look on a",
+		"rash look like in",
+		"rash look like on a",
+		"rash look on"
+	],
+	"babies#heat": [
+		"chickens need",
+		"chicks need",
+		"cope in the",
+		"generate",
+		"get",
+		"get prickly",
+		"give off so much body",
+		"head",
+		"lose",
+		"release",
+		"sleep more in the"
+	],
+	"temperature#gravitational": [],
+	"gravitational#temperature": [
+		"attraction help achieve these high"
+	],
+	"temperature#trees": [
+		"affect",
+		"affect maple",
+		"affect the growth of",
+		"sunlight and rainfall affect the growth of"
+	],
+	"trees#temperature": [
+		"affect",
+		"affect water",
+		"cool the",
+		"decrease",
+		"frogs regulate body",
+		"lower",
+		"lower the earth\u2019s",
+		"regulate their",
+		"survive freezing"
+	],
+	"temperature#soil": [
+		"affect",
+		"influence"
+	],
+	"soil#temperature": [
+		"affect",
+		"colour affect soil",
+		"moisture affect soil",
+		"regulate",
+		"regulate the earth's",
+		"relate to",
+		"temperature relate to air"
+	],
+	"temperature#athletes": [],
+	"athletes#temperature": [],
+	"temperature#appetite": [
+		"affect",
+		"affect your"
+	],
+	"appetite#temperature": [],
+	"temperature#black": [],
+	"black#temperature": [],
+	"temperature#small ears": [],
+	"small ears#temperature": [],
+	"temperature#land": [
+		"affect arid",
+		"of the air cause a breeze to blow toward the"
+	],
+	"land#temperature": [
+		"affect",
+		"and sea affect",
+		"and sea breeze affect",
+		"and water distribution affect",
+		"that is near the ocean change",
+		"use affect"
+	],
+	"temperature#animals": [
+		"affect",
+		"affect cold blooded",
+		"affect humans and",
+		"affect plants and",
+		"affect reproduction in",
+		"affect respiration in",
+		"affect the distribution of",
+		"and precipitation affect the distribution of plants and",
+		"change affect",
+		"important for"
+	],
+	"animals#temperature": [
+		"adapt during droughts and high",
+		"adapt to",
+		"adapt to cold",
+		"adapt to hot",
+		"fat solid at room",
+		"have different body",
+		"have higher body",
+		"increase their body",
+		"maintain body",
+		"maintain constant body",
+		"need to maintain a constant body",
+		"regulate",
+		"regulate body",
+		"regulate their body",
+		"respond to cold",
+		"stay warm in cold",
+		"survive freezing",
+		"survive in negative",
+		"survive sub zero"
+	],
+	"temperature#plants": [
+		"affect",
+		"affect nutrient uptake in",
+		"affect respiration in",
+		"affect the growth of",
+		"affect the rate of transpiration in a",
+		"affect tomato",
+		"affect transpiration in",
+		"affect transpiration in a",
+		"important for"
+	],
+	"plants#temperature": [
+		"adapt to",
+		"adapt to cold",
+		"adapt to extreme",
+		"adapt to high",
+		"control their",
+		"die at high",
+		"grow better in warmer",
+		"grow faster at higher",
+		"growth affected by",
+		"lower",
+		"maintain constant internal",
+		"need",
+		"need a certain",
+		"need to regulate their",
+		"not grow in cold",
+		"reduce",
+		"regulate",
+		"respire more at higher",
+		"respond to",
+		"respond to high",
+		"respond to warmer",
+		"sense",
+		"survive freezing"
+	],
+	"temperature#period pain": [],
+	"period pain#temperature": [],
+	"temperature#body": [
+		"affect decomposition of a",
+		"affect water",
+		"in the universe affects the heavenly",
+		"maintained in the human",
+		"regulated in the",
+		"work in the"
+	],
+	"body#temperature": [
+		"adapt to cold",
+		"detect",
+		"maintain",
+		"of water affect",
+		"of water regulate the",
+		"raise",
+		"react to cold",
+		"regulate",
+		"respond to cold",
+		"respond to hot",
+		"respond to hot and cold",
+		"sense",
+		"systems work together to maintain body",
+		"weight affect"
+	],
+	"temperature#my car": [],
+	"my car#temperature": [
+		"know the",
+		"not getting up to",
+		"not reaching normal operating",
+		"reading the wrong",
+		"say low outside",
+		"say the wrong",
+		"says high engine"
+	],
+	"temperature#polar bears": [
+		"a limiting factor for",
+		"affect"
+	],
+	"polar bears#temperature": [
+		"adapt to cold",
+		"control their body",
+		"keep warm in freezing",
+		"maintain their body",
+		"regulate body",
+		"survive in cold"
+	],
+	"temperature#charcoal": [],
+	"charcoal#temperature": [],
+	"temperature#dryers": [
+		"affect"
+	],
+	"dryers#temperature": [],
+	"temperature#dogs": [],
+	"dogs#temperature": [
+		"feel",
+		"get",
+		"get a",
+		"get high",
+		"have",
+		"have a higher body",
+		"have high body",
+		"have low",
+		"normal body",
+		"regulate its body",
+		"regulate their",
+		"regulate their body",
+		"regulate their own body",
+		"sense"
+	],
+	"temperature#insulators": [
+		"affect"
+	],
+	"insulators#temperature": [],
+	"temperature#objects": [
+		"affect an",
+		"affect falling",
+		"affect the radiation emitted by an"
+	],
+	"objects#temperature": [
+		"gain",
+		"in space experience extreme"
+	],
+	"temperature#carpets": [],
+	"carpets#temperature": [],
+	"temperature#sweating": [],
+	"sweating#temperature": [
+		"affect air",
+		"affect body",
+		"affect your body",
+		"affected by air",
+		"cool your body",
+		"help to control body",
+		"help to maintain your body",
+		"lower body",
+		"lower your body",
+		"reduce body",
+		"regulate body",
+		"regulate your body",
+		"related to body"
+	],
+	"temperature#my iphone": [
+		"wrong on"
+	],
+	"my iphone#temperature": [
+		"keep",
+		"keep saying",
+		"keep saying high",
+		"say",
+		"says",
+		"weather app have the wrong",
+		"weather app wrong"
+	],
+	"temperature#curtains": [],
+	"temperature#pain": [
+		"outside of the range of thermoreceptors register as"
+	],
+	"pain#temperature": [
+		"affect",
+		"affect body"
+	],
+	"temperature#things": [
+		"affect living"
+	],
+	"things#temperature": [
+		"change",
+		"dry at room",
+		"freeze at different",
+		"melt at different",
+		"taste different at different"
+	],
+	"temperature#vitamin c": [
+		"affect"
+	],
+	"vitamin c#temperature": [
+		"affected by",
+		"decrease with"
+	],
+	"temperature#newborns": [],
+	"newborns#temperature": [
+		"get",
+		"regulate body",
+		"regulate their body"
+	],
+	"temperature#babies": [
+		"bad for",
+		"impact a preterm"
+	],
+	"babies#temperature": [
+		"control their",
+		"control their body",
+		"get",
+		"get a",
+		"get a low",
+		"get high",
+		"get low",
+		"have",
+		"have higher",
+		"have low",
+		"maintain",
+		"regulate",
+		"regulate body",
+		"regulate their",
+		"run",
+		"swans regulate"
+	],
+	"temperature#swelling": [],
+	"swelling#temperature": [],
+	"curtains#temperature": [],
+	"temperature#liquid": [
+		"affect",
+		"affect density of",
+		"affect pressure of",
+		"affect solubility of a",
+		"affect solubility of gas in",
+		"affect solubility of solids in",
+		"affect the density of a",
+		"affect the mass of a",
+		"affect the ph of",
+		"affect the refractive index of a",
+		"affect the solubility of gases in",
+		"affect the viscosity of a",
+		"affect vapour pressure of a",
+		"affect viscosity of",
+		"affect volume of",
+		"and pressure affect the solubility of gases in",
+		"related to the viscosity of a",
+		"remain constant during boiling of a"
+	],
+	"liquid#temperature": [
+		"affect",
+		"and solids respond to changes in",
+		"at room",
+		"change with",
+		"crystals change color with",
+		"evaporate at room",
+		"in a thermometer used to measure",
+		"nitrogen boil at room",
+		"nitrogen stay liquid at room",
+		"properties of viscosity and surface tension vary with",
+		"respond to the increase of",
+		"thermometer measures",
+		"viscosity decreases with rising"
+	],
+	"temperature#cats": [
+		"affect",
+		"affect siamese"
+	],
+	"cats#temperature": [
+		"control",
+		"control their",
+		"ears change",
+		"feel",
+		"get",
+		"get a",
+		"get high",
+		"have high body",
+		"regulate its body",
+		"regulate their body",
+		"tell"
 	]
 }
