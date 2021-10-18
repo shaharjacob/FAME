@@ -13624,5 +13624,186 @@
 	"temperature#cats": [],
 	"cats#temperature": [
 		"regulate"
-	]
+	],
+	"temperature#vasodilation": [],
+	"vasodilation#temperature": [
+		"control",
+		"reduce"
+	],
+	"temperature#liquids": [
+		"affect",
+		"affect molecules in",
+		"affect solubility in"
+	],
+	"liquids#temperature": [
+		"boil at",
+		"freeze at"
+	],
+	"temperature#the body": [],
+	"the body#temperature": [],
+	"temperature#ice sheets": [],
+	"ice sheets#temperature": [],
+	"temperature#panadol": [],
+	"panadol#temperature": [
+		"reduce"
+	],
+	"temperature#acetaminophen": [],
+	"acetaminophen#temperature": [
+		"reduce"
+	],
+	"temperature#calpol not": [],
+	"calpol not#temperature": [],
+	"temperature#tepid sponging": [],
+	"tepid sponging#temperature": [],
+	"temperature#calpol": [],
+	"calpol#temperature": [],
+	"temperature#aspirin": [],
+	"aspirin#temperature": [],
+	"temperature#my oven": [],
+	"my oven#temperature": [],
+	"temperature#volcanic eruptions": [],
+	"volcanic eruptions#temperature": [
+		"affect",
+		"reduce"
+	],
+	"heat#vasodilation": [],
+	"vasodilation#heat": [],
+	"heat#liquids": [
+		"be transferred in",
+		"be transferred through",
+		"move more quickly than"
+	],
+	"liquids#heat": [
+		"absorb",
+		"be bad conductors of",
+		"be poor conductors of",
+		"can conduct",
+		"conduct",
+		"conduct better",
+		"conduct better then",
+		"lose"
+	],
+	"heat#the body": [],
+	"the body#heat": [],
+	"heat#ice sheets": [],
+	"ice sheets#heat": [],
+	"heat#panadol": [],
+	"panadol#heat": [],
+	"heat#acetaminophen": [],
+	"acetaminophen#heat": [],
+	"heat#calpol not": [],
+	"calpol not#heat": [],
+	"heat#tepid sponging": [],
+	"tepid sponging#heat": [],
+	"heat#calpol": [],
+	"calpol#heat": [],
+	"heat#aspirin": [],
+	"aspirin#heat": [],
+	"heat#my oven": [],
+	"my oven#heat": [],
+	"heat#volcanic eruptions": [],
+	"volcanic eruptions#heat": [],
+	"temperature#nichrome": [],
+	"nichrome#temperature": [],
+	"temperature#to preserve": [],
+	"to preserve#temperature": [],
+	"temperature#a": [],
+	"a#temperature": [],
+	"temperature#preserve": [],
+	"preserve#temperature": [],
+	"heat#nichrome": [],
+	"nichrome#heat": [],
+	"heat#to preserve": [
+		"used"
+	],
+	"to preserve#heat": [],
+	"heat#a": [],
+	"a#heat": [],
+	"heat#preserve": [
+		"be used",
+		"used"
+	],
+	"preserve#heat": [],
+	"heat#i always": [],
+	"i always#heat": [],
+	"temperature#i always": [],
+	"i always#temperature": [],
+	"heat#activation energy": [],
+	"activation energy#heat": [],
+	"heat#voltage": [],
+	"voltage#heat": [],
+	"heat#to weather": [],
+	"to weather#heat": [],
+	"heat#thermal change": [],
+	"thermal change#heat": [],
+	"heat#spontaneity": [],
+	"spontaneity#heat": [],
+	"heat#respiration": [
+		"be produced during"
+	],
+	"respiration#heat": [
+		"has property",
+		"produce"
+	],
+	"heat#diffusion": [
+		"be like"
+	],
+	"diffusion#heat": [
+		"happen quicker in"
+	],
+	"heat#angles": [],
+	"angles#heat": [],
+	"heat#liquid thermometer": [],
+	"liquid thermometer#heat": [],
+	"heat#wavelength": [],
+	"wavelength#heat": [],
+	"heat#vapor pressure": [],
+	"vapor pressure#heat": [],
+	"heat#polluted": [],
+	"polluted#heat": [],
+	"heat#thermal": [],
+	"thermal#heat": [],
+	"heat#molality": [],
+	"molality#heat": [],
+	"heat#negative": [
+		"has property"
+	],
+	"negative#heat": [],
+	"heat#to ken": [],
+	"to ken#heat": [],
+	"heat#weather": [
+		"affect"
+	],
+	"weather#heat": [],
+	"heat#heat energy": [],
+	"heat energy#heat": [],
+	"heat#kc only": [],
+	"kc only#heat": [],
+	"heat#heat transfer": [],
+	"heat transfer#heat": [],
+	"heat#photosynthesis": [
+		"affect"
+	],
+	"photosynthesis#heat": [],
+	"heat#pollution": [],
+	"hindsight#depression": [],
+	"depression#hindsight": [],
+	"past#depression": [],
+	"depression#past": [],
+	"foresight#hope": [],
+	"hope#foresight": [],
+	"future#hope": [],
+	"hope#future": [],
+	"hindsight#crying": [],
+	"crying#hindsight": [],
+	"past#crying": [],
+	"crying#past": [],
+	"depression#crying": [],
+	"crying#depression": [],
+	"foresight#joy": [],
+	"joy#foresight": [],
+	"future#joy": [],
+	"joy#future": [],
+	"hope#joy": [],
+	"joy#hope": []
 }

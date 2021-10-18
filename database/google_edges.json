@@ -19887,5 +19887,425 @@
 		"regulate its body",
 		"regulate their body",
 		"tell"
-	]
+	],
+	"temperature#vasodilation": [],
+	"vasodilation#temperature": [
+		"and sweating help to reduce body",
+		"and vasoconstriction regulate body",
+		"help control body",
+		"regulate body"
+	],
+	"temperature#liquids": [
+		"affect",
+		"affect density of",
+		"affect pressure of",
+		"affect solubility of a",
+		"affect solubility of gas in",
+		"affect solubility of solids in",
+		"affect the density of a",
+		"affect the mass of a",
+		"affect the ph of",
+		"affect the refractive index of a",
+		"affect the solubility of gases in",
+		"affect the viscosity of a",
+		"affect vapour pressure of a",
+		"affect viscosity of",
+		"affect volume of",
+		"and pressure affect the solubility of gases in",
+		"related to the viscosity of a",
+		"remain constant during boiling of a"
+	],
+	"liquids#temperature": [
+		"affect",
+		"and solids respond to changes in",
+		"at room",
+		"boil at different",
+		"change with",
+		"crystals change color with",
+		"evaporate at room",
+		"evaporate faster at higher",
+		"freeze at different",
+		"in a thermometer used to measure",
+		"nitrogen boil at room",
+		"nitrogen stay liquid at room",
+		"properties of viscosity and surface tension vary with",
+		"respond to the increase of",
+		"thermometer measures",
+		"viscosity decreases with rising"
+	],
+	"temperature#the body": [
+		"regulated in",
+		"work in"
+	],
+	"the body#temperature": [
+		"adapt to cold",
+		"increase",
+		"maintain a constant",
+		"measure the core",
+		"of water affect",
+		"protect itself from extreme",
+		"raise",
+		"raise its",
+		"react to cold",
+		"react to hot",
+		"regulate",
+		"regulate body",
+		"respond to",
+		"respond to cold",
+		"respond to hot",
+		"respond to hot and cold",
+		"systems work together to maintain body"
+	],
+	"temperature#ice sheets": [],
+	"ice sheets#temperature": [],
+	"temperature#panadol": [],
+	"panadol#temperature": [
+		"lower",
+		"reduce"
+	],
+	"temperature#acetaminophen": [],
+	"acetaminophen#temperature": [
+		"reduce"
+	],
+	"temperature#calpol not": [],
+	"calpol not#temperature": [
+		"reduce"
+	],
+	"temperature#tepid sponging": [],
+	"tepid sponging#temperature": [
+		"reduce body"
+	],
+	"temperature#calpol": [],
+	"calpol#temperature": [
+		"not reduce",
+		"reduce"
+	],
+	"temperature#aspirin": [
+		"affect",
+		"affect the concentration of acetylsalicylic acid in",
+		"affect the purity of",
+		"affect the rate of hydrolysis of",
+		"affect the yield of"
+	],
+	"aspirin#temperature": [
+		"reduce",
+		"reduce body"
+	],
+	"temperature#my oven": [],
+	"my oven#temperature": [
+		"keep dropping",
+		"keep losing",
+		"not coming up to",
+		"not getting up to",
+		"not holding",
+		"not maintain",
+		"not reach",
+		"not reaching"
+	],
+	"temperature#volcanic eruptions": [
+		"affect",
+		"decrease after"
+	],
+	"volcanic eruptions#temperature": [
+		"affect",
+		"affect global",
+		"affect the",
+		"decrease global",
+		"reduce"
+	],
+	"heat#vasodilation": [
+		"cause",
+		"loss increase",
+		"lost through"
+	],
+	"vasodilation#heat": [],
+	"heat#liquids": [
+		"affect",
+		"affect the solubility of a substance in a",
+		"affect the viscosity of a",
+		"cause motion in a",
+		"convection only occur in gases and",
+		"move",
+		"propagated in",
+		"transferred in",
+		"transferred in a",
+		"travel in",
+		"travel through"
+	],
+	"liquids#heat": [
+		"a good conductor of",
+		"absorb",
+		"and gases conduct",
+		"and gases transfer",
+		"conduct",
+		"lose",
+		"water have a high specific",
+		"water have such a high specific"
+	],
+	"heat#the body": [
+		"affect the circulation of blood in",
+		"affects the circulation of blood in",
+		"and humidity affect",
+		"escape",
+		"exhaustion affect",
+		"generate in",
+		"generated in",
+		"help",
+		"index affect",
+		"lost from",
+		"produced by",
+		"produced in",
+		"stress affect",
+		"transferred around"
+	],
+	"the body#heat": [
+		"conserve",
+		"gain",
+		"generate",
+		"lose",
+		"need",
+		"produce",
+		"radiate",
+		"regulate",
+		"swell in"
+	],
+	"heat#ice sheets": [],
+	"ice sheets#heat": [],
+	"heat#panadol": [],
+	"panadol#heat": [],
+	"heat#acetaminophen": [],
+	"acetaminophen#heat": [],
+	"heat#calpol not": [],
+	"calpol not#heat": [],
+	"heat#tepid sponging": [],
+	"tepid sponging#heat": [],
+	"heat#calpol": [],
+	"calpol#heat": [],
+	"heat#aspirin": [],
+	"aspirin#heat": [],
+	"heat#my oven": [],
+	"my oven#heat": [
+		"leaking",
+		"lose",
+		"losing",
+		"not",
+		"slow to",
+		"take so long to"
+	],
+	"heat#volcanic eruptions": [
+		"and pressure inside the earth causes"
+	],
+	"volcanic eruptions#heat": [],
+	"temperature#nichrome": [],
+	"nichrome#temperature": [
+		"resist oxidation in air at high"
+	],
+	"temperature#to preserve": [],
+	"to preserve#temperature": [],
+	"temperature#a": [],
+	"a#temperature": [
+		"atmospheric pressure affect",
+		"bimetallic strip bend with changes in",
+		"body",
+		"body of water regulate the",
+		"body regulate",
+		"cactus survive in hot",
+		"catalyst speed a reaction at low",
+		"elevation affect",
+		"gecko respond to cold air",
+		"heat pump work in cold",
+		"materials shrink with increasing",
+		"normal",
+		"oils solidify at a cold",
+		"room",
+		"summer rainstorm lower the",
+		"thermometer measure",
+		"turtle hatchling respond to",
+		"water liquid at room"
+	],
+	"temperature#preserve": [],
+	"preserve#temperature": [],
+	"heat#nichrome": [],
+	"nichrome#heat": [
+		"wire"
+	],
+	"heat#to preserve": [],
+	"to preserve#heat": [],
+	"heat#a": [],
+	"a#heat": [
+		"animals adapt to too much",
+		"cat go in",
+		"cat go into",
+		"cat in",
+		"dog bleed when in",
+		"dog go into",
+		"dog in",
+		"dog's vulva swell when in",
+		"energy always lost as",
+		"male dog act when a female is in",
+		"microwave not"
+	],
+	"heat#preserve": [],
+	"preserve#heat": [],
+	"heat#i always": [],
+	"i always#heat": [
+		"get headaches in the",
+		"get prickly",
+		"radiate"
+	],
+	"temperature#i always": [],
+	"i always#temperature": [
+		"feel like i have a",
+		"have a",
+		"have a high",
+		"have a low",
+		"have a lower",
+		"run a low"
+	],
+	"heat#activation energy": [
+		"affect"
+	],
+	"activation energy#heat": [],
+	"heat#voltage": [
+		"affect",
+		"decrease"
+	],
+	"voltage#heat": [
+		"cause"
+	],
+	"heat#to weather": [
+		"cause rock",
+		"relate",
+		"transfer relate"
+	],
+	"to weather#heat": [],
+	"heat#thermal change": [],
+	"thermal change#heat": [],
+	"heat#spontaneity": [],
+	"spontaneity#heat": [],
+	"heat#respiration": [
+		"affect",
+		"affect cellular",
+		"involved in cellular",
+		"involved in photosynthesis and",
+		"produced during",
+		"released during cellular"
+	],
+	"respiration#heat": [
+		"produce",
+		"release"
+	],
+	"heat#diffusion": [
+		"affect",
+		"affect the rate of",
+		"increase",
+		"increase the rate of",
+		"speed up"
+	],
+	"diffusion#heat": [],
+	"heat#angles": [],
+	"angles#heat": [],
+	"heat#liquid thermometer": [],
+	"liquid thermometer#heat": [],
+	"heat#wavelength": [],
+	"wavelength#heat": [],
+	"heat#vapor pressure": [
+		"affect"
+	],
+	"vapor pressure#heat": [],
+	"heat#polluted": [],
+	"polluted#heat": [],
+	"heat#thermal": [],
+	"thermal#heat": [
+		"cameras detect",
+		"conductivity affect",
+		"conductivity affect specific",
+		"energy",
+		"energy different from",
+		"energy relate to",
+		"energy related to",
+		"energy related to temperature and",
+		"radiation transfer"
+	],
+	"heat#molality": [],
+	"molality#heat": [],
+	"heat#negative": [
+		"change",
+		"flux",
+		"of combustion",
+		"of formation",
+		"of hydration",
+		"of neutralization",
+		"of solution"
+	],
+	"negative#heat": [],
+	"heat#to ken": [],
+	"to ken#heat": [],
+	"heat#weather": [
+		"affect",
+		"cause rock to",
+		"drive",
+		"engines operate more efficiently in cold",
+		"engines work better in cold",
+		"in the atmosphere and water affect",
+		"pump work in cold",
+		"pumps not work in cold",
+		"pumps work in cold",
+		"transfer affect"
+	],
+	"weather#heat": [
+		"affect"
+	],
+	"heat#heat energy": [],
+	"heat energy#heat": [],
+	"heat#kc only": [],
+	"kc only#heat": [],
+	"heat#heat transfer": [],
+	"heat transfer#heat": [],
+	"heat#photosynthesis": [
+		"affect",
+		"affect the rate of",
+		"affect the speed of",
+		"help",
+		"increase",
+		"transferred in"
+	],
+	"photosynthesis#heat": [],
+	"heat#pollution": [
+		"affect",
+		"cause",
+		"related to",
+		"water"
+	],
+	"hindsight#depression": [],
+	"depression#hindsight": [],
+	"past#depression": [],
+	"depression#past": [],
+	"foresight#hope": [],
+	"hope#foresight": [],
+	"future#hope": [],
+	"hope#future": [
+		"connect past and",
+		"summon the"
+	],
+	"hindsight#crying": [],
+	"crying#hindsight": [],
+	"past#crying": [],
+	"crying#past": [],
+	"depression#crying": [
+		"cause"
+	],
+	"crying#depression": [
+		"help in"
+	],
+	"foresight#joy": [],
+	"joy#foresight": [],
+	"future#joy": [
+		"doesn't need us by bill"
+	],
+	"joy#future": [],
+	"hope#joy": [
+		"of the resurrection bring you"
+	],
+	"joy#hope": []
 }

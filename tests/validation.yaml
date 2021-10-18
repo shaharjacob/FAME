@@ -340,3 +340,14 @@ mapping:
         - client --> surfer
         - internet --> sea
         - website --> wave
+  
+  - input: #34
+      base: [foresight, future, hope, joy] 
+      target: [hindsight, past, depression, crying]
+      depth: 4
+    output:
+      mapping:
+      - foresight --> hindsight
+      - future --> past
+      - hope --> depression
+      - joy --> crying
