@@ -20307,5 +20307,76 @@
 	"hope#joy": [
 		"of the resurrection bring you"
 	],
-	"joy#hope": []
+	"joy#hope": [],
+	"father#baby": [
+		"bond with their",
+		"hamsters eat their",
+		"of amelia shepherd's",
+		"of bridget jones",
+		"of historia's",
+		"of rory's",
+		"of steffy's"
+	],
+	"baby#father": [
+		"bond with",
+		"bonding work for",
+		"come out looking like the",
+		"computer call his",
+		"daughters look like their",
+		"know its",
+		"look like the",
+		"look like their",
+		"recognize",
+		"recognize their",
+		"sense their"
+	],
+	"son#baby": [],
+	"baby#son": [],
+	"snail#protein": [
+		"get"
+	],
+	"protein#snail": [],
+	"shell#protein": [],
+	"protein#shell": [],
+	"knee#plastic": [],
+	"plastic#knee": [],
+	"kneepad#plastic": [],
+	"plastic#kneepad": [],
+	"chapter#studies": [],
+	"studies#chapter": [],
+	"book#studies": [],
+	"studies#book": [],
+	"lambchop#barbecue": [],
+	"barbecue#lambchop": [],
+	"lamb#barbecue": [],
+	"barbecue#lamb": [],
+	"antenna#radiation": [],
+	"radiation#antenna": [
+		"pattern of antenna vary with the length of the"
+	],
+	"signal#radiation": [],
+	"radiation#signal": [],
+	"nose#snot": [
+		"get",
+		"make",
+		"produce"
+	],
+	"snot#nose": [
+		"build up in your",
+		"come out of your",
+		"coming out of my dog's",
+		"dripping out of my",
+		"form in your",
+		"formed in the",
+		"get in your",
+		"harden in my",
+		"keep coming out my",
+		"made in your",
+		"pour out of my",
+		"produced in the",
+		"run out my",
+		"stuck in my"
+	],
+	"scent#snot": [],
+	"snot#scent": []
 }

@@ -13805,5 +13805,45 @@
 	"future#joy": [],
 	"joy#future": [],
 	"hope#joy": [],
-	"joy#hope": []
+	"joy#hope": [],
+	"father#baby": [
+		"abandon"
+	],
+	"baby#father": [
+		"look like",
+		"recognize"
+	],
+	"son#baby": [],
+	"baby#son": [],
+	"snail#protein": [],
+	"protein#snail": [],
+	"shell#protein": [],
+	"protein#shell": [],
+	"knee#plastic": [],
+	"plastic#knee": [],
+	"kneepad#plastic": [],
+	"plastic#kneepad": [],
+	"chapter#studies": [],
+	"studies#chapter": [],
+	"book#studies": [],
+	"studies#book": [],
+	"lambchop#barbecue": [],
+	"barbecue#lambchop": [],
+	"lamb#barbecue": [],
+	"barbecue#lamb": [],
+	"antenna#radiation": [],
+	"radiation#antenna": [],
+	"signal#radiation": [],
+	"radiation#signal": [],
+	"nose#snot": [
+		"generate",
+		"make",
+		"produce"
+	],
+	"snot#nose": [
+		"get stuck between",
+		"go from"
+	],
+	"scent#snot": [],
+	"snot#scent": []
 }
