@@ -1,15 +1,15 @@
-import os
 import copy
 import json
 from pathlib import Path
 from collections import Counter
-from typing import List, Dict, Tuple
+from typing import List, Union, Tuple
 
 import inflect
 import pandas as pd
 from click import secho
 from pandas import DataFrame
 
+root = Path(__file__).resolve().parent.parent.parent
 
 def render(row: dict):
     secho(f"{row['subject']} ", fg="blue", bold=True, nl=False)
@@ -36,7 +36,7 @@ def render_entities_similarity(entity1: str, entity2: str, row: dict):
     secho(f"{row['plausibility']}", fg="magenta")
 
 class Quasimodo:
-    def __init__(self, path: str = 'tsv/quasimodo.tsv'):
+    def __init__(self, path: Union[str, Path] = root / 'tsv' / 'quasimodo.tsv'):
         self.data = self.init_data(path)
         self.engine = inflect.engine()
     
