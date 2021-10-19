@@ -6,12 +6,12 @@ from pathlib import Path
 from click import secho
 
 from utils import utils
-import openIE
-import mapping
-import google_autosuggest
-from quasimodo import Quasimodo
+from . import openIE
+from . import mapping
+from . import google_autosuggest
+from .quasimodo import Quasimodo
 from frequency.frequency import Frequencies
-from data_collector import DataCollector
+from .data_collector import DataCollector
 from utils.sentence_embadding import SentenceEmbedding
 
 root = Path(__file__).resolve().parent.parent.parent

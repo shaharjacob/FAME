@@ -1,18 +1,20 @@
 import os
+import sys
 import unittest
 from pathlib import Path
 
 import yaml
-from click import secho
 
-import concept_net
-import suggest_entities
-import google_autosuggest
-from frequency import Frequencies
-from mapping import beam_search_wrapper, mapping_wrapper, FREQUENCY_THRESHOLD
-from quasimodo import Quasimodo, merge_tsvs
+root = Path(__file__).resolve().parent.parent
+sys.path.insert(0, str(root))
+sys.path.insert(0, str(root / 'backend'))
 
-root = Path(__file__).resolve().parent.parent.parent
+from backend.mapping import concept_net, suggest_entities, google_autosuggest
+from backend.mapping.mapping import beam_search_wrapper, mapping_wrapper, FREQUENCY_THRESHOLD
+from backend.mapping.quasimodo import Quasimodo, merge_tsvs
+from backend.frequency.frequency import Frequencies
+
+
 
 TEST_FOLDER = Path('tests')
 

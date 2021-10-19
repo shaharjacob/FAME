@@ -6,7 +6,7 @@ import networkx as nx
 from click import secho
 from networkx.algorithms import bipartite
 
-from sentence_embadding import SentenceEmbedding
+from utils.sentence_embadding import SentenceEmbedding
 
 
 COLORS_BRIGHT = [

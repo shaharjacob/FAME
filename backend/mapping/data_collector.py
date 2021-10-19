@@ -1,12 +1,12 @@
 import json
+import inflect
 from pathlib import Path
 from typing import List, Optional, Dict, Set
 
-import openIE
-import inflect
-import concept_net
-import google_autosuggest
-from quasimodo import Quasimodo
+from . import openIE
+from . import concept_net
+from . import google_autosuggest
+from .quasimodo import Quasimodo
 
 root = Path(__file__).resolve().parent.parent.parent
 

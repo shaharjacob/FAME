@@ -1,4 +1,5 @@
 import json
+from pathlib import Path
 from typing import List, Set, NoReturn, Tuple
 
 import inflect
@@ -6,6 +7,7 @@ import requests
 from click import secho
 from bs4 import BeautifulSoup
 
+root = Path(__file__).resolve().parent.parent.parent
 
 def read_json(path: str) -> dict:
     with open(path, 'r') as f:
@@ -117,7 +119,7 @@ def get_entity_props(entity: str, engine: inflect.engine = None, n_best: int = 5
 
     # we want the props of a single entity
     # we first check if the entity exists in the db - if not, we extract if from the conceptNet API.
-    conceptnet_db = read_json('database/conceptnet_nodes.json')
+    conceptnet_db = read_json(root / 'backend' / 'database' / 'conceptnet_nodes.json')
     should_save = False
 
     if entity not in conceptnet_db:
@@ -141,7 +143,7 @@ def get_entity_props(entity: str, engine: inflect.engine = None, n_best: int = 5
         should_save = True
     
     if should_save:
-        with open('database/conceptnet_nodes.json', 'w') as f:
+        with open(root / 'backend' / 'database' / 'conceptnet_nodes.json', 'w') as f:
             json.dump(conceptnet_db, f, indent='\t')
             
     # sorting for abc..

@@ -1,11 +1,14 @@
 import re
 import time
 import json
+from pathlib import Path
 from typing import List, Dict, Tuple
 
 import inflect
 import requests
 from click import secho
+
+root = Path(__file__).resolve().parent.parent.parent
 
 IGNORE = ["a"]
 
@@ -204,14 +207,14 @@ def get_entity_suggestions(entity: str, prop: str, plural_and_singular: bool = F
 def get_entity_props(entity: str):
     # given an entity, it will give some props that charactrize this entity.
     # for example, given entity 'newton', it will return props like: derived unit, fundamental unit, measure of
-    google_db = read_json('database/google_nodes.json')
+    google_db = read_json(root / 'backend' / 'database' / 'google_nodes.json')
     if entity not in google_db:
         suggestions = []
         for p in ["is a", "is a type of"]:
             model = GoogleAutoSuggestEntityProps(entity, p)
             suggestions.extend(model.suggestinos)
         google_db[entity] = sorted(list(set(suggestions)))
-        with open('database/google_nodes.json', 'w') as f:
+        with open(root / 'backend' / 'database' / 'google_nodes.json', 'w') as f:
             json.dump(google_db, f, indent='\t')
     return google_db[entity]
 

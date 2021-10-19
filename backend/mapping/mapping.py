@@ -8,10 +8,10 @@ from tqdm import tqdm
 from click import secho
 
 from utils import utils
-import suggest_entities
-from quasimodo import Quasimodo
+from . import suggest_entities
+from .quasimodo import Quasimodo
 from frequency.frequency import Frequencies
-from data_collector import DataCollector
+from .data_collector import DataCollector
 from utils.sentence_embadding import SentenceEmbedding
 
 Pair = Tuple[str, str] # two entities: (b1,b2)
