@@ -13845,5 +13845,176 @@
 		"go from"
 	],
 	"scent#snot": [],
-	"snot#scent": []
+	"snot#scent": [],
+	"pollution#heat": [],
+	"heat#molality not": [],
+	"molality not#heat": [],
+	"temperature#to ken": [
+		"be related"
+	],
+	"to ken#temperature": [],
+	"temperature#heat energy": [
+		"be related to"
+	],
+	"heat energy#temperature": [
+		"move from",
+		"move to"
+	],
+	"temperature#vapor pressure": [
+		"affect"
+	],
+	"vapor pressure#temperature": [
+		"be affected by",
+		"be dependent",
+		"be dependent on",
+		"be related to",
+		"increase with",
+		"relate to",
+		"vary with"
+	],
+	"temperature#spontaneity": [
+		"affect"
+	],
+	"spontaneity#temperature": [
+		"depend on"
+	],
+	"temperature#kc only": [],
+	"kc only#temperature": [],
+	"temperature#diffusion": [
+		"affect"
+	],
+	"diffusion#temperature": [
+		"depend on"
+	],
+	"temperature#to weather": [
+		"relate"
+	],
+	"to weather#temperature": [],
+	"temperature#pollution": [
+		"can",
+		"can be"
+	],
+	"pollution#temperature": [],
+	"temperature#respiration": [
+		"affect"
+	],
+	"respiration#temperature": [
+		"be affected by",
+		"vary with"
+	],
+	"temperature#thermal change": [
+		"differ from"
+	],
+	"thermal change#temperature": [],
+	"temperature#negative": [
+		"be",
+		"can",
+		"can be",
+		"has property"
+	],
+	"negative#temperature": [],
+	"temperature#activation energy": [
+		"affect"
+	],
+	"activation energy#temperature": [
+		"be affected by",
+		"be related to",
+		"vary with"
+	],
+	"temperature#molality not": [],
+	"molality not#temperature": [],
+	"temperature#angles": [
+		"depend on"
+	],
+	"angles#temperature": [
+		"affect",
+		"depend on"
+	],
+	"temperature#polluted": [
+		"can",
+		"can be"
+	],
+	"polluted#temperature": [],
+	"temperature#heat transfer": [],
+	"heat transfer#temperature": [],
+	"temperature#weather": [
+		"affect",
+		"has property",
+		"relate"
+	],
+	"weather#temperature": [],
+	"temperature#molality": [],
+	"molality#temperature": [
+		"affect",
+		"be affected by",
+		"be dependent",
+		"be independent of",
+		"depend on",
+		"remain with"
+	],
+	"temperature#voltage": [],
+	"voltage#temperature": [
+		"vary with"
+	],
+	"temperature#liquid thermometer": [],
+	"liquid thermometer#temperature": [],
+	"temperature#wavelength": [],
+	"wavelength#temperature": [
+		"be related to",
+		"depend on"
+	],
+	"temperature#thermal": [],
+	"thermal#temperature": [],
+	"temperature#photosynthesis": [
+		"affect",
+		"be important for",
+		"be important in",
+		"limit factor for",
+		"limit factor in"
+	],
+	"photosynthesis#temperature": [
+		"be affected by",
+		"slow down at"
+	],
+	"temperature#fire": [],
+	"fire#temperature": [],
+	"temperature#heat waves": [],
+	"heat waves#temperature": [],
+	"temperature#heat exhaustion": [],
+	"heat exhaustion#temperature": [],
+	"temperature#gravity": [],
+	"gravity#temperature": [],
+	"temperature#dry": [
+		"has weather"
+	],
+	"dry#temperature": [],
+	"temperature#air": [
+		"affect",
+		"affect speed through",
+		"can"
+	],
+	"air#temperature": [],
+	"temperature#urban areas": [
+		"be higher in"
+	],
+	"urban areas#temperature": [
+		"affect",
+		"have"
+	],
+	"temperature#chemical energy": [],
+	"chemical energy#temperature": [],
+	"temperature#temp": [],
+	"temp#temperature": [],
+	"temperature#light energy": [],
+	"light energy#temperature": [],
+	"temperature#shadow": [],
+	"shadow#temperature": [],
+	"temperature#boiling": [
+		"be constant",
+		"remain",
+		"remain during",
+		"stay"
+	],
+	"boiling#temperature": [],
+	"temperature#electrical energy": []
 }

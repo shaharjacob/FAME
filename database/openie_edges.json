@@ -31104,5 +31104,330 @@
 		"ran down"
 	],
 	"scent#snot": [],
-	"snot#scent": []
+	"snot#scent": [],
+	"pollution#heat": [
+		"ends up trapping in"
+	],
+	"heat#molality not": [],
+	"molality not#heat": [],
+	"temperature#to ken": [],
+	"to ken#temperature": [],
+	"temperature#heat energy": [],
+	"heat energy#temperature": [
+		"is maintained at",
+		"is required to increase"
+	],
+	"temperature#vapor pressure": [
+		"cause"
+	],
+	"vapor pressure#temperature": [
+		"depends on",
+		"is controlled by"
+	],
+	"temperature#spontaneity": [],
+	"spontaneity#temperature": [],
+	"temperature#kc only": [],
+	"kc only#temperature": [],
+	"temperature#diffusion": [
+		"affects the rate of"
+	],
+	"diffusion#temperature": [
+		"are affected by"
+	],
+	"temperature#to weather": [],
+	"to weather#temperature": [],
+	"temperature#pollution": [
+		"can increase"
+	],
+	"pollution#temperature": [
+		"is"
+	],
+	"temperature#respiration": [
+		"affect"
+	],
+	"respiration#temperature": [
+		"depends on"
+	],
+	"temperature#thermal change": [],
+	"thermal change#temperature": [],
+	"temperature#negative": [
+		"are flirting with",
+		"drop into",
+		"drop to",
+		"has",
+		"is associated with",
+		"is in"
+	],
+	"negative#temperature": [],
+	"temperature#activation energy": [],
+	"activation energy#temperature": [],
+	"temperature#molality not": [],
+	"molality not#temperature": [],
+	"temperature#angles": [],
+	"angles#temperature": [
+		"was measured at"
+	],
+	"temperature#polluted": [],
+	"polluted#temperature": [],
+	"temperature#heat transfer": [],
+	"heat transfer#temperature": [
+		"depends on",
+		"is",
+		"is heated to",
+		"is proportional to",
+		"reduces"
+	],
+	"temperature#weather": [
+		"are from",
+		"are my kind o",
+		"can lead to",
+		"drop",
+		"find",
+		"is",
+		"is protected from",
+		"is subject to",
+		"make",
+		"may vary depending on",
+		"recorded at",
+		"remains uniform over",
+		"took a back seat to",
+		"update",
+		"will bring changes in"
+	],
+	"weather#temperature": [
+		"calls for",
+		"challenges",
+		"compensated",
+		"cooperated with",
+		"could be as poor as",
+		"drops in",
+		"force",
+		"has",
+		"has dropped",
+		"is",
+		"is at",
+		"is based on",
+		"is cool all year round with",
+		"is for",
+		"is partly cloudy with",
+		"marked a return to",
+		"round with",
+		"set",
+		"warms",
+		"was perfect with"
+	],
+	"temperature#molality": [],
+	"molality#temperature": [],
+	"temperature#voltage": [
+		"applied",
+		"compensated",
+		"corrects",
+		"ensures",
+		"goes down",
+		"increases",
+		"shut down",
+		"shut off",
+		"uses",
+		"will result in"
+	],
+	"voltage#temperature": [
+		"depends on",
+		"is a strong function of",
+		"is adjusted to",
+		"is impressed in",
+		"is measured at",
+		"is proportional to",
+		"occurs at",
+		"rises as",
+		"should be dependant upon",
+		"will depend on"
+	],
+	"temperature#liquid thermometer": [],
+	"liquid thermometer#temperature": [],
+	"temperature#wavelength": [
+		"is"
+	],
+	"wavelength#temperature": [
+		"depends on",
+		"is dependent on",
+		"is inversely proportional to"
+	],
+	"temperature#thermal": [
+		"causes",
+		"has",
+		"have a high degree of",
+		"increases",
+		"is a measure of",
+		"reduce",
+		"were lower than"
+	],
+	"thermal#temperature": [
+		"allow very",
+		"allows for",
+		"also offers",
+		"can monitor",
+		"can operate at",
+		"depends on",
+		"detected",
+		"has",
+		"is",
+		"is available for",
+		"is used to store",
+		"measures",
+		"reduces",
+		"sensed",
+		"shows",
+		"was calculated using"
+	],
+	"temperature#photosynthesis": [],
+	"photosynthesis#temperature": [
+		"is affected by"
+	],
+	"temperature#fire": [
+		"caught on",
+		"could easily start",
+		"often reached during",
+		"prevent from",
+		"were then determined by",
+		"will create",
+		"will increase the risk of"
+	],
+	"fire#temperature": [
+		"burn at",
+		"expose to",
+		"is",
+		"is possible at",
+		"produces",
+		"reaches"
+	],
+	"temperature#heat waves": [
+		"shows"
+	],
+	"heat waves#temperature": [
+		"pushed"
+	],
+	"temperature#heat exhaustion": [
+		"can lead to"
+	],
+	"heat exhaustion#temperature": [],
+	"temperature#gravity": [],
+	"gravity#temperature": [
+		"is",
+		"is related to"
+	],
+	"temperature#dry": [
+		"allow",
+		"equals",
+		"keep",
+		"will effect",
+		"will result in",
+		"will slow",
+		"will slow down"
+	],
+	"dry#temperature": [
+		"apply at",
+		"are subject to",
+		"avoid",
+		"continue to perform at",
+		"exhausted at",
+		"force dry at",
+		"is dependent on",
+		"is dried at",
+		"is recommended unless",
+		"prevails with",
+		"stirred at",
+		"will vary with"
+	],
+	"temperature#air": [
+		"affects",
+		"are still warm compared to",
+		"can increase",
+		"can substantially improve",
+		"controlled",
+		"could also be",
+		"decrease",
+		"drops",
+		"fixes",
+		"forced",
+		"has",
+		"has turned",
+		"improve",
+		"is defined as",
+		"is in",
+		"is the temperature of",
+		"is warmer than",
+		"may decrease to",
+		"refers to",
+		"shows the location of"
+	],
+	"air#temperature": [
+		"bring",
+		"can hold at",
+		"conditioned with",
+		"depends on",
+		"ensures",
+		"has",
+		"is",
+		"is a function of",
+		"is at",
+		"is cooler than",
+		"is dependent on",
+		"is heated to",
+		"is typically cooled to",
+		"keep the feet at",
+		"keeps",
+		"raises",
+		"reduces",
+		"regulate",
+		"so does",
+		"varies with"
+	],
+	"temperature#urban areas": [],
+	"urban areas#temperature": [],
+	"temperature#chemical energy": [],
+	"chemical energy#temperature": [],
+	"temperature#temp": [
+		"drops in",
+		"is",
+		"reads"
+	],
+	"temp#temperature": [
+		"also includes",
+		"displays",
+		"goes below",
+		"indicates now",
+		"is",
+		"will result in increasing"
+	],
+	"temperature#light energy": [],
+	"light energy#temperature": [],
+	"temperature#shadow": [],
+	"shadow#temperature": [],
+	"temperature#boiling": [
+		"approaches",
+		"bring the milk to",
+		"bring to",
+		"dropped below",
+		"is above",
+		"is at",
+		"is below",
+		"is called",
+		"is equal to",
+		"is increased to",
+		"reaches",
+		"rose to"
+	],
+	"boiling#temperature": [
+		"allow to cool to",
+		"cooled to",
+		"generates",
+		"is",
+		"is defined as",
+		"is reached at",
+		"reduce",
+		"reduce to",
+		"then let cool to",
+		"then turn"
+	],
+	"temperature#electrical energy": []
 }

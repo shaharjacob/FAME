@@ -20378,5 +20378,371 @@
 		"stuck in my"
 	],
 	"scent#snot": [],
-	"snot#scent": []
+	"snot#scent": [],
+	"pollution#heat": [
+		"affect",
+		"related to"
+	],
+	"heat#molality not": [],
+	"molality not#heat": [],
+	"temperature#to ken": [],
+	"to ken#temperature": [],
+	"temperature#heat energy": [
+		"an indirect measurement of",
+		"differ from"
+	],
+	"heat energy#temperature": [
+		"always move from a higher temperature to a lower",
+		"different from",
+		"radiated by a body depend on its",
+		"supplied to a liquid during boiling at a fixed"
+	],
+	"temperature#vapor pressure": [
+		"affect",
+		"of the liquid relate to the"
+	],
+	"vapor pressure#temperature": [
+		"change over",
+		"change with",
+		"change with changing",
+		"change with increasing",
+		"increase with",
+		"increases with",
+		"of a solid vary with the",
+		"of propane change with",
+		"of water in a parcel of air affected by changes in",
+		"related to"
+	],
+	"temperature#spontaneity": [
+		"affect"
+	],
+	"spontaneity#temperature": [
+		"depend on",
+		"of the process below depend on"
+	],
+	"temperature#kc only": [],
+	"kc only#temperature": [
+		"affected by",
+		"change with",
+		"dependent on"
+	],
+	"temperature#diffusion": [
+		"affect",
+		"affect facilitated",
+		"affect the rate of",
+		"affected by",
+		"and concentration gradient affect the rate of",
+		"and pressure affect the rate of",
+		"influence the rate of"
+	],
+	"diffusion#temperature": [
+		"affect",
+		"affected by",
+		"affected by hot and cold",
+		"become faster at higher",
+		"change with",
+		"coefficient change with",
+		"coefficient depends on",
+		"depend on",
+		"faster at higher",
+		"get faster with a rise in",
+		"happen faster at higher",
+		"happen quicker at higher",
+		"increase at higher",
+		"increase with",
+		"quicker at higher",
+		"rate increase with",
+		"related to",
+		"take place faster when there is an increase in"
+	],
+	"temperature#to weather": [
+		"cause rocks",
+		"contribute"
+	],
+	"to weather#temperature": [],
+	"temperature#pollution": [
+		"affect",
+		"affect air",
+		"affect particle",
+		"affect water",
+		"inversion affect air",
+		"inversion contribute to",
+		"inversion increase air",
+		"inversion worsen",
+		"inversion worsen air",
+		"inversions influence air",
+		"inversions trap"
+	],
+	"pollution#temperature": [
+		"affect",
+		"affect water"
+	],
+	"temperature#respiration": [
+		"affect",
+		"affect anaerobic",
+		"affect cellular",
+		"affect the rate of",
+		"of the water affect the yeast\u2019s ability to perform",
+		"related to cellular",
+		"water and oxygen affect"
+	],
+	"respiration#temperature": [
+		"affected by",
+		"faster at higher",
+		"increase with",
+		"rate decrease with",
+		"related to",
+		"slow down above a certain"
+	],
+	"temperature#thermal change": [],
+	"thermal change#temperature": [],
+	"temperature#negative": [
+		"coefficient",
+		"gradient"
+	],
+	"negative#temperature": [
+		"feedback affect body",
+		"feedback control body",
+		"feedback involved in the control of body",
+		"feedback loop works to maintain body",
+		"feedback maintain body",
+		"feedback mechanism control body",
+		"feedback work to maintain body"
+	],
+	"temperature#activation energy": [
+		"affect",
+		"not affect",
+		"relate to"
+	],
+	"activation energy#temperature": [
+		"affected by",
+		"affected by rise in",
+		"change with",
+		"decrease with",
+		"related to",
+		"vary with"
+	],
+	"temperature#molality not": [],
+	"molality not#temperature": [
+		"affected by",
+		"depend on"
+	],
+	"temperature#angles": [
+		"affect bond",
+		"on earth depend on",
+		"related to"
+	],
+	"angles#temperature": [
+		"of contact of a liquid depends on",
+		"of insolation affect",
+		"of sunlight affect surface"
+	],
+	"temperature#polluted": [],
+	"polluted#temperature": [],
+	"temperature#heat transfer": [
+		"change for a pathway step used to determine the",
+		"differ from",
+		"difference affect the rate of",
+		"not an accurate measurement of"
+	],
+	"heat transfer#temperature": [
+		"coefficient change with",
+		"differ from",
+		"related to"
+	],
+	"temperature#weather": [
+		"affect",
+		"air pressure wind and moisture affect",
+		"cause rocks to",
+		"in",
+		"influence",
+		"measured for",
+		"used to predict the"
+	],
+	"weather#temperature": [
+		"affect",
+		"affect body",
+		"affect water",
+		"affected by air",
+		"apps have different",
+		"apps know the",
+		"channel get",
+		"forecasters predict",
+		"relate to",
+		"stations measure",
+		"today"
+	],
+	"temperature#molality": [
+		"affect",
+		"affect molarity and"
+	],
+	"molality#temperature": [
+		"affect",
+		"and molarity depend on",
+		"change with",
+		"depend on",
+		"independent of",
+		"not depend on",
+		"of a solution independent of",
+		"of a solution remain unchanged with",
+		"of solution dependent on",
+		"remain unchanged with",
+		"varies with"
+	],
+	"temperature#voltage": [
+		"affect",
+		"affect battery",
+		"affect car battery",
+		"affect current and",
+		"affect threshold"
+	],
+	"voltage#temperature": [
+		"depend on",
+		"increase with"
+	],
+	"temperature#liquid thermometer": [],
+	"liquid thermometer#temperature": [
+		"measures"
+	],
+	"temperature#wavelength": [
+		"affect",
+		"related to"
+	],
+	"wavelength#temperature": [
+		"affect",
+		"change with",
+		"related to"
+	],
+	"temperature#thermal": [],
+	"thermal#temperature": [
+		"cameras measure",
+		"conductivity change with",
+		"conductivity decrease with",
+		"conductivity of gases and liquids vary with",
+		"conductivity of water increases with",
+		"energy affect",
+		"energy differ from",
+		"energy different from",
+		"energy relate to",
+		"energy related to",
+		"energy related to mass and",
+		"energy used to create cool",
+		"radiation change with"
+	],
+	"temperature#photosynthesis": [
+		"a limiting factor of",
+		"affect",
+		"affect oxygen production in",
+		"affect the productivity in the process of",
+		"have an effect on the rate of",
+		"important in",
+		"increase the rate of",
+		"influence",
+		"light intensity and co2 affect",
+		"limit the rate of",
+		"needed for",
+		"related to",
+		"related to the process of",
+		"water and carbon dioxide affect the rate of"
+	],
+	"photosynthesis#temperature": [
+		"affected by",
+		"affected by high",
+		"decrease during high",
+		"faster at higher",
+		"increase with",
+		"moderate global",
+		"need",
+		"related to",
+		"stop at high"
+	],
+	"temperature#fire": [
+		"affect",
+		"affect forest"
+	],
+	"fire#temperature": [
+		"burn at different"
+	],
+	"temperature#heat waves": [
+		"affect"
+	],
+	"heat waves#temperature": [],
+	"temperature#heat exhaustion": [],
+	"heat exhaustion#temperature": [],
+	"temperature#gravity": [
+		"affect",
+		"affect original",
+		"affect specific",
+		"related to"
+	],
+	"gravity#temperature": [
+		"affect",
+		"related to"
+	],
+	"temperature#dry": [],
+	"dry#temperature": [
+		"bulb",
+		"heat require higher",
+		"ice not melt at room",
+		"ice sublimes at room"
+	],
+	"temperature#air": [
+		"affect",
+		"affect density of",
+		"affect the amount of water vapor in the",
+		"affect the speed of sound in",
+		"inversions help to stabilize",
+		"related to high and low pressure"
+	],
+	"air#temperature": [
+		"affect",
+		"density affect",
+		"density change with",
+		"entering the lungs have to be room",
+		"flow affect",
+		"less dense at higher",
+		"masses have different",
+		"pollution affect",
+		"pressure",
+		"pressure affect",
+		"pressure change with",
+		"viscosity increase with"
+	],
+	"temperature#urban areas": [
+		"higher in"
+	],
+	"urban areas#temperature": [
+		"affect",
+		"have higher"
+	],
+	"temperature#chemical energy": [],
+	"chemical energy#temperature": [],
+	"temperature#temp": [],
+	"temp#temperature": [
+		"related to"
+	],
+	"temperature#light energy": [],
+	"light energy#temperature": [
+		"affect",
+		"affect air"
+	],
+	"temperature#shadow": [],
+	"shadow#temperature": [],
+	"temperature#boiling": [
+		"affect the rate of",
+		"change during melting or",
+		"constant during",
+		"of water remains constant during",
+		"remain constant during",
+		"remain constant during melting and"
+	],
+	"boiling#temperature": [
+		"point affect",
+		"point increase with",
+		"water affect",
+		"water in a large pot on a stove have a",
+		"water not change",
+		"water stay the same"
+	],
+	"temperature#electrical energy": []
 }
