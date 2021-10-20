@@ -1,12 +1,14 @@
-import os
+import sys
 from typing import List
 from pathlib import Path
 
 import yaml
+import torch
 import click
 from click import secho
 
-import torch
+backend_dir = Path(__file__).resolve().parent.parent
+sys.path.insert(0, str(backend_dir))
 from mapping.quasimodo import Quasimodo
 from frequency.frequency import Frequencies
 from mapping.mapping import beam_search_wrapper, mapping_wrapper, Solution, FREQUENCY_THRESHOLD
