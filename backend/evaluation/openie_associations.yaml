@@ -67,3 +67,13 @@ mapping:
       mapping:
         - water --> heat
         - pressure --> temperature
+
+  - input: #8
+      base: [water, pressure, force]
+      target: [heat, temperature, energy]
+      depth: 4
+    output:
+      mapping:
+        - water --> heat
+        - pressure --> temperature
+        - force --> energy
