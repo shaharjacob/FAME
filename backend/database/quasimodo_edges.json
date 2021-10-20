@@ -14405,5 +14405,1093 @@
 	"water#singapore": [],
 	"singapore#water": [
 		"get"
-	]
+	],
+	"water#ph": [
+		"be important",
+		"has property",
+		"have",
+		"raise"
+	],
+	"ph#water": [
+		"be bad in",
+		"be good in",
+		"be important in",
+		"be in",
+		"be measured in",
+		"be tested in",
+		"be value of",
+		"fluctuate in",
+		"get into"
+	],
+	"water#bread have": [],
+	"bread have#water": [],
+	"water#lemon": [],
+	"lemon#water": [
+		"alkalize",
+		"appear in",
+		"be added to",
+		"be bad in",
+		"be good in",
+		"be in",
+		"be put in",
+		"can",
+		"float in",
+		"sink in"
+	],
+	"water#diamonds": [
+		"be cheaper than",
+		"be less expensive than"
+	],
+	"diamonds#water": [
+		"be expensive than",
+		"be more expensive than",
+		"be more valuable than",
+		"be soluble in",
+		"has property",
+		"lose in",
+		"repel"
+	],
+	"water#boat float": [],
+	"boat float#water": [],
+	"water#uae": [],
+	"uae#water": [],
+	"water#air": [
+		"be denser than",
+		"be optically denser than",
+		"be transferred from"
+	],
+	"air#water": [
+		"be denser than",
+		"be different from",
+		"be dissolved in",
+		"be less dense than",
+		"be more compressible than"
+	],
+	"water#separator funnel": [],
+	"separator funnel#water": [],
+	"water#volcano": [],
+	"volcano#water": [
+		"affect",
+		"be by",
+		"be near",
+		"can erupt under",
+		"change",
+		"form under",
+		"make"
+	],
+	"water#pollution": [
+		"affect"
+	],
+	"pollution#water": [
+		"affect",
+		"affect animals in",
+		"be bad for",
+		"be in",
+		"be measured in",
+		"be problem in",
+		"can affect",
+		"get into",
+		"occur in"
+	],
+	"water#eye": [
+		"can"
+	],
+	"eye#water": [
+		"can",
+		"run"
+	],
+	"water#i have": [],
+	"i have#water": [],
+	"water#fluoride": [],
+	"fluoride#water": [
+		"added to",
+		"be added to",
+		"be bad in",
+		"be in",
+		"be put in",
+		"be used in",
+		"get added to",
+		"get into",
+		"occur naturally in",
+		"tap"
+	],
+	"water#focal length": [],
+	"focal length#water": [],
+	"water#oil": [
+		"be more dense than",
+		"can",
+		"dissolve",
+		"do mix with",
+		"has property",
+		"repel"
+	],
+	"oil#water": [
+		"affect",
+		"be attracted to",
+		"be miscible in",
+		"be on top of",
+		"dissolve in",
+		"do mix with",
+		"float on",
+		"have",
+		"sit on",
+		"sit on top of"
+	],
+	"water#ice": [
+		"be heavier than",
+		"become",
+		"can",
+		"has property",
+		"resist",
+		"turn faster into",
+		"turn faster to",
+		"turn instantly into",
+		"turn into",
+		"turn to"
+	],
+	"ice#water": [
+		"be called",
+		"be in",
+		"be less dense than",
+		"be less than",
+		"be made from",
+		"be more dense than",
+		"become",
+		"float in",
+		"float on",
+		"sublimate faster in"
+	],
+	"water#plants": [
+		"be lost from",
+		"be moved through",
+		"be transported in",
+		"be transported through",
+		"enter",
+		"flow up",
+		"kill",
+		"leave",
+		"move through",
+		"move up"
+	],
+	"plants#water": [
+		"absorb",
+		"can grow in",
+		"can live in",
+		"drink",
+		"get",
+		"lose",
+		"need",
+		"obtain",
+		"take in",
+		"use"
+	],
+	"water#marks work": [],
+	"marks work#water": [],
+	"water#toc": [],
+	"toc#water": [],
+	"water#at night": [
+		"rise"
+	],
+	"at night#water": [],
+	"water#straw": [
+		"fall out of",
+		"go up",
+		"rise in",
+		"stay in",
+		"travel up"
+	],
+	"straw#water": [
+		"be bent in",
+		"hold",
+		"look in"
+	],
+	"water#salt": [
+		"affect",
+		"be attracted to",
+		"boil quicker with",
+		"follow",
+		"go towards",
+		"have"
+	],
+	"salt#water": [
+		"absorb",
+		"affect",
+		"be in",
+		"be soluble in",
+		"can dissolve in",
+		"come in",
+		"dissolve in",
+		"dissolve quicker in",
+		"dissolved in",
+		"do in"
+	],
+	"water#ears": [
+		"come out of",
+		"get trapped in",
+		"has body part"
+	],
+	"ears#water": [
+		"can",
+		"keep out"
+	],
+	"water#boiler": [],
+	"boiler#water": [
+		"add",
+		"get",
+		"has property",
+		"heat",
+		"leak",
+		"lose"
+	],
+	"water#bubbles": [
+		"can",
+		"develop",
+		"get",
+		"has property"
+	],
+	"bubbles#water": [
+		"appear in",
+		"be formed in",
+		"be in",
+		"come in",
+		"float on",
+		"float up in",
+		"form in",
+		"go up in",
+		"occur in",
+		"rise in"
+	],
+	"water#friction": [
+		"affect",
+		"increase",
+		"reduce"
+	],
+	"friction#water": [
+		"be greater in"
+	],
+	"water#melting ice": [],
+	"melting ice#water": [],
+	"water#humans": [
+		"be transported in"
+	],
+	"humans#water": [
+		"absorb",
+		"be made of",
+		"dissolve in",
+		"float in",
+		"need",
+		"pollute",
+		"prefer",
+		"sink in",
+		"use",
+		"waste"
+	],
+	"water#experiment": [
+		"rise"
+	],
+	"experiment#water": [],
+	"water#ice melting": [],
+	"ice melting#water": [],
+	"water#eggs": [
+		"can",
+		"has property"
+	],
+	"eggs#water": [
+		"absorb",
+		"can float in",
+		"expand in",
+		"float in",
+		"float on",
+		"get in",
+		"grow in",
+		"put in",
+		"rise in",
+		"sink in"
+	],
+	"water#mark work": [],
+	"mark work#water": [],
+	"water#australia": [
+		"be expensive in",
+		"be in",
+		"go way in"
+	],
+	"australia#water": [
+		"get",
+		"manage",
+		"put fluoride in",
+		"run out of",
+		"use"
+	],
+	"water#oxygen": [
+		"contain",
+		"get",
+		"have",
+		"hold",
+		"lose",
+		"need",
+		"produce",
+		"remove",
+		"use"
+	],
+	"oxygen#water": [
+		"be dissolved in",
+		"be important in",
+		"be important to",
+		"be in",
+		"be soluble in",
+		"be very soluble in",
+		"get in",
+		"get in to",
+		"get into",
+		"make"
+	],
+	"water#blood pressure": [
+		"affect",
+		"help",
+		"raise"
+	],
+	"blood pressure#water": [],
+	"water#the leaves": [
+		"reach"
+	],
+	"the leaves#water": [],
+	"water#an": [],
+	"an#water": [],
+	"water#israel": [],
+	"israel#water": [
+		"get",
+		"make",
+		"manage",
+		"save"
+	],
+	"water#help": [
+		"can"
+	],
+	"help#water": [],
+	"water#salmon": [],
+	"salmon#water": [
+		"live in"
+	],
+	"pressure#ph": [],
+	"ph#pressure": [],
+	"pressure#bread have": [],
+	"bread have#pressure": [],
+	"pressure#lemon": [],
+	"lemon#pressure": [],
+	"pressure#diamonds": [
+		"make"
+	],
+	"diamonds#pressure": [
+		"need"
+	],
+	"pressure#boat float": [
+		"make"
+	],
+	"boat float#pressure": [],
+	"pressure#uae": [],
+	"uae#pressure": [],
+	"pressure#air": [
+		"be effected by",
+		"be exerted by"
+	],
+	"air#pressure": [
+		"have"
+	],
+	"pressure#separator funnel": [
+		"build up in"
+	],
+	"separator funnel#pressure": [],
+	"pressure#volcano": [
+		"build up in"
+	],
+	"volcano#pressure": [
+		"have"
+	],
+	"pressure#pollution": [],
+	"pollution#pressure": [],
+	"pressure#eye": [
+		"be high in",
+		"be measured in",
+		"build up in"
+	],
+	"eye#pressure": [],
+	"pressure#i have": [],
+	"i have#pressure": [],
+	"pressure#fluoride": [],
+	"fluoride#pressure": [],
+	"pressure#focal length": [],
+	"focal length#pressure": [],
+	"pressure#oil": [],
+	"oil#pressure": [
+		"has property"
+	],
+	"pressure#ice": [
+		"has property"
+	],
+	"ice#pressure": [],
+	"pressure#plants": [
+		"affect"
+	],
+	"plants#pressure": [],
+	"pressure#marks work": [],
+	"marks work#pressure": [],
+	"pressure#toc": [],
+	"toc#pressure": [],
+	"pressure#at night": [],
+	"at night#pressure": [],
+	"pressure#straw": [],
+	"straw#pressure": [],
+	"pressure#salt": [],
+	"salt#pressure": [],
+	"pressure#singapore": [],
+	"singapore#pressure": [],
+	"pressure#ears": [
+		"be equalized in",
+		"build up in",
+		"has body part"
+	],
+	"ears#pressure": [
+		"equalize"
+	],
+	"pressure#boiler": [
+		"build up in",
+		"go down on",
+		"go up on"
+	],
+	"boiler#pressure": [
+		"lose",
+		"need"
+	],
+	"pressure#bubbles": [],
+	"bubbles#pressure": [
+		"cause"
+	],
+	"pressure#friction": [],
+	"friction#pressure": [],
+	"pressure#melting ice": [],
+	"melting ice#pressure": [],
+	"pressure#humans": [],
+	"humans#pressure": [
+		"perform poorly under"
+	],
+	"pressure#experiment": [
+		"be determined in"
+	],
+	"experiment#pressure": [],
+	"pressure#ice melting": [],
+	"ice melting#pressure": [],
+	"pressure#eggs": [
+		"has property"
+	],
+	"eggs#pressure": [],
+	"pressure#mark work": [],
+	"mark work#pressure": [],
+	"pressure#australia": [],
+	"australia#pressure": [],
+	"pressure#oxygen": [],
+	"oxygen#pressure": [
+		"be toxic under",
+		"become under"
+	],
+	"pressure#blood pressure": [],
+	"blood pressure#pressure": [],
+	"pressure#the leaves": [],
+	"the leaves#pressure": [],
+	"pressure#an": [],
+	"an#pressure": [],
+	"pressure#israel": [],
+	"israel#pressure": [],
+	"pressure#help": [],
+	"help#pressure": [],
+	"pressure#salmon": [],
+	"salmon#pressure": [],
+	"water#dream": [],
+	"dream#water": [],
+	"water#dams": [],
+	"dams#water": [
+		"be brown",
+		"be built in",
+		"be made with",
+		"collect",
+		"discharge",
+		"get",
+		"in conserving",
+		"manage",
+		"pollute",
+		"provide"
+	],
+	"water#blue": [
+		"appear",
+		"has color",
+		"look",
+		"seem",
+		"turn"
+	],
+	"blue#water": [
+		"has property"
+	],
+	"water#eutrophication": [],
+	"eutrophication#water": [
+		"affect",
+		"reduce oxygen in"
+	],
+	"water#other substances": [
+		"be different from"
+	],
+	"other substances#water": [],
+	"water#one": [],
+	"one#water": [],
+	"water#cohesion": [
+		"have"
+	],
+	"cohesion#water": [
+		"affect",
+		"be important in",
+		"be important property of",
+		"occur in"
+	],
+	"water#sound waves": [
+		"affect"
+	],
+	"sound waves#water": [
+		"affect",
+		"propagate in",
+		"travel faster in",
+		"travel further in",
+		"travel through"
+	],
+	"water#do content": [],
+	"do content#water": [],
+	"water#biodiversity": [],
+	"biodiversity#water": [],
+	"water#air pollution": [],
+	"air pollution#water": [],
+	"water#most liquids": [
+		"be different from"
+	],
+	"most liquids#water": [],
+	"water#magicians": [],
+	"magicians#water": [
+		"can walk on",
+		"walk on"
+	],
+	"water#someone": [],
+	"someone#water": [],
+	"water#jeans": [],
+	"jeans#water": [],
+	"water#forests": [],
+	"forests#water": [
+		"conserve",
+		"filter",
+		"purify"
+	],
+	"water#adhesion": [],
+	"adhesion#water": [
+		"be important property of",
+		"be related to",
+		"can",
+		"occur in",
+		"relate to"
+	],
+	"water#cats": [],
+	"cats#water": [
+		"be afraid of",
+		"dislike",
+		"do like",
+		"drink",
+		"dunk in",
+		"freak out in",
+		"hate",
+		"hate much",
+		"put toys in",
+		"throw up"
+	],
+	"water#magnesium": [],
+	"magnesium#water": [
+		"be added to",
+		"be in",
+		"be insoluble in",
+		"be soluble in",
+		"get into",
+		"react differently with",
+		"react slowly with",
+		"react violently with",
+		"react with"
+	],
+	"water#sound": [],
+	"sound#water": [
+		"affect",
+		"be louder in",
+		"be muffled in",
+		"carry better over",
+		"carry over",
+		"refract under"
+	],
+	"water#diabetics": [],
+	"diabetics#water": [
+		"drink",
+		"lose",
+		"retain"
+	],
+	"water#lipids": [],
+	"lipids#water": [
+		"be insoluble in",
+		"be soluble in",
+		"behave in",
+		"dissolve in",
+		"form emulsion in",
+		"interact with",
+		"mix with",
+		"react in",
+		"react to",
+		"respond in"
+	],
+	"water#black": [
+		"has color",
+		"turn"
+	],
+	"black#water": [],
+	"water#illustration": [],
+	"illustration#water": [],
+	"water#red tide": [],
+	"red tide#water": [],
+	"water#trees": [
+		"go up",
+		"travel up"
+	],
+	"trees#water": [
+		"absorb",
+		"be sprayed with",
+		"can grow in",
+		"drop",
+		"get",
+		"leak",
+		"need",
+		"spit",
+		"sprinkle",
+		"take in"
+	],
+	"water#keq not": [],
+	"keq not#water": [],
+	"water#green": [
+		"appear",
+		"go",
+		"has color",
+		"look",
+		"turn"
+	],
+	"green#water": [
+		"hold"
+	],
+	"water#creatine": [],
+	"creatine#water": [
+		"be soluble in"
+	],
+	"water#land use": [],
+	"land use#water": [],
+	"water#kw not": [],
+	"kw not#water": [],
+	"water#off": [
+		"has place"
+	],
+	"off#water": [],
+	"water#mercury": [],
+	"mercury#water": [
+		"be associated with",
+		"be better conductor than",
+		"be filtered out of",
+		"be heavier than",
+		"be in",
+		"be more dense than",
+		"be more suitable liquid than",
+		"be used instead of",
+		"enter",
+		"get into"
+	],
+	"water#polarity": [
+		"have"
+	],
+	"polarity#water": [
+		"affect",
+		"allow",
+		"be important for",
+		"be important in",
+		"be most important characteristic of",
+		"be most important property of",
+		"play role for",
+		"relate to"
+	],
+	"water#carbon dioxide": [],
+	"carbon dioxide#water": [
+		"affect",
+		"be acidic in",
+		"be added to",
+		"be collected over",
+		"be dissolved in",
+		"be in",
+		"be slightly soluble in",
+		"be soluble in",
+		"can dissolve in",
+		"react with"
+	],
+	"water#soil": [
+		"be lost from",
+		"sit on top of"
+	],
+	"soil#water": [
+		"absorb",
+		"affect",
+		"be related to",
+		"be warmer than",
+		"can absorb",
+		"hold",
+		"need",
+		"retain better",
+		"soak up"
+	],
+	"water#land mollusks": [],
+	"land mollusks#water": [],
+	"water#adh": [],
+	"adh#water": [
+		"conserve",
+		"regulate"
+	],
+	"water#transpiration": [],
+	"transpiration#water": [
+		"move up",
+		"provide"
+	],
+	"water#fasting": [],
+	"fasting#water": [
+		"include"
+	],
+	"water#into wine": [],
+	"into wine#water": [],
+	"water#cactus": [],
+	"cactus#water": [
+		"can",
+		"can live without",
+		"get",
+		"have",
+		"keep",
+		"live without",
+		"observe",
+		"react without",
+		"survive without"
+	],
+	"water#scallops": [],
+	"scallops#water": [
+		"move through"
+	],
+	"water#carrots": [],
+	"carrots#water": [
+		"remain in"
+	],
+	"water#deuterium oxide": [],
+	"deuterium oxide#water": [
+		"differ from"
+	],
+	"water#canals": [],
+	"canals#water": [
+		"be filled with",
+		"fill with",
+		"get",
+		"hold",
+		"run out of"
+	],
+	"water#climate change": [
+		"vapor affect"
+	],
+	"climate change#water": [
+		"affect"
+	],
+	"water#cacti": [],
+	"cacti#water": [
+		"conserve",
+		"get",
+		"keep",
+		"need"
+	],
+	"water#lakes": [
+		"be in"
+	],
+	"lakes#water": [
+		"arrowhead get",
+		"can supply everglades with",
+		"fill with",
+		"get",
+		"get filled with",
+		"has property",
+		"hold",
+		"keep",
+		"lose",
+		"run out of"
+	],
+	"water#body": [
+		"be absorbed in",
+		"be distributed in",
+		"be essential for",
+		"be excreted from",
+		"be gained by",
+		"be regulated in",
+		"be removed from",
+		"be used in",
+		"leave",
+		"pass quickly through"
+	],
+	"body#water": [
+		"be float on",
+		"decompose in",
+		"float in",
+		"float on",
+		"gain",
+		"has property",
+		"look in",
+		"need",
+		"retain",
+		"sink in"
+	],
+	"water#tea": [],
+	"tea#water": [
+		"be as good as",
+		"be boiled with"
+	],
+	"water#minerals": [
+		"has property"
+	],
+	"minerals#water": [
+		"be added to",
+		"be found in",
+		"be important in",
+		"be in",
+		"can",
+		"can form from",
+		"dissolve in",
+		"get into",
+		"has property",
+		"need"
+	],
+	"water#camels": [],
+	"camels#water": [
+		"can",
+		"conserve",
+		"drink",
+		"find",
+		"get",
+		"go without",
+		"need",
+		"retain",
+		"save",
+		"survive without"
+	],
+	"water#potatoes": [],
+	"potatoes#water": [
+		"absorb",
+		"boil into",
+		"cook faster than",
+		"expand in",
+		"float in",
+		"gain mass in",
+		"gain weight in",
+		"get in",
+		"swell in",
+		"swell up in"
+	],
+	"water#crickets": [],
+	"crickets#water": [
+		"drink",
+		"get",
+		"jump in"
+	],
+	"water#tds": [],
+	"tds#water": [],
+	"water#carbon cycle": [],
+	"carbon cycle#water": [
+		"be related to"
+	],
+	"water#vietnam": [],
+	"vietnam#water": [],
+	"water#red": [
+		"has color",
+		"turn"
+	],
+	"red#water": [],
+	"water#mountains": [],
+	"mountains#water": [
+		"get",
+		"produce",
+		"provide"
+	],
+	"water#fat-soluble vitamins": [],
+	"fat-soluble vitamins#water": [
+		"has property"
+	],
+	"water#metabolism": [
+		"be important to",
+		"increase",
+		"speed up"
+	],
+	"metabolism#water": [
+		"depend on",
+		"need",
+		"provide"
+	],
+	"water#fish": [],
+	"fish#water": [
+		"cast shadow in",
+		"die in",
+		"die out of",
+		"float on",
+		"jump out of",
+		"live in",
+		"need",
+		"survive better in",
+		"survive in",
+		"taken out of"
+	],
+	"pressure#dream": [],
+	"dream#pressure": [],
+	"pressure#dams": [],
+	"dams#pressure": [],
+	"pressure#blue": [],
+	"blue#pressure": [],
+	"pressure#eutrophication": [],
+	"eutrophication#pressure": [],
+	"pressure#other substances": [],
+	"other substances#pressure": [],
+	"pressure#one": [],
+	"one#pressure": [],
+	"pressure#cohesion": [],
+	"cohesion#pressure": [],
+	"pressure#sound waves": [
+		"affect"
+	],
+	"sound waves#pressure": [],
+	"pressure#do content": [],
+	"do content#pressure": [],
+	"pressure#biodiversity": [],
+	"biodiversity#pressure": [],
+	"pressure#air pollution": [],
+	"air pollution#pressure": [],
+	"pressure#most liquids": [],
+	"most liquids#pressure": [],
+	"pressure#magicians": [],
+	"magicians#pressure": [],
+	"pressure#someone": [],
+	"someone#pressure": [],
+	"pressure#jeans": [],
+	"jeans#pressure": [],
+	"pressure#forests": [],
+	"forests#pressure": [],
+	"pressure#adhesion": [],
+	"adhesion#pressure": [],
+	"pressure#cats": [],
+	"cats#pressure": [],
+	"pressure#magnesium": [],
+	"magnesium#pressure": [
+		"has property"
+	],
+	"pressure#sound": [],
+	"sound#pressure": [],
+	"pressure#diabetics": [],
+	"diabetics#pressure": [],
+	"pressure#lipids": [],
+	"lipids#pressure": [],
+	"pressure#black": [],
+	"black#pressure": [],
+	"pressure#illustration": [],
+	"illustration#pressure": [],
+	"pressure#red tide": [],
+	"red tide#pressure": [],
+	"pressure#trees": [],
+	"trees#pressure": [],
+	"pressure#keq not": [],
+	"keq not#pressure": [],
+	"pressure#green": [
+		"be treated"
+	],
+	"green#pressure": [],
+	"pressure#creatine": [],
+	"creatine#pressure": [],
+	"pressure#land use": [],
+	"land use#pressure": [],
+	"pressure#kw not": [],
+	"kw not#pressure": [],
+	"pressure#off": [],
+	"off#pressure": [],
+	"pressure#mercury": [
+		"be measured in"
+	],
+	"mercury#pressure": [],
+	"pressure#polarity": [],
+	"polarity#pressure": [],
+	"pressure#carbon dioxide": [],
+	"carbon dioxide#pressure": [],
+	"pressure#soil": [],
+	"soil#pressure": [],
+	"pressure#land mollusks": [],
+	"land mollusks#pressure": [],
+	"pressure#adh": [],
+	"adh#pressure": [],
+	"pressure#transpiration": [],
+	"transpiration#pressure": [],
+	"pressure#fasting": [],
+	"fasting#pressure": [],
+	"pressure#into wine": [],
+	"into wine#pressure": [],
+	"pressure#cactus": [],
+	"cactus#pressure": [],
+	"pressure#scallops": [],
+	"scallops#pressure": [],
+	"pressure#carrots": [],
+	"carrots#pressure": [],
+	"pressure#deuterium oxide": [],
+	"deuterium oxide#pressure": [],
+	"pressure#canals": [],
+	"canals#pressure": [],
+	"pressure#climate change": [],
+	"climate change#pressure": [],
+	"pressure#cacti": [],
+	"cacti#pressure": [],
+	"pressure#lakes": [],
+	"lakes#pressure": [],
+	"pressure#body": [],
+	"body#pressure": [],
+	"pressure#tea": [
+		"has property"
+	],
+	"tea#pressure": [],
+	"pressure#minerals": [],
+	"minerals#pressure": [],
+	"pressure#camels": [],
+	"camels#pressure": [],
+	"pressure#potatoes": [],
+	"potatoes#pressure": [],
+	"pressure#crickets": [],
+	"crickets#pressure": [],
+	"pressure#tds": [],
+	"tds#pressure": [],
+	"pressure#carbon cycle": [],
+	"carbon cycle#pressure": [],
+	"pressure#vietnam": [],
+	"vietnam#pressure": [],
+	"pressure#red": [],
+	"red#pressure": [],
+	"pressure#mountains": [],
+	"mountains#pressure": [],
+	"pressure#fat-soluble vitamins": [],
+	"fat-soluble vitamins#pressure": [],
+	"pressure#metabolism": [],
+	"metabolism#pressure": [],
+	"pressure#fish": [],
+	"fish#pressure": [
+		"be crushed by",
+		"die from",
+		"feel",
+		"withstand"
+	],
+	"water#celsius": [],
+	"celsius#water": [],
+	"pressure#celsius": [],
+	"celsius#pressure": []
 }
