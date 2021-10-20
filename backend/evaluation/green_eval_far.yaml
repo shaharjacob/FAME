@@ -10,8 +10,8 @@ mapping:
       - logic --> mechanism
 
   - input: #2 : 0/3
-      base: [ash, fireplace, chimney] # no fireplace#ash
-      target: [lint, pocket, washer] # no lint#pocket
+      base: [ash, fireplace, chimney]
+      target: [lint, pocket, washer]
       depth: 4
     output:
       mapping:
@@ -264,7 +264,7 @@ mapping:
       - lawyer --> wine
       - experience --> aging
 
-  - input: #28 : 2/2
+  - input: #28 : 2/2 TODO
       base: [movie, screen]
       target: [lightning, sky]
       depth: 4
@@ -283,7 +283,7 @@ mapping:
       - product --> beer
       - mathematician --> brewer
 
-  - input: #30 : 2/2
+  - input: #30 : 3/3
       base: [nose, scent, snot]
       target: [antenna, signal, radiation]
       depth: 4

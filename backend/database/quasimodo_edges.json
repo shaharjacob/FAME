@@ -15543,5 +15543,405 @@
 	"sun#iron": [],
 	"iron#sun": [],
 	"rain#pipe": [],
-	"pipe#rain": []
+	"pipe#rain": [],
+	"kettle#sun": [],
+	"sun#kettle": [],
+	"bucket#rain": [],
+	"rain#bucket": [],
+	"movie#on computer": [],
+	"on computer#movie": [],
+	"movie#disney": [],
+	"disney#movie": [
+		"animate",
+		"distribute",
+		"has property",
+		"hide things in",
+		"keep",
+		"make anymore",
+		"put messages in",
+		"redo",
+		"render"
+	],
+	"movie#on windows": [],
+	"on windows#movie": [],
+	"movie#yellow": [
+		"be popcorn",
+		"has color"
+	],
+	"yellow#movie": [],
+	"movie#watchmen series": [],
+	"watchmen series#movie": [],
+	"movie#apple": [],
+	"apple#movie": [],
+	"movie#smaller": [],
+	"smaller#movie": [],
+	"movie#my ipad": [],
+	"my ipad#movie": [],
+	"movie#the beatles": [],
+	"the beatles#movie": [],
+	"movie#i get": [],
+	"i get#movie": [],
+	"movie#on laptop": [],
+	"on laptop#movie": [],
+	"movie#books": [
+		"based on",
+		"be about",
+		"be better than",
+		"be different from",
+		"be like",
+		"be worse than",
+		"can",
+		"deviate heavily from",
+		"follow",
+		"has property"
+	],
+	"books#movie": [
+		"be better than",
+		"be inherently better than",
+		"be turn into",
+		"be typically better than",
+		"be usually better than",
+		"become",
+		"get made into",
+		"get turned into",
+		"turn into",
+		"turned into"
+	],
+	"movie#i watch": [],
+	"i watch#movie": [],
+	"movie#amazon": [
+		"be temporarily unavailable on",
+		"rent on"
+	],
+	"amazon#movie": [
+		"has property"
+	],
+	"movie#fargo series": [],
+	"fargo series#movie": [],
+	"movie#i have": [],
+	"i have#movie": [],
+	"movie#safari": [],
+	"safari#movie": [],
+	"movie#on fortnite": [],
+	"on fortnite#movie": [],
+	"movie#on mac": [],
+	"on mac#movie": [],
+	"movie#hallmark": [],
+	"hallmark#movie": [],
+	"movie#on iphone": [],
+	"on iphone#movie": [],
+	"movie#hd": [],
+	"hd#movie": [],
+	"movie#on ipad": [],
+	"on ipad#movie": [],
+	"movie#awful scripts": [
+		"be with"
+	],
+	"awful scripts#movie": [],
+	"movie#weed": [],
+	"weed#movie": [],
+	"movie#my": [],
+	"my#movie": [],
+	"movie#xbox remove": [],
+	"xbox remove#movie": [],
+	"movie#pixar": [],
+	"pixar#movie": [],
+	"movie#marvel": [],
+	"marvel#movie": [
+		"be better at",
+		"be in",
+		"has property",
+		"make"
+	],
+	"movie#iphone": [],
+	"iphone#movie": [],
+	"movie#16:9 scenes": [
+		"be with"
+	],
+	"16:9 scenes#movie": [],
+	"movie#fortnite disable": [],
+	"fortnite disable#movie": [],
+	"movie#the first": [],
+	"the first#movie": [],
+	"movie#violent behavior": [
+		"cause"
+	],
+	"violent behavior#movie": [],
+	"movie#i download": [],
+	"i download#movie": [],
+	"movie#endgame": [
+		"be after"
+	],
+	"endgame#movie": [
+		"has property"
+	],
+	"movie#brighter": [],
+	"brighter#movie": [],
+	"movie#money": [
+		"anywhere make",
+		"earn",
+		"get",
+		"lose",
+		"make",
+		"raise"
+	],
+	"money#movie": [
+		"be in",
+		"has property"
+	],
+	"movie#walt disney": [],
+	"walt disney#movie": [],
+	"movie#fake cigarettes": [
+		"make"
+	],
+	"fake cigarettes#movie": [],
+	"movie#saver": [],
+	"saver#movie": [],
+	"movie#black": [
+		"be in",
+		"has color"
+	],
+	"black#movie": [
+		"talk loudly during"
+	],
+	"movie#bigger": [],
+	"bigger#movie": [],
+	"movie#games": [
+		"can play nicely with",
+		"follow"
+	],
+	"games#movie": [
+		"be based on",
+		"be different from",
+		"has property"
+	],
+	"movie#polarized sunglasses": [],
+	"polarized sunglasses#movie": [],
+	"movie#sex scenes": [
+		"be with",
+		"do",
+		"have",
+		"involve"
+	],
+	"sex scenes#movie": [],
+	"movie#us feel": [
+		"make"
+	],
+	"us feel#movie": [],
+	"movie#watchmen show": [],
+	"watchmen show#movie": [],
+	"movie#babies cry": [
+		"make"
+	],
+	"babies cry#movie": [],
+	"movie#netflix": [
+		"be available on",
+		"be old on",
+		"be on",
+		"be pg on",
+		"be purchased on",
+		"come on",
+		"come out on",
+		"play on",
+		"show up on",
+		"stay on"
+	],
+	"netflix#movie": [],
+	"movie#good act": [
+		"be with"
+	],
+	"good act#movie": [],
+	"screen#on computer": [],
+	"on computer#screen": [],
+	"screen#disney": [],
+	"disney#screen": [],
+	"screen#on windows": [],
+	"on windows#screen": [],
+	"screen#yellow": [
+		"go",
+		"has color",
+		"make"
+	],
+	"yellow#screen": [
+		"be produced on",
+		"has property"
+	],
+	"screen#watchmen series": [],
+	"watchmen series#screen": [],
+	"screen#apple": [],
+	"apple#screen": [],
+	"screen#smaller": [],
+	"smaller#screen": [],
+	"screen#my ipad": [],
+	"my ipad#screen": [],
+	"screen#the beatles": [],
+	"the beatles#screen": [],
+	"screen#i get": [],
+	"i get#screen": [],
+	"screen#on laptop": [],
+	"on laptop#screen": [],
+	"screen#books": [
+		"be better than"
+	],
+	"books#screen": [],
+	"screen#i watch": [],
+	"i watch#screen": [],
+	"screen#amazon": [
+		"has property"
+	],
+	"amazon#screen": [],
+	"screen#fargo series": [],
+	"fargo series#screen": [],
+	"screen#i have": [],
+	"i have#screen": [],
+	"screen#safari": [
+		"be on"
+	],
+	"safari#screen": [
+		"fill",
+		"have split"
+	],
+	"screen#on fortnite": [],
+	"on fortnite#screen": [],
+	"screen#on mac": [],
+	"on mac#screen": [],
+	"screen#hallmark": [],
+	"hallmark#screen": [],
+	"screen#on iphone": [],
+	"on iphone#screen": [],
+	"screen#hd": [],
+	"hd#screen": [],
+	"screen#on ipad": [],
+	"on ipad#screen": [],
+	"screen#awful scripts": [],
+	"awful scripts#screen": [],
+	"screen#weed": [],
+	"weed#screen": [],
+	"screen#my": [],
+	"my#screen": [],
+	"screen#xbox remove": [],
+	"xbox remove#screen": [],
+	"screen#pixar": [],
+	"pixar#screen": [],
+	"screen#marvel": [],
+	"marvel#screen": [],
+	"screen#iphone": [
+		"be black on",
+		"be blurry on",
+		"be dark on",
+		"go down on",
+		"go on",
+		"has property",
+		"rotate on"
+	],
+	"iphone#screen": [
+		"have split"
+	],
+	"screen#16:9 scenes": [],
+	"16:9 scenes#screen": [],
+	"screen#fortnite disable": [],
+	"fortnite disable#screen": [],
+	"screen#the first": [],
+	"the first#screen": [],
+	"screen#violent behavior": [],
+	"violent behavior#screen": [],
+	"screen#i download": [],
+	"i download#screen": [],
+	"screen#endgame": [],
+	"endgame#screen": [],
+	"screen#brighter": [
+		"has property"
+	],
+	"brighter#screen": [],
+	"screen#money": [],
+	"money#screen": [],
+	"screen#walt disney": [],
+	"walt disney#screen": [],
+	"screen#fake cigarettes": [],
+	"fake cigarettes#screen": [],
+	"screen#saver": [],
+	"saver#screen": [],
+	"screen#black": [
+		"be on",
+		"be turn",
+		"be when off",
+		"go",
+		"has color",
+		"make",
+		"randomly go",
+		"show",
+		"turn"
+	],
+	"black#screen": [
+		"has property"
+	],
+	"screen#bigger": [
+		"has property"
+	],
+	"bigger#screen": [],
+	"screen#games": [],
+	"games#screen": [
+		"have loading",
+		"have split anymore",
+		"have start"
+	],
+	"screen#polarized sunglasses": [],
+	"polarized sunglasses#screen": [],
+	"screen#sex scenes": [],
+	"sex scenes#screen": [],
+	"screen#us feel": [],
+	"us feel#screen": [],
+	"screen#watchmen show": [],
+	"watchmen show#screen": [],
+	"screen#babies cry": [],
+	"babies cry#screen": [],
+	"screen#netflix": [
+		"be black on",
+		"be green on",
+		"go on",
+		"work on"
+	],
+	"netflix#screen": [],
+	"screen#good act": [],
+	"good act#screen": [],
+	"movie#you spell": [],
+	"you spell#movie": [],
+	"movie#they fix": [],
+	"they fix#movie": [],
+	"movie#a": [],
+	"a#movie": [],
+	"movie#toothpaste fix": [],
+	"toothpaste fix#movie": [],
+	"movie#you fix": [],
+	"you fix#movie": [],
+	"movie#windows 7": [],
+	"windows 7#movie": [],
+	"movie#asurion fix": [],
+	"asurion fix#movie": [],
+	"movie#verizon fix": [],
+	"verizon fix#movie": [],
+	"screen#you spell": [],
+	"you spell#screen": [],
+	"screen#they fix": [],
+	"they fix#screen": [],
+	"screen#a": [],
+	"a#screen": [],
+	"screen#toothpaste fix": [],
+	"toothpaste fix#screen": [],
+	"screen#you fix": [],
+	"you fix#screen": [],
+	"screen#windows 7": [
+		"appear in",
+		"happen",
+		"occur in"
+	],
+	"windows 7#screen": [],
+	"screen#asurion fix": [],
+	"asurion fix#screen": [],
+	"screen#verizon fix": [],
+	"verizon fix#screen": [],
+	"knee#silicon": [],
+	"silicon#knee": [],
+	"kneepad#silicon": [],
+	"silicon#kneepad": []
 }

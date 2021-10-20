@@ -1,5 +1,5 @@
 mapping:
-  - input: #1
+  - input: #1 : 5/5
       base: [solar system, sun, planet, gravity, newton]
       target: [atom, nucleus, electron, electricity, faraday]
       depth: 4
@@ -11,7 +11,7 @@ mapping:
         - gravity --> electricity
         - newton --> faraday
   
-  - input: #2
+  - input: #2 : 3/3
       base: [thoughts, brain, neurons]
       target: [astronaut, space, black hole]
       depth: 2
@@ -21,7 +21,7 @@ mapping:
         - brain --> space
         - neurons --> black hole
   
-  - input: #3
+  - input: #3 : 3/3
       base: [cars, road, wheels]
       target: [boats, river, sail]
       depth: 2
@@ -31,7 +31,7 @@ mapping:
         - road --> river
         - wheels --> sail
   
-  - input: #4
+  - input: #4 : 3/3
       base: [sunscreen, sun, summer]
       target: [umbrella, rain, winter]
       depth: 2
@@ -41,9 +41,9 @@ mapping:
         - summer --> winter
         - sunscreen --> umbrella
   
-  - input: #5
-      base: [water, pressure, bucket, pipe]
-      target: [heat, temperature, kettle, iron]
+  - input: #5 : 5/5
+      base: [water, pressure, bucket, pipe, rain]
+      target: [heat, temperature, kettle, iron, sun]
       depth: 4
     output:
       mapping:
@@ -51,8 +51,9 @@ mapping:
         - pressure --> temperature
         - bucket --> kettle
         - pipe --> iron
+        - rain --> sun
   
-  - input: #6
+  - input: #6 : 4/4
       base: [waves, water, shore, breakwater]
       target: [sounds, air, wall, ear]
       depth: 4
@@ -63,7 +64,7 @@ mapping:
         - shore --> ear
         - breakwater --> wall
 
-  - input: #7
+  - input: #7 : 3/3
       base: [respiration, animal, food]
       target: [combustion, fire, fuel]
       depth: 4
@@ -73,7 +74,7 @@ mapping:
         - animal --> fire
         - food --> fuel
 
-  - input: #8
+  - input: #8 : 3/3
       base: [light, bright, lens]
       target: [sound, loud, horn]
       depth: 4
@@ -83,7 +84,7 @@ mapping:
         - bright --> loud
         - lens --> horn
 
-  - input: #9
+  - input: #9 : 3/3
       base: [computer, processing, bug]
       target: [brain, thinking, mistake]
       depth: 4
@@ -93,7 +94,7 @@ mapping:
         - processing --> thinking
         - bug --> mistake
 
-  - input: #10
+  - input: #10 : 3/3
       base: [war, soldiers, weapon]
       target: [court, lawyer, evidence] 
       depth: 4
@@ -103,7 +104,7 @@ mapping:
         - soldiers --> lawyer
         - weapon --> evidence
 
-  - input: #11
+  - input: #11 : 3/3
       base: [blood, vein, hospital]
       target: [people, bus, garage] 
       depth: 4
@@ -113,7 +114,7 @@ mapping:
         - vein --> bus
         - hospital --> garage
 
-  - input: #12
+  - input: #12 : 3/3
       base: [law, crime, death]
       target: [medicine, illness, life] 
       depth: 4
@@ -123,7 +124,7 @@ mapping:
         - crime --> illness
         - death --> life
 
-  - input: #13 TODO
+  - input: #13 : 2/4
       base: [room, apartment, building, neighborhood]
       target: [leaf, branch, tree, forest] 
       depth: 4
@@ -134,7 +135,7 @@ mapping:
         - building --> tree
         - neighborhood --> forest
 
-  - input: #14
+  - input: #14 : 4/4
       base: [goal, football, grass, feet]
       target: [basket, basketball, parquet, hands] 
       depth: 4
@@ -145,7 +146,7 @@ mapping:
         - grass --> parquet
         - feet --> hands
 
-  - input: #15
+  - input: #15 : 3/3
       base: [seeds, fruit, bloom]
       target: [ideas, product, success] 
       depth: 4
@@ -155,7 +156,7 @@ mapping:
         - fruit --> product
         - bloom --> success
 
-  - input: #16
+  - input: #16 : 3/3
       base: [buildings, foundations, crack]
       target: [theories, reasons, flaw] 
       depth: 4
@@ -165,7 +166,7 @@ mapping:
         - foundations --> reasons
         - crack --> flaw
 
-  - input: #17
+  - input: #17 : 4/4
       base: [cover, book, paper, wood]
       target: [pillowcase, pillow, feather, chicken] 
       depth: 4
@@ -176,7 +177,7 @@ mapping:
         - paper --> feather
         - wood --> chicken
 
-  - input: #18
+  - input: #18 : 4/4
       base: [captain, ship, water, harbor]
       target: [pilot, airplane, air, airport] 
       depth: 4
@@ -187,7 +188,7 @@ mapping:
         - water --> air
         - harbor --> airport
 
-  - input: #19
+  - input: #19 : 4/4
       base: [letter, word, sentence, language]
       target: [digit, number, equation, math] 
       depth: 4
@@ -198,7 +199,7 @@ mapping:
         - language --> math
         - letter --> digit
 
-  - input: #20
+  - input: #20 : 4/4
       base: [morning, breakfast, start, coffee]
       target: [evening, dinner, end, wine] 
       depth: 4
@@ -209,7 +210,7 @@ mapping:
         - start --> end
         - coffee --> wine
 
-  - input: #21
+  - input: #21 : 3/3
       base: [education, teacher, school]
       target: [healthcare, doctor, hospital] 
       depth: 4
@@ -219,7 +220,7 @@ mapping:
         - teacher --> doctor
         - school --> hospital
 
-  - input: #22
+  - input: #22 : 3/3
       base: [vacuum cleaner, dust, electricity]
       target: [black hole, planet, gravity] 
       depth: 4
@@ -229,7 +230,7 @@ mapping:
         - dust --> planet
         - electricity --> gravity
 
-  - input: #23
+  - input: #23 : 3/3
       base: [motorcycle, motorcyclist, fuel]
       target: [singer, microphone, electricity] 
       depth: 4
@@ -239,7 +240,7 @@ mapping:
         - motorcycle --> microphone
         - fuel --> electricity
 
-  - input: #24
+  - input: #24 : 3/3
       base: [refrigerator, cold, air conditioner]
       target: [oven, hot, heater] 
       depth: 4
@@ -249,7 +250,7 @@ mapping:
         - cold --> hot
         - air conditioner --> heater
 
-  - input: #25
+  - input: #25 : 3/3
       base: [singer, song, lyrics]
       target: [programmer, code, logic] 
       depth: 4
@@ -259,7 +260,7 @@ mapping:
         - song --> code
         - lyrics --> logic
 
-  - input: #26
+  - input: #26 : 3/3
       base: [eraser, pencil, paper]
       target: [delete, keyboard, screen] 
       depth: 4
@@ -269,7 +270,7 @@ mapping:
         - pencil --> keyboard
         - paper --> screen
 
-  - input: #27
+  - input: #27 : 3/3
       base: [flowers, bouquet, ribbon]
       target: [players, team, coach] 
       depth: 4
@@ -279,7 +280,7 @@ mapping:
         - bouquet --> team
         - ribbon --> coach
 
-  - input: #28
+  - input: #28 : 4/4
       base: [feet, socks, shirt, football]
       target: [hands, gloves, pants, basketball] 
       depth: 4
@@ -290,7 +291,7 @@ mapping:
         - shirt --> pants
         - football --> basketball
 
-  - input: #29
+  - input: #29 : 0/3
       base: [clock, dial, time]
       target: [radio, frequency, audio] 
       depth: 4
@@ -300,7 +301,7 @@ mapping:
         - dial --> frequency
         - time --> audio
 
-  - input: #30
+  - input: #30 : 0/3
       base: [king, kingdom, crown]
       target: [motorcyclist, motorcycle, helmet] 
       depth: 4
@@ -310,7 +311,7 @@ mapping:
         - kingdom --> motorcycle
         - crown --> helmet
 
-  - input: #31
+  - input: #31 : 1/4
       base: [ski, skis, snow, funicular]
       target: [golf, club, grass, cart] 
       depth: 4
@@ -321,7 +322,7 @@ mapping:
         - snow --> grass
         - funicular --> cart
   
-  - input: #32
+  - input: #32 : 3/3
       base: [tv, picture, living room]
       target: [radio, sound, car] 
       depth: 4
@@ -331,7 +332,7 @@ mapping:
         - picture --> sound
         - living room --> car
 
-  - input: #33
+  - input: #33 : 1/3
       base: [client, internet, website]
       target: [surfer, sea, wave]
       depth: 4
@@ -341,7 +342,7 @@ mapping:
         - internet --> sea
         - website --> wave
   
-  - input: #34
+  - input: #34 : 4/4
       base: [foresight, future, hope, joy] 
       target: [hindsight, past, depression, crying]
       depth: 4
@@ -353,29 +354,17 @@ mapping:
       - joy --> crying
   
   - input: #35
-      base: [sun, earth, tomato, water, sunscreen]
-      target: [nucleus, electrons, cells, energy, cytoplasm]
+      base: [sun, earth, water, sunscreen]
+      target: [nucleus, electrons, energy, cytoplasm]
       depth: 4
     output:
       mapping:
       - sun --> nucleus
       - earth --> electrons
-      - tomato --> cells
       - water --> energy
       - sunscreen --> cytoplasm
-  
-  - input: #36
-      base: [water, pressure, rain, pipe]
-      target: [heat, temperature, sun, iron]
-      depth: 4
-    output:
-      mapping:
-        - water --> heat
-        - pressure --> temperature
-        - rain --> sun
-        - pipe --> iron
 
-  - input: #37
+  - input: #36
       base: [battery, copper wire, resistor]
       target: [pump, pipe, valve]
       depth: 4
