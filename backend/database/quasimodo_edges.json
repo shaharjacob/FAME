@@ -14016,5 +14016,394 @@
 		"stay"
 	],
 	"boiling#temperature": [],
-	"temperature#electrical energy": []
+	"temperature#electrical energy": [],
+	"electrical energy#temperature": [],
+	"temperature#vacuum": [
+		"be measured in"
+	],
+	"vacuum#temperature": [
+		"affect",
+		"have"
+	],
+	"temperature#an alone": [],
+	"an alone#temperature": [],
+	"temperature#work": [
+		"can"
+	],
+	"work#temperature": [],
+	"temperature#protein": [
+		"affect",
+		"denature"
+	],
+	"protein#temperature": [],
+	"temperature#hiccup": [],
+	"hiccup#temperature": [],
+	"temperature#electricity": [
+		"affect"
+	],
+	"electricity#temperature": [
+		"be affected by"
+	],
+	"heat#dry": [
+		"be better than"
+	],
+	"dry#heat": [],
+	"heat#heat exhaustion": [],
+	"heat exhaustion#heat": [],
+	"heat#electrical energy": [
+		"be converted directly to"
+	],
+	"electrical energy#heat": [
+		"be converted into",
+		"be converted to",
+		"be transformed into",
+		"be transformed to",
+		"can turn into"
+	],
+	"heat#heat waves": [
+		"create"
+	],
+	"heat waves#heat": [],
+	"heat#temp": [],
+	"temp#heat": [
+		"relate to"
+	],
+	"heat#urban areas": [],
+	"urban areas#heat": [],
+	"heat#vacuum": [
+		"be transferred through",
+		"create",
+		"permeate"
+	],
+	"vacuum#heat": [
+		"be bad conductor of"
+	],
+	"heat#an alone": [
+		"create"
+	],
+	"an alone#heat": [],
+	"heat#chemical energy": [],
+	"chemical energy#heat": [
+		"be converted to",
+		"has property"
+	],
+	"heat#work": [
+		"be related to",
+		"burn",
+		"can",
+		"do",
+		"rub"
+	],
+	"work#heat": [],
+	"heat#air": [
+		"be transferred through",
+		"blow",
+		"distort",
+		"travel"
+	],
+	"air#heat": [
+		"be good conductor of",
+		"be good insulator of"
+	],
+	"heat#protein": [
+		"affect"
+	],
+	"protein#heat": [
+		"be affected by",
+		"be sensitive to"
+	],
+	"heat#light energy": [],
+	"light energy#heat": [],
+	"heat#hiccup": [],
+	"hiccup#heat": [],
+	"heat#fire": [],
+	"fire#heat": [
+		"create",
+		"give off",
+		"make",
+		"need"
+	],
+	"heat#electricity": [
+		"affect",
+		"be made by",
+		"become",
+		"generate",
+		"has property",
+		"produce"
+	],
+	"electricity#heat": [
+		"be converted to",
+		"be good conductor of",
+		"be transformed into",
+		"can create",
+		"create",
+		"has property",
+		"make",
+		"provide"
+	],
+	"heat#shadow": [
+		"cast",
+		"create",
+		"have",
+		"make",
+		"produce"
+	],
+	"shadow#heat": [],
+	"heat#boiling": [],
+	"boiling#heat": [],
+	"heat#summer": [],
+	"summer#heat": [],
+	"temperature#summer": [
+		"be higher in",
+		"feel in"
+	],
+	"summer#temperature": [],
+	"water#animals": [],
+	"animals#water": [
+		"be in",
+		"can drink",
+		"can walk on",
+		"drink",
+		"find",
+		"live in",
+		"lose",
+		"need",
+		"obtain",
+		"use"
+	],
+	"water#romans": [],
+	"romans#water": [],
+	"water#south africa": [],
+	"south africa#water": [
+		"lose"
+	],
+	"water#mark": [],
+	"mark#water": [],
+	"water#grass": [
+		"be weak to"
+	],
+	"grass#water": [
+		"absorb",
+		"be effective against",
+		"be strong against",
+		"beat",
+		"die without",
+		"get",
+		"need",
+		"use"
+	],
+	"water#slime": [
+		"has property"
+	],
+	"slime#water": [],
+	"water#increase": [],
+	"increase#water": [],
+	"water#us healthy": [
+		"keep",
+		"make"
+	],
+	"us healthy#water": [],
+	"water#systems form": [],
+	"systems form#water": [],
+	"water#mints": [
+		"seem after"
+	],
+	"mints#water": [
+		"cool down",
+		"dissolve in",
+		"make",
+		"make much colder"
+	],
+	"water#witches": [],
+	"witches#water": [
+		"die from"
+	],
+	"water#countries": [],
+	"countries#water": [
+		"can save",
+		"fight over",
+		"get",
+		"have",
+		"save"
+	],
+	"water#north africa": [],
+	"north africa#water": [],
+	"water#jesus": [],
+	"jesus#water": [
+		"can walk on",
+		"live"
+	],
+	"water#organisms": [
+		"be necessary for"
+	],
+	"organisms#water": [
+		"can",
+		"can move on",
+		"die without",
+		"get",
+		"live in",
+		"lose",
+		"need",
+		"obtain",
+		"swim in"
+	],
+	"water#sediment": [],
+	"sediment#water": [
+		"be important in",
+		"be in",
+		"get into",
+		"pollute"
+	],
+	"water#yemen": [],
+	"yemen#water": [
+		"get"
+	],
+	"water#my mouth": [],
+	"my mouth#water": [],
+	"water#god": [],
+	"god#water": [],
+	"water#earthen pot": [
+		"kept in",
+		"remain in"
+	],
+	"earthen pot#water": [],
+	"water#arteries have": [],
+	"arteries have#water": [],
+	"water#jordan": [],
+	"jordan#water": [],
+	"water#gum hard": [
+		"make"
+	],
+	"gum hard#water": [],
+	"water#africa": [
+		"be in"
+	],
+	"africa#water": [
+		"be short on",
+		"get",
+		"have",
+		"need",
+		"run out of",
+		"south get",
+		"south is running out of",
+		"use"
+	],
+	"water#affect weather": [],
+	"affect weather#water": [],
+	"water#my eye": [],
+	"my eye#water": [],
+	"water#arteries": [],
+	"arteries#water": [],
+	"water#my tongue": [],
+	"my tongue#water": [],
+	"water#pasta soft": [
+		"make"
+	],
+	"pasta soft#water": [],
+	"water#nails grow": [
+		"make"
+	],
+	"nails grow#water": [],
+	"water#iron rust": [
+		"make"
+	],
+	"iron rust#water": [
+		"be in"
+	],
+	"water#cause headaches": [],
+	"cause headaches#water": [],
+	"water#my eyes": [],
+	"my eyes#water": [],
+	"water#clay pot": [],
+	"clay pot#water": [],
+	"water#some countries": [],
+	"some countries#water": [],
+	"pressure#animals": [],
+	"animals#pressure": [],
+	"pressure#romans": [],
+	"romans#pressure": [],
+	"pressure#south africa": [],
+	"south africa#pressure": [],
+	"pressure#mark": [],
+	"mark#pressure": [],
+	"pressure#grass": [],
+	"grass#pressure": [],
+	"pressure#slime": [],
+	"slime#pressure": [],
+	"pressure#increase": [
+		"can",
+		"exerted by"
+	],
+	"increase#pressure": [
+		"be in"
+	],
+	"pressure#us healthy": [],
+	"us healthy#pressure": [],
+	"pressure#systems form": [],
+	"systems form#pressure": [],
+	"pressure#mints": [],
+	"mints#pressure": [],
+	"pressure#witches": [],
+	"witches#pressure": [],
+	"pressure#countries": [],
+	"countries#pressure": [],
+	"pressure#earth": [
+		"vary inside"
+	],
+	"earth#pressure": [],
+	"pressure#north africa": [],
+	"north africa#pressure": [],
+	"pressure#jesus": [],
+	"jesus#pressure": [],
+	"pressure#organisms": [],
+	"organisms#pressure": [],
+	"pressure#sediment": [],
+	"sediment#pressure": [],
+	"pressure#yemen": [],
+	"yemen#pressure": [],
+	"pressure#my mouth": [],
+	"my mouth#pressure": [],
+	"pressure#god": [],
+	"god#pressure": [],
+	"pressure#earthen pot": [],
+	"earthen pot#pressure": [],
+	"pressure#arteries have": [],
+	"arteries have#pressure": [],
+	"pressure#jordan": [],
+	"jordan#pressure": [],
+	"pressure#gum hard": [],
+	"gum hard#pressure": [],
+	"pressure#africa": [],
+	"africa#pressure": [],
+	"pressure#affect weather": [],
+	"affect weather#pressure": [],
+	"pressure#my eye": [],
+	"my eye#pressure": [],
+	"pressure#arteries": [
+		"be generated in",
+		"be greater in",
+		"be higher in",
+		"be lower than"
+	],
+	"arteries#pressure": [],
+	"pressure#my tongue": [],
+	"my tongue#pressure": [],
+	"pressure#pasta soft": [],
+	"pasta soft#pressure": [],
+	"pressure#nails grow": [],
+	"nails grow#pressure": [],
+	"pressure#iron rust": [],
+	"iron rust#pressure": [],
+	"pressure#cause headaches": [],
+	"cause headaches#pressure": [],
+	"pressure#my eyes": [],
+	"my eyes#pressure": [],
+	"pressure#clay pot": [],
+	"clay pot#pressure": [],
+	"pressure#some countries": [],
+	"some countries#pressure": [],
+	"water#singapore": [],
+	"singapore#water": [
+		"get"
+	]
 }

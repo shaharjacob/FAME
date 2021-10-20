@@ -20744,5 +20744,897 @@
 		"water not change",
 		"water stay the same"
 	],
-	"temperature#electrical energy": []
+	"temperature#electrical energy": [],
+	"electrical energy#temperature": [],
+	"temperature#vacuum": [
+		"affect",
+		"affect the formation of",
+		"work in a"
+	],
+	"vacuum#temperature": [
+		"affect",
+		"affected by"
+	],
+	"temperature#an alone": [],
+	"an alone#temperature": [],
+	"temperature#work": [
+		"affect how fast an enzyme",
+		"apps",
+		"checks",
+		"controller",
+		"controllers",
+		"gauge",
+		"gauge in my car not",
+		"gauges",
+		"gun",
+		"guns",
+		"regulating sheets",
+		"scanner",
+		"scanners",
+		"sensor",
+		"sensor like lm35",
+		"sensors",
+		"strips",
+		"switch"
+	],
+	"work#temperature": [],
+	"temperature#protein": [
+		"affect",
+		"denature"
+	],
+	"protein#temperature": [
+		"affect",
+		"loses its function when exposed to extreme"
+	],
+	"temperature#hiccup": [],
+	"hiccup#temperature": [],
+	"temperature#electricity": [
+		"affect",
+		"affect static"
+	],
+	"electricity#temperature": [
+		"affect"
+	],
+	"heat#dry": [
+		"from the sun transferred to the clothes and caused it to become",
+		"pump dryers take longer to"
+	],
+	"dry#heat": [
+		"heat compare to humid"
+	],
+	"heat#heat exhaustion": [
+		"stroke differ from"
+	],
+	"heat exhaustion#heat": [],
+	"heat#electrical energy": [
+		"energy converted to"
+	],
+	"electrical energy#heat": [
+		"changed to",
+		"transferred to",
+		"transformed into"
+	],
+	"heat#heat waves": [],
+	"heat waves#heat": [],
+	"heat#temp": [
+		"relate to"
+	],
+	"temp#heat": [
+		"affect",
+		"affect specific",
+		"differ from",
+		"relate to"
+	],
+	"heat#urban areas": [],
+	"urban areas#heat": [],
+	"heat#vacuum": [
+		"create a",
+		"dissipate in a",
+		"from the sun travel through a",
+		"propagated in",
+		"radiate in a",
+		"transfer in a",
+		"transfer through a",
+		"transferred in a",
+		"travel through a",
+		"work in a"
+	],
+	"vacuum#heat": [],
+	"heat#an alone": [],
+	"an alone#heat": [],
+	"heat#chemical energy": [],
+	"chemical energy#heat": [],
+	"heat#work": [
+		"converted to",
+		"detector",
+		"engine",
+		"exchanger",
+		"exchangers",
+		"insulators",
+		"packs",
+		"pads",
+		"powered fans",
+		"press machine",
+		"protectant",
+		"pump",
+		"pump dryer",
+		"pump dryers",
+		"pump tumble dryers",
+		"pumps",
+		"radiation",
+		"shock transformation",
+		"shrink tubing",
+		"sink",
+		"tape",
+		"therapy",
+		"trace",
+		"transfer",
+		"transfer make the four strokes engine"
+	],
+	"work#heat": [
+		"converted to"
+	],
+	"heat#air": [
+		"blow cold",
+		"blowing cold",
+		"distort the",
+		"dry out the",
+		"move across a continent as a mass of",
+		"pump blow cold",
+		"pump blowing cold",
+		"pumps blow cold",
+		"travel in",
+		"travel through"
+	],
+	"air#heat": [
+		"conditioners",
+		"get into baseboard",
+		"pockets reduce the transfer of",
+		"retain",
+		"shimmer in",
+		"suspension work in nfs"
+	],
+	"heat#protein": [
+		"affect",
+		"denature",
+		"have on",
+		"shock"
+	],
+	"protein#heat": [
+		"affected by",
+		"denatured by",
+		"generate",
+		"react to"
+	],
+	"heat#light energy": [
+		"energy converted into",
+		"energy transformed to"
+	],
+	"light energy#heat": [],
+	"heat#hiccup": [],
+	"hiccup#heat": [],
+	"heat#fire": [
+		"cause",
+		"cause forest",
+		"create",
+		"lamps cause",
+		"start a",
+		"transfer",
+		"transfer in a forest being ravaged by",
+		"travel from a",
+		"waves cause"
+	],
+	"fire#heat": [
+		"emit",
+		"make",
+		"need",
+		"produce",
+		"represent",
+		"transfer"
+	],
+	"heat#electricity": [
+		"affect",
+		"and",
+		"convert to",
+		"converted to",
+		"create",
+		"energy make",
+		"energy produce",
+		"generate",
+		"turn into",
+		"used to generate"
+	],
+	"electricity#heat": [
+		"a good conductor of",
+		"a source of",
+		"conduct",
+		"convert to",
+		"converted to",
+		"generate",
+		"get transformed into",
+		"produce",
+		"turn into",
+		"turned into"
+	],
+	"heat#shadow": [
+		"cast a",
+		"have a",
+		"make",
+		"waves have"
+	],
+	"shadow#heat": [],
+	"heat#boiling": [
+		"affect"
+	],
+	"boiling#heat": [],
+	"heat#summer": [
+		"pump cool in the",
+		"pump freeze up in",
+		"pump work in",
+		"pumps freeze up in",
+		"pumps work in"
+	],
+	"summer#heat": [],
+	"temperature#summer": [
+		"high",
+		"in",
+		"of the tropical rainforest in"
+	],
+	"summer#temperature": [
+		"rainstorm lower the"
+	],
+	"water#animals": [
+		"affect",
+		"cycle important to other",
+		"enter an",
+		"get into",
+		"help",
+		"helps",
+		"important for plants and",
+		"important to",
+		"important to humans plants and",
+		"make a good coolant for",
+		"pollution affect",
+		"pollution affect humans and",
+		"pollution affect plants and",
+		"pollution affect sea",
+		"pollution affecting",
+		"scarcity affect",
+		"used by plants and"
+	],
+	"animals#water": [
+		"affect",
+		"agriculture affect",
+		"agriculture use so much",
+		"and plants need",
+		"cell burst in",
+		"cell burst in pure",
+		"cell rupture when placed in distilled",
+		"cell shrink in salt",
+		"cells burst in",
+		"cells burst in distilled",
+		"cells burst in pure",
+		"cells burst when placed in distilled",
+		"cells burst when they are placed in pure",
+		"cells need",
+		"cells swell and burst when placed in distilled",
+		"drink",
+		"drink dirty",
+		"find",
+		"float on",
+		"get",
+		"know not to drink salt",
+		"know to drink",
+		"need",
+		"need food and",
+		"not get sick drinking dirty",
+		"use",
+		"with external fertilization almost always live in",
+		"with rabies not like"
+	],
+	"water#romans": [],
+	"romans#water": [
+		"aqueducts",
+		"drink wine instead of",
+		"fill the colosseum with",
+		"get",
+		"mix wine with",
+		"purify",
+		"soldiers carry",
+		"supply their cities with",
+		"transport",
+		"use"
+	],
+	"water#south africa": [
+		"a problem in",
+		"get into our taps",
+		"get polluted on a daily basis in",
+		"get to our taps in",
+		"hyacinth get to",
+		"pollution a breach of our human rights in",
+		"pollution a problem in",
+		"pollution affect",
+		"scarcity affect"
+	],
+	"south africa#water": [
+		"get",
+		"running out of"
+	],
+	"water#mark": [
+		"leave"
+	],
+	"mark#water": [
+		"leave out peter walking on",
+		"not mention peter walking on",
+		"ruffalo make dark",
+		"watney get",
+		"watney make"
+	],
+	"water#grass": [
+		"bubbles form under",
+		"drain from artificial",
+		"drain off artificial",
+		"get trapped under",
+		"get under",
+		"sit on top of",
+		"stick to",
+		"weak to"
+	],
+	"grass#water": [
+		"absorb",
+		"affect the movement of",
+		"beat",
+		"carp swim on top of the",
+		"filter",
+		"get",
+		"grow better with rain",
+		"grow in",
+		"need",
+		"need so much",
+		"take in"
+	],
+	"water#slime": [
+		"coming out of my"
+	],
+	"slime#water": [],
+	"water#increase": [
+		"pressure",
+		"pressure change as the depth of the water",
+		"pressure change as water depth",
+		"pressure in my shower"
+	],
+	"increase#water": [
+		"in population responsible for shortage of"
+	],
+	"water#us healthy": [
+		"keep",
+		"make"
+	],
+	"us healthy#water": [],
+	"water#systems form": [],
+	"systems form#water": [],
+	"water#mints": [
+		"burn after",
+		"cold after",
+		"cold after eating",
+		"feel cold after",
+		"feel cold after eating",
+		"so cold after",
+		"taste colder after eating a"
+	],
+	"mints#water": [
+		"leaves turn black in",
+		"make your eyes",
+		"turn brown in",
+		"wilt in"
+	],
+	"water#witches": [
+		"kill",
+		"kill the wicked",
+		"melt",
+		"melt the",
+		"melt the wicked"
+	],
+	"witches#water": [
+		"melt in",
+		"melt with"
+	],
+	"water#countries": [
+		"aid help developing",
+		"footprint vary for different types of",
+		"insecurity affect the level of development in a",
+		"pipes often burst in cold",
+		"pollution affect developing",
+		"pollution affect the",
+		"pollution affect the economy of the",
+		"resources very important for our",
+		"scarcity affect",
+		"scarcity affect a",
+		"security important to all",
+		"taste different in different",
+		"taste different in different parts of the",
+		"taste different in other",
+		"transport help our"
+	],
+	"countries#water": [
+		"fight over",
+		"get",
+		"import",
+		"in the middle east get",
+		"lack clean",
+		"not have clean",
+		"use"
+	],
+	"water#north africa": [
+		"influence the human-environment interactions in southwest asia and",
+		"scarce in",
+		"scarcity a problem in",
+		"scarcity define the climate of",
+		"shape human settlement patterns in",
+		"such an important resource in"
+	],
+	"north africa#water": [],
+	"water#jesus": [
+		"come from",
+		"come out of",
+		"flow from",
+		"flow out of"
+	],
+	"jesus#water": [
+		"ask the samaritan woman for",
+		"bleed",
+		"bugs walk on",
+		"call himself living",
+		"called the living",
+		"christ lizard run on",
+		"christ lizard walk on",
+		"describe himself as the living",
+		"lizard walk on",
+		"lizards walk on",
+		"our living",
+		"survive 40 days without",
+		"the living",
+		"use",
+		"walk on"
+	],
+	"water#organisms": [
+		"act as transportation within an",
+		"acting as a solvent important for living",
+		"affect",
+		"affect living",
+		"being a solvent help aquatic",
+		"being a universal solvent help living",
+		"cohesion affect living",
+		"cycle help the",
+		"density important to aquatic",
+		"help maintain homeostasis in an",
+		"high heat of vaporization affect living",
+		"important to living",
+		"involved in the transport of molecules in living",
+		"moderate temperature in",
+		"molds affect",
+		"molecule so important to",
+		"necessary for living",
+		"not considered to be a living",
+		"pollution affect",
+		"properties affect living",
+		"relate to",
+		"required by living"
+	],
+	"organisms#water": [
+		"depend on",
+		"die without",
+		"gain",
+		"live in",
+		"make",
+		"need",
+		"that maintains homeostasis react to too much",
+		"use",
+		"use carbon-based molecules and make"
+	],
+	"water#sediment": [
+		"affect",
+		"deposit",
+		"deposited",
+		"in seagrass meadows need to be clear of",
+		"move",
+		"transport"
+	],
+	"sediment#water": [
+		"affect organisms in",
+		"relate to"
+	],
+	"water#yemen": [
+		"scarcity affect",
+		"scarcity affect the environment in"
+	],
+	"yemen#water": [
+		"get",
+		"running out of"
+	],
+	"water#my mouth": [
+		"bitter in",
+		"coming out of",
+		"dry",
+		"drying",
+		"leave a bad taste in",
+		"spray out of",
+		"taste bitter in",
+		"taste sweet in"
+	],
+	"my mouth#water": [
+		"always dry even though i drink a lot of",
+		"dry even though i drink a lot of",
+		"feel dry after drinking",
+		"feel dry even after drinking",
+		"feel dry when i drink",
+		"so dry even though i drink lots of",
+		"spray",
+		"spring",
+		"springing",
+		"still dry after drinking a lot of"
+	],
+	"water#god": [],
+	"god#water": [
+		"create",
+		"create the fish to live and move within",
+		"lead us beside still",
+		"make",
+		"make salt",
+		"separate the",
+		"spirit hover over the",
+		"take us through troubled",
+		"taking me through troubled",
+		"walk on"
+	],
+	"water#earthen pot": [
+		"get cooled in an",
+		"kept in",
+		"kept in an",
+		"stay cool in",
+		"stay cool in an",
+		"stored in"
+	],
+	"earthen pot#water": [
+		"cool"
+	],
+	"water#arteries have": [],
+	"arteries have#water": [],
+	"water#jordan": [
+		"scarce in"
+	],
+	"jordan#water": [
+		"get"
+	],
+	"water#gum hard": [
+		"make",
+		"make chewing"
+	],
+	"gum hard#water": [],
+	"water#africa": [
+		"a problem in south",
+		"affect population density in",
+		"crisis start in",
+		"dirty in",
+		"get to our taps in south",
+		"hyacinth get to south",
+		"pollution a problem in south",
+		"pollution affect south",
+		"pollution affect trade in",
+		"pollution impact the development of",
+		"resources vary across west and central",
+		"scarcity affect",
+		"scarcity define the climate of north",
+		"scarcity such a problem in",
+		"shape human settlement patterns in north"
+	],
+	"africa#water": [
+		"clean their",
+		"get",
+		"get clean",
+		"get their",
+		"have no",
+		"manage their",
+		"not have access to clean",
+		"not have clean",
+		"purify",
+		"save"
+	],
+	"water#affect weather": [
+		"cycle",
+		"pollution",
+		"temperature",
+		"vapor"
+	],
+	"affect weather#water": [],
+	"water#my eye": [
+		"burn",
+		"come out of",
+		"coming out of",
+		"dripping from",
+		"hurt",
+		"irritate",
+		"keep coming out of",
+		"sting"
+	],
+	"my eye#water": [
+		"always",
+		"bringing out",
+		"burn and",
+		"burn when they",
+		"constantly",
+		"hurt and",
+		"itch and",
+		"keep running",
+		"run",
+		"running",
+		"sting and",
+		"sting when they"
+	],
+	"water#arteries": [
+		"squirt out of the"
+	],
+	"arteries#water": [],
+	"water#my tongue": [
+		"come out from under",
+		"hurt",
+		"shock",
+		"taste weird on"
+	],
+	"my tongue#water": [
+		"dry even after drinking",
+		"feel dry after drinking",
+		"feel dry when i drink",
+		"hurt when i drink",
+		"itch when i drink",
+		"spit",
+		"spray",
+		"tingle when i drink",
+		"tingling after drinking",
+		"white and"
+	],
+	"water#pasta soft": [],
+	"pasta soft#water": [],
+	"water#nails grow": [
+		"make your"
+	],
+	"nails grow#water": [
+		"faster in"
+	],
+	"water#iron rust": [
+		"make"
+	],
+	"iron rust#water": [
+		"faster in",
+		"faster in salt",
+		"in",
+		"in salt"
+	],
+	"water#cause headaches": [],
+	"cause headaches#water": [],
+	"water#my eyes": [
+		"burn",
+		"come out of",
+		"coming out of",
+		"dripping from",
+		"hurt",
+		"irritate",
+		"keep coming out of",
+		"sting"
+	],
+	"my eyes#water": [
+		"always",
+		"bringing out",
+		"burn and",
+		"burn when they",
+		"constantly",
+		"hurt and",
+		"itch and",
+		"keep running",
+		"run",
+		"running",
+		"sting and",
+		"sting when they"
+	],
+	"water#clay pot": [
+		"cold in",
+		"cooler in a"
+	],
+	"clay pot#water": [
+		"cool",
+		"purify"
+	],
+	"water#some countries": [],
+	"some countries#water": [
+		"have a limited availability of",
+		"not have clean",
+		"not have enough"
+	],
+	"pressure#animals": [
+		"affect"
+	],
+	"animals#pressure": [
+		"adapt to high",
+		"cells protect themselves from osmotic",
+		"in the deep sea cope with high",
+		"survive in high",
+		"survive ocean"
+	],
+	"pressure#romans": [],
+	"romans#pressure": [],
+	"pressure#south africa": [],
+	"south africa#pressure": [],
+	"pressure#mark": [
+		"treated wood have"
+	],
+	"mark#pressure": [],
+	"pressure#grass": [],
+	"grass#pressure": [],
+	"pressure#slime": [],
+	"slime#pressure": [],
+	"pressure#increase": [
+		"affected as depth",
+		"and temperature change inside earth as depth",
+		"change as altitude",
+		"change as elevation",
+		"change as the depth below the surface of a fluid",
+		"decrease as altitude",
+		"decrease as flow rate",
+		"decrease as velocity",
+		"decrease when temperature",
+		"decrease when velocity",
+		"decrease when volume",
+		"drop when flow rate",
+		"increase as depth",
+		"increase when temperature"
+	],
+	"increase#pressure": [
+		"blood",
+		"low blood",
+		"water"
+	],
+	"pressure#us healthy": [],
+	"us healthy#pressure": [],
+	"pressure#systems form": [],
+	"systems form#pressure": [],
+	"pressure#mints": [],
+	"mints#pressure": [],
+	"pressure#witches": [],
+	"witches#pressure": [],
+	"pressure#countries": [],
+	"countries#pressure": [],
+	"pressure#earth": [
+		"and temperature change with depth inside",
+		"and temperature change with increasing depth in the",
+		"and temperature vary with depth inside the",
+		"change as you go deeper into the",
+		"change inside of",
+		"change toward the center of",
+		"change with depth in the",
+		"increase deeper inside",
+		"increase toward the surface of the",
+		"increase towards the centre of the",
+		"increase with depth in",
+		"increase with depth in the"
+	],
+	"earth#pressure": [
+		"pressure related to overburden"
+	],
+	"pressure#north africa": [],
+	"north africa#pressure": [],
+	"pressure#jesus": [],
+	"jesus#pressure": [
+		"handle"
+	],
+	"pressure#organisms": [
+		"affect marine"
+	],
+	"organisms#pressure": [
+		"live under high",
+		"need",
+		"require",
+		"respond to natural selection"
+	],
+	"pressure#sediment": [],
+	"sediment#pressure": [],
+	"pressure#yemen": [],
+	"yemen#pressure": [],
+	"pressure#my mouth": [],
+	"my mouth#pressure": [],
+	"pressure#god": [],
+	"god#pressure": [],
+	"pressure#earthen pot": [],
+	"earthen pot#pressure": [],
+	"pressure#arteries have": [],
+	"arteries have#pressure": [
+		"high"
+	],
+	"pressure#jordan": [],
+	"jordan#pressure": [],
+	"pressure#gum hard": [],
+	"gum hard#pressure": [],
+	"pressure#africa": [],
+	"africa#pressure": [],
+	"pressure#affect weather": [
+		"systems"
+	],
+	"affect weather#pressure": [],
+	"pressure#my eye": [],
+	"my eye#pressure": [
+		"feel",
+		"feel a lot of",
+		"feel like it has",
+		"feel like they have",
+		"feeling",
+		"have",
+		"have so much",
+		"hurt",
+		"water when i have sinus",
+		"water when my sinus"
+	],
+	"pressure#arteries": [
+		"affect",
+		"fluctuate in",
+		"generated in",
+		"in",
+		"in aorta higher than in pulmonary",
+		"lower in veins than"
+	],
+	"arteries#pressure": [
+		"affect",
+		"affect blood",
+		"aid in blood",
+		"aid in maintaining blood",
+		"carry blood at high",
+		"carry blood under high",
+		"control blood",
+		"flow under",
+		"have high",
+		"have high blood",
+		"increase blood",
+		"influence blood",
+		"maintain blood",
+		"need high",
+		"withstand"
+	],
+	"pressure#my tongue": [],
+	"my tongue#pressure": [],
+	"pressure#pasta soft": [],
+	"pasta soft#pressure": [],
+	"pressure#nails grow": [],
+	"nails grow#pressure": [],
+	"pressure#iron rust": [],
+	"iron rust#pressure": [],
+	"pressure#cause headaches": [
+		"change",
+		"changes"
+	],
+	"cause headaches#pressure": [],
+	"pressure#my eyes": [],
+	"my eyes#pressure": [
+		"feel",
+		"feel a lot of",
+		"feel like it has",
+		"feel like they have",
+		"feeling",
+		"have",
+		"have so much",
+		"hurt",
+		"water when i have sinus",
+		"water when my sinus"
+	],
+	"pressure#clay pot": [],
+	"clay pot#pressure": [],
+	"pressure#some countries": [],
+	"some countries#pressure": [],
+	"water#singapore": [
+		"purified in"
+	],
+	"singapore#water": [
+		"conserve",
+		"get",
+		"need to import",
+		"recycle",
+		"save"
+	]
 }
