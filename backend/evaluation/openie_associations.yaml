@@ -1,35 +1,5 @@
 mapping:
   - input: #1
-      base: [sun, earth, tomato]
-      target: [nucleus, electrons]
-      depth: 4
-    output:
-      mapping:
-      - sun --> nucleus
-      - earth --> electrons
-      - tomato --> cells
-
-  - input: #2
-      base: [sun, earth, water]
-      target: [nucleus, electrons]
-      depth: 4
-    output:
-      mapping:
-      - sun --> nucleus
-      - earth --> electrons
-      - water --> energy
-
-  - input: #3
-      base: [sun, earth]
-      target: [nucleus, electrons, cytoplasm]
-      depth: 4
-    output:
-      mapping:
-      - sun --> nucleus
-      - earth --> electrons
-      - sunscreen --> cytoplasm
-  
-  - input: #4
       base: [sun, earth, tomato, water, sunscreen]
       target: [nucleus, electrons, cells, energy, cytoplasm]
       depth: 4
@@ -40,40 +10,24 @@ mapping:
       - tomato --> cells
       - water --> energy
       - sunscreen --> cytoplasm
-   
-  - input: #5
-      base: [water, pressure, force]
-      target: [heat, temperature]
-      depth: 4
-    output:
-      mapping:
-        - water --> heat
-        - pressure --> temperature
-  
-  - input: #6
-      base: [water, pressure]
-      target: [heat, temperature, summer]
-      depth: 4
-    output:
-      mapping:
-        - water --> heat
-        - pressure --> temperature
-  
-  - input: #7
-      base: [water, pressure, celsius]
-      target: [heat, temperature]
-      depth: 4
-    output:
-      mapping:
-        - water --> heat
-        - pressure --> temperature
 
-  - input: #8
-      base: [water, pressure, force]
-      target: [heat, temperature, energy]
+  - input: #2
+      base: [water, pressure, rain, pipe]
+      target: [heat, temperature, sun, iron]
       depth: 4
     output:
       mapping:
         - water --> heat
         - pressure --> temperature
-        - force --> energy
+        - rain --> sun
+        - pipe --> iron
+
+  - input: #3
+      base: [battery, copper wire, resistor]
+      target: [pump, pipe, valve]
+      depth: 4
+    output:
+      mapping:
+        - battery --> pump
+        - copper wire --> pipe
+        - resistor --> valve

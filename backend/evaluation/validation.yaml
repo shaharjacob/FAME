@@ -363,3 +363,24 @@ mapping:
       - tomato --> cells
       - water --> energy
       - sunscreen --> cytoplasm
+  
+  - input: #36
+      base: [water, pressure, rain, pipe]
+      target: [heat, temperature, sun, iron]
+      depth: 4
+    output:
+      mapping:
+        - water --> heat
+        - pressure --> temperature
+        - rain --> sun
+        - pipe --> iron
+
+  - input: #37
+      base: [battery, copper wire, resistor]
+      target: [pump, pipe, valve]
+      depth: 4
+    output:
+      mapping:
+        - battery --> pump
+        - copper wire --> pipe
+        - resistor --> valve

@@ -188,16 +188,17 @@ class Quasimodo:
             json.dump(d, f, indent='\t')
     
 
-def merge_tsvs(output: str):
-    dir_parent = Path('tsv')
+def merge_tsvs(output: str = 'quasimodo.tsv'):
+    dir_parent = root / 'tsv'
     dataframes = [pd.read_csv(path, sep="\t") for path in dir_parent.iterdir() if path.name != 'quasimodo.tsv']
     merged_df = pd.concat(dataframes)
     merged_df.to_csv(dir_parent / output, sep="\t", index=False, encoding='utf-8')
 
 
 if __name__ == '__main__':
-    quasimodo = Quasimodo()
-    quasimodo.save_predicates()
+    merge_tsvs()
+    # quasimodo = Quasimodo()
+    # quasimodo.save_predicates()
     # values = list(predicates.values())
     # for prop in ["affect", "be considered", "different to", "look from other", "similar to the", "circle the", "move around", "orbit", "orbit the", "revolve around", "revolving around the", "spin around the", "stay around", "surround", "surround the", "travel around the"]:
     #     appearence = predicates.get(prop, 0)

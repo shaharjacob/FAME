@@ -36218,5 +36218,210 @@
 		"sets the freezing point of"
 	],
 	"pressure#celsius": [],
-	"celsius#pressure": []
+	"celsius#pressure": [],
+	"energy#summer": [
+		"are scheduled for",
+		"can cool during",
+		"increase compared to",
+		"met in"
+	],
+	"summer#energy": [
+		"could increase",
+		"infrared",
+		"is always",
+		"saves",
+		"so does the cost of",
+		"will save"
+	],
+	"force#grass": [
+		"scratch into",
+		"took"
+	],
+	"grass#force": [
+		"is"
+	],
+	"battery#copper wire": [],
+	"pump#pipe": [
+		"circulate water through",
+		"discharge",
+		"is also disposed within",
+		"is driven into",
+		"pushes water through"
+	],
+	"copper wire#battery": [],
+	"pipe#pump": [
+		"is",
+		"leave"
+	],
+	"pump#valve": [
+		"acquire",
+		"adjust",
+		"are equipped with",
+		"are supplied with",
+		"bleeder",
+		"check",
+		"comes with",
+		"contain",
+		"has",
+		"is",
+		"is connected to",
+		"is fitted with",
+		"is nothing more than",
+		"is sent to",
+		"may cause noise in",
+		"multiport",
+		"open",
+		"prevents loss of"
+	],
+	"valve#pump": [
+		"are used with",
+		"can be added for",
+		"fits directly into",
+		"is used for",
+		"is used to replace",
+		"lies between",
+		"protects",
+		"restart",
+		"turn",
+		"turn on",
+		"were activated by",
+		"will automatically start"
+	],
+	"pump#electrons": [],
+	"electrons#pump": [],
+	"pipe#valve": [
+		"bypasses",
+		"check",
+		"goes to",
+		"have",
+		"install",
+		"shall be provided with",
+		"sizes smaller than",
+		"turn",
+		"were controlled by"
+	],
+	"valve#pipe": [
+		"be installed on",
+		"blew on",
+		"closes",
+		"coded",
+		"have",
+		"is perpendicular to",
+		"is used at",
+		"shall be installed on",
+		"will be"
+	],
+	"pipe#electrons": [],
+	"electrons#pipe": [],
+	"valve#electrons": [],
+	"electrons#valve": [],
+	"battery#resistor": [
+		"is connected to"
+	],
+	"resistor#battery": [],
+	"battery#air": [
+		"can also be shipped via",
+		"can withstand",
+		"included",
+		"is cooled by",
+		"powered",
+		"really blows"
+	],
+	"air#battery": [
+		"activates",
+		"are cheap compared to",
+		"differ in",
+		"drain",
+		"fueled",
+		"functions on",
+		"is operated on",
+		"only adds",
+		"ran out of",
+		"recharge",
+		"requires only",
+		"was electric with"
+	],
+	"copper wire#resistor": [],
+	"resistor#copper wire": [],
+	"copper wire#air": [],
+	"air#copper wire": [],
+	"resistor#air": [],
+	"air#resistor": [],
+	"water#rain": [
+		"becomes",
+		"brings",
+		"can be collected in",
+		"collected in",
+		"collects after",
+		"collects during",
+		"comes down as",
+		"comes from",
+		"falls as",
+		"falls in",
+		"falls like",
+		"hold back",
+		"is",
+		"is collected from",
+		"is from",
+		"is high due to",
+		"is water from",
+		"rises after",
+		"stands after",
+		"stays strong through"
+	],
+	"rain#water": [
+		"are a great way to conserve",
+		"bring",
+		"came",
+		"collects",
+		"cools",
+		"drops on",
+		"filter",
+		"give",
+		"had raised",
+		"have brought",
+		"help conserve",
+		"improve",
+		"is",
+		"is the main source of",
+		"muddied",
+		"raised",
+		"reduce",
+		"reduce the amount of",
+		"reverse",
+		"sends"
+	],
+	"pressure#rain": [
+		"brings",
+		"produce",
+		"provides",
+		"will bring"
+	],
+	"rain#pressure": [
+		"stimulate"
+	],
+	"rain#force": [
+		"arrived in",
+		"began in",
+		"came down",
+		"came in",
+		"fell with",
+		"gathered",
+		"is back in",
+		"was coming down"
+	],
+	"force#rain": [],
+	"sun#iron": [
+		"is",
+		"is due to",
+		"is made of"
+	],
+	"iron#sun": [
+		"make hay while"
+	],
+	"rain#pipe": [
+		"cut",
+		"has been throwing"
+	],
+	"pipe#rain": []
 }
