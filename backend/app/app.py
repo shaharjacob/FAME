@@ -4,6 +4,7 @@ import time
 from pathlib import Path
 from typing import List, Dict
 
+from click import secho
 from flask import Flask, jsonify, request
 
 backend_dir = Path(__file__).resolve().parent.parent
@@ -34,21 +35,39 @@ def mapping_entities():
     depth = utils.get_int(request.args.get('depth'), 4)
     top_n = utils.get_int(request.args.get('top'), 3)
     num_of_suggestions = utils.get_int(request.args.get('suggestions'), 3)
+    algo = request.args.get('algo')
+    if algo not in ["beam", "dfs"]:
+        algo = "beam"
     data = []
     scores = []
     
     # here we map between base entitites and target entities
-    solutions = mapping.mapping_wrapper(
-                                    base=base, 
-                                    target=target, 
-                                    suggestions=True, 
-                                    depth=depth, 
-                                    top_n=top_n, 
-                                    num_of_suggestions=num_of_suggestions, 
-                                    freq=freq, 
-                                    model_name=model_name, 
-                                    threshold=float(threshold)
-                                )
+    if algo == 'beam':
+        solutions = mapping.beam_search_wrapper(
+                                        base=base, 
+                                        target=target, 
+                                        suggestions=True, 
+                                        N=20,
+                                        freq=freq, 
+                                        num_of_suggestions=num_of_suggestions,
+                                        model_name=model_name,
+                                        threshold=float(threshold)
+                                    )
+    elif algo == 'dfs':
+        solutions = mapping.mapping_wrapper(
+                                        base=base, 
+                                        target=target, 
+                                        suggestions=True, 
+                                        depth=depth, 
+                                        top_n=top_n,
+                                        freq=freq, 
+                                        num_of_suggestions=num_of_suggestions, 
+                                        model_name=model_name,
+                                        threshold=float(threshold)
+                                    )
+    else:
+        secho("[ERROR] unsupported algorithm. (supported are 'beam' or 'dfs').")
+        exit(1)
 
     for solution in solutions:
         # prepare the nodes for the react app

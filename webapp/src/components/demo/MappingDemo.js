@@ -14,7 +14,8 @@ const MappingDemo = () => {
         var depth = document.getElementById("depth")
         var top_solutions = document.getElementById("top-solutions")
         var suggestions = document.getElementById("suggestions")
-        history.push(`/mapping?base=${base.value.split(",")}&target=${target.value.split(",")}&depth=${depth.value}&top=${top_solutions.value}&suggestions=${suggestions.value}`)
+        var algo = document.getElementById("algo")
+        history.push(`/mapping?base=${base.value.split(",")}&target=${target.value.split(",")}&depth=${depth.value}&top=${top_solutions.value}&suggestions=${suggestions.value}&algo=${algo.value}`)
     }
 
     return (
@@ -30,11 +31,11 @@ const MappingDemo = () => {
                 <span><i className="fas fa-skull-crossbones dark-gray"></i>&nbsp;Depth</span>
                 <span><i className="fas fa-trophy gold"></i>&nbsp;Top solutions</span>
                 <span><i className="far fa-lightbulb gold"></i>&nbsp;Number of Suggestions</span>
-                <div></div>
+                <span><i className="fas fa-play green"></i>&nbsp;Algorithm</span>
                 <input className="mapping-demo-input" defaultValue={4} id="depth" />
                 <input className="mapping-demo-input" defaultValue={3} id="top-solutions" />
                 <input className="mapping-demo-input" defaultValue={3} id="suggestions" />
-                <div></div>
+                <input className="mapping-demo-input" defaultValue="beam" id="algo" placeholder="beam / dfs" />
             </div>
             <button className="mapping-demo-button-submit" onClick={onSubmit}>Submit</button>
         </div>

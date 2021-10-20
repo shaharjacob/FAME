@@ -351,3 +351,15 @@ mapping:
       - future --> past
       - hope --> depression
       - joy --> crying
+  
+  - input: #35
+      base: [sun, earth, tomato, water, sunscreen]
+      target: [nucleus, electrons, cells, energy, cytoplasm]
+      depth: 4
+    output:
+      mapping:
+      - sun --> nucleus
+      - earth --> electrons
+      - tomato --> cells
+      - water --> energy
+      - sunscreen --> cytoplasm

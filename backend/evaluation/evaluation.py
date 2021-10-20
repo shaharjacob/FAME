@@ -13,9 +13,9 @@ from mapping.quasimodo import Quasimodo
 from frequency.frequency import Frequencies
 from mapping.mapping import beam_search_wrapper, mapping_wrapper, Solution, FREQUENCY_THRESHOLD
 
-root = Path(__file__).resolve().parent.parent.parent
+EVALUATION_FOLDER = Path(__file__).resolve().parent
+root = EVALUATION_FOLDER.resolve().parent.parent
 
-TEST_FOLDER = root / 'tests'
 COLORS = {
     "HEADER": '\033[95m',
     "OKBLUE": '\033[94m',
@@ -85,7 +85,7 @@ def evaluate(model_name: str,
              algorithm: str,
              suggestions: bool = False):
     
-    with open(TEST_FOLDER / path, 'r') as y:
+    with open(EVALUATION_FOLDER / path, 'r') as y:
         spec = yaml.load(y, Loader=yaml.SafeLoader)
     mapping_spec = spec["mapping"]
     results = Results()
