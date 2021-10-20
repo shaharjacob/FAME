@@ -31,6 +31,10 @@ code {
   color: #ebc700;
 }
 
+.green {
+  color: #16b151;
+}
+
 
 .container {
   display: grid;
