@@ -15493,5 +15493,55 @@
 	"water#celsius": [],
 	"celsius#water": [],
 	"pressure#celsius": [],
-	"celsius#pressure": []
+	"celsius#pressure": [],
+	"energy#summer": [],
+	"summer#energy": [],
+	"force#grass": [],
+	"grass#force": [],
+	"battery#copper wire": [],
+	"pump#pipe": [],
+	"copper wire#battery": [],
+	"pipe#pump": [],
+	"pump#valve": [],
+	"valve#pump": [],
+	"pump#electrons": [],
+	"electrons#pump": [],
+	"pipe#valve": [],
+	"valve#pipe": [],
+	"pipe#electrons": [],
+	"electrons#pipe": [],
+	"valve#electrons": [],
+	"electrons#valve": [],
+	"battery#resistor": [],
+	"resistor#battery": [
+		"be placed between"
+	],
+	"battery#air": [
+		"can",
+		"has property"
+	],
+	"air#battery": [],
+	"copper wire#resistor": [],
+	"resistor#copper wire": [],
+	"copper wire#air": [],
+	"air#copper wire": [],
+	"resistor#air": [
+		"has property"
+	],
+	"air#resistor": [],
+	"water#rain": [
+		"has property"
+	],
+	"rain#water": [
+		"be main natural source of",
+		"has property"
+	],
+	"pressure#rain": [],
+	"rain#pressure": [],
+	"rain#force": [],
+	"force#rain": [],
+	"sun#iron": [],
+	"iron#sun": [],
+	"rain#pipe": [],
+	"pipe#rain": []
 }

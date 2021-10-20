@@ -24143,5 +24143,88 @@
 	],
 	"celsius#water": [],
 	"pressure#celsius": [],
-	"celsius#pressure": []
+	"celsius#pressure": [],
+	"energy#summer": [],
+	"summer#energy": [],
+	"force#grass": [],
+	"grass#force": [],
+	"battery#copper wire": [],
+	"pump#pipe": [],
+	"copper wire#battery": [
+		"spin on a"
+	],
+	"pipe#pump": [],
+	"pump#valve": [],
+	"valve#pump": [],
+	"pump#electrons": [],
+	"electrons#pump": [],
+	"pipe#valve": [],
+	"valve#pipe": [],
+	"pipe#electrons": [],
+	"electrons#pipe": [],
+	"valve#electrons": [],
+	"electrons#valve": [],
+	"battery#resistor": [],
+	"resistor#battery": [],
+	"battery#air": [
+		"not charging macbook"
+	],
+	"air#battery": [],
+	"copper wire#resistor": [],
+	"resistor#copper wire": [],
+	"copper wire#air": [],
+	"air#copper wire": [],
+	"resistor#air": [],
+	"air#resistor": [],
+	"water#rain": [
+		"acid",
+		"become",
+		"bugs come inside when it",
+		"bugs come out when it",
+		"cause",
+		"fall as",
+		"feel warmer when it",
+		"get beneath earth's surface after it",
+		"get beneath earth\u2019s surface after it",
+		"get in my basement when it",
+		"get in my car when it",
+		"getting in my car when it",
+		"parks close when it",
+		"pollution cause acid",
+		"vapor turn into",
+		"vapour become",
+		"warmer when it"
+	],
+	"rain#water": [
+		"affect pool",
+		"affect swimming pool",
+		"affect well",
+		"barrels collect",
+		"fresh",
+		"the main source of",
+		"water distilled",
+		"water the purest form of"
+	],
+	"pressure#rain": [
+		"affect",
+		"drop when it",
+		"related to"
+	],
+	"rain#pressure": [
+		"affect air",
+		"affect barometric",
+		"associated with low",
+		"atmospheric",
+		"when there is low"
+	],
+	"rain#force": [],
+	"force#rain": [],
+	"sun#iron": [
+		"make"
+	],
+	"iron#sun": [],
+	"rain#pipe": [
+		"water come out of the spout of the"
+	],
+	"pipe#rain": []
 }
