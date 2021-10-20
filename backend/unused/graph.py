@@ -1,3 +1,4 @@
+import sys
 import time
 import json
 from typing import List
@@ -9,11 +10,16 @@ from tqdm import tqdm
 from click import secho
 from graphviz import Digraph
 
-import concept_net
-import google_autosuggest
+backend_dir = Path(__file__).resolve().parent.parent
+root = backend_dir.resolve().parent
+sys.path.insert(0, str(backend_dir))
 from wikifier import Wikifier
-from quasimodo import Quasimodo
+from mapping.quasimodo import Quasimodo, merge_tsvs
+from mapping import concept_net, google_autosuggest
 
+######### IMPORTANT #########
+# openIE not supported here #
+#############################
 
 class MyGraph(Digraph):
     def __init__(self, name, save_database=True):
@@ -23,12 +29,12 @@ class MyGraph(Digraph):
         self.node_names = []
         self.edges = []
         self.save_database = save_database
-        self.quasimodo_edges = read_json('database/quasimodo_edges.json') if save_database else {}
-        self.google_edges = read_json('database/google_edges.json') if save_database else {}
-        self.conceptnet_edges = read_json('database/conceptnet_edges.json') if save_database else {}
-        self.conceptnet_nodes = read_json('database/conceptnet_nodes.json') if save_database else {}
-        self.quasimodo_nodes_similarity = read_json('database/quasimodo_nodes_similarity.json') if save_database else {}
-        self.quasimodo_nodes = read_json('database/quasimodo_nodes.json') if save_database else {}
+        self.quasimodo_edges = read_json(backend_dir / 'database' / 'quasimodo_edges.json') if save_database else {}
+        self.google_edges = read_json(backend_dir / 'database' / 'google_edges.json') if save_database else {}
+        self.conceptnet_edges = read_json(backend_dir / 'database' / 'conceptnet_edges.json') if save_database else {}
+        self.conceptnet_nodes = read_json(backend_dir / 'database' / 'conceptnet_nodes.json') if save_database else {}
+        self.quasimodo_nodes_similarity = read_json(backend_dir / 'database' / 'quasimodo_nodes_similarity.json') if save_database else {}
+        self.quasimodo_nodes = read_json(backend_dir / 'database' / 'quasimodo_nodes.json') if save_database else {}
     
     def init_attr(self):
         self.attr('graph', pad='1', ranksep='1', nodesep='1')
@@ -86,18 +92,18 @@ class MyGraph(Digraph):
         super().view()    
 
     def save_datebase(self):
-        with open('database/quasimodo_edges.json', 'w') as f1:
-            json.dump(self.quasimodo_edges, f1)
-        with open('database/google_edges.json', 'w') as f2:
-            json.dump(self.google_edges, f2)
-        with open('database/conceptnet_edges.json', 'w') as f3:
-            json.dump(self.conceptnet_edges, f3) 
-        with open('database/quasimodo_nodes_similarity.json', 'w') as f4:
-            json.dump(self.quasimodo_nodes_similarity, f4) 
-        with open('database/conceptnet_nodes.json', 'w') as f5:
-            json.dump(self.conceptnet_nodes, f5)  
-        with open('database/quasimodo_nodes.json', 'w') as f6:
-            json.dump(self.quasimodo_nodes, f6) 
+        with open(backend_dir / 'database' / 'quasimodo_edges.json', 'w') as f1:
+            json.dump(self.quasimodo_edges, f1, indent='\t')
+        with open(backend_dir / 'database' / 'google_edges.json', 'w') as f2:
+            json.dump(self.google_edges, f2, indent='\t')
+        with open(backend_dir / 'database' / 'conceptnet_edges.json', 'w') as f3:
+            json.dump(self.conceptnet_edges, f3, indent='\t') 
+        with open(backend_dir / 'database' / 'quasimodo_nodes_similarity.json', 'w') as f4:
+            json.dump(self.quasimodo_nodes_similarity, f4, indent='\t') 
+        with open(backend_dir / 'database' / 'conceptnet_nodes.json', 'w') as f5:
+            json.dump(self.conceptnet_nodes, f5, indent='\t')  
+        with open(backend_dir / 'database' / 'quasimodo_nodes.json', 'w') as f6:
+            json.dump(self.quasimodo_nodes, f6, indent='\t') 
               
 
 def read_json(path: str) -> dict:
@@ -120,7 +126,7 @@ def run(text: str, quasimodo: Quasimodo, addition_nouns = []):
     nouns = sorted(list(set(nouns + addition_nouns)))
     secho(f"Nouns: ", fg="blue", bold=True, nl=False)
     secho(f"{nouns}", fg="blue")
-    graph = MyGraph(name=f'graphs/{"_".join(nouns)}')
+    graph = MyGraph(name=f'{str(backend_dir)}/graphs/{"_".join(nouns)}')
 
     #########
     # nodes #
@@ -138,7 +144,7 @@ def run(text: str, quasimodo: Quasimodo, addition_nouns = []):
         if noun in graph.quasimodo_nodes:
             quasimodo_props = graph.quasimodo_nodes[noun]
         else:
-            quasimodo_props = quasimodo.get_entity_props(node=noun, n_largest=10, plural_and_singular=True)
+            quasimodo_props = quasimodo.get_entity_props(entity=noun, n_largest=10, plural_and_singular=True)
             graph.quasimodo_nodes[noun] = quasimodo_props 
 
         if quasimodo_props:
@@ -153,7 +159,7 @@ def run(text: str, quasimodo: Quasimodo, addition_nouns = []):
         if noun in graph.conceptnet_nodes and "hasProperty" in graph.conceptnet_nodes[noun]:
             concept_net_props = graph.conceptnet_nodes[noun]["hasProperty"]
         else:
-            concept_net_props = concept_net.hasProperty(engine=quasimodo.engine, subject=noun, n=10, weight_thresh=1, plural_and_singular=True)
+            concept_net_props = concept_net.hasProperty(engine=quasimodo.engine, entity1=noun, n=10, weight_thresh=1, plural_and_singular=True)
             if noun not in graph.conceptnet_nodes:
                 graph.conceptnet_nodes[noun] = {}
             graph.conceptnet_nodes[noun]["hasProperty"] = concept_net_props 
@@ -166,7 +172,7 @@ def run(text: str, quasimodo: Quasimodo, addition_nouns = []):
         if noun in graph.conceptnet_nodes and "capableOf" in graph.conceptnet_nodes[noun]:
             concept_net_capable = graph.conceptnet_nodes[noun]["capableOf"]
         else:
-            concept_net_capable = concept_net.capableOf(engine=quasimodo.engine, subject=noun, n=10, weight_thresh=1, plural_and_singular=True)
+            concept_net_capable = concept_net.capableOf(engine=quasimodo.engine, entity1=noun, n=10, weight_thresh=1, plural_and_singular=True)
             if noun not in graph.conceptnet_nodes:
                 graph.conceptnet_nodes[noun] = {}
             graph.conceptnet_nodes[noun]["capableOf"] = concept_net_capable 
@@ -179,7 +185,7 @@ def run(text: str, quasimodo: Quasimodo, addition_nouns = []):
         if noun in graph.conceptnet_nodes and "isA" in graph.conceptnet_nodes[noun]:
             concept_net_type_of = graph.conceptnet_nodes[noun]["isA"]
         else:
-            concept_net_type_of = concept_net.isA(engine=quasimodo.engine, subject=noun, n=10, weight_thresh=1, plural_and_singular=True)
+            concept_net_type_of = concept_net.isA(engine=quasimodo.engine, entity1=noun, n=10, weight_thresh=1, plural_and_singular=True)
             if noun not in graph.conceptnet_nodes:
                 graph.conceptnet_nodes[noun] = {}
             graph.conceptnet_nodes[noun]["isA"] = concept_net_type_of 
@@ -192,7 +198,7 @@ def run(text: str, quasimodo: Quasimodo, addition_nouns = []):
         if noun in graph.conceptnet_nodes and "usedFor" in graph.conceptnet_nodes[noun]:
             concept_net_used_for = graph.conceptnet_nodes[noun]["usedFor"]
         else:
-            concept_net_used_for = concept_net.usedFor(engine=quasimodo.engine, subject=noun, n=10, weight_thresh=1, plural_and_singular=True)
+            concept_net_used_for = concept_net.usedFor(engine=quasimodo.engine, entity1=noun, n=10, weight_thresh=1, plural_and_singular=True)
             if noun not in graph.conceptnet_nodes:
                 graph.conceptnet_nodes[noun] = {}
             graph.conceptnet_nodes[noun]["usedFor"] = concept_net_used_for 
@@ -275,33 +281,20 @@ def run(text: str, quasimodo: Quasimodo, addition_nouns = []):
                 help="Path to load quasimodo (the tsv file")
 def main(text, addition_nouns, quasimodo_path):
     start = time.time()
-    tsv_to_load = Path(quasimodo_path)
+    tsv_to_load = root / quasimodo_path
     if not tsv_to_load.exists():
-        import quasimodo as qs
-        qs.merge_tsvs(tsv_to_load.name)  # will be created under /tsv
+        merge_tsvs(tsv_to_load.name)  # will be created under /tsv
     quasimodo = Quasimodo(path=str(tsv_to_load))
     run(text, quasimodo, addition_nouns=list(addition_nouns))
     secho(f"\nTotal running time: ", fg='blue', nl=False)
     secho(str(time.time() - start), fg='blue', bold=True)
 
 if __name__ == "__main__":
-    pass
-    # main()
+    main()
     # text1 = "putting a band aid on a wound is like putting a flag in the code"
     # text2 = "horses in stables behave like cows in byre"
     # text3 = "electrons revolve around the nucleus as the earth revolve around the sun"
-
     # text4 = "peanut butter has a strong taste that causes a feeling of suffocation"
     # text5 = "The nucleus, which is positively charged, and the electrons which are negatively charged, compose the atom"
     # text6 = "On earth, the atmosphere protects us from the sun, but not enough so we use sunscreen"
-
-    # import old_files.testset as testset
-    # quasimodo = Quasimodo(path='tsv/quasimodo.tsv')
-    # for i, sample in enumerate(testset):
-    #     print(f"{i * 2} out of {len(testset) * 2}")
-    #     run(sample["input"][0], quasimodo=quasimodo, addition_nouns=['sunscreen'])
-    #     print(f"{(i * 2) + 1} out of {len(testset) * 2}")
-    #     run(sample["input"][1], quasimodo=quasimodo, addition_nouns=['sunscreen'])
-
-
     

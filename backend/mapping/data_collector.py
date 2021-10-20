@@ -20,7 +20,7 @@ class DataCollector(object):
         self.google_edges = read_json(root / 'backend' / 'database' / 'google_edges.json') if save_database else {}
         self.conceptnet_edges = read_json(root / 'backend' / 'database' / 'conceptnet_edges.json') if save_database else {}
         self.openie = read_json(root / 'backend' / 'database' / 'openie_edges.json') if save_database else {}
-        self.stopwords = read_stopwords(root / 'stopwords.txt')
+        self.stopwords = read_stopwords(root / 'backend' / 'frequency' / 'stopwords.txt')
 
 
     def get_entities_relations(self, entity1: str, entity2: str, from_where: bool = False) -> List[str]:

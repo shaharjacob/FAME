@@ -22,7 +22,7 @@ class Frequencies():
         self.stopwords = {k: v for i, (k, v) in enumerate(self.data.items()) if i < target_value}
     
     def manual_stopwords(self):
-        with open(root / 'stopwords.txt', 'r') as f:
+        with open(root / 'backend' / 'frequency' / 'stopwords.txt', 'r') as f:
             words = [word.strip() for word in f.read().split('\n')]
         for word in words:
             if word not in self.stopwords:
