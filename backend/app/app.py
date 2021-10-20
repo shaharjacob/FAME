@@ -1,18 +1,21 @@
 import os
+import sys
 import time
 from pathlib import Path
 from typing import List, Dict
 
 from flask import Flask, jsonify, request
 
-import python2react
+backend_dir = Path(__file__).resolve().parent.parent
+root = backend_dir.resolve().parent
+sys.path.insert(0, str(backend_dir))
 from utils import utils
+import python2react
 from mapping import mapping
 from frequency.frequency import Frequencies
 from mapping.data_collector import DataCollector
 from utils.sentence_embadding import SentenceEmbedding
 
-root = Path(__file__).resolve().parent.parent.parent
 
 app = Flask(__name__)
 
