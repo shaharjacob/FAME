@@ -50,7 +50,7 @@ TODO: image here
 
 ## :books: Table of content
 - **mapping.py**: TODO
-- **suggest_entities.py**: TODO
+- **suggestions.py**: TODO
 - **concept_net.py**: Extracting entities information from ConcecptNet API.  
 - **sentence_embadding.py**: Using sentence embadding to compare between properties.
 - **google_autosuggest.py**: Extracting entities information from google auto-suggest.  

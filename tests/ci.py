@@ -9,11 +9,12 @@ root = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(root))
 sys.path.insert(0, str(root / 'backend'))
 
-from backend.mapping import concept_net, suggest_entities, google_autosuggest
-from backend.mapping.mapping import beam_search_wrapper, mapping_wrapper, FREQUENCY_THRESHOLD
-from backend.mapping.quasimodo import Quasimodo, merge_tsvs
+from backend.mapping.dfs import dfs_wrapper
 from backend.frequency.frequency import Frequencies
-
+from backend.mapping.mapping import FREQUENCY_THRESHOLD
+from backend.mapping.beam_search import beam_search_wrapper
+from backend.mapping.quasimodo import Quasimodo, merge_tsvs
+from backend.mapping import concept_net, suggestions, google_autosuggest
 
 
 TEST_FOLDER = Path('tests')
@@ -71,15 +72,15 @@ class TestFunctions(unittest.TestCase):
         self.assertEqual(sorted(reference), sorted(actual))
     
 
-    def test_suggest_entities(self):
+    def test_suggestions(self):
         # testing get_score_between_two_entitites
         reference = 0.887
-        actual = suggest_entities.get_score_between_two_entitites("newton", "faraday")
+        actual = suggestions.get_score_between_two_entitites("newton", "faraday")
         self.assertEqual(reference, actual)
 
         # testing get_best_matches_for_entity
         reference = [('newton', 'faraday', 0.887),  ('newton', 'wall', 0.508), ('newton', 'apple', 0.463), ('newton', 'paper', 0.425), ('newton', 'window', 0.417)]
-        actual = suggest_entities.get_best_matches_for_entity("newton", ["faraday", "sky", "window", "paper", "photo", "apple", "tomato", "wall", "home", "horse"])
+        actual = suggestions.get_best_matches_for_entity("newton", ["faraday", "sky", "window", "paper", "photo", "apple", "tomato", "wall", "home", "horse"])
         self.assertEqual(reference, actual)
 
 
@@ -137,7 +138,7 @@ class TestMappingNoSuggestoins(unittest.TestCase):
             if tv["ignore"]:
                 continue            
 
-            solutions = mapping_wrapper(
+            solutions = dfs_wrapper(
                                         base=tv["input"]["base"], 
                                         target=tv["input"]["target"], 
                                         suggestions=False, 
@@ -220,7 +221,7 @@ class TestMappingSuggestoins(unittest.TestCase):
             if tv["ignore"]:
                 continue            
 
-            solutions = mapping_wrapper(
+            solutions = dfs_wrapper(
                                         base=tv["input"]["base"], 
                                         target=tv["input"]["target"], 
                                         suggestions=True, 

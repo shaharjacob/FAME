@@ -12,10 +12,13 @@ root = backend_dir.resolve().parent
 sys.path.insert(0, str(backend_dir))
 from utils import utils
 import python2react
-from mapping import mapping
+from mapping.dfs import dfs_wrapper
 from frequency.frequency import Frequencies
 from mapping.data_collector import DataCollector
+from mapping.beam_search import beam_search_wrapper
 from utils.sentence_embadding import SentenceEmbedding
+from mapping.mapping import FREQUENCY_THRESHOLD, NUM_OF_CLUSTERS_TO_CALC, EDGE_THRESHOLD
+from mapping.mapping import get_pair_mapping, get_edge_score, get_edges_with_maximum_weight
 
 
 app = Flask(__name__)
@@ -27,7 +30,7 @@ def mapping_entities():
     model_name = 'msmarco-distilbert-base-v4'
     model = SentenceEmbedding(model=model_name, data_collector=data_collector)
     threshold = request.args.get('threshold')
-    threshold = threshold if threshold else mapping.FREQUENCY_THRESHOLD
+    threshold = threshold if threshold else FREQUENCY_THRESHOLD
     freq_json_folder = root / 'backend' / 'frequency' / 'jsons' / 'merged' / '20%'
     freq = Frequencies(freq_json_folder / 'all_1m_filter_3_sort.json', threshold=float(threshold))
     base = [b.strip() for b in request.args.get('base').split(',')]
@@ -43,7 +46,7 @@ def mapping_entities():
     
     # here we map between base entitites and target entities
     if algo == 'beam':
-        solutions = mapping.beam_search_wrapper(
+        solutions = beam_search_wrapper(
                                         base=base, 
                                         target=target, 
                                         suggestions=True, 
@@ -54,7 +57,7 @@ def mapping_entities():
                                         threshold=float(threshold)
                                     )
     elif algo == 'dfs':
-        solutions = mapping.mapping_wrapper(
+        solutions = dfs_wrapper(
                                         base=base, 
                                         target=target, 
                                         suggestions=True, 
@@ -89,9 +92,9 @@ def mapping_entities():
                     relation = [(relation[0][1], relation[0][0]), (relation[1][1], relation[1][0])]
 
                 # now we extract information of the relation. 
-                # actually we already did it in mapping.mapping_wrapper(base, target), but this is very quick since we already saved all the props.
+                # actually we already did it in dfs_wrapper(base, target), but this is very quick since we already saved all the props.
                 # and it more readable to do it here again.
-                graph = mapping.get_pair_mapping(model, data_collector, freq, relation)
+                graph = get_pair_mapping(model, data_collector, freq, relation)
                 if not graph:
                     continue
 
@@ -101,8 +104,8 @@ def mapping_entities():
                 for i, cluster_edge in enumerate(graph["graph"]):
                     props = utils.get_ordered_edges_similarity(model, graph["clusters1"][cluster_edge[0]], graph["clusters2"][cluster_edge[1] - len(graph["clusters1"])])
                     label.append(f"{relation[0][0]} {props[0][0]} {relation[0][1]} :: {relation[1][0]} {props[0][1]} {relation[1][1]} :: {cluster_edge[2]}")
-                label = sorted(label, key=lambda x: x.split('::')[2], reverse=True)[:mapping.NUM_OF_CLUSTERS_TO_CALC]
-                label = [l for l in label if float(l.split('::')[2]) > mapping.EDGE_THRESHOLD]
+                label = sorted(label, key=lambda x: x.split('::')[2], reverse=True)[:NUM_OF_CLUSTERS_TO_CALC]
+                label = [l for l in label if float(l.split('::')[2]) > EDGE_THRESHOLD]
                 edges.append(python2react.get_single_edge_for_app(edge, "\n".join(label), graph["score"], len(edges)))
                 max_score_for_scaling = max(max_score_for_scaling, graph["score"])
 
@@ -140,7 +143,7 @@ def single_mapping():
     d = {0: {}, 1: {}, 2: {}, 3: {}}
     
     threshold = request.args.get('threshold')
-    threshold = threshold if threshold else mapping.FREQUENCY_THRESHOLD
+    threshold = threshold if threshold else FREQUENCY_THRESHOLD
     freq_json_folder = root / 'backend' / 'frequency' / 'jsons' / 'merged' / '20%'
     freq = Frequencies(freq_json_folder / 'all_1m_filter_3_sort.json', threshold=float(threshold))
 
@@ -157,7 +160,7 @@ def single_mapping():
             continue
 
         # we want the weight of each edge between two nodes.
-        similatiry_edges = [(prop1, prop2, mapping.get_edge_score(prop1, prop2, model, freq)) for prop1 in props_edge1 for prop2 in props_edge2]
+        similatiry_edges = [(prop1, prop2, get_edge_score(prop1, prop2, model, freq)) for prop1 in props_edge1 for prop2 in props_edge2]
         
         for thresh in utils.DISTANCE_TRESHOLDS:
             clustered_sentences_1: Dict[int, List[str]] = model.clustering(edge_[0], distance_threshold=thresh)
@@ -171,7 +174,7 @@ def single_mapping():
             nodes2_for_app = python2react.get_nodes_for_app_bipartite(props=nodes2, start_idx=len(clustered_sentences_1), x=800, group=len(clustered_sentences_1), promote_group=1)
 
             # for each two clusters (from the opposite side of the bipartite) we will take only one edge, which is the maximum weighted.
-            cluster_edges_weights = mapping.get_edges_with_maximum_weight(similatiry_edges, clustered_sentences_1, clustered_sentences_2)
+            cluster_edges_weights = get_edges_with_maximum_weight(similatiry_edges, clustered_sentences_1, clustered_sentences_2)
                 
             # now we want to get the maximum weighted match, which hold the constraint that each cluster has no more than one edge.
             edges = utils.get_maximum_weighted_match(model, clustered_sentences_1, clustered_sentences_2, weights=cluster_edges_weights)
@@ -184,7 +187,7 @@ def single_mapping():
                     "edges": python2react.get_edges_for_app(edges, spaces=40),
                 },
                 "options": python2react.get_options(len(clustered_sentences_1) + len(clustered_sentences_2)),
-                "score": round(sum([edge[2] for edge in edges[:mapping.NUM_OF_CLUSTERS_TO_CALC] if edge[2] > mapping.EDGE_THRESHOLD]), 3)
+                "score": round(sum([edge[2] for edge in edges[:NUM_OF_CLUSTERS_TO_CALC] if edge[2] > EDGE_THRESHOLD]), 3)
             }
     return jsonify(d)
 
@@ -219,7 +222,7 @@ def bipartite_graph():
     data_collector = DataCollector()
     model = SentenceEmbedding(data_collector=data_collector)
     threshold = request.args.get('threshold')
-    threshold = threshold if threshold else mapping.FREQUENCY_THRESHOLD
+    threshold = threshold if threshold else FREQUENCY_THRESHOLD
     freq_json_folder = root / 'backend' / 'frequency' / 'jsons' / 'merged' / '20%'
     freq = Frequencies(freq_json_folder / 'all_1m_filter_3_sort.json', threshold=float(threshold))
 

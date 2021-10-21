@@ -113,6 +113,7 @@ def get_maximum_weighted_match(model: SentenceEmbedding,
 
     return similatiry_edges
 
+
 def is_none(val):
     if not val:
         return True

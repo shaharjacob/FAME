@@ -1,12 +1,50 @@
 mapping:
   - input: #1
-      base: [sun, earth, tomato, water, sunscreen]
-      target: [nucleus, electrons, cells, energy, cytoplasm]
+      base: [sun, earth, water]
+      target: [nucleus, electrons]
       depth: 4
     output:
       mapping:
-      - sun --> nucleus
-      - earth --> electrons
-      - tomato --> cells
-      - water --> energy
-      - sunscreen --> cytoplasm
+        - sun --> nucleus
+        - earth --> electrons
+      suggestions:
+        - energy
+
+  - input: #2
+      base: [landscaper, lawn]
+      target: [stylist, hair, gel]
+      depth: 4
+    output:
+      mapping:
+        - landscaper --> stylist
+        - lawn --> hair
+      suugestions:
+        - fertilizer
+
+  - input: #3
+      base: [earth, sun]
+      target: [nucleus, electrons, electricity]
+      depth: 4
+    output:
+      mapping:
+        - sun --> nucleus
+        - earth --> electrons
+      suggestions:
+        - seasons
+        - electricity
+
+  - input: #4
+      base: [sun, earth, gravity]
+      target: [nucleus, electrons]
+      depth: 4
+    output:
+      mapping:
+        - sun --> nucleus
+        - earth --> electrons
+      suggestions:
+        - atoms
+        - energy
+        - light
+        - magnetic field
+        - electricity
+  

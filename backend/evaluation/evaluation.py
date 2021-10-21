@@ -9,9 +9,11 @@ from click import secho
 
 backend_dir = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(backend_dir))
+from mapping.dfs import dfs_wrapper
 from mapping.quasimodo import Quasimodo
 from frequency.frequency import Frequencies
-from mapping.mapping import beam_search_wrapper, mapping_wrapper, Solution, FREQUENCY_THRESHOLD
+from mapping.beam_search import beam_search_wrapper
+from mapping.mapping import Solution, FREQUENCY_THRESHOLD
 
 EVALUATION_FOLDER = Path(__file__).resolve().parent
 root = EVALUATION_FOLDER.resolve().parent.parent
@@ -110,7 +112,7 @@ def evaluate(model_name: str,
                                             threshold=threshold
                                         )
         elif algorithm == 'dfs':
-            solutions = mapping_wrapper(
+            solutions = dfs_wrapper(
                                             base=tv["input"]["base"], 
                                             target=tv["input"]["target"], 
                                             suggestions=suggestions, 
