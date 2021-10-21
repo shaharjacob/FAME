@@ -153,7 +153,7 @@ def evaluate(model_name: str,
     if mistake_because_of_coverage > 0:
         mistake_because_of_coverage_string = f" ({mistake_because_of_coverage}% of the mistakes because of coverage)"
     success_pres = round((results.correct_answers / results.total_maps) * 100, 1)
-    print(f'{COLORS["OKGREEN"]}Total: {results.correct_answers}/{results.total_maps} ({success_pres}){mistake_because_of_coverage_string}{COLORS["ENDC"]}')
+    print(f'{COLORS["OKGREEN"]}Total: {results.correct_answers}/{results.total_maps} ({success_pres}%){mistake_because_of_coverage_string}{COLORS["ENDC"]}')
     
     print(f'{COLORS["OKGREEN"]}Total (anywhere): {results.correct_anywhere}/{results.total_maps}{COLORS["ENDC"]}')
     
@@ -165,25 +165,12 @@ def evaluate(model_name: str,
     if mistake_because_of_coverage > 0:
         mistake_because_of_coverage_string = f" ({mistake_because_of_coverage}% of the mistakes because of coverage)"
     success_pres = round((results.total_full_maps_correct / results.total_full_maps) * 100, 1)
-    print(f'{COLORS["OKGREEN"]}Total full mappings: {results.total_full_maps_correct}/{results.total_full_maps} ({success_pres}){mistake_because_of_coverage_string}{COLORS["ENDC"]}')
+    print(f'{COLORS["OKGREEN"]}Total full mappings: {results.total_full_maps_correct}/{results.total_full_maps} ({success_pres}%){mistake_because_of_coverage_string}{COLORS["ENDC"]}')
     
     print()
     print(f'{COLORS["OKGREEN"]}Total correct from active mapping: {results.correct_answers}/{results.total_guesses}{COLORS["ENDC"]}')
     print(f'{COLORS["OKGREEN"]}Total full mappings from active: {results.total_full_maps_correct}/{results.total_full_maps_from_active}{COLORS["ENDC"]}\n')
 
-
-# 'msmarco-distilbert-base-v4'            #1 - 34
-# 'paraphrase-MiniLM-L12-v2'              #2 - 33
-# 'paraphrase-mpnet-base-v2'              #3 - 31
-# 'paraphrase-distilroberta-base-v2'      #4 - 29
-# 'msmarco-roberta-base-v3'               #5 - 28
-# 'bert-base-nli-mean-tokens'             #6 - 27
-# 'stsb-mpnet-base-v2'                    #7 - 26
-# 'distilbert-base-nli-stsb-mean-tokens'  #8 - 25
-
-# 'xlm-r-distilroberta-base-paraphrase-v1' --> to big
-# 'paraphrase-xlm-r-multilingual-v1'       --> to big
-# 'LaBSE'                                  --> to big
 
 @click.command()
 @click.option('-m', '--model', default="msmarco-distilbert-base-v4", type=str, help="The model for sBERT: https://huggingface.co/sentence-transformers")
