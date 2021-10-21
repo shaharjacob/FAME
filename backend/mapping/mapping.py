@@ -390,6 +390,8 @@ def mapping_suggestions(
     available_pairs: List[List[SingleMatch]],
     current_solution: Solution,
     solutions: List[Solution],
+    relations_already_seen: Set[Tuple[Tuple[Pair]]],
+    mappings_already_seen: Set[Tuple[str]],
     data_collector: DataCollector,
     model: SentenceEmbedding,
     freq: Frequencies,
@@ -421,11 +423,15 @@ def mapping_suggestions(
                 score += get_score(base_already_mapping_new, target_already_mapping_new, b2, t2, cache)
                 update_already_mapping(b2, t2, base_already_mapping_new, target_already_mapping_new, actual_mapping_indecies_new)
             
-            # updating the top suggestions for the GUI
-            if domain == "actual_base":
-                top_suggestions.append(target_already_mapping_new[-1])
-            elif domain == "actual_target":
-                top_suggestions.append(base_already_mapping_new[-1])
+            mapping_repr = [f"{b} --> {t}" for b, t in zip(base_already_mapping_new, target_already_mapping_new)]
+            mapping_repr_as_tuple = tuple(sorted(mapping_repr))
+            if mapping_repr_as_tuple in mappings_already_seen:
+                continue
+            mappings_already_seen.add(mapping_repr_as_tuple)
+            
+            # sometimes it found the same entity
+            if target_already_mapping_new[-1] == base_already_mapping_new[-1]:
+                continue
             
             # we need to add the mapping that we just found to the relations that already exist for that solution.
             relations = copy.deepcopy(current_solution.relations)
@@ -434,7 +440,18 @@ def mapping_suggestions(
             scores_copy.append(round(result["best_score"], 3))
             coverage = copy.deepcopy(current_solution.coverage)
             coverage.append(result["coverage"])
-
+            
+            relations_as_tuple = tuple([tuple(relation) for relation in sorted(relations)])
+            if relations_as_tuple in relations_already_seen:
+                continue
+            relations_already_seen.add(relations_as_tuple)
+                
+            # updating the top suggestions for the GUI
+            if domain == "actual_base":
+                top_suggestions.append(target_already_mapping_new[-1])
+            elif domain == "actual_target":
+                top_suggestions.append(base_already_mapping_new[-1])
+                
             solutions.append(Solution(
                 mapping=[f"{b} --> {t}" for b, t in zip(base_already_mapping_new, target_already_mapping_new)],
                 relations=relations,
@@ -457,6 +474,8 @@ def mapping_suggestions_wrapper(
     model: SentenceEmbedding, 
     freq: Frequencies,
     solutions: List[Solution],
+    relations_already_seen: Set[Tuple[Tuple[Pair]]],
+    mappings_already_seen: Set[Tuple[str]],
     cache: dict,
     num_of_suggestions: int = 1,
     verbose: bool = False):
@@ -485,6 +504,8 @@ def mapping_suggestions_wrapper(
             available_pairs=available_pairs_new,
             current_solution=copy.deepcopy(solution),
             solutions=solutions,
+            relations_already_seen=relations_already_seen,
+            mappings_already_seen=mappings_already_seen,
             data_collector=data_collector,
             model=model,
             freq=freq,
@@ -623,29 +644,56 @@ def beam_search_wrapper(base: List[str],
             )
         )
 
+    mappings_already_seen = set()
+    relations_already_seen = set()
     beam_search(base=base, 
                 target=target, 
                 solutions=solutions, 
-                mappings_already_seen=set(),
-                relations_already_seen=set(),
+                mappings_already_seen=mappings_already_seen,
+                relations_already_seen=relations_already_seen,
                 freq=freq, 
                 cache=cache, 
-                N=N
-            )
+                N=N)
     
     # array of addition solutions for the suggestions if some entities have missing mappings.
     suggestions_solutions = []
     if suggestions and num_of_suggestions > 0:
         solutions = sorted(solutions, key=lambda x: (x.length, x.score), reverse=True)
         if solutions and solutions[0].length < max(len(base), len(target)):
-            number_of_solutions_for_suggestions = 3
+            number_of_solutions_for_suggestions = 1
             # the idea is to iterate over the founded solutions, and check if there are entities are not mapped.
             for solution in solutions[:number_of_solutions_for_suggestions]:
                 if solution.length < max(len(base), len(target)) - 1:
                     # this logic is checked only if ONE entity have missing mapping (from base or target)
                     continue
-                mapping_suggestions_wrapper(base, "actual_base", "actual_target", solution, data_collector, model, freq, suggestions_solutions, cache, num_of_suggestions, verbose)
-                mapping_suggestions_wrapper(target, "actual_target", "actual_base", solution, data_collector, model, freq, suggestions_solutions, cache, num_of_suggestions, verbose)
+                
+                mapping_suggestions_wrapper(domain=base, 
+                                            first_domain="actual_base", 
+                                            second_domain="actual_target", 
+                                            solution=solution, 
+                                            data_collector=data_collector, 
+                                            model=model, 
+                                            freq=freq, 
+                                            solutions=suggestions_solutions, 
+                                            mappings_already_seen=mappings_already_seen,
+                                            relations_already_seen=relations_already_seen,
+                                            cache=cache, 
+                                            num_of_suggestions=num_of_suggestions, 
+                                            verbose=verbose)
+                
+                mapping_suggestions_wrapper(domain=target, 
+                                            first_domain="actual_target", 
+                                            second_domain="actual_base", 
+                                            solution=solution, 
+                                            data_collector=data_collector, 
+                                            model=model, 
+                                            freq=freq, 
+                                            solutions=suggestions_solutions, 
+                                            mappings_already_seen=mappings_already_seen,
+                                            relations_already_seen=relations_already_seen,
+                                            cache=cache, 
+                                            num_of_suggestions=num_of_suggestions, 
+                                            verbose=verbose)
 
     all_solutions = sorted(solutions + suggestions_solutions, key=lambda x: (x.length, x.score), reverse=True)
     if not all_solutions:
@@ -709,31 +757,59 @@ def mapping_wrapper(base: List[str],
                             sorted_results=best_results,
                             availables=copy.deepcopy(available_pairs)
                         )
+    
+    mappings_already_seen = set()
+    relations_already_seen = set()
     dfs(base=base, 
         target=target, 
         solutions=solutions, 
         freq=freq, 
         curr_solution=initial_solution,
-        relations_already_seen=set(), 
-        mappings_already_seen=set(), 
+        relations_already_seen=relations_already_seen, 
+        mappings_already_seen=mappings_already_seen, 
         cache=cache, 
         calls=calls, 
-        depth=depth
-    )
+        depth=depth)
 
     # array of addition solutions for the suggestions if some entities have missing mappings.
     suggestions_solutions = []
     if suggestions and num_of_suggestions > 0:
         solutions = sorted(solutions, key=lambda x: (x.length, x.score), reverse=True)
         if solutions and solutions[0].length < max(len(base), len(target)):
-            number_of_solutions_for_suggestions = 3
+            number_of_solutions_for_suggestions = 1
             # the idea is to iterate over the founded solutions, and check if there are entities are not mapped.
             for solution in solutions[:number_of_solutions_for_suggestions]:
                 if solution.length < max(len(base), len(target)) - 1:
                     # this logic is checked only if ONE entity have missing mapping (from base or target)
                     continue
-                mapping_suggestions_wrapper(base, "actual_base", "actual_target", solution, data_collector, model, freq, suggestions_solutions, cache, num_of_suggestions, verbose)
-                mapping_suggestions_wrapper(target, "actual_target", "actual_base", solution, data_collector, model, freq, suggestions_solutions, cache, num_of_suggestions, verbose)
+                
+                mapping_suggestions_wrapper(domain=base, 
+                                            first_domain="actual_base", 
+                                            second_domain="actual_target", 
+                                            solution=solution, 
+                                            data_collector=data_collector, 
+                                            model=model, 
+                                            freq=freq, 
+                                            solutions=suggestions_solutions, 
+                                            relations_already_seen=relations_already_seen, 
+                                            mappings_already_seen=mappings_already_seen, 
+                                            cache=cache, 
+                                            num_of_suggestions=num_of_suggestions, 
+                                            verbose=verbose)
+                
+                mapping_suggestions_wrapper(domain=target, 
+                                            first_domain="actual_target", 
+                                            second_domain="actual_base", 
+                                            solution=solution, 
+                                            data_collector=data_collector, 
+                                            model=model, 
+                                            freq=freq, 
+                                            solutions=suggestions_solutions, 
+                                            relations_already_seen=relations_already_seen, 
+                                            mappings_already_seen=mappings_already_seen, 
+                                            cache=cache, 
+                                            num_of_suggestions=num_of_suggestions, 
+                                            verbose=verbose)
 
     all_solutions = sorted(solutions + suggestions_solutions, key=lambda x: (x.length, x.score), reverse=True)
     if not all_solutions:

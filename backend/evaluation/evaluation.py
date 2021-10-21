@@ -143,7 +143,10 @@ def evaluate(model_name: str,
         print("------------------------------------------------------------")
         print()
     
-    mistake_because_of_coverage = round(((results.total_maps - results.total_guesses) / (results.total_maps - results.correct_answers)) * 100, 1)
+    if results.total_maps - results.correct_answers > 0:
+        mistake_because_of_coverage = round(((results.total_maps - results.total_guesses) / (results.total_maps - results.correct_answers)) * 100, 1)
+    else:
+        mistake_because_of_coverage = 100
     mistake_because_of_coverage_string = ""
     if mistake_because_of_coverage > 0:
         mistake_because_of_coverage_string = f" ({mistake_because_of_coverage}% of the mistakes because of coverage)"
@@ -152,7 +155,10 @@ def evaluate(model_name: str,
     
     print(f'{COLORS["OKGREEN"]}Total (anywhere): {results.correct_anywhere}/{results.total_maps}{COLORS["ENDC"]}')
     
-    mistake_because_of_coverage = round(((results.total_full_maps - results.total_full_maps_from_active) / (results.total_full_maps - results.total_full_maps_correct)) * 100, 1)
+    if results.total_full_maps - results.total_full_maps_correct > 0:
+        mistake_because_of_coverage = round(((results.total_full_maps - results.total_full_maps_from_active) / (results.total_full_maps - results.total_full_maps_correct)) * 100, 1)
+    else:
+        mistake_because_of_coverage = 100
     mistake_because_of_coverage_string = ""
     if mistake_because_of_coverage > 0:
         mistake_because_of_coverage_string = f" ({mistake_because_of_coverage}% of the mistakes because of coverage)"
