@@ -144,10 +144,21 @@ def evaluate(model_name: str,
         print()
     
     mistake_because_of_coverage = round(((results.total_maps - results.total_guesses) / (results.total_maps - results.correct_answers)) * 100, 1)
-    print(f'{COLORS["OKGREEN"]}Total: {results.correct_answers}/{results.total_maps} ({mistake_because_of_coverage}% of the mistakes because of coverage){COLORS["ENDC"]}')
+    mistake_because_of_coverage_string = ""
+    if mistake_because_of_coverage > 0:
+        mistake_because_of_coverage_string = f" ({mistake_because_of_coverage}% of the mistakes because of coverage)"
+    success_pres = round((results.correct_answers / results.total_maps) * 100, 1)
+    print(f'{COLORS["OKGREEN"]}Total: {results.correct_answers}/{results.total_maps} ({success_pres}){mistake_because_of_coverage_string}{COLORS["ENDC"]}')
+    
     print(f'{COLORS["OKGREEN"]}Total (anywhere): {results.correct_anywhere}/{results.total_maps}{COLORS["ENDC"]}')
+    
     mistake_because_of_coverage = round(((results.total_full_maps - results.total_full_maps_from_active) / (results.total_full_maps - results.total_full_maps_correct)) * 100, 1)
-    print(f'{COLORS["OKGREEN"]}Total full mappings: {results.total_full_maps_correct}/{results.total_full_maps} ({mistake_because_of_coverage}% of the mistakes because of coverage){COLORS["ENDC"]}')
+    mistake_because_of_coverage_string = ""
+    if mistake_because_of_coverage > 0:
+        mistake_because_of_coverage_string = f" ({mistake_because_of_coverage}% of the mistakes because of coverage)"
+    success_pres = round((results.total_full_maps_correct / results.total_full_maps) * 100, 1)
+    print(f'{COLORS["OKGREEN"]}Total full mappings: {results.total_full_maps_correct}/{results.total_full_maps} ({success_pres}){mistake_because_of_coverage_string}{COLORS["ENDC"]}')
+    
     print()
     print(f'{COLORS["OKGREEN"]}Total correct from active mapping: {results.correct_answers}/{results.total_guesses}{COLORS["ENDC"]}')
     print(f'{COLORS["OKGREEN"]}Total full mappings from active: {results.total_full_maps_correct}/{results.total_full_maps_from_active}{COLORS["ENDC"]}\n')

@@ -83,7 +83,7 @@ class TestFunctions(unittest.TestCase):
         self.assertEqual(reference, actual)
 
 
-class TestMapping(unittest.TestCase):
+class TestMappingNoSuggestoins(unittest.TestCase):
 
     def test_beam(self):
         quasimodo = Quasimodo()
@@ -100,7 +100,7 @@ class TestMapping(unittest.TestCase):
             solutions = beam_search_wrapper(
                                             base=tv["input"]["base"], 
                                             target=tv["input"]["target"], 
-                                            suggestions=True, 
+                                            suggestions=False, 
                                             N=tv["input"]["depth"]['beam'], 
                                             verbose=True, 
                                             quasimodo=quasimodo, 
@@ -140,7 +140,91 @@ class TestMapping(unittest.TestCase):
             solutions = mapping_wrapper(
                                         base=tv["input"]["base"], 
                                         target=tv["input"]["target"], 
+                                        suggestions=False, 
+                                        depth=tv["input"]["depth"]['dfs'], 
+                                        top_n=1, 
+                                        verbose=True,
+                                        quasimodo=quasimodo,
+                                        freq=freq,
+                                        model_name='msmarco-distilbert-base-v4',
+                                        threshold=FREQUENCY_THRESHOLD)
+            solution = solutions[0]
+
+            # check the mapping
+            actual = solution.mapping
+            reference = tv["output"]["mapping"]
+            self.assertEqual(reference, actual)
+
+            # check the relations
+            actual = [[list(relation[0]), list(relation[1])] for relation in solution.relations]
+            reference = tv["output"]["relations"]['dfs']
+            self.assertEqual(reference, actual)
+
+            # check the score
+            actual = solution.score
+            reference = tv["output"]["score"]
+            self.assertEqual(round(reference, 3), round(actual, 3))
+
+class TestMappingSuggestoins(unittest.TestCase):
+
+    def test_beam(self):
+        quasimodo = Quasimodo()
+        json_folder = root / 'backend' / 'frequency' /  'jsons' / 'merged' / '20%'
+        json_basename = 'ci.json' if 'CI' in os.environ else 'all_1m_filter_3_sort.json'
+        freq = Frequencies(json_folder / json_basename, threshold=FREQUENCY_THRESHOLD)
+        with open(TEST_FOLDER / 'suggestions.yaml', 'r') as y:
+            spec = yaml.load(y, Loader=yaml.SafeLoader)
+        mapping_spec = spec["mapping"]
+        for tv in mapping_spec:
+            if tv["ignore"]:
+                continue
+            
+            solutions = beam_search_wrapper(
+                                            base=tv["input"]["base"], 
+                                            target=tv["input"]["target"], 
+                                            suggestions=True, 
+                                            num_of_suggestions=1,
+                                            N=tv["input"]["depth"]['beam'], 
+                                            verbose=True, 
+                                            quasimodo=quasimodo, 
+                                            freq=freq, 
+                                            model_name='msmarco-distilbert-base-v4',
+                                            threshold=FREQUENCY_THRESHOLD
+                                        )
+            solution = solutions[0]
+
+            # check the mapping
+            actual = solution.mapping
+            reference = tv["output"]["mapping"]
+            self.assertEqual(reference, actual)
+
+            # check the relations
+            actual = [[list(relation[0]), list(relation[1])] for relation in solution.relations]
+            reference = tv["output"]["relations"]['beam']
+            self.assertEqual(reference, actual)
+
+            # check the score
+            actual = solution.score
+            reference = tv["output"]["score"]
+            self.assertEqual(round(reference, 3), round(actual, 3))
+    
+    def test_dfs(self):
+        quasimodo = Quasimodo()
+        json_folder = root / 'backend' / 'frequency' /  'jsons' / 'merged' / '20%'
+        json_basename = 'ci.json' if 'CI' in os.environ else 'all_1m_filter_3_sort.json'
+        freq = Frequencies(json_folder / json_basename, threshold=FREQUENCY_THRESHOLD)
+        with open(TEST_FOLDER / 'suggestions.yaml', 'r') as y:
+            spec = yaml.load(y, Loader=yaml.SafeLoader)
+        mapping_spec = spec["mapping"]
+        for tv in mapping_spec:
+            if tv["ignore"]:
+                continue            
+
+            solutions = mapping_wrapper(
+                                        base=tv["input"]["base"], 
+                                        target=tv["input"]["target"], 
                                         suggestions=True, 
+                                        num_of_suggestions=1,
                                         depth=tv["input"]["depth"]['dfs'], 
                                         top_n=1, 
                                         verbose=True,

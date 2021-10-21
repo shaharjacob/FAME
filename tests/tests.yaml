@@ -1,5 +1,5 @@
 mapping:
-  - input:
+  - input: #1
       base: [solar system, sun, planet, gravity, newton]
       target: [atom, nucleus, electron, electricity, faraday]
       depth:
@@ -25,7 +25,7 @@ mapping:
       score: 21.04
     ignore: False
 
-  - input:
+  - input: #2
       base: [earth, sun, gravity, newton]
       target: [electrons, nucleus, electricity, faraday]
       depth:
@@ -48,55 +48,7 @@ mapping:
       score: 9.482
     ignore: False
 
-  - input:
-      base: [earth, sun, gravity, newton]
-      target: [electrons, nucleus, electricity]
-      depth:
-        dfs: 2
-        beam: 20
-    output:
-      mapping:
-        - earth --> electrons
-        - sun --> nucleus
-        - gravity --> electricity
-        - newton --> benjamin franklin
-      relations: 
-        dfs:
-          - [[earth, sun], [electrons, nucleus]]
-          - [[earth, gravity], [electrons, electricity]]
-          - [[gravity, newton], [electricity, benjamin franklin]]
-        beam:
-          - [[earth, sun], [electrons, nucleus]]
-          - [[earth, gravity], [electrons, electricity]]
-          - [[gravity, newton], [electricity, benjamin franklin]]
-      score: 11.149
-    ignore: False
-
-  - input:
-      base: [earth, newton, gravity]
-      target: [electrons, nucleus, electricity, faraday]
-      depth:
-        dfs: 4
-        beam: 20
-    output:
-      mapping:
-        - earth --> electrons
-        - gravity --> electricity
-        - newton --> faraday
-        - sun --> nucleus
-      relations: 
-        dfs:
-          - [[earth, gravity], [electrons, electricity]]
-          - [[newton, gravity], [faraday, electricity]]
-          - [[earth, sun], [electrons, nucleus]]
-        beam:
-          - [[earth, gravity], [electrons, electricity]]
-          - [[newton, gravity], [faraday, electricity]]
-          - [[earth, sun], [electrons, nucleus]]
-      score: 9.482
-    ignore: False
-
-  - input:
+  - input: #3
       base: [thoughts, brain, neurons]
       target: [astronaut, space, black hole]
       depth:
@@ -117,7 +69,7 @@ mapping:
       score: 5.135
     ignore: False
   
-  - input:
+  - input: #4
       base: [cars, road, wheels]
       target: [boats, river, sail]
       depth:
@@ -137,29 +89,8 @@ mapping:
           - [[cars, wheels], [boats, sail]]
       score: 9.019
     ignore: False
-  
-  - input:
-      base: [cars, road, wheels]
-      target: [boats, river]
-      depth:
-        dfs: 2
-        beam: 20
-    output:
-      mapping:
-        - cars --> boats
-        - road --> river
-        - wheels --> anchors
-      relations: 
-        dfs:
-          - [[cars, road], [boats, river]]
-          - [[cars, wheels], [boats, anchors]]
-        beam:
-          - [[cars, road], [boats, river]]
-          - [[cars, wheels], [boats, anchors]]
-      score: 8.986
-    ignore: False
 
-  - input:
+  - input: #5
       base: [sunscreen, sun, summer]
       target: [umbrella, rain, winter]
       depth:

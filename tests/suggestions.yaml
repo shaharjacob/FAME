@@ -1,0 +1,69 @@
+mapping:
+  - input: #1
+      base: [earth, sun, gravity, newton]
+      target: [electrons, nucleus, electricity]
+      depth:
+        dfs: 2
+        beam: 20
+    output:
+      mapping:
+        - earth --> electrons
+        - sun --> nucleus
+        - gravity --> electricity
+        - newton --> benjamin franklin
+      relations: 
+        dfs:
+          - [[earth, sun], [electrons, nucleus]]
+          - [[earth, gravity], [electrons, electricity]]
+          - [[gravity, newton], [electricity, benjamin franklin]]
+        beam:
+          - [[earth, sun], [electrons, nucleus]]
+          - [[earth, gravity], [electrons, electricity]]
+          - [[gravity, newton], [electricity, benjamin franklin]]
+      score: 11.149
+    ignore: False
+
+  - input: #2
+      base: [earth, newton, gravity]
+      target: [electrons, nucleus, electricity, faraday]
+      depth:
+        dfs: 4
+        beam: 20
+    output:
+      mapping:
+        - earth --> electrons
+        - gravity --> electricity
+        - newton --> faraday
+        - sun --> nucleus
+      relations: 
+        dfs:
+          - [[earth, gravity], [electrons, electricity]]
+          - [[newton, gravity], [faraday, electricity]]
+          - [[earth, sun], [electrons, nucleus]]
+        beam:
+          - [[earth, gravity], [electrons, electricity]]
+          - [[newton, gravity], [faraday, electricity]]
+          - [[earth, sun], [electrons, nucleus]]
+      score: 9.482
+    ignore: False
+  
+  - input: #3
+      base: [cars, road, wheels]
+      target: [boats, river]
+      depth:
+        dfs: 2
+        beam: 20
+    output:
+      mapping:
+        - cars --> boats
+        - road --> river
+        - wheels --> anchors
+      relations: 
+        dfs:
+          - [[cars, road], [boats, river]]
+          - [[cars, wheels], [boats, anchors]]
+        beam:
+          - [[cars, road], [boats, river]]
+          - [[cars, wheels], [boats, anchors]]
+      score: 8.986
+    ignore: False
