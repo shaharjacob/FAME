@@ -50,7 +50,7 @@ mapping:
       - picnic --> gun
       - food --> bullets
       
-  - input: #6 : 2/2
+  - input: #6 : 2/2 TODO
       base: [basketball, hoop]
       target: [traveler, destination]
       depth: 4
@@ -100,7 +100,7 @@ mapping:
       - meat --> words
       - appetite --> leisure
 
-  - input: #11 : 2/2 (but using the nearest)
+  - input: #11 : 2/2 (but using the nearest) TODO
       base: [cleanser, face]
       target: [soap, body] # [absolution, sinner]
       depth: 4
@@ -129,16 +129,17 @@ mapping:
       - son --> invention
       - baby --> idea
 
-  - input: #14 : 2/2
-      base: [flock, goose]
-      target: [constellation, star]
+  - input: #14 : 3/3
+      base: [flock, goose, lake]
+      target: [constellation, star, sky]
       depth: 4
     output:
       mapping:
       - flock --> constellation
       - goose --> star
+      - lake --> sky
 
-  - input: #15 : 2/2
+  - input: #15 : 2/2 TODO
       base: [foresight, future] 
       target: [x-ray, bone]
       depth: 4
@@ -167,7 +168,7 @@ mapping:
       - coal --> food
       - heat --> energy
 
-  - input: #18 No solution found
+  - input: #18 No solution found : TODO
       base: [hoof, hoofprint]
       target: [introduction, impression]
       depth: 4
@@ -176,7 +177,7 @@ mapping:
       - hoof --> introduction
       - hoofprint --> impression
 
-  - input: #19 No solution found
+  - input: #19 No solution found : TODO
       base: [immunization, disease]
       target: [forewarning, surprise]
       depth: 4
@@ -235,14 +236,15 @@ mapping:
       - lamb --> book
       - barbecue --> studies
 
-  - input: #25 : 2/2
-      base: [landscaper, lawn]
-      target: [stylist, hair]
+  - input: #25 : 3/3
+      base: [landscaper, lawn, fertilizer]
+      target: [stylist, hair, gel]
       depth: 4
     output:
       mapping:
       - landscaper --> stylist
       - lawn --> hair
+      - fertilizer --> gel
 
   - input: #26 : 0/3 (correct solution not found)
       base: [launchpad, helicopter, rotor]
@@ -333,7 +335,7 @@ mapping:
       - perimeter --> border
       - centroid --> cities
 
-  - input: #35 : No solution found
+  - input: #35 : No solution found : TODO
       base: [revising, manuscript]
       target: [evolving, species]
       depth: 4

@@ -101,6 +101,7 @@ def evaluate(model_name: str,
                                             base=tv["input"]["base"], 
                                             target=tv["input"]["target"], 
                                             suggestions=suggestions, 
+                                            num_of_suggestions=10,
                                             N=20, 
                                             verbose=True, 
                                             quasimodo=quasimodo, 
@@ -113,6 +114,7 @@ def evaluate(model_name: str,
                                             base=tv["input"]["base"], 
                                             target=tv["input"]["target"], 
                                             suggestions=suggestions, 
+                                            num_of_suggestions=10,
                                             depth=tv["input"]["depth"], 
                                             top_n=5, 
                                             verbose=True, 
@@ -140,10 +142,14 @@ def evaluate(model_name: str,
         print(f'{COLORS["OKGREEN"]}Correct from active mapping: {result.correct_answers}/{result.num_of_guesses}{COLORS["ENDC"]}\n')
         print("------------------------------------------------------------")
         print()
-    print(f'{COLORS["OKGREEN"]}Total: {results.correct_answers}/{results.total_maps}{COLORS["ENDC"]}')
+    
+    mistake_because_of_coverage = round(((results.total_maps - results.total_guesses) / (results.total_maps - results.correct_answers)) * 100, 1)
+    print(f'{COLORS["OKGREEN"]}Total: {results.correct_answers}/{results.total_maps} ({mistake_because_of_coverage}% of the mistakes because of coverage){COLORS["ENDC"]}')
     print(f'{COLORS["OKGREEN"]}Total (anywhere): {results.correct_anywhere}/{results.total_maps}{COLORS["ENDC"]}')
+    mistake_because_of_coverage = round(((results.total_full_maps - results.total_full_maps_from_active) / (results.total_full_maps - results.total_full_maps_correct)) * 100, 1)
+    print(f'{COLORS["OKGREEN"]}Total full mappings: {results.total_full_maps_correct}/{results.total_full_maps} ({mistake_because_of_coverage}% of the mistakes because of coverage){COLORS["ENDC"]}')
+    print()
     print(f'{COLORS["OKGREEN"]}Total correct from active mapping: {results.correct_answers}/{results.total_guesses}{COLORS["ENDC"]}')
-    print(f'{COLORS["OKGREEN"]}Total full mappings: {results.total_full_maps_correct}/{results.total_full_maps}{COLORS["ENDC"]}')
     print(f'{COLORS["OKGREEN"]}Total full mappings from active: {results.total_full_maps_correct}/{results.total_full_maps_from_active}{COLORS["ENDC"]}\n')
 
 

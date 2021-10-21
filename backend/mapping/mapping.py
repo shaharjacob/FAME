@@ -638,7 +638,7 @@ def beam_search_wrapper(base: List[str],
     if suggestions and num_of_suggestions > 0:
         solutions = sorted(solutions, key=lambda x: (x.length, x.score), reverse=True)
         if solutions and solutions[0].length < max(len(base), len(target)):
-            number_of_solutions_for_suggestions = 2
+            number_of_solutions_for_suggestions = 3
             # the idea is to iterate over the founded solutions, and check if there are entities are not mapped.
             for solution in solutions[:number_of_solutions_for_suggestions]:
                 if solution.length < max(len(base), len(target)) - 1:
@@ -726,7 +726,7 @@ def mapping_wrapper(base: List[str],
     if suggestions and num_of_suggestions > 0:
         solutions = sorted(solutions, key=lambda x: (x.length, x.score), reverse=True)
         if solutions and solutions[0].length < max(len(base), len(target)):
-            number_of_solutions_for_suggestions = 2
+            number_of_solutions_for_suggestions = 3
             # the idea is to iterate over the founded solutions, and check if there are entities are not mapped.
             for solution in solutions[:number_of_solutions_for_suggestions]:
                 if solution.length < max(len(base), len(target)) - 1:
