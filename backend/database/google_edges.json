@@ -25095,5 +25095,254 @@
 	"knee#silicon": [],
 	"silicon#knee": [],
 	"kneepad#silicon": [],
-	"silicon#kneepad": []
+	"silicon#kneepad": [],
+	"stylist#gel": [],
+	"gel#stylist": [],
+	"hair#gel": [],
+	"gel#hair": [
+		"affect your",
+		"bad for your",
+		"damage your",
+		"dry out",
+		"good for curly",
+		"help natural",
+		"not work on my",
+		"work on"
+	],
+	"landscaper#ignition coil": [],
+	"ignition coil#landscaper": [],
+	"landscaper#grubs": [],
+	"grubs#landscaper": [],
+	"landscaper#choke": [],
+	"choke#landscaper": [],
+	"landscaper#grass clippings": [
+		"get rid of"
+	],
+	"grass clippings#landscaper": [],
+	"landscaper#throttle": [],
+	"throttle#landscaper": [],
+	"landscaper#phosphorus": [],
+	"phosphorus#landscaper": [],
+	"landscaper#aeration": [],
+	"aeration#landscaper": [],
+	"landscaper#lime": [],
+	"lime#landscaper": [],
+	"landscaper#gypsum": [],
+	"gypsum#landscaper": [],
+	"landscaper#auto choke": [],
+	"auto choke#landscaper": [],
+	"landscaper#iron": [],
+	"iron#landscaper": [],
+	"landscaper#fuel pump": [],
+	"fuel pump#landscaper": [],
+	"landscaper#fertilizer": [],
+	"fertilizer#landscaper": [],
+	"landscaper#potassium": [],
+	"potassium#landscaper": [],
+	"landscaper#nitrogen": [],
+	"nitrogen#landscaper": [],
+	"landscaper#revive": [],
+	"revive#landscaper": [],
+	"landscaper#epsom salt": [],
+	"epsom salt#landscaper": [],
+	"lawn#ignition coil": [],
+	"ignition coil#lawn": [],
+	"lawn#grubs": [
+		"get"
+	],
+	"grubs#lawn": [
+		"affect your",
+		"damage your",
+		"get in your",
+		"get into",
+		"like my",
+		"ruin"
+	],
+	"lawn#choke": [],
+	"choke#lawn": [],
+	"lawn#grass clippings": [],
+	"grass clippings#lawn": [
+		"help the"
+	],
+	"lawn#throttle": [],
+	"throttle#lawn": [],
+	"lawn#phosphorus": [
+		"need"
+	],
+	"phosphorus#lawn": [
+		"help"
+	],
+	"lawn#aeration": [
+		"need"
+	],
+	"aeration#lawn": [
+		"good for your",
+		"help your"
+	],
+	"lawn#lime": [
+		"need"
+	],
+	"lime#lawn": [
+		"benefit a",
+		"good for your",
+		"help",
+		"help your",
+		"used on"
+	],
+	"lawn#gypsum": [],
+	"gypsum#lawn": [
+		"good for my",
+		"help",
+		"help your",
+		"work on"
+	],
+	"lawn#auto choke": [],
+	"auto choke#lawn": [],
+	"lawn#iron": [
+		"need"
+	],
+	"iron#lawn": [
+		"good for your",
+		"help",
+		"help your"
+	],
+	"lawn#fuel pump": [],
+	"fuel pump#lawn": [],
+	"lawn#fertilizer": [],
+	"fertilizer#lawn": [
+		"burn a",
+		"help"
+	],
+	"lawn#potassium": [],
+	"potassium#lawn": [
+		"help",
+		"help your"
+	],
+	"lawn#nitrogen": [],
+	"nitrogen#lawn": [
+		"good for",
+		"help",
+		"help your",
+		"important for"
+	],
+	"lawn#revive": [],
+	"revive#lawn": [
+		"work on"
+	],
+	"lawn#epsom salt": [],
+	"epsom salt#lawn": [
+		"benefit",
+		"good for",
+		"help",
+		"help your"
+	],
+	"landscaper#straw down": [
+		"put"
+	],
+	"straw down#landscaper": [],
+	"landscaper#math": [],
+	"math#landscaper": [],
+	"lawn#straw down": [],
+	"constellation#sky": [
+		"appear to change in position in the",
+		"appear to move in the night",
+		"change position in the",
+		"form in the",
+		"help scientists study the",
+		"in the",
+		"libra get in the",
+		"move in the night",
+		"useful for mapping the"
+	],
+	"sky#constellation": [],
+	"star#sky": [
+		"appear to move across the",
+		"appear to move in the",
+		"appear to move in the night",
+		"fall down from the",
+		"fall from the",
+		"flicker in the",
+		"get in the",
+		"in",
+		"like the sun appear to move in the",
+		"like the sun appear to move in the night",
+		"look in the nighttime",
+		"look very small in the",
+		"move across the",
+		"move describe the movement of the stars in the night",
+		"stay in the",
+		"twinkle in the"
+	],
+	"sky#star": [
+		"have"
+	],
+	"flock#lake": [],
+	"lake#flock": [],
+	"goose#lake": [],
+	"lake#goose": [],
+	"movie#dogs": [
+		"called reservoir",
+		"kill"
+	],
+	"dogs#movie": [
+		"act hurt in",
+		"act in",
+		"always die in",
+		"die in",
+		"play in",
+		"stop a",
+		"talk in",
+		"watch"
+	],
+	"movie#cats": [],
+	"cats#movie": [
+		"a bad",
+		"always die in",
+		"drink milk in",
+		"end",
+		"like",
+		"such a bad",
+		"survive in soul",
+		"watch"
+	],
+	"movie#headaches": [
+		"popcorn give me a",
+		"theater popcorn give me a"
+	],
+	"headaches#movie": [],
+	"screen#dogs": [],
+	"dogs#screen": [
+		"not like",
+		"not look at",
+		"see",
+		"see phone",
+		"see tv",
+		"walk across my youtube"
+	],
+	"screen#cats": [],
+	"cats#screen": [
+		"claw at",
+		"climb window",
+		"get in front of",
+		"lick",
+		"lick tv",
+		"like",
+		"like computer",
+		"scratch the tv",
+		"scratch tv",
+		"see",
+		"see phone",
+		"see tv",
+		"sit in front of the computer"
+	],
+	"screen#headaches": [
+		"cause",
+		"time cause",
+		"time give you"
+	],
+	"headaches#screen": [],
+	"revising#signature": [],
+	"signature#revising": [],
+	"manuscript#signature": [],
+	"signature#manuscript": []
 }

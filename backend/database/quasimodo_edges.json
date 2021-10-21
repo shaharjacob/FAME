@@ -15943,5 +15943,179 @@
 	"knee#silicon": [],
 	"silicon#knee": [],
 	"kneepad#silicon": [],
-	"silicon#kneepad": []
+	"silicon#kneepad": [],
+	"stylist#gel": [],
+	"gel#stylist": [],
+	"hair#gel": [
+		"has property"
+	],
+	"gel#hair": [],
+	"landscaper#ignition coil": [],
+	"ignition coil#landscaper": [],
+	"landscaper#grubs": [],
+	"grubs#landscaper": [],
+	"landscaper#choke": [],
+	"choke#landscaper": [],
+	"landscaper#grass clippings": [],
+	"grass clippings#landscaper": [],
+	"landscaper#throttle": [],
+	"throttle#landscaper": [],
+	"landscaper#phosphorus": [],
+	"phosphorus#landscaper": [],
+	"landscaper#aeration": [],
+	"aeration#landscaper": [],
+	"landscaper#lime": [
+		"use"
+	],
+	"lime#landscaper": [],
+	"landscaper#gypsum": [],
+	"gypsum#landscaper": [],
+	"landscaper#auto choke": [],
+	"auto choke#landscaper": [],
+	"landscaper#iron": [],
+	"iron#landscaper": [],
+	"landscaper#fuel pump": [],
+	"fuel pump#landscaper": [],
+	"landscaper#fertilizer": [],
+	"fertilizer#landscaper": [],
+	"landscaper#potassium": [],
+	"potassium#landscaper": [],
+	"landscaper#nitrogen": [],
+	"nitrogen#landscaper": [],
+	"landscaper#revive": [],
+	"revive#landscaper": [],
+	"landscaper#epsom salt": [],
+	"epsom salt#landscaper": [],
+	"lawn#ignition coil": [],
+	"ignition coil#lawn": [],
+	"lawn#grubs": [
+		"get"
+	],
+	"grubs#lawn": [
+		"get in",
+		"infested"
+	],
+	"lawn#choke": [],
+	"choke#lawn": [],
+	"lawn#grass clippings": [],
+	"grass clippings#lawn": [],
+	"lawn#throttle": [],
+	"throttle#lawn": [],
+	"lawn#phosphorus": [],
+	"phosphorus#lawn": [],
+	"lawn#aeration": [
+		"has property"
+	],
+	"aeration#lawn": [
+		"be good for"
+	],
+	"lawn#lime": [
+		"need"
+	],
+	"lime#lawn": [
+		"be good for",
+		"be important for",
+		"be put on",
+		"help"
+	],
+	"lawn#gypsum": [],
+	"gypsum#lawn": [
+		"be used on"
+	],
+	"lawn#auto choke": [],
+	"auto choke#lawn": [],
+	"lawn#iron": [],
+	"iron#lawn": [],
+	"lawn#fuel pump": [],
+	"fuel pump#lawn": [],
+	"lawn#fertilizer": [
+		"has property",
+		"need"
+	],
+	"fertilizer#lawn": [
+		"used on"
+	],
+	"lawn#potassium": [],
+	"potassium#lawn": [],
+	"lawn#nitrogen": [
+		"need"
+	],
+	"nitrogen#lawn": [],
+	"lawn#revive": [],
+	"revive#lawn": [],
+	"lawn#epsom salt": [],
+	"epsom salt#lawn": [],
+	"landscaper#straw down": [
+		"put"
+	],
+	"straw down#landscaper": [],
+	"landscaper#math": [
+		"use"
+	],
+	"math#landscaper": [],
+	"lawn#straw down": [],
+	"constellation#sky": [
+		"arrange in",
+		"be useful for",
+		"change position in",
+		"move across",
+		"move around in",
+		"move in"
+	],
+	"sky#constellation": [],
+	"star#sky": [
+		"appear in",
+		"be available on",
+		"be born on",
+		"be in",
+		"do fall down from",
+		"fall from",
+		"fall out of",
+		"look in",
+		"move across",
+		"move in"
+	],
+	"sky#star": [
+		"be filled with",
+		"be full of",
+		"be white with"
+	],
+	"flock#lake": [],
+	"lake#flock": [],
+	"goose#lake": [
+		"has property"
+	],
+	"lake#goose": [],
+	"movie#dogs": [],
+	"dogs#movie": [
+		"be in",
+		"finish",
+		"fly in",
+		"has property"
+	],
+	"movie#cats": [],
+	"cats#movie": [
+		"be bad guys in",
+		"be called",
+		"has property"
+	],
+	"movie#headaches": [],
+	"headaches#movie": [],
+	"screen#dogs": [],
+	"dogs#screen": [
+		"can recognize people through",
+		"can recognize sound through",
+		"look at"
+	],
+	"screen#cats": [],
+	"cats#screen": [],
+	"screen#headaches": [
+		"cause",
+		"give"
+	],
+	"headaches#screen": [],
+	"revising#signature": [],
+	"signature#revising": [],
+	"manuscript#signature": [],
+	"signature#manuscript": []
 }
