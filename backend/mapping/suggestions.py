@@ -33,13 +33,6 @@ class Suggestions(object):
 
     def get_suggestions(self):
         should_save = False
-        if f"{self.entity}#{self.prop}" in self.google_suggestinos and not self.override_database:
-            google_suggestinos = self.google_suggestinos[f"{self.entity}#{self.prop}"]
-        else:
-            google_suggestinos = google_autosuggest.get_entity_suggestions(self.entity, self.prop)
-            self.google_suggestinos[f"{self.entity}#{self.prop}"] = google_suggestinos  
-            should_save = True
-        
         if f"{self.entity}#{self.prop}" in self.quasimodo_suggestinos and not self.override_database:
             quasimodo_suggestinos = self.quasimodo_suggestinos[f"{self.entity}#{self.prop}"]
         else:
@@ -49,6 +42,13 @@ class Suggestions(object):
             self.quasimodo_suggestinos[f"{self.entity}#{self.prop}"] = quasimodo_suggestinos  
             should_save = True
         
+        if f"{self.entity}#{self.prop}" in self.google_suggestinos and not self.override_database:
+            google_suggestinos = self.google_suggestinos[f"{self.entity}#{self.prop}"]
+        else:
+            google_suggestinos = google_autosuggest.get_entity_suggestions(self.entity, self.prop)
+            self.google_suggestinos[f"{self.entity}#{self.prop}"] = google_suggestinos  
+            should_save = True        
+
         if f"{self.entity}#{self.prop}" in self.openie_suggestinos and not self.override_database:
             openie_suggestinos = self.openie_suggestinos[f"{self.entity}#{self.prop}"]
         else:
@@ -232,12 +232,11 @@ def mapping_suggestions_wrapper(
     
     first_domain_not_mapped_entities = [entity for entity in domain if entity not in solution.get_actual(first_domain)]
     for first_domain_not_mapped_entity in first_domain_not_mapped_entities:
-        entities_suggestions: List[str] = get_suggestions_for_missing_entities(
-                                                                                                data_collector, 
-                                                                                                first_domain_not_mapped_entity, 
-                                                                                                solution.get_actual(first_domain), 
-                                                                                                solution.get_actual(second_domain), 
-                                                                                                verbose=verbose)
+        entities_suggestions: List[str] = get_suggestions_for_missing_entities( data_collector, 
+                                                                                first_domain_not_mapped_entity, 
+                                                                                solution.get_actual(first_domain), 
+                                                                                solution.get_actual(second_domain), 
+                                                                                verbose=verbose)
         if not entities_suggestions:
             continue  # no suggestion found :(
         if first_domain == "actual_base":

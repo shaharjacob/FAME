@@ -48,3 +48,14 @@ mapping:
         - magnetic field
         - electricity
   
+  - input: #5
+      base: [kitten, cat]
+      target: [spark, fire, water]
+      depth: 4
+    output:
+      mapping:
+        - kitten --> spark
+        - cat --> fire
+      suggestions:
+        - rats
+        - mice

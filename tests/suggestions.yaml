@@ -67,3 +67,24 @@ mapping:
           - [[cars, wheels], [boats, anchors]]
       score: 8.986
     ignore: False
+
+  - input: #4
+      base: [kitten, cat]
+      target: [spark, fire, water]
+      depth:
+        dfs: 4
+        beam: 20
+    output:
+      mapping:
+        - kitten --> spark
+        - cat --> fire
+        - rats --> water
+      relations: 
+        dfs:
+          - [[kitten, cat], [spark, fire]]
+          - [[cat, rats], [fire, water]]
+        beam:
+          - [[kitten, cat], [spark, fire]]
+          - [[cat, rats], [fire, water]]
+      score: 7.016
+    ignore: False

@@ -16354,5 +16354,843 @@
 	"constellation#humans": [],
 	"humans#constellation": [],
 	"constellation#the resistance": [],
-	"the resistance#constellation": []
+	"the resistance#constellation": [],
+	"kitten#south america": [],
+	"south america#kitten": [],
+	"kitten#sneezing": [
+		"has property",
+		"keep"
+	],
+	"sneezing#kitten": [],
+	"kitten#crying": [
+		"has property",
+		"keep"
+	],
+	"crying#kitten": [],
+	"kitten#irish": [],
+	"irish#kitten": [],
+	"kitten#halle berry": [],
+	"halle berry#kitten": [],
+	"kitten#caroline chisholm": [],
+	"kitten#chaldeans": [],
+	"chaldeans#kitten": [],
+	"kitten#philippines": [],
+	"philippines#kitten": [],
+	"kitten#brazil": [],
+	"brazil#kitten": [],
+	"kitten#meowing": [
+		"has property",
+		"keep",
+		"walk around"
+	],
+	"meowing#kitten": [],
+	"kitten#themselves clean": [],
+	"themselves clean#kitten": [],
+	"caroline chisholm#kitten": [],
+	"kitten#spraying": [],
+	"spraying#kitten": [],
+	"kitten#meow": [
+		"can",
+		"learn"
+	],
+	"meow#kitten": [],
+	"cat#meowing": [
+		"be keep",
+		"communicate",
+		"has property",
+		"keep",
+		"walk around"
+	],
+	"meowing#cat": [],
+	"cat#themselves clean": [
+		"can lick",
+		"keep"
+	],
+	"themselves clean#cat": [],
+	"cat#south america": [],
+	"south america#cat": [],
+	"cat#caroline chisholm": [],
+	"caroline chisholm#cat": [],
+	"cat#irish": [],
+	"irish#cat": [],
+	"cat#philippines": [],
+	"philippines#cat": [],
+	"cat#halle berry": [],
+	"halle berry#cat": [],
+	"cat#crying": [
+		"has property",
+		"keep",
+		"walk around"
+	],
+	"crying#cat": [
+		"can",
+		"has property"
+	],
+	"cat#spraying": [
+		"has property",
+		"start"
+	],
+	"spraying#cat": [],
+	"cat#chaldeans": [],
+	"chaldeans#cat": [],
+	"cat#brazil": [],
+	"brazil#cat": [],
+	"cat#meow": [
+		"can",
+		"have",
+		"kitten",
+		"learn",
+		"say",
+		"start"
+	],
+	"meow#cat": [],
+	"cat#sneezing": [
+		"has property",
+		"keep"
+	],
+	"sneezing#cat": [
+		"can",
+		"has property"
+	],
+	"kitten#biting": [
+		"has property",
+		"keep",
+		"quit",
+		"start"
+	],
+	"biting#kitten": [],
+	"kitten#dying": [
+		"has property",
+		"keep"
+	],
+	"dying#kitten": [],
+	"kitten#farting": [
+		"keep"
+	],
+	"farting#kitten": [],
+	"cat#biting": [
+		"has property",
+		"keep"
+	],
+	"biting#cat": [],
+	"cat#dying": [
+		"can",
+		"has property",
+		"hide"
+	],
+	"dying#cat": [],
+	"cat#farting": [],
+	"farting#cat": [],
+	"kitten#muffins": [
+		"make"
+	],
+	"muffins#kitten": [],
+	"kitten#sound": [],
+	"sound#kitten": [],
+	"kitten#ranchers": [],
+	"ranchers#kitten": [],
+	"kitten#eating": [
+		"cry",
+		"has property",
+		"shake",
+		"stop",
+		"throw up"
+	],
+	"eating#kitten": [],
+	"kitten#the normans": [],
+	"the normans#kitten": [],
+	"kitten#heterochromia": [],
+	"heterochromia#kitten": [],
+	"kitten#wipe": [],
+	"wipe#kitten": [],
+	"kitten#vet": [],
+	"vet#kitten": [
+		"abort"
+	],
+	"kitten#birds": [],
+	"birds#kitten": [],
+	"kitten#moving": [],
+	"moving#kitten": [],
+	"kitten#noise": [
+		"make"
+	],
+	"noise#kitten": [],
+	"kitten#animal control": [],
+	"animal control#kitten": [],
+	"kitten#pets": [],
+	"pets#kitten": [],
+	"kitten#god": [],
+	"god#kitten": [
+		"kill"
+	],
+	"kitten#vice verse": [],
+	"vice verse#kitten": [],
+	"kitten#rats": [],
+	"rats#kitten": [],
+	"kitten#claws": [
+		"can",
+		"can retract",
+		"keep out"
+	],
+	"claws#kitten": [],
+	"kitten#texans": [],
+	"texans#kitten": [],
+	"kitten#kittens": [
+		"can stay forever"
+	],
+	"kittens#kitten": [
+		"can stay forever"
+	],
+	"kitten#baz": [],
+	"baz#kitten": [],
+	"kitten#colds": [
+		"has temperature"
+	],
+	"colds#kitten": [],
+	"kitten#katniss": [],
+	"katniss#kitten": [],
+	"kitten#purring": [
+		"has property",
+		"stop"
+	],
+	"purring#kitten": [],
+	"kitten#ringworm": [
+		"get"
+	],
+	"ringworm#kitten": [],
+	"kitten#walks": [
+		"can"
+	],
+	"walks#kitten": [],
+	"kitten#eggs": [
+		"can",
+		"has property"
+	],
+	"eggs#kitten": [],
+	"kitten#working": [],
+	"working#kitten": [],
+	"kitten#brown": [],
+	"brown#kitten": [],
+	"kitten#stuff": [],
+	"stuff#kitten": [],
+	"kitten#whitney": [],
+	"whitney#kitten": [],
+	"kitten#tails": [
+		"be born without",
+		"has body part",
+		"play with",
+		"raise"
+	],
+	"tails#kitten": [],
+	"kitten#kidney failure": [],
+	"kidney failure#kitten": [],
+	"kitten#weird noise": [
+		"make"
+	],
+	"weird noise#kitten": [],
+	"kitten#pope": [],
+	"pope#kitten": [],
+	"kitten#ears back": [],
+	"ears back#kitten": [],
+	"kitten#chickens": [],
+	"chickens#kitten": [],
+	"kitten#humans": [
+		"play with"
+	],
+	"humans#kitten": [],
+	"kitten#sleep": [
+		"can",
+		"fight"
+	],
+	"sleep#kitten": [],
+	"kitten#fleas": [
+		"be born with",
+		"can get",
+		"get",
+		"have"
+	],
+	"fleas#kitten": [
+		"affect",
+		"can kill"
+	],
+	"kitten#liver": [],
+	"liver#kitten": [],
+	"kitten#dogs": [],
+	"dogs#kitten": [
+		"kill"
+	],
+	"kitten#whiskers": [
+		"has body part",
+		"lose"
+	],
+	"whiskers#kitten": [],
+	"kitten#megacolon": [],
+	"megacolon#kitten": [],
+	"kitten#new homes": [],
+	"new homes#kitten": [],
+	"kitten#burlap": [],
+	"burlap#kitten": [],
+	"kitten#ears": [
+		"has body part"
+	],
+	"ears#kitten": [],
+	"kitten#ammonia": [],
+	"ammonia#kitten": [],
+	"kitten#industry": [],
+	"industry#kitten": [],
+	"kitten#the body": [],
+	"the body#kitten": [],
+	"kitten#henry viii": [],
+	"henry viii#kitten": [],
+	"kitten#clover": [],
+	"clover#kitten": [],
+	"kitten#laura": [],
+	"laura#kitten": [],
+	"kitten#kamie": [],
+	"kamie#kitten": [],
+	"kitten#heads": [
+		"shake"
+	],
+	"heads#kitten": [],
+	"kitten#way home": [
+		"find"
+	],
+	"way home#kitten": [],
+	"kitten#coyotes": [],
+	"coyotes#kitten": [],
+	"kitten#litter box": [
+		"go outside",
+		"lay in",
+		"play in",
+		"sit in",
+		"sleep in",
+		"use"
+	],
+	"litter box#kitten": [],
+	"kitten#ladybug": [],
+	"ladybug#kitten": [],
+	"kitten#paws": [
+		"can",
+		"shake"
+	],
+	"paws#kitten": [],
+	"kitten#the romans": [],
+	"the romans#kitten": [],
+	"kitten#mice": [
+		"kill"
+	],
+	"mice#kitten": [],
+	"kitten#cities": [],
+	"cities#kitten": [],
+	"kitten#upside down": [],
+	"upside down#kitten": [],
+	"kitten#mouse": [
+		"kill"
+	],
+	"mouse#kitten": [],
+	"kitten#tree": [],
+	"tree#kitten": [],
+	"cat#muffins": [
+		"make"
+	],
+	"muffins#cat": [],
+	"cat#sound": [
+		"can",
+		"make",
+		"respond"
+	],
+	"sound#cat": [],
+	"cat#ranchers": [],
+	"ranchers#cat": [],
+	"cat#eating": [
+		"cry",
+		"has property",
+		"lick",
+		"meow",
+		"quit",
+		"stop",
+		"suddenly stop",
+		"throw up",
+		"vomit",
+		"vomit immediately"
+	],
+	"eating#cat": [],
+	"cat#the normans": [],
+	"the normans#cat": [],
+	"cat#heterochromia": [],
+	"heterochromia#cat": [],
+	"cat#wipe": [
+		"need"
+	],
+	"wipe#cat": [],
+	"cat#vet": [
+		"go at"
+	],
+	"vet#cat": [
+		"collect urine samples from",
+		"do blood tests on",
+		"extract urine from",
+		"fix",
+		"handle",
+		"hold",
+		"sedate",
+		"shave",
+		"take blood from",
+		"treat worms in"
+	],
+	"cat#birds": [
+		"cackle at",
+		"catch",
+		"eat",
+		"imitate",
+		"kill",
+		"meow at",
+		"mimic",
+		"sound like",
+		"talk to",
+		"yell at"
+	],
+	"birds#cat": [
+		"attack",
+		"eat",
+		"pick on"
+	],
+	"cat#moving": [
+		"has movement",
+		"stop"
+	],
+	"moving#cat": [],
+	"cat#noise": [
+		"make"
+	],
+	"noise#cat": [],
+	"cat#animal control": [],
+	"animal control#cat": [],
+	"cat#pets": [
+		"be as",
+		"be popular as",
+		"enjoy",
+		"has property",
+		"have as",
+		"love",
+		"make",
+		"win out as"
+	],
+	"pets#cat": [],
+	"cat#god": [
+		"be like"
+	],
+	"god#cat": [],
+	"cat#vice verse": [
+		"be better than",
+		"can eat"
+	],
+	"vice verse#cat": [],
+	"cat#rats": [
+		"be afraid of",
+		"be racist against",
+		"catch",
+		"eat",
+		"hate",
+		"kill"
+	],
+	"rats#cat": [
+		"attack",
+		"be afraid of",
+		"be scared of",
+		"hate"
+	],
+	"cat#claws": [
+		"can",
+		"can retract",
+		"extend",
+		"has property",
+		"have",
+		"have hidden",
+		"knead with",
+		"shed",
+		"spread",
+		"use"
+	],
+	"claws#cat": [],
+	"cat#texans": [],
+	"texans#cat": [
+		"hate"
+	],
+	"cat#kittens": [
+		"abort",
+		"absorb",
+		"eat",
+		"have",
+		"ignore",
+		"kill",
+		"move",
+		"reject",
+		"wean",
+		"wrestle"
+	],
+	"kittens#cat": [
+		"be different from",
+		"be friendlier than",
+		"be more affectionate than",
+		"has property"
+	],
+	"cat#baz": [],
+	"baz#cat": [],
+	"cat#colds": [
+		"can catch",
+		"catch",
+		"feel",
+		"get",
+		"has temperature"
+	],
+	"colds#cat": [],
+	"cat#katniss": [],
+	"katniss#cat": [],
+	"cat#purring": [
+		"has property",
+		"stop"
+	],
+	"purring#cat": [],
+	"cat#ringworm": [
+		"can get",
+		"can give",
+		"get"
+	],
+	"ringworm#cat": [
+		"affect",
+		"be diagnosed in",
+		"be passed from",
+		"be spread in",
+		"be transmitted in",
+		"be treated in"
+	],
+	"cat#walks": [
+		"can",
+		"crab",
+		"go for",
+		"go on",
+		"need"
+	],
+	"walks#cat": [],
+	"cat#eggs": [
+		"be born from",
+		"can",
+		"eat",
+		"lick",
+		"love",
+		"produce"
+	],
+	"eggs#cat": [
+		"be bad for"
+	],
+	"cat#working": [
+		"stop"
+	],
+	"working#cat": [],
+	"cat#brown": [
+		"has color",
+		"turn"
+	],
+	"brown#cat": [],
+	"cat#stuff": [
+		"do really funny",
+		"get with",
+		"love knocking",
+		"love knocking down",
+		"prance on",
+		"rub up against",
+		"sit on"
+	],
+	"stuff#cat": [],
+	"cat#whitney": [],
+	"whitney#cat": [],
+	"cat#tails": [
+		"attack",
+		"has body part",
+		"have",
+		"move",
+		"need",
+		"twitch",
+		"use",
+		"vibrate",
+		"wag",
+		"wiggle"
+	],
+	"tails#cat": [],
+	"cat#kidney failure": [
+		"die from",
+		"die of"
+	],
+	"kidney failure#cat": [
+		"be common in",
+		"be treated in"
+	],
+	"cat#weird noise": [
+		"make"
+	],
+	"weird noise#cat": [],
+	"cat#pope": [],
+	"pope#cat": [],
+	"cat#ears back": [
+		"put"
+	],
+	"ears back#cat": [],
+	"cat#chickens": [
+		"attack",
+		"be obsessed with",
+		"can eat",
+		"kill",
+		"sit like"
+	],
+	"chickens#cat": [
+		"be bad for"
+	],
+	"cat#humans": [
+		"attack",
+		"eat",
+		"feel about",
+		"help",
+		"ignore",
+		"perceive",
+		"recognize",
+		"respect",
+		"see",
+		"talk to"
+	],
+	"humans#cat": [
+		"be like",
+		"can get worms from",
+		"can purr like",
+		"eat",
+		"help",
+		"help kindly",
+		"keep",
+		"love",
+		"need",
+		"worship"
+	],
+	"cat#sleep": [
+		"can",
+		"curl up",
+		"die in",
+		"has property",
+		"jerk in",
+		"moan in",
+		"need",
+		"pick places",
+		"twitch in"
+	],
+	"sleep#cat": [],
+	"cat#fleas": [
+		"be born with",
+		"can get",
+		"catch",
+		"get",
+		"get worms from"
+	],
+	"fleas#cat": [
+		"affect",
+		"can kill",
+		"cause worms in",
+		"get on",
+		"go on",
+		"hurt",
+		"kill",
+		"lay eggs on",
+		"live on",
+		"look on"
+	],
+	"cat#liver": [
+		"eat"
+	],
+	"liver#cat": [
+		"be bad for"
+	],
+	"cat#dogs": [
+		"be as loyal as",
+		"be as varied as",
+		"can",
+		"fear",
+		"get excited like",
+		"hate",
+		"hump like",
+		"learn like",
+		"listen like",
+		"understand like"
+	],
+	"dogs#cat": [
+		"be better than",
+		"dislike",
+		"eat",
+		"fight",
+		"get along with",
+		"has property",
+		"hate",
+		"hump",
+		"kill",
+		"sit on"
+	],
+	"cat#whiskers": [
+		"can",
+		"get",
+		"grow",
+		"has body part",
+		"lose",
+		"need",
+		"shed",
+		"use"
+	],
+	"whiskers#cat": [
+		"be important to",
+		"can help",
+		"fall out of",
+		"has property",
+		"help"
+	],
+	"cat#megacolon": [],
+	"megacolon#cat": [
+		"be diagnosed in",
+		"be treated in"
+	],
+	"cat#new homes": [
+		"find"
+	],
+	"new homes#cat": [],
+	"cat#burlap": [],
+	"burlap#cat": [],
+	"cat#ears": [
+		"has body part",
+		"have up",
+		"move",
+		"put back",
+		"tilt back",
+		"turn",
+		"turn back",
+		"wiggle"
+	],
+	"ears#cat": [],
+	"cat#ammonia": [
+		"produce"
+	],
+	"ammonia#cat": [],
+	"cat#industry": [],
+	"industry#cat": [],
+	"cat#the body": [],
+	"the body#cat": [],
+	"cat#henry viii": [],
+	"henry viii#cat": [],
+	"cat#clover": [],
+	"clover#cat": [],
+	"cat#laura": [],
+	"laura#cat": [],
+	"cat#kamie": [],
+	"kamie#cat": [],
+	"cat#heads": [
+		"bump",
+		"eat",
+		"has body part",
+		"lay down",
+		"nudge with",
+		"shake",
+		"tilt",
+		"turn sideways",
+		"turn upside down",
+		"twitch"
+	],
+	"heads#cat": [],
+	"cat#way home": [
+		"can find",
+		"find",
+		"navigate"
+	],
+	"way home#cat": [],
+	"cat#coyotes": [],
+	"coyotes#cat": [
+		"attack",
+		"can catch",
+		"catch",
+		"eat",
+		"get",
+		"kill"
+	],
+	"cat#litter box": [
+		"avoid",
+		"find",
+		"go in",
+		"go outside of",
+		"have",
+		"lay in",
+		"naturally use",
+		"urinate outside",
+		"urinate outside of",
+		"use"
+	],
+	"litter box#cat": [],
+	"cat#ladybug": [],
+	"ladybug#cat": [],
+	"cat#paws": [
+		"bite",
+		"can",
+		"close",
+		"curl inward",
+		"extend",
+		"have",
+		"open",
+		"shake",
+		"use",
+		"wave"
+	],
+	"paws#cat": [],
+	"cat#the romans": [],
+	"the romans#cat": [],
+	"cat#mice": [
+		"can eat",
+		"catch",
+		"deter",
+		"digest",
+		"eat",
+		"find",
+		"hate",
+		"kill",
+		"leave",
+		"play with"
+	],
+	"mice#cat": [
+		"be afraid of",
+		"be scared of",
+		"fear",
+		"hate"
+	],
+	"cat#cities": [],
+	"cities#cat": [],
+	"cat#upside down": [
+		"turn"
+	],
+	"upside down#cat": [],
+	"cat#mouse": [
+		"can eat",
+		"catch",
+		"deter",
+		"digest",
+		"eat",
+		"find",
+		"hate",
+		"kill",
+		"leave",
+		"play with"
+	],
+	"mouse#cat": [
+		"be afraid of",
+		"be scared of",
+		"fear",
+		"hate"
+	],
+	"cat#tree": [
+		"can climb down",
+		"can come down",
+		"eat bark off",
+		"get stuck in"
+	],
+	"tree#cat": []
 }

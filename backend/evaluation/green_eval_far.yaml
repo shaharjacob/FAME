@@ -207,14 +207,14 @@ mapping:
       - seeds --> dinosaurs
 
   - input: #22 : 3/3
-      base: [kitten, cat, dog]
+      base: [kitten, cat, rats]
       target: [spark, fire, water]
       depth: 4
     output:
       mapping:
       - kitten --> spark
       - cat --> fire
-      - dog --> water
+      - rats --> water
 
   - input: #23 : 1/3 (correct solution not found)
       base: [knee, kneepad, plastic]

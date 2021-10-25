@@ -1,4 +1,5 @@
 import re
+import os
 import time
 import json
 from pathlib import Path
@@ -65,7 +66,13 @@ class GoogleAutoSuggestOneEntity(object):
             keyword = keyword_.replace(" ", "+")
             url = f"http://suggestqueries.google.com/complete/search?client={self.browser}&q={keyword}&hl=en"
             response = requests.get(url)
-            suggestions = json.loads(response.text)[1]
+            try:
+                suggestions = json.loads(response.text)[1]
+            except:
+                secho(f"[WARNING] cannot access to {url}", fg="yellow", bold=True)
+                os.environ['SKIP_GOOGLE'] = 'true'
+                return
+                # exit(1)
             for suggestion in suggestions:
                 match = re.match(regex_, suggestion)
                 if match:
@@ -101,7 +108,9 @@ class GoogleAutoSuggestTwoEntities(object):
             suggestions = json.loads(response.text)[1]
         except:
             secho(f"[WARNING] cannot access to {url}", fg="yellow", bold=True)
-            exit(1)
+            os.environ['SKIP_GOOGLE'] = 'true'
+            return
+            # exit(1)
         for suggestion in suggestions:
             match = re.match(self.regex, suggestion)
             if match:
@@ -152,6 +161,8 @@ class GoogleAutoSuggestTwoEntities(object):
 
 def extend_suggestions(entity1: str, entity2: str, question: str, suggestions: List[Tuple[str]], verbose: bool):
     googleAC = GoogleAutoSuggestTwoEntities(question, entity1, entity2)
+    if 'SKIP_GOOGLE' in os.environ:
+        return
     for suggestion in googleAC.suggestions:
         if suggestion[0] not in suggestions["suggestions"] and suggestion[1] not in suggestions["props"]:
             if verbose:
@@ -187,18 +198,24 @@ def get_entity_suggestions(entity: str, prop: str, plural_and_singular: bool = F
         engine = inflect.engine()
     suggestions = []
     for question in ["why do", "why is", "why does", "why does it",  "why did", "how do", "how is", "how does", "how does it", "how did"]:
-        time.sleep(1) # google policy
+        # time.sleep(1) # google policy
         model = GoogleAutoSuggestOneEntity(question, entity, prop)
+        if 'SKIP_GOOGLE' in os.environ:
+            return list(set(suggestions))
         suggestions.extend(model.suggestinos)
         if plural_and_singular:
             plural = engine.plural(entity)
             if plural and plural != entity:
                 model = GoogleAutoSuggestOneEntity(question, plural, prop)
+                if 'SKIP_GOOGLE' in os.environ:
+                    return list(set(suggestions))
                 suggestions.extend(model.suggestinos)
 
             singular = engine.singular_noun(entity)
             if singular and singular != plural and singular != entity:
                 model = GoogleAutoSuggestOneEntity(question, singular, prop)
+                if 'SKIP_GOOGLE' in os.environ:
+                    return list(set(suggestions))
                 suggestions.extend(model.suggestinos)
 
     return list(set(suggestions))
@@ -246,6 +263,8 @@ def process(d: Dict[str, List[List[str]]], plural_and_singular: bool = True, ver
             secho(f"\n[INFO] collect information on question '{question}'", fg="blue")
         entity1, entity2 = objects
         googleAC = GoogleAutoSuggestTwoEntities(question, entity1, entity2)
+        if 'SKIP_GOOGLE' in os.environ:
+            return suggestions
         for suggestion in googleAC.suggestions:
             if suggestion[0] not in suggestions["suggestions"] and suggestion[1] not in suggestions["props"]:
                 if verbose:

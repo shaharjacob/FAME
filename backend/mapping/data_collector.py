@@ -1,3 +1,4 @@
+import os
 import json
 import inflect
 from pathlib import Path
@@ -33,14 +34,15 @@ class DataCollector(object):
             quasimodo_props = self.quasimodo.get_entities_relations(entity1, entity2, n_largest=10, plural_and_singular=True)
             self.quasimodo_edges[f"{entity1}#{entity2}"] = sorted(quasimodo_props)
             should_save = True
-
-        if f"{entity1}#{entity2}" in self.google_edges and not self.override_database:
-            autosuggets_props = self.google_edges[f"{entity1}#{entity2}"]
-        else:
-            autosuggets_props = google_autosuggest.get_entities_relations(entity1, entity2).get("props", [])
-            self.google_edges[f"{entity1}#{entity2}"] = sorted(autosuggets_props) 
-            should_save = True
-
+        
+        if 'SKIP_GOOGLE' not in os.environ:
+            if f"{entity1}#{entity2}" in self.google_edges and not self.override_database:
+                autosuggets_props = self.google_edges[f"{entity1}#{entity2}"]
+            else:
+                autosuggets_props = google_autosuggest.get_entities_relations(entity1, entity2).get("props", [])
+                self.google_edges[f"{entity1}#{entity2}"] = sorted(autosuggets_props) 
+                should_save = True
+            
         # if f"{entity1}#{entity2}" in self.conceptnet_edges and not self.override_database:
         #     concept_net_props = self.conceptnet_edges[f"{entity1}#{entity2}"]
         # else:
