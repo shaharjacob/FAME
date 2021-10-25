@@ -86,5 +86,5 @@ mapping:
         beam:
           - [[kitten, cat], [spark, fire]]
           - [[cat, rats], [fire, water]]
-      score: 7.016
+      score: 6.975
     ignore: False
