@@ -2,7 +2,9 @@ mapping:
   - input: #1 : 5/5
       base: [solar system, sun, planet, gravity, newton]
       target: [atom, nucleus, electron, electricity, faraday]
-      depth: 4
+      depth:
+        beam: 20
+        dfs: 4
     output:
       mapping:
         - sun --> nucleus
@@ -14,7 +16,9 @@ mapping:
   - input: #2 : 3/3
       base: [thoughts, brain, neurons]
       target: [astronaut, space, black hole]
-      depth: 2
+      depth:
+        beam: 20
+        dfs: 2
     output:
       mapping:
         - thoughts --> astronaut
@@ -24,7 +28,9 @@ mapping:
   - input: #3 : 3/3
       base: [cars, road, wheels]
       target: [boats, river, sail]
-      depth: 2
+      depth:
+        beam: 20
+        dfs: 2
     output:
       mapping:
         - cars --> boats
@@ -34,7 +40,9 @@ mapping:
   - input: #4 : 3/3
       base: [sunscreen, sun, summer]
       target: [umbrella, rain, winter]
-      depth: 2
+      depth:
+        beam: 20
+        dfs: 2
     output:
       mapping:
         - sun --> rain
@@ -44,7 +52,9 @@ mapping:
   - input: #5 : 5/5
       base: [water, pressure, bucket, pipe, rain]
       target: [heat, temperature, kettle, iron, sun]
-      depth: 4
+      depth:
+        beam: 20
+        dfs: 4
     output:
       mapping:
         - water --> heat
@@ -56,7 +66,9 @@ mapping:
   - input: #6 : 4/4
       base: [waves, water, shore, breakwater]
       target: [sounds, air, wall, ear]
-      depth: 4
+      depth:
+        beam: 20
+        dfs: 4
     output:
       mapping:
         - waves --> sounds
@@ -67,7 +79,9 @@ mapping:
   - input: #7 : 3/3
       base: [respiration, animal, food]
       target: [combustion, fire, fuel]
-      depth: 4
+      depth:
+        beam: 20
+        dfs: 4
     output:
       mapping:
         - respiration --> combustion
@@ -77,7 +91,9 @@ mapping:
   - input: #8 : 3/3
       base: [light, bright, lens]
       target: [sound, loud, horn]
-      depth: 4
+      depth:
+        beam: 20
+        dfs: 4
     output:
       mapping:
         - light --> sound
@@ -87,7 +103,9 @@ mapping:
   - input: #9 : 3/3
       base: [computer, processing, bug]
       target: [brain, thinking, mistake]
-      depth: 4
+      depth:
+        beam: 20
+        dfs: 4
     output:
       mapping:
         - computer --> brain
@@ -97,7 +115,9 @@ mapping:
   - input: #10 : 3/3
       base: [war, soldiers, weapon]
       target: [court, lawyer, evidence] 
-      depth: 4
+      depth:
+        beam: 20
+        dfs: 4
     output:
       mapping:
         - war --> court
@@ -107,7 +127,9 @@ mapping:
   - input: #11 : 3/3
       base: [blood, vein, hospital]
       target: [people, bus, garage] 
-      depth: 4
+      depth:
+        beam: 20
+        dfs: 4
     output:
       mapping:
         - blood --> people
@@ -117,7 +139,9 @@ mapping:
   - input: #12 : 3/3
       base: [law, crime, death]
       target: [medicine, illness, life] 
-      depth: 4
+      depth:
+        beam: 20
+        dfs: 4
     output:
       mapping:
         - law --> medicine
@@ -127,7 +151,9 @@ mapping:
   - input: #13 : 2/4
       base: [room, apartment, building, neighborhood]
       target: [leaf, branch, tree, forest] 
-      depth: 4
+      depth:
+        beam: 20
+        dfs: 4
     output:
       mapping:
         - room --> leaf
@@ -138,7 +164,9 @@ mapping:
   - input: #14 : 4/4
       base: [goal, football, grass, feet]
       target: [basket, basketball, parquet, hands] 
-      depth: 4
+      depth:
+        beam: 20
+        dfs: 4
     output:
       mapping:
         - goal --> basket
@@ -149,7 +177,9 @@ mapping:
   - input: #15 : 3/3
       base: [seeds, fruit, bloom]
       target: [ideas, product, success] 
-      depth: 4
+      depth:
+        beam: 20
+        dfs: 4
     output:
       mapping:
         - seeds --> ideas
@@ -159,7 +189,9 @@ mapping:
   - input: #16 : 3/3
       base: [buildings, foundations, crack]
       target: [theories, reasons, flaw] 
-      depth: 4
+      depth:
+        beam: 20
+        dfs: 4
     output:
       mapping:
         - buildings --> theories
@@ -169,7 +201,9 @@ mapping:
   - input: #17 : 4/4
       base: [cover, book, paper, wood]
       target: [pillowcase, pillow, feather, chicken] 
-      depth: 4
+      depth:
+        beam: 20
+        dfs: 4
     output:
       mapping:
         - cover --> pillowcase
@@ -180,7 +214,9 @@ mapping:
   - input: #18 : 4/4
       base: [captain, ship, water, harbor]
       target: [pilot, airplane, air, airport] 
-      depth: 4
+      depth:
+        beam: 20
+        dfs: 4
     output:
       mapping:
         - captain --> pilot
@@ -191,7 +227,9 @@ mapping:
   - input: #19 : 4/4
       base: [letter, word, sentence, language]
       target: [digit, number, equation, math] 
-      depth: 4
+      depth:
+        beam: 20
+        dfs: 4
     output:
       mapping:
         - word --> number
@@ -202,7 +240,9 @@ mapping:
   - input: #20 : 4/4
       base: [morning, breakfast, start, coffee]
       target: [evening, dinner, end, wine] 
-      depth: 4
+      depth:
+        beam: 20
+        dfs: 4
     output:
       mapping:
         - morning --> evening
@@ -213,7 +253,9 @@ mapping:
   - input: #21 : 3/3
       base: [education, teacher, school]
       target: [healthcare, doctor, hospital] 
-      depth: 4
+      depth:
+        beam: 20
+        dfs: 4
     output:
       mapping:
         - education --> healthcare
@@ -223,7 +265,9 @@ mapping:
   - input: #22 : 3/3
       base: [vacuum cleaner, dust, electricity]
       target: [black hole, planet, gravity] 
-      depth: 4
+      depth:
+        beam: 20
+        dfs: 4
     output:
       mapping:
         - vacuum cleaner --> black hole
@@ -233,7 +277,9 @@ mapping:
   - input: #23 : 3/3
       base: [motorcycle, motorcyclist, fuel]
       target: [singer, microphone, electricity] 
-      depth: 4
+      depth:
+        beam: 20
+        dfs: 4
     output:
       mapping:
         - motorcyclist --> singer
@@ -243,7 +289,9 @@ mapping:
   - input: #24 : 3/3
       base: [refrigerator, cold, air conditioner]
       target: [oven, hot, heater] 
-      depth: 4
+      depth:
+        beam: 20
+        dfs: 4
     output:
       mapping:
         - refrigerator --> oven
@@ -253,7 +301,9 @@ mapping:
   - input: #25 : 3/3
       base: [singer, song, lyrics]
       target: [programmer, code, logic] 
-      depth: 4
+      depth:
+        beam: 20
+        dfs: 4
     output:
       mapping:
         - singer --> programmer
@@ -263,7 +313,9 @@ mapping:
   - input: #26 : 3/3
       base: [eraser, pencil, paper]
       target: [delete, keyboard, screen] 
-      depth: 4
+      depth:
+        beam: 20
+        dfs: 4
     output:
       mapping:
         - eraser --> delete
@@ -273,7 +325,9 @@ mapping:
   - input: #27 : 3/3
       base: [flowers, bouquet, ribbon]
       target: [players, team, coach] 
-      depth: 4
+      depth:
+        beam: 20
+        dfs: 4
     output:
       mapping:
         - flowers --> players
@@ -283,7 +337,9 @@ mapping:
   - input: #28 : 4/4
       base: [feet, socks, shirt, football]
       target: [hands, gloves, pants, basketball] 
-      depth: 4
+      depth:
+        beam: 20
+        dfs: 4
     output:
       mapping:
         - feet --> hands
@@ -294,7 +350,9 @@ mapping:
   - input: #29 : 0/3
       base: [clock, dial, time]
       target: [radio, frequency, audio] 
-      depth: 4
+      depth:
+        beam: 20
+        dfs: 4
     output:
       mapping:
         - clock --> radio
@@ -304,7 +362,9 @@ mapping:
   - input: #30 : 0/3
       base: [king, kingdom, crown]
       target: [motorcyclist, motorcycle, helmet] 
-      depth: 4
+      depth:
+        beam: 20
+        dfs: 4
     output:
       mapping:
         - king --> motorcyclist
@@ -314,7 +374,9 @@ mapping:
   - input: #31 : 1/4
       base: [ski, skis, snow, funicular]
       target: [golf, club, grass, cart] 
-      depth: 4
+      depth:
+        beam: 20
+        dfs: 4
     output:
       mapping:
         - ski --> golf
@@ -325,7 +387,9 @@ mapping:
   - input: #32 : 3/3
       base: [tv, picture, living room]
       target: [radio, sound, car] 
-      depth: 4
+      depth:
+        beam: 20
+        dfs: 4
     output:
       mapping:
         - tv --> radio
@@ -335,7 +399,9 @@ mapping:
   - input: #33 : 1/3
       base: [client, internet, website]
       target: [surfer, sea, wave]
-      depth: 4
+      depth:
+        beam: 20
+        dfs: 4
     output:
       mapping:
         - client --> surfer
@@ -345,7 +411,9 @@ mapping:
   - input: #34 : 4/4
       base: [foresight, future, hope, joy] 
       target: [hindsight, past, depression, crying]
-      depth: 4
+      depth:
+        beam: 20
+        dfs: 4
     output:
       mapping:
       - foresight --> hindsight
@@ -356,7 +424,9 @@ mapping:
   - input: #35
       base: [sun, earth, water, sunscreen]
       target: [nucleus, electrons, energy, cytoplasm]
-      depth: 4
+      depth:
+        beam: 20
+        dfs: 4
     output:
       mapping:
       - sun --> nucleus
@@ -367,7 +437,9 @@ mapping:
   - input: #36
       base: [battery, copper wire, resistor]
       target: [pump, pipe, valve]
-      depth: 4
+      depth:
+        beam: 20
+        dfs: 4
     output:
       mapping:
         - battery --> pump

@@ -13,7 +13,7 @@ from mapping.dfs import dfs_wrapper
 from mapping.quasimodo import Quasimodo
 from frequency.frequency import Frequencies
 from mapping.beam_search import beam_search_wrapper
-from mapping.mapping import Solution, FREQUENCY_THRESHOLD
+from mapping.mapping import Solution, FREQUENCY_THRESHOLD, mapping_wrapper
 
 EVALUATION_FOLDER = Path(__file__).resolve().parent
 root = EVALUATION_FOLDER.resolve().parent.parent
@@ -87,6 +87,10 @@ def evaluate(model_name: str,
              algorithm: str,
              suggestions: bool = False):
     
+    if algorithm not in ['beam', 'dfs']:
+            secho("[ERROR] unsupported algorithm. (supported are 'beam' or 'dfs').")
+            exit(1)
+            
     with open(EVALUATION_FOLDER / path, 'r') as y:
         spec = yaml.load(y, Loader=yaml.SafeLoader)
     mapping_spec = spec["mapping"]
@@ -98,36 +102,18 @@ def evaluate(model_name: str,
         if specify and i + 1 not in specify:
             continue
         
-        if algorithm == 'beam':
-            solutions = beam_search_wrapper(
-                                            base=tv["input"]["base"], 
-                                            target=tv["input"]["target"], 
-                                            suggestions=suggestions, 
-                                            num_of_suggestions=10,
-                                            N=20, 
-                                            verbose=True, 
-                                            quasimodo=quasimodo, 
-                                            freq=freq, 
-                                            model_name=model_name,
-                                            threshold=threshold
-                                        )
-        elif algorithm == 'dfs':
-            solutions = dfs_wrapper(
-                                            base=tv["input"]["base"], 
-                                            target=tv["input"]["target"], 
-                                            suggestions=suggestions, 
-                                            num_of_suggestions=10,
-                                            depth=tv["input"]["depth"], 
-                                            top_n=5, 
-                                            verbose=True, 
-                                            quasimodo=quasimodo, 
-                                            freq=freq, 
-                                            model_name=model_name,
-                                            threshold=threshold
-                                        )
-        else:
-            secho("[ERROR] unsupported algorithm. (supported are 'beam' or 'dfs').")
-            exit(1)
+        algo_func = beam_search_wrapper if algorithm == 'beam' else dfs_wrapper
+        solutions = mapping_wrapper(algo_func, 
+                                    base=tv["input"]["base"], 
+                                    target=tv["input"]["target"], 
+                                    suggestions=suggestions, 
+                                    num_of_suggestions=10,
+                                    N=tv["input"]["depth"][algorithm], 
+                                    verbose=True, 
+                                    quasimodo=quasimodo, 
+                                    freq=freq, 
+                                    model_name=model_name,
+                                    threshold=threshold)
         result = Result()
         current_maps = len(tv["output"]["mapping"])
         result.num_of_maps = current_maps

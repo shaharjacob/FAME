@@ -2,7 +2,9 @@ mapping:
   - input: #1
       base: [sun, earth, water]
       target: [nucleus, electrons]
-      depth: 4
+      depth:
+        beam: 20
+        dfs: 4
     output:
       mapping:
         - sun --> nucleus
@@ -13,7 +15,9 @@ mapping:
   - input: #2
       base: [landscaper, lawn]
       target: [stylist, hair, gel]
-      depth: 4
+      depth:
+        beam: 20
+        dfs: 4
     output:
       mapping:
         - landscaper --> stylist
@@ -24,7 +28,9 @@ mapping:
   - input: #3
       base: [earth, sun]
       target: [nucleus, electrons, electricity]
-      depth: 4
+      depth:
+        beam: 20
+        dfs: 4
     output:
       mapping:
         - sun --> nucleus
@@ -35,7 +41,9 @@ mapping:
   - input: #4
       base: [sun, earth, gravity]
       target: [nucleus, electrons]
-      depth: 4
+      depth:
+        beam: 20
+        dfs: 4
     output:
       mapping:
         - sun --> nucleus
@@ -47,7 +55,9 @@ mapping:
   - input: #5
       base: [kitten, cat]
       target: [spark, fire, wood]
-      depth: 4
+      depth:
+        beam: 20
+        dfs: 4
     output:
       mapping:
         - kitten --> spark
@@ -58,7 +68,9 @@ mapping:
   - input: #6
       base: [foresight, future, hope] 
       target: [x-ray, bone]
-      depth: 4
+      depth:
+        beam: 20
+        dfs: 4
     output:
       mapping:
         - foresight --> x-ray
@@ -69,7 +81,9 @@ mapping:
   - input: #7
       base: [kitten, cat, rat]
       target: [spark, fire]
-      depth: 4
+      depth:
+        beam: 20
+        dfs: 4
     output:
       mapping:
         - kitten --> spark

@@ -1,7 +1,7 @@
 import os
 from pathlib import Path
 from itertools import combinations
-from typing import List, Dict, Tuple, Union, Set
+from typing import List, Dict, Tuple, Union, Set, Callable
 
 from tqdm import tqdm
 from click import secho
@@ -20,6 +20,7 @@ NUM_OF_CLUSTERS_TO_CALC = 3
 EDGE_THRESHOLD = 0.2
 DEFAULT_DIST_THRESHOLD_FOR_CLUSTERS = 0.8
 FREQUENCY_THRESHOLD = 500
+
 
 class Solution:
     def __init__(self, 
@@ -70,6 +71,10 @@ class Solution:
         secho(f"Score: {round(self.score, 3)}", fg="blue", bold=True)
         secho(f"Coverage: {sum(self.coverage)}", fg="blue", bold=True)
         print()
+
+
+def mapping_wrapper(func: Callable, **kwargs) -> List[Solution]:
+    return func(**kwargs)
 
 
 def get_edge_score(prop1: str, prop2: str, model: SentenceEmbedding, freq: Frequencies) -> float:

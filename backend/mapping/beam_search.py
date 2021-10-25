@@ -103,7 +103,8 @@ def beam_search_wrapper(base: List[str],
                         quasimodo: Quasimodo = None, 
                         freq: Frequencies = None, 
                         model_name: str = 'msmarco-distilbert-base-v4',
-                        threshold: Union[float, int] = FREQUENCY_THRESHOLD) -> List[Solution]:
+                        threshold: Union[float, int] = FREQUENCY_THRESHOLD
+                        ) -> List[Solution]:
 
     # we want all the possible pairs.
     # general there are (n choose 2) * (n choose 2) * 2 pairs.

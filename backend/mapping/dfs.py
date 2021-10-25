@@ -100,16 +100,16 @@ def dfs(
 
 
 def dfs_wrapper(base: List[str], 
-                    target: List[str], 
-                    suggestions: bool = True, 
-                    depth: int = 2, 
-                    top_n: int = 10, 
-                    num_of_suggestions: int = 1, 
-                    verbose: bool = False, 
-                    quasimodo: Quasimodo = None, 
-                    freq: Frequencies = None, 
-                    model_name: str = 'msmarco-distilbert-base-v4',
-                    threshold: Union[float, int] = FREQUENCY_THRESHOLD) -> List[Solution]:
+                target: List[str], 
+                suggestions: bool = False, 
+                num_of_suggestions: int = 1,
+                N: int = 4,
+                verbose: bool = False, 
+                quasimodo: Quasimodo = None, 
+                freq: Frequencies = None, 
+                model_name: str = 'msmarco-distilbert-base-v4',
+                threshold: Union[float, int] = FREQUENCY_THRESHOLD
+                ) -> List[Solution]:
 
     # we want all the possible pairs.
     # general there are (n choose 2) * (n choose 2) * 2 pairs.
@@ -156,7 +156,7 @@ def dfs_wrapper(base: List[str],
         mappings_already_seen=mappings_already_seen, 
         cache=cache, 
         calls=calls, 
-        depth=depth)
+        depth=N)
 
     # array of addition solutions for the suggestions if some entities have missing mappings.
     suggestions_solutions = []
@@ -203,13 +203,14 @@ def dfs_wrapper(base: List[str],
         if verbose:
             secho("No solution found")
         return []
+    
+    solutions_to_return_and_print = 10
     if verbose:
         secho(f"\nBase: {base}", fg="blue", bold=True)
         secho(f"Target: {target}\n", fg="blue", bold=True)
-        solutions_to_print = 10 if os.environ.get('CI', False) else top_n
-        for i, solution in enumerate(all_solutions[:solutions_to_print]):
+        for i, solution in enumerate(all_solutions[:solutions_to_return_and_print]):
             secho(f"#{i+1}", fg="blue", bold=True)
             solution.print_solution()
 
     secho(f"Number of recursive calls: {calls[0]}\n")
-    return all_solutions[:top_n]
+    return all_solutions[:solutions_to_return_and_print]

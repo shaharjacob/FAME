@@ -98,8 +98,7 @@ class TestMappingNoSuggestoins(unittest.TestCase):
             if tv["ignore"]:
                 continue
             
-            solutions = beam_search_wrapper(
-                                            base=tv["input"]["base"], 
+            solutions = beam_search_wrapper(base=tv["input"]["base"], 
                                             target=tv["input"]["target"], 
                                             suggestions=False, 
                                             N=tv["input"]["depth"]['beam'], 
@@ -107,8 +106,7 @@ class TestMappingNoSuggestoins(unittest.TestCase):
                                             quasimodo=quasimodo, 
                                             freq=freq, 
                                             model_name='msmarco-distilbert-base-v4',
-                                            threshold=FREQUENCY_THRESHOLD
-                                        )
+                                            threshold=FREQUENCY_THRESHOLD)
             solution = solutions[0]
 
             # check the mapping
@@ -138,17 +136,15 @@ class TestMappingNoSuggestoins(unittest.TestCase):
             if tv["ignore"]:
                 continue            
 
-            solutions = dfs_wrapper(
-                                        base=tv["input"]["base"], 
-                                        target=tv["input"]["target"], 
-                                        suggestions=False, 
-                                        depth=tv["input"]["depth"]['dfs'], 
-                                        top_n=1, 
-                                        verbose=True,
-                                        quasimodo=quasimodo,
-                                        freq=freq,
-                                        model_name='msmarco-distilbert-base-v4',
-                                        threshold=FREQUENCY_THRESHOLD)
+            solutions = dfs_wrapper(base=tv["input"]["base"], 
+                                    target=tv["input"]["target"], 
+                                    suggestions=False, 
+                                    N=tv["input"]["depth"]['dfs'], 
+                                    verbose=True,
+                                    quasimodo=quasimodo,
+                                    freq=freq,
+                                    model_name='msmarco-distilbert-base-v4',
+                                    threshold=FREQUENCY_THRESHOLD)
             solution = solutions[0]
 
             # check the mapping
@@ -180,8 +176,7 @@ class TestMappingSuggestoins(unittest.TestCase):
             if tv["ignore"]:
                 continue
             
-            solutions = beam_search_wrapper(
-                                            base=tv["input"]["base"], 
+            solutions = beam_search_wrapper(base=tv["input"]["base"], 
                                             target=tv["input"]["target"], 
                                             suggestions=True, 
                                             num_of_suggestions=1,
@@ -190,8 +185,7 @@ class TestMappingSuggestoins(unittest.TestCase):
                                             quasimodo=quasimodo, 
                                             freq=freq, 
                                             model_name='msmarco-distilbert-base-v4',
-                                            threshold=FREQUENCY_THRESHOLD
-                                        )
+                                            threshold=FREQUENCY_THRESHOLD)
             solution = solutions[0]
 
             # check the mapping
@@ -221,18 +215,16 @@ class TestMappingSuggestoins(unittest.TestCase):
             if tv["ignore"]:
                 continue            
 
-            solutions = dfs_wrapper(
-                                        base=tv["input"]["base"], 
-                                        target=tv["input"]["target"], 
-                                        suggestions=True, 
-                                        num_of_suggestions=1,
-                                        depth=tv["input"]["depth"]['dfs'], 
-                                        top_n=1, 
-                                        verbose=True,
-                                        quasimodo=quasimodo,
-                                        freq=freq,
-                                        model_name='msmarco-distilbert-base-v4',
-                                        threshold=FREQUENCY_THRESHOLD)
+            solutions = dfs_wrapper(base=tv["input"]["base"], 
+                                    target=tv["input"]["target"], 
+                                    suggestions=True, 
+                                    num_of_suggestions=1,
+                                    N=tv["input"]["depth"]['dfs'],
+                                    verbose=True,
+                                    quasimodo=quasimodo,
+                                    freq=freq,
+                                    model_name='msmarco-distilbert-base-v4',
+                                    threshold=FREQUENCY_THRESHOLD)
             solution = solutions[0]
 
             # check the mapping

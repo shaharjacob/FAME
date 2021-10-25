@@ -18,7 +18,7 @@ from mapping.data_collector import DataCollector
 from mapping.beam_search import beam_search_wrapper
 from utils.sentence_embadding import SentenceEmbedding
 from mapping.mapping import FREQUENCY_THRESHOLD, NUM_OF_CLUSTERS_TO_CALC, EDGE_THRESHOLD
-from mapping.mapping import get_pair_mapping, get_edge_score, get_edges_with_maximum_weight
+from mapping.mapping import get_pair_mapping, get_edge_score, get_edges_with_maximum_weight, mapping_wrapper
 
 
 app = Flask(__name__)
@@ -41,37 +41,22 @@ def mapping_entities():
     algo = request.args.get('algo')
     if algo not in ["beam", "dfs"]:
         algo = "beam"
+    if algo == 'beam':
+        depth = 20
     data = []
     scores = []
     
     # here we map between base entitites and target entities
-    if algo == 'beam':
-        solutions = beam_search_wrapper(
-                                        base=base, 
-                                        target=target, 
-                                        suggestions=True, 
-                                        N=20,
-                                        freq=freq, 
-                                        num_of_suggestions=num_of_suggestions,
-                                        model_name=model_name,
-                                        threshold=float(threshold)
-                                    )
-    elif algo == 'dfs':
-        solutions = dfs_wrapper(
-                                        base=base, 
-                                        target=target, 
-                                        suggestions=True, 
-                                        depth=depth, 
-                                        top_n=top_n,
-                                        freq=freq, 
-                                        num_of_suggestions=num_of_suggestions, 
-                                        model_name=model_name,
-                                        threshold=float(threshold)
-                                    )
-    else:
-        secho("[ERROR] unsupported algorithm. (supported are 'beam' or 'dfs').")
-        exit(1)
-
+    algo_func = beam_search_wrapper if algo == 'beam' else dfs_wrapper
+    solutions = mapping_wrapper(algo_func, 
+                                base=base, 
+                                target=target, 
+                                suggestions=True, 
+                                N=depth,
+                                freq=freq, 
+                                num_of_suggestions=num_of_suggestions, 
+                                model_name=model_name,
+                                threshold=float(threshold))
     for solution in solutions:
         # prepare the nodes for the react app
         nodes = python2react.get_nodes_for_app(props=solution.mapping, start_idx=0)
@@ -271,6 +256,11 @@ def clustring():
     return jsonify(d)
 
 
+@app.route('/')
+def index():
+    return "hello world"
+
+
 if __name__ == "__main__":
     os.environ['FLASK_ENV'] = 'development'
-    app.run('localhost', port=5000, debug=False)
+    app.run('0.0.0.0', port=int(os.environ.get('PORT', 5000)), debug=False)
