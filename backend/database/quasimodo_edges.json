@@ -17192,5 +17192,1149 @@
 		"eat bark off",
 		"get stuck in"
 	],
-	"tree#cat": []
+	"tree#cat": [],
+	"furnace#winter": [],
+	"winter#furnace": [],
+	"coal#winter": [],
+	"winter#coal": [],
+	"heat#winter": [],
+	"winter#heat": [],
+	"food#food chain": [],
+	"food chain#food": [
+		"be vs"
+	],
+	"energy#food chain": [
+		"be carried through",
+		"be continuously lost in",
+		"be lost among",
+		"be lost in",
+		"be passed in",
+		"be passed through",
+		"be stored in",
+		"enter",
+		"get lost in",
+		"lost in"
+	],
+	"food chain#energy": [],
+	"stomach#food chain": [],
+	"food chain#stomach": [],
+	"energy#salt": [],
+	"salt#energy": [
+		"give"
+	],
+	"energy#restaurants": [],
+	"restaurants#energy": [],
+	"energy#the refrigerator": [],
+	"the refrigerator#energy": [],
+	"energy#the epiglottis": [],
+	"the epiglottis#energy": [],
+	"energy#biomass": [
+		"be generated from",
+		"be harnessed from",
+		"be stored in"
+	],
+	"biomass#energy": [
+		"be converted into",
+		"be converted to",
+		"be related to",
+		"be used for",
+		"become",
+		"get converted to",
+		"has property",
+		"produce",
+		"relate to",
+		"transformed into"
+	],
+	"energy#canning": [],
+	"canning#energy": [],
+	"energy#refrigeration": [],
+	"refrigeration#energy": [
+		"can create"
+	],
+	"energy#pasteurization": [],
+	"pasteurization#energy": [],
+	"energy#sugar": [
+		"be stored as"
+	],
+	"sugar#energy": [
+		"be converted into",
+		"be good source of",
+		"be turned into",
+		"be used for",
+		"give",
+		"has property",
+		"provide"
+	],
+	"energy#pickling": [],
+	"pickling#energy": [],
+	"food#salt": [
+		"be preserved in",
+		"contain"
+	],
+	"salt#food": [
+		"accentuate flavors in",
+		"affect",
+		"be added to",
+		"be in",
+		"be used in",
+		"can preserve",
+		"get in",
+		"keep",
+		"preserve"
+	],
+	"food#restaurants": [
+		"be taxed in"
+	],
+	"restaurants#food": [
+		"buy",
+		"can give away",
+		"cook fast",
+		"cook quickly",
+		"get",
+		"keep",
+		"order",
+		"run out of",
+		"throw away",
+		"waste"
+	],
+	"food#the refrigerator": [],
+	"the refrigerator#food": [],
+	"food#the epiglottis": [],
+	"the epiglottis#food": [],
+	"food#biomass": [],
+	"biomass#food": [],
+	"food#canning": [],
+	"canning#food": [],
+	"food#refrigeration": [],
+	"refrigeration#food": [
+		"actually make last longer",
+		"keep"
+	],
+	"food#pasteurization": [
+		"be treated by",
+		"be treated with"
+	],
+	"pasteurization#food": [
+		"treat"
+	],
+	"food#sugar": [
+		"contain"
+	],
+	"sugar#food": [
+		"be added to",
+		"be found in",
+		"be hidden in",
+		"be in",
+		"can preserve",
+		"do in",
+		"make last longer",
+		"preserve"
+	],
+	"food#pickling": [],
+	"pickling#food": [],
+	"stomach#salt": [],
+	"salt#stomach": [],
+	"stomach#restaurants": [],
+	"restaurants#stomach": [],
+	"stomach#the refrigerator": [],
+	"the refrigerator#stomach": [],
+	"stomach#the epiglottis": [],
+	"the epiglottis#stomach": [],
+	"stomach#biomass": [],
+	"biomass#stomach": [],
+	"stomach#canning": [],
+	"canning#stomach": [],
+	"stomach#refrigeration": [],
+	"refrigeration#stomach": [],
+	"stomach#pasteurization": [],
+	"pasteurization#stomach": [],
+	"stomach#sugar": [],
+	"sugar#stomach": [],
+	"stomach#pickling": [],
+	"pickling#stomach": [],
+	"x-ray#x-rays": [
+		"be called"
+	],
+	"x-rays#x-ray": [
+		"be called"
+	],
+	"x-ray#x rays": [],
+	"x rays#x-ray": [],
+	"x-ray#prolia": [],
+	"prolia#x-ray": [],
+	"x-ray#walking": [],
+	"walking#x-ray": [],
+	"x-ray#resistance training": [],
+	"resistance training#x-ray": [],
+	"x-ray#forteo": [],
+	"forteo#x-ray": [],
+	"x-ray#tv": [],
+	"tv#x-ray": [],
+	"x-ray#rebounding": [],
+	"rebounding#x-ray": [],
+	"x-ray#exercise": [],
+	"exercise#x-ray": [],
+	"x-ray#calcium": [],
+	"calcium#x-ray": [],
+	"bone#x-rays": [
+		"absorb",
+		"appear on",
+		"be white on",
+		"show up best in",
+		"show up on"
+	],
+	"x-rays#bone": [],
+	"bone#x rays": [
+		"absorb",
+		"show up in"
+	],
+	"x rays#bone": [
+		"be absorbed by",
+		"show"
+	],
+	"bone#prolia": [],
+	"prolia#bone": [],
+	"bone#walking": [],
+	"walking#bone": [],
+	"bone#resistance training": [],
+	"resistance training#bone": [],
+	"bone#forteo": [],
+	"forteo#bone": [],
+	"bone#tv": [
+		"has property"
+	],
+	"tv#bone": [],
+	"bone#rebounding": [],
+	"rebounding#bone": [],
+	"bone#exercise": [
+		"be important for",
+		"become after",
+		"crack during",
+		"get with",
+		"hurt after",
+		"need",
+		"strengthen with"
+	],
+	"exercise#bone": [
+		"be good for",
+		"strengthen"
+	],
+	"bone#calcium": [
+		"absorb",
+		"get",
+		"lose",
+		"need",
+		"release",
+		"use"
+	],
+	"calcium#bone": [
+		"affect",
+		"be deposited in",
+		"be good for",
+		"be important for",
+		"be important to",
+		"be released from",
+		"be stored in",
+		"be used by",
+		"get into",
+		"has body part"
+	],
+	"flock#boat": [],
+	"boat#flock": [],
+	"goose#boat": [],
+	"boat#goose": [],
+	"lake#boat": [],
+	"boat#lake": [
+		"be on"
+	],
+	"sky#the resistance": [],
+	"the resistance#sky": [],
+	"sky#humans": [],
+	"humans#sky": [],
+	"spark#wood": [],
+	"wood#spark": [
+		"can"
+	],
+	"fire#wood": [
+		"burn"
+	],
+	"wood#fire": [
+		"explode in"
+	],
+	"kitten#this get": [],
+	"this get#kitten": [],
+	"kitten#reyes": [],
+	"reyes#kitten": [],
+	"kitten#fiv": [],
+	"fiv#kitten": [],
+	"kitten#parvo": [],
+	"parvo#kitten": [],
+	"kitten#eyes": [
+		"be born with",
+		"can open",
+		"get",
+		"has body part",
+		"have closed",
+		"have gunk in"
+	],
+	"eyes#kitten": [],
+	"kitten#mange": [],
+	"mange#kitten": [],
+	"kitten#cowboys": [],
+	"cowboys#kitten": [],
+	"kitten#hyperthyroidism": [],
+	"hyperthyroidism#kitten": [],
+	"kitten#pink eye": [],
+	"pink eye#kitten": [],
+	"kitten#water bowl": [],
+	"water bowl#kitten": [],
+	"kitten#food": [
+		"eat",
+		"get",
+		"go off",
+		"need",
+		"throw up"
+	],
+	"food#kitten": [],
+	"cat#this get": [],
+	"this get#cat": [],
+	"cat#reyes": [],
+	"reyes#cat": [],
+	"cat#fiv": [],
+	"fiv#cat": [],
+	"cat#parvo": [],
+	"parvo#cat": [
+		"affect"
+	],
+	"cat#eyes": [
+		"blink",
+		"close",
+		"cover",
+		"die with",
+		"has body part",
+		"have colored",
+		"have slit",
+		"look in",
+		"move",
+		"wink"
+	],
+	"eyes#cat": [],
+	"cat#mange": [],
+	"mange#cat": [
+		"affect",
+		"be in"
+	],
+	"cat#cowboys": [],
+	"cowboys#cat": [],
+	"cat#hyperthyroidism": [
+		"get"
+	],
+	"hyperthyroidism#cat": [
+		"be common in",
+		"be diagnosed in",
+		"be treated in"
+	],
+	"cat#pink eye": [],
+	"pink eye#cat": [],
+	"cat#water bowl": [
+		"dump",
+		"knock over",
+		"move",
+		"put objects in",
+		"put toys in",
+		"urinate in"
+	],
+	"water bowl#cat": [],
+	"cat#food": [
+		"beg for",
+		"bury",
+		"chew",
+		"drink water near",
+		"drink water next to",
+		"eat",
+		"finish",
+		"lick",
+		"throw up",
+		"vomit"
+	],
+	"food#cat": [
+		"be bad for",
+		"be good for",
+		"can"
+	],
+	"droplets#water": [
+		"behave in"
+	],
+	"water#droplets": [],
+	"droplets#fire": [],
+	"fire#droplets": [],
+	"kitten#dominance": [
+		"show"
+	],
+	"dominance#kitten": [],
+	"kitten#cats": [
+		"be different from",
+		"be friendlier than",
+		"be more affectionate than",
+		"has property"
+	],
+	"cats#kitten": [
+		"abort",
+		"absorb",
+		"eat",
+		"have",
+		"ignore",
+		"kill",
+		"move",
+		"reject",
+		"wean",
+		"wrestle"
+	],
+	"kitten#mother": [
+		"can leave",
+		"leave"
+	],
+	"mother#kitten": [
+		"abandon"
+	],
+	"kitten#weird noises": [
+		"make"
+	],
+	"weird noises#kitten": [],
+	"kitten#vibrating noise": [
+		"make"
+	],
+	"vibrating noise#kitten": [],
+	"kitten#chirping noise": [
+		"make"
+	],
+	"chirping noise#kitten": [],
+	"kitten#home": [
+		"come",
+		"leave"
+	],
+	"home#kitten": [],
+	"kitten#happiness": [
+		"show"
+	],
+	"happiness#kitten": [],
+	"cat#dominance": [],
+	"dominance#cat": [],
+	"cat#cats": [
+		"be named",
+		"has property",
+		"look like"
+	],
+	"cats#cat": [
+		"be named",
+		"has property",
+		"look like"
+	],
+	"cat#mother": [],
+	"mother#cat": [],
+	"cat#weird noises": [
+		"make"
+	],
+	"weird noises#cat": [],
+	"cat#vibrating noise": [],
+	"vibrating noise#cat": [],
+	"cat#chirping noise": [
+		"make"
+	],
+	"puppy#warm": [
+		"feel",
+		"keep",
+		"stay"
+	],
+	"warm#puppy": [],
+	"puppy#licking": [
+		"has property",
+		"keep"
+	],
+	"licking#puppy": [],
+	"puppy#cool": [],
+	"cool#puppy": [],
+	"puppy#hay": [],
+	"hay#puppy": [],
+	"puppy#straw": [],
+	"straw#puppy": [],
+	"puppy#eye contact": [],
+	"eye contact#puppy": [],
+	"puppy#sneezing": [
+		"has property"
+	],
+	"sneezing#puppy": [],
+	"dog#warm": [
+		"has temperature",
+		"keep",
+		"stay"
+	],
+	"warm#dog": [],
+	"dog#licking": [
+		"get",
+		"keep",
+		"love",
+		"show affection"
+	],
+	"licking#dog": [],
+	"dog#cool": [
+		"flip",
+		"get",
+		"has temperature",
+		"keep"
+	],
+	"cool#dog": [
+		"has property"
+	],
+	"dog#hay": [],
+	"hay#dog": [
+		"keep"
+	],
+	"dog#straw": [
+		"can drink through"
+	],
+	"straw#dog": [
+		"can"
+	],
+	"dog#eye contact": [
+		"avoid",
+		"give",
+		"keep",
+		"maintain",
+		"make",
+		"understand"
+	],
+	"eye contact#dog": [],
+	"dog#sneezing": [
+		"has property",
+		"keep"
+	],
+	"sneezing#dog": [
+		"can",
+		"has property"
+	],
+	"puppy#drinking water": [
+		"can start"
+	],
+	"drinking water#puppy": [],
+	"puppy#biting": [
+		"has property",
+		"keep"
+	],
+	"biting#puppy": [],
+	"puppy#crying": [
+		"has property",
+		"keep"
+	],
+	"crying#puppy": [],
+	"puppy#walking": [
+		"start",
+		"stop"
+	],
+	"walking#puppy": [],
+	"puppy#barking": [
+		"has property",
+		"start"
+	],
+	"barking#puppy": [],
+	"puppy#digging": [
+		"has movement",
+		"start"
+	],
+	"digging#puppy": [],
+	"puppy#drinking": [
+		"can start"
+	],
+	"drinking#puppy": [],
+	"puppy#scratching": [
+		"has property",
+		"keep"
+	],
+	"scratching#puppy": [],
+	"dog#drinking water": [
+		"insist on",
+		"quit"
+	],
+	"drinking water#dog": [],
+	"dog#biting": [
+		"be quarantined",
+		"die",
+		"has property",
+		"play"
+	],
+	"biting#dog": [],
+	"dog#crying": [],
+	"crying#dog": [
+		"can"
+	],
+	"dog#walking": [
+		"has movement",
+		"suddenly stop"
+	],
+	"walking#dog": [
+		"be for",
+		"can",
+		"has property"
+	],
+	"dog#barking": [
+		"communicate",
+		"get tired",
+		"has property",
+		"keep",
+		"quit",
+		"stop"
+	],
+	"barking#dog": [],
+	"dog#digging": [
+		"enjoy",
+		"enjoy much",
+		"has movement"
+	],
+	"digging#dog": [
+		"has property"
+	],
+	"dog#drinking": [
+		"stop",
+		"throw up",
+		"vomit"
+	],
+	"drinking#dog": [],
+	"dog#scratching": [
+		"has property",
+		"keep"
+	],
+	"scratching#dog": [],
+	"puppy#i get": [],
+	"i get#puppy": [],
+	"puppy#part": [
+		"can get",
+		"catch",
+		"die from",
+		"die of",
+		"get",
+		"pick up"
+	],
+	"part#puppy": [],
+	"puppy#blankets": [
+		"dig in"
+	],
+	"blankets#puppy": [],
+	"puppy#trazodone": [],
+	"trazodone#puppy": [],
+	"puppy#seizures": [
+		"get",
+		"have"
+	],
+	"seizures#puppy": [],
+	"puppy#sound": [],
+	"sound#puppy": [],
+	"puppy#a cold": [],
+	"a cold#puppy": [],
+	"puppy#human colds": [],
+	"human colds#puppy": [],
+	"puppy#humans": [
+		"be cute to",
+		"be harmful to",
+		"help",
+		"pass worms to",
+		"play with",
+		"view"
+	],
+	"humans#puppy": [
+		"impacted"
+	],
+	"puppy#glaucoma": [],
+	"glaucoma#puppy": [],
+	"puppy#salt": [],
+	"salt#puppy": [],
+	"puppy#food": [
+		"chew",
+		"eat",
+		"go off",
+		"has property",
+		"hide",
+		"play with",
+		"puke up",
+		"regurgitate",
+		"throw up",
+		"vomit"
+	],
+	"food#puppy": [],
+	"puppy#ringworm": [
+		"can get",
+		"get"
+	],
+	"ringworm#puppy": [],
+	"puppy#parvo": [],
+	"parvo#puppy": [
+		"affect"
+	],
+	"puppy#tails": [
+		"be born without",
+		"bite",
+		"can",
+		"have",
+		"have cut",
+		"play with",
+		"wag"
+	],
+	"tails#puppy": [],
+	"puppy#good pet": [
+		"has property"
+	],
+	"good pet#puppy": [],
+	"puppy#cataracts": [],
+	"cataracts#puppy": [],
+	"puppy#treats": [
+		"bury",
+		"can",
+		"can have",
+		"has property"
+	],
+	"treats#puppy": [
+		"be suitable for"
+	],
+	"puppy#vomit": [
+		"can"
+	],
+	"vomit#puppy": [],
+	"puppy#god": [],
+	"god#puppy": [],
+	"puppy#pancreatitis": [],
+	"pancreatitis#puppy": [],
+	"puppy#froward": [],
+	"froward#puppy": [],
+	"puppy#about": [],
+	"about#puppy": [],
+	"puppy#lymphoma": [],
+	"lymphoma#puppy": [],
+	"puppy#ears": [
+		"bite",
+		"has body part",
+		"itch",
+		"put back",
+		"scratch"
+	],
+	"ears#puppy": [],
+	"puppy#noise": [
+		"make"
+	],
+	"noise#puppy": [],
+	"puppy#fleas": [
+		"can get",
+		"get",
+		"have"
+	],
+	"fleas#puppy": [],
+	"puppy#pet": [],
+	"pet#puppy": [],
+	"puppy#rabies": [
+		"can get",
+		"get"
+	],
+	"rabies#puppy": [],
+	"puppy#mange": [
+		"can get",
+		"get"
+	],
+	"mange#puppy": [],
+	"puppy#one puppy": [],
+	"one puppy#puppy": [],
+	"puppy#cancer": [
+		"can get",
+		"get"
+	],
+	"cancer#puppy": [],
+	"dog#i get": [],
+	"i get#dog": [],
+	"dog#part": [
+		"be with",
+		"can catch",
+		"can get",
+		"catch",
+		"die from",
+		"get"
+	],
+	"part#dog": [],
+	"dog#blankets": [
+		"arrange",
+		"can breathe under",
+		"chew",
+		"chew on",
+		"gnaw on",
+		"has property",
+		"nuzzle",
+		"rip up",
+		"suck on",
+		"suffocate under"
+	],
+	"blankets#dog": [],
+	"dog#trazodone": [],
+	"trazodone#dog": [
+		"affect",
+		"be metabolized in",
+		"has property"
+	],
+	"dog#seizures": [
+		"be has",
+		"can detect",
+		"can have",
+		"can predict",
+		"detect",
+		"get",
+		"have",
+		"predict"
+	],
+	"seizures#dog": [
+		"affect",
+		"can",
+		"happen in",
+		"kill",
+		"look in",
+		"occur in"
+	],
+	"dog#sound": [
+		"can",
+		"can distinguish",
+		"can recognize",
+		"detect",
+		"has property",
+		"localize",
+		"make",
+		"use"
+	],
+	"sound#dog": [],
+	"dog#a cold": [
+		"catch"
+	],
+	"a cold#dog": [],
+	"dog#human colds": [
+		"can catch",
+		"catch"
+	],
+	"human colds#dog": [],
+	"dog#humans": [
+		"act like",
+		"be related to",
+		"catch colds from",
+		"drink like",
+		"eat",
+		"help",
+		"let",
+		"love",
+		"sleep like",
+		"smell dogs on"
+	],
+	"humans#dog": [
+		"be allergic to",
+		"can",
+		"can catch worms from",
+		"can get hookworms from",
+		"can get worms from",
+		"eat",
+		"keep",
+		"love",
+		"own",
+		"think of"
+	],
+	"dog#glaucoma": [],
+	"glaucoma#dog": [
+		"be diagnosed in"
+	],
+	"dog#salt": [],
+	"salt#dog": [
+		"be good for",
+		"can"
+	],
+	"dog#food": [
+		"beg for",
+		"bury",
+		"care about",
+		"chew",
+		"hide",
+		"prefer",
+		"share",
+		"taste",
+		"throw up",
+		"want"
+	],
+	"food#dog": [
+		"be bad for",
+		"be better for",
+		"be good for",
+		"be poisonous to",
+		"has property"
+	],
+	"dog#ringworm": [
+		"can catch",
+		"get"
+	],
+	"ringworm#dog": [
+		"affect",
+		"be diagnosed in",
+		"be in",
+		"be passed from",
+		"be spread in",
+		"be treated in",
+		"has property",
+		"look on"
+	],
+	"dog#parvo": [],
+	"parvo#dog": [
+		"affect",
+		"be treated in",
+		"kill"
+	],
+	"dog#tails": [
+		"be on",
+		"be out of",
+		"curl up",
+		"do wag",
+		"has body part",
+		"have",
+		"have twisted",
+		"move",
+		"wag",
+		"wag much"
+	],
+	"tails#dog": [
+		"be cut off",
+		"be docked on",
+		"be useful for",
+		"can",
+		"can wag",
+		"has property",
+		"have",
+		"help"
+	],
+	"dog#good pet": [
+		"can make",
+		"has property",
+		"make"
+	],
+	"good pet#dog": [],
+	"dog#cataracts": [
+		"get"
+	],
+	"cataracts#dog": [
+		"affect",
+		"be removed in",
+		"can",
+		"develop in",
+		"form in",
+		"start in"
+	],
+	"dog#treats": [
+		"dance around",
+		"has property",
+		"hide",
+		"jump around",
+		"roll on",
+		"take away"
+	],
+	"treats#dog": [
+		"be effective with",
+		"be ok for"
+	],
+	"dog#vomit": [
+		"can",
+		"eat",
+		"eat grass"
+	],
+	"vomit#dog": [
+		"can",
+		"has property"
+	],
+	"dog#god": [
+		"be backwards",
+		"be like",
+		"be spelled backwards",
+		"has property",
+		"spell backwards"
+	],
+	"god#dog": [
+		"be spelled"
+	],
+	"dog#pancreatitis": [],
+	"pancreatitis#dog": [
+		"affect",
+		"be diagnosed in",
+		"be treated in",
+		"can",
+		"cause in",
+		"happen in",
+		"kill"
+	],
+	"dog#froward": [
+		"move"
+	],
+	"froward#dog": [],
+	"dog#about": [
+		"move",
+		"think"
+	],
+	"about#dog": [],
+	"dog#lymphoma": [],
+	"lymphoma#dog": [
+		"affect",
+		"be common in",
+		"has property",
+		"kill"
+	],
+	"dog#ears": [
+		"flatten",
+		"flip back",
+		"get yeast infections in",
+		"has body part",
+		"hold back",
+		"move",
+		"pin back",
+		"pull back",
+		"put back",
+		"raise"
+	],
+	"ears#dog": [
+		"be cropped for"
+	],
+	"dog#noise": [
+		"make"
+	],
+	"noise#dog": [
+		"scare"
+	],
+	"dog#fleas": [
+		"be harmed by",
+		"can catch",
+		"can get",
+		"catch",
+		"deal with",
+		"get",
+		"have"
+	],
+	"fleas#dog": [
+		"affect",
+		"benefit from",
+		"bite",
+		"can",
+		"get on",
+		"jump on",
+		"lay eggs on",
+		"live on",
+		"look on",
+		"spread on"
+	],
+	"dog#pet": [
+		"crave being",
+		"has property",
+		"love",
+		"love being",
+		"love getting",
+		"make"
+	],
+	"pet#dog": [
+		"has property"
+	],
+	"dog#rabies": [
+		"be effected from",
+		"be tested for",
+		"be with",
+		"can catch",
+		"can get",
+		"die",
+		"get",
+		"infected with",
+		"suffer from"
+	],
+	"rabies#dog": [
+		"affect",
+		"be caused in",
+		"be contracted in",
+		"be diagnosed in",
+		"be spread in",
+		"be transmitted in",
+		"be transmitted to",
+		"can",
+		"kill",
+		"start in"
+	],
+	"dog#mange": [
+		"get"
+	],
+	"mange#dog": [
+		"affect",
+		"be bad for",
+		"be diagnosed in",
+		"be in",
+		"be transmitted in",
+		"kill"
+	],
+	"dog#one puppy": [
+		"give birth to",
+		"move"
+	],
+	"one puppy#dog": [],
+	"dog#cancer": [
+		"be with",
+		"can detect",
+		"can get",
+		"can smell",
+		"can sniff out",
+		"detect",
+		"die of",
+		"get",
+		"has property",
+		"seemingly get much"
+	],
+	"cancer#dog": [
+		"be common in",
+		"be diagnosed in",
+		"can",
+		"kill"
+	],
+	"army#reserves": [],
+	"reserves#army": [],
+	"soldier#reserves": [],
+	"reserves#soldier": [],
+	"kitten#rat": [],
+	"rat#kitten": [],
+	"cat#rat": [
+		"be afraid of",
+		"be racist against",
+		"catch",
+		"eat",
+		"hate",
+		"kill"
+	],
+	"rat#cat": [
+		"attack",
+		"be afraid of",
+		"be scared of",
+		"hate"
+	],
+	"spark#oil": [],
+	"oil#spark": [
+		"be in"
+	],
+	"spark#soldiers": [],
+	"soldiers#spark": [],
+	"spark#orthene": [],
+	"orthene#spark": [],
+	"spark#ants": [],
+	"ants#spark": [],
+	"spark#matchstick": [],
+	"matchstick#spark": [],
+	"spark#early humans": [],
+	"early humans#spark": [],
+	"spark#lautrec": [],
+	"lautrec#spark": [],
+	"spark#hindenburg": [],
+	"hindenburg#spark": [],
+	"spark#metal": [],
+	"metal#spark": [
+		"can"
+	],
+	"spark#eren": [],
+	"eren#spark": [],
+	"spark#scorpius rex": [],
+	"scorpius rex#spark": []
 }

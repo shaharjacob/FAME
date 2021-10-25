@@ -42,6 +42,8 @@ class DataCollector(object):
                 autosuggets_props = google_autosuggest.get_entities_relations(entity1, entity2).get("props", [])
                 self.google_edges[f"{entity1}#{entity2}"] = sorted(autosuggets_props) 
                 should_save = True
+        else:
+            autosuggets_props = []
             
         # if f"{entity1}#{entity2}" in self.conceptnet_edges and not self.override_database:
         #     concept_net_props = self.conceptnet_edges[f"{entity1}#{entity2}"]
@@ -58,7 +60,7 @@ class DataCollector(object):
             openie_props = openIE.entities_relations_wrapper(entity1, entity2, n=0)
             self.openie[f"{entity1}#{entity2}"] = sorted(openie_props)
             should_save = True
-            
+
         if should_save:
             self.save_database_()
         

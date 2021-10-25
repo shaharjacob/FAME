@@ -41,25 +41,31 @@ class Suggestions(object):
             quasimodo_suggestinos = self.quasimodo.get_entity_suggestions(self.entity, self.prop, n_largest=5, plural_and_singular=True)
             self.quasimodo_suggestinos[f"{self.entity}#{self.prop}"] = quasimodo_suggestinos  
             should_save = True
-        
-        if f"{self.entity}#{self.prop}" in self.google_suggestinos and not self.override_database:
-            google_suggestinos = self.google_suggestinos[f"{self.entity}#{self.prop}"]
-        else:
-            google_suggestinos = google_autosuggest.get_entity_suggestions(self.entity, self.prop)
-            self.google_suggestinos[f"{self.entity}#{self.prop}"] = google_suggestinos  
-            should_save = True        
 
-        if f"{self.entity}#{self.prop}" in self.openie_suggestinos and not self.override_database:
-            openie_suggestinos = self.openie_suggestinos[f"{self.entity}#{self.prop}"]
+        if 'SKIP_GOOGLE' not in os.environ:
+            if f"{self.entity}#{self.prop}" in self.google_suggestinos and not self.override_database:
+                google_suggestinos = self.google_suggestinos[f"{self.entity}#{self.prop}"]
+            else:
+                google_suggestinos = google_autosuggest.get_entity_suggestions(self.entity, self.prop)
+                self.google_suggestinos[f"{self.entity}#{self.prop}"] = google_suggestinos  
+                should_save = True
         else:
-            openie_suggestinos = openIE.get_entity_suggestions_wrapper(self.entity, self.prop, n_largest=5)
-            self.openie_suggestinos[f"{self.entity}#{self.prop}"] = openie_suggestinos  
-            should_save = True
+            google_suggestinos = []
+
+        if 'SKIP_GOOGLE' in os.environ:
+            if f"{self.entity}#{self.prop}" in self.openie_suggestinos and not self.override_database:
+                openie_suggestinos = self.openie_suggestinos[f"{self.entity}#{self.prop}"]
+            else:
+                openie_suggestinos = openIE.get_entity_suggestions_wrapper(self.entity, self.prop, n_largest=5)
+                self.openie_suggestinos[f"{self.entity}#{self.prop}"] = openie_suggestinos  
+                should_save = True
+        else:
+            openie_suggestinos = []
 
         if should_save:
             self.save_database()
 
-        suggestions = list(set(google_suggestinos + quasimodo_suggestinos)) # + openie_suggestinos
+        suggestions = list(set(google_suggestinos + quasimodo_suggestinos + openie_suggestinos))
         return [suggestion for suggestion in suggestions if suggestion not in IGNORE_SUGGESTION]
 
 
