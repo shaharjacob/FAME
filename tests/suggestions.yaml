@@ -66,6 +66,7 @@ mapping:
         - water --> energy
       suggestions:
         - energy #1
+    ignore: False
 
   - input: #6
       base: [landscaper, lawn]
@@ -80,6 +81,7 @@ mapping:
         - fertilizer --> gel
       suugestions:
         - fertilizer #1
+    ignore: False
 
   - input: #7
       base: [foresight, future, hope] 
@@ -94,6 +96,7 @@ mapping:
         - hope --> calcium
       suggestions:
         - calcium #1
+    ignore: False
 
   - input: #8
       base: [aspirin, pain, fracture]
@@ -109,6 +112,7 @@ mapping:
       suggestions:
         - stress #1
         - smoking #2
+    ignore: False
 
   - input: #9
       base: [baker, cake, chocolate] 
@@ -126,3 +130,4 @@ mapping:
         - chicken #3
         - vegetable #4
         - soup #5
+    ignore: False
