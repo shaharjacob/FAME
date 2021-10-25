@@ -8862,5 +8862,326 @@
 	"spark#had given birth to": [],
 	"spark#had a litter of": [],
 	"spark#wean": [],
-	"spark#be different from": []
+	"spark#be different from": [],
+	"meal#sink in": [],
+	"meal#can be made as": [],
+	"meal#layered": [],
+	"meal#lava": [],
+	"meal#consists of": [
+		"soup",
+		"protein",
+		"rice",
+		"chicken",
+		"vegetable"
+	],
+	"meal#finished with": [
+		"dessert",
+		"a choice",
+		"petit four"
+	],
+	"meal#swirled": [],
+	"meal#use": [
+		"fresh ingredients",
+		"the only animal protein source",
+		"feed",
+		"a source",
+		"any"
+	],
+	"meal#was first integrated into": [],
+	"meal#truffle": [],
+	"meal#chips sink in": [],
+	"meal#molten": [],
+	"heartburn#alleviates": [
+		"symptoms"
+	],
+	"heartburn#relievers": [],
+	"heartburn#may dampen": [],
+	"heartburn#controls": [],
+	"heartburn#is widely used for": [],
+	"heartburn#can also help with": [],
+	"heartburn#can be used for": [],
+	"heartburn#can help reduce": [],
+	"heartburn#provide temporary relief of": [],
+	"heartburn#reduce": [
+		"symptoms"
+	],
+	"heartburn#inhibit": [],
+	"heartburn#contain": [
+		"aluminium"
+	],
+	"heartburn#can reduce": [],
+	"heartburn#stop": [
+		"smoking"
+	],
+	"heartburn#relieve": [
+		"treatment"
+	],
+	"heartburn#can relieve": [],
+	"heartburn#has been used to treat": [],
+	"heartburn#naproxen may relieve": [],
+	"heartburn#can be killed with": [],
+	"heartburn#reduces": [
+		"symptoms"
+	],
+	"heartburn#often benefit from": [],
+	"heartburn#are used to treat": [],
+	"heartburn#acetaminophen can help ease": [],
+	"heartburn#helps to relieve": [],
+	"heartburn#kill": [],
+	"heartburn#is to use": [],
+	"heartburn#include": [
+		"a burning sensation",
+		"hiatus hernia",
+		"fatty foods"
+	],
+	"heartburn#used for": [],
+	"heartburn#take": [
+		"antacid",
+		"place",
+		"account",
+		"fewer antacid tablets"
+	],
+	"chef#made": [
+		"french cuisine",
+		"food",
+		"noodle",
+		"sushi",
+		"a mistake"
+	],
+	"chef#are available through": [],
+	"meal#was made of": [],
+	"meal#flavored": [
+		"medley"
+	],
+	"meal#has layers of": [],
+	"meal#topped with": [
+		"a cake"
+	],
+	"meal#is chocolate with": [],
+	"meal#is prettily garnished with": [],
+	"meal#is a type of": [],
+	"meal#make": [
+		"scratch",
+		"a difference",
+		"shopping list",
+		"love",
+		"bread"
+	],
+	"meal#flavoured": [
+		"water"
+	],
+	"meal#is often mistaken for": [
+		"moth"
+	],
+	"meal#gourmet": [],
+	"meal#goes": [
+		"bed",
+		"a walk",
+		"a long way",
+		"a hitch",
+		"the bathroom"
+	],
+	"meal#is topped with": [
+		"a cake"
+	],
+	"meal#prepare": [
+		"chef",
+		"home",
+		"scratch",
+		"ingredient",
+		"kitchen"
+	],
+	"meal#1/2": [
+		"ts salt 2 tb sugar"
+	],
+	"meal#is made with": [
+		"pudgie pie makers",
+		"chicken fixed several ways",
+		"bread",
+		"100 % natural ingredients"
+	],
+	"meal#can also be used to decorate": [],
+	"meal#dipped in": [
+		"the crystal clear sea"
+	],
+	"meal#is an amazing combination of": [],
+	"meal#found at": [
+		"this site",
+		"price",
+		"least two problems",
+		"grocery store"
+	],
+	"meal#were the icing on": [],
+	"meal#pour": [
+		"wine"
+	],
+	"meal#covered": [
+		"the grant",
+		"ndacan",
+		"the workshop",
+		"stipend",
+		"applicants"
+	],
+	"meal#funnel": [],
+	"meal#takes": [
+		"place",
+		"time",
+		"bread",
+		"restaurant",
+		"hotel"
+	],
+	"meal#1/8": [],
+	"chef#cater to": [
+		"the whims",
+		"your every whim",
+		"your every need"
+	],
+	"chef#spray": [],
+	"chef#offer": [
+		"guests",
+		"menu",
+		"quality chef clothes",
+		"demonstrations",
+		"diners"
+	],
+	"chef#can be ordered to": [],
+	"chef#take": [
+		"pride",
+		"our order",
+		"recipe",
+		"determination",
+		"charge"
+	],
+	"chef#have been selling": [],
+	"chef#talk with": [],
+	"chef#make": [
+		"french cuisine",
+		"food",
+		"noodle",
+		"sushi",
+		"a mistake"
+	],
+	"chef#put water on": [],
+	"chef#is making": [
+		"scratch",
+		"pancake",
+		"germany",
+		"65/35 poly cotton",
+		"gourmet chicken salad"
+	],
+	"chef#delivered": [
+		"culinary excellence",
+		"the dishes",
+		"comfortable food",
+		"these messages",
+		"sydney siders"
+	],
+	"chef#use syrup on": [],
+	"chef#was made by": [],
+	"chef#freeze": [
+		"food"
+	],
+	"chef#put syrup on": [],
+	"chef#soak": [],
+	"chef#combine": [
+		"the ingredients",
+		"traditional country menus",
+		"a medley",
+		"provence wine",
+		"fine dining"
+	],
+	"chef#had designed": [
+		"menu",
+		"this wonderful selection",
+		"meal",
+		"wedding cake"
+	],
+	"chef#bakes": [
+		"a cake"
+	],
+	"chef#decorate": [],
+	"chef#had conceived": [],
+	"chef#are making": [
+		"scratch",
+		"pancake",
+		"germany",
+		"65/35 poly cotton",
+		"gourmet chicken salad"
+	],
+	"meal#made": [
+		"scratch",
+		"a difference",
+		"shopping list",
+		"love",
+		"bread"
+	],
+	"meal#are available through": [
+		"the day"
+	],
+	"meal#cater to": [],
+	"meal#spray": [],
+	"meal#offer": [
+		"students",
+		"the guest",
+		"family and friends",
+		"salad",
+		"their communities"
+	],
+	"meal#can be ordered to": [],
+	"meal#take": [
+		"place",
+		"time",
+		"bread",
+		"restaurant",
+		"hotel"
+	],
+	"meal#have been selling": [],
+	"meal#talk with": [
+		"your children"
+	],
+	"meal#put water on": [],
+	"meal#is making": [
+		"scratch",
+		"advance",
+		"least 24 hours",
+		"site",
+		"fresh ingredients"
+	],
+	"meal#delivered": [
+		"your door",
+		"your home",
+		"volunteers",
+		"your room",
+		"time"
+	],
+	"meal#use syrup on": [],
+	"meal#was made by": [
+		"my dad",
+		"august 1",
+		"a group"
+	],
+	"meal#freeze": [
+		"freezing",
+		"clients",
+		"the rest"
+	],
+	"meal#put syrup on": [],
+	"meal#soak": [],
+	"meal#combine": [
+		"the weekly sales"
+	],
+	"meal#had designed": [],
+	"meal#bakes": [
+		"a crusty shell",
+		"an oven"
+	],
+	"meal#decorate": [],
+	"meal#had conceived": [],
+	"meal#are making": [
+		"scratch",
+		"advance",
+		"least 24 hours",
+		"site",
+		"fresh ingredients"
+	]
 }

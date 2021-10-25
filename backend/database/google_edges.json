@@ -29272,5 +29272,58 @@
 	"spark#eren": [],
 	"eren#spark": [],
 	"spark#scorpius rex": [],
-	"scorpius rex#spark": []
+	"scorpius rex#spark": [],
+	"basketball#nba": [
+		"work"
+	],
+	"nba#basketball": [
+		"break in their",
+		"drop spalding",
+		"use spalding"
+	],
+	"hoop#nba": [],
+	"nba#hoop": [],
+	"answer#interview": [],
+	"interview#answer": [
+		"go"
+	],
+	"riddle#interview": [],
+	"interview#riddle": [],
+	"solution#proportions": [
+		"to the"
+	],
+	"proportions#solution": [],
+	"solution#scientists": [],
+	"aspirin#fracture": [],
+	"fracture#aspirin": [],
+	"pain#fracture": [],
+	"fracture#pain": [
+		"cause"
+	],
+	"antacid#smoking": [],
+	"smoking#antacid": [],
+	"antacid#stress": [],
+	"stress#antacid": [],
+	"heartburn#smoking": [],
+	"smoking#heartburn": [
+		"affect",
+		"affect your",
+		"cause",
+		"give me"
+	],
+	"heartburn#stress": [
+		"related to"
+	],
+	"stress#heartburn": [
+		"affect",
+		"and anxiety affect",
+		"and anxiety cause",
+		"cause",
+		"give me",
+		"give you",
+		"related to"
+	],
+	"heartburn#stomach acidity": [],
+	"stomach acidity#heartburn": [],
+	"baker#chocolate": []
 }

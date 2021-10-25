@@ -90,3 +90,17 @@ mapping:
         - cat --> fire
       suggestions:
         - water #5
+
+  - input: #8
+      base: [aspirin, pain, fracture]
+      target: [antacid, heartburn]
+      depth:
+        beam: 20
+        dfs: 4
+    output:
+      mapping:
+        - aspirin --> antacid
+        - pain --> heartburn
+      suggestions:
+        - stress #1
+        - smoking #2
