@@ -111,8 +111,8 @@ class DataCollector(object):
             json.dump(self.google_edges, f2, indent='\t')
         with open(root / 'backend' / 'database' / 'conceptnet_edges.json', 'w') as f3:
             json.dump(self.conceptnet_edges, f3, indent='\t')
-        with open(root / 'backend' / 'database' / 'openie_edges.json', 'w') as f3:
-            json.dump(self.openie, f3, indent='\t')
+        with open(root / 'backend' / 'database' / 'openie_edges.json', 'w') as f4:
+            json.dump(self.openie, f4, indent='\t')
 
 
 def read_json(path: str) -> Dict[str, List[str]]:
