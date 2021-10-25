@@ -192,16 +192,7 @@ class TestMappingSuggestoins(unittest.TestCase):
             actual = solution.mapping
             reference = tv["output"]["mapping"]
             self.assertEqual(reference, actual)
-
-            # check the relations
-            actual = [[list(relation[0]), list(relation[1])] for relation in solution.relations]
-            reference = tv["output"]["relations"]['beam']
-            self.assertEqual(reference, actual)
-
-            # check the score
-            actual = solution.score
-            reference = tv["output"]["score"]
-            self.assertEqual(round(reference, 3), round(actual, 3))
+            
     
     def test_dfs(self):
         quasimodo = Quasimodo()
@@ -231,16 +222,6 @@ class TestMappingSuggestoins(unittest.TestCase):
             actual = solution.mapping
             reference = tv["output"]["mapping"]
             self.assertEqual(reference, actual)
-
-            # check the relations
-            actual = [[list(relation[0]), list(relation[1])] for relation in solution.relations]
-            reference = tv["output"]["relations"]['dfs']
-            self.assertEqual(reference, actual)
-
-            # check the score
-            actual = solution.score
-            reference = tv["output"]["score"]
-            self.assertEqual(round(reference, 3), round(actual, 3))
 
 
 if __name__ == '__main__':

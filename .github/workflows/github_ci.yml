@@ -25,18 +25,18 @@ jobs:
     - name: Evaluation - beam
       run: |
         python backend/evaluation/evaluation.py --model "msmarco-distilbert-base-v4" --threshold 500 --freq ci.json --algo beam
-    - name: Evaluation - dfs
-      run: |
-        python backend/evaluation/evaluation.py --model "msmarco-distilbert-base-v4" --threshold 500 --freq ci.json --algo dfs
-    - name: Green-eval-far - beam
-      run: |
-        python backend/evaluation/evaluation.py --model "msmarco-distilbert-base-v4" --threshold 500 --yaml green_eval_far.yaml --freq ci.json --algo beam
-    - name: Green-eval-far - dfs
-      run: |
-        python backend/evaluation/evaluation.py --model "msmarco-distilbert-base-v4" --threshold 500 --yaml green_eval_far.yaml --freq ci.json --algo dfs
-    - name: Green-eval-near - beam
-      run: |
-        python backend/evaluation/evaluation.py --model "msmarco-distilbert-base-v4" --threshold 500 --yaml green_eval_near.yaml --freq ci.json --algo beam
-    - name: Green-eval-near - dfs
-      run: |
-        python backend/evaluation/evaluation.py --model "msmarco-distilbert-base-v4" --threshold 500 --yaml green_eval_near.yaml --freq ci.json --algo dfs
+    # - name: Evaluation - dfs
+    #   run: |
+    #     python backend/evaluation/evaluation.py --model "msmarco-distilbert-base-v4" --threshold 500 --freq ci.json --algo dfs
+    # - name: Green-eval-far - beam
+    #   run: |
+    #     python backend/evaluation/evaluation.py --model "msmarco-distilbert-base-v4" --threshold 500 --yaml green_eval_far.yaml --freq ci.json --algo beam
+    # - name: Green-eval-far - dfs
+    #   run: |
+    #     python backend/evaluation/evaluation.py --model "msmarco-distilbert-base-v4" --threshold 500 --yaml green_eval_far.yaml --freq ci.json --algo dfs
+    # - name: Green-eval-near - beam
+    #   run: |
+    #     python backend/evaluation/evaluation.py --model "msmarco-distilbert-base-v4" --threshold 500 --yaml green_eval_near.yaml --freq ci.json --algo beam
+    # - name: Green-eval-near - dfs
+    #   run: |
+    #     python backend/evaluation/evaluation.py --model "msmarco-distilbert-base-v4" --threshold 500 --yaml green_eval_near.yaml --freq ci.json --algo dfs
