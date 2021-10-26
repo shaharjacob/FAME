@@ -33,6 +33,7 @@ class GoogleAutoSuggestEntityProps(object):
         sugges: List[str] = []
         keyword = f"{self.entity} {self.prop}".replace(" ", "+")
         url = f"http://suggestqueries.google.com/complete/search?client={self.browser}&q={keyword}&hl=en"
+        time.sleep(2)
         response = requests.get(url)
         if response.status_code == 403:
             secho(f"[WARNING] cannot access to {url}", fg="yellow", bold=True)
@@ -70,6 +71,7 @@ class GoogleAutoSuggestOneEntity(object):
         for keyword_, regex_ in zip(self.keywords, self.regexs):
             keyword = keyword_.replace(" ", "+")
             url = f"http://suggestqueries.google.com/complete/search?client={self.browser}&q={keyword}&hl=en"
+            time.sleep(2)
             response = requests.get(url)
             if response.status_code == 403:
                 secho(f"[WARNING] cannot access to {url}", fg="yellow", bold=True)
@@ -107,6 +109,7 @@ class GoogleAutoSuggestTwoEntities(object):
         curser = len(self.question) + len(self.entity1) + 2
         language = 'en'
         url = f"http://suggestqueries.google.com/complete/search?client={self.browser}&q={keyword}&hl={language}&cp={curser}"
+        time.sleep(2)
         response = requests.get(url)
         if response.status_code == 403:
             secho(f"[WARNING] cannot access to {url}", fg="yellow", bold=True)

@@ -116,9 +116,8 @@ def get_suggestions_for_missing_entities(data_collector: DataCollector,
 def get_score_between_two_entitites(entity1: str, entity2: str, model: SentenceEmbedding = None, data_collector: DataCollector = None, freq: Frequencies = None) -> float:
     model = SentenceEmbedding()
     data_collector = DataCollector()
-    json_folder = root / 'backend' / 'frequency' /  'jsons' / 'merged' / '20%'
-    json_basename = 'ci.json' if 'CI' in os.environ else 'all_1m_filter_3_sort.json'
-    freq = Frequencies(json_folder / json_basename, threshold=FREQUENCY_THRESHOLD)
+    json_folder = root / 'backend' / 'frequency'
+    freq = Frequencies(json_folder / 'freq.json', threshold=FREQUENCY_THRESHOLD)
         
     props1 = data_collector.get_entitiy_props(entity1)
     props2 = data_collector.get_entitiy_props(entity2)

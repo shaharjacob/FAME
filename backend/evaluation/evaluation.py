@@ -96,7 +96,7 @@ def evaluate(model_name: str,
     mapping_spec = spec["mapping"]
     results = Results()
     quasimodo = Quasimodo()
-    freq_json_folder = root / 'backend' / 'frequency' / 'jsons' / 'merged' / '20%'
+    freq_json_folder = root / 'backend' / 'frequency'
     freq = Frequencies(freq_json_folder / freq_path, threshold=threshold)
     for i, tv in enumerate(mapping_spec):
         if specify and i + 1 not in specify:
@@ -164,7 +164,7 @@ def evaluate(model_name: str,
 @click.option('-y', '--yaml', default='validation.yaml', type=str, help="Path for the yaml for evaluation")
 @click.option('-c', '--comment', default="", type=str, help="Additional comment for the job")
 @click.option('-s', '--specify', default=[], type=int, multiple=True, help="Specify which entry of the yaml file to evaluate")
-@click.option('-j', '--freq', default='all_1m_filter_3_sort.json', type=str, help="Which json to use for frequency file")
+@click.option('-j', '--freq', default='freq.json', type=str, help="Which json to use for frequency file")
 @click.option('-a', '--algo', default='dfs', type=str, help="Which algorithm to use")
 @click.option('-g', '--suggestions', is_flag=True, help="Suggest entities if missing")
 def run(model, threshold, yaml, comment, specify, freq, algo, suggestions):

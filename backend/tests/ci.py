@@ -86,9 +86,8 @@ class TestMappingNoSuggestoins(unittest.TestCase):
 
     def test_beam(self):
         quasimodo = Quasimodo()
-        json_folder = backend_dir / 'frequency' /  'jsons' / 'merged' / '20%'
-        json_basename = 'ci.json' if 'CI' in os.environ else 'all_1m_filter_3_sort.json'
-        freq = Frequencies(json_folder / json_basename, threshold=FREQUENCY_THRESHOLD)
+        json_folder = backend_dir / 'frequency'
+        freq = Frequencies(json_folder / 'freq.json', threshold=FREQUENCY_THRESHOLD)
         with open(TEST_FOLDER / 'tests.yaml', 'r') as y:
             spec = yaml.load(y, Loader=yaml.SafeLoader)
         mapping_spec = spec["mapping"]
@@ -124,9 +123,8 @@ class TestMappingNoSuggestoins(unittest.TestCase):
     
     def test_dfs(self):
         quasimodo = Quasimodo()
-        json_folder = backend_dir / 'frequency' /  'jsons' / 'merged' / '20%'
-        json_basename = 'ci.json' if 'CI' in os.environ else 'all_1m_filter_3_sort.json'
-        freq = Frequencies(json_folder / json_basename, threshold=FREQUENCY_THRESHOLD)
+        json_folder = backend_dir / 'frequency'
+        freq = Frequencies(json_folder / 'freq.json', threshold=FREQUENCY_THRESHOLD)
         with open(TEST_FOLDER / 'tests.yaml', 'r') as y:
             spec = yaml.load(y, Loader=yaml.SafeLoader)
         mapping_spec = spec["mapping"]
@@ -164,9 +162,8 @@ class TestMappingSuggestoins(unittest.TestCase):
 
     def test_beam(self):
         quasimodo = Quasimodo()
-        json_folder = backend_dir / 'frequency' /  'jsons' / 'merged' / '20%'
-        json_basename = 'ci.json' if 'CI' in os.environ else 'all_1m_filter_3_sort.json'
-        freq = Frequencies(json_folder / json_basename, threshold=FREQUENCY_THRESHOLD)
+        json_folder = backend_dir / 'frequency'
+        freq = Frequencies(json_folder / 'freq.json', threshold=FREQUENCY_THRESHOLD)
         with open(TEST_FOLDER / 'suggestions.yaml', 'r') as y:
             spec = yaml.load(y, Loader=yaml.SafeLoader)
         mapping_spec = spec["mapping"]
@@ -194,9 +191,8 @@ class TestMappingSuggestoins(unittest.TestCase):
     
     def test_dfs(self):
         quasimodo = Quasimodo()
-        json_folder = backend_dir / 'frequency' /  'jsons' / 'merged' / '20%'
-        json_basename = 'ci.json' if 'CI' in os.environ else 'all_1m_filter_3_sort.json'
-        freq = Frequencies(json_folder / json_basename, threshold=FREQUENCY_THRESHOLD)
+        json_folder = backend_dir / 'frequency'
+        freq = Frequencies(json_folder / 'freq.json', threshold=FREQUENCY_THRESHOLD)
         with open(TEST_FOLDER / 'suggestions.yaml', 'r') as y:
             spec = yaml.load(y, Loader=yaml.SafeLoader)
         mapping_spec = spec["mapping"]

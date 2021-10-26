@@ -116,9 +116,8 @@ def beam_search_wrapper(base: List[str],
     data_collector = DataCollector(quasimodo=quasimodo)
     model = SentenceEmbedding(model=model_name, data_collector=data_collector)
     if not freq:
-        json_folder = root / 'backend' / 'frequency' /  'jsons' / 'merged' / '20%'
-        json_basename = 'ci.json' if 'CI' in os.environ else 'all_1m_filter_3_sort.json'
-        freq = Frequencies(json_folder / json_basename, threshold=threshold)
+        json_folder = root / 'backend' / 'frequency'
+        freq = Frequencies(json_folder / 'freq.json', threshold=threshold)
 
     cache = {}
     best_results = get_best_pair_mapping(model, freq, data_collector, available_pairs, cache)

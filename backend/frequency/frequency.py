@@ -58,6 +58,9 @@ def ngram(ngram_range: tuple = (1, 4)):
         bag_of_words = vec.transform(all_text)
         sum_words = bag_of_words.sum(axis=0)
         words_freq = {word: int(sum_words[0, idx]) for word, idx in vec.vocabulary_.items()}
+        json_folder = root / 'backend' / 'frequency' / 'jsons'
+        if not json_folder.exists():
+            json_folder.mkdir()
         with open(root / 'backend' / 'frequency' / 'jsons' / f"{(j-1)*docs_in_json}-{j*docs_in_json}.json", 'w') as f:
             json.dump(words_freq, f, indent="\t")
 
@@ -77,7 +80,16 @@ def merge(dir_to_merge: str):
         with open(path, 'r') as f:
             current_dict = json.load(f)
         merged_dict = {k: merged_dict.get(k, 0) + current_dict.get(k, 0) for k in set(merged_dict) | set(current_dict)}
-    with open(root / 'backend' / 'frequency' / 'jsons' / 'merged' / f"{dir_to_merge}.json", 'w') as fw:
+        
+    json_folder = root / 'backend' / 'frequency' / 'jsons'
+    if not json_folder.exists():
+        json_folder.mkdir()
+        
+    merged_folder = json_folder / 'merged'
+    if not merged_folder.exists():
+        merged_folder.mkdir()
+        
+    with open(merged_folder / f"{dir_to_merge}.json", 'w') as fw:
         json.dump(merged_dict, fw, indent="\t")
 
 
