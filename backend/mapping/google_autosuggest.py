@@ -33,6 +33,7 @@ class GoogleAutoSuggestEntityProps(object):
         sugges: List[str] = []
         keyword = f"{self.entity} {self.prop}".replace(" ", "+")
         url = f"http://suggestqueries.google.com/complete/search?client={self.browser}&q={keyword}&hl=en"
+        time.sleep(2)
         response = requests.get(url)
         suggestions = json.loads(response.text)[1]
         for suggestion in suggestions:
@@ -65,6 +66,7 @@ class GoogleAutoSuggestOneEntity(object):
         for keyword_, regex_ in zip(self.keywords, self.regexs):
             keyword = keyword_.replace(" ", "+")
             url = f"http://suggestqueries.google.com/complete/search?client={self.browser}&q={keyword}&hl=en"
+            time.sleep(2)
             response = requests.get(url)
             try:
                 suggestions = json.loads(response.text)[1]
@@ -103,6 +105,7 @@ class GoogleAutoSuggestTwoEntities(object):
         curser = len(self.question) + len(self.entity1) + 2
         language = 'en'
         url = f"http://suggestqueries.google.com/complete/search?client={self.browser}&q={keyword}&hl={language}&cp={curser}"
+        time.sleep(2)
         response = requests.get(url)
         try:
             suggestions = json.loads(response.text)[1]

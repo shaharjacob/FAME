@@ -48165,5 +48165,53 @@
 		"may prevent",
 		"prevents"
 	],
-	"its absorption#antacid": []
+	"its absorption#antacid": [],
+	"spark#f1 cars": [],
+	"f1 cars#spark": [],
+	"spark#flint": [
+		"flew from",
+		"leaps from",
+		"struck from"
+	],
+	"flint#spark": [
+		"contains",
+		"creates",
+		"generates",
+		"produces",
+		"produces a shower of",
+		"strike",
+		"throws",
+		"will produce"
+	],
+	"fire#f1 cars": [],
+	"f1 cars#fire": [],
+	"fire#flint": [
+		"cracked",
+		"shut up in",
+		"started with",
+		"struck from",
+		"was struck from"
+	],
+	"flint#fire": [
+		"found scattered around",
+		"holds",
+		"is heated in",
+		"make",
+		"sparks",
+		"were used to start"
+	],
+	"heartburn#yogurt": [],
+	"yogurt#heartburn": [],
+	"heartburn#pickles": [
+		"is"
+	],
+	"pickles#heartburn": [],
+	"heartburn#fruit tingles": [],
+	"fruit tingles#heartburn": [],
+	"heartburn#ginger": [
+		"is"
+	],
+	"ginger#heartburn": [
+		"can be used to relieve"
+	]
 }

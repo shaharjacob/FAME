@@ -19789,5 +19789,37 @@
 	"antacid#constipation": [],
 	"constipation#antacid": [],
 	"antacid#its absorption": [],
-	"its absorption#antacid": []
+	"its absorption#antacid": [],
+	"spark#f1 cars": [
+		"come off"
+	],
+	"f1 cars#spark": [],
+	"spark#flint": [],
+	"flint#spark": [
+		"can",
+		"create",
+		"make",
+		"produce"
+	],
+	"fire#f1 cars": [],
+	"f1 cars#fire": [],
+	"fire#flint": [],
+	"flint#fire": [
+		"make"
+	],
+	"heartburn#yogurt": [],
+	"yogurt#heartburn": [
+		"give"
+	],
+	"heartburn#pickles": [],
+	"pickles#heartburn": [
+		"give",
+		"help"
+	],
+	"heartburn#fruit tingles": [],
+	"fruit tingles#heartburn": [],
+	"heartburn#ginger": [],
+	"ginger#heartburn": [
+		"give"
+	]
 }

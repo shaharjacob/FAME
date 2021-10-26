@@ -30058,5 +30058,113 @@
 	"spark#virginia": [],
 	"virginia#spark": [],
 	"spark#agatha": [],
-	"agatha#spark": []
+	"agatha#spark": [],
+	"spark#f1 cars": [
+		"come from",
+		"come off",
+		"come out of",
+		"come out the back of",
+		"fly from"
+	],
+	"f1 cars#spark": [
+		"have",
+		"make"
+	],
+	"spark#map": [],
+	"map#spark": [],
+	"spark#electromagnetic radiation": [],
+	"electromagnetic radiation#spark": [],
+	"spark#hardtop": [],
+	"hardtop#spark": [],
+	"spark#flint": [],
+	"flint#spark": [
+		"and steel",
+		"and steel make",
+		"create a",
+		"make",
+		"make a"
+	],
+	"fire#f1 cars": [],
+	"f1 cars#fire": [
+		"catch"
+	],
+	"fire#map": [],
+	"map#fire": [
+		"work to put out a"
+	],
+	"fire#electromagnetic radiation": [
+		"create"
+	],
+	"electromagnetic radiation#fire": [],
+	"fire#hardtop": [],
+	"hardtop#fire": [],
+	"fire#flint": [],
+	"flint#fire": [
+		"and steel make",
+		"and steel work to start a",
+		"make",
+		"start a"
+	],
+	"heartburn#diarrhea": [
+		"cause",
+		"give me"
+	],
+	"diarrhea#heartburn": [],
+	"heartburn#stomach ulcers": [],
+	"stomach ulcers#heartburn": [
+		"cause"
+	],
+	"heartburn#stomach acid": [],
+	"stomach acid#heartburn": [
+		"cause"
+	],
+	"antacid#diarrhea": [
+		"cause",
+		"give me"
+	],
+	"diarrhea#antacid": [],
+	"antacid#stomach acidity": [],
+	"stomach acidity#antacid": [],
+	"antacid#stomach ulcers": [
+		"treat"
+	],
+	"stomach ulcers#antacid": [],
+	"antacid#stomach acid": [
+		"neutralize",
+		"reduce",
+		"tablet neutralize"
+	],
+	"stomach acid#antacid": [],
+	"heartburn#yogurt": [],
+	"yogurt#heartburn": [
+		"cause",
+		"give me",
+		"give you",
+		"giving me",
+		"help"
+	],
+	"heartburn#pickles": [],
+	"pickles#heartburn": [
+		"give me",
+		"help with",
+		"juice cure",
+		"juice good for",
+		"juice help"
+	],
+	"heartburn#fruit tingles": [],
+	"fruit tingles#heartburn": [
+		"help"
+	],
+	"heartburn#ginger": [],
+	"ginger#heartburn": [
+		"affect",
+		"ale give me",
+		"beer give me",
+		"cause",
+		"give me",
+		"good for",
+		"help",
+		"help with",
+		"tea give me"
+	]
 }
