@@ -41,19 +41,6 @@ mapping:
     ignore: False
 
   - input: #4
-      base: [kitten, cat]
-      target: [spark, fire, water]
-      depth:
-        dfs: 4
-        beam: 20
-    output:
-      mapping:
-        - kitten --> spark
-        - cat --> fire
-        - rats --> water
-    ignore: False
-
-  - input: #5
       base: [landscaper, lawn]
       target: [stylist, hair, gel]
       depth:
@@ -68,7 +55,7 @@ mapping:
         - fertilizer #1
     ignore: False
 
-  - input: #6
+  - input: #5
       base: [foresight, future, hope] 
       target: [x-ray, bone]
       depth:
@@ -83,7 +70,7 @@ mapping:
         - calcium #1
     ignore: False
 
-  - input: #7
+  - input: #6
       base: [aspirin, pain, fracture]
       target: [antacid, heartburn]
       depth:
@@ -99,7 +86,7 @@ mapping:
         - smoking #2
     ignore: False
 
-  - input: #8
+  - input: #7
       base: [baker, cake, chocolate] 
       target: [chef, meal]
       depth:
