@@ -19,7 +19,7 @@ jobs:
         pip install -r requirements.txt
     - name: Running unit-tests
       run: |
-        python tests/ci.py
+        python backend/tests/ci.py
       env:
         CI: True
     - name: Evaluation - beam
