@@ -29325,5 +29325,738 @@
 	],
 	"heartburn#stomach acidity": [],
 	"stomach acidity#heartburn": [],
-	"baker#chocolate": []
+	"baker#chocolate": [],
+	"straw down#lawn": [],
+	"lawn#math": [],
+	"math#lawn": [],
+	"spark#concorde": [],
+	"concorde#spark": [],
+	"spark#turkey": [],
+	"turkey#spark": [],
+	"spark#aluminum": [],
+	"aluminum#spark": [],
+	"spark#you not": [],
+	"you not#spark": [],
+	"spark#dogs": [],
+	"dogs#spark": [],
+	"spark#world end": [],
+	"world end#spark": [],
+	"spark#powder": [],
+	"powder#spark": [],
+	"spark#lamborghinis": [],
+	"lamborghinis#spark": [],
+	"spark#chernobyl": [],
+	"chernobyl#spark": [],
+	"spark#deanery": [],
+	"deanery#spark": [],
+	"spark#rome": [],
+	"rome#spark": [],
+	"spark#the spider": [],
+	"the spider#spark": [],
+	"spark#anteiku": [],
+	"anteiku#spark": [],
+	"spark#alcohol": [],
+	"alcohol#spark": [],
+	"spark#acephate": [],
+	"acephate#spark": [],
+	"spark#bmw": [],
+	"bmw#spark": [],
+	"spark#carbon dioxide": [],
+	"carbon dioxide#spark": [],
+	"spark#ocean": [],
+	"ocean#spark": [],
+	"spark#petrol": [],
+	"petrol#spark": [],
+	"spark#my cat": [],
+	"my cat#spark": [],
+	"spark#done": [
+		"testing"
+	],
+	"done#spark": [],
+	"spark#raney nickel": [],
+	"raney nickel#spark": [],
+	"spark#olamide": [],
+	"olamide#spark": [],
+	"spark#hay": [],
+	"hay#spark": [],
+	"spark#car": [
+		"plug work in a",
+		"plugs affect",
+		"plugs affect your",
+		"plugs help your",
+		"plugs work in a"
+	],
+	"car#spark": [
+		"batteries",
+		"battery"
+	],
+	"spark#borax": [],
+	"borax#spark": [],
+	"spark#my dog": [],
+	"my dog#spark": [],
+	"spark#carbon": [],
+	"carbon#spark": [
+		"brushes"
+	],
+	"spark#daredevil": [],
+	"daredevil#spark": [],
+	"spark#things": [],
+	"things#spark": [],
+	"spark#everyone": [],
+	"everyone#spark": [],
+	"spark#bacteria": [],
+	"bacteria#spark": [],
+	"spark#sandstorm": [],
+	"sandstorm#spark": [],
+	"spark#cuyahoga river": [],
+	"cuyahoga river#spark": [],
+	"spark#potassium": [],
+	"potassium#spark": [],
+	"spark#i not": [],
+	"i not#spark": [],
+	"spark#ac": [],
+	"ac#spark": [],
+	"spark#animals": [],
+	"animals#spark": [],
+	"spark#sn15": [],
+	"sn15#spark": [],
+	"spark#russetfur": [],
+	"russetfur#spark": [],
+	"spark#frankenstein": [],
+	"frankenstein#spark": [],
+	"spark#lamborghini": [],
+	"lamborghini#spark": [],
+	"spark#bbq": [],
+	"bbq#spark": [],
+	"spark#amazon": [],
+	"amazon#spark": [],
+	"spark#planes": [],
+	"planes#spark": [],
+	"spark#cars": [
+		"come from f1",
+		"come off f1",
+		"come out of f1",
+		"come out of formula 1",
+		"fly from f1",
+		"plug work in a",
+		"plugs affect",
+		"plugs affect your",
+		"plugs help your",
+		"plugs work in a"
+	],
+	"cars#spark": [
+		"batteries",
+		"battery"
+	],
+	"spark#sodium": [],
+	"sodium#spark": [],
+	"spark#joy": [],
+	"joy#spark": [],
+	"spark#monk gyatso": [],
+	"monk gyatso#spark": [],
+	"spark#french police": [],
+	"french police#spark": [],
+	"spark#microwave": [],
+	"microwave#spark": [
+		"cause metal to",
+		"make metal",
+		"oven",
+		"ovens"
+	],
+	"spark#night king": [],
+	"night king#spark": [],
+	"spark#australia": [],
+	"australia#spark": [],
+	"spark#dryers": [],
+	"dryers#spark": [],
+	"spark#ferraris": [],
+	"ferraris#spark": [],
+	"spark#supercars": [],
+	"supercars#spark": [],
+	"spark#fieros": [],
+	"fieros#spark": [],
+	"spark#tigerstar": [],
+	"tigerstar#spark": [],
+	"spark#tigerclaw": [],
+	"tigerclaw#spark": [],
+	"spark#onestar": [],
+	"onestar#spark": [],
+	"spark#mclaren's": [],
+	"mclaren's#spark": [],
+	"spark#rzr": [],
+	"rzr#spark": [],
+	"spark#mulch": [],
+	"mulch#spark": [],
+	"spark#human body": [],
+	"human body#spark": [],
+	"spark#cats": [],
+	"cats#spark": [],
+	"fire#concorde": [],
+	"concorde#fire": [
+		"catch"
+	],
+	"fire#turkey": [
+		"happen in",
+		"in",
+		"occur in",
+		"situation in",
+		"start in"
+	],
+	"turkey#fire": [
+		"catch",
+		"catch on",
+		"caught",
+		"fryers catch on",
+		"fryers cause",
+		"get on",
+		"got",
+		"on",
+		"set on"
+	],
+	"fire#aluminum": [],
+	"aluminum#fire": [
+		"foil catch on"
+	],
+	"fire#you not": [],
+	"you not#fire": [
+		"put water on a chip pan",
+		"put water on a grease",
+		"use water to put out a",
+		"use water to put out a magnesium"
+	],
+	"fire#dogs": [
+		"alarms scare",
+		"ants affect",
+		"departments have",
+		"departments have dalmatian",
+		"smoke affect",
+		"stations have",
+		"stations have dalmatians"
+	],
+	"dogs#fire": [
+		"die in house",
+		"hate",
+		"lay in front of",
+		"like",
+		"love",
+		"react to",
+		"see",
+		"sit next to the",
+		"sit so close to the",
+		"stop in catching",
+		"survive in to build a"
+	],
+	"fire#oil": [],
+	"oil#fire": [
+		"and water cause",
+		"catch",
+		"catch on",
+		"fields have",
+		"plants have",
+		"rags catch",
+		"rigs catch",
+		"rigs have",
+		"rigs shoot",
+		"start a",
+		"wells catch"
+	],
+	"fire#world end": [],
+	"world end#fire": [
+		"in"
+	],
+	"fire#powder": [],
+	"powder#fire": [
+		"catches",
+		"extinguish"
+	],
+	"fire#lamborghinis": [],
+	"lamborghinis#fire": [
+		"aventador catch",
+		"catch",
+		"catches"
+	],
+	"fire#chernobyl": [],
+	"chernobyl#fire": [
+		"catch",
+		"on"
+	],
+	"fire#deanery": [],
+	"deanery#fire": [],
+	"fire#rome": [],
+	"rome#fire": [
+		"catch"
+	],
+	"fire#the spider": [],
+	"the spider#fire": [],
+	"fire#anteiku": [],
+	"anteiku#fire": [
+		"catch on"
+	],
+	"fire#alcohol": [
+		"react to"
+	],
+	"alcohol#fire": [
+		"catch",
+		"catches"
+	],
+	"fire#acephate": [],
+	"acephate#fire": [],
+	"fire#bmw": [],
+	"bmw#fire": [
+		"catch",
+		"m4 catch"
+	],
+	"fire#carbon dioxide": [
+		"extinguishers contain",
+		"give off",
+		"go out with",
+		"produce",
+		"react to"
+	],
+	"carbon dioxide#fire": [
+		"(co2)) extinguish an aircraft engine",
+		"able to control",
+		"controls",
+		"effective at extinguishing",
+		"extinguish",
+		"extinguish a",
+		"extinguish an aircraft engine",
+		"extinguish an engine",
+		"fight",
+		"gas used to extinguish",
+		"help in extinguishing",
+		"is used in extinguishing",
+		"kill",
+		"put out",
+		"put out electrical",
+		"react with",
+		"used to put out",
+		"useful to extinguish"
+	],
+	"fire#ocean": [
+		"burn in the",
+		"happen in the",
+		"start in the"
+	],
+	"ocean#fire": [
+		"catch",
+		"catch on",
+		"city catch on",
+		"get on",
+		"on",
+		"set on"
+	],
+	"fire#ants": [],
+	"ants#fire": [
+		"survive forest"
+	],
+	"fire#petrol": [],
+	"petrol#fire": [
+		"catch",
+		"catches"
+	],
+	"fire#my cat": [],
+	"my cat#fire": [
+		"lick",
+		"like",
+		"on",
+		"scared of",
+		"sit so close to the",
+		"smell like",
+		"stare at"
+	],
+	"fire#done": [
+		"breathing",
+		"drill important to be",
+		"eating",
+		"prevention",
+		"walking"
+	],
+	"done#fire": [],
+	"fire#raney nickel": [],
+	"raney nickel#fire": [
+		"catches"
+	],
+	"fire#olamide": [],
+	"olamide#fire": [],
+	"fire#hay": [],
+	"hay#fire": [
+		"bales catch",
+		"bales catch on",
+		"catch",
+		"start on"
+	],
+	"fire#early humans": [
+		"change the lives of",
+		"help",
+		"important to"
+	],
+	"early humans#fire": [
+		"control",
+		"create",
+		"discover",
+		"learn to control",
+		"make",
+		"start",
+		"use"
+	],
+	"fire#car": [
+		"work in a"
+	],
+	"car#fire": [
+		"batteries catch",
+		"batteries catch on",
+		"catch",
+		"catch on",
+		"engines catch",
+		"engines catch on",
+		"exhaust spit",
+		"get on",
+		"get set on",
+		"set on",
+		"shoot",
+		"spit"
+	],
+	"fire#borax": [],
+	"borax#fire": [],
+	"fire#my dog": [],
+	"my dog#fire": [
+		"afraid of",
+		"eat charcoal from the",
+		"lay so close to the",
+		"obsessed with",
+		"scared of",
+		"sit so close to the",
+		"so scared of"
+	],
+	"fire#carbon": [],
+	"carbon#fire": [
+		"dioxide (co2)) extinguish an aircraft engine",
+		"dioxide able to control",
+		"dioxide controls",
+		"dioxide effective at extinguishing",
+		"dioxide extinguish",
+		"dioxide extinguish a",
+		"dioxide extinguish an aircraft engine",
+		"dioxide extinguish an engine",
+		"dioxide fight",
+		"dioxide gas used to extinguish",
+		"dioxide help in extinguishing",
+		"dioxide is used in extinguishing",
+		"dioxide kill",
+		"dioxide put out",
+		"dioxide put out electrical",
+		"dioxide react with",
+		"dioxide used to put out",
+		"dioxide useful to extinguish",
+		"get into the air after a forest",
+		"kill",
+		"tetrachloride put out"
+	],
+	"fire#daredevil": [],
+	"daredevil#fire": [
+		"see"
+	],
+	"fire#things": [
+		"affect",
+		"burn",
+		"change",
+		"destroy",
+		"not a living",
+		"similar to a living",
+		"stick farming affect the growth of living"
+	],
+	"things#fire": [
+		"catch on"
+	],
+	"fire#everyone": [],
+	"everyone#fire": [
+		"die in catching",
+		"hate harry in the goblet of",
+		"hate harry potter and the goblet of",
+		"hate memphis may",
+		"have long hair in goblet of",
+		"have long hair in the goblet of",
+		"help katniss in catching",
+		"mad at harry in the goblet of"
+	],
+	"fire#soldiers": [],
+	"soldiers#fire": [
+		"avoid friendly"
+	],
+	"fire#bacteria": [
+		"kill"
+	],
+	"bacteria#fire": [],
+	"fire#sandstorm": [],
+	"sandstorm#fire": [],
+	"fire#cuyahoga river": [],
+	"cuyahoga river#fire": [
+		"catch",
+		"catches",
+		"in ohio caught"
+	],
+	"fire#potassium": [],
+	"potassium#fire": [],
+	"fire#i not": [],
+	"i not#fire": [],
+	"fire#ac": [],
+	"ac#fire": [
+		"catch"
+	],
+	"fire#animals": [
+		"affect",
+		"scare"
+	],
+	"animals#fire": [
+		"adapt to",
+		"adapt to forest",
+		"benefit from forest",
+		"breathe",
+		"fear",
+		"populations recover after",
+		"react to",
+		"react to forest",
+		"stay away from",
+		"survive forest"
+	],
+	"fire#sn15": [],
+	"sn15#fire": [
+		"catch"
+	],
+	"fire#russetfur": [],
+	"russetfur#fire": [],
+	"fire#metal": [
+		"strengthen"
+	],
+	"metal#fire": [
+		"catch on",
+		"change the color of",
+		"effect"
+	],
+	"fire#frankenstein": [
+		"a symbol in",
+		"bad for"
+	],
+	"frankenstein#fire": [
+		"afraid of",
+		"hate",
+		"not like"
+	],
+	"fire#lamborghini": [],
+	"lamborghini#fire": [
+		"aventador catch",
+		"catch",
+		"catches"
+	],
+	"fire#bbq": [],
+	"bbq#fire": [
+		"catch",
+		"catch on",
+		"grills catch"
+	],
+	"fire#amazon": [],
+	"amazon#fire": [
+		"distribution center catch",
+		"forest catch",
+		"hire to",
+		"on",
+		"rainforest on",
+		"warehouse caught"
+	],
+	"fire#planes": [
+		"trucks spray"
+	],
+	"planes#fire": [
+		"catch on",
+		"engines catch",
+		"get water for",
+		"put out forest"
+	],
+	"fire#cars": [
+		"start in",
+		"work in a"
+	],
+	"cars#fire": [
+		"batteries catch",
+		"batteries catch on",
+		"catch",
+		"catch on",
+		"engines catch",
+		"engines catch on",
+		"exhaust spit",
+		"get on",
+		"get set on",
+		"set on",
+		"shoot",
+		"spit"
+	],
+	"fire#eren": [],
+	"eren#fire": [
+		"catch",
+		"on"
+	],
+	"fire#sodium": [],
+	"sodium#fire": [
+		"bicarbonate extinguish",
+		"bicarbonate put out"
+	],
+	"fire#joy": [],
+	"joy#fire": [],
+	"fire#monk gyatso": [],
+	"monk gyatso#fire": [],
+	"fire#french police": [],
+	"french police#fire": [],
+	"fire#microwave": [],
+	"microwave#fire": [
+		"catch",
+		"catch on",
+		"set on"
+	],
+	"fire#lautrec": [],
+	"lautrec#fire": [],
+	"fire#night king": [
+		"not kill the"
+	],
+	"night king#fire": [
+		"immune to",
+		"not die in",
+		"resistant to",
+		"survive dragon",
+		"survived dragon"
+	],
+	"fire#australia": [
+		"ants come to",
+		"ants enter",
+		"ants get to",
+		"happen in",
+		"start in"
+	],
+	"australia#fire": [
+		"after the",
+		"catch on",
+		"deal with forest",
+		"doing after the",
+		"doing now with the",
+		"get on",
+		"got on",
+		"handle the",
+		"have",
+		"have forest",
+		"have so many",
+		"have so many bush",
+		"need",
+		"recover from the",
+		"recovering after the",
+		"set on",
+		"since the",
+		"try to control the",
+		"zoo doing with the"
+	],
+	"fire#dryers": [
+		"start in"
+	],
+	"dryers#fire": [
+		"catch",
+		"catch on",
+		"cause",
+		"light on",
+		"lint catch",
+		"start",
+		"start on"
+	],
+	"fire#ferraris": [],
+	"ferraris#fire": [
+		"catch"
+	],
+	"fire#supercars": [],
+	"supercars#fire": [
+		"catch"
+	],
+	"fire#fieros": [],
+	"fieros#fire": [
+		"catch",
+		"catch on"
+	],
+	"fire#orthene": [],
+	"orthene#fire": [],
+	"fire#tigerstar": [],
+	"tigerstar#fire": [],
+	"fire#tigerclaw": [],
+	"tigerclaw#fire": [],
+	"fire#onestar": [],
+	"onestar#fire": [],
+	"fire#mclaren's": [],
+	"mclaren's#fire": [
+		"catch"
+	],
+	"fire#rzr": [],
+	"rzr#fire": [
+		"catch"
+	],
+	"fire#hindenburg": [
+		"start on the"
+	],
+	"hindenburg#fire": [
+		"airship caught",
+		"catch"
+	],
+	"fire#matchstick": [],
+	"matchstick#fire": [
+		"catch"
+	],
+	"fire#scorpius rex": [],
+	"scorpius rex#fire": [
+		"attracted to",
+		"like"
+	],
+	"fire#mulch": [],
+	"mulch#fire": [
+		"catch",
+		"catch on",
+		"piles catch"
+	],
+	"fire#human body": [
+		"affect the"
+	],
+	"human body#fire": [],
+	"fire#cats": [
+		"smoke affect"
+	],
+	"cats#fire": [
+		"gag at",
+		"gag when they touch",
+		"like",
+		"love",
+		"react to",
+		"see",
+		"sit so close to the"
+	],
+	"fire#chelsea": [],
+	"chelsea#fire": [],
+	"fire#teachers": [],
+	"teachers#fire": [],
+	"fire#mice": [],
+	"mice#fire": [
+		"cause",
+		"leave chicago"
+	],
+	"fire#i just": [],
+	"i just#fire": [],
+	"fire#virginia": [],
+	"virginia#fire": [],
+	"fire#agatha": [],
+	"agatha#fire": [],
+	"spark#chelsea": [],
+	"chelsea#spark": [],
+	"spark#teachers": [],
+	"teachers#spark": [],
+	"spark#mice": [],
+	"mice#spark": [],
+	"spark#i just": [],
+	"i just#spark": [],
+	"spark#virginia": [],
+	"virginia#spark": [],
+	"spark#agatha": [],
+	"agatha#spark": []
 }

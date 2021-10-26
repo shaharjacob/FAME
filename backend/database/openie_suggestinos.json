@@ -9183,5 +9183,91 @@
 		"least 24 hours",
 		"site",
 		"fresh ingredients"
-	]
+	],
+	"spark#hiss at a new": [],
+	"spark#bite": [],
+	"spark#abandon": [],
+	"spark#eat their": [],
+	"spark#food bad for": [],
+	"spark#hates": [],
+	"spark#carry their": [],
+	"spark#abandon one": [],
+	"spark#lick": [],
+	"spark#moving her": [],
+	"spark#eat their own": [],
+	"spark#kill her": [],
+	"spark#eat its own": [],
+	"spark#hissing at her": [],
+	"spark#hiss at new": [],
+	"spark#move only one": [],
+	"spark#only have one": [],
+	"spark#move their": [],
+	"spark#hide her": [],
+	"spark#react to a new": [],
+	"spark#sounds attract": [],
+	"heartburn#can be said to have": [],
+	"heartburn#caused by": [
+		"gastric acid",
+		"acid",
+		"gastroesophageal reflux disease",
+		"the back flow",
+		"the regurgitation"
+	],
+	"heartburn#can cause": [],
+	"heartburn#prevent": [
+		"cancer",
+		"heartburn"
+	],
+	"heartburn#is a common cause of": [],
+	"heartburn#cause": [
+		"gastric acid",
+		"acid",
+		"gastroesophageal reflux disease",
+		"the back flow",
+		"the regurgitation"
+	],
+	"heartburn#has symptoms of": [],
+	"heartburn#may cause": [],
+	"heartburn#can lead to": [],
+	"heartburn#reduce the risk of": [],
+	"heartburn#is likely to be": [],
+	"heartburn#neck": [],
+	"heartburn#really gives": [],
+	"heartburn#can result in": [],
+	"heartburn#are associated with": [],
+	"antacid#reduce": [
+		"stomach acidity",
+		"gastric acid",
+		"chromium absorption"
+	],
+	"antacid#can be said to have": [],
+	"antacid#caused by": [],
+	"antacid#can cause": [
+		"constipation",
+		"diarrhea",
+		"side effects"
+	],
+	"antacid#prevent": [
+		"its absorption"
+	],
+	"antacid#is a common cause of": [],
+	"antacid#cause": [
+		"constipation",
+		"diarrhea",
+		"side effects"
+	],
+	"antacid#has symptoms of": [],
+	"antacid#may cause": [],
+	"antacid#can lead to": [
+		"new treatments"
+	],
+	"antacid#include": [],
+	"antacid#reduce the risk of": [],
+	"antacid#is likely to be": [],
+	"antacid#neck": [],
+	"antacid#really gives": [],
+	"antacid#can result in": [
+		"side effects"
+	],
+	"antacid#are associated with": []
 }
