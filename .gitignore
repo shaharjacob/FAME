@@ -1,7 +1,7 @@
 .bashrc
 test.py
 *.csv
-tsv/quasimodo.tsv
+backend/tsv/quasimodo.tsv
 .DS_Store
 *.gv
 .vscode
