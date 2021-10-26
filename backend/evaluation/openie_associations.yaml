@@ -10,7 +10,7 @@ mapping:
         - sun --> nucleus
         - earth --> electrons
       suggestions:
-        - energy #1
+        - energy #2
 
   - input: #2
       base: [landscaper, lawn]
@@ -89,7 +89,8 @@ mapping:
         - kitten --> spark
         - cat --> fire
       suggestions:
-        - water #5
+        - water #5 openie
+        - water #3 google
 
   - input: #8
       base: [aspirin, pain, fracture]
@@ -104,3 +105,19 @@ mapping:
       suggestions:
         - stress #1
         - smoking #2
+
+  - input: #9
+      base: [baker, cake, chocolate] 
+      target: [chef, meal]
+      depth:
+        beam: 20
+        dfs: 4
+    output:
+      mapping:
+        - baker --> chef
+        - cake --> meal
+      suggestions:
+        - ingredient #1
+        - chicken #3
+        - vegetable #4
+        - soup #5

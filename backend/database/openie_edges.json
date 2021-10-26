@@ -48213,5 +48213,135 @@
 	],
 	"ginger#heartburn": [
 		"can be used to relieve"
-	]
+	],
+	"heartburn#water": [],
+	"water#heartburn": [
+		"can help prevent"
+	],
+	"heartburn#apples": [],
+	"apples#heartburn": [],
+	"heartburn#tums": [],
+	"tums#heartburn": [
+		"only relieves"
+	],
+	"heartburn#vinegar": [],
+	"vinegar#heartburn": [],
+	"heartburn#bananas": [],
+	"bananas#heartburn": [],
+	"heartburn#mustard": [
+		"can eat"
+	],
+	"mustard#heartburn": [],
+	"heartburn#acv": [],
+	"acv#heartburn": [],
+	"heartburn#milk": [],
+	"milk#heartburn": [],
+	"heartburn#antacids": [
+		"is",
+		"is usually treated with",
+		"may turn to",
+		"takes"
+	],
+	"antacids#heartburn": [
+		"relieve",
+		"will just suppress",
+		"will work very quickly on"
+	],
+	"heartburn#peppermint": [
+		"is"
+	],
+	"peppermint#heartburn": [
+		"worsen"
+	],
+	"heartburn#gum": [],
+	"gum#heartburn": [],
+	"heartburn#u": [],
+	"u#heartburn": [],
+	"heartburn#baking soda": [],
+	"baking soda#heartburn": [],
+	"heartburn#burping": [],
+	"burping#heartburn": [],
+	"heartburn#almonds": [],
+	"almonds#heartburn": [
+		"might help with",
+		"seems to relieve"
+	],
+	"heartburn#pickle juice": [
+		"is"
+	],
+	"pickle juice#heartburn": [],
+	"heartburn#love hearts": [],
+	"love hearts#heartburn": [],
+	"antacid#water": [],
+	"water#antacid": [
+		"contains principally"
+	],
+	"antacid#apples": [],
+	"apples#antacid": [],
+	"antacid#tums": [],
+	"tums#antacid": [
+		"is"
+	],
+	"antacid#yogurt": [],
+	"yogurt#antacid": [],
+	"antacid#vinegar": [],
+	"vinegar#antacid": [],
+	"antacid#bananas": [],
+	"bananas#antacid": [
+		"are",
+		"have"
+	],
+	"antacid#ginger": [],
+	"ginger#antacid": [],
+	"antacid#mustard": [],
+	"mustard#antacid": [],
+	"antacid#acv": [],
+	"acv#antacid": [],
+	"antacid#pickles": [],
+	"pickles#antacid": [],
+	"antacid#milk": [],
+	"milk#antacid": [
+		"acts as",
+		"take"
+	],
+	"antacid#antacids": [],
+	"antacids#antacid": [],
+	"antacid#peppermint": [],
+	"peppermint#antacid": [],
+	"antacid#gum": [],
+	"gum#antacid": [],
+	"antacid#u": [],
+	"u#antacid": [],
+	"antacid#fruit tingles": [],
+	"fruit tingles#antacid": [],
+	"antacid#baking soda": [],
+	"baking soda#antacid": [
+		"acts as",
+		"can be used as",
+		"is"
+	],
+	"antacid#burping": [],
+	"burping#antacid": [],
+	"antacid#almonds": [],
+	"almonds#antacid": [],
+	"antacid#pickle juice": [],
+	"pickle juice#antacid": [],
+	"antacid#love hearts": [],
+	"love hearts#antacid": [],
+	"chef#mcdonald's": [],
+	"mcdonald's#chef": [],
+	"meal#mcdonald's": [],
+	"mcdonald's#meal": [],
+	"chef#jon favreau": [],
+	"jon favreau#chef": [],
+	"meal#jon favreau": [],
+	"jon favreau#meal": [],
+	"meal#athletes": [
+		"plans"
+	],
+	"athletes#meal": [
+		"will eat"
+	],
+	"chef#athletes": [],
+	"athletes#chef": []
 }

@@ -5301,5 +5301,13 @@
 	"heartburn#help": [],
 	"heartburn#given to patients with chest": [],
 	"heartburn#work for chest": [],
-	"heartburn#given for chest": []
+	"heartburn#given for chest": [],
+	"meal#chips fall to bottom of": [],
+	"meal#chips sink to bottom of": [],
+	"chef#put simple syrup on": [],
+	"chef#add simple syrup to": [],
+	"chef#put sugar syrup on": [],
+	"meal#put simple syrup on": [],
+	"meal#add simple syrup to": [],
+	"meal#put sugar syrup on": []
 }

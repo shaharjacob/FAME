@@ -30166,5 +30166,317 @@
 		"help",
 		"help with",
 		"tea give me"
-	]
+	],
+	"heartburn#water": [
+		"make my mouth"
+	],
+	"water#heartburn": [
+		"causing",
+		"give me",
+		"give u",
+		"giving me",
+		"help",
+		"worsen"
+	],
+	"heartburn#apples": [],
+	"apples#heartburn": [
+		"cause",
+		"cider give me",
+		"cider vinegar give me",
+		"cider vinegar good for",
+		"cider vinegar help",
+		"give",
+		"give me",
+		"help",
+		"pie give me"
+	],
+	"heartburn#tums": [],
+	"tums#heartburn": [
+		"help",
+		"not helping my",
+		"or rolaids work to relieve",
+		"work for",
+		"work to treat"
+	],
+	"heartburn#vinegar": [],
+	"vinegar#heartburn": [
+		"give me",
+		"good for",
+		"help"
+	],
+	"heartburn#bananas": [],
+	"bananas#heartburn": [
+		"bread give me",
+		"cause",
+		"give",
+		"give me",
+		"help"
+	],
+	"heartburn#mustard": [],
+	"mustard#heartburn": [
+		"cause",
+		"cure",
+		"give me",
+		"help with"
+	],
+	"heartburn#acv": [],
+	"acv#heartburn": [
+		"help"
+	],
+	"heartburn#milk": [],
+	"milk#heartburn": [
+		"affect",
+		"cause",
+		"give me",
+		"giving me",
+		"help",
+		"not good for",
+		"of magnesia cure",
+		"of magnesia help",
+		"of magnesia treat",
+		"stop"
+	],
+	"heartburn#antacids": [],
+	"antacids#heartburn": [
+		"help",
+		"help alleviate the pain of",
+		"help relieve indigestion and",
+		"recommended for",
+		"reduce",
+		"relieve",
+		"treat",
+		"work to relieve",
+		"work to treat"
+	],
+	"heartburn#peppermint": [],
+	"peppermint#heartburn": [
+		"cause",
+		"give me",
+		"help"
+	],
+	"heartburn#gum": [],
+	"gum#heartburn": [
+		"help"
+	],
+	"heartburn#u": [],
+	"u#heartburn": [
+		"always get",
+		"feel when u have",
+		"get",
+		"help",
+		"know if it's",
+		"know if u have"
+	],
+	"heartburn#baking soda": [],
+	"baking soda#heartburn": [
+		"good for",
+		"help",
+		"relieve"
+	],
+	"heartburn#burping": [
+		"cause"
+	],
+	"burping#heartburn": [
+		"cause",
+		"help"
+	],
+	"heartburn#almonds": [],
+	"almonds#heartburn": [
+		"cause",
+		"flour give me",
+		"give me",
+		"help",
+		"milk give me"
+	],
+	"heartburn#pickle juice": [],
+	"pickle juice#heartburn": [
+		"cure",
+		"good for",
+		"help"
+	],
+	"heartburn#love hearts": [],
+	"love hearts#heartburn": [
+		"help",
+		"stop"
+	],
+	"antacid#water": [
+		"dissolve faster in hot",
+		"dissolve in",
+		"fizz in",
+		"tablets dissolve faster in hot",
+		"tablets dissolve in"
+	],
+	"water#antacid": [],
+	"antacid#apples": [],
+	"apples#antacid": [],
+	"antacid#tums": [],
+	"tums#antacid": [
+		"the best",
+		"the most effective"
+	],
+	"antacid#yogurt": [],
+	"yogurt#antacid": [],
+	"antacid#vinegar": [
+		"dissolve faster in"
+	],
+	"vinegar#antacid": [],
+	"antacid#bananas": [],
+	"bananas#antacid": [],
+	"antacid#ginger": [],
+	"ginger#antacid": [],
+	"antacid#mustard": [],
+	"mustard#antacid": [],
+	"antacid#acv": [],
+	"acv#antacid": [],
+	"antacid#pickles": [],
+	"pickles#antacid": [],
+	"antacid#milk": [],
+	"milk#antacid": [
+		"of magnesia an",
+		"of magnesia not used as an",
+		"of magnesia used as an",
+		"of magnesia work as an"
+	],
+	"antacid#antacids": [
+		"work name two common"
+	],
+	"antacids#antacid": [],
+	"antacid#peppermint": [],
+	"peppermint#antacid": [],
+	"antacid#gum": [],
+	"gum#antacid": [],
+	"antacid#u": [],
+	"u#antacid": [
+		"say",
+		"spell"
+	],
+	"antacid#fruit tingles": [],
+	"fruit tingles#antacid": [],
+	"antacid#baking soda": [],
+	"baking soda#antacid": [
+		"a effective",
+		"act as an",
+		"used as an",
+		"work as an"
+	],
+	"antacid#burping": [],
+	"burping#antacid": [],
+	"antacid#almonds": [],
+	"almonds#antacid": [],
+	"antacid#pickle juice": [],
+	"pickle juice#antacid": [],
+	"antacid#love hearts": [],
+	"love hearts#antacid": [],
+	"chocolate#baker": [],
+	"cake#chocolate": [],
+	"chocolate#cake": [
+		"affect",
+		"chips fall to bottom of",
+		"chips sink in",
+		"chips sink to bottom of",
+		"sink in",
+		"truffle"
+	],
+	"chef#mcdonald's": [],
+	"mcdonald's#chef": [],
+	"chef#money": [
+		"make"
+	],
+	"money#chef": [],
+	"meal#mcdonald's": [],
+	"mcdonald's#meal": [
+		"doing celebrity",
+		"have a bts",
+		"have a travis scott",
+		"have j balvin",
+		"make a travis scott",
+		"selling travis scott",
+		"stop selling super sized"
+	],
+	"meal#money": [
+		"on wheels make",
+		"planning save",
+		"prepping save",
+		"train make"
+	],
+	"money#meal": [],
+	"chef#drugs": [
+		"do",
+		"take"
+	],
+	"drugs#chef": [],
+	"chef#novelettes": [],
+	"novelettes#chef": [],
+	"chef#butter": [
+		"prefer unsalted",
+		"use",
+		"use clarified",
+		"use so much",
+		"use unsalted"
+	],
+	"butter#chef": [],
+	"chef#eggs": [
+		"cook multiple poached",
+		"crack",
+		"crack an",
+		"fry",
+		"fry an",
+		"like runny",
+		"make fluffier scrambled",
+		"make perfect poached",
+		"make scrambled",
+		"peel hard boiled",
+		"poach",
+		"ramsay make scrambled",
+		"use brown"
+	],
+	"eggs#chef": [],
+	"chef#poached eggs": [
+		"cook",
+		"cook multiple",
+		"make perfect"
+	],
+	"poached eggs#chef": [],
+	"chef#scrambled eggs": [
+		"cook",
+		"make",
+		"make fluffier",
+		"ramsay make"
+	],
+	"scrambled eggs#chef": [],
+	"chef#4 dishes": [],
+	"4 dishes#chef": [],
+	"chef#jon favreau": [],
+	"jon favreau#chef": [
+		"make"
+	],
+	"chef#olive oil": [
+		"cook with",
+		"love",
+		"use",
+		"use so much"
+	],
+	"olive oil#chef": [],
+	"meal#drugs": [],
+	"drugs#meal": [],
+	"meal#novelettes": [],
+	"novelettes#meal": [],
+	"meal#butter": [],
+	"butter#meal": [],
+	"meal#eggs": [],
+	"eggs#meal": [],
+	"meal#poached eggs": [],
+	"poached eggs#meal": [],
+	"meal#scrambled eggs": [],
+	"scrambled eggs#meal": [],
+	"meal#4 dishes": [],
+	"4 dishes#meal": [],
+	"meal#jon favreau": [],
+	"jon favreau#meal": [],
+	"meal#olive oil": [],
+	"olive oil#meal": [],
+	"meal#athletes": [],
+	"athletes#meal": [],
+	"chef#athletes": [],
+	"athletes#chef": []
 }

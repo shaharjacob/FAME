@@ -19821,5 +19821,149 @@
 	"heartburn#ginger": [],
 	"ginger#heartburn": [
 		"give"
-	]
+	],
+	"heartburn#water": [],
+	"water#heartburn": [
+		"aggravate",
+		"can cause",
+		"give"
+	],
+	"heartburn#apples": [
+		"has property"
+	],
+	"apples#heartburn": [
+		"cause",
+		"cure",
+		"give",
+		"help",
+		"help with"
+	],
+	"heartburn#tums": [],
+	"tums#heartburn": [
+		"help",
+		"help with",
+		"relieve",
+		"stop",
+		"work for"
+	],
+	"heartburn#vinegar": [],
+	"vinegar#heartburn": [
+		"give",
+		"stop"
+	],
+	"heartburn#bananas": [],
+	"bananas#heartburn": [
+		"give",
+		"help"
+	],
+	"heartburn#mustard": [],
+	"mustard#heartburn": [
+		"be good for",
+		"give",
+		"stop"
+	],
+	"heartburn#acv": [],
+	"acv#heartburn": [],
+	"heartburn#milk": [],
+	"milk#heartburn": [
+		"give",
+		"soothe more"
+	],
+	"heartburn#antacids": [],
+	"antacids#heartburn": [
+		"be recommended for",
+		"help",
+		"reduce",
+		"related to",
+		"stop"
+	],
+	"heartburn#peppermint": [],
+	"peppermint#heartburn": [
+		"give"
+	],
+	"heartburn#gum": [],
+	"gum#heartburn": [],
+	"heartburn#u": [],
+	"u#heartburn": [],
+	"heartburn#baking soda": [],
+	"baking soda#heartburn": [
+		"be good for",
+		"stop"
+	],
+	"heartburn#burping": [],
+	"burping#heartburn": [],
+	"heartburn#almonds": [],
+	"almonds#heartburn": [
+		"give",
+		"stop"
+	],
+	"heartburn#pickle juice": [],
+	"pickle juice#heartburn": [],
+	"heartburn#love hearts": [],
+	"love hearts#heartburn": [],
+	"antacid#water": [
+		"dissolve in",
+		"fizz in"
+	],
+	"water#antacid": [],
+	"antacid#apples": [],
+	"apples#antacid": [],
+	"antacid#tums": [],
+	"tums#antacid": [
+		"be called",
+		"work as"
+	],
+	"antacid#yogurt": [],
+	"yogurt#antacid": [],
+	"antacid#vinegar": [],
+	"vinegar#antacid": [],
+	"antacid#bananas": [],
+	"bananas#antacid": [],
+	"antacid#ginger": [],
+	"ginger#antacid": [],
+	"antacid#mustard": [],
+	"mustard#antacid": [],
+	"antacid#acv": [],
+	"acv#antacid": [],
+	"antacid#pickles": [],
+	"pickles#antacid": [],
+	"antacid#milk": [],
+	"milk#antacid": [
+		"be used as"
+	],
+	"antacid#antacids": [],
+	"antacids#antacid": [],
+	"antacid#peppermint": [],
+	"peppermint#antacid": [],
+	"antacid#gum": [],
+	"gum#antacid": [],
+	"antacid#u": [],
+	"u#antacid": [],
+	"antacid#fruit tingles": [],
+	"fruit tingles#antacid": [],
+	"antacid#baking soda": [],
+	"baking soda#antacid": [
+		"be active ingredient in",
+		"be used as"
+	],
+	"antacid#burping": [],
+	"burping#antacid": [],
+	"antacid#almonds": [],
+	"almonds#antacid": [],
+	"antacid#pickle juice": [],
+	"pickle juice#antacid": [],
+	"antacid#love hearts": [],
+	"love hearts#antacid": [],
+	"chef#mcdonald's": [],
+	"mcdonald's#chef": [],
+	"meal#mcdonald's": [],
+	"mcdonald's#meal": [],
+	"chef#jon favreau": [],
+	"jon favreau#chef": [],
+	"meal#jon favreau": [],
+	"jon favreau#meal": [],
+	"meal#athletes": [],
+	"athletes#meal": [],
+	"chef#athletes": [],
+	"athletes#chef": []
 }

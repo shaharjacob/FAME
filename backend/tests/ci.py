@@ -5,19 +5,17 @@ from pathlib import Path
 
 import yaml
 
-root = Path(__file__).resolve().parent.parent
-sys.path.insert(0, str(root))
-sys.path.insert(0, str(root / 'backend'))
-
-from backend.mapping.dfs import dfs_wrapper
-from backend.frequency.frequency import Frequencies
-from backend.mapping.mapping import FREQUENCY_THRESHOLD
-from backend.mapping.beam_search import beam_search_wrapper
-from backend.mapping.quasimodo import Quasimodo, merge_tsvs
-from backend.mapping import concept_net, suggestions, google_autosuggest
+backend_dir = Path(__file__).resolve().parent.parent
+sys.path.insert(0, str(backend_dir))
+from mapping.dfs import dfs_wrapper
+from frequency.frequency import Frequencies
+from mapping.mapping import FREQUENCY_THRESHOLD
+from mapping.beam_search import beam_search_wrapper
+from mapping.quasimodo import Quasimodo, merge_tsvs
+from mapping import concept_net, suggestions, google_autosuggest
 
 
-TEST_FOLDER = Path('tests')
+TEST_FOLDER = backend_dir / 'tests'
 
 class TestFunctions(unittest.TestCase):
 
@@ -53,8 +51,8 @@ class TestFunctions(unittest.TestCase):
 
 
     def test_quasimodo(self):
-        merge_tsvs(str(Path.cwd() / 'tsv' / 'quasimodo.tsv'))
-        quasimodo = Quasimodo(path=str(Path.cwd() / 'tsv' / 'quasimodo.tsv'))
+        merge_tsvs()
+        quasimodo = Quasimodo(path=str(backend_dir / 'tsv' / 'quasimodo.tsv'))
         
         # testing quasimodo.get_entity_props
         reference = ['has body part hoof', 'eat grass', 'has body part leg', 'need horseshoes', 'has body part nose']
@@ -88,7 +86,7 @@ class TestMappingNoSuggestoins(unittest.TestCase):
 
     def test_beam(self):
         quasimodo = Quasimodo()
-        json_folder = root / 'backend' / 'frequency' /  'jsons' / 'merged' / '20%'
+        json_folder = backend_dir / 'frequency' /  'jsons' / 'merged' / '20%'
         json_basename = 'ci.json' if 'CI' in os.environ else 'all_1m_filter_3_sort.json'
         freq = Frequencies(json_folder / json_basename, threshold=FREQUENCY_THRESHOLD)
         with open(TEST_FOLDER / 'tests.yaml', 'r') as y:
@@ -126,7 +124,7 @@ class TestMappingNoSuggestoins(unittest.TestCase):
     
     def test_dfs(self):
         quasimodo = Quasimodo()
-        json_folder = root / 'backend' / 'frequency' /  'jsons' / 'merged' / '20%'
+        json_folder = backend_dir / 'frequency' /  'jsons' / 'merged' / '20%'
         json_basename = 'ci.json' if 'CI' in os.environ else 'all_1m_filter_3_sort.json'
         freq = Frequencies(json_folder / json_basename, threshold=FREQUENCY_THRESHOLD)
         with open(TEST_FOLDER / 'tests.yaml', 'r') as y:
@@ -166,7 +164,7 @@ class TestMappingSuggestoins(unittest.TestCase):
 
     def test_beam(self):
         quasimodo = Quasimodo()
-        json_folder = root / 'backend' / 'frequency' /  'jsons' / 'merged' / '20%'
+        json_folder = backend_dir / 'frequency' /  'jsons' / 'merged' / '20%'
         json_basename = 'ci.json' if 'CI' in os.environ else 'all_1m_filter_3_sort.json'
         freq = Frequencies(json_folder / json_basename, threshold=FREQUENCY_THRESHOLD)
         with open(TEST_FOLDER / 'suggestions.yaml', 'r') as y:
@@ -196,7 +194,7 @@ class TestMappingSuggestoins(unittest.TestCase):
     
     def test_dfs(self):
         quasimodo = Quasimodo()
-        json_folder = root / 'backend' / 'frequency' /  'jsons' / 'merged' / '20%'
+        json_folder = backend_dir / 'frequency' /  'jsons' / 'merged' / '20%'
         json_basename = 'ci.json' if 'CI' in os.environ else 'all_1m_filter_3_sort.json'
         freq = Frequencies(json_folder / json_basename, threshold=FREQUENCY_THRESHOLD)
         with open(TEST_FOLDER / 'suggestions.yaml', 'r') as y:
