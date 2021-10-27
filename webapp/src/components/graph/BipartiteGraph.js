@@ -31,7 +31,7 @@ const BipartiteGraph = () => {
     setBase2(params.get('base2'))
     setTarget2(params.get('target2'))
 
-    fetch('/bipartite?' + params).then(response => {
+    fetch('/api/bipartite?' + params).then(response => {
       if(response.ok){
         return response.json()
       }

@@ -25,7 +25,7 @@ const TwoEntities = () => {
         let entity2 = params.get('entity2')
         setEntity1(entity1)
         setEntity2(entity2)
-        fetch('/two-entities?' + params).then(response => {
+        fetch('/api/two-entities?' + params).then(response => {
           if(response.ok){
             return response.json()
           }

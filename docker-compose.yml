@@ -1,0 +1,29 @@
+version: "3.5"
+
+services:
+  backend:
+    container_name: backend
+    build:
+      context: backend
+    ports:
+      - "5031:5031"
+    volumes:
+      - ./backend:/backend
+    environment:
+      - FLASK_ENV=development
+      - FLASK_APP=app
+    working_dir: /backend/app
+    command: flask run --host 0.0.0.0 --port 5031
+  
+  webapp:
+    container_name: webapp
+    build:
+      context: webapp
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./webapp:/webapp
+    working_dir: /webapp
+    command: npm start
+    depends_on:
+      - backend

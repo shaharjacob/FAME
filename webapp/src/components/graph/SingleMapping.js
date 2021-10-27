@@ -57,7 +57,7 @@ const SingleMapping = () => {
         setCurrB(base)
         setCurrT(target)
     
-        fetch('/single-mapping?' + params).then(response => {
+        fetch('/api/single-mapping?' + params).then(response => {
           if(response.ok){
             return response.json()
           }

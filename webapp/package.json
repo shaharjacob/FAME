@@ -1,7 +1,7 @@
 {
   "name": "webapp",
   "version": "0.1.0",
-  "proxy": "http://localhost:5000",
+  "proxy": "http://backend:5031",
   "private": true,
   "dependencies": {
     "@blueprintjs/core": "^3.44.3",
@@ -10,6 +10,7 @@
     "@testing-library/react": "^11.2.7",
     "@testing-library/user-event": "^12.8.3",
     "expr-eval": "^2.0.2",
+    "http-proxy-middleware": "^2.0.1",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-loading-overlay": "^1.0.1",

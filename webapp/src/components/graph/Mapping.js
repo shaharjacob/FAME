@@ -32,7 +32,7 @@ const Mapping = () => {
         setBaseEntities(params.get("base"))
         setTargetEntities(params.get("target"))
 
-        fetch('/mapping?' + params).then(response => {
+        fetch('/api/mapping?' + params).then(response => {
           if(response.ok){
             return response.json()
           }

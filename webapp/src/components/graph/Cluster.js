@@ -31,7 +31,7 @@ const Cluster = () => {
         setTarget1(params.get('target1'))
         setTarget2(params.get('target2'))
 
-        fetch('/cluster?' + params).then(response => {
+        fetch('/api/cluster?' + params).then(response => {
           if(response.ok){
             return response.json()
           }

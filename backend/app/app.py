@@ -11,7 +11,7 @@ backend_dir = Path(__file__).resolve().parent.parent
 root = backend_dir.resolve().parent
 sys.path.insert(0, str(backend_dir))
 from utils import utils
-import python2react
+from . import python2react
 from mapping.dfs import dfs_wrapper
 from frequency.frequency import Frequencies
 from mapping.data_collector import DataCollector
@@ -20,10 +20,9 @@ from utils.sentence_embadding import SentenceEmbedding
 from mapping.mapping import FREQUENCY_THRESHOLD, NUM_OF_CLUSTERS_TO_CALC, EDGE_THRESHOLD
 from mapping.mapping import get_pair_mapping, get_edge_score, get_edges_with_maximum_weight, mapping_wrapper
 
-
 app = Flask(__name__)
 
-@app.route("/mapping", methods=["GET", "POST"])
+@app.route("/api/mapping", methods=["GET", "POST"])
 def mapping_entities():
     start_time = time.time()
     data_collector = DataCollector()
@@ -118,7 +117,7 @@ def mapping_entities():
     })
 
 
-@app.route("/single-mapping", methods=["GET", "POST"])
+@app.route("/api/single-mapping", methods=["GET", "POST"])
 def single_mapping():
     data_collector = DataCollector()
     model = SentenceEmbedding(model='msmarco-distilbert-base-v4', data_collector=data_collector)
@@ -177,7 +176,7 @@ def single_mapping():
     return jsonify(d)
 
 
-@app.route("/two-entities", methods=["GET", "POST"])
+@app.route("/api/two-entities", methods=["GET", "POST"])
 def two_entities():
     entity1 = request.args.get('entity1') 
     entity2 = request.args.get('entity2')
@@ -197,7 +196,7 @@ def two_entities():
     })
 
 
-@app.route("/bipartite", methods=["GET", "POST"])
+@app.route("/api/bipartite", methods=["GET", "POST"])
 def bipartite_graph():
     base1 = request.args.get('base1')
     base2 = request.args.get('base2')
@@ -229,7 +228,7 @@ def bipartite_graph():
     })
 
 
-@app.route("/cluster", methods=["GET", "POST"])
+@app.route("/api/cluster", methods=["GET", "POST"])
 def clustring():
     edge1 = (request.args.get('base1'), request.args.get('base2'))
     edge2 = (request.args.get('target1'), request.args.get('target2'))
@@ -256,11 +255,19 @@ def clustring():
     return jsonify(d)
 
 
-@app.route('/')
+@app.route("/api/test", methods=["GET", "POST"])
 def index():
-    return "hello world"
+    return "hello world!"
 
 
-if __name__ == "__main__":
-    os.environ['FLASK_ENV'] = 'development'
-    app.run('0.0.0.0', port=int(os.environ.get('PORT', 5000)), debug=False)
+@app.route("/", methods=["GET", "POST"])
+def index2():
+    return "hello world!"
+
+
+# if __name__ == "__main__":
+#     os.environ['FLASK_ENV'] = 'development'
+#     host = str(os.environ.get('FLASK_HOST', '0.0.0.0'))
+#     port = int(os.environ.get('FLASK_PORT', 5031))
+#     debug = bool(os.environ.get('FLASK_DEBUG', False))
+#     app.run(host=host, port=port, debug=debug)
