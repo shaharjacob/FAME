@@ -9,11 +9,6 @@ from sentence_transformers import SentenceTransformer, util
 
 from mapping.data_collector import DataCollector
 
-backend_dir = Path(__file__).resolve().parent.parent
-if 'SENTENCE_TRANSFORMERS_HOME' not in os.environ:
-    if not (backend_dir / 'cache').exists():
-        (backend_dir / 'cache').mkdir()
-    os.environ['SENTENCE_TRANSFORMERS_HOME'] = str(backend_dir / 'cache')
 
 class SentenceEmbedding(SentenceTransformer):
     def __init__(self, model: str = 'msmarco-distilbert-base-v4', data_collector: DataCollector = None):
