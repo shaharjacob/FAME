@@ -1,10 +1,8 @@
-import os
 import sys
 import time
 from pathlib import Path
 from typing import List, Dict
 
-from click import secho
 from flask import Flask, jsonify, request
 
 backend_dir = Path(__file__).resolve().parent.parent

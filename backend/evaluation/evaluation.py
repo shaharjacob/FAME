@@ -165,7 +165,7 @@ def evaluate(model_name: str,
 @click.option('-c', '--comment', default="", type=str, help="Additional comment for the job")
 @click.option('-s', '--specify', default=[], type=int, multiple=True, help="Specify which entry of the yaml file to evaluate")
 @click.option('-j', '--freq', default='freq.json', type=str, help="Which json to use for frequency file")
-@click.option('-a', '--algo', default='dfs', type=str, help="Which algorithm to use")
+@click.option('-a', '--algo', default='beam', type=str, help="Which algorithm to use")
 @click.option('-g', '--suggestions', is_flag=True, help="Suggest entities if missing")
 def run(model, threshold, yaml, comment, specify, freq, algo, suggestions):
     torch.cuda.empty_cache()
