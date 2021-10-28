@@ -265,7 +265,4 @@ def index2():
 
 # if __name__ == "__main__":
 #     os.environ['FLASK_ENV'] = 'development'
-#     host = str(os.environ.get('FLASK_HOST', '0.0.0.0'))
-#     port = int(os.environ.get('FLASK_PORT', 5031))
-#     debug = bool(os.environ.get('FLASK_DEBUG', False))
-#     app.run(host=host, port=port, debug=debug)
+#     app.run(host='0.0.0.0', port=5031, debug=False)
