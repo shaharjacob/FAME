@@ -36,7 +36,7 @@ def render_entities_similarity(entity1: str, entity2: str, row: dict):
     secho(f"{row['plausibility']}", fg="magenta")
 
 class Quasimodo:
-    def __init__(self, path: Union[str, Path] = root / 'backend' / 'tsv' / 'quasimodo.tsv'):
+    def __init__(self, path: Union[str, Path] = root / 'backend' / 'tsv' / 'merged' / 'quasimodo.tsv'):
         self.data = self.init_data(path)
         self.engine = inflect.engine()
     
@@ -189,10 +189,10 @@ class Quasimodo:
     
 
 def merge_tsvs(output: str = 'quasimodo.tsv'):
-    dir_parent = root / 'backend' / 'tsv'
-    dataframes = [pd.read_csv(path, sep="\t") for path in dir_parent.iterdir() if path.name != 'quasimodo.tsv']
+    tsv_folder = root / 'backend' / 'tsv'
+    dataframes = [pd.read_csv(path, sep="\t") for path in (tsv_folder / 'parts').iterdir()]
     merged_df = pd.concat(dataframes)
-    merged_df.to_csv(dir_parent / output, sep="\t", index=False, encoding='utf-8')
+    merged_df.to_csv(tsv_folder / 'merged' / output, sep="\t", index=False, encoding='utf-8')
 
 
 if __name__ == '__main__':

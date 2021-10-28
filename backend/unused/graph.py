@@ -277,7 +277,7 @@ def run(text: str, quasimodo: Quasimodo, addition_nouns = []):
                 help="The text you want to visualize")
 @click.option('-a', '--addition-nouns', default=[], multiple=True, 
                 help="Addition nouns in case of Wikifier is failed to recognize (sunscreen)")
-@click.option('-q', '--quasimodo-path', default="backend/tsv/quasimodo.tsv", 
+@click.option('-q', '--quasimodo-path', default="backend/tsv/merged/quasimodo.tsv", 
                 help="Path to load quasimodo (the tsv file")
 def main(text, addition_nouns, quasimodo_path):
     start = time.time()

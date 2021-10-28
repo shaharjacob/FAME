@@ -52,7 +52,7 @@ class TestFunctions(unittest.TestCase):
 
     def test_quasimodo(self):
         merge_tsvs()
-        quasimodo = Quasimodo(path=str(backend_dir / 'tsv' / 'quasimodo.tsv'))
+        quasimodo = Quasimodo(path=str(backend_dir / 'tsv' / 'merged' / 'quasimodo.tsv'))
         
         # testing quasimodo.get_entity_props
         reference = ['has body part hoof', 'eat grass', 'has body part leg', 'need horseshoes', 'has body part nose']

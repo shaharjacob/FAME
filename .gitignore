@@ -4,7 +4,7 @@
 .vscode
 .idea/
 
-backend/tsv/quasimodo.tsv
+backend/tsv/merged
 backend/cache
 university.txt
 runme.sh

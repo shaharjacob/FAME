@@ -30,7 +30,7 @@ class DataCollector(object):
             quasimodo_props = self.quasimodo_edges[f"{entity1}#{entity2}"]
         else:
             if not self.quasimodo:
-                self.quasimodo = Quasimodo(path=root / 'backend' / 'tsv' / 'quasimodo.tsv')
+                self.quasimodo = Quasimodo(path=root / 'backend' / 'tsv' / 'merged' / 'quasimodo.tsv')
             quasimodo_props = self.quasimodo.get_entities_relations(entity1, entity2, n_largest=10, plural_and_singular=True)
             self.quasimodo_edges[f"{entity1}#{entity2}"] = sorted(quasimodo_props)
             should_save = True
@@ -85,7 +85,7 @@ class DataCollector(object):
         quasimodo_db = read_json(root / 'backend' / 'database' / 'quasimodo_nodes.json')
         if entity not in quasimodo_db:
             if not self.quasimodo:
-                self.quasimodo = Quasimodo(path=root / 'backend' / 'tsv' / 'quasimodo.tsv')
+                self.quasimodo = Quasimodo(path=root / 'backend' / 'tsv' / 'merged' / 'quasimodo.tsv')
             quasimodo_db[entity] = sorted([[prop[0], prop[1]] for prop in self.quasimodo.get_entity_props(entity, n_largest=5)])
             with open(root / 'backend' / 'database' / 'quasimodo_nodes.json', 'w') as f1:
                 json.dump(quasimodo_db, f1, indent='\t')
