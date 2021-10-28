@@ -50,6 +50,8 @@ class Quasimodo:
             list_to_update.append(singular)
     
     def init_data(self, path: str) -> DataFrame:
+        if not Path(path).exists():
+            merge_tsvs()
         return pd.read_csv(path, sep='\t', low_memory=False)
     
     def get_entity_props(self, entity: str, n_largest: int = 10, verbose: bool = False, plural_and_singular: bool = False) -> List[Tuple[str]]:
