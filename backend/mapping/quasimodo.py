@@ -192,7 +192,10 @@ def merge_tsvs(output: str = 'quasimodo.tsv'):
     tsv_folder = root / 'backend' / 'tsv'
     dataframes = [pd.read_csv(path, sep="\t") for path in (tsv_folder / 'parts').iterdir()]
     merged_df = pd.concat(dataframes)
-    merged_df.to_csv(tsv_folder / 'merged' / output, sep="\t", index=False, encoding='utf-8')
+    output_folder = tsv_folder / 'merged'
+    if not output_folder.exists():
+        output_folder.mkdir()
+    merged_df.to_csv(output_folder / output, sep="\t", index=False, encoding='utf-8')
 
 
 if __name__ == '__main__':
