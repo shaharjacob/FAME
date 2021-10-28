@@ -47,7 +47,7 @@ Now you ready to execute, please see below under **Execute**.
 &nbsp;  
 
 ### **Option 2:**
-Install dependencies and run on your local PC.
+Install dependencies and run on your local PC.  
 You should follow the following steps:  
 1) Clone the repo using the following command:  
 ```bash
@@ -58,13 +58,13 @@ git clone https://github.com/shaharjacob/mapping-entities.git
 pip install -r requirements.txt
 ```  
 **The following steps are for running the demo, if you dont want, skip to 'Execute' section**  
-3) Install <a href="https://nodejs.org/en/">Node.js</a>, make sure its in your PATH.
+3) Install <a href="https://nodejs.org/en/">Node.js</a>, make sure its in your PATH.  
 4) Now we need to install the react dependencies:  
 ```bash
 cd webapp
 npm install
 ```  
-5) In `pakeage.json`, change the proxy from `http://backend:5031` to `http://localhost:5031`, the backend is necessary when running the docker.
+5) In `pakeage.json`, change the proxy from `http://backend:5031` to `http://localhost:5031`, the 'backend' is necessary when running the docker.
 6) Now back to the root folder, and open the file ./backend/app/app.py, and **uncomment** the if main == ... section below.
 7) from the root folder, run:
 ```bash
@@ -87,8 +87,15 @@ cd /cs/labs/dshahaf/shahar.jacob/mapping-entities
 3) Edit the shell script under the root folder called `runme.sh` with the command you want to run (see Execute section below).
 4) Run the following command:  
 ```bash
-sbatch --mem=6gm -c2 --time=12:0:0 --gres=gpu:2 "runme.sh"
+sbatch --mem=6gm -c2 --time=12:0:0 --gres=gpu:2 --verbose "runme.sh"
 ```
+
+See the log with the command:  
+```bash
+tail -f slurm-{job-id}.out
+```  
+The job id shown when the job in submitted.
+
 &nbsp;  
 
 ## Execute
