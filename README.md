@@ -99,5 +99,21 @@ The job id shown when the job in submitted.
 &nbsp;  
 
 ## Execute
-
+Execution is done by configure a yaml file.
+Examples for yaml files can be found under: `backend/evalution`, in particular you can use `backend/evalution/play_around.yaml`.  
+You can see inside this file a template (in comment), and another example.  
+After editting the yaml by adding another entry, you can use the following command:  
+```bash
+python backend/evaluation/evaluation.py --yaml play_around.yaml
+```  
+If you want the suggestions to be available, add `--suggestions`.  This is not recommend unless you looking for suggstions.  
+By default, the script is running the all entries in the yaml. If you want to run specific entry, use `--specify {entry number, start from 1}`. You can specify muliple entries.  
+For example, running the first entry only:  
+```bash
+python backend/evaluation/evaluation.py --yaml play_around.yaml --specify 1
+```  
+Running the first and the third entries:  
+```bash
+python backend/evaluation/evaluation.py --yaml play_around.yaml --specify 1 --specify 3
+``` 
 
