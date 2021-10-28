@@ -1,0 +1,23 @@
+mapping:
+  # - input:
+  #     base: [b1, b2, ...]
+  #     target: [t1, t2, ...]
+  #     depth:
+  #       beam: 20
+  #       dfs: 4
+  #   output:
+  #     mapping:
+  #       - b1 --> t2
+  #       - b2 --> t1
+
+  - input:
+      base: [aspirin, pain, childbirth]
+      target: [muffler, noise, night]
+      depth:
+        beam: 20
+        dfs: 4
+    output:
+      mapping:
+      - aspirin --> muffler
+      - pain --> noise
+      - childbirth --> night
