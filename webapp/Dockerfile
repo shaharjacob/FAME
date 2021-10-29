@@ -1,4 +1,4 @@
-FROM node:latest
+FROM node:lts
 
 WORKDIR /webapp
 COPY package.json package-lock.json ./
