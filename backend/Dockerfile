@@ -4,32 +4,17 @@ COPY . backend/
 WORKDIR /backend
 
 RUN pip install --upgrade pip
-RUN pip install tqdm
-RUN pip install click
-RUN pip install flask
-RUN pip install pyyaml
-RUN pip install pandas
-RUN pip install gensim
-RUN pip install sklearn
-RUN pip install inflect
-RUN pip install requests
-RUN pip install graphviz
-RUN pip install networkx
-RUN pip install beautifulsoup4
-RUN pip install transformers==4.10.3
-RUN pip install sentence_transformers
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+RUN pip install tqdm --no-cache-dir
+RUN pip install click --no-cache-dir
+RUN pip install flask --no-cache-dir
+RUN pip install pyyaml --no-cache-dir
+RUN pip install pandas --no-cache-dir
+RUN pip install gensim --no-cache-dir
+RUN pip install sklearn --no-cache-dir
+RUN pip install inflect --no-cache-dir
+RUN pip install requests --no-cache-dir
+RUN pip install graphviz --no-cache-dir
+RUN pip install networkx --no-cache-dir
+RUN pip install beautifulsoup4 --no-cache-dir
+RUN pip install transformers==4.10.3 --no-cache-dir
+RUN pip install sentence_transformers --no-cache-dir
