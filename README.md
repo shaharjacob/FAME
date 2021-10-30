@@ -15,87 +15,96 @@
 ## Useage  
 ### **Option 1:**
 Using a docker.  
-You should follow the following steps:  
-1) <a href="https://www.docker.com/">Install docker</a>
-2) Clone the repo using the following command:  
+First, you should <a href="https://www.docker.com/">install docker</a>.  
+
+Now, for **exploring with GUI webapp**, the steps are:  
 ```bash
-git clone https://github.com/shaharjacob/mapping-entities.git
+# pulling the images  
+docker pull shaharjacob/msbackend  
+docker pull shaharjacob/mswebapp  
+
+# crating a network to combine both containers  
+docker network create "mapping-entities"  
+
+# running both containers
+docker run -d -p 5031:5031 --name backend --network "mapping-entities" -e "FLASK_ENV=development" -e "FLASK_APP=app.app" -e "SENTENCE_TRANSFORMERS_HOME=cache" shaharjacob/msbackend flask run --host "0.0.0.0" --port 5031  
+docker run -d -p 3000:3000 --name webapp --network "mapping-entities" shaharjacob/mswebapp npm start
 ```
-3) Open your terminal in the root folder of the repo and type:  
+
+After few seconds you can open browser at: <a href="https://localhost:3000/">https://localhost:3000/</a>  
+**Verbose:**  
+If you want to make sure that webapp container load successfully:
 ```bash
-docker-compose -f docker-compose.yml up -d
+docker logs -f webapp
 ```  
-**You can skip step 4 if you want to execuate using a yaml file**  
-4) You should wait around 30-40 second, then open you browser at http://localhost:3000/  
-
-If you want to see backend log (there are informative prints):  
+If you want to see backend verbose, use:  
 ```bash
-docker-compose logs -f backend -t
-```
-
-If you want to see webapp log (nothing to do with it, just if you want to make sure that the app up successfully):  
-```bash
-docker-compose logs -f webapp -t
-```
-
-**Running without the demo**
-After step 3, we will connect into the backend container using the following command:
-```bash
-docker exec -it backend bash
-```
-Now you ready to execute, please see below under **Execute**.  
+docker logs -f backend
+```  
+Exit from the verbose mode can be done with `ctrl + c`.  
 &nbsp;  
+
+
+If you want to **run without the demo**, you need to connect to the backend container.      
+To do that you just need to type:  
+```bash
+docker exec -it backend bash <command>
+```  
+The command for execute detailed in **Execute** section.  
+&nbsp;  
+
 
 ### **Option 2:**
 Install dependencies and run on your local PC.  
-You should follow the following steps:  
-1) Clone the repo using the following command:  
 ```bash
 git clone https://github.com/shaharjacob/mapping-entities.git
-```
-2) Install dependencies using the following command: 
-```bash
+cd mapping-entities
 pip install -r requirements.txt
+python <command>
 ```  
-**The following steps are for running the demo, if you dont want, skip to 'Execute' section**  
-3) Install <a href="https://nodejs.org/en/">Node.js</a>, make sure its in your PATH.  
-4) Now we need to install the react dependencies:  
+The command for execute detailed in **Execute** section.  
+&nbsp;  
+&nbsp;  
+
+**FOR GUI ONLY**
+If you want the GUI, you should do the following steps (in addition to the steps above):  
+1) Install <a href="https://nodejs.org/en/">Node.js</a>, make sure its in your PATH. Install version 16.13.0.  
+2) Now we need to install the react dependencies:  
 ```bash
 cd webapp
-npm install
+npm ci
 ```  
-5) In `pakeage.json`, change the proxy from `http://backend:5031` to `http://localhost:5031`, the 'backend' is necessary when running the docker.
-6) Now back to the root folder, and open the file ./backend/app/app.py, and **uncomment** the if main == ... section below.
-7) from the root folder, run:
+3) In `pakeage.json`, change the proxy from `http://backend:5031` to `http://localhost:5031`, the 'backend' is necessary when running the docker.
+4) Now back to the root folder, and open the file ./backend/app/app.py, and **uncomment** the if main == ... section below.
+5) from the root folder, run:
 ```bash
 python backend/app/app.py
 ``` 
-8) Now we just need to start the frontend:
+6) Now we just need to start the frontend:
 ```bash
 cd webapp
 npm start
 ```  
 &nbsp;  
 
+
 ### **Option 3:**
 Running on the university cluster using my folder (without demo, only backend).
-1) ssh to phoenix cluster (depends on how you ssh but the server is phoenix.cs.huji.ac.il)
+1) ssh to phoenix cluster.
 2) Go to my repo:  
 ```bash
 cd /cs/labs/dshahaf/shahar.jacob/mapping-entities
 ```
-3) Edit the shell script under the root folder called `runme.sh` with the command you want to run (see Execute section below).
+3) Edit the shell script under the root folder called `runme.sh` with the command you want to run (see **Execute** section).
 4) Run the following command:  
 ```bash
 sbatch --mem=6gm -c2 --time=12:0:0 --gres=gpu:2 --verbose "runme.sh"
-```
-
+```  
 See the log with the command:  
 ```bash
 tail -f slurm-{job-id}.out
 ```  
-The job id shown when the job in submitted.
-
+The job id shown when the job in submitted.  
 &nbsp;  
 
 ## Execute
@@ -107,7 +116,7 @@ After editting the yaml by adding another entry, you can use the following comma
 python backend/evaluation/evaluation.py --yaml play_around.yaml
 ```  
 If you want the suggestions to be available, add `--suggestions`.  This is not recommend unless you looking for suggstions.  
-By default, the script is running the all entries in the yaml. If you want to run specific entry, use `--specify {entry number, start from 1}`. You can specify muliple entries.  
+By default, the script is running all the entries in the yaml. If you want to run specific entry, use `--specify {entry number, start from 1}`. You can specify muliple entries.  
 For example, running the first entry only:  
 ```bash
 python backend/evaluation/evaluation.py --yaml play_around.yaml --specify 1
@@ -116,4 +125,3 @@ Running the first and the third entries:
 ```bash
 python backend/evaluation/evaluation.py --yaml play_around.yaml --specify 1 --specify 3
 ``` 
-
