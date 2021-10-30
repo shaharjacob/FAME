@@ -13,10 +13,7 @@ services:
     ports:
       - "5031:5031"
     volumes:
-      - ./backend/app:/backend/app
-      - ./backend/mapping:/backend/mapping
-      - ./backend/tests:/backend/tests
-      - ./backend/utils:/backend/utils
+      - ./backend:/backend
     environment:
       - FLASK_ENV=development
       - FLASK_APP=app.app
