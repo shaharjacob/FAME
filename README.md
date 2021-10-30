@@ -32,6 +32,7 @@ docker run -d -p 3000:3000 --name webapp --network "mapping-entities" shaharjaco
 ```
 
 After few seconds you can open browser at: <a href="https://localhost:3000/">https://localhost:3000/</a>  
+The first run may take a few second because it download the sBERT model into the container.  
 
 **Verbose:**  
 If you want to make sure that webapp container load successfully:
@@ -56,7 +57,7 @@ You should be now in **backend** folder, and should run:
 python evaluation/evaluation.py --yaml play_around.yaml
 ```
 More details about the execute command can be found under **Execute** section.  
-&nbsp;   
+&nbsp;  
 
 
 ### **Option 2:**
@@ -65,13 +66,11 @@ Install dependencies and run on your local PC.
 git clone https://github.com/shaharjacob/mapping-entities.git
 cd mapping-entities
 pip install -r requirements.txt
-python <command>
 ```  
-The command for execute detailed in **Execute** section.  
-&nbsp;  
+Now you ready for the execute command detailed in **Execute** section.  
 &nbsp;  
 
-**FOR GUI ONLY**
+**FOR GUI ONLY**  
 If you want the GUI, you should do the following steps (in addition to the steps above):  
 1) Install <a href="https://nodejs.org/en/">Node.js</a>, make sure its in your PATH. Install version 16.13.0.  
 2) Now we need to install the react dependencies:  
@@ -94,12 +93,9 @@ npm start
 
 
 ### **Option 3:**
-Running on the university cluster using my folder (without demo, only backend).
+Running on the university cluster using exsiting repo (without demo, only backend).
 1) ssh to phoenix cluster.
-2) Go to my repo:  
-```bash
-cd /cs/labs/dshahaf/shahar.jacob/mapping-entities
-```
+2) ```cd /cs/labs/dshahaf/shahar.jacob/mapping-entities```
 3) Edit the shell script under the root folder called `runme.sh` with the command you want to run (see **Execute** section).
 4) Run the following command:  
 ```bash
