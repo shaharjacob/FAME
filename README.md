@@ -10,6 +10,7 @@
   <a href="https://hub.docker.com/"><img src="https://img.shields.io/badge/-docker-gray?logo=docker" alt="docker"/></a>
   <a href="https://reactjs.org/"><img src="https://img.shields.io/badge/-react-grey?logo=react" alt="react"/></a>
   <a href="http://www.hyadatalab.com/"><img src="https://img.shields.io/badge/-hyadata-orange" alt="hyadata"/></a>
+  <a href="http://www.hyadatalab.com/"><img src="https://img.shields.io/badge/-react-grey?logo=https://github.com/shaharjacob/commonsense-analogy/blob/main/images/hyadata_icon.png?raw=true" alt="hyadata2"/></a>
 </p>
 
 ## Useage  
