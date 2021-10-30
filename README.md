@@ -32,6 +32,7 @@ docker run -d -p 3000:3000 --name webapp --network "mapping-entities" shaharjaco
 ```
 
 After few seconds you can open browser at: <a href="https://localhost:3000/">https://localhost:3000/</a>  
+
 **Verbose:**  
 If you want to make sure that webapp container load successfully:
 ```bash
@@ -48,10 +49,14 @@ Exit from the verbose mode can be done with `ctrl + c`.
 If you want to **run without the demo**, you need to connect to the backend container.      
 To do that you just need to type:  
 ```bash
-docker exec -it backend bash <command>
+docker exec -it backend bash
 ```  
-The command for execute detailed in **Execute** section.  
-&nbsp;  
+You should be now in **backend** folder, and should run:  
+```bash
+python evaluation/evaluation.py --yaml play_around.yaml
+```
+More details about the execute command can be found under **Execute** section.  
+&nbsp;   
 
 
 ### **Option 2:**
