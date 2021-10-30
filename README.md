@@ -12,7 +12,7 @@
   <a href="http://www.hyadatalab.com/"><img src="https://img.shields.io/badge/-hyadata-grey?logo=data:image/png;base64,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" alt="hyadata"/></a>
 </p>
 
-## Useage  
+# Useage  
 ### **Option 1:**
 Using a docker.  
 First, you should <a href="https://www.docker.com/">install docker</a>.  
@@ -108,7 +108,7 @@ tail -f slurm-{job-id}.out
 The job id shown when the job in submitted.  
 &nbsp;  
 
-## Execute
+# Execute
 Execution is done by configure a yaml file.
 Examples for yaml files can be found under: `backend/evalution`, in particular you can use `backend/evalution/play_around.yaml`.  
 You can see inside this file a template (in comment), and another example.  
@@ -125,4 +125,9 @@ python backend/evaluation/evaluation.py --yaml play_around.yaml --specify 1
 Running the first and the third entries:  
 ```bash
 python backend/evaluation/evaluation.py --yaml play_around.yaml --specify 1 --specify 3
-``` 
+```  
+&nbsp;  
+
+
+# Amazon Web Services 
+Live demo (very weak server for now) is at: <a href="http://52.15.113.33:3000/">http://52.15.113.33:3000/</a>.  
