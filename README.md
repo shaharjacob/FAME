@@ -1,7 +1,10 @@
 <p align="center">
   <img src="https://github.com/shaharjacob/commonsense-analogy/blob/main/images/hyadata.png?raw=true" width="300px" alt="hyadata"/>
   
-  <div align="center">Structure mapping automation based on sentence embadding</div>
+  <div align="center">
+    Structure mapping automation based on sentence embadding<br/>
+    Amazon Web Services: <a href="http://3.16.56.220:3000/">http://3.16.56.220:3000/</a>  
+  </div>
 </p>
 
 <p align="center">
@@ -127,7 +130,3 @@ Running the first and the third entries:
 python backend/evaluation/evaluation.py --yaml play_around.yaml --specify 1 --specify 3
 ```  
 &nbsp;  
-
-
-# Amazon Web Services 
-Live demo (very weak server for now) is at: <a href="http://52.15.113.33:3000/">http://52.15.113.33:3000/</a>.  
