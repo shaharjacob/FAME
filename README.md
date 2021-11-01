@@ -74,7 +74,14 @@ Now you ready for the execute command detailed in **Execute** section.
 &nbsp;  
 
 **FOR GUI ONLY**  
-If you want the GUI, you should do the following steps (in addition to the steps above):  
+First option, working with docker. Just run:
+```bash
+docker-compose -f docker-compose.yml up -d
+```
+Then open the browser at: <a href="http://localhost:3000">http://localhost:3000</a>  
+&nbsp;  
+
+Alternatively (without docker at all), you can do the following steps:
 1) Install <a href="https://nodejs.org/en/">Node.js</a>, make sure its in your PATH. Install version 16.13.0.  
 2) Now we need to install the react dependencies:  
 ```bash
