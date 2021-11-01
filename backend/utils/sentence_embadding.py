@@ -38,22 +38,18 @@ class SentenceEmbedding(SentenceTransformer):
         return similarity
     
 
-    def clustering(self, edge: Tuple[str], distance_threshold: float) -> Dict[int, List[str]]:
-        # clustering properties of an given edge
-        if not self.data_collector:
-            self.data_collector = DataCollector()
-        props_edge = self.data_collector.get_entities_relations(edge[0], edge[1])
-        if not props_edge:
+    def clustering(self, tokens: List[str], distance_threshold: float) -> Dict[int, List[str]]:
+        if not tokens:
             return {}
         
+        # only one token. No calculation is needed
+        if len(tokens) == 1:
+            return {0: tokens}
+        
         # https://github.com/UKPLab/sentence-transformers/blob/master/examples/applications/clustering/agglomerative.py
-        corpus_embeddings = self.encode(props_edge)
+        corpus_embeddings = self.encode(tokens)
         corpus_embeddings = corpus_embeddings / np.linalg.norm(corpus_embeddings, axis=1, keepdims=True)
 
-        # only one property is found
-        if len(props_edge) == 1:
-            return {0: props_edge}
-        
         # https://scikit-learn.org/stable/modules/generated/sklearn.cluster.AgglomerativeClustering.html
         clustering_model = AgglomerativeClustering(n_clusters=None, affinity='cosine', linkage='average', distance_threshold=distance_threshold)
         clustering_model.fit(corpus_embeddings)
@@ -63,7 +59,7 @@ class SentenceEmbedding(SentenceTransformer):
         for sentence_id, cluster_id in enumerate(cluster_assignment):
             if cluster_id not in clustered_sentences:
                 clustered_sentences[cluster_id] = []
-            clustered_sentences[cluster_id].append(props_edge[sentence_id])
+            clustered_sentences[cluster_id].append(tokens[sentence_id])
 
         # the key is the id of the cluster (0,1,...) and the value is a list of props
         return dict(sorted(clustered_sentences.items()))

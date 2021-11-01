@@ -201,8 +201,11 @@ def get_pair_mapping(model: SentenceEmbedding, data_collector: DataCollector, fr
     similatiry_edges = [(prop1, prop2, get_edge_score(prop1, prop2, model, freq)) for prop1 in props_edge1 for prop2 in props_edge2]
 
     # we want the cluster similar properties
-    clustered_sentences_1: Dict[int, List[str]] = model.clustering(mapping[0], distance_threshold=DEFAULT_DIST_THRESHOLD_FOR_CLUSTERS)
-    clustered_sentences_2: Dict[int, List[str]] = model.clustering(mapping[1], distance_threshold=DEFAULT_DIST_THRESHOLD_FOR_CLUSTERS)
+    props_edge1 = data_collector.get_entities_relations(mapping[0][0], mapping[0][1])
+    clustered_sentences_1: Dict[int, List[str]] = model.clustering(props_edge1, distance_threshold=DEFAULT_DIST_THRESHOLD_FOR_CLUSTERS)
+
+    props_edge2 = data_collector.get_entities_relations(mapping[1][0], mapping[1][1])
+    clustered_sentences_2: Dict[int, List[str]] = model.clustering(props_edge2, distance_threshold=DEFAULT_DIST_THRESHOLD_FOR_CLUSTERS)
 
     # for each two clusters (from the opposite side of the bipartite) we will take only one edge, which is the maximum weighted.
     cluster_edges_weights = get_edges_with_maximum_weight(similatiry_edges, clustered_sentences_1, clustered_sentences_2)
@@ -264,8 +267,11 @@ def get_best_pair_mapping(model: SentenceEmbedding,
             similatiry_edges = [(prop1, prop2, get_edge_score(prop1, prop2, model, freq)) for prop1 in props_edge1 for prop2 in props_edge2]
 
             # we want the cluster similar properties
-            clustered_sentences_1: Dict[int, List[str]] = model.clustering(direction[0], distance_threshold=DEFAULT_DIST_THRESHOLD_FOR_CLUSTERS)
-            clustered_sentences_2: Dict[int, List[str]] = model.clustering(direction[1], distance_threshold=DEFAULT_DIST_THRESHOLD_FOR_CLUSTERS)
+            props_edge1 = data_collector.get_entities_relations(direction[0][0], direction[0][1])
+            clustered_sentences_1: Dict[int, List[str]] = model.clustering(props_edge1, distance_threshold=DEFAULT_DIST_THRESHOLD_FOR_CLUSTERS)
+
+            props_edge2 = data_collector.get_entities_relations(direction[1][0], direction[1][1])
+            clustered_sentences_2: Dict[int, List[str]] = model.clustering(props_edge2, distance_threshold=DEFAULT_DIST_THRESHOLD_FOR_CLUSTERS)
 
             # for each two clusters (from the opposite side of the bipartite) we will take only one edge, which is the maximum weighted.
             cluster_edges_weights = get_edges_with_maximum_weight(similatiry_edges, clustered_sentences_1, clustered_sentences_2)
