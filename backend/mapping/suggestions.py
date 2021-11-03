@@ -81,7 +81,8 @@ class Suggestions(object):
 def get_suggestions_for_missing_entities(data_collector: DataCollector, 
                                          base_not_mapped_entity: str, 
                                          base_already_mapping: List[str], 
-                                         target_already_mapping: List[str], 
+                                         target_already_mapping: List[str],
+                                         model: SentenceEmbedding, 
                                          verbose: bool = False
                                          ) -> List[str]:
     suggests_list = []
@@ -110,7 +111,11 @@ def get_suggestions_for_missing_entities(data_collector: DataCollector,
                 secho(f"    No match found!", fg="green")
             print()
 
-    return [suggest for suggest in list(set(suggests_list)) if len(suggest.split()) <= 2]
+    # TODO: return dict. The keys are the cluster representation, and the values are the all cluster.
+    suggestions_list_filtered = [suggest for suggest in list(set(suggests_list)) if len(suggest.split()) <= 2]
+    
+    # clusters = model.clustering()
+    return suggestions_list_filtered
 
 
 def get_score_between_two_entitites(entity1: str, entity2: str, model: SentenceEmbedding = None, data_collector: DataCollector = None, freq: Frequencies = None) -> float:
@@ -241,6 +246,7 @@ def mapping_suggestions_wrapper(
                                                                                 first_domain_not_mapped_entity, 
                                                                                 solution.get_actual(first_domain), 
                                                                                 solution.get_actual(second_domain), 
+                                                                                model=model,
                                                                                 verbose=verbose)
         if not entities_suggestions:
             continue  # no suggestion found :(
