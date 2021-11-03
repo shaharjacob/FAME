@@ -145,8 +145,11 @@ def single_mapping():
         similatiry_edges = [(prop1, prop2, get_edge_score(prop1, prop2, model, freq)) for prop1 in props_edge1 for prop2 in props_edge2]
         
         for thresh in utils.DISTANCE_TRESHOLDS:
-            clustered_sentences_1: Dict[int, List[str]] = model.clustering(edge_[0], distance_threshold=thresh)
-            clustered_sentences_2: Dict[int, List[str]] = model.clustering(edge_[1], distance_threshold=thresh)
+            props_edge1 = data_collector.get_entities_relations(edge_[0][0], edge_[0][1])
+            clustered_sentences_1: Dict[int, List[str]] = model.clustering(props_edge1, distance_threshold=thresh)
+            
+            props_edge2 = data_collector.get_entities_relations(edge_[1][0], edge_[1][1])
+            clustered_sentences_2: Dict[int, List[str]] = model.clustering(props_edge2, distance_threshold=thresh)
 
             # we want to group each cluster to one node
             nodes1 = ["\n".join(cluster) for _, cluster in clustered_sentences_1.items()]
@@ -236,10 +239,12 @@ def clustring():
 
     d = {}
     for thresh in utils.DISTANCE_TRESHOLDS:
-        clustered_sentences_1: Dict[int, List[str]] = model.clustering(edge1, distance_threshold=thresh)
+        props_edge1 = data_collector.get_entities_relations(edge1[0], edge1[1])
+        clustered_sentences_1: Dict[int, List[str]] = model.clustering(props_edge1, distance_threshold=thresh)
         nodes1 = python2react.get_cluster_nodes_for_app(clustered_sentences_1, start_idx=0, start_gourp=0, x=200)
 
-        clustered_sentences_2: Dict[int, List[str]] = model.clustering(edge2, distance_threshold=thresh)
+        props_edge2 = data_collector.get_entities_relations(edge2[0], edge2[1])
+        clustered_sentences_2: Dict[int, List[str]] = model.clustering(props_edge2, distance_threshold=thresh)
         nodes2 = python2react.get_cluster_nodes_for_app(clustered_sentences_2, start_idx=nodes1.get("total_nodes"), start_gourp=len(clustered_sentences_1), x=800)
 
         d[thresh] = {
