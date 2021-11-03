@@ -2,7 +2,7 @@ import os
 import json
 import copy
 from pathlib import Path
-from typing import List, Tuple, Set
+from typing import List, Tuple, Set, Dict
 
 from click import secho
 
@@ -85,24 +85,27 @@ def get_suggestions_for_missing_entities(data_collector: DataCollector,
                                          model: SentenceEmbedding, 
                                          verbose: bool = False
                                          ) -> List[str]:
-    suggests_list = []
+    suggests_list = {}
     # we need all the relations between the entity (the one that not mapped) to the entities that already mapped (again - in the same domain)
     for idx, base_entity in enumerate(base_already_mapping):
+        match_target_entity = target_already_mapping[idx]
+        suggests_list[match_target_entity] = []
         if verbose: 
             secho(f"(^{base_not_mapped_entity}, {base_entity})", fg="blue", bold=True)
 
         props_entity_1 = data_collector.get_entities_relations(base_entity, base_not_mapped_entity)
         props_entity_2 = data_collector.get_entities_relations(base_not_mapped_entity, base_entity)
 
-        # we we use the map that we already know (base_entity->target_already_mapping[idx])
+        # we we use the map that we already know (base_entity -> match_target_entity)
         if verbose: 
-            secho(f"  {target_already_mapping[idx]}", fg="red", bold=True)
+            secho(f"  {match_target_entity}", fg="red", bold=True)
         for prop in set(props_entity_1 + props_entity_2):
-            suggestions_model = Suggestions(target_already_mapping[idx], prop, quasimodo=data_collector.quasimodo)
+            suggestions_model = Suggestions(match_target_entity, prop, quasimodo=data_collector.quasimodo)
             props = suggestions_model.get_suggestions()
             if props:
                 # we found candidates for '<exist_entity> <prop> <candidate>' or '<candidate> <prop> <exist_entity>'
-                suggests_list.extend(props)
+                props_filtered = [p for p in list(set(props)) if len(p.split()) <= 2]
+                suggests_list[match_target_entity].extend(props_filtered)
                 if verbose:
                     secho(f"    {prop}: ", fg="green", bold=True, nl=False)
                     secho(f"{props}", fg="cyan")
@@ -110,12 +113,9 @@ def get_suggestions_for_missing_entities(data_collector: DataCollector,
             if not props_entity_1 + props_entity_2:
                 secho(f"    No match found!", fg="green")
             print()
-
-    # TODO: return dict. The keys are the cluster representation, and the values are the all cluster.
-    suggestions_list_filtered = [suggest for suggest in list(set(suggests_list)) if len(suggest.split()) <= 2]
-    
+  
     # clusters = model.clustering()
-    return suggestions_list_filtered
+    return suggests_list
 
 
 def get_score_between_two_entitites(entity1: str, entity2: str, model: SentenceEmbedding = None, data_collector: DataCollector = None, freq: Frequencies = None) -> float:
@@ -176,11 +176,13 @@ def mapping_suggestions(
             
             score = 0
             if b1 not in base_already_mapping_new and t1 not in target_already_mapping_new:
-                score += get_score(base_already_mapping_new, target_already_mapping_new, b1, t1, cache)
+                score += result["best_score"]
+                # score += get_score(base_already_mapping_new, target_already_mapping_new, b1, t1, cache)
                 update_already_mapping(b1, t1, base_already_mapping_new, target_already_mapping_new, actual_mapping_indecies_new)
             
             if b2 not in base_already_mapping_new and t2 not in target_already_mapping_new:
-                score += get_score(base_already_mapping_new, target_already_mapping_new, b2, t2, cache)
+                score += result["best_score"]
+                # score += get_score(base_already_mapping_new, target_already_mapping_new, b2, t2, cache)
                 update_already_mapping(b2, t2, base_already_mapping_new, target_already_mapping_new, actual_mapping_indecies_new)
             
             mapping_repr = [f"{b} --> {t}" for b, t in zip(base_already_mapping_new, target_already_mapping_new)]
@@ -242,41 +244,54 @@ def mapping_suggestions_wrapper(
     
     first_domain_not_mapped_entities = [entity for entity in domain if entity not in solution.get_actual(first_domain)]
     for first_domain_not_mapped_entity in first_domain_not_mapped_entities:
-        entities_suggestions: List[str] = get_suggestions_for_missing_entities( data_collector, 
-                                                                                first_domain_not_mapped_entity, 
-                                                                                solution.get_actual(first_domain), 
-                                                                                solution.get_actual(second_domain), 
-                                                                                model=model,
-                                                                                verbose=verbose)
-        if not entities_suggestions:
-            continue  # no suggestion found :(
-        if first_domain == "actual_base":
-            new_base = solution.get_actual("actual_base") + [first_domain_not_mapped_entity]
-            new_target = solution.get_actual("actual_target") + entities_suggestions
-        elif first_domain == "actual_target":
-            new_base = solution.get_actual("actual_base") + entities_suggestions
-            new_target = solution.get_actual("actual_target") + [first_domain_not_mapped_entity]
+        # we will go over and entities from the first domain and extract the relations with 'first_domain_not_mapped_entity'
+        # then, we will store in a dict in the key the corresponding entity from the second domain, and in the value the relations.
+        entities_suggestions: Dict[str, List[str]] = get_suggestions_for_missing_entities(  data_collector, 
+                                                                                            first_domain_not_mapped_entity, 
+                                                                                            solution.get_actual(first_domain), 
+                                                                                            solution.get_actual(second_domain), 
+                                                                                            model=model,
+                                                                                            verbose=verbose)
+        for key, value in entities_suggestions.items():
+            if not value:
+                continue  # no suggestion found :(
             
-        all_pairs = get_all_possible_pairs_map(new_base, new_target)
-        available_pairs_new = update_paris_map(all_pairs, solution.get_actual("actual_base"), solution.get_actual("actual_target"), solution.actual_indecies)
-        top_suggestions = []
-        mapping_suggestions(
-            available_pairs=available_pairs_new,
-            current_solution=copy.deepcopy(solution),
-            solutions=solutions,
-            relations_already_seen=relations_already_seen,
-            mappings_already_seen=mappings_already_seen,
-            data_collector=data_collector,
-            model=model,
-            freq=freq,
-            top_suggestions=top_suggestions,
-            domain=first_domain,
-            cache=cache,
-            num_of_suggestions=num_of_suggestions,
-        )
-        for solution in solutions: # TODO: fix here
-            if not solution.top_suggestions:
-                solution.top_suggestions = top_suggestions
+            if first_domain == "actual_base":
+                new_base = solution.get_actual("actual_base") + [first_domain_not_mapped_entity]
+                new_target = solution.get_actual("actual_target") + value
+                index_domain = 1
+                
+            else: # first_domain == "actual_target"
+                new_base = solution.get_actual("actual_base") + value
+                new_target = solution.get_actual("actual_target") + [first_domain_not_mapped_entity]
+                index_domain = 0
+                
+            all_pairs = get_all_possible_pairs_map(new_base, new_target)
+            available_pairs_new = update_paris_map(all_pairs, solution.get_actual("actual_base"), solution.get_actual("actual_target"), solution.actual_indecies)
+            
+            pair_allows: Set[Tuple[str, str]] = set([(key, v) for v in value])
+            available_pairs_new = [pair for pair in available_pairs_new if pair[0][index_domain] in pair_allows]
+            if not available_pairs_new:
+                continue
+            
+            top_suggestions = []
+            mapping_suggestions(
+                available_pairs=available_pairs_new,
+                current_solution=copy.deepcopy(solution),
+                solutions=solutions,
+                relations_already_seen=relations_already_seen,
+                mappings_already_seen=mappings_already_seen,
+                data_collector=data_collector,
+                model=model,
+                freq=freq,
+                top_suggestions=top_suggestions,
+                domain=first_domain,
+                cache=cache,
+                num_of_suggestions=num_of_suggestions,
+            )
+            for solution in solutions: # TODO: fix here
+                if not solution.top_suggestions:
+                    solution.top_suggestions = top_suggestions
 
 
 if __name__ == '__main__':
