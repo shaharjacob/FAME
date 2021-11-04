@@ -48387,5 +48387,83 @@
 		"take",
 		"was filled with",
 		"was full of"
-	]
+	],
+	"electrons#covalent bond": [
+		"had made up",
+		"is called"
+	],
+	"electrons#molecule": [
+		"are captured by",
+		"are changed in",
+		"are distributed in",
+		"are ejected from",
+		"are in",
+		"are shared equally in",
+		"are stripped from",
+		"are transferred among",
+		"are transferred between",
+		"collide with",
+		"could interact with",
+		"hide out in",
+		"hit",
+		"is removed from",
+		"is taken from",
+		"link up with",
+		"makes",
+		"move in",
+		"move through",
+		"then fell back toward"
+	],
+	"molecule#electrons": [
+		"accepts",
+		"are missing",
+		"contains",
+		"exchange",
+		"give up",
+		"have",
+		"have been stripped of",
+		"is an atom with",
+		"loses",
+		"might be",
+		"must simply spray",
+		"regains",
+		"serve as"
+	],
+	"electrons#quark": [
+		"are made of",
+		"has struck",
+		"interacts with",
+		"so is",
+		"strikes"
+	],
+	"quark#electrons": [
+		"functions inside",
+		"is quite unlike"
+	],
+	"electrons#an angle": [],
+	"an angle#electrons": [],
+	"covalent bond#electrons": [
+		"involve the sharing of"
+	],
+	"electricity#one another": [
+		"are related to"
+	],
+	"one another#electricity": [],
+	"electricity#1 yuan": [
+		"have been reduced to"
+	],
+	"1 yuan#electricity": [],
+	"electricity#1911": [
+		"was discovered in"
+	],
+	"1911#electricity": [],
+	"electricity#the foot": [],
+	"the foot#electricity": [],
+	"electricity#natural monopoly": [
+		"has been defined as",
+		"is"
+	],
+	"natural monopoly#electricity": [],
+	"nucleus#particle physics": [],
+	"particle physics#nucleus": []
 }

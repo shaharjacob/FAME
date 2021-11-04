@@ -30478,5 +30478,49 @@
 	"meal#athletes": [],
 	"athletes#meal": [],
 	"chef#athletes": [],
-	"athletes#chef": []
+	"athletes#chef": [],
+	"electrons#covalent bond": [
+		"act in a",
+		"behave differently in ionic and",
+		"behave in",
+		"behave in a",
+		"dot formula used to represent a",
+		"dot structure used to represent a",
+		"form",
+		"move in",
+		"move in a"
+	],
+	"electrons#molecule": [
+		"affect the shape of a",
+		"affect the structure of a",
+		"density relate to the partial charges on a",
+		"pair repulsion influence the shape of a",
+		"pairs affect the polarity of the",
+		"pairs guide the shape of a"
+	],
+	"molecule#electrons": [
+		"need"
+	],
+	"electrons#quark": [],
+	"quark#electrons": [],
+	"electrons#an angle": [],
+	"an angle#electrons": [],
+	"covalent bond#electrons": [
+		"share"
+	],
+	"electricity#one another": [],
+	"one another#electricity": [],
+	"electricity#1 yuan": [],
+	"1 yuan#electricity": [],
+	"electricity#1911": [],
+	"1911#electricity": [],
+	"electricity#the foot": [],
+	"the foot#electricity": [],
+	"electricity#natural monopoly": [
+		"a",
+		"generation better off as a"
+	],
+	"natural monopoly#electricity": [],
+	"nucleus#particle physics": [],
+	"particle physics#nucleus": []
 }

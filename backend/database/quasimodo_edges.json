@@ -19965,5 +19965,35 @@
 	"meal#athletes": [],
 	"athletes#meal": [],
 	"chef#athletes": [],
-	"athletes#chef": []
+	"athletes#chef": [],
+	"electrons#covalent bond": [],
+	"electrons#molecule": [
+		"affect shape in",
+		"transfer through"
+	],
+	"molecule#electrons": [
+		"lose",
+		"share"
+	],
+	"electrons#quark": [],
+	"quark#electrons": [],
+	"electrons#an angle": [],
+	"an angle#electrons": [],
+	"covalent bond#electrons": [
+		"share"
+	],
+	"electricity#one another": [],
+	"one another#electricity": [],
+	"electricity#1 yuan": [],
+	"1 yuan#electricity": [],
+	"electricity#1911": [],
+	"1911#electricity": [],
+	"electricity#the foot": [],
+	"the foot#electricity": [],
+	"electricity#natural monopoly": [
+		"has property"
+	],
+	"natural monopoly#electricity": [],
+	"nucleus#particle physics": [],
+	"particle physics#nucleus": []
 }
