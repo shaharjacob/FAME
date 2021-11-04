@@ -9269,5 +9269,19 @@
 	"antacid#can result in": [
 		"side effects"
 	],
-	"antacid#are associated with": []
+	"antacid#are associated with": [],
+	"heartburn#relieve chest": [],
+	"heartburn#cause stomach": [],
+	"heartburn#good for chest": [],
+	"heartburn#help": [
+		"digestion"
+	],
+	"heartburn#help chest": [],
+	"heartburn#given to patients with chest": [],
+	"heartburn#given for chest": [],
+	"heartburn#work for chest": [],
+	"heartburn#stop chest": [],
+	"heartburn#help my chest": [],
+	"heartburn#and ibuprofen lessen the sensation of": [],
+	"heartburn#cause epigastric": []
 }

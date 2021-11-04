@@ -30982,5 +30982,71 @@
 	],
 	"its way#river": [],
 	"river#the left": [],
-	"the left#river": []
+	"the left#river": [],
+	"bone#cookie cutter": [],
+	"cookie cutter#bone": [],
+	"bone#dog": [
+		"broth benefits",
+		"broth good for",
+		"broth help",
+		"cancer affect",
+		"cancer diagnosed in",
+		"cancer kill a",
+		"cancer present in",
+		"cancer progress in",
+		"cancer show in",
+		"cancer spread in",
+		"cancer start in",
+		"good for",
+		"marrow good for",
+		"meal good for"
+	],
+	"dog#bone": [
+		"bark at",
+		"bring",
+		"bring me his",
+		"bury",
+		"bury their",
+		"chew on",
+		"cry when they have a",
+		"cry when trying to hide a",
+		"cry with",
+		"digest",
+		"eat",
+		"growl when they have a",
+		"like",
+		"love",
+		"roll on",
+		"want you to hold their",
+		"whine when hiding a",
+		"whine with",
+		"whine with a"
+	],
+	"bone#marrow (comics)": [],
+	"marrow (comics)#bone": [],
+	"heartburn#acid": [],
+	"acid#heartburn": [
+		"give me",
+		"reflux",
+		"reflux called",
+		"reflux cause",
+		"reflux differ from",
+		"reflux different from"
+	],
+	"heartburn#the regurgitation": [],
+	"the regurgitation#heartburn": [],
+	"heartburn#gastric acid": [],
+	"gastric acid#heartburn": [],
+	"antacid#chromium absorption": [],
+	"chromium absorption#antacid": [],
+	"antacid#constipation": [
+		"cause"
+	],
+	"constipation#antacid": [],
+	"antacid#side effects": [],
+	"side effects#antacid": [],
+	"heartburn#symptoms": [
+		"an early pregnancy"
+	],
+	"symptoms#heartburn": []
 }

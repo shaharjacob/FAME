@@ -20303,5 +20303,26 @@
 	"river#its way": [],
 	"its way#river": [],
 	"river#the left": [],
-	"the left#river": []
+	"the left#river": [],
+	"bone#cookie cutter": [],
+	"cookie cutter#bone": [],
+	"bone#dog": [
+		"be bad for",
+		"be good for",
+		"can"
+	],
+	"dog#bone": [
+		"be aggressive with",
+		"can chew",
+		"can digest",
+		"can eat",
+		"chew",
+		"chew on",
+		"eat",
+		"has body part",
+		"love",
+		"protect"
+	],
+	"bone#marrow (comics)": [],
+	"marrow (comics)#bone": []
 }
