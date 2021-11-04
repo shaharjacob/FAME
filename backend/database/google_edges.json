@@ -30923,5 +30923,64 @@
 	"lawn#my yard": [],
 	"my yard#lawn": [],
 	"lawn#those people": [],
-	"those people#lawn": []
+	"those people#lawn": [],
+	"nucleus#quantum superposition": [],
+	"quantum superposition#nucleus": [],
+	"earth#outer space": [
+		"appear blue from",
+		"float in",
+		"look blue from",
+		"look from",
+		"need"
+	],
+	"outer space#earth": [],
+	"boats#small boats": [],
+	"small boats#boats": [],
+	"boats#way": [],
+	"way#boats": [],
+	"boats#the rock": [],
+	"the rock#boats": [],
+	"boats#the beach": [],
+	"the beach#boats": [],
+	"boats#pier": [],
+	"pier#boats": [],
+	"boats#the water": [
+		"affect",
+		"exhaust into",
+		"float in",
+		"get into",
+		"leave a trail in",
+		"pollute"
+	],
+	"the water#boats": [],
+	"river#its banks": [
+		"burst"
+	],
+	"its banks#river": [],
+	"river#boat traffic": [],
+	"boat traffic#river": [],
+	"river#fishing": [
+		"severn",
+		"trent",
+		"wye"
+	],
+	"fishing#river": [
+		"affect",
+		"affect the",
+		"in campbell"
+	],
+	"boats#its way": [],
+	"its way#boats": [],
+	"boats#wind": [
+		"sail faster than the",
+		"sail into",
+		"sail into the"
+	],
+	"wind#boats": [],
+	"river#its way": [
+		"face an obstacle that comes in"
+	],
+	"its way#river": [],
+	"river#the left": [],
+	"the left#river": []
 }

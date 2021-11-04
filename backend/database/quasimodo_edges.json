@@ -20258,5 +20258,50 @@
 	"lawn#my yard": [],
 	"my yard#lawn": [],
 	"lawn#those people": [],
-	"those people#lawn": []
+	"those people#lawn": [],
+	"nucleus#quantum superposition": [],
+	"quantum superposition#nucleus": [],
+	"earth#outer space": [
+		"lose energy to"
+	],
+	"outer space#earth": [
+		"affect"
+	],
+	"boats#small boats": [],
+	"small boats#boats": [],
+	"boats#way": [
+		"be designed",
+		"be shaped"
+	],
+	"way#boats": [],
+	"boats#the rock": [],
+	"the rock#boats": [],
+	"boats#the beach": [],
+	"the beach#boats": [],
+	"boats#pier": [],
+	"pier#boats": [],
+	"boats#the water": [],
+	"the water#boats": [],
+	"river#its banks": [],
+	"its banks#river": [],
+	"river#boat traffic": [],
+	"boat traffic#river": [],
+	"river#fishing": [],
+	"fishing#river": [
+		"have effect on"
+	],
+	"boats#its way": [],
+	"its way#boats": [],
+	"boats#wind": [
+		"can sail into",
+		"lean into",
+		"sail against",
+		"sail into",
+		"sail without"
+	],
+	"wind#boats": [],
+	"river#its way": [],
+	"its way#river": [],
+	"river#the left": [],
+	"the left#river": []
 }
