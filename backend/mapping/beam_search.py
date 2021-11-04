@@ -152,45 +152,18 @@ def beam_search_wrapper(base: List[str],
                 cache=cache, 
                 N=N)
     
-    # array of addition solutions for the suggestions if some entities have missing mappings.
-    suggestions_solutions = []
-    if suggestions and num_of_suggestions > 0:
-        solutions = sorted(solutions, key=lambda x: (x.length, x.score), reverse=True)
-        if solutions and solutions[0].length < max(len(base), len(target)):
-            number_of_solutions_for_suggestions = 3
-            # the idea is to iterate over the founded solutions, and check if there are entities are not mapped.
-            for solution in solutions[:number_of_solutions_for_suggestions]:
-                if solution.length < max(len(base), len(target)) - 1:
-                    # this logic is checked only if ONE entity have missing mapping (from base or target)
-                    continue
-                
-                mapping_suggestions_wrapper(domain=base, 
-                                            first_domain="actual_base", 
-                                            second_domain="actual_target", 
-                                            solution=solution, 
-                                            data_collector=data_collector, 
-                                            model=model, 
-                                            freq=freq, 
-                                            solutions=suggestions_solutions, 
-                                            mappings_already_seen=mappings_already_seen,
-                                            relations_already_seen=relations_already_seen,
-                                            cache=cache, 
-                                            num_of_suggestions=num_of_suggestions, 
-                                            verbose=verbose)
-                
-                mapping_suggestions_wrapper(domain=target, 
-                                            first_domain="actual_target", 
-                                            second_domain="actual_base", 
-                                            solution=solution, 
-                                            data_collector=data_collector, 
-                                            model=model, 
-                                            freq=freq, 
-                                            solutions=suggestions_solutions, 
-                                            mappings_already_seen=mappings_already_seen,
-                                            relations_already_seen=relations_already_seen,
-                                            cache=cache, 
-                                            num_of_suggestions=num_of_suggestions, 
-                                            verbose=verbose)
+    suggestions_solutions = mapping_suggestions_wrapper(base, 
+                                                        target,
+                                                        suggestions,
+                                                        num_of_suggestions,
+                                                        solutions,
+                                                        data_collector,
+                                                        model,
+                                                        freq,
+                                                        mappings_already_seen,
+                                                        relations_already_seen,
+                                                        cache,
+                                                        verbose)
 
     all_solutions = sorted(solutions + suggestions_solutions, key=lambda x: (x.length, x.score), reverse=True)
     if not all_solutions:

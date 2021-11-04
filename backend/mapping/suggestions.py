@@ -65,7 +65,7 @@ class Suggestions(object):
         if should_save:
             self.save_database()
 
-        suggestions = list(set(google_suggestinos + quasimodo_suggestinos + openie_suggestinos))
+        suggestions = google_suggestinos + quasimodo_suggestinos + openie_suggestinos
         return [suggestion for suggestion in suggestions if suggestion not in IGNORE_SUGGESTION]
 
 
@@ -104,19 +104,20 @@ def get_suggestions_for_missing_entities(data_collector: DataCollector,
             props = suggestions_model.get_suggestions()
             if props:
                 # we found candidates for '<exist_entity> <prop> <candidate>' or '<candidate> <prop> <exist_entity>'
-                props_filtered = [p for p in list(set(props)) if len(p.split()) <= 2]
+                props_filtered = [p for p in props if len(p.split()) <= 2]
                 actual_props.extend(props_filtered)
                 if verbose:
                     secho(f"    {prop}: ", fg="green", bold=True, nl=False)
-                    secho(f"{props_filtered}", fg="cyan")
+                    secho(f"{list(set(props_filtered))}", fg="cyan")
         
         if verbose: 
             if not props_entity_1 + props_entity_2:
                 secho(f"    No match found!", fg="green")
             print()
         
-        clusters = {v[0]: v for _, v in model.clustering(list(set(actual_props)), 0.6).items()}
-        suggests_list[match_target_entity] = clusters
+        clusters = {v[0]: v for _, v in model.clustering((actual_props), 0.6).items()}
+        clusters_filtered = {k: list(set(v)) for k, v in clusters.items() if len(v) > 0}
+        suggests_list[match_target_entity] = clusters_filtered
         
     return suggests_list
 
@@ -149,7 +150,7 @@ def get_best_matches_for_entity(entity: str, entities: List[str], n_best: int = 
     return best[:n_best]
 
 
-def mapping_suggestions(
+def mapping_suggestions_helper(
     available_pairs: List[List[SingleMatch]],
     current_solution: Solution,
     solutions: List[Solution],
@@ -230,7 +231,7 @@ def mapping_suggestions(
             ))
 
 
-def mapping_suggestions_wrapper(
+def mapping_suggestions(
     domain: List[str],
     first_domain: str, 
     second_domain: str, 
@@ -279,7 +280,7 @@ def mapping_suggestions_wrapper(
                 continue
             
             top_suggestions = []
-            mapping_suggestions(
+            mapping_suggestions_helper(
                 available_pairs=available_pairs_new,
                 current_solution=copy.deepcopy(solution),
                 solutions=solutions,
@@ -294,50 +295,111 @@ def mapping_suggestions_wrapper(
                 num_of_suggestions=num_of_suggestions,
             )
             
-            # TODO: sort, then taking the best solution and extract the entity that represent the cluster.
-            # then go over the entities in the cluster to get more solutions.
-            best_cluster_representor = top_suggestions[0]
-            best_cluster_suggestions = value[best_cluster_representor]
-            best_cluster_suggestions.remove(best_cluster_representor)
-            if best_cluster_suggestions:
-                if first_domain == "actual_base":
-                    new_base = solution.get_actual("actual_base") + [first_domain_not_mapped_entity]
-                    new_target = solution.get_actual("actual_target") + best_cluster_suggestions
-                    index_domain = 1
+            if top_suggestions:
+                best_cluster_representor = top_suggestions[0]
+                best_cluster_suggestions = value[best_cluster_representor]
+                best_cluster_suggestions.remove(best_cluster_representor)
+                if best_cluster_suggestions:
+                    if first_domain == "actual_base":
+                        new_base = solution.get_actual("actual_base") + [first_domain_not_mapped_entity]
+                        new_target = solution.get_actual("actual_target") + best_cluster_suggestions
+                        index_domain = 1
+                        
+                    else: # first_domain == "actual_target"
+                        new_base = solution.get_actual("actual_base") + best_cluster_suggestions
+                        new_target = solution.get_actual("actual_target") + [first_domain_not_mapped_entity]
+                        index_domain = 0
+                        
+                    all_pairs = get_all_possible_pairs_map(new_base, new_target)
+                    available_pairs_new = update_paris_map(all_pairs, solution.get_actual("actual_base"), solution.get_actual("actual_target"), solution.actual_indecies)
                     
-                else: # first_domain == "actual_target"
-                    new_base = solution.get_actual("actual_base") + best_cluster_suggestions
-                    new_target = solution.get_actual("actual_target") + [first_domain_not_mapped_entity]
-                    index_domain = 0
-                    
-                all_pairs = get_all_possible_pairs_map(new_base, new_target)
-                available_pairs_new = update_paris_map(all_pairs, solution.get_actual("actual_base"), solution.get_actual("actual_target"), solution.actual_indecies)
-                
-                pair_allows: Set[Tuple[str, str]] = set([(key, v) for v in best_cluster_suggestions])
-                available_pairs_new = [pair for pair in available_pairs_new if pair[0][index_domain] in pair_allows]
-                if available_pairs_new:
-                    mapping_suggestions(
-                        available_pairs=available_pairs_new,
-                        current_solution=copy.deepcopy(solution),
-                        solutions=solutions,
-                        relations_already_seen=relations_already_seen,
-                        mappings_already_seen=mappings_already_seen,
-                        data_collector=data_collector,
-                        model=model,
-                        freq=freq,
-                        top_suggestions=top_suggestions,
-                        domain=first_domain,
-                        cache=cache,
-                        num_of_suggestions=num_of_suggestions,
-                    )
+                    pair_allows: Set[Tuple[str, str]] = set([(key, v) for v in best_cluster_suggestions])
+                    available_pairs_new = [pair for pair in available_pairs_new if pair[0][index_domain] in pair_allows]
+                    if available_pairs_new:
+                        mapping_suggestions_helper(
+                            available_pairs=available_pairs_new,
+                            current_solution=copy.deepcopy(solution),
+                            solutions=solutions,
+                            relations_already_seen=relations_already_seen,
+                            mappings_already_seen=mappings_already_seen,
+                            data_collector=data_collector,
+                            model=model,
+                            freq=freq,
+                            top_suggestions=top_suggestions,
+                            domain=first_domain,
+                            cache=cache,
+                            num_of_suggestions=num_of_suggestions,
+                        )
                     
             for solution in solutions: # TODO: fix here
                 if not solution.top_suggestions:
                     solution.top_suggestions = top_suggestions
             
+
+
+def mapping_suggestions_wrapper(
+    base: List[str], 
+    target: List[str],
+    suggestions: bool,
+    num_of_suggestions: int,
+    solutions: List[Solution],
+    data_collector: DataCollector,
+    model: SentenceEmbedding,
+    freq: Frequencies,
+    mappings_already_seen: Set[Tuple[Tuple[Pair]]],
+    relations_already_seen: Set[Tuple[str]],
+    cache: dict,
+    verbose: bool
+    ) -> List[Solution]:
+    # array of addition solutions for the suggestions if some entities have missing mappings.
+    suggestions_solutions = []
+    if suggestions and num_of_suggestions > 0:
+        solutions = sorted(solutions, key=lambda x: (x.length, x.score), reverse=True)
+        if solutions and solutions[0].length < max(len(base), len(target)):
             
-                    
-        
+            # this parameter allows us to look not only on the best result.
+            # this relevant when the suggestion is for a strong one.
+            # for example, if B=[earth, gravity], T=[nucleus, electron, electricity].
+            # The best solution may hold earth:gravity~nucleus:electricity, but this
+            # is only because 'sun' is not in the picture, yet. 
+            number_of_solutions_for_suggestions = 3
+            
+            # the idea is to iterate over the founded solutions, and check if there are entities that not mapped.
+            for solution in solutions[:number_of_solutions_for_suggestions]:
+                if solution.length < max(len(base), len(target)) - 1:
+                    # this logic is checked only if ONE entity have missing mapping (from base or target)
+                    # the complication for two or more missing entities is too complicated. Better to asked
+                    # from the user to be more specific.
+                    continue
+                
+                mapping_suggestions(domain=base, 
+                                    first_domain="actual_base", 
+                                    second_domain="actual_target", 
+                                    solution=solution, 
+                                    data_collector=data_collector, 
+                                    model=model, 
+                                    freq=freq, 
+                                    solutions=suggestions_solutions, 
+                                    mappings_already_seen=mappings_already_seen,
+                                    relations_already_seen=relations_already_seen,
+                                    cache=cache, 
+                                    num_of_suggestions=num_of_suggestions, 
+                                    verbose=verbose)
+                
+                mapping_suggestions(domain=target, 
+                                    first_domain="actual_target", 
+                                    second_domain="actual_base", 
+                                    solution=solution, 
+                                    data_collector=data_collector, 
+                                    model=model, 
+                                    freq=freq, 
+                                    solutions=suggestions_solutions, 
+                                    mappings_already_seen=mappings_already_seen,
+                                    relations_already_seen=relations_already_seen,
+                                    cache=cache, 
+                                    num_of_suggestions=num_of_suggestions, 
+                                    verbose=verbose)                
+    return suggestions_solutions
         
 
 if __name__ == '__main__':
