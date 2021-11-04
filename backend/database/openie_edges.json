@@ -49786,5 +49786,53 @@
 	"river#the public": [],
 	"the public#river": [
 		"has the right to use"
-	]
+	],
+	"lawn#weeds": [
+		"can be used to cover",
+		"has",
+		"is",
+		"is a combination of",
+		"is a practical one in",
+		"is full of",
+		"is naturally resistant to",
+		"is your best defense against",
+		"keep",
+		"means more room for",
+		"naturally deters",
+		"pick",
+		"prevent",
+		"pull out",
+		"pulled",
+		"remove",
+		"was overgrown with",
+		"will out-compete",
+		"will take care of",
+		"works on"
+	],
+	"weeds#lawn": [
+		"appear on",
+		"are growing in",
+		"are monitored by",
+		"are scattered throughout",
+		"can make",
+		"edged",
+		"found in",
+		"invade",
+		"is",
+		"is to have",
+		"may be found in",
+		"mow",
+		"pulled from",
+		"rob",
+		"seem to be taking over",
+		"trimmed",
+		"will promote"
+	],
+	"lawn#my yard": [
+		"sweep",
+		"works on"
+	],
+	"my yard#lawn": [],
+	"lawn#those people": [],
+	"those people#lawn": []
 }
