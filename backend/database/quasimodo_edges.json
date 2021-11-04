@@ -19995,5 +19995,262 @@
 	],
 	"natural monopoly#electricity": [],
 	"nucleus#particle physics": [],
-	"particle physics#nucleus": []
+	"particle physics#nucleus": [],
+	"newton#calculus": [],
+	"calculus#newton": [],
+	"earth#the air": [
+		"can heat"
+	],
+	"the air#earth": [],
+	"earth#people": [],
+	"people#earth": [
+		"be on"
+	],
+	"earth#the surface": [],
+	"the surface#earth": [],
+	"earth#sky": [
+		"have",
+		"look from"
+	],
+	"sky#earth": [
+		"be far from"
+	],
+	"earth#star": [
+		"be different from",
+		"be home",
+		"has property"
+	],
+	"star#earth": [
+		"affect",
+		"be important to",
+		"help",
+		"move around",
+		"move away from",
+		"seen from",
+		"viewed from"
+	],
+	"earth#a ball": [],
+	"a ball#earth": [],
+	"earth#ocean": [
+		"have"
+	],
+	"ocean#earth": [
+		"be important to",
+		"fall off",
+		"stay on"
+	],
+	"earth#photon belt": [],
+	"photon belt#earth": [],
+	"earth#hiding": [],
+	"hiding#earth": [],
+	"earth#a period": [],
+	"a period#earth": [],
+	"earth#sleep": [],
+	"sleep#earth": [],
+	"earth#its side": [],
+	"its side#earth": [],
+	"earth#the middle": [],
+	"the middle#earth": [],
+	"earth#the edge": [],
+	"the edge#earth": [],
+	"earth#a line": [],
+	"a line#earth": [],
+	"earth#love": [],
+	"love#earth": [],
+	"earth#silence": [],
+	"silence#earth": [],
+	"earth#a blanket": [],
+	"a blanket#earth": [],
+	"earth#the lake": [],
+	"the lake#earth": [],
+	"earth#vacuum": [
+		"can dissipate heat in"
+	],
+	"vacuum#earth": [],
+	"earth#christopher columbus": [],
+	"christopher columbus#earth": [],
+	"earth#the roots": [],
+	"the roots#earth": [],
+	"earth#the jordan": [],
+	"the jordan#earth": [],
+	"earth#those categories": [],
+	"those categories#earth": [],
+	"earth#ice age": [
+		"go through",
+		"have"
+	],
+	"ice age#earth": [
+		"affect",
+		"had occurred on",
+		"occur on"
+	],
+	"earth#50f": [],
+	"50f#earth": [],
+	"earth#store": [],
+	"store#earth": [
+		"can help"
+	],
+	"earth#one": [
+		"has property"
+	],
+	"one#earth": [],
+	"earth#its axis": [],
+	"its axis#earth": [],
+	"earth#sphere": [
+		"has property",
+		"have"
+	],
+	"sphere#earth": [],
+	"earth#date": [],
+	"date#earth": [],
+	"earth#june 2006": [],
+	"june 2006#earth": [],
+	"earth#wise jan": [],
+	"wise jan#earth": [],
+	"earth#a layer": [],
+	"a layer#earth": [],
+	"earth#anyone else": [],
+	"anyone else#earth": [],
+	"earth#the sea": [],
+	"the sea#earth": [],
+	"earth#line": [],
+	"line#earth": [],
+	"nucleus#quantum mechanics": [],
+	"quantum mechanics#nucleus": [],
+	"nucleus#the remains": [],
+	"the remains#nucleus": [],
+	"earth#heaven": [],
+	"heaven#earth": [],
+	"earth#an object": [],
+	"an object#earth": [],
+	"earth#many satellites": [],
+	"many satellites#earth": [],
+	"earth#radiation": [
+		"protect from"
+	],
+	"radiation#earth": [
+		"affect",
+		"directed at",
+		"get to",
+		"heat",
+		"occur in",
+		"reach"
+	],
+	"boats#two": [],
+	"two#boats": [],
+	"boats#the dock": [],
+	"the dock#boats": [],
+	"boats#shore": [
+		"crash into"
+	],
+	"shore#boats": [],
+	"boats#the tide": [],
+	"the tide#boats": [],
+	"boats#the direction": [],
+	"the direction#boats": [],
+	"boats#fishing": [],
+	"fishing#boats": [],
+	"boats#heads": [
+		"called",
+		"have dragon"
+	],
+	"heads#boats": [],
+	"boats#a man": [],
+	"a man#boats": [],
+	"boats#info": [],
+	"info#boats": [],
+	"boats#a wave": [],
+	"a wave#boats": [],
+	"boats#some work": [],
+	"some work#boats": [],
+	"boats#the mountains": [],
+	"the mountains#boats": [],
+	"boats#the top": [],
+	"the top#boats": [],
+	"boats#the ship": [],
+	"the ship#boats": [],
+	"boats#cables": [],
+	"cables#boats": [],
+	"boats#an anchor": [],
+	"an anchor#boats": [],
+	"boats#plane": [
+		"be better than",
+		"can"
+	],
+	"plane#boats": [],
+	"boats#solar power": [],
+	"solar power#boats": [],
+	"boats#boat": [
+		"be called"
+	],
+	"boat#boats": [
+		"be called"
+	],
+	"boats#the wind": [],
+	"the wind#boats": [],
+	"boats#its side": [],
+	"its side#boats": [],
+	"boats#turtle": [],
+	"turtle#boats": [],
+	"boats#a rock": [],
+	"a rock#boats": [],
+	"boats#adrift": [],
+	"adrift#boats": [],
+	"boats#some tlc": [],
+	"some tlc#boats": [],
+	"boats#its mooring": [],
+	"its mooring#boats": [],
+	"boats#circles": [],
+	"circles#boats": [],
+	"boats#the trailer": [],
+	"the trailer#boats": [],
+	"boats#a dime": [],
+	"a dime#boats": [],
+	"boats#the edge": [],
+	"the edge#boats": [],
+	"boats#their catch": [],
+	"their catch#boats": [],
+	"boats#fish": [],
+	"fish#boats": [],
+	"river#your left": [],
+	"your left#river": [],
+	"river#the lake": [],
+	"the lake#river": [],
+	"river#people": [
+		"affect",
+		"be important to",
+		"be useful to",
+		"help",
+		"impact",
+		"separate"
+	],
+	"people#river": [],
+	"river#his way": [],
+	"his way#river": [],
+	"river#bodies": [],
+	"bodies#river": [],
+	"river#all traffic": [],
+	"all traffic#river": [],
+	"river#fish": [
+		"have upstream"
+	],
+	"fish#river": [],
+	"river#bank": [
+		"burst",
+		"has property",
+		"overflow"
+	],
+	"bank#river": [],
+	"river#sale": [],
+	"sale#river": [],
+	"river#the rise": [],
+	"the rise#river": [],
+	"river#debris": [],
+	"debris#river": [],
+	"river#the mountains": [],
+	"the mountains#river": [],
+	"river#the board": [],
+	"the board#river": [],
+	"river#the public": [],
+	"the public#river": []
 }
