@@ -317,6 +317,8 @@ def mapping_suggestions(
     verbose: bool = False):
     
     first_domain_not_mapped_entities = [entity for entity in domain if entity not in solution.get_actual(first_domain)]
+    if not first_domain_not_mapped_entities:
+        return
     # as we sayd before, we supporting only one missing entity for now.
     assert(len(first_domain_not_mapped_entities) == 1)
     entity_not_mapped_yet = first_domain_not_mapped_entities[0]
@@ -384,6 +386,10 @@ def mapping_suggestions(
         for solution in solutions: # TODO: fix here
             if not solution.top_suggestions:
                 solution.top_suggestions = top_suggestions
+    
+    # lets make it more clear with the suggestions.
+    # for the current solution, we will extract all suggestions.
+
             
 
 
