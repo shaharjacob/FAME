@@ -98,7 +98,7 @@ def beam_search_wrapper(base: List[str],
                         target: List[str], 
                         suggestions: bool = False, 
                         num_of_suggestions: int = 1,
-                        N: int = 4, 
+                        N: int = 20, 
                         verbose: bool = False, 
                         quasimodo: Quasimodo = None, 
                         freq: Frequencies = None, 
@@ -123,10 +123,7 @@ def beam_search_wrapper(base: List[str],
     best_results = get_best_pair_mapping(model, freq, data_collector, available_pairs, cache)
 
     # this is an array of solutions we going to update in the mapping function.
-    solutions = []
-    for i in range(N):
-        solutions.append(
-            Solution(
+    solutions = [Solution(
                 mapping=[], 
                 relations=[], 
                 scores=[], 
@@ -137,9 +134,8 @@ def beam_search_wrapper(base: List[str],
                 length=0,
                 coverage=[],
                 availables=copy.deepcopy(available_pairs),
-                sorted_results=copy.deepcopy(best_results)
-            )
-        )
+                sorted_results=copy.deepcopy(best_results)) 
+                for _ in range(N)]
 
     mappings_already_seen = set()
     relations_already_seen = set()

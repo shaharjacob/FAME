@@ -351,12 +351,14 @@ def mapping_suggestions_wrapper(
     cache: dict,
     verbose: bool
     ) -> List[Solution]:
+
     # array of addition solutions for the suggestions if some entities have missing mappings.
     suggestions_solutions = []
     if suggestions and num_of_suggestions > 0:
+        # we want to work only on the best solutions.
         solutions = sorted(solutions, key=lambda x: (x.length, x.score), reverse=True)
+        # all the following will happen only if there are missing mapping for some entity.
         if solutions and solutions[0].length < max(len(base), len(target)):
-            
             # this parameter allows us to look not only on the best result.
             # this relevant when the suggestion is for a strong one.
             # for example, if B=[earth, gravity], T=[nucleus, electron, electricity].
