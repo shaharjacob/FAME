@@ -103,7 +103,7 @@ def get_suggestions_for_missing_entities(data_collector: DataCollector,
             suggestions_model = Suggestions(match_target_entity, prop, quasimodo=data_collector.quasimodo)
             props = suggestions_model.get_suggestions()
             if props:
-                # we found candidates for '<exist_entity> <prop> <candidate>' or '<candidate> <prop> <exist_entity>'
+                # relations are found. We take only 1 or 2 tokens (since it should be nouns)
                 props_filtered = [p for p in props if len(p.split()) <= 2]
                 actual_props.extend(props_filtered)
                 if verbose:
@@ -115,8 +115,16 @@ def get_suggestions_for_missing_entities(data_collector: DataCollector,
                 secho(f"    No match found!", fg="green")
             print()
         
-        clusters = {v[0]: v for _, v in model.clustering((actual_props), 0.6).items()}
-        clusters_filtered = {k: list(set(v)) for k, v in clusters.items() if len(v) > 0}
+        # define how tight are the clusters. We want them to be tight enougth for not loosing suggestions,
+        # but not too much, because the idea is to clustering to reduce computations.
+        cluster_distance_threshold = 0.6
+        clusters = {v[0]: v for _, v in model.clustering((actual_props), cluster_distance_threshold).items()}
+
+        # because we taking suggestions from feq sources (quasimodo, openIE, google) we expect to get duplicates
+        # suggestions (with the exact name to near), in other words - we expect that the clusters will hold
+        # few tokens. If not, it may point to a noise. 0 do nothing.
+        cluster_length_threshold = 0
+        clusters_filtered = {k: list(set(v)) for k, v in clusters.items() if len(v) > cluster_length_threshold}
         suggests_list[match_target_entity] = clusters_filtered
         
     return suggests_list
