@@ -180,7 +180,7 @@ def mapping_suggestions_create_new_solution(
     top_suggestions: List[str],
     domain: str,
     cache: dict,
-    num_of_suggestions: int = 1):
+    num_of_suggestions: int = 5):
     """this function is use for mapping in suggestions mode. this is only one iteration"""
     
     # we will get the top-num-of-suggestions with the best score.
@@ -335,6 +335,7 @@ def mapping_suggestions(
                                                                                         model=model,
                                                                                         verbose=verbose)
     
+    total_suggestions = []
     # we want to reduce unnecessary computations. So we instead of running over all the suggestions.
     # in 'get_suggestions_for_missing_entities' we split the suggestions into tight clusters. 
     # for example, we may have a cluster that look like: [franklin, ben franklin, benjamin franklin, benjamin]. 
@@ -363,7 +364,7 @@ def mapping_suggestions(
             # this is the number of cluster we want to "go inside" to check all the relations.
             # ideally (from the computation view), we want it to be 1. But someitmes we may loose 
             # good suggestions just because the cluster represntor.
-            number_of_top_clusters_to_check = 1
+            number_of_top_clusters_to_check = 3
 
             for cluster_representor in top_suggestions[:number_of_top_clusters_to_check]:
                 best_cluster_suggestions = value[cluster_representor]
@@ -382,13 +383,20 @@ def mapping_suggestions(
                                             model,
                                             freq,
                                             top_suggestions)
-                
-        for solution in solutions: # TODO: fix here
-            if not solution.top_suggestions:
-                solution.top_suggestions = top_suggestions
+        
+        # using just for knowing how many solutions added in that call.
+        total_suggestions.extend(top_suggestions)
     
     # lets make it more clear with the suggestions.
     # for the current solution, we will extract all suggestions.
+    cut_off = len(solutions) - len(total_suggestions)
+    solutions_of_current_call = solutions[cut_off:]
+    solutions_of_current_call_with_suggestion = [(solution_, suggestion_) for solution_, suggestion_ in zip(solutions_of_current_call, total_suggestions)]
+    solutions_of_current_call_with_suggestion = sorted(solutions_of_current_call_with_suggestion, key=lambda x: (x[0].length, x[0].score), reverse=True)
+    top_suggestions_ordered = [suggestion for _, suggestion in solutions_of_current_call_with_suggestion]
+
+    for i in range(cut_off, len(solutions)):
+        solutions[i].top_suggestions = top_suggestions_ordered
 
             
 

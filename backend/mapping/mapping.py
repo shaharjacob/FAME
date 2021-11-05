@@ -56,17 +56,22 @@ class Solution:
             return self.actual_target
     
     def print_solution(self):
-        secho("mapping", fg="blue", bold=True)
+        secho("Mapping", fg="blue", bold=True)
         for mapping in self.mapping:
             secho(f"\t{mapping}", fg="blue")
         print()
 
-        secho("relations", fg="blue", bold=True)
+        secho("Relations", fg="blue", bold=True)
         for relations, score, coverage in zip(self.relations, self.scores, self.coverage):
             secho(f"\t{relations},   ", fg="blue", nl=False)
             secho(f"Score: {score},  ", fg="blue", bold=True, nl=False)
             secho(f"Coverage: {coverage}", fg="blue", bold=True)
         print()
+
+        if self.top_suggestions:
+            secho("Suggestions", fg="blue", bold=True)
+            secho(f"\t{self.top_suggestions}", fg="blue")
+            print()
 
         secho(f"Score: {round(self.score, 3)}", fg="blue", bold=True)
         secho(f"Coverage: {sum(self.coverage)}", fg="blue", bold=True)

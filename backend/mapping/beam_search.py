@@ -162,17 +162,16 @@ def beam_search_wrapper(base: List[str],
                                                         verbose)
 
     all_solutions = sorted(solutions + suggestions_solutions, key=lambda x: (x.length, x.score), reverse=True)
-    if not all_solutions:
-        if verbose:
-            secho("No solution found")
-        return []
     if verbose:
         secho(f"\nBase: {base}", fg="blue", bold=True)
         secho(f"Target: {target}\n", fg="blue", bold=True)
-        for i, solution in enumerate(all_solutions[:10]):
-            if solution.score == 0:
-                break
-            secho(f"#{i+1}", fg="blue", bold=True)
-            solution.print_solution()
+        if all_solutions:
+            for i, solution in enumerate(all_solutions[:10]):
+                if solution.score == 0:
+                    break
+                secho(f"#{i+1}", fg="blue", bold=True)
+                solution.print_solution()
+        else:
+            secho("No solution found")       
 
     return all_solutions
