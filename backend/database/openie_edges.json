@@ -55730,5 +55730,25 @@
 	"cars#horizon": [
 		"appears on",
 		"is on"
+	],
+	"bone#malcolm x": [],
+	"malcolm x#bone": [],
+	"bone#new bone": [
+		"begin to form",
+		"build",
+		"induces",
+		"is replaced by",
+		"is replaced with",
+		"prevent",
+		"produce",
+		"replace",
+		"replaced by",
+		"replaced with"
+	],
+	"new bone#bone": [
+		"can spur",
+		"is stronger than",
+		"may reduce the danger of",
+		"prevent"
 	]
 }
