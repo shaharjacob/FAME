@@ -45,7 +45,7 @@ mapping:
         - cars --> boats
         - road --> river
         - wheels --> anchors
-    ignore: True
+    ignore: False
 
   - input: #4
       base: [landscaper, lawn]
@@ -73,7 +73,7 @@ mapping:
       mapping:
         - foresight --> x-ray
         - future --> bone
-        - hope --> muscle
+        - hope --> calcium
       suggestions:
         - muscle
         - calcium
@@ -89,7 +89,7 @@ mapping:
       mapping:
         - aspirin --> antacid
         - pain --> heartburn
-        - fracture --> cancer
+        - fracture --> stress
       suggestions:
         - cancer
         - stress
@@ -112,4 +112,4 @@ mapping:
         - chicken
         - soup
         - vegetable
-    ignore: False
+    ignore: True
