@@ -21679,5 +21679,21 @@
 	"road#highway": [],
 	"highway#road": [],
 	"road#completion": [],
-	"completion#road": []
+	"completion#road": [],
+	"electricity#hydrogen": [],
+	"hydrogen#electricity": [
+		"be converted into",
+		"be turned into",
+		"create",
+		"generate",
+		"make",
+		"produce",
+		"turn into"
+	],
+	"electricity#tiny particles": [],
+	"tiny particles#electricity": [],
+	"electricity#united kingdom": [],
+	"united kingdom#electricity": [],
+	"electricity#our lives": [],
+	"our lives#electricity": []
 }

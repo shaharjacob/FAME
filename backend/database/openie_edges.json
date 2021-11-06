@@ -56947,5 +56947,65 @@
 	],
 	"completion#road": [
 		"will be the junction of"
+	],
+	"electricity#hydrogen": [
+		"can be used to generate",
+		"can be used to produce",
+		"can produce",
+		"can then be used to make",
+		"could be used to generate",
+		"create",
+		"generate",
+		"get",
+		"is converted to",
+		"produce",
+		"separates water into",
+		"splits water into",
+		"then makes",
+		"was then used to produce"
+	],
+	"hydrogen#electricity": [
+		"can be used to generate",
+		"can be used to produce",
+		"converted into",
+		"converted to",
+		"could be used to generate",
+		"create",
+		"generate",
+		"is converted into",
+		"is converted to",
+		"is designed to provide",
+		"is like",
+		"is made from",
+		"is produced using",
+		"is produced with",
+		"is turned into",
+		"is used to generate",
+		"is used to make",
+		"is used to produce",
+		"produce",
+		"requires"
+	],
+	"electricity#tiny particles": [
+		"is actually made up of extremely"
+	],
+	"tiny particles#electricity": [],
+	"electricity#united kingdom": [],
+	"united kingdom#electricity": [],
+	"electricity#our lives": [
+		"has a central role in",
+		"has become a part of",
+		"has changed",
+		"is a wonderful part of",
+		"is very important in",
+		"makes",
+		"plays a major role in",
+		"plays an important part in",
+		"profoundly affects"
+	],
+	"our lives#electricity": [
+		"is affected by",
+		"is dependent on",
+		"run on"
 	]
 }

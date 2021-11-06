@@ -33195,5 +33195,45 @@
 		"signs tell us information about the"
 	],
 	"road#completion": [],
-	"completion#road": []
+	"completion#road": [],
+	"electricity#hydrogen": [
+		"generated from",
+		"made from",
+		"produced from"
+	],
+	"hydrogen#electricity": [
+		"and oxygen make",
+		"chloride gas not conduct",
+		"chloride not conduct",
+		"conduct",
+		"convert to",
+		"converted to",
+		"fuel cell produce",
+		"fuel cells generate",
+		"fuel cells produce",
+		"made from",
+		"not conduct",
+		"produce",
+		"store",
+		"sulfide not conduct",
+		"turned into",
+		"used to generate"
+	],
+	"electricity#tiny particles": [],
+	"tiny particles#electricity": [],
+	"electricity#united kingdom": [],
+	"united kingdom#electricity": [],
+	"electricity#our lives": [
+		"affect",
+		"benefit",
+		"change",
+		"help",
+		"impact",
+		"important in",
+		"improve",
+		"use impact"
+	],
+	"our lives#electricity": [],
+	"meal#a cake": [],
+	"a cake#meal": []
 }
