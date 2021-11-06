@@ -6771,5 +6771,95 @@
 	"meal#cater to": [],
 	"meal#can be ordered to": [],
 	"meal#decorate": [],
-	"meal#talk with": []
+	"meal#talk with": [],
+	"cars#did": [],
+	"cars#is ready to set": [],
+	"cars#get into": [
+		"thieves",
+		"rats",
+		"i",
+		"cockroaches",
+		"ants",
+		"snakes",
+		"mice",
+		"birds try to",
+		"spiders"
+	],
+	"cars#is made specifically for": [],
+	"cars#steer": [],
+	"cars#is under": [],
+	"cars#plans to build": [],
+	"cars#took": [],
+	"cars#drew": [],
+	"cars#pull": [
+		"rvs"
+	],
+	"cars#travel under": [],
+	"cars#have black": [
+		"mennonites"
+	],
+	"cars#are an investment in": [],
+	"cars#sail": [],
+	"cars#sell used": [
+		"hertz"
+	],
+	"cars#operates": [],
+	"cars#improve": [
+		"you"
+	],
+	"cars#raise": [],
+	"cars#is typical in": [],
+	"cars#is for": [],
+	"cars#moves": [],
+	"cars#hoisted": [],
+	"cars#have triangular": [],
+	"cars#was to prepare": [],
+	"cars#put up": [],
+	"cars#plans for": [],
+	"cars#set": [],
+	"cars#use fabric for": [],
+	"cars#push": [
+		"they",
+		"work"
+	],
+	"cars#got": [],
+	"cars#glides quietly under": [],
+	"cars#go for": [],
+	"cars#can only carry": [],
+	"cars#trim": [],
+	"cars#stopped": [
+		"waze know about"
+	],
+	"cars#often regard": [],
+	"cars#lowered": [
+		"go over bumps",
+		"turn",
+		"look better",
+		"camber",
+		"bounce"
+	],
+	"cars#work with": [
+		"0 financing",
+		"leases",
+		"trade ins",
+		"salary sacrifice",
+		"a dyno",
+		"leasing",
+		"apr",
+		"trade in",
+		"ebay",
+		"taxes"
+	],
+	"cars#is at": [],
+	"cars#keep": [
+		"car dealerships",
+		"you",
+		"police"
+	],
+	"road#cruises": [],
+	"road#is considered one of": [],
+	"road#appear on": [
+		"cracks"
+	],
+	"road#dropped": []
 }

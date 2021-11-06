@@ -52190,5 +52190,253 @@
 	],
 	"water samples#river": [
 		"are collected from"
+	],
+	"lawn#herbicide": [
+		"apply",
+		"were treated with"
+	],
+	"herbicide#lawn": [
+		"applied to",
+		"has been used on",
+		"may be used effectively on",
+		"should be left on"
+	],
+	"lawn#traffic": [
+		"hold up to"
+	],
+	"traffic#lawn": [],
+	"lawn#rain": [
+		"drains",
+		"is washed by",
+		"soon recovers after"
+	],
+	"rain#lawn": [
+		"flows across",
+		"hammered",
+		"reduce the amount of",
+		"turned"
+	],
+	"lawn#our waterways": [
+		"are also washed into"
+	],
+	"our waterways#lawn": [],
+	"lawn#the dishes": [],
+	"the dishes#lawn": [],
+	"lawn#order": [
+		"is in",
+		"put in"
+	],
+	"order#lawn": [],
+	"lawn#hand": [
+		"includes",
+		"should be removed by",
+		"was getting out of"
+	],
+	"hand#lawn": [
+		"powered",
+		"propelled",
+		"pushed"
+	],
+	"lawn#10 times": [
+		"uses"
+	],
+	"10 times#lawn": [],
+	"lawn#a mow": [],
+	"a mow#lawn": [],
+	"lawn#coffee breaks": [
+		"are ideal for"
+	],
+	"coffee breaks#lawn": [],
+	"lawn#the car": [],
+	"the car#lawn": [],
+	"lawn#your printer": [
+		"scaled using"
+	],
+	"your printer#lawn": [],
+	"lawn#the windows": [],
+	"the windows#lawn": [],
+	"lawn#a week": [],
+	"a week#lawn": [],
+	"lawn#the fall": [],
+	"the fall#lawn": [],
+	"lawn#these considerations": [],
+	"these considerations#lawn": [],
+	"lawn#inch": [
+		"be mixed with",
+		"gets at",
+		"has",
+		"has grown between",
+		"must only use",
+		"need 1 to",
+		"need one to",
+		"needs about",
+		"only needs",
+		"reach a height of",
+		"require about",
+		"require only",
+		"should only make use of"
+	],
+	"inch#lawn": [
+		"aerates",
+		"is typical of",
+		"makes",
+		"set"
+	],
+	"lawn#photos": [
+		"provide a fabulous backdrop for",
+		"would be ideal for"
+	],
+	"photos#lawn": [],
+	"lawn#water": [
+		"absorb",
+		"begins to show these signs of",
+		"can double",
+		"can get too",
+		"continue to",
+		"drains",
+		"got",
+		"has received",
+		"have on",
+		"is getting",
+		"keeps its head above",
+		"need an inch of",
+		"needs",
+		"ran down to",
+		"receive twice",
+		"require",
+		"retain",
+		"sloped down to",
+		"take",
+		"uses a lot of"
+	],
+	"water#lawn": [
+		"applied to",
+		"are used in",
+		"can be used on",
+		"depends on",
+		"does",
+		"falls on",
+		"fertilize",
+		"flows across",
+		"goes on",
+		"goes to",
+		"is",
+		"is on",
+		"is used for watering",
+		"is used on",
+		"is used to",
+		"is wasted on",
+		"keep",
+		"meanwhile prohibit",
+		"mow",
+		"runs off"
+	],
+	"lawn#mice": [
+		"keep"
+	],
+	"mice#lawn": [],
+	"lawn#his job": [
+		"kept"
+	],
+	"his job#lawn": [],
+	"landscaper#the work": [],
+	"the work#landscaper": [],
+	"landscaper#our garden": [
+		"do"
+	],
+	"our garden#landscaper": [],
+	"cars#a fight": [],
+	"a fight#cars": [],
+	"cars#that direction": [],
+	"that direction#cars": [],
+	"cars#collateral (finance)": [],
+	"collateral (finance)#cars": [],
+	"cars#left": [
+		"are driven on",
+		"crashed into",
+		"drive on",
+		"have steering wheels on",
+		"is located on",
+		"is making",
+		"is on",
+		"is to",
+		"made",
+		"pass on",
+		"pulls to",
+		"swerved to",
+		"took",
+		"turned to",
+		"veered to",
+		"was coming from",
+		"was in",
+		"went off",
+		"were parked on",
+		"will be on"
+	],
+	"left#cars": [
+		"drive",
+		"enter",
+		"is",
+		"is a blind entrance into",
+		"is a picture of",
+		"is available in",
+		"is paralyzed from",
+		"is the right side of",
+		"signed",
+		"stopped",
+		"used",
+		"was killed in",
+		"was taken from"
+	],
+	"cars#traffic light": [
+		"are lined up at",
+		"are stationary at",
+		"has stopped at",
+		"have stopped for",
+		"is situated before",
+		"is waiting for",
+		"pulled up at",
+		"reaches",
+		"stopped at",
+		"was stopped at"
+	],
+	"traffic light#cars": [
+		"move",
+		"say to",
+		"stopped"
+	],
+	"cars#the air": [],
+	"the air#cars": [],
+	"cars#public transport": [
+		"are reliant on",
+		"catch",
+		"choose to use",
+		"could use",
+		"decides to use",
+		"get around by",
+		"get on",
+		"give",
+		"go by",
+		"have to rely on",
+		"is",
+		"is better than",
+		"is preferred to",
+		"is recommended as",
+		"please use",
+		"prefer",
+		"take",
+		"use"
+	],
+	"public transport#cars": [
+		"drive",
+		"have",
+		"join",
+		"occasionally need",
+		"park",
+		"reduce the number of",
+		"rent",
+		"take second place to",
+		"use",
+		"would reduce"
 	]
 }
