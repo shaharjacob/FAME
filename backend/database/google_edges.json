@@ -31736,5 +31736,38 @@
 	"bone#a cure": [],
 	"a cure#bone": [],
 	"bone#the wall": [],
-	"the wall#bone": []
+	"the wall#bone": [],
+	"heartburn#fatty foods": [],
+	"fatty foods#heartburn": [
+		"cause",
+		"give me"
+	],
+	"heartburn#hiatus hernia": [],
+	"hiatus hernia#heartburn": [
+		"cause"
+	],
+	"heartburn#cancer": [
+		"a sign of",
+		"a symptom of ovarian",
+		"cause"
+	],
+	"cancer#heartburn": [
+		"cause"
+	],
+	"antacid#its absorption": [],
+	"its absorption#antacid": [],
+	"antacid#new treatments": [],
+	"new treatments#antacid": [],
+	"heartburn#aluminium": [],
+	"aluminium#heartburn": [],
+	"heartburn#digestion": [
+		"affect"
+	],
+	"digestion#heartburn": [],
+	"heartburn#account": [],
+	"account#heartburn": [],
+	"heartburn#treatment": [],
+	"treatment#heartburn": [],
+	"heartburn#place": [],
+	"place#heartburn": []
 }

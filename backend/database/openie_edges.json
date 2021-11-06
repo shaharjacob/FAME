@@ -52804,5 +52804,12 @@
 	"bone#a cure": [],
 	"a cure#bone": [],
 	"bone#the wall": [],
-	"the wall#bone": []
+	"the wall#bone": [],
+	"heartburn#digestion": [
+		"helps in",
+		"improves",
+		"is a by-product of",
+		"works well for"
+	],
+	"digestion#heartburn": []
 }

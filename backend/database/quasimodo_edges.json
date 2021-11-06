@@ -20888,5 +20888,7 @@
 	"bone#a cure": [],
 	"a cure#bone": [],
 	"bone#the wall": [],
-	"the wall#bone": []
+	"the wall#bone": [],
+	"heartburn#digestion": [],
+	"digestion#heartburn": []
 }
