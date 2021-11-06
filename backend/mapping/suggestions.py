@@ -100,13 +100,14 @@ def get_suggestions_for_missing_entities(data_collector: DataCollector,
         for relation in set(relations1 + relations2):
             suggestions_model = Suggestions(match_target_entity, relation, quasimodo=data_collector.quasimodo)
             suggestions = suggestions_model.get_suggestions()
+            # We take only 1 or 2 tokens (since it should be nouns).
+            suggestions = [p for p in suggestions if len(p.split()) <= 2]
             if suggestions:
-                # suggestions are found. We take only 1 or 2 tokens (since it should be nouns).
-                suggestions_filtered = [p for p in suggestions if len(p.split()) <= 2]
-                actual_suggestions.extend(suggestions_filtered)
+                # suggestions are found.
+                actual_suggestions.extend(suggestions)
                 if verbose:
                     secho(f"    {relation}: ", fg="green", bold=True, nl=False)
-                    secho(f"{list(set(suggestions_filtered))}", fg="cyan")
+                    secho(f"{list(set(suggestions))}", fg="cyan")
         
         if verbose: 
             if not relations1 + relations2:
@@ -122,7 +123,7 @@ def get_suggestions_for_missing_entities(data_collector: DataCollector,
         # suggestions (with the exact name or near), in other words - we expect that the clusters length will be 
         # bigger then 1. If not, it may point to a noise. 0 do nothing.
         cluster_length_threshold = 0
-        clusters_filtered = {k: list(set(v)) for k, v in clusters.items() if len(v) > cluster_length_threshold}
+        clusters_filtered = {k: sorted(list(set(v))) for k, v in clusters.items() if len(v) > cluster_length_threshold} # sorting for consistency
         suggests_list[match_target_entity] = clusters_filtered
         
     return suggests_list
