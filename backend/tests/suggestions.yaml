@@ -11,6 +11,9 @@ mapping:
         - sun --> nucleus
         - gravity --> electricity
         - newton --> benjamin franklin
+      suggestions:
+        - benjamin franklin
+        - franklin
     ignore: False
 
   - input: #2
@@ -25,6 +28,10 @@ mapping:
         - gravity --> electricity
         - newton --> faraday
         - sun --> nucleus
+      suggestions:
+        - sun
+        - the sun
+        - moon
     ignore: False
   
   - input: #3
@@ -38,7 +45,7 @@ mapping:
         - cars --> boats
         - road --> river
         - wheels --> anchors
-    ignore: False
+    ignore: True
 
   - input: #4
       base: [landscaper, lawn]
@@ -51,8 +58,9 @@ mapping:
         - landscaper --> stylist
         - lawn --> hair
         - fertilizer --> gel
-      suugestions:
-        - fertilizer #1
+      suggestions:
+        - fertilizer
+        - water
     ignore: False
 
   - input: #5
@@ -65,9 +73,10 @@ mapping:
       mapping:
         - foresight --> x-ray
         - future --> bone
-        - hope --> calcium
+        - hope --> muscle
       suggestions:
-        - calcium #1
+        - muscle
+        - calcium
     ignore: False
 
   - input: #6
@@ -80,10 +89,11 @@ mapping:
       mapping:
         - aspirin --> antacid
         - pain --> heartburn
-        - fracture --> stress
+        - fracture --> cancer
       suggestions:
-        - stress #1
-        - smoking #2
+        - cancer
+        - stress
+        - smoking
     ignore: False
 
   - input: #7
@@ -98,8 +108,8 @@ mapping:
         - cake --> meal
         - chocolate --> ingredient
       suggestions:
-        - ingredient #1
-        - chicken #3
-        - vegetable #4
-        - soup #5
-    ignore: True
+        - ingredient
+        - chicken
+        - soup
+        - vegetable
+    ignore: False

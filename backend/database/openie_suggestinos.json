@@ -9489,5 +9489,10 @@
 		"a little valley",
 		"the coast",
 		"the village"
-	]
+	],
+	"meal#chips sink to bottom of": [],
+	"meal#chips fall to bottom of": [],
+	"chef#put simple syrup on": [],
+	"chef#add simple syrup to": [],
+	"chef#put sugar syrup on": []
 }
