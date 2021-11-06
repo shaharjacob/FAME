@@ -20643,5 +20643,44 @@
 		"measure",
 		"use knots for"
 	],
-	"speed#boats": []
+	"speed#boats": [],
+	"boats#vessels": [],
+	"vessels#boats": [],
+	"boats#forking": [],
+	"forking#boats": [],
+	"boats#lift (force)": [],
+	"lift (force)#boats": [],
+	"boats#the surface": [],
+	"the surface#boats": [],
+	"boats#the bank": [],
+	"the bank#boats": [],
+	"boats#the eye": [],
+	"the eye#boats": [],
+	"boats#rms carpathia": [],
+	"rms carpathia#boats": [],
+	"boats#a pair": [],
+	"a pair#boats": [],
+	"boats#law": [],
+	"law#boats": [],
+	"boats#engines": [
+		"go fast without",
+		"have"
+	],
+	"engines#boats": [],
+	"boats#top": [],
+	"top#boats": [],
+	"boats#balance": [
+		"can",
+		"keep"
+	],
+	"balance#boats": [],
+	"boats#the board": [],
+	"the board#boats": [],
+	"boats#trim tab": [
+		"have",
+		"need"
+	],
+	"trim tab#boats": [],
+	"boats#land": [],
+	"land#boats": []
 }
