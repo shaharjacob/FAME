@@ -10,8 +10,6 @@ from click import secho
 backend_dir = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(backend_dir))
 from mapping.dfs import dfs_wrapper
-from mapping.quasimodo import Quasimodo
-from frequency.frequency import Frequencies
 from mapping.beam_search import beam_search_wrapper
 from mapping.mapping import Solution, FREQUENCY_THRESHOLD, mapping_wrapper
 
@@ -80,10 +78,9 @@ def update_result(correct_mapping: List[str], solutions: List[Solution], result:
 
 
 def evaluate(model_name: str, 
-             threshold: float, 
+             freq_th: float, 
              path: str, 
-             specify: int, 
-             freq_path: str, 
+             specify: int,
              algorithm: str,
              num_of_suggestions: int):
     
@@ -95,9 +92,7 @@ def evaluate(model_name: str,
         spec = yaml.load(y, Loader=yaml.SafeLoader)
     mapping_spec = spec["mapping"]
     results = Results()
-    quasimodo = Quasimodo()
-    freq_json_folder = root / 'backend' / 'frequency'
-    freq = Frequencies(freq_json_folder / freq_path, threshold=threshold)
+
     for i, tv in enumerate(mapping_spec):
         if specify and i + 1 not in specify:
             continue
@@ -108,11 +103,9 @@ def evaluate(model_name: str,
                                     target=tv["input"]["target"],
                                     num_of_suggestions=num_of_suggestions,
                                     N=tv["input"]["depth"][algorithm], 
-                                    verbose=True, 
-                                    quasimodo=quasimodo, 
-                                    freq=freq, 
-                                    model_name=model_name,
-                                    threshold=threshold)
+                                    verbose=True,
+                                    freq_th=freq_th, 
+                                    model_name=model_name)
         result = Result()
         current_maps = len(tv["output"]["mapping"])
         result.num_of_maps = current_maps
@@ -159,16 +152,15 @@ def evaluate(model_name: str,
 
 @click.command()
 @click.option('-m', '--model', default="msmarco-distilbert-base-v4", type=str, help="The model for sBERT: https://huggingface.co/sentence-transformers")
-@click.option('-t', '--threshold', default=FREQUENCY_THRESHOLD, type=float, help="Threshold for % to take from json frequencies")
+@click.option('-t', '--freq-th', default=FREQUENCY_THRESHOLD, type=float, help="Threshold for % to take from json frequencies")
 @click.option('-y', '--yaml', default='validation.yaml', type=str, help="Path for the yaml for evaluation")
 @click.option('-c', '--comment', default="", type=str, help="Additional comment for the job")
 @click.option('-s', '--specify', default=[], type=int, multiple=True, help="Specify which entry of the yaml file to evaluate")
-@click.option('-j', '--freq', default='freq.json', type=str, help="Which json to use for frequency file")
 @click.option('-a', '--algo', default='beam', type=str, help="Which algorithm to use")
 @click.option('-g', '--num-of-suggestions', type=int, default=10, help="Number of suggestions for missing entities")
-def run(model, threshold, yaml, comment, specify, freq, algo, num_of_suggestions):
+def run(model, freq_th, yaml, comment, specify, algo, num_of_suggestions):
     torch.cuda.empty_cache()
-    evaluate(model, threshold, yaml, list(specify), freq, algo, num_of_suggestions)
+    evaluate(model, freq_th, yaml, list(specify), algo, num_of_suggestions)
 
 if __name__ == '__main__':
     # os.environ['CI'] = 'true'

@@ -23,23 +23,32 @@ app = Flask(__name__)
 @app.route("/api/mapping", methods=["GET", "POST"])
 def mapping_entities():
     start_time = time.time()
+
+    # required args
+    base = [b.strip() for b in request.args.get('base').split(',')]
+    target = [t.strip() for t in request.args.get('target').split(',')]
+
+    # unmutable. TODO: pack them together
+    # actually this is happen in the mapping wrapper, but here need it after for the graphs.
     data_collector = DataCollector()
     model_name = 'msmarco-distilbert-base-v4'
     model = SentenceEmbedding(model=model_name, data_collector=data_collector)
-    threshold = request.args.get('threshold')
-    threshold = threshold if threshold else FREQUENCY_THRESHOLD
+    freq_th = request.args.get('threshold')
+    freq_th = freq_th if freq_th else FREQUENCY_THRESHOLD
     freq_json_folder = root / 'backend' / 'frequency'
-    freq = Frequencies(freq_json_folder / 'freq.json', threshold=float(threshold))
-    base = [b.strip() for b in request.args.get('base').split(',')]
-    target = [t.strip() for t in request.args.get('target').split(',')]
+    freq = Frequencies(freq_json_folder / 'freq.json', threshold=float(freq_th))
+
+    # additional args
     depth = utils.get_int(request.args.get('depth'), 4)
     top_n = utils.get_int(request.args.get('top'), 3)
     num_of_suggestions = utils.get_int(request.args.get('suggestions'), 3)
-    algo = request.args.get('algo')
+    algo = request.args.get('algo') # TODO: make it choice in the GUI (not string input)
     if algo not in ["beam", "dfs"]:
         algo = "beam"
     if algo == 'beam':
         depth = 20
+    
+    # for webapp
     data = []
     scores = []
     
@@ -49,10 +58,9 @@ def mapping_entities():
                                 base=base, 
                                 target=target,
                                 N=depth,
-                                freq=freq, 
                                 num_of_suggestions=num_of_suggestions, 
                                 model_name=model_name,
-                                threshold=float(threshold))
+                                freq_th=float(freq_th))
     for solution in solutions:
         # prepare the nodes for the react app
         nodes = python2react.get_nodes_for_app(props=solution.mapping, start_idx=0)

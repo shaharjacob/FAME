@@ -100,11 +100,9 @@ def beam_search_wrapper(
     target: List[str],
     num_of_suggestions: int,
     N: int, 
-    verbose: bool, 
-    quasimodo: Quasimodo, 
-    freq: Frequencies, 
+    verbose: bool,
     model_name: str,
-    threshold: Union[float, int]
+    freq_th: Union[float, int]
     ) -> List[Solution]:
 
     # we want all the possible pairs.
@@ -112,13 +110,11 @@ def beam_search_wrapper(
     available_pairs = get_all_possible_pairs_map(base, target)
 
     # better to init all the objects here, since they are not changed in the run
-    if not quasimodo:
-        quasimodo = Quasimodo()
+    quasimodo = Quasimodo()
     data_collector = DataCollector(quasimodo=quasimodo)
     model = SentenceEmbedding(model=model_name, data_collector=data_collector)
-    if not freq:
-        json_folder = root / 'backend' / 'frequency'
-        freq = Frequencies(json_folder / 'freq.json', threshold=threshold)
+    json_folder = root / 'backend' / 'frequency'
+    freq = Frequencies(json_folder / 'freq.json', threshold=freq_th)
 
     cache = {}
     best_results = get_best_pair_mapping(model, freq, data_collector, available_pairs, cache)

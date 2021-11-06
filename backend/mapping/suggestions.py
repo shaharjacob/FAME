@@ -52,12 +52,13 @@ class Suggestions(object):
         else:
             google_suggestinos = []
 
-        if f"{self.entity}#{self.prop}" in self.openie_suggestinos and not self.override_database:
-            openie_suggestinos = self.openie_suggestinos[f"{self.entity}#{self.prop}"]
-        else:
-            openie_suggestinos = openIE.get_entity_suggestions_wrapper(self.entity, self.prop, n_largest=5)
-            self.openie_suggestinos[f"{self.entity}#{self.prop}"] = openie_suggestinos  
-            should_save = True
+        # if f"{self.entity}#{self.prop}" in self.openie_suggestinos and not self.override_database:
+        #     openie_suggestinos = self.openie_suggestinos[f"{self.entity}#{self.prop}"]
+        # else:
+        #     openie_suggestinos = openIE.get_entity_suggestions_wrapper(self.entity, self.prop, n_largest=5)
+        #     self.openie_suggestinos[f"{self.entity}#{self.prop}"] = openie_suggestinos  
+        #     should_save = True
+        openie_suggestinos = []
 
         if should_save:
             self.save_database()

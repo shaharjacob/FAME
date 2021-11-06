@@ -85,9 +85,6 @@ class TestFunctions(unittest.TestCase):
 class TestMappingNoSuggestoins(unittest.TestCase):
 
     def test_beam(self):
-        quasimodo = Quasimodo()
-        json_folder = backend_dir / 'frequency'
-        freq = Frequencies(json_folder / 'freq.json', threshold=FREQUENCY_THRESHOLD)
         with open(TEST_FOLDER / 'tests.yaml', 'r') as y:
             spec = yaml.load(y, Loader=yaml.SafeLoader)
         mapping_spec = spec["mapping"]
@@ -99,11 +96,9 @@ class TestMappingNoSuggestoins(unittest.TestCase):
                                             target=tv["input"]["target"],
                                             num_of_suggestions=0,
                                             N=tv["input"]["depth"]['beam'], 
-                                            verbose=True, 
-                                            quasimodo=quasimodo, 
-                                            freq=freq, 
+                                            verbose=True,
                                             model_name='msmarco-distilbert-base-v4',
-                                            threshold=FREQUENCY_THRESHOLD)
+                                            freq_th=FREQUENCY_THRESHOLD)
             solution = solutions[0]
 
             # check the mapping
@@ -161,9 +156,6 @@ class TestMappingNoSuggestoins(unittest.TestCase):
 class TestMappingSuggestoins(unittest.TestCase):
 
     def test_beam(self):
-        quasimodo = Quasimodo()
-        json_folder = backend_dir / 'frequency'
-        freq = Frequencies(json_folder / 'freq.json', threshold=FREQUENCY_THRESHOLD)
         with open(TEST_FOLDER / 'suggestions.yaml', 'r') as y:
             spec = yaml.load(y, Loader=yaml.SafeLoader)
         mapping_spec = spec["mapping"]
@@ -175,11 +167,9 @@ class TestMappingSuggestoins(unittest.TestCase):
                                             target=tv["input"]["target"],
                                             num_of_suggestions=1,
                                             N=tv["input"]["depth"]['beam'], 
-                                            verbose=True, 
-                                            quasimodo=quasimodo, 
-                                            freq=freq, 
+                                            verbose=True,
                                             model_name='msmarco-distilbert-base-v4',
-                                            threshold=FREQUENCY_THRESHOLD)
+                                            freq_th=FREQUENCY_THRESHOLD)
             solution = solutions[0]
 
             # check the mapping
