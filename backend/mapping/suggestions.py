@@ -88,41 +88,41 @@ def get_suggestions_for_missing_entities(data_collector: DataCollector,
     suggests_list = {}
     # we need all the relations between the entity (the one that not mapped) to the entities that already mapped (again - in the same domain)
     for idx, base_entity in enumerate(base_already_mapping):
+        # we going to use the map that we already know (base_entity -> match_target_entity)
         match_target_entity = target_already_mapping[idx]
         if verbose: 
             secho(f"(^{base_not_mapped_entity}, {base_entity})", fg="blue", bold=True)
-
-        props_entity_1 = data_collector.get_entities_relations(base_entity, base_not_mapped_entity)
-        props_entity_2 = data_collector.get_entities_relations(base_not_mapped_entity, base_entity)
-
-        # we we use the map that we already know (base_entity -> match_target_entity)
-        if verbose: 
             secho(f"  {match_target_entity}", fg="red", bold=True)
-        actual_props = []
-        for prop in set(props_entity_1 + props_entity_2):
-            suggestions_model = Suggestions(match_target_entity, prop, quasimodo=data_collector.quasimodo)
-            props = suggestions_model.get_suggestions()
-            if props:
-                # relations are found. We take only 1 or 2 tokens (since it should be nouns)
-                props_filtered = [p for p in props if len(p.split()) <= 2]
-                actual_props.extend(props_filtered)
+
+        relations1 = data_collector.get_entities_relations(base_entity, base_not_mapped_entity)
+        relations2 = data_collector.get_entities_relations(base_not_mapped_entity, base_entity)        
+
+        actual_suggestions = []
+        # we going to run over the relations we found, and extract suggestions with them.
+        for relation in set(relations1 + relations2):
+            suggestions_model = Suggestions(match_target_entity, relation, quasimodo=data_collector.quasimodo)
+            suggestions = suggestions_model.get_suggestions()
+            if suggestions:
+                # suggestions are found. We take only 1 or 2 tokens (since it should be nouns).
+                suggestions_filtered = [p for p in suggestions if len(p.split()) <= 2]
+                actual_suggestions.extend(suggestions_filtered)
                 if verbose:
-                    secho(f"    {prop}: ", fg="green", bold=True, nl=False)
-                    secho(f"{list(set(props_filtered))}", fg="cyan")
+                    secho(f"    {relation}: ", fg="green", bold=True, nl=False)
+                    secho(f"{list(set(suggestions_filtered))}", fg="cyan")
         
         if verbose: 
-            if not props_entity_1 + props_entity_2:
+            if not relations1 + relations2:
                 secho(f"    No match found!", fg="green")
             print()
         
         # define how tight are the clusters. We want them to be tight enougth for not loosing suggestions,
         # but not too much, because the idea is to clustering to reduce computations.
         cluster_distance_threshold = 0.6
-        clusters = {v[0]: v for _, v in model.clustering((actual_props), cluster_distance_threshold).items()}
+        clusters = {v[0]: v for _, v in model.clustering((actual_suggestions), cluster_distance_threshold).items()}
 
-        # because we taking suggestions from feq sources (quasimodo, openIE, google) we expect to get duplicates
-        # suggestions (with the exact name to near), in other words - we expect that the clusters will hold
-        # few tokens. If not, it may point to a noise. 0 do nothing.
+        # because we taking suggestions from few sources (quasimodo, openIE, google) we expect to get duplicates
+        # suggestions (with the exact name or near), in other words - we expect that the clusters length will be 
+        # bigger then 1. If not, it may point to a noise. 0 do nothing.
         cluster_length_threshold = 0
         clusters_filtered = {k: list(set(v)) for k, v in clusters.items() if len(v) > cluster_length_threshold}
         suggests_list[match_target_entity] = clusters_filtered
@@ -188,7 +188,7 @@ def mapping_suggestions_create_new_solution(
     top_suggestions: List[str],
     domain: str,
     cache: dict,
-    num_of_suggestions: int = 5):
+    num_of_suggestions: int):
     """this function is use for mapping in suggestions mode. this is only one iteration"""
     
     # we will get the top-num-of-suggestions with the best score.
@@ -321,8 +321,8 @@ def mapping_suggestions(
     relations_already_seen: Set[Tuple[Tuple[Pair]]],
     mappings_already_seen: Set[Tuple[str]],
     cache: dict,
-    num_of_suggestions: int = 1,
-    verbose: bool = False):
+    num_of_suggestions: int,
+    verbose: bool):
     
     first_domain_not_mapped_entities = [entity for entity in domain if entity not in solution.get_actual(first_domain)]
     if not first_domain_not_mapped_entities:
@@ -368,7 +368,6 @@ def mapping_suggestions(
                                     top_suggestions)
         
         if top_suggestions: # TODO: check how is possible that this can be empty
-
             # this is the number of cluster we want to "go inside" to check all the relations.
             # ideally (from the computation view), we want it to be 1. But someitmes we may loose 
             # good suggestions just because the cluster represntor.
@@ -412,7 +411,6 @@ def mapping_suggestions(
 def mapping_suggestions_wrapper(
     base: List[str], 
     target: List[str],
-    suggestions: bool,
     num_of_suggestions: int,
     solutions: List[Solution],
     data_collector: DataCollector,
@@ -426,7 +424,7 @@ def mapping_suggestions_wrapper(
 
     # array of addition solutions for the suggestions if some entities have missing mappings.
     suggestions_solutions = []
-    if suggestions and num_of_suggestions > 0:
+    if num_of_suggestions > 0:
         # we want to work only on the best solutions.
         solutions = sorted(solutions, key=lambda x: (x.length, x.score), reverse=True)
         # all the following will happen only if there are missing mapping for some entity.
