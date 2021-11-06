@@ -31619,5 +31619,122 @@
 	"cars#public transport": [],
 	"public transport#cars": [
 		"better than"
-	]
+	],
+	"bone#bone density": [
+		"scan done for"
+	],
+	"bone density#bone": [
+		"affect"
+	],
+	"bone#the jet": [],
+	"the jet#bone": [],
+	"bone#a boil": [],
+	"a boil#bone": [],
+	"bone#position": [],
+	"position#bone": [],
+	"bone#his youth": [],
+	"his youth#bone": [],
+	"bone#durham": [],
+	"durham#bone": [],
+	"bone#life": [
+		"cancer affect daily",
+		"marrow affect daily",
+		"marrow affect your daily",
+		"marrow save",
+		"marrow transplant affect daily",
+		"tissue change during the course of your"
+	],
+	"life#bone": [],
+	"bone#treats": [],
+	"treats#bone": [],
+	"bone#the reason": [],
+	"the reason#bone": [],
+	"bone#ligament": [],
+	"ligament#bone": [
+		"attach to",
+		"attached to the",
+		"connect to",
+		"heal slower than",
+		"reattached to the",
+		"stretch when pulled by"
+	],
+	"bone#the stones": [],
+	"the stones#bone": [],
+	"bone#muscle": [
+		"affect",
+		"attach to"
+	],
+	"muscle#bone": [
+		"affect",
+		"attach to",
+		"attached to",
+		"connected to",
+		"connected to the",
+		"contraction move",
+		"help to move",
+		"move",
+		"move a",
+		"pull a",
+		"tendon fibers attach to",
+		"turn into",
+		"turn to",
+		"work in pairs to move a"
+	],
+	"bone#place": [
+		"graft stay in",
+		"grafts stay in",
+		"growth take",
+		"marrow transplant take",
+		"pop out of",
+		"remodeling take",
+		"repair take",
+		"stay in"
+	],
+	"place#bone": [],
+	"bone#knee": [
+		"spurs form in the"
+	],
+	"knee#bone": [
+		"cap attached to the leg",
+		"replacement attached to the"
+	],
+	"bone#the larder": [],
+	"the larder#bone": [],
+	"bone#oil": [
+		"become",
+		"turn into"
+	],
+	"oil#bone": [],
+	"bone#tag": [],
+	"tag#bone": [],
+	"bone#a group": [],
+	"a group#bone": [],
+	"bone#decorative use": [],
+	"decorative use#bone": [],
+	"bone#age 18": [],
+	"age 18#bone": [],
+	"bone#his skin": [],
+	"his skin#bone": [],
+	"bone#the bird": [],
+	"the bird#bone": [],
+	"bone#survival": [],
+	"survival#bone": [],
+	"bone#hock": [],
+	"hock#bone": [],
+	"bone#signs": [],
+	"signs#bone": [],
+	"bone#osteopenia": [],
+	"osteopenia#bone": [
+		"affect"
+	],
+	"bone#air": [
+		"go off the"
+	],
+	"air#bone": [],
+	"bone#lung injury": [],
+	"lung injury#bone": [],
+	"bone#a cure": [],
+	"a cure#bone": [],
+	"bone#the wall": [],
+	"the wall#bone": []
 }

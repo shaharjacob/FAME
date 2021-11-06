@@ -1,17 +1,14 @@
-import os
 import copy
 from pathlib import Path
 from typing import List, Tuple, Union, Set
-
-from click import secho
 
 from .quasimodo import Quasimodo
 from .data_collector import DataCollector
 from frequency.frequency import Frequencies
 from .suggestions import mapping_suggestions_wrapper
 from utils.sentence_embadding import SentenceEmbedding
-from .mapping import Solution, Pair, FREQUENCY_THRESHOLD
-from .mapping import get_score, update_already_mapping, update_paris_map, get_best_pair_mapping_for_current_iteration, get_all_possible_pairs_map, get_best_pair_mapping
+from .mapping import Solution, Pair
+from .mapping import get_score, update_already_mapping, update_paris_map, get_best_pair_mapping_for_current_iteration, get_all_possible_pairs_map, get_best_pair_mapping, print_results
 
 root = Path(__file__).resolve().parent.parent.parent
 
@@ -24,17 +21,19 @@ def beam_search(
     mappings_already_seen: Set[Tuple[str]],
     freq: Frequencies,
     cache: dict,
-    N: int = 4):
+    N: int):
 
     curr_solutions = []
     for solution in solutions:
-        # we will get the top-depth pairs with the best score.
+        # we will get the top-N pairs with the best score.
         best_results_for_current_iteration, modified_results = get_best_pair_mapping_for_current_iteration(solution.availables, solution.sorted_results, N)
         solution.sorted_results = modified_results
         for result in best_results_for_current_iteration:
             # if the best score is > 0, we will update the base and target lists of the already mapping entities.
             # otherwise, if the best score is 0, we have no more mappings to do.
             if result["best_score"] > 0:
+                # the current solution is our base for the new one. We need it but we don't want to affect him
+                # by modified the new one, so we need that deepcopy.
                 solution_copy = copy.deepcopy(solution)
                 
                 solution_copy.relations.append(result["best_mapping"])
@@ -46,6 +45,7 @@ def beam_search(
                 solution_copy.scores.append(round(result["best_score"], 3))
                 solution_copy.coverage.append(result["coverage"])
 
+                # the new map that we found is b1:b2~t1:t2
                 b1, b2 = result["best_mapping"][0][0], result["best_mapping"][0][1]
                 t1, t2 = result["best_mapping"][1][0], result["best_mapping"][1][1]
                 score = 0
@@ -78,6 +78,7 @@ def beam_search(
     if not curr_solutions:
         return
     
+    # this is the core of the beam search algorithm. We always keep with N solutions.
     solutions_ = sorted(solutions + curr_solutions, key=lambda x: (x.length, x.score), reverse=True)[:N]
     for i, solution_ in enumerate(solutions_):
         solutions[i] = solution_
@@ -94,17 +95,17 @@ def beam_search(
     )
 
 
-def beam_search_wrapper(base: List[str], 
-                        target: List[str], 
-                        suggestions: bool = False, 
-                        num_of_suggestions: int = 1,
-                        N: int = 20, 
-                        verbose: bool = False, 
-                        quasimodo: Quasimodo = None, 
-                        freq: Frequencies = None, 
-                        model_name: str = 'msmarco-distilbert-base-v4',
-                        threshold: Union[float, int] = FREQUENCY_THRESHOLD
-                        ) -> List[Solution]:
+def beam_search_wrapper(
+    base: List[str], 
+    target: List[str],
+    num_of_suggestions: int,
+    N: int, 
+    verbose: bool, 
+    quasimodo: Quasimodo, 
+    freq: Frequencies, 
+    model_name: str,
+    threshold: Union[float, int]
+    ) -> List[Solution]:
 
     # we want all the possible pairs.
     # general there are (n choose 2) * (n choose 2) * 2 pairs.
@@ -150,7 +151,6 @@ def beam_search_wrapper(base: List[str],
     
     suggestions_solutions = mapping_suggestions_wrapper(base, 
                                                         target,
-                                                        suggestions,
                                                         num_of_suggestions,
                                                         solutions,
                                                         data_collector,
@@ -162,16 +162,9 @@ def beam_search_wrapper(base: List[str],
                                                         verbose)
 
     all_solutions = sorted(solutions + suggestions_solutions, key=lambda x: (x.length, x.score), reverse=True)
+    solutions_to_return_and_print = 10
+    all_solutions = all_solutions[:solutions_to_return_and_print]
     if verbose:
-        secho(f"\nBase: {base}", fg="blue", bold=True)
-        secho(f"Target: {target}\n", fg="blue", bold=True)
-        if all_solutions:
-            for i, solution in enumerate(all_solutions[:10]):
-                if solution.score == 0:
-                    break
-                secho(f"#{i+1}", fg="blue", bold=True)
-                solution.print_solution()
-        else:
-            secho("No solution found")       
+        print_results(base, target, all_solutions)       
 
     return all_solutions

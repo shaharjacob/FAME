@@ -78,6 +78,19 @@ class Solution:
         print()
 
 
+def print_results(base: List[str], target: List[str], solutions: List[Solution]):
+    secho(f"\nBase: {base}", fg="blue", bold=True)
+    secho(f"Target: {target}\n", fg="blue", bold=True)
+    if solutions:
+        for i, solution in enumerate(solutions):
+            if solution.score == 0:
+                break
+            secho(f"#{i+1}", fg="blue", bold=True)
+            solution.print_solution()
+    else:
+        secho("No solution found")
+
+
 def mapping_wrapper(func: Callable, **kwargs) -> List[Solution]:
     return func(**kwargs)
 
@@ -90,6 +103,8 @@ def get_edge_score(prop1: str, prop2: str, model: SentenceEmbedding, freq: Frequ
 
 
 def get_score(base: List[str], target: List[str], base_entity: str, target_entity: str, cache: dict) -> float:
+    # we take the score of the new b->t with all the others. 
+    # i.e. we will take the score of b_i:b~t_i:t.
     return round(sum([cache[((b, base_entity),(t, target_entity))] for b, t in zip(base, target)]), 3)
 
 
@@ -227,14 +242,19 @@ def get_pair_mapping(model: SentenceEmbedding, data_collector: DataCollector, fr
     }
 
 
-def get_best_pair_mapping_for_current_iteration(available_maps: List[List[SingleMatch]], 
-                                                initial_results: List[Dict[str, Union[int, SingleMatch]]], 
-                                                depth: int):
+def get_best_pair_mapping_for_current_iteration(
+    available_maps: List[List[SingleMatch]], 
+    initial_results: List[Dict[str, Union[int, SingleMatch]]], 
+    depth: int
+    ) -> Tuple[List[Dict[str, Union[int, SingleMatch]]], List[Dict[str, Union[int, SingleMatch]]]]:
+
+    # better to iterate one time over the available_maps and store it in a set
     available_maps_flatten = set()
     for available_map in available_maps:
         available_maps_flatten.add(tuple(available_map[0]))
         available_maps_flatten.add(tuple(available_map[1]))
     
+    # modified_results important for the next iteration
     modified_results = [result for result in initial_results if tuple(result["best_mapping"]) in available_maps_flatten]
     results_for_current_iteration = [result for result in modified_results[:depth]]
     return results_for_current_iteration, modified_results

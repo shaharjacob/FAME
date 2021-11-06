@@ -96,8 +96,8 @@ class TestMappingNoSuggestoins(unittest.TestCase):
                 continue
             
             solutions = beam_search_wrapper(base=tv["input"]["base"], 
-                                            target=tv["input"]["target"], 
-                                            suggestions=False, 
+                                            target=tv["input"]["target"],
+                                            num_of_suggestions=0,
                                             N=tv["input"]["depth"]['beam'], 
                                             verbose=True, 
                                             quasimodo=quasimodo, 
@@ -133,8 +133,8 @@ class TestMappingNoSuggestoins(unittest.TestCase):
                 continue            
 
             solutions = dfs_wrapper(base=tv["input"]["base"], 
-                                    target=tv["input"]["target"], 
-                                    suggestions=False, 
+                                    target=tv["input"]["target"],
+                                    num_of_suggestions=0, 
                                     N=tv["input"]["depth"]['dfs'], 
                                     verbose=True,
                                     quasimodo=quasimodo,
@@ -172,8 +172,7 @@ class TestMappingSuggestoins(unittest.TestCase):
                 continue
             
             solutions = beam_search_wrapper(base=tv["input"]["base"], 
-                                            target=tv["input"]["target"], 
-                                            suggestions=True, 
+                                            target=tv["input"]["target"],
                                             num_of_suggestions=1,
                                             N=tv["input"]["depth"]['beam'], 
                                             verbose=True, 
@@ -201,8 +200,7 @@ class TestMappingSuggestoins(unittest.TestCase):
                 continue            
 
             solutions = dfs_wrapper(base=tv["input"]["base"], 
-                                    target=tv["input"]["target"], 
-                                    suggestions=True, 
+                                    target=tv["input"]["target"],
                                     num_of_suggestions=1,
                                     N=tv["input"]["depth"]['dfs'],
                                     verbose=True,

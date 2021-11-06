@@ -1,17 +1,14 @@
-import os
 import copy
 from pathlib import Path
 from typing import List, Tuple, Union, Set
-
-from click import secho
 
 from .quasimodo import Quasimodo
 from .data_collector import DataCollector
 from frequency.frequency import Frequencies
 from .suggestions import mapping_suggestions_wrapper
 from utils.sentence_embadding import SentenceEmbedding
-from .mapping import Solution, Pair, FREQUENCY_THRESHOLD
-from .mapping import get_score, update_already_mapping, update_paris_map, get_best_pair_mapping_for_current_iteration, get_all_possible_pairs_map, get_best_pair_mapping
+from .mapping import Solution, Pair
+from .mapping import get_score, update_already_mapping, update_paris_map, get_best_pair_mapping_for_current_iteration, get_all_possible_pairs_map, get_best_pair_mapping, print_results
 
 root = Path(__file__).resolve().parent.parent.parent
 
@@ -25,10 +22,8 @@ def dfs(
     relations_already_seen: Set[Tuple[Tuple[Pair]]],
     mappings_already_seen: Set[Tuple[str]],
     cache: dict,
-    calls: List[int], # debug
-    depth: int = 2):
+    depth: int):
 
-    calls[0] += 1 # just to print the total recursive calls
     if curr_solution.actual_base:
         # first we will check if this node already seen in different variation
         relations_as_tuple = tuple([tuple(relation) for relation in sorted(curr_solution.relations)])
@@ -94,22 +89,21 @@ def dfs(
                 relations_already_seen=relations_already_seen,
                 mappings_already_seen=mappings_already_seen,
                 cache=cache,
-                calls=calls,
                 depth=depth
             )
 
 
-def dfs_wrapper(base: List[str], 
-                target: List[str], 
-                suggestions: bool = False, 
-                num_of_suggestions: int = 1,
-                N: int = 4,
-                verbose: bool = False, 
-                quasimodo: Quasimodo = None, 
-                freq: Frequencies = None, 
-                model_name: str = 'msmarco-distilbert-base-v4',
-                threshold: Union[float, int] = FREQUENCY_THRESHOLD
-                ) -> List[Solution]:
+def dfs_wrapper(
+    base: List[str], 
+    target: List[str],
+    num_of_suggestions: int,
+    N: int,
+    verbose: bool, 
+    quasimodo: Quasimodo, 
+    freq: Frequencies, 
+    model_name: str,
+    threshold: Union[float, int]
+    ) -> List[Solution]:
 
     # we want all the possible pairs.
     # general there are (n choose 2) * (n choose 2) * 2 pairs.
@@ -128,7 +122,6 @@ def dfs_wrapper(base: List[str],
         freq = Frequencies(json_folder / 'freq.json', threshold=threshold)
 
     cache = {}
-    calls = [0]
     best_results = get_best_pair_mapping(model, freq, data_collector, available_pairs, cache)
     initial_solution = Solution(
                             mapping=[], 
@@ -154,12 +147,10 @@ def dfs_wrapper(base: List[str],
         relations_already_seen=relations_already_seen, 
         mappings_already_seen=mappings_already_seen, 
         cache=cache, 
-        calls=calls, 
         depth=N)
 
     suggestions_solutions = mapping_suggestions_wrapper(base, 
                                                         target,
-                                                        suggestions,
                                                         num_of_suggestions,
                                                         solutions,
                                                         data_collector,
@@ -171,18 +162,9 @@ def dfs_wrapper(base: List[str],
                                                         verbose)
 
     all_solutions = sorted(solutions + suggestions_solutions, key=lambda x: (x.length, x.score), reverse=True)
-    if not all_solutions:
-        if verbose:
-            secho("No solution found")
-        return []
-    
     solutions_to_return_and_print = 10
+    all_solutions = all_solutions[:solutions_to_return_and_print]
     if verbose:
-        secho(f"\nBase: {base}", fg="blue", bold=True)
-        secho(f"Target: {target}\n", fg="blue", bold=True)
-        for i, solution in enumerate(all_solutions[:solutions_to_return_and_print]):
-            secho(f"#{i+1}", fg="blue", bold=True)
-            solution.print_solution()
+        print_results(base, target, all_solutions) 
 
-    secho(f"Number of recursive calls: {calls[0]}\n")
-    return all_solutions[:solutions_to_return_and_print]
+    return all_solutions

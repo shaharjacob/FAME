@@ -85,7 +85,7 @@ def evaluate(model_name: str,
              specify: int, 
              freq_path: str, 
              algorithm: str,
-             suggestions: bool = False):
+             num_of_suggestions: int):
     
     if algorithm not in ['beam', 'dfs']:
             secho("[ERROR] unsupported algorithm. (supported are 'beam' or 'dfs').")
@@ -105,9 +105,8 @@ def evaluate(model_name: str,
         algo_func = beam_search_wrapper if algorithm == 'beam' else dfs_wrapper
         solutions = mapping_wrapper(algo_func, 
                                     base=tv["input"]["base"], 
-                                    target=tv["input"]["target"], 
-                                    suggestions=suggestions, 
-                                    num_of_suggestions=10,
+                                    target=tv["input"]["target"],
+                                    num_of_suggestions=num_of_suggestions,
                                     N=tv["input"]["depth"][algorithm], 
                                     verbose=True, 
                                     quasimodo=quasimodo, 
@@ -166,10 +165,10 @@ def evaluate(model_name: str,
 @click.option('-s', '--specify', default=[], type=int, multiple=True, help="Specify which entry of the yaml file to evaluate")
 @click.option('-j', '--freq', default='freq.json', type=str, help="Which json to use for frequency file")
 @click.option('-a', '--algo', default='beam', type=str, help="Which algorithm to use")
-@click.option('-g', '--suggestions', is_flag=True, help="Suggest entities if missing")
-def run(model, threshold, yaml, comment, specify, freq, algo, suggestions):
+@click.option('-g', '--num-of-suggestions', type=int, default=10, help="Number of suggestions for missing entities")
+def run(model, threshold, yaml, comment, specify, freq, algo, num_of_suggestions):
     torch.cuda.empty_cache()
-    evaluate(model, threshold, yaml, list(specify), freq, algo, suggestions)
+    evaluate(model, threshold, yaml, list(specify), freq, algo, num_of_suggestions)
 
 if __name__ == '__main__':
     # os.environ['CI'] = 'true'

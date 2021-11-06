@@ -47,8 +47,7 @@ def mapping_entities():
     algo_func = beam_search_wrapper if algo == 'beam' else dfs_wrapper
     solutions = mapping_wrapper(algo_func, 
                                 base=base, 
-                                target=target, 
-                                suggestions=True, 
+                                target=target,
                                 N=depth,
                                 freq=freq, 
                                 num_of_suggestions=num_of_suggestions, 
