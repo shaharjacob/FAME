@@ -20890,5 +20890,602 @@
 	"bone#the wall": [],
 	"the wall#bone": [],
 	"heartburn#digestion": [],
-	"digestion#heartburn": []
+	"digestion#heartburn": [],
+	"cars#way": [
+		"be shaped"
+	],
+	"way#cars": [],
+	"cars#right": [
+		"be driven on",
+		"drive on",
+		"has movement",
+		"have steering wheel on",
+		"have steering wheels on",
+		"pull to",
+		"veer to"
+	],
+	"right#cars": [],
+	"cars#air quality": [
+		"affect"
+	],
+	"air quality#cars": [],
+	"cars#work": [
+		"can",
+		"has property",
+		"lease"
+	],
+	"work#cars": [],
+	"cars#a drive": [],
+	"a drive#cars": [],
+	"cars#auction": [
+		"be bought at",
+		"be sent to",
+		"end up at",
+		"get sold at",
+		"go",
+		"go to",
+		"has property",
+		"sell at"
+	],
+	"auction#cars": [
+		"get"
+	],
+	"cars#rats": [],
+	"rats#cars": [
+		"enter",
+		"get in",
+		"get into",
+		"go into",
+		"go under",
+		"hide in"
+	],
+	"cars#leases": [],
+	"leases#cars": [
+		"has property"
+	],
+	"cars#trade ins": [],
+	"trade ins#cars": [],
+	"cars#the curb": [],
+	"the curb#cars": [],
+	"cars#accidents": [
+		"catch fire in",
+		"flip in",
+		"get into",
+		"has property"
+	],
+	"accidents#cars": [],
+	"cars#a lot": [],
+	"a lot#cars": [],
+	"cars#0 financing": [],
+	"0 financing#cars": [],
+	"cars#mazda vehicles": [],
+	"mazda vehicles#cars": [],
+	"cars#the work": [],
+	"the work#cars": [],
+	"cars#look better": [],
+	"look better#cars": [],
+	"cars#use": [
+		"has property"
+	],
+	"use#cars": [],
+	"cars#ants": [],
+	"ants#cars": [
+		"get in",
+		"get on",
+		"invade"
+	],
+	"cars#ride (band)": [],
+	"ride (band)#cars": [],
+	"cars#rest": [
+		"can",
+		"has property"
+	],
+	"rest#cars": [],
+	"cars#the track": [],
+	"the track#cars": [],
+	"cars#place": [],
+	"place#cars": [],
+	"cars#his hands": [],
+	"his hands#cars": [],
+	"cars#showroom": [
+		"get in",
+		"get into"
+	],
+	"showroom#cars": [],
+	"cars#the ground": [],
+	"the ground#cars": [],
+	"cars#fuel efficiency": [],
+	"fuel efficiency#cars": [],
+	"cars#insurance": [
+		"be higher on",
+		"has property"
+	],
+	"insurance#cars": [
+		"be for",
+		"be higher for",
+		"be higher on",
+		"be more expensive for",
+		"be on",
+		"follow"
+	],
+	"cars#warranty": [
+		"has property"
+	],
+	"warranty#cars": [],
+	"cars#my wife": [],
+	"my wife#cars": [],
+	"cars#his window": [],
+	"his window#cars": [],
+	"cars#the middle": [],
+	"the middle#cars": [],
+	"cars#bounce": [
+		"can"
+	],
+	"bounce#cars": [],
+	"cars#blocks": [],
+	"blocks#cars": [],
+	"cars#taxicab": [],
+	"taxicab#cars": [],
+	"cars#any": [
+		"has property"
+	],
+	"any#cars": [
+		"has property"
+	],
+	"cars#trouble": [],
+	"trouble#cars": [],
+	"cars#development": [],
+	"development#cars": [],
+	"cars#thieves": [
+		"be target of"
+	],
+	"thieves#cars": [
+		"break into",
+		"burn",
+		"detect laptops in",
+		"get into",
+		"steal",
+		"with stealing"
+	],
+	"cars#camber": [],
+	"camber#cars": [],
+	"cars#bolder themes": [],
+	"bolder themes#cars": [],
+	"cars#a garage": [],
+	"a garage#cars": [],
+	"cars#a conundrum": [],
+	"a conundrum#cars": [],
+	"cars#front": [
+		"have",
+		"have number plates at",
+		"have turning wheels in",
+		"pointed"
+	],
+	"front#cars": [],
+	"cars#a walk": [],
+	"a walk#cars": [],
+	"cars#mennonites": [],
+	"mennonites#cars": [
+		"can drive",
+		"drive"
+	],
+	"cars#a halt": [],
+	"a halt#cars": [],
+	"cars#the cliff": [],
+	"the cliff#cars": [],
+	"cars#cockroaches": [],
+	"cockroaches#cars": [
+		"has property"
+	],
+	"cars#flat tire": [],
+	"flat tire#cars": [],
+	"cars#the pits": [],
+	"the pits#cars": [],
+	"cars#water": [
+		"can drive through",
+		"drip",
+		"leak",
+		"need",
+		"pollute",
+		"run on",
+		"sink in",
+		"stall in",
+		"turn off in",
+		"use"
+	],
+	"water#cars": [
+		"be cheaper than"
+	],
+	"cars#technology giants": [],
+	"technology giants#cars": [],
+	"cars#salary sacrifice": [],
+	"salary sacrifice#cars": [],
+	"cars#a holiday": [],
+	"a holiday#cars": [],
+	"cars#their customers": [],
+	"their customers#cars": [],
+	"cars#good condition": [],
+	"good condition#cars": [],
+	"cars#boat": [],
+	"boat#cars": [
+		"be expensive compared to",
+		"be more expensive than",
+		"be slower than"
+	],
+	"cars#over": [
+		"flip",
+		"frost",
+		"pull",
+		"roll"
+	],
+	"over#cars": [],
+	"cars#ebay": [
+		"be cheap on",
+		"has property"
+	],
+	"ebay#cars": [
+		"sell"
+	],
+	"cars#your credit": [],
+	"your credit#cars": [],
+	"cars#people": [
+		"go through",
+		"help"
+	],
+	"people#cars": [
+		"jump out of",
+		"lease",
+		"name"
+	],
+	"cars#hertz": [],
+	"hertz#cars": [
+		"sell"
+	],
+	"cars#the act": [],
+	"the act#cars": [],
+	"cars#the up": [],
+	"the up#cars": [],
+	"cars#snakes": [],
+	"snakes#cars": [
+		"get in"
+	],
+	"cars#its limits": [],
+	"its limits#cars": [],
+	"cars#getting bigger": [
+		"keep"
+	],
+	"getting bigger#cars": [],
+	"cars#taxes": [
+		"be after",
+		"can",
+		"has property",
+		"pay"
+	],
+	"taxes#cars": [],
+	"cars#rvs": [
+		"has property"
+	],
+	"rvs#cars": [],
+	"cars#temperature": [
+		"affect",
+		"measure",
+		"tell"
+	],
+	"temperature#cars": [],
+	"cars#repair": [
+		"need"
+	],
+	"repair#cars": [],
+	"cars#a standstill": [],
+	"a standstill#cars": [],
+	"cars#clean": [
+		"can get",
+		"keep"
+	],
+	"clean#cars": [],
+	"cars#police": [],
+	"police#cars": [],
+	"cars#a dyno": [],
+	"a dyno#cars": [],
+	"cars#time": [
+		"change over",
+		"get over",
+		"keep",
+		"lose horsepower over",
+		"lose hp over",
+		"lose power over",
+		"lose value over"
+	],
+	"time#cars": [],
+	"cars#home": [],
+	"home#cars": [],
+	"cars#machinery": [],
+	"machinery#cars": [],
+	"cars#children": [],
+	"children#cars": [
+		"fall asleep easily in",
+		"fell asleep suddenly in",
+		"left due in"
+	],
+	"cars#the night": [],
+	"the night#cars": [],
+	"cars#malls": [
+		"be put into",
+		"enter",
+		"get in",
+		"get into"
+	],
+	"malls#cars": [
+		"get inside"
+	],
+	"cars#attention": [],
+	"attention#cars": [],
+	"cars#the mot": [],
+	"the mot#cars": [],
+	"cars#turn": [
+		"can"
+	],
+	"turn#cars": [],
+	"cars#fault": [],
+	"fault#cars": [],
+	"cars#the side": [],
+	"the side#cars": [],
+	"cars#24 hours": [],
+	"24 hours#cars": [],
+	"cars#foot": [],
+	"foot#cars": [],
+	"cars#getting": [
+		"keep"
+	],
+	"getting#cars": [],
+	"cars#a speed": [],
+	"a speed#cars": [],
+	"cars#apr": [
+		"have"
+	],
+	"apr#cars": [
+		"be calculated on",
+		"be determined"
+	],
+	"cars#parts": [],
+	"parts#cars": [],
+	"cars#battery (electricity)": [],
+	"battery (electricity)#cars": [],
+	"cars#the street": [],
+	"the street#cars": [],
+	"cars#effective yesterday": [],
+	"effective yesterday#cars": [],
+	"cars#production": [],
+	"production#cars": [],
+	"cars#risk": [],
+	"risk#cars": [],
+	"cars#parking lot": [],
+	"parking lot#cars": [],
+	"road#the cover": [],
+	"the cover#road": [],
+	"road#auction": [],
+	"auction#road": [],
+	"road#the village": [],
+	"the village#road": [],
+	"road#google maps": [
+		"be orange on",
+		"be yellow on",
+		"disappear on"
+	],
+	"google maps#road": [],
+	"road#cracks": [
+		"can",
+		"have"
+	],
+	"cracks#road": [
+		"be in",
+		"form in",
+		"get in"
+	],
+	"road#a wash": [],
+	"a wash#road": [],
+	"road#the hill": [],
+	"the hill#road": [],
+	"road#the coast": [],
+	"the coast#road": [],
+	"road#a bit": [],
+	"a bit#road": [],
+	"cars#snow": [
+		"has property",
+		"skid in",
+		"spin out in"
+	],
+	"snow#cars": [
+		"can damage"
+	],
+	"cars#the road": [],
+	"the road#cars": [],
+	"cars#a bus": [],
+	"a bus#cars": [],
+	"cars#cars (film)": [],
+	"cars (film)#cars": [],
+	"cars#tire": [
+		"has property",
+		"have",
+		"have nitrogen in",
+		"need instead",
+		"put on chains over",
+		"use nitrogen in"
+	],
+	"tire#cars": [
+		"be in",
+		"be used in",
+		"fall off",
+		"hold up",
+		"support"
+	],
+	"cars#its way": [],
+	"its way#cars": [],
+	"cars#speeds": [
+		"be limited",
+		"determine",
+		"gain",
+		"have governed",
+		"know",
+		"measure",
+		"tell"
+	],
+	"speeds#cars": [
+		"be determined in",
+		"be measured in"
+	],
+	"cars#airport": [],
+	"airport#cars": [],
+	"cars#gas": [
+		"burn",
+		"burn fast",
+		"can",
+		"has property",
+		"need",
+		"run on",
+		"save",
+		"smell like",
+		"take",
+		"use"
+	],
+	"gas#cars": [
+		"be for",
+		"be from",
+		"be measured in",
+		"be needed for",
+		"be used in",
+		"get converted in",
+		"mix together in",
+		"pour out of",
+		"pumped into"
+	],
+	"cars#the hill": [],
+	"the hill#cars": [],
+	"cars#the ramp": [],
+	"the ramp#cars": [],
+	"cars#storage": [],
+	"storage#cars": [],
+	"cars#an accident": [],
+	"an accident#cars": [],
+	"cars#the tracks": [],
+	"the tracks#cars": [],
+	"cars#100 miles": [],
+	"100 miles#cars": [],
+	"cars#median": [],
+	"median#cars": [],
+	"cars#the line": [],
+	"the line#cars": [],
+	"cars#fuel": [
+		"be efficient",
+		"be less efficient",
+		"be more efficient",
+		"burn",
+		"burn more cleanly",
+		"have",
+		"need",
+		"run on",
+		"turn gas into",
+		"use"
+	],
+	"fuel#cars": [
+		"be in",
+		"be measured in",
+		"be used in",
+		"leak from"
+	],
+	"cars#passengers": [],
+	"passengers#cars": [
+		"be in",
+		"can drink alcohol in",
+		"fly out of"
+	],
+	"cars#faster hills": [
+		"go down"
+	],
+	"faster hills#cars": [],
+	"cars#value": [
+		"appreciate in",
+		"depreciate in",
+		"depreciate much and quickly in",
+		"has property",
+		"hold",
+		"lose",
+		"lose fast",
+		"lose quickly"
+	],
+	"value#cars": [],
+	"cars#the terminal": [],
+	"the terminal#cars": [],
+	"cars#the shop": [],
+	"the shop#cars": [],
+	"cars#town": [],
+	"town#cars": [],
+	"cars#the prairies": [],
+	"the prairies#cars": [],
+	"cars#four": [],
+	"four#cars": [],
+	"cars#sponsorship": [],
+	"sponsorship#cars": [],
+	"cars#debit cards": [
+		"take"
+	],
+	"debit cards#cars": [],
+	"cars#mud": [],
+	"mud#cars": [],
+	"cars#an embankment": [],
+	"an embankment#cars": [],
+	"cars#a layer": [],
+	"a layer#cars": [],
+	"cars#loan": [
+		"be mainly bought through",
+		"has property"
+	],
+	"loan#cars": [
+		"work for"
+	],
+	"cars#bridges": [
+		"bounce on",
+		"can",
+		"has property"
+	],
+	"bridges#cars": [
+		"can support"
+	],
+	"cars#night": [],
+	"night#cars": [],
+	"cars#a tarp": [],
+	"a tarp#cars": [],
+	"cars#display": [
+		"be put on"
+	],
+	"display#cars": [],
+	"cars#smoke": [
+		"can",
+		"emit",
+		"produce"
+	],
+	"smoke#cars": [
+		"come in",
+		"has property"
+	],
+	"cars#visitors": [],
+	"visitors#cars": [],
+	"cars#one": [],
+	"one#cars": [],
+	"cars#reservations group": [],
+	"reservations group#cars": [],
+	"cars#toy": [],
+	"toy#cars": [],
+	"cars#flames": [
+		"backfire",
+		"burst into",
+		"shoot",
+		"spit",
+		"spit out",
+		"throw"
+	],
+	"flames#cars": [],
+	"cars#calgary flames": [],
+	"calgary flames#cars": [],
+	"cars#horizon": []
 }

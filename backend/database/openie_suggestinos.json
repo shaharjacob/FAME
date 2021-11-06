@@ -9497,5 +9497,350 @@
 	"chef#put sugar syrup on": [],
 	"meal#put simple syrup on": [],
 	"meal#add simple syrup to": [],
-	"meal#put sugar syrup on": []
+	"meal#put sugar syrup on": [],
+	"cars#is crossing": [
+		"the tracks",
+		"bridges",
+		"the finish line"
+	],
+	"cars#was going down": [
+		"the road",
+		"the track",
+		"the hill",
+		"the highway",
+		"the lane"
+	],
+	"cars#was on": [
+		"display",
+		"fire",
+		"road",
+		"the track",
+		"its way"
+	],
+	"cars#was filled with": [
+		"people",
+		"water",
+		"smoke",
+		"gas",
+		"fuel"
+	],
+	"cars#was covered with": [
+		"snow",
+		"a layer",
+		"mud",
+		"a tarp",
+		"thick ice"
+	],
+	"cars#can be explored by": [],
+	"cars#is alive with": [],
+	"cars#ride on": [
+		"toy",
+		"a bus",
+		"tire",
+		"four",
+		"a track"
+	],
+	"cars#take": [
+		"taxicab",
+		"public transport",
+		"the track",
+		"place",
+		"bus"
+	],
+	"cars#travel up": [
+		"100 miles",
+		"speeds",
+		"60 miles",
+		"the ramp",
+		"74 miles"
+	],
+	"cars#carried": [
+		"an everyday test",
+		"one person",
+		"visitors",
+		"sponsorship",
+		"people"
+	],
+	"cars#is by": [
+		"the side",
+		"way",
+		"the best car",
+		"one",
+		"the railway bridge"
+	],
+	"cars#sails on": [],
+	"cars#drifted down": [],
+	"cars#has been crowded with": [],
+	"cars#can be accessed by": [],
+	"cars#cruises on": [],
+	"cars#was in": [
+		"good condition",
+		"the shop",
+		"good shape",
+		"an accident",
+		"storage"
+	],
+	"cars#went up": [
+		"the ramp",
+		"the hill",
+		"an embankment",
+		"flames",
+		"calgary flames"
+	],
+	"cars#plied": [
+		"the road"
+	],
+	"cars#glided down": [
+		"the road"
+	],
+	"cars#is navigable for": [],
+	"cars#is crossed on": [],
+	"cars#go down": [
+		"the road",
+		"an embankment",
+		"the street",
+		"value",
+		"the highway"
+	],
+	"cars#is full of": [
+		"gas",
+		"people",
+		"smoke",
+		"cars (film)",
+		"water"
+	],
+	"cars#capsized on": [],
+	"cars#came down": [
+		"road",
+		"street",
+		"the hill",
+		"the highway",
+		"the ramp"
+	],
+	"cars#floated down": [
+		"street",
+		"the river",
+		"the road"
+	],
+	"cars#cruise": [
+		"highway speed",
+		"a very high speed",
+		"reservations group",
+		"night",
+		"last minute deals"
+	],
+	"cars#heads across": [
+		"town",
+		"the prairies"
+	],
+	"cars#crossed": [
+		"the center line",
+		"median",
+		"the line",
+		"the finish line",
+		"the road"
+	],
+	"cars#cruises along": [],
+	"cars#is closed to": [
+		"airport",
+		"the ground",
+		"the terminal",
+		"production",
+		"loan"
+	],
+	"cars#sail up": [],
+	"cars#is crowded with": [
+		"passengers",
+		"people"
+	],
+	"cars#is best fished from": [],
+	"cars#held on": [
+		"10th december 1938",
+		"a modern day king track",
+		"their vehicles",
+		"sunday august 21 , 2005",
+		"the daytona beach course"
+	],
+	"cars#dropped": [
+		"location",
+		"the ground",
+		"the keys",
+		"points",
+		"passengers"
+	],
+	"cars#is considered one of": [],
+	"cars#cruises": [
+		"highway speed",
+		"a very high speed",
+		"reservations group",
+		"night",
+		"last minute deals"
+	],
+	"cars#appear on": [
+		"road",
+		"screen",
+		"your left",
+		"horizon",
+		"the other side"
+	],
+	"road#use fabric for": [],
+	"road#plans for": [
+		"2010",
+		"the area",
+		"completion"
+	],
+	"road#moves": [
+		"the river",
+		"traffic",
+		"the road parts",
+		"15 feet",
+		"the front"
+	],
+	"road#is at": [
+		"risk",
+		"the end",
+		"the top",
+		"the hotel",
+		"the heart"
+	],
+	"road#pull": [
+		"the side",
+		"front",
+		"another city right",
+		"the eye",
+		"the editorial officials"
+	],
+	"road#keep": [
+		"a minimum",
+		"good condition",
+		"good repair",
+		"maxima and minima",
+		"touch"
+	],
+	"road#sail": [
+		"a jump"
+	],
+	"road#is ready to set": [],
+	"road#was to prepare": [],
+	"road#plans to build": [],
+	"road#often regard": [],
+	"road#improve": [
+		"the years",
+		"safety",
+		"drainage",
+		"air quality",
+		"grip"
+	],
+	"road#operates": [
+		"highway",
+		"solar power",
+		"59 organizations",
+		"66 miles",
+		"a cable"
+	],
+	"road#is typical in": [],
+	"road#work with": [],
+	"road#sell used": [],
+	"road#drew": [
+		"my attention",
+		"your eyes",
+		"a double line",
+		"our previous helmet experience",
+		"its title"
+	],
+	"road#set": [
+		"a practical way",
+		"camp",
+		"fire",
+		"the legislature",
+		"release"
+	],
+	"road#raise": [
+		"his hand",
+		"the question",
+		"the same objection",
+		"your chances",
+		"awareness"
+	],
+	"road#go for": [
+		"miles",
+		"some distance",
+		"a spin",
+		"years",
+		"$ 24.95"
+	],
+	"road#glides quietly under": [],
+	"road#did": [
+		"mean",
+		"cars",
+		"little work",
+		"a good job",
+		"half a job"
+	],
+	"road#have triangular": [],
+	"road#is under": [
+		"construction",
+		"water",
+		"repair",
+		"jurisdiction",
+		"way"
+	],
+	"road#get into": [
+		"accidents",
+		"the left hand lane",
+		"a bit",
+		"the left lane",
+		"a scuffle"
+	],
+	"road#have black": [],
+	"road#hoisted": [],
+	"road#push": [
+		"a night start",
+		"the snow",
+		"the daisies"
+	],
+	"road#steer": [],
+	"road#put up": [
+		"guideposts",
+		"sale",
+		"buildings"
+	],
+	"road#got": [
+		"a bit",
+		"narrower and narrower",
+		"its name",
+		"the car",
+		"the way"
+	],
+	"road#is for": [
+		"cars",
+		"the most part",
+		"sale",
+		"the use",
+		"cycling"
+	],
+	"road#is made specifically for": [],
+	"road#took": [
+		"a right",
+		"a turn",
+		"place",
+		"the left fork",
+		"the first exit"
+	],
+	"road#are an investment in": [],
+	"road#lowered": [
+		"defense"
+	],
+	"road#can only carry": [],
+	"road#trim": [],
+	"road#travel under": [
+		"tunnel"
+	],
+	"road#stopped": [
+		"the car",
+		"the middle",
+		"lights",
+		"front",
+		"traffic"
+	]
 }
