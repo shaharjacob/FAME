@@ -52182,5 +52182,13 @@
 	],
 	"all obstacles#boats": [],
 	"boats#a hitch": [],
-	"a hitch#boats": []
+	"a hitch#boats": [],
+	"river#the right": [],
+	"the right#river": [],
+	"river#water samples": [
+		"tested"
+	],
+	"water samples#river": [
+		"are collected from"
+	]
 }

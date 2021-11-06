@@ -31524,5 +31524,9 @@
 	"boats#all obstacles": [],
 	"all obstacles#boats": [],
 	"boats#a hitch": [],
-	"a hitch#boats": []
+	"a hitch#boats": [],
+	"river#the right": [],
+	"the right#river": [],
+	"river#water samples": [],
+	"water samples#river": []
 }
