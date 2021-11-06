@@ -9494,5 +9494,8 @@
 	"meal#chips fall to bottom of": [],
 	"chef#put simple syrup on": [],
 	"chef#add simple syrup to": [],
-	"chef#put sugar syrup on": []
+	"chef#put sugar syrup on": [],
+	"meal#put simple syrup on": [],
+	"meal#add simple syrup to": [],
+	"meal#put sugar syrup on": []
 }
