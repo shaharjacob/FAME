@@ -3,8 +3,8 @@ mapping:
       base: [earth, sun, gravity, newton]
       target: [electrons, nucleus, electricity]
       depth:
-        dfs: 2
         beam: 20
+        dfs: 4
     output:
       mapping:
         - earth --> electrons
@@ -20,8 +20,8 @@ mapping:
       base: [earth, newton, gravity]
       target: [electrons, nucleus, electricity, faraday]
       depth:
-        dfs: 4
         beam: 20
+        dfs: 4
     output:
       mapping:
         - earth --> electrons
@@ -38,14 +38,14 @@ mapping:
       base: [cars, road, wheels]
       target: [boats, river]
       depth:
-        dfs: 2
         beam: 20
+        dfs: 4
     output:
       mapping:
         - cars --> boats
         - road --> river
         - wheels --> anchors
-    ignore: True
+    ignore: False
 
   - input: #4
       base: [landscaper, lawn]
@@ -112,4 +112,4 @@ mapping:
         - chicken
         - soup
         - vegetable
-    ignore: True
+    ignore: False
