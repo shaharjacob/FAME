@@ -8,7 +8,6 @@ import yaml
 backend_dir = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(backend_dir))
 from mapping.dfs import dfs_wrapper
-from frequency.frequency import Frequencies
 from mapping.mapping import FREQUENCY_THRESHOLD
 from mapping.beam_search import beam_search_wrapper
 from mapping.quasimodo import Quasimodo, merge_tsvs
