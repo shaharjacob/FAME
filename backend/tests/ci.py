@@ -92,13 +92,16 @@ class TestMappingNoSuggestoins(unittest.TestCase):
             if tv["ignore"]:
                 continue
             
+            args = {
+                "num_of_suggestions": 0,
+                "N": tv["input"]["depth"]['beam'],
+                "verbose": True,
+                "freq_th": FREQUENCY_THRESHOLD,
+                "model_name": 'msmarco-distilbert-base-v4'
+            }
             solutions = beam_search_wrapper(base=tv["input"]["base"], 
                                             target=tv["input"]["target"],
-                                            num_of_suggestions=0,
-                                            N=tv["input"]["depth"]['beam'], 
-                                            verbose=True,
-                                            model_name='msmarco-distilbert-base-v4',
-                                            freq_th=FREQUENCY_THRESHOLD)
+                                            args=args)
             solution = solutions[0]
 
             # check the mapping
@@ -117,25 +120,23 @@ class TestMappingNoSuggestoins(unittest.TestCase):
             self.assertEqual(round(reference, 3), round(actual, 3))
     
     def test_dfs(self):
-        quasimodo = Quasimodo()
-        json_folder = backend_dir / 'frequency'
-        freq = Frequencies(json_folder / 'freq.json', threshold=FREQUENCY_THRESHOLD)
         with open(TEST_FOLDER / 'tests.yaml', 'r') as y:
             spec = yaml.load(y, Loader=yaml.SafeLoader)
         mapping_spec = spec["mapping"]
         for tv in mapping_spec:
             if tv["ignore"]:
                 continue            
-
+            
+            args = {
+                "num_of_suggestions": 0,
+                "N": tv["input"]["depth"]['dfs'],
+                "verbose": True,
+                "freq_th": FREQUENCY_THRESHOLD,
+                "model_name": 'msmarco-distilbert-base-v4'
+            }
             solutions = dfs_wrapper(base=tv["input"]["base"], 
                                     target=tv["input"]["target"],
-                                    num_of_suggestions=0, 
-                                    N=tv["input"]["depth"]['dfs'], 
-                                    verbose=True,
-                                    quasimodo=quasimodo,
-                                    freq=freq,
-                                    model_name='msmarco-distilbert-base-v4',
-                                    threshold=FREQUENCY_THRESHOLD)
+                                    args=args)
             solution = solutions[0]
 
             # check the mapping
@@ -163,13 +164,16 @@ class TestMappingSuggestoins(unittest.TestCase):
             if tv["ignore"]:
                 continue
             
+            args = {
+                "num_of_suggestions": 1,
+                "N": tv["input"]["depth"]['beam'],
+                "verbose": True,
+                "freq_th": FREQUENCY_THRESHOLD,
+                "model_name": 'msmarco-distilbert-base-v4'
+            }
             solutions = beam_search_wrapper(base=tv["input"]["base"], 
                                             target=tv["input"]["target"],
-                                            num_of_suggestions=1,
-                                            N=tv["input"]["depth"]['beam'], 
-                                            verbose=True,
-                                            model_name='msmarco-distilbert-base-v4',
-                                            freq_th=FREQUENCY_THRESHOLD)
+                                            args=args)
             solution = solutions[0]
 
             # check the mapping
@@ -179,25 +183,23 @@ class TestMappingSuggestoins(unittest.TestCase):
             
     
     def test_dfs(self):
-        quasimodo = Quasimodo()
-        json_folder = backend_dir / 'frequency'
-        freq = Frequencies(json_folder / 'freq.json', threshold=FREQUENCY_THRESHOLD)
         with open(TEST_FOLDER / 'suggestions.yaml', 'r') as y:
             spec = yaml.load(y, Loader=yaml.SafeLoader)
         mapping_spec = spec["mapping"]
         for tv in mapping_spec:
             if tv["ignore"]:
                 continue            
-
+            
+            args = {
+                "num_of_suggestions": 1,
+                "N": tv["input"]["depth"]['dfs'],
+                "verbose": True,
+                "freq_th": FREQUENCY_THRESHOLD,
+                "model_name": 'msmarco-distilbert-base-v4'
+            }
             solutions = dfs_wrapper(base=tv["input"]["base"], 
                                     target=tv["input"]["target"],
-                                    num_of_suggestions=1,
-                                    N=tv["input"]["depth"]['dfs'],
-                                    verbose=True,
-                                    quasimodo=quasimodo,
-                                    freq=freq,
-                                    model_name='msmarco-distilbert-base-v4',
-                                    threshold=FREQUENCY_THRESHOLD)
+                                    args=args)
             solution = solutions[0]
 
             # check the mapping

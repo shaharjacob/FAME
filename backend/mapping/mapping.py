@@ -7,6 +7,7 @@ from tqdm import tqdm
 from click import secho
 
 from utils import utils
+from .quasimodo import Quasimodo
 from frequency.frequency import Frequencies
 from .data_collector import DataCollector
 from utils.sentence_embadding import SentenceEmbedding
@@ -334,6 +335,15 @@ def update_already_mapping(b: str, t: str, B: List[str], T: List[str], indecies:
     # using for quick exists-check
     indecies['base'][b] = len(B) - 1
     indecies['target'][t] = len(T) - 1
+
+
+def set_unmutables(unmutables: Dict[str, Union[Quasimodo, DataCollector, SentenceEmbedding, Frequencies]], args: dict):
+    if not unmutables:
+        unmutables["quasimodo"] = Quasimodo()
+        unmutables["data_collector"] = DataCollector(quasimodo=unmutables["quasimodo"])
+        unmutables["model"] = SentenceEmbedding(model=args["model_name"], data_collector=unmutables["data_collector"])
+        json_folder = root / 'backend' / 'frequency'
+        unmutables["freq"] = Frequencies(json_folder / 'freq.json', threshold=args["freq_th"])
 
 
 if __name__ == "__main__":

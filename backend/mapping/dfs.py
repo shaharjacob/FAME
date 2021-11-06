@@ -1,6 +1,6 @@
 import copy
 from pathlib import Path
-from typing import List, Tuple, Union, Set
+from typing import List, Tuple, Union, Set, Dict
 
 from .quasimodo import Quasimodo
 from .data_collector import DataCollector
@@ -8,7 +8,7 @@ from frequency.frequency import Frequencies
 from .suggestions import mapping_suggestions_wrapper
 from utils.sentence_embadding import SentenceEmbedding
 from .mapping import Solution, Pair
-from .mapping import get_score, update_already_mapping, update_paris_map, get_best_pair_mapping_for_current_iteration, get_all_possible_pairs_map, get_best_pair_mapping, print_results
+from .mapping import get_score, update_already_mapping, update_paris_map, get_best_pair_mapping_for_current_iteration, get_all_possible_pairs_map, get_best_pair_mapping, print_results, set_unmutables
 
 root = Path(__file__).resolve().parent.parent.parent
 
@@ -96,29 +96,19 @@ def dfs(
 def dfs_wrapper(
     base: List[str], 
     target: List[str],
-    num_of_suggestions: int,
-    N: int,
-    verbose: bool,
-    model_name: str,
-    freq_th: Union[float, int]
+    args: dict,
+    unmutables: Dict[str, Union[Quasimodo, DataCollector, SentenceEmbedding, Frequencies]] = {}
     ) -> List[Solution]:
 
     # we want all the possible pairs.
     # general there are (n choose 2) * (n choose 2) * 2 pairs.
     available_pairs = get_all_possible_pairs_map(base, target)
 
-    # this is an array of solutions we going to update in the mapping function.
-    solutions = []
-
     # better to init all the objects here, since they are not changed in the run
-    quasimodo = Quasimodo()
-    data_collector = DataCollector(quasimodo=quasimodo)
-    model = SentenceEmbedding(model=model_name, data_collector=data_collector)
-    json_folder = root / 'backend' / 'frequency'
-    freq = Frequencies(json_folder / 'freq.json', threshold=freq_th)
+    set_unmutables(unmutables, args)
 
     cache = {}
-    best_results = get_best_pair_mapping(model, freq, data_collector, available_pairs, cache)
+    best_results = get_best_pair_mapping(unmutables["model"], unmutables["freq"], unmutables["data_collector"], available_pairs, cache)
     initial_solution = Solution(
                             mapping=[], 
                             relations=[], 
@@ -133,34 +123,37 @@ def dfs_wrapper(
                             availables=copy.deepcopy(available_pairs)
                         )
     
+    # this is an array of solutions we going to update in the mapping function.
+    solutions = []
+
     mappings_already_seen = set()
     relations_already_seen = set()
     dfs(base=base, 
         target=target, 
         solutions=solutions, 
-        freq=freq, 
+        freq=unmutables["freq"], 
         curr_solution=initial_solution,
         relations_already_seen=relations_already_seen, 
         mappings_already_seen=mappings_already_seen, 
         cache=cache, 
-        depth=N)
+        depth=args["N"])
 
     suggestions_solutions = mapping_suggestions_wrapper(base, 
                                                         target,
-                                                        num_of_suggestions,
+                                                        args["num_of_suggestions"],
                                                         solutions,
-                                                        data_collector,
-                                                        model,
-                                                        freq,
+                                                        unmutables["data_collector"],
+                                                        unmutables["model"],
+                                                        unmutables["freq"],
                                                         mappings_already_seen,
                                                         relations_already_seen,
                                                         cache,
-                                                        verbose)
+                                                        args["verbose"])
 
     all_solutions = sorted(solutions + suggestions_solutions, key=lambda x: (x.length, x.score), reverse=True)
     solutions_to_return_and_print = 10
     all_solutions = all_solutions[:solutions_to_return_and_print]
-    if verbose:
+    if args["verbose"]:
         print_results(base, target, all_solutions) 
 
     return all_solutions

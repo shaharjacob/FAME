@@ -96,16 +96,20 @@ def evaluate(model_name: str,
     for i, tv in enumerate(mapping_spec):
         if specify and i + 1 not in specify:
             continue
+
+        args = {
+            "num_of_suggestions": num_of_suggestions,
+            "N": tv["input"]["depth"][algorithm],
+            "verbose": True,
+            "freq_th": freq_th,
+            "model_name": model_name
+        }
         
         algo_func = beam_search_wrapper if algorithm == 'beam' else dfs_wrapper
         solutions = mapping_wrapper(algo_func, 
                                     base=tv["input"]["base"], 
                                     target=tv["input"]["target"],
-                                    num_of_suggestions=num_of_suggestions,
-                                    N=tv["input"]["depth"][algorithm], 
-                                    verbose=True,
-                                    freq_th=freq_th, 
-                                    model_name=model_name)
+                                    args=args)
         result = Result()
         current_maps = len(tv["output"]["mapping"])
         result.num_of_maps = current_maps

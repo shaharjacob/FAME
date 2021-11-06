@@ -4,6 +4,7 @@ from pathlib import Path
 from typing import List, Dict
 
 from flask import Flask, jsonify, request
+from backend.mapping import quasimodo
 
 backend_dir = Path(__file__).resolve().parent.parent
 root = backend_dir.resolve().parent
@@ -11,6 +12,7 @@ sys.path.insert(0, str(backend_dir))
 from utils import utils
 from . import python2react
 from mapping.dfs import dfs_wrapper
+from mapping.quasimodo import Quasimodo
 from frequency.frequency import Frequencies
 from mapping.data_collector import DataCollector
 from mapping.beam_search import beam_search_wrapper
@@ -30,37 +32,41 @@ def mapping_entities():
 
     # unmutable. TODO: pack them together
     # actually this is happen in the mapping wrapper, but here need it after for the graphs.
-    data_collector = DataCollector()
+    quasimodo = Quasimodo()
+    data_collector = DataCollector(quasimodo=quasimodo)
     model_name = 'msmarco-distilbert-base-v4'
     model = SentenceEmbedding(model=model_name, data_collector=data_collector)
     freq_th = request.args.get('threshold')
     freq_th = freq_th if freq_th else FREQUENCY_THRESHOLD
     freq_json_folder = root / 'backend' / 'frequency'
     freq = Frequencies(freq_json_folder / 'freq.json', threshold=float(freq_th))
+    unmutables = {
+        "quasimodo": quasimodo,
+        "data_collector": data_collector,
+        "model": model,
+        "freq": freq
+    }
 
     # additional args
-    depth = utils.get_int(request.args.get('depth'), 4)
-    top_n = utils.get_int(request.args.get('top'), 3)
-    num_of_suggestions = utils.get_int(request.args.get('suggestions'), 3)
-    algo = request.args.get('algo') # TODO: make it choice in the GUI (not string input)
-    if algo not in ["beam", "dfs"]:
-        algo = "beam"
-    if algo == 'beam':
-        depth = 20
+    # top_n = utils.get_int(request.args.get('top'), 3)
+    args = {
+            "num_of_suggestions": utils.get_int(request.args.get('suggestions'), 3),
+            "N": utils.get_int(request.args.get('depth'), 4),
+            "verbose": True
+        }
     
     # for webapp
     data = []
     scores = []
     
     # here we map between base entitites and target entities
+    algo = request.args.get('algo') # TODO: make it choice in the GUI (not string input)
     algo_func = beam_search_wrapper if algo == 'beam' else dfs_wrapper
     solutions = mapping_wrapper(algo_func, 
                                 base=base, 
                                 target=target,
-                                N=depth,
-                                num_of_suggestions=num_of_suggestions, 
-                                model_name=model_name,
-                                freq_th=float(freq_th))
+                                args=args,
+                                unmutables=unmutables)
     for solution in solutions:
         # prepare the nodes for the react app
         nodes = python2react.get_nodes_for_app(props=solution.mapping, start_idx=0)
