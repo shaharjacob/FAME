@@ -31490,5 +31490,39 @@
 	"boats#land": [
 		"eventually find"
 	],
-	"land#boats": []
+	"land#boats": [],
+	"details#boats": [],
+	"boats#a job": [],
+	"a job#boats": [],
+	"boats#a mountain": [],
+	"a mountain#boats": [],
+	"boats#the side": [
+		"have numbers on",
+		"have tires on",
+		"shoes have laces on"
+	],
+	"the side#boats": [],
+	"boats#its moorings": [],
+	"its moorings#boats": [],
+	"boats#time": [
+		"blow their horns three",
+		"change over",
+		"honk 3",
+		"honk three"
+	],
+	"time#boats": [],
+	"boats#the embarkation": [],
+	"the embarkation#boats": [],
+	"boats#canoe": [],
+	"canoe#boats": [],
+	"boats#all levels": [],
+	"all levels#boats": [],
+	"boats#the conditions": [],
+	"the conditions#boats": [],
+	"boats#a ram": [],
+	"a ram#boats": [],
+	"boats#all obstacles": [],
+	"all obstacles#boats": [],
+	"boats#a hitch": [],
+	"a hitch#boats": []
 }
