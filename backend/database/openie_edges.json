@@ -57009,5 +57009,13 @@
 		"run on"
 	],
 	"earth#the environment": [],
-	"the environment#earth": []
+	"the environment#earth": [],
+	"boats#12 guests": [
+		"can accommodate up to"
+	],
+	"12 guests#boats": [],
+	"boats#16 passengers": [
+		"accommodates"
+	],
+	"16 passengers#boats": []
 }
