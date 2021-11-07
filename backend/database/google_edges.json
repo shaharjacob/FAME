@@ -33235,5 +33235,10 @@
 	],
 	"our lives#electricity": [],
 	"meal#a cake": [],
-	"a cake#meal": []
+	"a cake#meal": [],
+	"earth#the environment": [
+		"day help",
+		"hour help"
+	],
+	"the environment#earth": []
 }
