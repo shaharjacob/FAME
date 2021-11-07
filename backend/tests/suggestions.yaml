@@ -106,7 +106,7 @@ mapping:
       mapping:
         - baker --> chef
         - cake --> meal
-        - chocolate --> chicken
+        - chocolate --> ingredient
       suggestions:
         - ingredient # ?
         - chicken
