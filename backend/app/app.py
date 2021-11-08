@@ -158,10 +158,7 @@ def single_mapping():
         similatiry_edges = [(prop1, prop2, get_edge_score(prop1, prop2, model, freq)) for prop1 in props_edge1 for prop2 in props_edge2]
         
         for thresh in utils.DISTANCE_TRESHOLDS:
-            props_edge1 = data_collector.get_entities_relations(edge_[0][0], edge_[0][1])
             clustered_sentences_1: Dict[int, List[str]] = model.clustering(props_edge1, distance_threshold=thresh)
-            
-            props_edge2 = data_collector.get_entities_relations(edge_[1][0], edge_[1][1])
             clustered_sentences_2: Dict[int, List[str]] = model.clustering(props_edge2, distance_threshold=thresh)
 
             # we want to group each cluster to one node
