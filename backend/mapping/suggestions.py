@@ -5,6 +5,7 @@ from pathlib import Path
 from typing import List, Tuple, Set, Dict
 
 from click import secho
+from sqlitedict import SqliteDict
 
 from . import openIE
 from utils import utils
@@ -19,60 +20,83 @@ from .mapping import get_score, update_already_mapping, update_paris_map, get_al
 root = Path(__file__).resolve().parent.parent.parent
 IGNORE_SUGGESTION = ["the", "they", "us", "we", "you", 'i']
 
+class DBSuggestions(object):
+    def __init__(self):
+        self.google_suggestions = SqliteDict(
+                    root / 'backend' / 'database' / 'google_suggestions.sqlite',
+                    encode=json.dumps,
+                    decode=json.loads
+                )
+        self.quasimodo_suggestions = SqliteDict(
+                    root / 'backend' / 'database' / 'quasimodo_suggestions.sqlite',
+                    encode=json.dumps,
+                    decode=json.loads
+                )
+        self.openie_suggestions = SqliteDict(
+                    root / 'backend' / 'database' / 'openie_suggestions.sqlite',
+                    encode=json.dumps,
+                    decode=json.loads
+                )
+        self.should_commit = {
+            "google_suggestions": False,
+            "quasimodo_suggestions": False,
+            "openie_suggestions": False
+        }
+
+    def commit(self):
+        if self.should_commit["google_suggestions"]:
+            self.google_suggestions.commit()
+        if self.should_commit["quasimodo_suggestions"]:
+            self.quasimodo_suggestions.commit()
+        if self.should_commit["openie_suggestions"]:
+            self.openie_suggestions.commit()
+    
+    def close(self):
+        self.google_suggestions.close()
+        self.quasimodo_suggestions.close()
+        self.openie_suggestions.close()
+
+
+
 class Suggestions(object):
-    def __init__(self, entity: str, prop: str, save_db: bool = True, override_database: bool = False, quasimodo: Quasimodo = None):
+    def __init__(self, entity: str, prop: str, quasimodo: Quasimodo = None):
         self.entity = entity
         self.prop = prop
         self.quasimodo = quasimodo
-        self.override_database = override_database
-        self.save_db = save_db
-        self.google_suggestinos = utils.read_json(root / 'backend' / 'database' / 'google_suggestinos.json') if save_db else {}
-        self.quasimodo_suggestinos = utils.read_json(root / 'backend' / 'database' / 'quasimodo_suggestinos.json') if save_db else {}
-        self.openie_suggestinos = utils.read_json(root / 'backend' / 'database' / 'openie_suggestinos.json') if save_db else {}
-    
+        self.db = DBSuggestions()
+        
 
     def get_suggestions(self):
-        should_save = False
-        if f"{self.entity}#{self.prop}" in self.quasimodo_suggestinos and not self.override_database:
-            quasimodo_suggestinos = self.quasimodo_suggestinos[f"{self.entity}#{self.prop}"]
+        if f"{self.entity}#{self.prop}" in self.db.quasimodo_suggestions:
+            quasimodo_suggestions = self.db.quasimodo_suggestions[f"{self.entity}#{self.prop}"]
         else:
             if not self.quasimodo:
                 self.quasimodo = Quasimodo()
-            quasimodo_suggestinos = self.quasimodo.get_entity_suggestions(self.entity, self.prop, n_largest=5, plural_and_singular=True)
-            self.quasimodo_suggestinos[f"{self.entity}#{self.prop}"] = quasimodo_suggestinos  
-            should_save = True
+            quasimodo_suggestions = self.quasimodo.get_entity_suggestions(self.entity, self.prop, n_largest=5, plural_and_singular=True)
+            self.db.quasimodo_suggestions[f"{self.entity}#{self.prop}"] = quasimodo_suggestions  
+            self.db.should_commit["quasimodo_suggestions"] = True
 
         if 'SKIP_GOOGLE' not in os.environ:
-            if f"{self.entity}#{self.prop}" in self.google_suggestinos and not self.override_database:
-                google_suggestinos = self.google_suggestinos[f"{self.entity}#{self.prop}"]
+            if f"{self.entity}#{self.prop}" in self.db.google_suggestions:
+                google_suggestions = self.db.google_suggestions[f"{self.entity}#{self.prop}"]
             else:
-                google_suggestinos = google_autosuggest.get_entity_suggestions(self.entity, self.prop)
-                self.google_suggestinos[f"{self.entity}#{self.prop}"] = google_suggestinos  
-                should_save = True
+                google_suggestions = google_autosuggest.get_entity_suggestions(self.entity, self.prop)
+                self.db.google_suggestions[f"{self.entity}#{self.prop}"] = google_suggestions  
+                self.db.should_commit["google_suggestions"] = True
         else:
-            google_suggestinos = []
+            google_suggestions = []
 
-        if f"{self.entity}#{self.prop}" in self.openie_suggestinos and not self.override_database:
-            openie_suggestinos = self.openie_suggestinos[f"{self.entity}#{self.prop}"]
+        if f"{self.entity}#{self.prop}" in self.db.openie_suggestions:
+            openie_suggestions = self.db.openie_suggestions[f"{self.entity}#{self.prop}"]
         else:
-            openie_suggestinos = openIE.get_entity_suggestions_wrapper(self.entity, self.prop, n_largest=5)
-            self.openie_suggestinos[f"{self.entity}#{self.prop}"] = openie_suggestinos  
-            should_save = True
+            openie_suggestions = openIE.get_entity_suggestions_wrapper(self.entity, self.prop, n_largest=5)
+            self.db.openie_suggestions[f"{self.entity}#{self.prop}"] = openie_suggestions  
+            self.db.should_commit["openie_suggestions"] = True
 
-        if should_save:
-            self.save_database()
+        self.db.commit()
 
-        suggestions = google_suggestinos + quasimodo_suggestinos + openie_suggestinos
+        suggestions = google_suggestions + quasimodo_suggestions + openie_suggestions
         return [suggestion for suggestion in suggestions if suggestion not in IGNORE_SUGGESTION]
-
-
-    def save_database(self):
-        with open(root / 'backend' / 'database' / 'google_suggestinos.json', 'w') as f1:
-            json.dump(self.google_suggestinos, f1, indent='\t')
-        with open(root / 'backend' / 'database' / 'quasimodo_suggestinos.json', 'w') as f2:
-            json.dump(self.quasimodo_suggestinos, f2, indent='\t')
-        with open(root / 'backend' / 'database' / 'openie_suggestinos.json', 'w') as f3:
-            json.dump(self.openie_suggestinos, f3, indent='\t')
 
 
 def get_suggestions_for_missing_entities(base_not_mapped_entity: str, 

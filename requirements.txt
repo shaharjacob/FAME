@@ -9,6 +9,7 @@ inflect
 requests
 graphviz
 networkx
+sqlitedict
 beautifulsoup4
 transformers==4.10.3
 sentence_transformers

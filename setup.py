@@ -28,6 +28,7 @@ setup(
     'requests',
     'graphviz',
     'networkx',
+    'sqlitedict',
     'beautifulsoup4',
     'sentence_transformers',
   ],
