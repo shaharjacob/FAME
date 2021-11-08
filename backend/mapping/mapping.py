@@ -14,6 +14,11 @@ from utils.sentence_embadding import SentenceEmbedding
 
 Pair = Tuple[str, str] # two entities: (b1,b2)
 SingleMatch = List[Pair] # [(b1,b2), (t1,t2)]
+ScoreCache = Dict[Tuple[Tuple[str, str], Tuple[str, str]], float]
+MappingCache = Set[Tuple[Tuple[Pair]]]
+RelationCache = Set[Tuple[str]]
+Cache = Union[ScoreCache, MappingCache, RelationCache]
+Unmutables = Union[Quasimodo, DataCollector, SentenceEmbedding, Frequencies]
 
 root = Path(__file__).resolve().parent.parent.parent
 
@@ -103,7 +108,7 @@ def get_edge_score(prop1: str, prop2: str, model: SentenceEmbedding, freq: Frequ
         return model.similarity(prop1, prop2)
 
 
-def get_score(base: List[str], target: List[str], base_entity: str, target_entity: str, cache: dict) -> float:
+def get_score(base: List[str], target: List[str], base_entity: str, target_entity: str, cache: ScoreCache) -> float:
     # we take the score of the new b->t with all the others. 
     # i.e. we will take the score of b_i:b~t_i:t.
     return round(sum([cache[((b, base_entity),(t, target_entity))] for b, t in zip(base, target)]), 3)
@@ -258,11 +263,9 @@ def get_best_pair_mapping_for_current_iteration(
     return results_for_current_iteration, modified_results
 
 
-def get_best_pair_mapping(model: SentenceEmbedding, 
-                          freq: Frequencies, 
-                          data_collector: DataCollector, 
+def get_best_pair_mapping(unmutables: Dict[str, Unmutables],
                           available_maps: List[List[SingleMatch]], 
-                          cache: dict, 
+                          cache: Dict[str, Cache], 
                           depth: int = 0
                         ) -> List[Dict[str, Union[int, SingleMatch]]]:
     
@@ -280,25 +283,25 @@ def get_best_pair_mapping(model: SentenceEmbedding,
         for direction in mapping:
             b1, b2 = direction[0][0], direction[0][1]
             t1, t2 = direction[1][0], direction[1][1]
-            props_edge1 = data_collector.get_entities_relations(b1, b2)
-            props_edge2 = data_collector.get_entities_relations(t1, t2)
+            props_edge1 = unmutables["data_collector"].get_entities_relations(b1, b2)
+            props_edge2 = unmutables["data_collector"].get_entities_relations(t1, t2)
 
             if not props_edge1 or not props_edge2:
                 continue
 
             # we want the weight of each edge between two nodes.
-            similatiry_edges = [(prop1, prop2, get_edge_score(prop1, prop2, model, freq)) for prop1 in props_edge1 for prop2 in props_edge2]
+            similatiry_edges = [(prop1, prop2, get_edge_score(prop1, prop2, unmutables["model"], unmutables["freq"])) for prop1 in props_edge1 for prop2 in props_edge2]
 
             # we want the cluster similar properties
-            clustered_sentences_1: Dict[int, List[str]] = model.clustering(props_edge1, distance_threshold=DEFAULT_DIST_THRESHOLD_FOR_CLUSTERS)
-            clustered_sentences_2: Dict[int, List[str]] = model.clustering(props_edge2, distance_threshold=DEFAULT_DIST_THRESHOLD_FOR_CLUSTERS)
+            clustered_sentences_1: Dict[int, List[str]] = unmutables["model"].clustering(props_edge1, distance_threshold=DEFAULT_DIST_THRESHOLD_FOR_CLUSTERS)
+            clustered_sentences_2: Dict[int, List[str]] = unmutables["model"].clustering(props_edge2, distance_threshold=DEFAULT_DIST_THRESHOLD_FOR_CLUSTERS)
 
             # for each two clusters (from the opposite side of the bipartite) we will take only one edge, which is the maximum weighted.
             cluster_edges_weights = get_edges_with_maximum_weight(similatiry_edges, clustered_sentences_1, clustered_sentences_2)
                 
             # now we want to get the maximum weighted match, which hold the constraint that each cluster has no more than one edge.
             # we will look only on edges that appear in cluster_edges_weights
-            edges = utils.get_maximum_weighted_match(model, clustered_sentences_1, clustered_sentences_2, weights=cluster_edges_weights)
+            edges = utils.get_maximum_weighted_match(unmutables["model"], clustered_sentences_1, clustered_sentences_2, weights=cluster_edges_weights)
             edges = sorted(edges, key=lambda x: x[2], reverse=True)
             
             # score is just the sum of all the edges (edges between clusters)
@@ -308,8 +311,8 @@ def get_best_pair_mapping(model: SentenceEmbedding,
             coverage += min(len(props_edge1), len(props_edge2))
 
         mappings.append((mapping[0], mapping_score, coverage))
-        cache[((mapping[0][0][0], mapping[0][0][1]),(mapping[0][1][0], mapping[0][1][1]))] = mapping_score
-        cache[((mapping[1][0][0], mapping[1][0][1]),(mapping[1][1][0], mapping[1][1][1]))] = mapping_score
+        cache["scores"][((mapping[0][0][0], mapping[0][0][1]),(mapping[0][1][0], mapping[0][1][1]))] = mapping_score
+        cache["scores"][((mapping[1][0][0], mapping[1][0][1]),(mapping[1][1][0], mapping[1][1][1]))] = mapping_score
 
     mappings = sorted(mappings, key=lambda x: x[1], reverse=True)
     if depth > 0:

@@ -13,7 +13,7 @@ from .quasimodo import Quasimodo
 from .data_collector import DataCollector
 from frequency.frequency import Frequencies
 from utils.sentence_embadding import SentenceEmbedding
-from .mapping import Solution, Pair, SingleMatch, FREQUENCY_THRESHOLD
+from .mapping import Cache, Solution, Pair, SingleMatch, FREQUENCY_THRESHOLD, Unmutables
 from .mapping import get_score, update_already_mapping, update_paris_map, get_all_possible_pairs_map, get_best_pair_mapping
 
 root = Path(__file__).resolve().parent.parent.parent
@@ -58,7 +58,6 @@ class Suggestions(object):
             openie_suggestinos = openIE.get_entity_suggestions_wrapper(self.entity, self.prop, n_largest=5)
             self.openie_suggestinos[f"{self.entity}#{self.prop}"] = openie_suggestinos  
             should_save = True
-        # openie_suggestinos = []
 
         if should_save:
             self.save_database()
@@ -76,40 +75,39 @@ class Suggestions(object):
             json.dump(self.openie_suggestinos, f3, indent='\t')
 
 
-def get_suggestions_for_missing_entities(data_collector: DataCollector, 
-                                         base_not_mapped_entity: str, 
+def get_suggestions_for_missing_entities(base_not_mapped_entity: str, 
                                          base_already_mapping: List[str], 
                                          target_already_mapping: List[str],
-                                         model: SentenceEmbedding, 
-                                         verbose: bool = False
+                                         unmutables: Dict[str, Unmutables],
+                                         args: dict
                                          ) -> List[str]:
     suggests_list = {}
     # we need all the relations between the entity (the one that not mapped) to the entities that already mapped (again - in the same domain)
     for idx, base_entity in enumerate(base_already_mapping):
         # we going to use the map that we already know (base_entity -> match_target_entity)
         match_target_entity = target_already_mapping[idx]
-        if verbose: 
+        if args["verbose"]: 
             secho(f"(^{base_not_mapped_entity}, {base_entity})", fg="blue", bold=True)
             secho(f"  {match_target_entity}", fg="red", bold=True)
 
-        relations1 = data_collector.get_entities_relations(base_entity, base_not_mapped_entity)
-        relations2 = data_collector.get_entities_relations(base_not_mapped_entity, base_entity)        
+        relations1 = unmutables["data_collector"].get_entities_relations(base_entity, base_not_mapped_entity)
+        relations2 = unmutables["data_collector"].get_entities_relations(base_not_mapped_entity, base_entity)        
 
         actual_suggestions = []
         # we going to run over the relations we found, and extract suggestions with them.
         for relation in set(relations1 + relations2):
-            suggestions_model = Suggestions(match_target_entity, relation, quasimodo=data_collector.quasimodo)
+            suggestions_model = Suggestions(match_target_entity, relation, quasimodo=unmutables["data_collector"].quasimodo)
             suggestions = suggestions_model.get_suggestions()
             # We take only 1 or 2 tokens (since it should be nouns).
             suggestions = [p for p in suggestions if len(p.split()) <= 2]
             if suggestions:
                 # suggestions are found.
                 actual_suggestions.extend(suggestions)
-                if verbose:
+                if args["verbose"]:
                     secho(f"    {relation}: ", fg="green", bold=True, nl=False)
                     secho(f"{list(set(suggestions))}", fg="cyan")
         
-        if verbose: 
+        if args["verbose"]: 
             if not relations1 + relations2:
                 secho(f"    No match found!", fg="green")
             print()
@@ -117,7 +115,7 @@ def get_suggestions_for_missing_entities(data_collector: DataCollector,
         # define how tight are the clusters. We want them to be tight enougth for not loosing suggestions,
         # but not too much, because the idea is to clustering to reduce computations.
         cluster_distance_threshold = 0.6
-        clusters = {v[0]: v for _, v in model.clustering((actual_suggestions), cluster_distance_threshold).items()}
+        clusters = {v[0]: v for _, v in unmutables["model"].clustering((actual_suggestions), cluster_distance_threshold).items()}
 
         # because we taking suggestions from few sources (quasimodo, openIE, google) we expect to get duplicates
         # suggestions (with the exact name or near), in other words - we expect that the clusters length will be 
@@ -179,19 +177,15 @@ def mapping_suggestions_create_new_solution(
     available_pairs: List[List[SingleMatch]],
     current_solution: Solution,
     solutions: List[Solution],
-    relations_already_seen: Set[Tuple[Tuple[Pair]]],
-    mappings_already_seen: Set[Tuple[str]],
-    data_collector: DataCollector,
-    model: SentenceEmbedding,
-    freq: Frequencies,
     top_suggestions: List[str],
     domain: str,
-    cache: dict,
-    num_of_suggestions: int):
+    unmutables: Dict[str, Unmutables],
+    cache: Dict[str, Cache],
+    args: dict):
     """this function is use for mapping in suggestions mode. this is only one iteration"""
     
     # we will get the top-num-of-suggestions with the best score.
-    best_results_for_current_iteration = get_best_pair_mapping(model, freq, data_collector, available_pairs, cache, num_of_suggestions)
+    best_results_for_current_iteration = get_best_pair_mapping(unmutables, available_pairs, cache, args["num_of_suggestions"])
     for result in best_results_for_current_iteration:
         # if the best score is > 0, we will update the base and target lists of the already mapping entities.
         # otherwise, if the best score is 0, we have no more mappings to do.
@@ -216,9 +210,9 @@ def mapping_suggestions_create_new_solution(
             
             mapping_repr = [f"{b} --> {t}" for b, t in zip(base_already_mapping_new, target_already_mapping_new)]
             mapping_repr_as_tuple = tuple(sorted(mapping_repr))
-            if mapping_repr_as_tuple in mappings_already_seen:
+            if mapping_repr_as_tuple in cache["mappings"]:
                 continue
-            mappings_already_seen.add(mapping_repr_as_tuple)
+            cache["mappings"].add(mapping_repr_as_tuple)
             
             # sometimes it found the same entity
             if target_already_mapping_new[-1] == base_already_mapping_new[-1]:
@@ -233,9 +227,9 @@ def mapping_suggestions_create_new_solution(
             coverage.append(result["coverage"])
             
             relations_as_tuple = tuple([tuple(relation) for relation in sorted(relations)])
-            if relations_as_tuple in relations_already_seen:
+            if relations_as_tuple in cache["relations"]:
                 continue
-            relations_already_seen.add(relations_as_tuple)
+            cache["relations"].add(relations_as_tuple)
                 
             # updating the top suggestions for the GUI
             if domain == "actual_base":
@@ -263,13 +257,9 @@ def mapping_suggestions_helper(
     solution: Solution,
     entity_from_second_domain: str,
     solutions: List[Solution],
-    relations_already_seen: Set[Tuple[Tuple[Pair]]],
-    mappings_already_seen: Set[Tuple[str]],
-    cache: dict,
-    num_of_suggestions: int,
-    data_collector: DataCollector,
-    model: SentenceEmbedding,
-    freq: Frequencies,
+    unmutables: Dict[str, Unmutables],
+    cache: Dict[str, Cache],
+    args: dict,
     top_suggestions: List[str]
     ):
     if not suggestions:
@@ -296,15 +286,11 @@ def mapping_suggestions_helper(
         available_pairs=available_pairs,
         current_solution=copy.deepcopy(solution),
         solutions=solutions,
-        relations_already_seen=relations_already_seen,
-        mappings_already_seen=mappings_already_seen,
-        data_collector=data_collector,
-        model=model,
-        freq=freq,
         top_suggestions=top_suggestions,
         domain=domain,
+        unmutables=unmutables,
         cache=cache,
-        num_of_suggestions=num_of_suggestions,
+        args=args,
     )
 
 
@@ -312,16 +298,11 @@ def mapping_suggestions(
     domain: List[str],
     first_domain: str, 
     second_domain: str, 
-    solution: Solution, 
-    data_collector: DataCollector,
-    model: SentenceEmbedding, 
-    freq: Frequencies,
+    solution: Solution,
     solutions: List[Solution],
-    relations_already_seen: Set[Tuple[Tuple[Pair]]],
-    mappings_already_seen: Set[Tuple[str]],
-    cache: dict,
-    num_of_suggestions: int,
-    verbose: bool):
+    unmutables: Dict[str, Unmutables],
+    cache: Dict[str, Cache],
+    args: dict):
     
     first_domain_not_mapped_entities = [entity for entity in domain if entity not in solution.get_actual(first_domain)]
     if not first_domain_not_mapped_entities:
@@ -335,12 +316,11 @@ def mapping_suggestions(
     # for example, if the first domain is [earth, gravity], and the entity not mapped yet is 'sun', we will extract all the relations
     # between earth:sun and gravity:sun. So if we already know that earth->electron and gravity->electricity, we will store in the
     # dict {'electron': earth:sun, 'electricity': gravity:sun}. remember that the syntax e1:e2 is list of relations (str).
-    entities_suggestions: Dict[str, List[str]] = get_suggestions_for_missing_entities(  data_collector, 
-                                                                                        entity_not_mapped_yet, 
+    entities_suggestions: Dict[str, List[str]] = get_suggestions_for_missing_entities(  entity_not_mapped_yet, 
                                                                                         solution.get_actual(first_domain), 
                                                                                         solution.get_actual(second_domain), 
-                                                                                        model=model,
-                                                                                        verbose=verbose)
+                                                                                        unmutables=unmutables,
+                                                                                        args=args)
     
     total_suggestions = []
     # we want to reduce unnecessary computations. So we instead of running over all the suggestions.
@@ -357,13 +337,9 @@ def mapping_suggestions(
                                     solution, 
                                     key,
                                     solutions,
-                                    relations_already_seen,
-                                    mappings_already_seen,
+                                    unmutables,
                                     cache,
-                                    num_of_suggestions,
-                                    data_collector,
-                                    model,
-                                    freq,
+                                    args,
                                     top_suggestions)
         
         if top_suggestions: # TODO: check how is possible that this can be empty
@@ -381,13 +357,9 @@ def mapping_suggestions(
                                             solution, 
                                             key,
                                             solutions,
-                                            relations_already_seen,
-                                            mappings_already_seen,
+                                            unmutables,
                                             cache,
-                                            num_of_suggestions,
-                                            data_collector,
-                                            model,
-                                            freq,
+                                            args,
                                             top_suggestions)
         
         # using just for knowing how many solutions added in that call.
@@ -410,20 +382,15 @@ def mapping_suggestions(
 def mapping_suggestions_wrapper(
     base: List[str], 
     target: List[str],
-    num_of_suggestions: int,
     solutions: List[Solution],
-    data_collector: DataCollector,
-    model: SentenceEmbedding,
-    freq: Frequencies,
-    mappings_already_seen: Set[Tuple[Tuple[Pair]]],
-    relations_already_seen: Set[Tuple[str]],
-    cache: dict,
-    verbose: bool
+    args: dict,
+    unmutables: Dict[str, Unmutables],
+    cache: Dict[str, Cache]
     ) -> List[Solution]:
 
     # array of addition solutions for the suggestions if some entities have missing mappings.
     suggestions_solutions = []
-    if num_of_suggestions > 0:
+    if args["num_of_suggestions"] > 0:
         # we want to work only on the best solutions.
         solutions = sorted(solutions, key=lambda x: (x.length, x.score), reverse=True)
         # all the following will happen only if there are missing mapping for some entity.
@@ -446,30 +413,20 @@ def mapping_suggestions_wrapper(
                 mapping_suggestions(domain=base, 
                                     first_domain="actual_base", 
                                     second_domain="actual_target", 
-                                    solution=solution, 
-                                    data_collector=data_collector, 
-                                    model=model, 
-                                    freq=freq, 
-                                    solutions=suggestions_solutions, 
-                                    mappings_already_seen=mappings_already_seen,
-                                    relations_already_seen=relations_already_seen,
+                                    solution=solution,
+                                    solutions=suggestions_solutions,
+                                    unmutables=unmutables,
                                     cache=cache, 
-                                    num_of_suggestions=num_of_suggestions, 
-                                    verbose=verbose)
+                                    args=args)
                 
                 mapping_suggestions(domain=target, 
                                     first_domain="actual_target", 
                                     second_domain="actual_base", 
-                                    solution=solution, 
-                                    data_collector=data_collector, 
-                                    model=model, 
-                                    freq=freq, 
-                                    solutions=suggestions_solutions, 
-                                    mappings_already_seen=mappings_already_seen,
-                                    relations_already_seen=relations_already_seen,
+                                    solution=solution,
+                                    solutions=suggestions_solutions,
+                                    unmutables=unmutables,
                                     cache=cache, 
-                                    num_of_suggestions=num_of_suggestions, 
-                                    verbose=verbose)                
+                                    args=args)                
     return suggestions_solutions
         
 

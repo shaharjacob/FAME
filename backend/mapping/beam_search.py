@@ -1,14 +1,10 @@
 import copy
 from pathlib import Path
-from typing import List, Tuple, Union, Set, Dict
+from typing import List, Dict
 
-from .quasimodo import Quasimodo
-from .data_collector import DataCollector
-from frequency.frequency import Frequencies
+from . import mapping
+from .mapping import Solution, Cache, Unmutables
 from .suggestions import mapping_suggestions_wrapper
-from utils.sentence_embadding import SentenceEmbedding
-from .mapping import Solution, Pair
-from .mapping import get_score, update_already_mapping, update_paris_map, get_best_pair_mapping_for_current_iteration, get_all_possible_pairs_map, get_best_pair_mapping, print_results, set_unmutables
 
 root = Path(__file__).resolve().parent.parent.parent
 
@@ -17,16 +13,13 @@ def beam_search(
     base: List[str], 
     target: List[str],
     solutions: List[Solution],
-    relations_already_seen: Set[Tuple[Tuple[Pair]]],
-    mappings_already_seen: Set[Tuple[str]],
-    freq: Frequencies,
-    cache: dict,
-    N: int):
+    cache: Dict[str, Cache],
+    args: dict):
 
     curr_solutions = []
     for solution in solutions:
         # we will get the top-N pairs with the best score.
-        best_results_for_current_iteration, modified_results = get_best_pair_mapping_for_current_iteration(solution.availables, solution.sorted_results, N)
+        best_results_for_current_iteration, modified_results = mapping.get_best_pair_mapping_for_current_iteration(solution.availables, solution.sorted_results, args["N"])
         solution.sorted_results = modified_results
         for result in best_results_for_current_iteration:
             # if the best score is > 0, we will update the base and target lists of the already mapping entities.
@@ -38,9 +31,9 @@ def beam_search(
                 
                 solution_copy.relations.append(result["best_mapping"])
                 relations_as_tuple = tuple([tuple(relation) for relation in sorted(solution_copy.relations)])
-                if relations_as_tuple in relations_already_seen:
+                if relations_as_tuple in cache["relations"]:
                     continue
-                relations_already_seen.add(relations_as_tuple)
+                cache["relations"].add(relations_as_tuple)
 
                 solution_copy.scores.append(round(result["best_score"], 3))
                 solution_copy.coverage.append(result["coverage"])
@@ -50,19 +43,19 @@ def beam_search(
                 t1, t2 = result["best_mapping"][1][0], result["best_mapping"][1][1]
                 score = 0
                 if b1 not in solution_copy.actual_base and t1 not in solution_copy.actual_target:
-                    score += get_score(solution_copy.actual_base, solution_copy.actual_target, b1, t1, cache)
-                    update_already_mapping(b1, t1, solution_copy.actual_base, solution_copy.actual_target, solution_copy.actual_indecies)
+                    score += mapping.get_score(solution_copy.actual_base, solution_copy.actual_target, b1, t1, cache["scores"])
+                    mapping.update_already_mapping(b1, t1, solution_copy.actual_base, solution_copy.actual_target, solution_copy.actual_indecies)
 
                 if b2 not in solution_copy.actual_base and t2 not in solution_copy.actual_target:
-                    score += get_score(solution_copy.actual_base, solution_copy.actual_target, b2, t2, cache)
-                    update_already_mapping(b2, t2, solution_copy.actual_base, solution_copy.actual_target, solution_copy.actual_indecies)
+                    score += mapping.get_score(solution_copy.actual_base, solution_copy.actual_target, b2, t2, cache["scores"])
+                    mapping.update_already_mapping(b2, t2, solution_copy.actual_base, solution_copy.actual_target, solution_copy.actual_indecies)
 
                 solution_copy.score += score
                 mapping_repr = [f"{b} --> {t}" for b, t in zip(solution_copy.actual_base, solution_copy.actual_target)]
                 mapping_repr_as_tuple = tuple(sorted(mapping_repr))
-                if mapping_repr_as_tuple in mappings_already_seen:
+                if mapping_repr_as_tuple in cache["mappings"]:
                     continue
-                mappings_already_seen.add(mapping_repr_as_tuple)
+                cache["mappings"].add(mapping_repr_as_tuple)
 
                 solution_copy.mapping = mapping_repr
 
@@ -70,7 +63,7 @@ def beam_search(
                 # for example, if we already map a->1, b->2, we will looking only for pairs which respect the 
                 # pairs that already maps. in our example it can be one of the following:
                 # (a->1, c->3) or (b->2, c->3).
-                new_available_pairs = update_paris_map(solution_copy.availables, solution_copy.actual_base, solution_copy.actual_target, solution_copy.actual_indecies)
+                new_available_pairs = mapping.update_paris_map(solution_copy.availables, solution_copy.actual_base, solution_copy.actual_target, solution_copy.actual_indecies)
                 solution_copy.availables = new_available_pairs
                 solution_copy.length = len(solution_copy.actual_base)
                 curr_solutions.append(solution_copy)
@@ -79,7 +72,7 @@ def beam_search(
         return
     
     # this is the core of the beam search algorithm. We always keep with N solutions.
-    solutions_ = sorted(solutions + curr_solutions, key=lambda x: (x.length, x.score), reverse=True)[:N]
+    solutions_ = sorted(solutions + curr_solutions, key=lambda x: (x.length, x.score), reverse=True)[:args["N"]]
     for i, solution_ in enumerate(solutions_):
         solutions[i] = solution_
 
@@ -87,11 +80,8 @@ def beam_search(
         base=base, 
         target=target,
         solutions=solutions,
-        relations_already_seen=relations_already_seen,
-        mappings_already_seen=mappings_already_seen,
-        freq=freq,
         cache=cache,
-        N=N
+        args=args
     )
 
 
@@ -99,18 +89,18 @@ def beam_search_wrapper(
     base: List[str], 
     target: List[str],
     args: dict,
-    unmutables: Dict[str, Union[Quasimodo, DataCollector, SentenceEmbedding, Frequencies]] = {}
+    unmutables: Dict[str, Unmutables] = {}
     ) -> List[Solution]:
 
     # we want all the possible pairs.
     # general there are (n choose 2) * (n choose 2) * 2 pairs.
-    available_pairs = get_all_possible_pairs_map(base, target)
+    available_pairs = mapping.get_all_possible_pairs_map(base, target)
 
     # better to init all the objects here, since they are not changed in the run
-    set_unmutables(unmutables, args)
+    mapping.set_unmutables(unmutables, args)
 
-    cache = {}
-    best_results = get_best_pair_mapping(unmutables["model"], unmutables["freq"], unmutables["data_collector"], available_pairs, cache)
+    cache = {"scores": {}, "mappings": set(), "relations": set()}
+    best_results = mapping.get_best_pair_mapping(unmutables, available_pairs, cache)
 
     # this is an array of solutions we going to update in the mapping function.
     solutions = [Solution(
@@ -127,33 +117,23 @@ def beam_search_wrapper(
                 sorted_results=copy.deepcopy(best_results)) 
                 for _ in range(args["N"])]
 
-    mappings_already_seen = set()
-    relations_already_seen = set()
     beam_search(base=base, 
                 target=target, 
-                solutions=solutions, 
-                mappings_already_seen=mappings_already_seen,
-                relations_already_seen=relations_already_seen,
-                freq=unmutables["freq"], 
+                solutions=solutions,
                 cache=cache, 
-                N=args["N"])
+                args=args)
     
     suggestions_solutions = mapping_suggestions_wrapper(base, 
                                                         target,
-                                                        args["num_of_suggestions"],
                                                         solutions,
-                                                        unmutables["data_collector"],
-                                                        unmutables["model"],
-                                                        unmutables["freq"],
-                                                        mappings_already_seen,
-                                                        relations_already_seen,
-                                                        cache,
-                                                        args["verbose"])
+                                                        args,
+                                                        unmutables,
+                                                        cache)
 
     all_solutions = sorted(solutions + suggestions_solutions, key=lambda x: (x.length, x.score), reverse=True)
     solutions_to_return_and_print = 10
     all_solutions = all_solutions[:solutions_to_return_and_print]
     if args["verbose"]:
-        print_results(base, target, all_solutions)       
+        mapping.print_results(base, target, all_solutions)       
 
     return all_solutions
