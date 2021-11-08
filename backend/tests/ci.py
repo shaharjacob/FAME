@@ -166,7 +166,7 @@ class TestMappingSuggestoins(unittest.TestCase):
             args = {
                 "num_of_suggestions": 1,
                 "N": tv["input"]["depth"]['beam'],
-                "verbose": True,
+                "verbose": False if 'CI' in os.environ else True,
                 "freq_th": FREQUENCY_THRESHOLD,
                 "model_name": 'msmarco-distilbert-base-v4'
             }
@@ -192,7 +192,7 @@ class TestMappingSuggestoins(unittest.TestCase):
             args = {
                 "num_of_suggestions": 1,
                 "N": tv["input"]["depth"]['dfs'],
-                "verbose": True,
+                "verbose": False if 'CI' in os.environ else True,
                 "freq_th": FREQUENCY_THRESHOLD,
                 "model_name": 'msmarco-distilbert-base-v4'
             }
