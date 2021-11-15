@@ -18,16 +18,16 @@ TEST_FOLDER = backend_dir / 'tests'
 
 class TestFunctions(unittest.TestCase):
 
-    def test_concept_net(self):
-        # testing concept_net.get_entities_relations
-        reference = ['revolving around the']
-        actual = concept_net.get_entities_relations("earth", "sun")
-        self.assertEqual(sorted(reference), sorted(actual))
+    # def test_concept_net(self):
+    #     # testing concept_net.get_entities_relations
+    #     reference = ['revolving around the']
+    #     actual = concept_net.get_entities_relations("earth", "sun")
+    #     self.assertEqual(sorted(reference), sorted(actual))
 
-        # testing concept_net.get_entity_props
-        reference = ['4.5 billion years old', 'a word', 'an oblate sphereoid', 'an oblate spheroid', 'finite', 'flat', 'one astronomical unit from the Sun', 'one of many planets', 'receive rain from clouds', 'revolving around the sun', 'round like a ball', 'spherical', 'spherical in shape', 'very beautiful', 'very heavy']
-        actual = concept_net.get_entity_props("earth", n_best=10)
-        self.assertEqual(sorted(reference), sorted(actual))
+    #     # testing concept_net.get_entity_props
+    #     reference = ['4.5 billion years old', 'a word', 'an oblate sphereoid', 'an oblate spheroid', 'finite', 'flat', 'one astronomical unit from the Sun', 'one of many planets', 'receive rain from clouds', 'revolving around the sun', 'round like a ball', 'spherical', 'spherical in shape', 'very beautiful', 'very heavy']
+    #     actual = concept_net.get_entity_props("earth", n_best=10)
+    #     self.assertEqual(sorted(reference), sorted(actual))
 
 
     def test_google_autosuggest(self):
