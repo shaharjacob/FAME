@@ -2,9 +2,9 @@ import sys
 import time
 from pathlib import Path
 from typing import List, Dict
+from multiprocessing import Process
 
 from flask import Flask, jsonify, request
-from backend.mapping import quasimodo
 
 backend_dir = Path(__file__).resolve().parent.parent
 root = backend_dir.resolve().parent
@@ -29,6 +29,9 @@ def mapping_entities():
     # required args
     base = [b.strip() for b in request.args.get('base').split(',')]
     target = [t.strip() for t in request.args.get('target').split(',')]
+
+    # trigger by mail
+    send_mail = request.args.get('email', False)
 
     # unmutable. TODO: pack them together
     # actually this is happen in the mapping wrapper, but here need it after for the graphs.
@@ -62,11 +65,20 @@ def mapping_entities():
     # here we map between base entitites and target entities
     algo = request.args.get('algo') # TODO: make it choice in the GUI (not string input)
     algo_func = beam_search_wrapper if algo == 'beam' else dfs_wrapper
+
+    if send_mail:
+        p = Process(target=mapping_wrapper, kwargs={'func': algo_func, 'base': base, 'target': target, 'args': args, 'unmutables': unmutables})
+        p.start()
+        # send mail here
+        return {
+            "jon_submitted": True
+        }
     solutions = mapping_wrapper(algo_func, 
                                 base=base, 
                                 target=target,
                                 args=args,
                                 unmutables=unmutables)
+
     for solution in solutions:
         # prepare the nodes for the react app
         nodes = python2react.get_nodes_for_app(props=solution.mapping, start_idx=0)

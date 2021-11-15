@@ -137,3 +137,48 @@ Running the first and the third entries:
 python backend/evaluation/evaluation.py --yaml play_around.yaml --specify 1 --specify 3
 ```  
 &nbsp;  
+
+# Troubleshooting
+## M1 apple 
+For transformers:
+bash```
+curl https://sh.rustup.rs -sSf | bash -s
+```
+Restart the terminal, then install again.
+
+For sklearn:
+```bash
+pip install --no-cache --no-use-pep517 pythran cython pybind11 gast"==0.4.0"
+pip install --pre -i https://pypi.anaconda.org/scipy-wheels-nightly/simple scipy
+pip install --no-use-pep517 scikit-learn"==1.0.0"
+```
+
+For sentence_transformers:
+```bash
+# first need to install brew
+ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)" 2> /dev/null
+# after that you should add brew to your PATH
+# now install sentencepiece
+brew install sentencepiece
+
+# now we can install sentence_transformers
+pip install sentence_transformers
+```
+
+### docker
+in your Dockerfile, add the following lines before the pip installations:
+```bash
+RUN apt-get update
+RUN apt-get install -y \
+    build-essential \
+    curl
+RUN apt-get update
+
+# Get Rust
+RUN curl https://sh.rustup.rs -sSf | bash -s -- -y
+ENV PATH="/root/.cargo/bin:${PATH}"
+```
+Then, you should build again the backend:
+```bash
+docker-compose build backend
+```
