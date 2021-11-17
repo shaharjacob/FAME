@@ -16,6 +16,7 @@ import SingleMappingDemo from './components/demo/SingleMappingDemo'
 // others
 import Main from './components/main/Main'
 import Navbar from './components/navbar/Navbar'
+import Navbar2 from './components/navbar/Navbar2'
 import TwoEntities from './components/entities/TwoEntities'
 
 
@@ -24,7 +25,7 @@ const App = () => {
   return (
     <Router>
       <div>
-        <Navbar />
+        <Navbar2 />
         <Switch>
           <Route path='/' exact>
             <Main />
