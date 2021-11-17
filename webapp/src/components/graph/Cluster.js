@@ -30,8 +30,12 @@ const Cluster = () => {
         setBase2(params.get('base2'))
         setTarget1(params.get('target1'))
         setTarget2(params.get('target2'))
-
-        fetch('/api/cluster?' + params).then(response => {
+        
+        let prefix = ""
+        if (process.env.NODE_ENV === "production") {
+            prefix = "http://localhost:5031"
+        }
+        fetch(`${prefix}/api/cluster?` + params).then(response => {
           if(response.ok){
             return response.json()
           }

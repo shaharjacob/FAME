@@ -56,8 +56,12 @@ const SingleMapping = () => {
         // entities which currently display
         setCurrB(base)
         setCurrT(target)
-    
-        fetch('/api/single-mapping?' + params).then(response => {
+        
+        let prefix = ""
+        if (process.env.NODE_ENV === "production") {
+            prefix = "http://localhost:5031"
+        }
+        fetch(`${prefix}/api/single-mapping?` + params).then(response => {
           if(response.ok){
             return response.json()
           }

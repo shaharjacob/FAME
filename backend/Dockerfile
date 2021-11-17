@@ -15,6 +15,7 @@ RUN pip install inflect --no-cache-dir
 RUN pip install requests --no-cache-dir
 RUN pip install graphviz --no-cache-dir
 RUN pip install networkx --no-cache-dir
+RUN pip install flask-cors --no-cache-dir
 RUN pip install beautifulsoup4 --no-cache-dir
 RUN pip install transformers==4.10.3 --no-cache-dir
 RUN pip install sentence_transformers --no-cache-dir

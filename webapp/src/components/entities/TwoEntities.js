@@ -26,7 +26,13 @@ const TwoEntities = () => {
         let entity2 = params.get('entity2')
         setEntity1(entity1)
         setEntity2(entity2)
-        fetch('/api/two-entities?' + params).then(response => {
+
+        let prefix = ""
+        if (process.env.NODE_ENV === "production") {
+            prefix = "http://localhost:5031"
+        }
+        fetch(`${prefix}/api/two-entities?` + params)
+        .then(response => {
           if(response.ok){
             return response.json()
           }

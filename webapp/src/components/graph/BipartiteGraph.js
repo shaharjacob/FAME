@@ -31,7 +31,12 @@ const BipartiteGraph = () => {
     setBase2(params.get('base2'))
     setTarget2(params.get('target2'))
 
-    fetch('/api/bipartite?' + params).then(response => {
+    let prefix = ""
+    if (process.env.NODE_ENV === "production") {
+        prefix = "http://localhost:5031"
+    }
+    fetch(`${prefix}/api/bipartite?` + params)
+    .then(response => {
       if(response.ok){
         return response.json()
       }

@@ -1,6 +1,4 @@
 
-# docker-compose -f docker-compose.yml up -d
-
 version: "3.5"
 
 services:
@@ -29,9 +27,6 @@ services:
       cache_from: ["shaharjacob/mswebapp:latest"]
     ports:
       - "3000:3000"
-    volumes:
-      - ./webapp/src:/webapp/src
     working_dir: /webapp
-    command: npm start
     depends_on:
       - backend

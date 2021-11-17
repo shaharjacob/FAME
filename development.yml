@@ -1,0 +1,9 @@
+# docker-compose -f docker-compose.yml -f development.yml up -d
+
+version: "3.5"
+
+services:
+  webapp:
+    volumes:
+      - ./webapp/src:/webapp/src
+    command: npm start

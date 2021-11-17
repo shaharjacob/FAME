@@ -4,6 +4,7 @@ from pathlib import Path
 from typing import List, Dict
 from multiprocessing import Process
 
+from flask_cors import CORS
 from flask import Flask, jsonify, request
 
 backend_dir = Path(__file__).resolve().parent.parent
@@ -21,6 +22,7 @@ from mapping.mapping import FREQUENCY_THRESHOLD, NUM_OF_CLUSTERS_TO_CALC, EDGE_T
 from mapping.mapping import get_pair_mapping, get_edge_score, get_edges_with_maximum_weight, mapping_wrapper
 
 app = Flask(__name__)
+CORS(app)
 
 @app.route("/api/mapping", methods=["GET", "POST"])
 def mapping_entities():

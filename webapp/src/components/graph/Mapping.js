@@ -32,7 +32,11 @@ const Mapping = () => {
         setBaseEntities(params.get("base"))
         setTargetEntities(params.get("target"))
 
-        fetch('/api/mapping?' + params).then(response => {
+        let prefix = ""
+        if (process.env.NODE_ENV === "production") {
+            prefix = "http://localhost:5031"
+        }
+        fetch(`${prefix}/api/mapping?` + params).then(response => {
           if(response.ok){
             return response.json()
           }

@@ -1,0 +1,7 @@
+# docker-compose -f docker-compose.yml -f production.yml up -d
+
+version: "3.5"
+
+services:
+  webapp:
+    command: serve -s --cors build
