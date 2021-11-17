@@ -5,10 +5,10 @@ README_md = Path(__file__).parent / "README.md"
 README = README_md.read_text(encoding='utf-8')
 
 setup(
-  name='mapping-entities',
+  name='autoSME',
   version="1.0.0",
 
-  url="https://github.com/shaharjacob/mapping-entities",
+  url="https://github.com/shaharjacob/autoSME",
   description="Mapping entities project",
   long_description=README,
   long_description_content_type="text/markdown",
