@@ -11,10 +11,9 @@ from mapping.data_collector import DataCollector
 
 
 class SentenceEmbedding(SentenceTransformer):
-    def __init__(self, model: str = 'msmarco-distilbert-base-v4', data_collector: DataCollector = None):
+    def __init__(self, model: str = 'msmarco-distilbert-base-v4'):
         super().__init__(model)
         self.embaddings = {}
-        self.data_collector = data_collector
 
     
     def encode_sentence(self, sentence: str):

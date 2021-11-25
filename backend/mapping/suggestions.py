@@ -20,59 +20,54 @@ root = Path(__file__).resolve().parent.parent.parent
 IGNORE_SUGGESTION = ["the", "they", "us", "we", "you", 'i']
 
 class Suggestions(object):
-    def __init__(self, entity: str, prop: str, save_db: bool = True, override_database: bool = False, quasimodo: Quasimodo = None):
+    def __init__(self, entity: str, prop: str, api: dict, quasimodo: Quasimodo):
         self.entity = entity
         self.prop = prop
+        self.api = api
         self.quasimodo = quasimodo
-        self.override_database = override_database
-        self.save_db = save_db
-        self.google_suggestinos = utils.read_json(root / 'backend' / 'database' / 'google_suggestinos.json') if save_db else {}
-        self.quasimodo_suggestinos = utils.read_json(root / 'backend' / 'database' / 'quasimodo_suggestinos.json') if save_db else {}
-        self.openie_suggestinos = utils.read_json(root / 'backend' / 'database' / 'openie_suggestinos.json') if save_db else {}
-    
+        if api.get("google", False):
+            self.google_suggestinos = utils.read_json(root / 'backend' / 'database' / 'google_suggestinos.json')
+        if api.get("openie", False):
+            self.openie_suggestinos = utils.read_json(root / 'backend' / 'database' / 'openie_suggestinos.json')
+        if api.get("quasimodo", False):
+            self.quasimodo_suggestinos = utils.read_json(root / 'backend' / 'database' / 'quasimodo_suggestinos.json')
 
     def get_suggestions(self):
-        should_save = False
-        if f"{self.entity}#{self.prop}" in self.quasimodo_suggestinos and not self.override_database:
-            quasimodo_suggestinos = self.quasimodo_suggestinos[f"{self.entity}#{self.prop}"]
+        if self.api.get("quasimodo", False):
+            if f"{self.entity}#{self.prop}" in self.quasimodo_suggestinos:
+                quasimodo_suggestinos = self.quasimodo_suggestinos[f"{self.entity}#{self.prop}"]
+            else:
+                quasimodo_suggestinos = self.quasimodo.get_entity_suggestions(self.entity, self.prop, n_largest=5, plural_and_singular=True)
+                self.quasimodo_suggestinos[f"{self.entity}#{self.prop}"] = quasimodo_suggestinos  
+                with open(root / 'backend' / 'database' / 'quasimodo_suggestinos.json', 'w') as f2:
+                    json.dump(self.quasimodo_suggestinos, f2, indent='\t')
         else:
-            if not self.quasimodo:
-                self.quasimodo = Quasimodo()
-            quasimodo_suggestinos = self.quasimodo.get_entity_suggestions(self.entity, self.prop, n_largest=5, plural_and_singular=True)
-            self.quasimodo_suggestinos[f"{self.entity}#{self.prop}"] = quasimodo_suggestinos  
-            should_save = True
+            quasimodo_suggestinos = []
 
-        if 'SKIP_GOOGLE' not in os.environ:
-            if f"{self.entity}#{self.prop}" in self.google_suggestinos and not self.override_database:
+        if 'SKIP_GOOGLE' not in os.environ and self.api.get("google", False):
+            if f"{self.entity}#{self.prop}" in self.google_suggestinos:
                 google_suggestinos = self.google_suggestinos[f"{self.entity}#{self.prop}"]
             else:
                 google_suggestinos = google_autosuggest.get_entity_suggestions(self.entity, self.prop)
                 self.google_suggestinos[f"{self.entity}#{self.prop}"] = google_suggestinos  
-                should_save = True
+                with open(root / 'backend' / 'database' / 'google_suggestinos.json', 'w') as f1:
+                    json.dump(self.google_suggestinos, f1, indent='\t')
         else:
             google_suggestinos = []
 
-        if f"{self.entity}#{self.prop}" in self.openie_suggestinos and not self.override_database:
-            openie_suggestinos = self.openie_suggestinos[f"{self.entity}#{self.prop}"]
+        if self.api.get("openie", False):
+            if f"{self.entity}#{self.prop}" in self.openie_suggestinos:
+                openie_suggestinos = self.openie_suggestinos[f"{self.entity}#{self.prop}"]
+            else:
+                openie_suggestinos = openIE.get_entity_suggestions_wrapper(self.entity, self.prop, n_largest=5)
+                self.openie_suggestinos[f"{self.entity}#{self.prop}"] = openie_suggestinos  
+                with open(root / 'backend' / 'database' / 'openie_suggestinos.json', 'w') as f3:
+                    json.dump(self.openie_suggestinos, f3, indent='\t')
         else:
-            openie_suggestinos = openIE.get_entity_suggestions_wrapper(self.entity, self.prop, n_largest=5)
-            self.openie_suggestinos[f"{self.entity}#{self.prop}"] = openie_suggestinos  
-            should_save = True
-
-        if should_save:
-            self.save_database()
+            openie_suggestinos = []
 
         suggestions = google_suggestinos + quasimodo_suggestinos + openie_suggestinos
         return [suggestion for suggestion in suggestions if suggestion not in IGNORE_SUGGESTION]
-
-
-    def save_database(self):
-        with open(root / 'backend' / 'database' / 'google_suggestinos.json', 'w') as f1:
-            json.dump(self.google_suggestinos, f1, indent='\t')
-        with open(root / 'backend' / 'database' / 'quasimodo_suggestinos.json', 'w') as f2:
-            json.dump(self.quasimodo_suggestinos, f2, indent='\t')
-        with open(root / 'backend' / 'database' / 'openie_suggestinos.json', 'w') as f3:
-            json.dump(self.openie_suggestinos, f3, indent='\t')
 
 
 def get_suggestions_for_missing_entities(base_not_mapped_entity: str, 
@@ -96,7 +91,7 @@ def get_suggestions_for_missing_entities(base_not_mapped_entity: str,
         actual_suggestions = []
         # we going to run over the relations we found, and extract suggestions with them.
         for relation in set(relations1 + relations2):
-            suggestions_model = Suggestions(match_target_entity, relation, quasimodo=unmutables["data_collector"].quasimodo)
+            suggestions_model = Suggestions(match_target_entity, relation, api=args, quasimodo=unmutables["data_collector"].quasimodo)
             suggestions = suggestions_model.get_suggestions()
             # We take only 1 or 2 tokens (since it should be nouns).
             suggestions = [p for p in suggestions if len(p.split()) <= 2]
@@ -127,9 +122,15 @@ def get_suggestions_for_missing_entities(base_not_mapped_entity: str,
     return suggests_list
 
 
-def get_score_between_two_entitites(entity1: str, entity2: str, model: SentenceEmbedding = None, data_collector: DataCollector = None, freq: Frequencies = None) -> float:
+def get_score_between_two_entitites(entity1: str, entity2: str) -> float:
     model = SentenceEmbedding()
-    data_collector = DataCollector()
+    api = {
+        "google": True,
+        "openie": True,
+        "quasimodo": True,
+        "conceptnet": False
+    }
+    data_collector = DataCollector(api=api)
     json_folder = root / 'backend' / 'frequency'
     freq = Frequencies(json_folder / 'freq.json', threshold=FREQUENCY_THRESHOLD)
         

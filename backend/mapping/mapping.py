@@ -337,24 +337,8 @@ def update_already_mapping(b: str, t: str, B: List[str], T: List[str], indecies:
 def set_unmutables(unmutables: Dict[str, Union[Quasimodo, DataCollector, SentenceEmbedding, Frequencies]], args: dict):
     if not unmutables:
         unmutables["quasimodo"] = Quasimodo()
-        unmutables["data_collector"] = DataCollector(quasimodo=unmutables["quasimodo"])
-        unmutables["model"] = SentenceEmbedding(model=args["model_name"], data_collector=unmutables["data_collector"])
+        unmutables["data_collector"] = DataCollector(api=args, quasimodo=unmutables["quasimodo"])
+        unmutables["model"] = SentenceEmbedding(model=args["model_name"])
         json_folder = root / 'backend' / 'frequency'
         unmutables["freq"] = Frequencies(json_folder / 'freq.json', threshold=args["freq_th"])
 
-
-if __name__ == "__main__":
-    pass
-    # os.environ['CI'] = 'true'
-
-    # from .dfs import dfs_wrapper
-    # from .beam_search import beam_search_wrapper
-    
-    # # 20x20
-    # base = ['sun', 'planet', 'orbit', 'kepler', 'moon', 'jupiter', 'comet', 'equator', 'zodiac', 'saturn', 'venus', 'neptune', 'pluto', 'nebula', 'eccentricity', 'earth', 'radius', 'eclipse', 'astronomer', 'asteroid']
-    # target = ['nucleus', 'electrons', 'proton', 'neutron', 'atom', 'excitation', 'resonance', 'photon', 'dipole', 'scattering', 'valence', 'helium', 'coupling', 'decay', 'particle', 'spin', 'spectroscopy', 'hydrogen', 'phosphorylation', 'gamma']
-    
-    # base = base[:18]
-    # target = target[:18]
-    # # solutions = dfs_wrapper(base, target, suggestions=False, depth=4, top_n=20, verbose=True)
-    # solutions = beam_search_wrapper(base, target, suggestions=False, N=20, verbose=True)

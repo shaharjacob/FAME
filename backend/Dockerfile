@@ -3,6 +3,25 @@ FROM python:3.8-buster
 COPY . backend/
 WORKDIR /backend
 
+##################################################
+# for mac M1 #
+# Update default packages
+RUN apt-get update
+
+# Get Ubuntu packages
+RUN apt-get install -y \
+    build-essential \
+    curl
+
+# Update new packages
+RUN apt-get update
+
+# Get Rust
+RUN curl https://sh.rustup.rs -sSf | bash -s -- -y
+
+ENV PATH="/root/.cargo/bin:${PATH}"
+##################################################
+
 RUN pip install --upgrade pip
 RUN pip install tqdm --no-cache-dir
 RUN pip install click --no-cache-dir

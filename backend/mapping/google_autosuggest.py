@@ -242,7 +242,7 @@ def get_entity_props(entity: str):
     return google_db[entity]
 
 
-def get_entities_relations(entity1: str, entity2: str, plural_and_singular: bool = True, verbose: bool = False) -> List[str]:
+def get_entities_relations(entity1: str, entity2: str, plural_and_singular: bool = True, verbose: bool = False) -> Dict[str, List[str]]:
     # given two entities, it will give the relations between them.
     # The order is important! get_entities_relations(entity1, entity2) != get_entities_relations(entity2, entity1)
     # for example, if entity1=earth, entity2=sun, it will return relations like: revolve around, not fall into, orbit.
@@ -261,7 +261,7 @@ def get_entities_relations(entity1: str, entity2: str, plural_and_singular: bool
     return process(d, plural_and_singular=plural_and_singular, verbose=verbose)
 
 
-def process(d: Dict[str, List[List[str]]], plural_and_singular: bool = True, verbose: bool = False) -> List[str]:
+def process(d: Dict[str, List[List[str]]], plural_and_singular: bool = True, verbose: bool = False) -> Dict[str, List[str]]:
     engine = inflect.engine()
     suggestions = {"suggestions": [], "props": []}
     for question, objects in d.items():

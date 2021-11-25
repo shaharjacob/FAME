@@ -35,12 +35,24 @@ def mapping_entities():
     # trigger by mail
     send_mail = request.args.get('email', False)
 
+    # additional args
+    # top_n = utils.get_int(request.args.get('top'), 3)
+    args = {
+            "num_of_suggestions": utils.get_int(request.args.get('suggestions'), 3),
+            "N": utils.get_int(request.args.get('depth'), 4),
+            "verbose": True,
+            "google": True,
+            "openie": True,
+            "quasimodo": True,
+            "conceptnet": False
+        }
+
     # unmutable. TODO: pack them together
     # actually this is happen in the mapping wrapper, but here need it after for the graphs.
     quasimodo = Quasimodo()
-    data_collector = DataCollector(quasimodo=quasimodo)
+    data_collector = DataCollector(api=args, quasimodo=quasimodo)
     model_name = 'msmarco-distilbert-base-v4'
-    model = SentenceEmbedding(model=model_name, data_collector=data_collector)
+    model = SentenceEmbedding(model=model_name)
     freq_th = request.args.get('threshold')
     freq_th = freq_th if freq_th else FREQUENCY_THRESHOLD
     freq_json_folder = root / 'backend' / 'frequency'
@@ -51,14 +63,6 @@ def mapping_entities():
         "model": model,
         "freq": freq
     }
-
-    # additional args
-    # top_n = utils.get_int(request.args.get('top'), 3)
-    args = {
-            "num_of_suggestions": utils.get_int(request.args.get('suggestions'), 3),
-            "N": utils.get_int(request.args.get('depth'), 4),
-            "verbose": True
-        }
     
     # for webapp
     data = []
@@ -144,8 +148,14 @@ def mapping_entities():
 
 @app.route("/api/single-mapping", methods=["GET", "POST"])
 def single_mapping():
-    data_collector = DataCollector()
-    model = SentenceEmbedding(model='msmarco-distilbert-base-v4', data_collector=data_collector)
+    api = {
+        "google": True,
+        "openie": True,
+        "quasimodo": True,
+        "conceptnet": False
+    }
+    data_collector = DataCollector(api=api)
+    model = SentenceEmbedding(model='msmarco-distilbert-base-v4')
 
     edge1 = (request.args.get('base1'), request.args.get('base2'))
     edge2 = (request.args.get('target1'), request.args.get('target2'))
@@ -205,8 +215,14 @@ def single_mapping():
 def two_entities():
     entity1 = request.args.get('entity1') 
     entity2 = request.args.get('entity2')
-    data_collector = DataCollector() 
 
+    api = {
+        "google": True,
+        "openie": True,
+        "quasimodo": True,
+        "conceptnet": False
+    }
+    data_collector = DataCollector(api=api) 
     props1 = data_collector.get_entities_relations(entity1, entity2, from_where=True)
     for k, v in props1.items():
         props1[k] = "<br/>".join(v)
@@ -228,8 +244,14 @@ def bipartite_graph():
     target1 = request.args.get('target1')
     target2 = request.args.get('target2')
 
-    data_collector = DataCollector()
-    model = SentenceEmbedding(data_collector=data_collector)
+    api = {
+        "google": True,
+        "openie": True,
+        "quasimodo": True,
+        "conceptnet": False
+    }
+    data_collector = DataCollector(api=api)
+    model = SentenceEmbedding(model='msmarco-distilbert-base-v4')
     threshold = request.args.get('threshold')
     threshold = threshold if threshold else FREQUENCY_THRESHOLD
     freq_json_folder = root / 'backend' / 'frequency'
@@ -258,8 +280,14 @@ def clustring():
     edge1 = (request.args.get('base1'), request.args.get('base2'))
     edge2 = (request.args.get('target1'), request.args.get('target2'))
 
-    data_collector = DataCollector()
-    model = SentenceEmbedding(data_collector=data_collector)
+    api = {
+        "google": True,
+        "openie": True,
+        "quasimodo": True,
+        "conceptnet": False
+    }
+    data_collector = DataCollector(api=api)
+    model = SentenceEmbedding(model='msmarco-distilbert-base-v4')
 
     d = {}
     for thresh in utils.DISTANCE_TRESHOLDS:
