@@ -102,7 +102,11 @@ def evaluate(model_name: str,
             "N": tv["input"]["depth"][algorithm],
             "verbose": True,
             "freq_th": freq_th,
-            "model_name": model_name
+            "model_name": model_name,
+            "google": True,
+            "openie": True,
+            "quasimodo": True,
+            "conceptnet": False
         }
         
         algo_func = beam_search_wrapper if algorithm == 'beam' else dfs_wrapper
@@ -161,7 +165,7 @@ def evaluate(model_name: str,
 @click.option('-c', '--comment', default="", type=str, help="Additional comment for the job")
 @click.option('-s', '--specify', default=[], type=int, multiple=True, help="Specify which entry of the yaml file to evaluate")
 @click.option('-a', '--algo', default='beam', type=str, help="Which algorithm to use")
-@click.option('-g', '--num-of-suggestions', type=int, default=10, help="Number of suggestions for missing entities")
+@click.option('-g', '--num-of-suggestions', type=int, default=0, help="Number of suggestions for missing entities")
 def run(model, freq_th, yaml, comment, specify, algo, num_of_suggestions):
     torch.cuda.empty_cache()
     evaluate(model, freq_th, yaml, list(specify), algo, num_of_suggestions)
