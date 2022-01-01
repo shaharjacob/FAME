@@ -21701,5 +21701,81 @@
 	"boats#12 guests": [],
 	"12 guests#boats": [],
 	"boats#16 passengers": [],
-	"16 passengers#boats": []
+	"16 passengers#boats": [],
+	"key#the details": [],
+	"the details#key": [],
+	"key#the words": [],
+	"the words#key": [],
+	"key#the quality": [],
+	"the quality#key": [],
+	"key#experiment": [],
+	"experiment#key": [],
+	"key#moderation": [],
+	"moderation#key": [
+		"has property"
+	],
+	"key#patience": [],
+	"patience#key": [
+		"has property"
+	],
+	"key#microsoft word": [],
+	"microsoft word#key": [],
+	"key#the way": [],
+	"the way#key": [],
+	"key#understanding": [],
+	"understanding#key": [
+		"can hold"
+	],
+	"key#consistency": [],
+	"consistency#key": [
+		"has property"
+	],
+	"lock#assembly fast": [],
+	"assembly fast#lock": [],
+	"lock#metal": [],
+	"metal#lock": [],
+	"lock#keys": [
+		"have"
+	],
+	"keys#lock": [
+		"be stuck in",
+		"break in",
+		"get stuck in",
+		"stick in"
+	],
+	"lock#plastic": [],
+	"plastic#lock": [],
+	"lock#wood": [],
+	"wood#lock": [],
+	"lock#wigs": [
+		"make"
+	],
+	"wigs#lock": [],
+	"lock#the right": [],
+	"the right#lock": [],
+	"lock#security": [],
+	"security#lock": [],
+	"lock#three hundred": [],
+	"three hundred#lock": [],
+	"lock#easy mobility": [],
+	"easy mobility#lock": [],
+	"traveler#feet": [],
+	"feet#traveler": [],
+	"destination#feet": [],
+	"feet#destination": [],
+	"basketball#gravity": [],
+	"gravity#basketball": [
+		"apply to",
+		"be used in"
+	],
+	"hoop#gravity": [],
+	"gravity#hoop": [],
+	"forewarning#seizure": [],
+	"seizure#forewarning": [],
+	"surprise#seizure": [],
+	"seizure#surprise": [],
+	"immunization#hospitalization": [],
+	"hospitalization#immunization": [],
+	"disease#hospitalization": [],
+	"hospitalization#disease": []
 }

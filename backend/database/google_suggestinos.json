@@ -6956,5 +6956,20 @@
 	"road#can only carry": [],
 	"road#trim": [],
 	"road#travel under": [],
-	"road#stopped": []
+	"road#stopped": [],
+	"key#here is": [],
+	"key#should also be ground in": [],
+	"key#lies in": [],
+	"key#defies": [],
+	"key#learn to quickly recognize": [],
+	"lock#should also be ground in": [],
+	"lock#lies in": [],
+	"lock#defies": [],
+	"lock#here is": [],
+	"lock#learn to quickly recognize": [],
+	"lock#was taken from": [],
+	"lock#provided": [],
+	"lock#be to": [],
+	"lock#is to be followed by": [],
+	"lock#make": []
 }

@@ -57017,5 +57017,285 @@
 	"boats#16 passengers": [
 		"accommodates"
 	],
-	"16 passengers#boats": []
+	"16 passengers#boats": [],
+	"key#the details": [],
+	"the details#key": [],
+	"key#the words": [],
+	"the words#key": [],
+	"key#the quality": [],
+	"the quality#key": [],
+	"key#experiment": [
+		"here is",
+		"is to",
+		"were confirmed by",
+		"will be to"
+	],
+	"experiment#key": [
+		"is",
+		"revived",
+		"were repeated successfully under"
+	],
+	"key#moderation": [
+		"here is to eat in",
+		"is",
+		"is eating in",
+		"is everything in",
+		"is to do everything in",
+		"is to enjoy in",
+		"is to practice",
+		"is to use",
+		"lies in",
+		"seems to be"
+	],
+	"moderation#key": [
+		"appears to be",
+		"becomes",
+		"could be",
+		"is",
+		"is one of",
+		"may be",
+		"seems to be",
+		"will be"
+	],
+	"key#patience": [
+		"have",
+		"is",
+		"is always to have",
+		"is to exercise"
+	],
+	"patience#key": [
+		"can be",
+		"holds",
+		"is",
+		"is going to be",
+		"is one of",
+		"may be",
+		"plays",
+		"seems to be",
+		"will be"
+	],
+	"key#microsoft word": [],
+	"microsoft word#key": [],
+	"key#the way": [],
+	"the way#key": [],
+	"key#understanding": [
+		"assist families in",
+		"develop",
+		"is",
+		"is based on",
+		"is in",
+		"is to get",
+		"is to start with",
+		"lies in",
+		"will apply",
+		"will increase",
+		"will lead to",
+		"would lie in"
+	],
+	"understanding#key": [
+		"enter are still",
+		"get updates on",
+		"identify",
+		"is",
+		"plays"
+	],
+	"key#consistency": [
+		"has been",
+		"is",
+		"is going to be",
+		"is in",
+		"is to maintain",
+		"promote",
+		"should be"
+	],
+	"consistency#key": [
+		"has to be",
+		"is",
+		"is going to be",
+		"is one of",
+		"plays",
+		"seems to be",
+		"will be"
+	],
+	"lock#assembly fast": [
+		"makes"
+	],
+	"assembly fast#lock": [],
+	"lock#metal": [
+		"30+",
+		"cushioned",
+		"extended",
+		"feature",
+		"hide",
+		"install",
+		"is",
+		"is hand finished in",
+		"is made of",
+		"works with"
+	],
+	"metal#lock": [
+		"are in",
+		"have",
+		"is fitted with",
+		"need",
+		"presents",
+		"rattled in",
+		"screw"
+	],
+	"lock#keys": [
+		"can only be opened with",
+		"comes with",
+		"found",
+		"has",
+		"includes",
+		"is",
+		"is operated by",
+		"keep",
+		"make",
+		"needs",
+		"put",
+		"require",
+		"supplied with",
+		"take",
+		"then toss",
+		"throw",
+		"throw away",
+		"turn",
+		"use",
+		"works with"
+	],
+	"keys#lock": [
+		"are",
+		"broke in",
+		"broke off in",
+		"can open",
+		"clicked in",
+		"fits",
+		"fits into",
+		"got stuck in",
+		"had been left in",
+		"is inserted into",
+		"is stuck in",
+		"opens",
+		"operates",
+		"slid into",
+		"turned",
+		"turned in",
+		"was in",
+		"was inserted in",
+		"went into",
+		"will open"
+	],
+	"lock#plastic": [
+		"holds",
+		"is made of",
+		"secure"
+	],
+	"plastic#lock": [
+		"nails",
+		"zip"
+	],
+	"lock#wood": [
+		"is still screwed into",
+		"simulated",
+		"was made of"
+	],
+	"wood#lock": [
+		"have"
+	],
+	"lock#wigs": [],
+	"wigs#lock": [],
+	"lock#the right": [],
+	"the right#lock": [],
+	"lock#security": [
+		"added",
+		"are a serious weakness in",
+		"are necessary for",
+		"arm",
+		"choose tools for",
+		"closed for",
+		"delivers",
+		"ensures",
+		"features",
+		"go",
+		"go to",
+		"included for",
+		"is",
+		"please see",
+		"provide added",
+		"provides",
+		"registered",
+		"requires",
+		"take apart",
+		"trusted"
+	],
+	"security#lock": [
+		"advanced",
+		"apply",
+		"approved",
+		"be sure to remove",
+		"bolt",
+		"coded",
+		"get",
+		"include",
+		"is",
+		"is a manufacturer of",
+		"is as important as",
+		"is provided by",
+		"keypad",
+		"look at",
+		"makes",
+		"may break",
+		"offers the latest in",
+		"set up",
+		"so use"
+	],
+	"lock#three hundred": [
+		"were to be"
+	],
+	"three hundred#lock": [],
+	"lock#easy mobility": [
+		"provide"
+	],
+	"easy mobility#lock": [],
+	"traveler#feet": [
+		"goes on",
+		"was on",
+		"were only",
+		"will appreciate over"
+	],
+	"feet#traveler": [
+		"could pose problems for"
+	],
+	"destination#feet": [
+		"can be reached by",
+		"can be reached on",
+		"choose",
+		"is on",
+		"must be within"
+	],
+	"feet#destination": [
+		"is the easier of",
+		"reaches"
+	],
+	"basketball#gravity": [],
+	"gravity#basketball": [],
+	"hoop#gravity": [],
+	"gravity#hoop": [],
+	"forewarning#seizure": [],
+	"seizure#forewarning": [],
+	"surprise#seizure": [],
+	"seizure#surprise": [],
+	"immunization#hospitalization": [
+		"causes"
+	],
+	"hospitalization#immunization": [],
+	"disease#hospitalization": [
+		"can lead to",
+		"can result in",
+		"is the leading cause of",
+		"require",
+		"resulted in"
+	],
+	"hospitalization#disease": []
 }

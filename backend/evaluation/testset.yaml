@@ -1,0 +1,364 @@
+mapping:
+  - input: #1 : 0/3, solution found and ranked 2
+      base: [answer, riddle, logic]
+      target: [key, lock, mechanism]
+      depth:
+        beam: 20
+        dfs: 4
+    output:
+      mapping:
+      - answer --> key
+      - riddle --> lock
+      - logic --> mechanism
+
+  - input: #2 : 0/3, active mapping: 0/2, correct solution not found
+      base: [ash, fireplace, chimney]
+      target: [lint, pocket, washer]
+      depth:
+        beam: 20
+        dfs: 4
+    output:
+      mapping:
+      - ash --> lint
+      - fireplace --> pocket
+      - chimney --> washer
+
+  - input: #3 : 3/3
+      base: [aspirin, pain, childbirth]
+      target: [muffler, noise, night]
+      depth:
+        beam: 20
+        dfs: 4
+    output:
+      mapping:
+      - aspirin --> muffler
+      - pain --> noise
+      - childbirth --> night
+
+  - input: #4 : 4/4
+      base: [baker, cake, recipe, ingredients] 
+      target: [scientist, discovery, research, data]
+      depth:
+        beam: 20
+        dfs: 4
+    output:
+      mapping:
+      - baker --> scientist
+      - cake --> discovery
+      - recipe --> research
+      - ingredients --> data
+
+  - input: #5 : 1/3, solution found and ranked 4
+      base: [basket, picnic, food]
+      target: [holster, gun, bullets] 
+      depth:
+        beam: 20
+        dfs: 4
+    output:
+      mapping:
+      - basket --> holster
+      - picnic --> gun
+      - food --> bullets
+
+  - input: #6 : 3/3
+      base: [blindness, sight, blind] 
+      target: [poverty, money, poor]
+      depth:
+        beam: 20
+        dfs: 4
+    output:
+      mapping:
+      - blindness --> poverty
+      - sight --> money
+      - blind --> poor
+
+  - input: #7 : 3/3
+      base: [snow, snowflake, winter]
+      target: [army, soldier, war]
+      depth:
+        beam: 20
+        dfs: 4
+    output:
+      mapping:
+      - snow --> army
+      - snowflake --> soldier
+      - winter --> war
+
+  - input: #8 : 0/3, active mapping: 0/2, correct solution not found
+      base: [bracelet, wrist, gypsum] 
+      target: [moat, castle, wall]
+      depth:
+        beam: 20
+        dfs: 4
+    output:
+      mapping:
+      - bracelet --> moat
+      - wrist --> castle
+      - gypsum --> wall
+
+  - input: #9 : 3/4, active mapping: 3/3, correct solution not found
+      base: [burger, bun, meat, appetite]
+      target: [book, cover, words, leisure]
+      depth:
+        beam: 20
+        dfs: 4
+    output:
+      mapping:
+      - burger --> book
+      - bun --> cover
+      - meat --> words
+      - appetite --> leisure
+
+  - input: #10 : 3/3
+      base: [eraser, pencil, paper]
+      target: [amnesia, memory, mind]
+      depth:
+        beam: 20
+        dfs: 4
+    output:
+      mapping:
+      - eraser --> amnesia
+      - pencil --> memory
+      - paper --> mind
+
+  - input: #11 : 3/3
+      base: [flock, goose, lake]
+      target: [constellation, star, sky]
+      depth:
+        beam: 20
+        dfs: 4
+    output:
+      mapping:
+      - flock --> constellation
+      - goose --> star
+      - lake --> sky
+
+  - input: #12 : 3/3
+      base: [furnace, coal, heat]
+      target: [stomach, food, energy]
+      depth:
+        beam: 20
+        dfs: 4
+    output:
+      mapping:
+      - furnace --> stomach
+      - coal --> food
+      - heat --> energy
+
+
+  - input: #13 : 3/3
+      base: [jacket, zipper, chilling]
+      target: [wound, suture, pollution]
+      depth:
+        beam: 20
+        dfs: 4
+    output:
+      mapping:
+      - jacket --> wound
+      - zipper --> suture
+      - chilling --> pollution
+
+  - input: #14 : 1/3, correct solution not found
+      base: [ketchup, tomato, seeds]
+      target: [fuel, petroleum, dinosaurs]
+      depth:
+        beam: 20
+        dfs: 4
+    output:
+      mapping:
+      - ketchup --> fuel
+      - tomato --> petroleum
+      - seeds --> dinosaurs
+
+  - input: #15 : 3/3
+      base: [landscaper, lawn, fertilizer]
+      target: [stylist, hair, gel]
+      depth:
+        beam: 20
+        dfs: 4
+    output:
+      mapping:
+      - landscaper --> stylist
+      - lawn --> hair
+      - fertilizer --> gel
+
+  - input: #16 : 0/3, NO SOLUTION FOUND
+      base: [launchpad, helicopter, rotor]
+      target: [divingboard, diver, fins]
+      depth:
+        beam: 20
+        dfs: 4
+    output:
+      mapping:
+      - launchpad --> divingboard
+      - helicopter --> diver
+      - rotor --> fins
+
+  - input: #17 : 0/3, active mappign: 0/2, correct solution not found
+      base: [lawschool, lawyer, experience]
+      target: [vineyard, wine, aging]
+      depth:
+        beam: 20
+        dfs: 4
+    output:
+      mapping:
+      - lawschool --> vineyard
+      - lawyer --> wine
+      - experience --> aging
+
+  - input: #18 : 2/3, active mappign: 2/2, correct solution not found
+      base: [multiplication, product, mathematician]
+      target: [brewing, beer, brewer]
+      depth:
+        beam: 20
+        dfs: 4
+    output:
+      mapping:
+      - multiplication --> brewing
+      - product --> beer
+      - mathematician --> brewer
+
+  - input: #19 : 3/3
+      base: [nose, scent, snot]
+      target: [antenna, signal, radiation]
+      depth:
+        beam: 20
+        dfs: 4
+    output:
+      mapping:
+      - nose --> antenna
+      - scent --> signal
+      - snot --> radiation
+
+  - input: #20 : 1/3, correct solution not found
+      base: [painting, canvas, dust]
+      target: [birthmark, skin, sweat]
+      depth:
+        beam: 20
+        dfs: 4
+    output:
+      mapping:
+      - painting --> birthmark
+      - canvas --> skin
+      - dust --> sweat
+
+  - input: #21 : 1/3, solution found and ranked 3
+      base: [pen, pig, food]
+      target: [reservoir, water, drink]
+      depth:
+        beam: 20
+        dfs: 4
+    output:
+      mapping:
+      - pen --> reservoir
+      - pig --> water
+      - food --> drink
+
+  - input: #22 : 1/3, active mapping: 1/2
+      base: [saxophone, jazz, orchestra]
+      target: [typewriter, poetry, anthology]
+      depth:
+        beam: 20
+        dfs: 4
+    output:
+      mapping:
+      - saxophone --> typewriter
+      - jazz --> poetry
+      - orchestra --> anthology
+
+  - input: #23 : 2/4, correct solution found and ranked 8
+      base: [sugar, coffee, aroma, caffeine]
+      target: [incentive, deal, interest, money]
+      depth:
+        beam: 20
+        dfs: 4
+    output:
+      mapping:
+      - sugar --> incentive
+      - coffee --> deal
+      - aroma --> interest
+      - caffeine --> money
+
+  - input: #24 : 3/3
+      base: [train, track, steel]
+      target: [signal, wire, copper]
+      depth:
+        beam: 20
+        dfs: 4
+    output:
+      mapping:
+      - train --> signal
+      - track --> wire
+      - steel --> copper
+
+  - input: #25 : 2/3, active mapping: 2/2, correct solution not found
+      base: [watermelon, rind, sugar]
+      target: [cigarette, butt, nicotine]
+      depth:
+        beam: 20
+        dfs: 4
+    output:
+      mapping:
+      - watermelon --> cigarette
+      - rind --> butt
+      - sugar --> nicotine
+
+  - input: #26 : 1/3
+      base: [movie, screen, sound]
+      target: [lightning, sky, thunder]
+      depth:
+        beam: 20
+        dfs: 4
+    output:
+      mapping:
+      - movie --> lightning
+      - screen --> sky
+      - sound --> thunder
+
+  - input: #27 : 3/3
+      base: [basketball, hoop, gravity]
+      target: [traveler, destination, feet]
+      depth:
+        beam: 20
+        dfs: 4
+    output:
+      mapping:
+      - basketball --> traveler
+      - hoop --> destination
+      - gravity --> feet
+
+  - input: #28 : 1/3, solution found and ranked 2
+      base: [kitten, cat, rat]
+      target: [spark, fire, wood]
+      depth:
+        beam: 20
+        dfs: 4
+    output:
+      mapping:
+      - kitten --> spark
+      - cat --> fire
+      - rat --> wood
+
+  - input: #29 : NO SOLUTION FOUND
+      base: [immunization, disease, hospitalization]
+      target: [forewarning, surprise, seizure]
+      depth:
+        beam: 20
+        dfs: 4
+    output:
+      mapping:
+      - immunization --> forewarning
+      - disease --> surprise
+      - hospitalization --> seizures
+      
+  - input: # 30 : NO SOLUTION FOUND
+      base: [thermometer, temperature, mercury]
+      target: [polygraph, honesty, pulse]
+      depth:
+        beam: 20
+        dfs: 4
+    output:
+      mapping:
+      - thermometer --> polygraph
+      - temperature --> honesty
+      - mercury --> pulse
