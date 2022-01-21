@@ -21777,5 +21777,30 @@
 	"immunization#hospitalization": [],
 	"hospitalization#immunization": [],
 	"disease#hospitalization": [],
-	"hospitalization#disease": []
+	"hospitalization#disease": [],
+	"bracelet#cast": [],
+	"cast#bracelet": [],
+	"wrist#cast": [
+		"be stiff after"
+	],
+	"cast#wrist": [],
+	"book#papers": [
+		"be made from"
+	],
+	"papers#book": [
+		"can"
+	],
+	"cover#papers": [],
+	"papers#cover": [],
+	"wound#infection": [
+		"be susceptible to",
+		"cause"
+	],
+	"infection#wound": [],
+	"suture#infection": [],
+	"infection#suture": [],
+	"jacket#cold": [],
+	"cold#jacket": [],
+	"zipper#cold": [],
+	"cold#zipper": []
 }

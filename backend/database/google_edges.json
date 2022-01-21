@@ -9328,7 +9328,10 @@
 	"roller coaster#amusement park": [],
 	"disneyland#roller coaster": [],
 	"roller coaster#disneyland": [],
-	"answer#riddle": [],
+	"answer#riddle": [
+		"solved",
+		"can solve"
+	],
 	"key#lock": [
 		"get stuck in",
 		"stuck in"
@@ -9413,10 +9416,14 @@
 		"leave the continental",
 		"wake up in the"
 	],
-	"bracelet#wrist": [],
+	"bracelet#wrist": [
+		"surrounds the"
+	],
 	"moat#castle": [
 		"defend a",
-		"protect a"
+		"protect a",
+		"surround",
+		"will be placed around the"
 	],
 	"wrist#bracelet": [],
 	"castle#moat": [
@@ -9585,7 +9592,6 @@
 		"bite",
 		"bring you their",
 		"carry their",
-		"eat",
 		"eat its own",
 		"eat their",
 		"eat their own",
@@ -9758,6 +9764,7 @@
 	"incentive#deal": [],
 	"coffee#sugar": [
 		"affect blood",
+		"can includes",
 		"cause low blood",
 		"creamer raise my blood",
 		"lower my blood",
@@ -10065,7 +10072,9 @@
 	"mechanism#key": [],
 	"lock#mechanism": [],
 	"mechanism#lock": [],
-	"answer#logic": [],
+	"answer#logic": [
+		"is solved by"
+	],
 	"logic#answer": [],
 	"riddle#logic": [],
 	"logic#riddle": [],
@@ -10375,6 +10384,7 @@
 		"made in the"
 	],
 	"movie#sound": [
+		"makes",
 		"capture",
 		"have"
 	],
@@ -12361,6 +12371,7 @@
 		"find",
 		"get",
 		"get their",
+		"is used for",
 		"roll in their"
 	],
 	"food#pig": [],
@@ -26508,7 +26519,6 @@
 		"bring you their",
 		"carry their",
 		"discipline their",
-		"eat",
 		"eat its own",
 		"eat their",
 		"eat their own",
@@ -33322,5 +33332,35 @@
 	"immunization#hospitalization": [],
 	"hospitalization#immunization": [],
 	"disease#hospitalization": [],
-	"hospitalization#disease": []
+	"hospitalization#disease": [],
+	"bracelet#cast": [],
+	"cast#bracelet": [],
+	"wrist#cast": [
+		"stiff after"
+	],
+	"cast#wrist": [
+		"protects"
+	],
+	"book#papers": [
+		"fall faster than"
+	],
+	"papers#book": [
+		"fall slower than a",
+		"towns end in the"
+	],
+	"cover#papers": [],
+	"papers#cover": [],
+	"wound#infection": [
+		"increase susceptibility to",
+		"increase the risk of",
+		"increase the susceptibility to",
+		"or devices increase the susceptibility to"
+	],
+	"infection#wound": [],
+	"suture#infection": [],
+	"infection#suture": [],
+	"jacket#cold": [],
+	"cold#jacket": [],
+	"zipper#cold": [],
+	"cold#zipper": []
 }
