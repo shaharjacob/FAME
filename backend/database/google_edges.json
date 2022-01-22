@@ -33362,5 +33362,11 @@
 	"jacket#cold": [],
 	"cold#jacket": [],
 	"zipper#cold": [],
-	"cold#zipper": []
+	"cold#zipper": [],
+	"blizzard#winter": [
+		"occur in"
+	],
+	"winter#blizzard": [
+		"storm considered a"
+	]
 }

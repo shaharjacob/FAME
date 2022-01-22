@@ -83,15 +83,15 @@ mapping:
       - sight --> money
       - blind --> poor
 
-  - input: #8 : 3/3 (using snow instead of blizzard)
-      base: [snow, snowflake, winter] # blizzard
+  - input: #8 : 3/3
+      base: [blizzard, snowflake, winter]
       target: [army, soldier, war]
       depth:
         beam: 20
         dfs: 4
     output:
       mapping:
-      - snow --> army # blizzard
+      - blizzard --> army
       - snowflake --> soldier
       - winter --> war
 

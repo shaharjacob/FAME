@@ -21802,5 +21802,10 @@
 	"jacket#cold": [],
 	"cold#jacket": [],
 	"zipper#cold": [],
-	"cold#zipper": []
+	"cold#zipper": [],
+	"blizzard#winter": [
+		"happen in",
+		"occur in"
+	],
+	"winter#blizzard": []
 }

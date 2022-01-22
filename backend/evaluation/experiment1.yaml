@@ -1,0 +1,126 @@
+mapping:
+  - input:
+      base: [baker, cake, recipe, ingredients] 
+      target: [scientist, discovery, research, data]
+      depth:
+        beam: 20
+        dfs: 4
+    output:
+      mapping:
+      - baker --> scientist
+      - cake --> discovery
+      - recipe --> research
+      - ingredients --> data
+
+  - input:
+      base: [eraser, pencil, paper]
+      target: [amnesia, memory, mind]
+      depth:
+        beam: 20
+        dfs: 4
+    output:
+      mapping:
+      - eraser --> amnesia
+      - pencil --> memory
+      - paper --> mind
+
+  - input:
+      base: [jacket, zipper, cold]
+      target: [wound, suture, infection]
+      depth:
+        beam: 20
+        dfs: 4
+    output:
+      mapping:
+      - jacket --> wound
+      - zipper --> suture
+      - cold --> infection
+  
+  - input:
+      base: [train, track, steel]
+      target: [signal, wire, copper]
+      depth:
+        beam: 20
+        dfs: 4
+    output:
+      mapping:
+      - train --> signal
+      - track --> wire
+      - steel --> copper
+
+  - input:
+      base: [thoughts, brain, neurons]
+      target: [astronaut, space, stars]
+      depth:
+        beam: 20
+        dfs: 2
+    output:
+      mapping:
+        - thoughts --> astronaut
+        - brain --> space
+        - neurons --> stars
+
+  - input:
+      base: [water, pressure, bucket, pipe, rain]
+      target: [heat, temperature, kettle, iron, sun]
+      depth:
+        beam: 20
+        dfs: 4
+    output:
+      mapping:
+        - water --> heat
+        - pressure --> temperature
+        - bucket --> kettle
+        - pipe --> iron
+        - rain --> sun
+  
+  - input:
+      base: [waves, water, shore, breakwater]
+      target: [sounds, air, earplugs, ear]
+      depth:
+        beam: 20
+        dfs: 4
+    output:
+      mapping:
+        - waves --> sounds
+        - water --> air
+        - shore --> ear
+        - breakwater --> earplugs
+  
+  - input:
+      base: [goal, soccer, grass, feet]
+      target: [basket, basketball, hardwood, hands] 
+      depth:
+        beam: 20
+        dfs: 4
+    output:
+      mapping:
+        - goal --> basket
+        - soccer --> basketball
+        - grass --> hardwood
+        - feet --> hands
+  
+  - input:
+      base: [seeds, fruit, bloom]
+      target: [ideas, product, success] 
+      depth:
+        beam: 20
+        dfs: 4
+    output:
+      mapping:
+        - seeds --> ideas
+        - fruit --> product
+        - bloom --> success
+
+  - input:
+      base: [morning, breakfast, start, coffee]
+      target: [evening, dinner, end, wine] 
+      depth:
+        beam: 20
+        dfs: 4
+    output:
+      mapping:
+        - morning --> evening
+        - breakfast --> dinner
+        - start --> end
+        - coffee --> wine

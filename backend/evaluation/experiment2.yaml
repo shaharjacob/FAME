@@ -1,0 +1,73 @@
+mapping:
+  - input:
+      base: [earth, newton, gravity]
+      target: [electrons, nucleus, electricity, faraday]
+      depth:
+        beam: 20
+        dfs: 4
+    output:
+      mapping:
+        - earth --> electrons
+        - gravity --> electricity
+        - newton --> faraday
+      suggestions:
+        - sun
+        - the sun
+        - moon
+    ignore: False
+
+  - input:
+      base: [landscaper, lawn]
+      target: [stylist, hair, gel]
+      depth:
+        beam: 20
+        dfs: 4
+    output:
+      mapping:
+        - landscaper --> stylist
+        - lawn --> hair
+      suggestions:
+        - fertilizer
+        - water
+    ignore: False
+  
+  - input:
+      base: [chef, meal, salt, pan] 
+      target: [baker, cake, oven]
+      depth:
+        beam: 20
+        dfs: 4
+    output:
+      mapping:
+        - chef --> baker
+        - meal --> cake
+        - pan --> oven
+      suggestions:
+        - sugar # ?
+    ignore: False
+
+  - input:
+      base: [key, lock, mechanism]
+      target: [answer, logic]
+      depth:
+        beam: 20
+        dfs: 4
+    output:
+      mapping:
+        - key --> answer
+        -  --> lock
+      suggestions:
+        - riddle # ?
+
+  - input:
+      base: [sun, summer, sunscreen]
+      target: [rain, winter]
+      depth:
+        beam: 20
+        dfs: 2
+    output:
+      mapping:
+        - sun --> rain
+        - summer --> winter
+      suggestions:
+        - umbrella

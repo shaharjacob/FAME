@@ -57403,5 +57403,16 @@
 	"zipper#cold": [
 		"wash"
 	],
-	"cold#zipper": []
+	"cold#zipper": [],
+	"blizzard#winter": [
+		"are common during",
+		"are issued for",
+		"are normal throughout",
+		"derails their plans for",
+		"is"
+	],
+	"winter#blizzard": [
+		"becomes",
+		"brought"
+	]
 }

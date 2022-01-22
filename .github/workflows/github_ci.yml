@@ -22,9 +22,12 @@ jobs:
         python backend/tests/ci.py
       env:
         CI: True
-    - name: Evaluation - beam
+    - name: Evaluation
       run: |
         python backend/evaluation/evaluation.py --yaml validation.yaml --algo beam
+    - name: Test-set
+      run: |
+        python backend/evaluation/evaluation.py --yaml testset.yaml --algo beam
     # - name: Evaluation - dfs
     #   run: |
     #     python backend/evaluation/evaluation.py --yaml validation.yaml --algo dfs
