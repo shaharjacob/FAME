@@ -97,8 +97,8 @@ mapping:
     ignore: False
 
   - input: #7
-      base: [baker, cake, chocolate] 
-      target: [chef, meal]
+      base: [chef, meal, pan, salt] 
+      target: [baker, cake, oven]
       depth:
         beam: 20
         dfs: 4
@@ -106,10 +106,25 @@ mapping:
       mapping:
         - baker --> chef
         - cake --> meal
-        - chocolate --> ingredient
+        - pan --> oven
       suggestions:
-        - ingredient # ?
-        - chicken
-        - soup
-        - vegetable
-    ignore: True
+        - butter
+        - sugar
+        - onion
+    ignore: False
+
+  - input: #8
+      base: [answer, riddle, logic]
+      target: [key, lock]
+      depth:
+        beam: 20
+        dfs: 4
+    output:
+      mapping:
+        - answer --> key
+        - riddle --> lock
+      suggestions:
+        - understanding
+        - problem
+        - lock
+    ignore: False

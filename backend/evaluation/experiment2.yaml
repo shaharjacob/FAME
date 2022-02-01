@@ -32,7 +32,7 @@ mapping:
     ignore: False
   
   - input:
-      base: [chef, meal, salt, pan] 
+      base: [chef, meal, pan, salt] 
       target: [baker, cake, oven]
       depth:
         beam: 20
@@ -47,24 +47,25 @@ mapping:
     ignore: False
 
   - input:
-      base: [key, lock, mechanism]
-      target: [answer, logic]
+      base: [answer, logic, riddle]
+      target: [key, mechanism]
       depth:
         beam: 20
         dfs: 4
     output:
       mapping:
-        - key --> answer
-        -  --> lock
+        - answer --> key
+        - logic --> mechanism
       suggestions:
-        - riddle # ?
+        - problem
+        - lock
 
   - input:
       base: [sun, summer, sunscreen]
       target: [rain, winter]
       depth:
         beam: 20
-        dfs: 2
+        dfs: 4
     output:
       mapping:
         - sun --> rain

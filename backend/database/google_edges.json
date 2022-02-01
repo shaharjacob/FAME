@@ -9330,15 +9330,19 @@
 	"roller coaster#disneyland": [],
 	"answer#riddle": [
 		"solved",
-		"can solve"
+		"can solve",
+		"is hidden in the"
 	],
 	"key#lock": [
 		"get stuck in",
 		"stuck in"
 	],
-	"riddle#answer": [],
+	"riddle#answer": [
+		"has a single solution"
+	],
 	"lock#key": [
-		"and"
+		"and",
+		"has a unique"
 	],
 	"ash#fireplace": [],
 	"lint#pocket": [],
@@ -10068,12 +10072,16 @@
 	"family#basket": [],
 	"picnic#family": [],
 	"family#picnic": [],
-	"key#mechanism": [],
+	"key#mechanism": [
+		"operates by",
+		"operates according to a "
+	],
 	"mechanism#key": [],
 	"lock#mechanism": [],
 	"mechanism#lock": [],
 	"answer#logic": [
-		"is solved by"
+		"is solved by",
+		"can be explained by"
 	],
 	"logic#answer": [],
 	"riddle#logic": [],
@@ -33368,5 +33376,383 @@
 	],
 	"winter#blizzard": [
 		"storm considered a"
-	]
+	],
+	"baker#oven": [
+		"put a spoon in the"
+	],
+	"oven#baker": [],
+	"cake#oven": [
+		"crack in",
+		"crack in the",
+		"explode in the",
+		"fall after taking out of",
+		"fall when taken out of the",
+		"go flat when taken out of",
+		"rise in the",
+		"sink after taking out of",
+		"sink in the middle in the",
+		"sink when taken out of",
+		"sink when they come out of the",
+		"has to be made in"
+	],
+	"oven#cake": [
+		"is used to cook a"
+	],
+	"chef#salt": [
+		"store",
+		"use kosher",
+		"use sea",
+		"use so much"
+	],
+	"salt#chef": [],
+	"chef#pan": [
+		"shake the",
+		"toss"
+	],
+	"pan#chef": [],
+	"meal#salt": [],
+	"salt#meal": [],
+	"meal#pan": [
+		"can be made in"
+	],
+	"pan#meal": [
+		"is used to make"
+	],
+	"salt#pan": [
+		"made in salt",
+		"obtained from salt"
+	],
+	"pan#salt": [],
+	"baker#his head": [],
+	"his head#baker": [],
+	"baker#ku not": [],
+	"ku not#baker": [],
+	"oven#the pan": [],
+	"the pan#oven": [],
+	"oven#read more": [],
+	"read more#oven": [],
+	"oven#a rack": [],
+	"a rack#oven": [],
+	"oven#the molds": [],
+	"the molds#oven": [],
+	"oven#soup": [],
+	"soup#oven": [],
+	"oven#the tray": [],
+	"the tray#oven": [],
+	"oven#tin": [],
+	"tin#oven": [
+		"foil not get hot in the"
+	],
+	"oven#the bird": [],
+	"the bird#oven": [],
+	"oven#the location": [],
+	"the location#oven": [],
+	"oven#my range": [],
+	"my range#oven": [
+		"work but not my"
+	],
+	"oven#350 degrees": [],
+	"350 degrees#oven": [],
+	"oven#comparison list": [],
+	"comparison list#oven": [],
+	"oven#onion": [],
+	"onion#oven": [
+		"turn pink in the"
+	],
+	"oven#more sodium": [],
+	"more sodium#oven": [],
+	"oven#medium-high heat": [],
+	"medium-high heat#oven": [],
+	"oven#45 minutes": [],
+	"45 minutes#oven": [],
+	"cake#his head": [],
+	"his head#cake": [],
+	"cake#the bouquet": [],
+	"the bouquet#cake": [],
+	"oven#butter": [],
+	"butter#oven": [],
+	"oven#coat": [],
+	"coat#oven": [],
+	"oven#potato": [],
+	"potato#oven": [
+		"burst in the",
+		"explode in the",
+		"take so long to cook in the"
+	],
+	"oven#asparagus": [],
+	"asparagus#oven": [],
+	"baker#flour on": [],
+	"flour on#baker": [],
+	"baker#disabled list": [],
+	"disabled list#baker": [],
+	"baker#a fly": [],
+	"a fly#baker": [],
+	"baker#the cover": [],
+	"the cover#baker": [],
+	"baker#probation": [],
+	"probation#baker": [],
+	"baker#death": [],
+	"death#baker": [],
+	"baker#the record": [],
+	"the record#baker": [],
+	"baker#the game": [],
+	"the game#baker": [],
+	"baker#a comment": [],
+	"a comment#baker": [],
+	"baker#its sights": [],
+	"its sights#baker": [],
+	"baker#the consortium": [],
+	"the consortium#baker": [],
+	"baker#the control": [],
+	"the control#baker": [],
+	"baker#people": [],
+	"people#baker": [],
+	"baker#the dough": [],
+	"the dough#baker": [],
+	"key#our team": [],
+	"our team#key": [],
+	"mechanism#a way": [],
+	"a way#mechanism": [],
+	"mechanism#metal": [],
+	"metal#mechanism": [
+		"ions and enzymes in metal ion catalytic"
+	],
+	"mechanism#the usa": [],
+	"the usa#mechanism": [],
+	"mechanism#a servomotor": [],
+	"a servomotor#mechanism": [],
+	"mechanism#solid latching": [],
+	"solid latching#mechanism": [],
+	"mechanism#problem": [],
+	"problem#mechanism": [],
+	"mechanism#markets": [],
+	"markets#mechanism": [],
+	"mechanism#support": [],
+	"support#mechanism": [],
+	"mechanism#email": [],
+	"email#mechanism": [],
+	"mechanism#transition": [],
+	"transition#mechanism": [],
+	"baker#sugar": [],
+	"sugar#baker": [],
+	"cake#sugar": [
+		"have so much",
+		"need",
+		"need so much"
+	],
+	"sugar#cake": [
+		"affect",
+		"tenderize a",
+		"used in"
+	],
+	"oven#sugar": [],
+	"sugar#oven": [],
+	"oven#the rack": [],
+	"the rack#oven": [
+		"go in the"
+	],
+	"oven#a sun": [],
+	"a sun#oven": [],
+	"cake#goodies": [],
+	"goodies#cake": [],
+	"cake#starch": [],
+	"starch#cake": [],
+	"cake#wine": [],
+	"wine#cake": [],
+	"cake#mouth-watering fun": [],
+	"mouth-watering fun#cake": [],
+	"cake#calories": [
+		"have so many"
+	],
+	"calories#cake": [],
+	"cake#guests": [
+		"served to",
+		"served to wedding"
+	],
+	"guests#cake": [],
+	"cake#all customers": [],
+	"all customers#cake": [],
+	"cake#light/medium compression": [],
+	"light/medium compression#cake": [],
+	"cake#children": [],
+	"children#cake": [
+		"overcome her fear in the story thunder"
+	],
+	"cake#flavour": [],
+	"flavour#cake": [],
+	"cake#margarine": [],
+	"margarine#cake": [
+		"used in"
+	],
+	"cake#gifts": [],
+	"gifts#cake": [],
+	"cake#butter": [
+		"need",
+		"need unsalted",
+		"recipes call for unsalted",
+		"use"
+	],
+	"butter#cake": [
+		"added to",
+		"affect",
+		"leak out of",
+		"used in"
+	],
+	"baker#bread": [
+		"add yeast in the dough while baking",
+		"bake",
+		"make",
+		"put flour on top of",
+		"put sugar in",
+		"score",
+		"use yeast for baking",
+		"use yeast to"
+	],
+	"bread#baker": [],
+	"baker#individual dessert": [],
+	"individual dessert#baker": [],
+	"baker#children": [],
+	"children#baker": [],
+	"baker#center": [],
+	"center#baker": [],
+	"baker#this ceremony": [],
+	"this ceremony#baker": [],
+	"baker#a clearance": [],
+	"a clearance#baker": [],
+	"baker#gerry mulligan": [],
+	"gerry mulligan#baker": [],
+	"baker#value": [],
+	"value#baker": [],
+	"baker#rainbow flag": [],
+	"rainbow flag#baker": [],
+	"baker#recipes": [
+		"create",
+		"make their own",
+		"memorize"
+	],
+	"recipes#baker": [],
+	"baker#a formulation": [],
+	"a formulation#baker": [],
+	"baker#sorling": [],
+	"sorling#baker": [],
+	"baker#miwe time": [],
+	"miwe time#baker": [],
+	"baker#waco, texas": [],
+	"waco, texas#baker": [],
+	"baker#commitment": [],
+	"commitment#baker": [],
+	"baker#chicago cubs": [],
+	"chicago cubs#baker": [],
+	"baker#ceo": [],
+	"ceo#baker": [],
+	"baker#market strategies": [],
+	"market strategies#baker": [],
+	"baker#a field": [],
+	"a field#baker": [],
+	"baker#your list": [],
+	"your list#baker": [],
+	"baker#secretary": [],
+	"secretary#baker": [],
+	"baker#one": [],
+	"one#baker": [],
+	"baker#president": [],
+	"president#baker": [],
+	"baker#two hits": [],
+	"two hits#baker": [],
+	"baker#dough": [
+		"change the shape and size of a",
+		"knead",
+		"knead sourdough bread"
+	],
+	"dough#baker": [],
+	"cake#wedding cake": [],
+	"wedding cake#cake": [
+		"fruit"
+	],
+	"cake#a matter": [],
+	"a matter#cake": [],
+	"cake#either": [],
+	"either#cake": [],
+	"cake#a variety": [],
+	"a variety#cake": [],
+	"baker#california": [],
+	"california#baker": [],
+	"baker#math": [
+		"use"
+	],
+	"math#baker": [],
+	"baker#flour": [
+		"care about the protein content of wheat",
+		"flour different to plain",
+		"sift",
+		"store"
+	],
+	"flour#baker": [],
+	"baker#two poles": [],
+	"two poles#baker": [],
+	"baker#science": [],
+	"science#baker": [],
+	"baker#afl-cio": [],
+	"afl-cio#baker": [],
+	"baker#the idea": [],
+	"the idea#baker": [],
+	"baker#grocery": [],
+	"grocery#baker": [],
+	"baker#new york": [],
+	"new york#baker": [],
+	"baker#the president": [],
+	"the president#baker": [],
+	"baker#yeast": [
+		"get",
+		"use",
+		"use fresh"
+	],
+	"yeast#baker": [],
+	"key#the difference": [],
+	"the difference#key": [],
+	"key#puzzle": [],
+	"puzzle#key": [],
+	"key#octet (computing)": [],
+	"octet (computing)#key": [],
+	"key#problem": [],
+	"problem#key": [],
+	"key#small changes": [],
+	"small changes#key": [],
+	"key#feedback": [],
+	"feedback#key": [],
+	"key#money": [
+		"resellers make"
+	],
+	"money#key": [],
+	"key#choice": [],
+	"choice#key": [],
+	"key#the house": [],
+	"the house#key": [],
+	"key#a plan": [],
+	"a plan#key": [],
+	"key#security": [],
+	"security#key": [],
+	"key#lime pie": [],
+	"lime pie#key": [],
+	"key#leverage": [],
+	"leverage#key": [],
+	"key#fish": [],
+	"fish#key": [
+		"always sing off",
+		"go into business answer",
+		"go to jail answer",
+		"sing off"
+	],
+	"key#the back": [],
+	"the back#key": [],
+	"key#book": [],
+	"book#key": [],
+	"key#the end": [],
+	"the end#key": [
+		"of world war i impact germany answer"
+	],
+	"key#harness": [],
+	"harness#key": [],
+	"key#investment": [],
+	"investment#key": []
 }
