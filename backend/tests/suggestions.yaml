@@ -104,14 +104,14 @@ mapping:
         dfs: 4
     output:
       mapping:
-        - baker --> chef
-        - cake --> meal
+        - chef --> baker
+        - meal --> cake
         - pan --> oven
       suggestions:
         - butter
         - sugar
         - onion
-    ignore: False
+    ignore: True
 
   - input: #8
       base: [answer, riddle, logic]

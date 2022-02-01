@@ -33754,5 +33754,21 @@
 	"key#harness": [],
 	"harness#key": [],
 	"key#investment": [],
-	"investment#key": []
+	"investment#key": [],
+	"oven#pan": [],
+	"pan#oven": [
+		"bend in",
+		"bend in the",
+		"buckle in the",
+		"pop in",
+		"pop in the",
+		"twist in",
+		"warp in the"
+	],
+	"oven#sheet pan": [],
+	"sheet pan#oven": [
+		"bend in the",
+		"warp in",
+		"warp in the"
+	]
 }

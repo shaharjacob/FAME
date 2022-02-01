@@ -22151,5 +22151,15 @@
 	"key#harness": [],
 	"harness#key": [],
 	"key#investment": [],
-	"investment#key": []
+	"investment#key": [],
+	"oven#pan": [],
+	"pan#oven": [
+		"bend in",
+		"buckle in",
+		"pop in",
+		"twist in",
+		"warped in"
+	],
+	"oven#sheet pan": [],
+	"sheet pan#oven": []
 }

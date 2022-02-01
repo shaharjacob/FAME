@@ -5619,5 +5619,7 @@
 	"key#solved": [],
 	"key#has a non trivial": [],
 	"key#is hidden in the": [],
-	"key#has a single solution": []
+	"key#has a single solution": [],
+	"baker#is used to make": [],
+	"baker#can be made in": []
 }
