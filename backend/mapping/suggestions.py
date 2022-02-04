@@ -186,7 +186,7 @@ def mapping_suggestions_create_new_solution(
     """this function is use for mapping in suggestions mode. this is only one iteration"""
     
     # we will get the top-num-of-suggestions with the best score.
-    best_results_for_current_iteration = get_best_pair_mapping(unmutables, available_pairs, cache, args["num_of_suggestions"])
+    best_results_for_current_iteration = get_best_pair_mapping(unmutables, available_pairs, cache, args["N"])
     for result in best_results_for_current_iteration:
         # if the best score is > 0, we will update the base and target lists of the already mapping entities.
         # otherwise, if the best score is 0, we have no more mappings to do.
@@ -375,9 +375,7 @@ def mapping_suggestions(
     top_suggestions_ordered = [suggestion for _, suggestion in solutions_of_current_call_with_suggestion]
 
     for i in range(cut_off, len(solutions)):
-        solutions[i].top_suggestions = top_suggestions_ordered
-
-            
+        solutions[i].top_suggestions = top_suggestions_ordered[:args["num_of_suggestions"]]
 
 
 def mapping_suggestions_wrapper(

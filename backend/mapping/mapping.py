@@ -263,17 +263,17 @@ def get_best_pair_mapping_for_current_iteration(
     return results_for_current_iteration, modified_results
 
 
-def get_best_pair_mapping(unmutables: Dict[str, Unmutables],
-                          available_maps: List[List[SingleMatch]], 
-                          cache: Dict[str, Cache], 
-                          depth: int = 0
-                        ) -> List[Dict[str, Union[int, SingleMatch]]]:
+def get_best_pair_mapping(
+    unmutables: Dict[str, Unmutables],
+    available_maps: List[List[SingleMatch]], 
+    cache: Dict[str, Cache], 
+    depth: int = 0
+    ) -> List[Dict[str, Union[int, SingleMatch]]]:
     
     mappings = []
     # we will iterate over all the possible pairs mapping ((n choose 2)*(n choose 2)*2), 2->2, 3->18, 4->72
     iterator = available_maps if os.environ.get('CI', False) else tqdm(available_maps)
     for mapping in iterator:
-        
         # for each mapping we want both direction, for example:
         # if we have in the base: earth, sun. AND in the target: electrons, nucleus.
         # for the mapping earth->electrons, sun->nucleus , we will calculate: 

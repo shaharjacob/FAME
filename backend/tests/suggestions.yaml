@@ -2,9 +2,14 @@ mapping:
   - input: #1
       base: [earth, sun, gravity, newton]
       target: [electrons, nucleus, electricity]
-      depth:
-        beam: 20
-        dfs: 4
+      algo: beam
+      depth: 20
+      solution_rank: 1 # from all solutions
+      num_of_suggestions: 4
+      google: True
+      openie: True
+      quasimodo: True
+      conceptnet: False
     output:
       mapping:
         - earth --> electrons
@@ -14,14 +19,45 @@ mapping:
       suggestions:
         - benjamin franklin
         - franklin
+        - benjamin
+        - humans
+    ignore: False
+  
+  - input: #2
+      base: [earth, sun, gravity, newton]
+      target: [electrons, nucleus, electricity]
+      algo: dfs
+      depth: 4
+      solution_rank: 1 # from all solutions
+      num_of_suggestions: 4
+      google: True
+      openie: True
+      quasimodo: True
+      conceptnet: False
+    output:
+      mapping:
+        - earth --> electrons
+        - sun --> nucleus
+        - gravity --> electricity
+        - newton --> benjamin franklin
+      suggestions:
+        - benjamin franklin
+        - franklin
+        - benjamin
+        - humans
     ignore: False
 
-  - input: #2
+  - input: #3
       base: [earth, newton, gravity]
       target: [electrons, nucleus, electricity, faraday]
-      depth:
-        beam: 20
-        dfs: 4
+      algo: beam
+      depth: 20
+      solution_rank: 1 # from all solutions
+      num_of_suggestions: 4
+      google: True
+      openie: True
+      quasimodo: True
+      conceptnet: False
     output:
       mapping:
         - earth --> electrons
@@ -32,27 +68,44 @@ mapping:
         - sun
         - the sun
         - moon
+        - mars
     ignore: False
-  
-  - input: #3
-      base: [cars, road, wheels]
-      target: [boats, river]
-      depth:
-        beam: 20
-        dfs: 4
-    output:
-      mapping:
-        - cars --> boats
-        - road --> river
-        - wheels --> anchors
-    ignore: True
 
   - input: #4
+      base: [earth, newton, gravity]
+      target: [electrons, nucleus, electricity, faraday]
+      algo: dfs
+      depth: 4
+      solution_rank: 1 # from all solutions
+      num_of_suggestions: 4
+      google: True
+      openie: True
+      quasimodo: True
+      conceptnet: False
+    output:
+      mapping:
+        - earth --> electrons
+        - gravity --> electricity
+        - newton --> faraday
+        - sun --> nucleus
+      suggestions:
+        - sun
+        - the sun
+        - moon
+        - star
+    ignore: False
+
+  - input: #5
       base: [landscaper, lawn]
       target: [stylist, hair, gel]
-      depth:
-        beam: 20
-        dfs: 4
+      algo: beam
+      depth: 20
+      solution_rank: 1 # from all solutions
+      num_of_suggestions: 2
+      google: True
+      openie: True
+      quasimodo: True
+      conceptnet: False
     output:
       mapping:
         - landscaper --> stylist
@@ -63,28 +116,38 @@ mapping:
         - water
     ignore: False
 
-  - input: #5
-      base: [foresight, future, hope] 
-      target: [x-ray, bone]
-      depth:
-        beam: 20
-        dfs: 4
+  - input: #6
+      base: [landscaper, lawn]
+      target: [stylist, hair, gel]
+      algo: dfs
+      depth: 4
+      solution_rank: 1 # from all solutions
+      num_of_suggestions: 2
+      google: True
+      openie: True
+      quasimodo: True
+      conceptnet: False
     output:
       mapping:
-        - foresight --> x-ray
-        - future --> bone
-        - hope --> muscle
+        - landscaper --> stylist
+        - lawn --> hair
+        - fertilizer --> gel
       suggestions:
-        - muscle
-        - calcium
+        - fertilizer
+        - water
     ignore: False
 
-  - input: #6
+  - input: #7
       base: [aspirin, pain, fracture]
       target: [antacid, heartburn]
-      depth:
-        beam: 20
-        dfs: 4
+      algo: dfs
+      depth: 4
+      solution_rank: 1 # from all solutions
+      num_of_suggestions: 2
+      google: True
+      openie: True
+      quasimodo: True
+      conceptnet: False
     output:
       mapping:
         - aspirin --> antacid
@@ -93,38 +156,93 @@ mapping:
       suggestions:
         - cancer
         - stress
-        - smoking
     ignore: False
 
-  - input: #7
+  - input: #8
+      base: [aspirin, pain, fracture]
+      target: [antacid, heartburn]
+      algo: beam
+      depth: 20
+      solution_rank: 1 # from all solutions
+      num_of_suggestions: 2
+      google: True
+      openie: True
+      quasimodo: True
+      conceptnet: False
+    output:
+      mapping:
+        - aspirin --> antacid
+        - pain --> heartburn
+        - fracture --> cancer
+      suggestions:
+        - cancer
+        - stress
+    ignore: False
+
+  - input: #9
       base: [chef, meal, pan, salt] 
       target: [baker, cake, oven]
-      depth:
-        beam: 20
-        dfs: 4
+      algo: dfs
+      depth: 4
+      solution_rank: 2 # from all solutions
+      num_of_suggestions: 4
+      google: True
+      openie: True
+      quasimodo: True
+      conceptnet: False
     output:
       mapping:
         - chef --> baker
         - meal --> cake
         - pan --> oven
+        - salt --> sugar
       suggestions:
         - butter
-        - sugar
+        - sugar # the expected one
         - onion
-    ignore: True
+        - flour
+    ignore: False
 
-  - input: #8
-      base: [answer, riddle, logic]
-      target: [key, lock]
-      depth:
-        beam: 20
-        dfs: 4
+  - input: #10
+      base: [key, mechanism]
+      target: [answer, riddle, logic]
+      algo: dfs
+      depth: 4
+      solution_rank: 3 # from all solutions
+      num_of_suggestions: 3
+      google: True
+      openie: True
+      quasimodo: True
+      conceptnet: False
     output:
       mapping:
-        - answer --> key
-        - riddle --> lock
-      suggestions:
-        - understanding
+        - key --> answer
+        - mechanism --> logic
+        - lock --> riddle
+      suggestions: # suggestions where riddle is the missing one
         - problem
-        - lock
+        - lock # the expected one
+        - feedback
+    ignore: False
+
+  - input: #11
+      base: [key, mechanism]
+      target: [answer, riddle, logic]
+      algo: beam
+      depth: 20
+      solution_rank: 3 # from all solutions
+      num_of_suggestions: 3
+      google: True
+      openie: True
+      quasimodo: True
+      conceptnet: False
+    output:
+      mapping:
+        - key --> answer
+        - mechanism --> logic
+        - lock --> riddle
+      suggestions: # suggestions where riddle is the missing one
+        - problem
+        - lock # the expected one
+        - feedback
     ignore: False

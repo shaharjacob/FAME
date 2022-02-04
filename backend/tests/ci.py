@@ -164,7 +164,7 @@ class TestMappingNoSuggestoins(unittest.TestCase):
 
 class TestMappingSuggestoins(unittest.TestCase):
 
-    def test_beam(self):
+    def test_suggestoins(self):
         with open(TEST_FOLDER / 'suggestions.yaml', 'r') as y:
             spec = yaml.load(y, Loader=yaml.SafeLoader)
         mapping_spec = spec["mapping"]
@@ -173,55 +173,34 @@ class TestMappingSuggestoins(unittest.TestCase):
                 continue
             
             args = {
-                "num_of_suggestions": 1,
-                "N": tv["input"]["depth"]['beam'],
+                "num_of_suggestions": tv['input']['num_of_suggestions'],
+                "N": tv['input']['depth'],
                 "verbose": False if 'CI' in os.environ else True,
                 "freq_th": FREQUENCY_THRESHOLD,
                 "model_name": 'msmarco-distilbert-base-v4',
-                "google": True,
-                "openie": True,
-                "quasimodo": True,
-                "conceptnet": False,
+                "google": tv['input']['google'],
+                "openie": tv['input']['openie'],
+                "quasimodo": tv['input']['quasimodo'],
+                "conceptnet": tv['input']['conceptnet'],
             }
-            solutions = beam_search_wrapper(base=tv["input"]["base"], 
-                                            target=tv["input"]["target"],
-                                            args=args)
-            solution = solutions[0]
+
+            algo_wrapper = beam_search_wrapper if tv['input']['algo'] == 'beam' else dfs_wrapper
+            solutions = algo_wrapper(
+                base=tv["input"]["base"], 
+                target=tv["input"]["target"],
+                args=args
+            )
+            solution = solutions[tv["input"]["solution_rank"] - 1]
 
             # check the mapping
             actual = solution.mapping
             reference = tv["output"]["mapping"]
-            self.assertEqual(reference, actual)
-            
-    
-    def test_dfs(self):
-        with open(TEST_FOLDER / 'suggestions.yaml', 'r') as y:
-            spec = yaml.load(y, Loader=yaml.SafeLoader)
-        mapping_spec = spec["mapping"]
-        for tv in mapping_spec:
-            if tv["ignore"]:
-                continue            
-            
-            args = {
-                "num_of_suggestions": 1,
-                "N": tv["input"]["depth"]['dfs'],
-                "verbose": False if 'CI' in os.environ else True,
-                "freq_th": FREQUENCY_THRESHOLD,
-                "model_name": 'msmarco-distilbert-base-v4',
-                "google": True,
-                "openie": True,
-                "quasimodo": True,
-                "conceptnet": False,
-            }
-            solutions = dfs_wrapper(base=tv["input"]["base"], 
-                                    target=tv["input"]["target"],
-                                    args=args)
-            solution = solutions[0]
+            self.assertEqual(reference, actual, tv['input'])
 
-            # check the mapping
-            actual = solution.mapping
-            reference = tv["output"]["mapping"]
-            self.assertEqual(reference, actual)
+            # check the suggestions
+            actual = solution.top_suggestions
+            reference = tv["output"]["suggestions"]
+            self.assertEqual(reference, actual, tv['input'])
 
 
 if __name__ == '__main__':

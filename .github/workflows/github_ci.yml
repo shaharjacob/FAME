@@ -28,18 +28,3 @@ jobs:
     - name: Test-set
       run: |
         python backend/evaluation/evaluation.py --yaml testset.yaml --algo beam
-    # - name: Evaluation - dfs
-    #   run: |
-    #     python backend/evaluation/evaluation.py --yaml validation.yaml --algo dfs
-    # - name: Green-eval-far - beam
-    #   run: |
-    #     python backend/evaluation/evaluation.py --yaml green_eval_far.yaml --algo beam
-    # - name: Green-eval-far - dfs
-    #   run: |
-    #     python backend/evaluation/evaluation.py --yaml green_eval_far.yaml --algo dfs
-    # - name: Green-eval-near - beam
-    #   run: |
-    #     python backend/evaluation/evaluation.py --yaml green_eval_near.yaml --algo beam
-    # - name: Green-eval-near - dfs
-    #   run: |
-    #     python backend/evaluation/evaluation.py --yaml green_eval_near.yaml --algo dfs
