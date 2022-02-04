@@ -10230,5 +10230,13 @@
 	"key#is hidden in the": [],
 	"key#has a single solution": [],
 	"baker#is used to make": [],
-	"baker#can be made in": []
+	"baker#can be made in": [],
+	"lock#can be explained by": [],
+	"lock#is solved by": [],
+	"lock#solved": [
+		"all your hopper issues"
+	],
+	"lock#is hidden in the": [],
+	"lock#has a single solution": [],
+	"lock#can solve": []
 }

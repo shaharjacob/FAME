@@ -58774,5 +58774,9 @@
 		"were put in"
 	],
 	"oven#sheet pan": [],
-	"sheet pan#oven": []
+	"sheet pan#oven": [],
+	"earth#the sky": [
+		"has"
+	],
+	"the sky#earth": []
 }
