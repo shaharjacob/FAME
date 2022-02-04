@@ -53,7 +53,7 @@ mapping:
       algo: beam
       depth: 20
       solution_rank: 1 # from all solutions
-      num_of_suggestions: 4
+      num_of_suggestions: 3
       google: True
       openie: True
       quasimodo: True
@@ -68,7 +68,6 @@ mapping:
         - sun
         - the sun
         - moon
-        - mars
     ignore: False
 
   - input: #4
@@ -77,7 +76,7 @@ mapping:
       algo: dfs
       depth: 4
       solution_rank: 1 # from all solutions
-      num_of_suggestions: 4
+      num_of_suggestions: 3
       google: True
       openie: True
       quasimodo: True
@@ -92,7 +91,6 @@ mapping:
         - sun
         - the sun
         - moon
-        - star
     ignore: False
 
   - input: #5
