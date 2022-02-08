@@ -7,7 +7,7 @@
 </p>
 
 <p align="center">
-  <a href="TODO"><img src="https://img.shields.io/badge/CI-passing-brightgreen?logo=github" alt="ci"/></a>
+  <a href="https://anonymous.4open.science/r/autoSME-F551"><img src="https://img.shields.io/badge/CI-passing-brightgreen?logo=github" alt="ci"/></a>
   <a href="https://hub.docker.com/"><img src="https://img.shields.io/badge/-docker-gray?logo=docker" alt="docker"/></a>
   <a href="https://reactjs.org/"><img src="https://img.shields.io/badge/-react-grey?logo=react" alt="react"/></a>
 </p>
@@ -63,7 +63,7 @@ More details about the execute command can be found under **Execute** section.
 ### **Option 2:**
 Install dependencies and run on your local PC.  
 ```bash
-git clone TODO
+git clone **deleted to maintain anonymity**
 cd autoSME
 pip install -r requirements.txt
 ```  

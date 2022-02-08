@@ -3,11 +3,11 @@ version: "3.5"
 
 services:
   backend:
-    image: "shaharjacob/msbackend:latest"
+    image: "TODO/msbackend:latest"
     container_name: backend
     build:
       context: backend
-      cache_from: ["shaharjacob/msbackend:latest"]
+      cache_from: ["TODO/msbackend:latest"]
     ports:
       - "5031:5031"
     volumes:
@@ -20,11 +20,11 @@ services:
     command: flask run --host 0.0.0.0 --port 5031
   
   webapp:
-    image: "shaharjacob/mswebapp:latest"
+    image: "TODO/mswebapp:latest"
     container_name: webapp
     build:
       context: webapp
-      cache_from: ["shaharjacob/mswebapp:latest"]
+      cache_from: ["TODO/mswebapp:latest"]
     ports:
       - "3000:3000"
     working_dir: /webapp

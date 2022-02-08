@@ -8,13 +8,10 @@ setup(
   name='autoSME',
   version="1.0.0",
 
-  url="https://github.com/shaharjacob/autoSME",
+  url="https://anonymous.4open.science/r/autoSME-F551",
   description="Mapping entities project",
   long_description=README,
   long_description_content_type="text/markdown",
-
-  author="Shahar Jacob",
-  author_email="shahar.jacob@mail.huji.ac.il",
 
   packages=find_packages(),
   python_requires='>=3.7',
