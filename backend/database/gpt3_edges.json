@@ -3145,5 +3145,194 @@
 		"Seeds are the source of fries.",
 		"Seeds are planted to grow fries.",
 		"Fries are made from seeds."
+	],
+	"birthmark#strech mark": [
+		"A birthmark is a mark that is present at birth.",
+		"A birthmark is a type of stretch mark."
+	],
+	"strech mark#birthmark": [
+		"Birthmark is a mark that is present at birth.",
+		"Birthmark is a permanent mark.",
+		"Strech mark is a mark that is caused by the stretching of the skin.",
+		"Strech mark is a temporary mark."
+	],
+	"birthmark#laser": [
+		"Birthmark can be removed with laser.",
+		"Birthmark can be faded with laser.",
+		"Birthmark can be treated with laser."
+	],
+	"laser#birthmark": [
+		"Laser can remove birthmark."
+	],
+	"skin#strech mark": [
+		"Skin can strech mark.",
+		"Skin has a possibility to strech mark."
+	],
+	"strech mark#skin": [
+		"Strech marks are caused by skin stretching.",
+		"Strech marks are permanent markings on the skin."
+	],
+	"skin#laser": [
+		"Laser therapy is used to treat skin conditions.",
+		"Laser therapy is used to improve the appearance of skin.",
+		"Laser therapy is used to remove hair from the skin."
+	],
+	"laser#skin": [
+		"Laser treatment can help improve the appearance of skin.",
+		"Laser treatment can help remove skin lesions.",
+		"Laser treatment can help reduce wrinkles."
+	],
+	"strech mark#laser": [
+		"laser can help remove stretch marks.",
+		"laser is used to remove stretch marks."
+	],
+	"laser#strech mark": [
+		"Laser can remove stretch marks.",
+		"Laser can make stretch marks."
+	],
+	"painting#tear": [
+		"A painting is a flat surface with a thin layer of paint or other material.",
+		"Paintings can be made with tears."
+	],
+	"tear#painting": [
+		"A tear ruined painting.",
+		"A tear makes painting more beautiful."
+	],
+	"painting#eraser": [
+		"A painting can be erased with an eraser.",
+		"A painting can be removed with an eraser."
+	],
+	"eraser#painting": [
+		"An eraser can erase a painting.",
+		"A painting can be erased with an eraser."
+	],
+	"canvas#tear": [
+		"A tear on a canvas makes it less attractive.",
+		"A tear on a canvas weakens the material."
+	],
+	"tear#canvas": [
+		"A tear on the canvas makes it weaker.",
+		"A tear can be fixed on the canvas."
+	],
+	"canvas#eraser": [
+		"A canvas is a surface to erase pencil lead from.",
+		"A canvas can be erased with an eraser."
+	],
+	"eraser#canvas": [
+		"Eraser used to clean canvas.",
+		"Eraser can erase part of canvas.",
+		"Eraser used to make a mistake on canvas."
+	],
+	"tear#eraser": [
+		"Tear is erased by eraser.",
+		"Tear can be erased by eraser.",
+		"Tear can be removed by eraser."
+	],
+	"eraser#tear": [
+		"An eraser can remove tear.",
+		"An eraser can erase tear."
+	],
+	"reservoir#scum": [
+		"Reservoir stores water and scum is the impurities that accumulate on the surface."
+	],
+	"scum#reservoir": [
+		"The scum is a build up on the surface of a reservoir.",
+		"The scum floats on the reservoir."
+	],
+	"water#scum": [
+		"Water is the clean liquid that scum is the dirty film on the surface."
+	],
+	"scum#water": [
+		"A scum is a film that forms on the surface of stagnant or polluted water.",
+		"A scum is a type of algae.",
+		"A scum is a dirty film on the surface of water."
+	],
+	"pen#mud": [
+		"A pen writes on mud.",
+		"A pen leaves a mark on the mud.",
+		"A pen can make a drawing on the mud."
+	],
+	"mud#pen": [
+		"Mud can clog a pen.",
+		"Mud can be used to write with.",
+		"Pen writes with ink, and ink is made of mud."
+	],
+	"pig#mud": [
+		"Pigs roll in the mud to cool off and keep the flies away.",
+		"Pigs like to roll in the mud."
+	],
+	"mud#pig": [
+		"Mud is what pigs wallow in.",
+		"Pigs like to roll around in the mud."
+	],
+	"typewriter#poet": [
+		"A typewriter is used by poet.",
+		"A typewriter helps poet write poems."
+	],
+	"poet#typewriter": [
+		"A poet uses typewriter.",
+		"A poet types on typewriter."
+	],
+	"poetry#poet": [
+		"Poetry is written by a poet.",
+		"Poetry is about the poet.",
+		"Poetry is inspired by the poet."
+	],
+	"poet#poetry": [
+		"Poet writes poetry.",
+		"Poetry is created by a poet."
+	],
+	"saxophone#musician": [
+		"Musician play saxophone.",
+		"Musician use saxophone."
+	],
+	"musician#saxophone": [
+		"Musician plays saxophone.",
+		"Musician use saxophone.",
+		"Saxophone produces music."
+	],
+	"jazz#musician": [
+		"Musician play jazz.",
+		"Musician compose jazz.",
+		"Musician listen to jazz."
+	],
+	"musician#jazz": [
+		"Musicians often play jazz.",
+		"Jazz is often played by musicians."
+	],
+	"incentive#dealership": [
+		"Incentives offered by dealerships.",
+		"Dealerships use incentives to attract customers."
+	],
+	"dealership#incentive": [
+		"Dealership offers incentive to buy car.",
+		"Dealership has incentive to sell car.",
+		"Incentive encourages dealership to sell car."
+	],
+	"deal#dealership": [
+		"A dealership is a place where cars are sold.",
+		"A deal is an agreement to purchase something."
+	],
+	"dealership#deal": [
+		"A dealership sells cars at a deal.",
+		"A dealership is a place where you can find deals."
+	],
+	"sugar#coffeehouse": [
+		"Sugar is used to make coffee.",
+		"Sugar is put in coffee."
+	],
+	"coffeehouse#sugar": [
+		"Coffeehouse add sugar to coffee.",
+		"Coffeehouse put sugar in coffee."
+	],
+	"coffee#coffeehouse": [
+		"Coffee is served in a coffeehouse.",
+		"Coffee is made in a coffeehouse.",
+		"Coffee is bought in a coffeehouse."
+	],
+	"coffeehouse#coffee": [
+		"Coffeehouse sells coffee.",
+		"Coffeehouse contains coffee.",
+		"Coffeehouse is made from coffee."
 	]
 }
