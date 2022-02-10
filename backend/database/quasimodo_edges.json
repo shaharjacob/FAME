@@ -22982,5 +22982,313 @@
 	],
 	"electric field#electrons": [],
 	"electric field#faraday": [],
-	"faraday#electric field": []
+	"faraday#electric field": [],
+	"earth#man": [
+		"be planet for"
+	],
+	"man#earth": [
+		"be from",
+		"be on",
+		"drop off",
+		"put species on",
+		"suffer agony on",
+		"suffer pain on"
+	],
+	"earth#each other": [],
+	"each other#earth": [],
+	"earth#distance": [],
+	"distance#earth": [
+		"affect",
+		"be between",
+		"be communicated to",
+		"be from"
+	],
+	"gravity#the attraction": [],
+	"the attraction#gravity": [],
+	"gravity#distance": [
+		"be affected by",
+		"be related to",
+		"depend on",
+		"fade over",
+		"get over",
+		"get with",
+		"vary with"
+	],
+	"distance#gravity": [
+		"affect",
+		"be related to"
+	],
+	"gravity#the formation": [],
+	"the formation#gravity": [],
+	"gravity#buoyancy": [],
+	"buoyancy#gravity": [
+		"be related to",
+		"relate to"
+	],
+	"gravity#friction": [
+		"be different from",
+		"reduce"
+	],
+	"friction#gravity": [
+		"be affected by",
+		"be different from"
+	],
+	"gravity#time": [
+		"affect",
+		"affect testicles over",
+		"be affected by",
+		"be related to",
+		"be related with",
+		"can affect",
+		"ignore",
+		"relate to",
+		"slow down"
+	],
+	"time#gravity": [
+		"be dependent on",
+		"be relative to",
+		"depend on",
+		"relate to",
+		"slow down with",
+		"vary with"
+	],
+	"gravity#acceleration": [
+		"be equivalent to",
+		"be related to",
+		"has property"
+	],
+	"acceleration#gravity": [
+		"affect",
+		"be affected by",
+		"be due to",
+		"be equal to",
+		"be same as",
+		"relate to"
+	],
+	"gravity#weight": [
+		"affect",
+		"be different from",
+		"be related to",
+		"give",
+		"relate to"
+	],
+	"weight#gravity": [
+		"affect",
+		"be affected by",
+		"be related to",
+		"relate to"
+	],
+	"earth#cycles": [
+		"has property"
+	],
+	"cycles#earth": [],
+	"earth#crops": [],
+	"crops#earth": [],
+	"earth#6 days": [],
+	"6 days#earth": [],
+	"earth#front": [],
+	"front#earth": [],
+	"earth#chemicals": [],
+	"chemicals#earth": [
+		"affect"
+	],
+	"earth#several layers": [],
+	"several layers#earth": [],
+	"earth#a number": [],
+	"a number#earth": [],
+	"earth#rock (geology)": [],
+	"rock (geology)#earth": [],
+	"earth#the assistance": [],
+	"the assistance#earth": [],
+	"earth#teachers": [],
+	"teachers#earth": [
+		"be most unpredictable creatures on"
+	],
+	"earth#changes": [
+		"can",
+		"cause"
+	],
+	"changes#earth": [],
+	"earth#extraterrestrial life": [],
+	"extraterrestrial life#earth": [],
+	"earth#food": [],
+	"food#earth": [],
+	"earth#system": [
+		"be considered",
+		"be considered as",
+		"be described as",
+		"be example of",
+		"be known as",
+		"has property",
+		"have"
+	],
+	"system#earth": [],
+	"earth#progress": [],
+	"progress#earth": [],
+	"earth#china": [],
+	"china#earth": [],
+	"earth#a burden": [],
+	"a burden#earth": [],
+	"earth#metal": [],
+	"metal#earth": [
+		"be extracted from",
+		"be formed in",
+		"be found in",
+		"be in",
+		"be itself in",
+		"end up on",
+		"exist in",
+		"form in"
+	],
+	"earth#fruit": [],
+	"fruit#earth": [
+		"be grown on"
+	],
+	"earth#return": [],
+	"return#earth": [],
+	"earth#john kufuor": [],
+	"john kufuor#earth": [],
+	"earth#stardust": [],
+	"stardust#earth": [],
+	"earth#condensation": [],
+	"condensation#earth": [],
+	"earth#cheese": [],
+	"cheese#earth": [],
+	"earth#canada": [],
+	"canada#earth": [
+		"be most admired country on"
+	],
+	"earth#different quantities": [],
+	"different quantities#earth": [],
+	"earth#the pressure": [],
+	"the pressure#earth": [],
+	"earth#a series": [],
+	"a series#earth": [],
+	"earth#atoms": [],
+	"atoms#earth": [],
+	"earth#cooking classes": [],
+	"cooking classes#earth": [],
+	"earth#circle": [
+		"has property",
+		"have"
+	],
+	"circle#earth": [],
+	"earth#reality": [],
+	"reality#earth": [],
+	"earth#sense": [],
+	"sense#earth": [],
+	"earth#one affliction": [],
+	"one affliction#earth": [],
+	"earth#a fraction": [],
+	"a fraction#earth": [],
+	"earth#enough resources": [],
+	"enough resources#earth": [],
+	"newton#kgf": [],
+	"kgf#newton": [],
+	"newton#impulse": [],
+	"impulse#newton": [],
+	"newton#friction": [],
+	"friction#newton": [],
+	"newton#momentum": [],
+	"momentum#newton": [],
+	"newton#inertia": [],
+	"inertia#newton": [],
+	"lawn#cemetery": [],
+	"cemetery#lawn": [],
+	"lawn#quick work": [],
+	"quick work#lawn": [],
+	"lawn#external websites": [],
+	"external websites#lawn": [],
+	"oven#temperature": [
+		"maintain"
+	],
+	"temperature#oven": [],
+	"oven#a fan": [],
+	"a fan#oven": [],
+	"oven#a variety": [],
+	"a variety#oven": [],
+	"oven#energy": [],
+	"energy#oven": [],
+	"oven#baking": [],
+	"baking#oven": [
+		"has property"
+	],
+	"oven#food dehydrator": [],
+	"food dehydrator#oven": [],
+	"oven#coals": [],
+	"coals#oven": [],
+	"oven#conduction": [
+		"use"
+	],
+	"conduction#oven": [
+		"occur in"
+	],
+	"oven#help": [],
+	"help#oven": [],
+	"oven#a lid": [],
+	"a lid#oven": [],
+	"oven#reflection": [
+		"use"
+	],
+	"reflection#oven": [],
+	"oven#barbecue sauce": [],
+	"barbecue sauce#oven": [],
+	"oven#a color": [],
+	"a color#oven": [],
+	"oven#different sizes": [],
+	"different sizes#oven": [],
+	"oven#cleaning": [],
+	"cleaning#oven": [],
+	"oven#convection": [
+		"use"
+	],
+	"convection#oven": [
+		"be used in",
+		"has property",
+		"occur in"
+	],
+	"cake#a topper": [],
+	"a topper#cake": [],
+	"cake#students": [],
+	"students#cake": [],
+	"cake#a stand": [],
+	"a stand#cake": [],
+	"cake#animal feed": [],
+	"animal feed#cake": [],
+	"cake#fertilizer": [],
+	"fertilizer#cake": [],
+	"cake#the icing": [],
+	"the icing#cake": [],
+	"cake#room temperature": [],
+	"room temperature#cake": [],
+	"cake#problem": [],
+	"problem#cake": [],
+	"cake#manure": [],
+	"manure#cake": [],
+	"cake#rain": [],
+	"rain#cake": [],
+	"cake#the form": [],
+	"the form#cake": [],
+	"cake#clean": [],
+	"clean#cake": [],
+	"cake#refrigerator": [],
+	"refrigerator#cake": [],
+	"cake#plain flour": [
+		"use"
+	],
+	"plain flour#cake": [],
+	"cake#best to": [],
+	"best to#cake": [],
+	"cake#several months": [],
+	"several months#cake": [],
+	"key#dedication": [],
+	"dedication#key": [],
+	"key#education": [],
+	"education#key": [
+		"has property"
+	],
+	"key#communication": [],
+	"communication#key": [
+		"has property"
+	]
 }

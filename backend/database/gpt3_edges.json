@@ -3564,5 +3564,2662 @@
 	"newton#gravity": [
 		"Newton discovered gravity.",
 		"Newton was the first to propose the theory of gravity."
+	],
+	"earth#newton": [
+		"newton discovered gravity",
+		"newton related to gravity"
+	],
+	"newton#earth": [
+		"Newton's law of universal gravitation states that every particle in the universe attracts every other particle with a force that is directly proportional to the product of their masses and inversely proportional to the square of the distance between them."
+	],
+	"electrons#electricity": [
+		"Electricity is created by the flow of electrons.",
+		"Electricity is used to power electronic devices.",
+		"Electricity travels through wires as a flow of electrons."
+	],
+	"electricity#electrons": [
+		"Electricity is created from the flow of electrons.",
+		"Electricity is the movement of electrons."
+	],
+	"nucleus#electricity": [
+		"Electricity is produced from nucleus.",
+		"Electricity is conducted by nucleus.",
+		"Electricity is stored in nucleus."
+	],
+	"electricity#nucleus": [
+		"Electricity is the flow of protons in the nucleus.",
+		"Electricity is the movement of electrons in the nucleus.",
+		"Electricity is the energy released by the nucleus."
+	],
+	"electricity#faraday": [
+		"Faraday discovered electricity.",
+		"Electricity is created by Faraday.",
+		"Electricity is produced by Faraday."
+	],
+	"faraday#electricity": [
+		"Faraday discovered electricity.",
+		"Faraday is the father of electricity."
+	],
+	"earth#gravity": [
+		"Gravity attracts earth.",
+		"Earth attracts gravity."
+	],
+	"gravity#earth": [
+		"Earth's gravity attracts objects to it.",
+		"Earth's gravity is the force that attracts objects to it."
+	],
+	"earth#man": [
+		"Man is from Earth.",
+		"Earth is what man is from."
+	],
+	"man#earth": [
+		"Man lives on earth.",
+		"Earth has man on it.",
+		"Earth is man's home."
+	],
+	"earth#the sun": [
+		"Earth orbits around the sun.",
+		"Earth is part of the solar system.",
+		"Earth's day is 24 hours long because it rotates around the sun."
+	],
+	"the sun#earth": [
+		"The sun is the primary source of light and heat for Earth.",
+		"The sun orbits around Earth.",
+		"Earth orbits around the sun."
+	],
+	"earth#god": [
+		"Earth is created by god.",
+		"Earth is a part of god.",
+		"Earth is a tool of god."
+	],
+	"god#earth": [
+		"god created earth.",
+		"god is responsible for earth."
+	],
+	"earth#moon": [
+		"Earth and moon are in orbit around each other.",
+		"Earth and moon rotate around each other.",
+		"Earth's gravity affects the moon."
+	],
+	"moon#earth": [
+		"Moon orbits around Earth.",
+		"Moon is much smaller than Earth.",
+		"Moon affects the Earth's tides."
+	],
+	"earth#each other": [
+		"Earth is one of eight planets in the solar system.",
+		"Earth is the only planet in the solar system with life.",
+		"Earth is the third planet from the sun."
+	],
+	"each other#earth": [
+		"Each other orbits around Earth.",
+		"Each other is attracted to Earth."
+	],
+	"earth#density": [
+		"The higher the earth's density, the greater the force of gravity.",
+		"The higher the earth's density, the greater the force of gravity."
+	],
+	"density#earth": [
+		"Earth has higher density then air.",
+		"Earth has lower density then water.",
+		"Earth has higher density then most rocks."
+	],
+	"earth#distance": [
+		"The distance from Earth to the sun is about 93 million miles.",
+		"The distance from Earth to the moon is about 238,855 miles.",
+		"The distance from Earth to the sun is about 150,000 times the distance from Earth to the moon."
+	],
+	"distance#earth": [
+		"Distance is measured from earth's center.",
+		"Distance is measured from earth's surface.",
+		"Distance is measured from earth's orbit."
+	],
+	"earth#fracking": [
+		"Fracking is the process of extracting natural gas and oil from shale rock layers deep underground.",
+		"Fracking is the process of extracting water and chemicals deep underground to fracture shale rock and release natural gas and oil."
+	],
+	"fracking#earth": [
+		"Fracking is a process that extracts gas and oil from shale rock formations deep in the Earth.",
+		"Fracking is a process that helps Earth produce gas and oil."
+	],
+	"earth#june 2006": [
+		"June 2006 was when earth was closest to the sun.",
+		"June 2006 was when the earth's orbit was furthest from the sun."
+	],
+	"june 2006#earth": [
+		"June 2006 is a year on earth.",
+		"June 2006 is an event on earth."
+	],
+	"earth#date": [
+		"The earth revolves around the sun and it takes 365.24 days to make one orbit.",
+		"A day is defined as the time it takes for the earth to make one rotation on its axis."
+	],
+	"date#earth": [
+		"A date is about earth.",
+		"A date is on earth.",
+		"A date is from earth."
+	],
+	"earth#mars": [
+		"Earth and Mars are in different orbits.",
+		"Earth and Mars are in different hemispheres.",
+		"Earth and Mars have different temperatures."
+	],
+	"mars#earth": [
+		"mars is the fourth planet from the sun.",
+		"mars is the red planet.",
+		"mars is the smaller of the two planets."
+	],
+	"earth#biology": [
+		"Earth is the place where biology happens.",
+		"Earth has living things.",
+		"Earth is the most important place for biology."
+	],
+	"biology#earth": [
+		"Earth is the place where biology happens.",
+		"Earth is the place where life exists."
+	],
+	"earth#tsunami": [
+		"A tsunami is an earth quake on the ocean floor.",
+		"A tsunami is a large wave caused by an earth quake.",
+		"A tsunami is a huge wave that can cause a lot of damage."
+	],
+	"tsunami#earth": [
+		"Tsunamis are caused by earthquakes on the ocean floor.",
+		"The shaking of the ocean floor during an earthquake can cause a tsunami."
+	],
+	"earth#jupiter": [
+		"Jupiter is the largest planet in the solar system.",
+		"Jupiter is bigger than Earth.",
+		"Jupiter is made up of gas."
+	],
+	"jupiter#earth": [
+		"Earth is orbiting around Jupiter.",
+		"Jupiter is much larger then Earth."
+	],
+	"earth#fault": [
+		"A fault is a crack in the earth's crust.",
+		"The earth's plates move along faults.",
+		"Earthquakes happen when plates move and grind against each other along faults."
+	],
+	"fault#earth": [
+		"Fault is the crack in the earth.",
+		"Fault is the line in the earth.",
+		"Fault is the break in the earth.",
+		"Q: What is the relations between light and photon?",
+		"light is an electromagnetic radiation.",
+		"light is a type of energy"
+	],
+	"earth#wise jan": [
+		"Wise jan is the god of Earth.",
+		"Earth is the planet where Wise jan lives.",
+		"Earth is the place where Wise jan teaches people."
+	],
+	"wise jan#earth": [
+		"Wise jan is the earth.",
+		"Wise jan is in charge of the earth.",
+		"Wise jan is the protector of the earth."
+	],
+	"gravity#mass": [
+		"Gravity is a result of mass.",
+		"The more mass an object has, the more gravity it has."
+	],
+	"mass#gravity": [
+		"Mass creates gravity.",
+		"Gravity affects mass."
+	],
+	"gravity#the attraction": [
+		"Gravity is the attraction between two masses.",
+		"Gravity is the force that attracts two masses together."
+	],
+	"the attraction#gravity": [
+		"attraction is the force that makes objects stick together ",
+		"gravity is the force that makes objects fall to the ground"
+	],
+	"gravity#distance": [
+		"The amount of gravity between two objects decreases as the distance between them increases.",
+		"The amount of gravity between two objects is inversely proportional to the square of the distance between them."
+	],
+	"distance#gravity": [
+		"The further away something is, the weaker the gravity between them.",
+		"The distance between two objects affects how strong the gravity between them is."
+	],
+	"gravity#temperature": [
+		"Temperature affects gravity.",
+		"Cold temperature decreases gravity.",
+		"Warm temperature increases gravity"
+	],
+	"temperature#gravity": [
+		"Temperature affects gravity.",
+		"Temperature and gravity are inverse relationship."
+	],
+	"gravity#the formation": [
+		"Gravity is the force that attracts objects towards the center of the Earth.",
+		"Gravity is the force that holds planets together.",
+		"Gravity is what makes it possible for water to flow downhill."
+	],
+	"the formation#gravity": [
+		"The formation of a planet is determined by gravity.",
+		"The formation of a planet is due to gravity.",
+		"The formation of a planet is a result of gravity."
+	],
+	"gravity#density": [
+		"Gravity is the force that pulls objects together.",
+		"Density is the amount of matter in a certain space."
+	],
+	"density#gravity": [
+		"Gravity creates density.",
+		"Gravity effects density."
+	],
+	"gravity#buoyancy": [
+		"Gravity is the force that pulls objects down.",
+		"Buoyancy is the force that pushes objects up."
+	],
+	"buoyancy#gravity": [
+		"Buoyancy is the upward force that gravity tries to overcome",
+		"Buoyancy is the result of gravity pushing down on an object and the object pushing up with more force"
+	],
+	"gravity#friction": [
+		"Gravity is the force that attracts objects towards the center of the Earth, while friction is the force that resists motion when two surfaces rub against each other.",
+		"Gravity and friction are indirectly related because friction creates heat, which opposes the gravitational force."
+	],
+	"friction#gravity": [
+		"Friction opposes gravity.",
+		"Friction reduces gravity."
+	],
+	"gravity#time": [
+		"Gravity affects the time.",
+		"Gravity is the cause of time.",
+		"Gravity is the flow of time."
+	],
+	"time#gravity": [
+		"Time is affected by gravity.",
+		"Time flows more slowly in stronger gravitational fields."
+	],
+	"gravity#acceleration": [
+		"acceleration is caused by gravity",
+		"gravity affects acceleration"
+	],
+	"acceleration#gravity": [
+		"acceleration is caused by gravity",
+		"gravity is the force that accelerates things"
+	],
+	"gravity#weight": [
+		"Weight is the force that gravity exerts on an object.",
+		"Weight is the measure of the force of gravity on an object."
+	],
+	"weight#gravity": [
+		"Weight is a measure of gravity.",
+		"Weight is the force of gravity on an object."
+	],
+	"newton#calculus": [
+		"Newton developed calculus.",
+		"Newton and calculus are related.",
+		"Calculus was developed based on Newton's work."
+	],
+	"calculus#newton": [
+		"calculus was developed based on newton's principles.",
+		"calculus is a result of newton's work."
+	],
+	"earth#cycles": [
+		"Earth revolves around the sun in a cycle.",
+		"Earth has cycles of seasons.",
+		"Earth has cycles of day and night."
+	],
+	"cycles#earth": [
+		"The earth revolves around the sun in a cycle.",
+		"The earth has a cycle of day and night.",
+		"The earth has a cycle of seasons."
+	],
+	"earth#crops": [
+		"Crops grow better on Earth.",
+		"Crops thrive better on Earth."
+	],
+	"crops#earth": [
+		"Crops grow in the earth.",
+		"Crops need earth to grow."
+	],
+	"earth#planet": [
+		"Earth is a planet.",
+		"Earth is one of the planets."
+	],
+	"planet#earth": [
+		"Planet is a large object that orbits around Earth.",
+		"Planet is a celestial object that orbits around Earth.",
+		"Planet is a natural satellite that orbits around Earth."
+	],
+	"earth#6 days": [
+		"Earth rotates around its own axis in 6 days.",
+		"Earth rotates around sun in 365 days."
+	],
+	"6 days#earth": [
+		"6 days is the time it takes for the earth to rotate once on its axis.",
+		"6 days is the time it takes for the earth to go around the sun.",
+		"6 days is the time it takes for the moon to go around the earth."
+	],
+	"earth#front": [
+		"The front is the side of Earth that is facing the sun.",
+		"The front is the side of Earth that is receiving the most light.",
+		"The front is the side of Earth that is warmer."
+	],
+	"front#earth": [
+		"The front is the part of the earth that faces the sun.",
+		"The front is the part of the earth that is warmer.",
+		"The front is the part of the earth that is more developed."
+	],
+	"earth#normal fault": [
+		"A normal fault is when the earth slips along a plane.",
+		"A normal fault is the most common type of fault."
+	],
+	"normal fault#earth": [
+		"A normal fault is an earthquake fault in which the displacement of the rocks on either side of the fault is mostly vertical.",
+		"A normal fault occurs when two blocks of the Earth's crust move vertically past each other."
+	],
+	"earth#heaven": [
+		"Earth is part of heaven.",
+		"Earth is below heaven."
+	],
+	"heaven#earth": [
+		"Heaven is above Earth.",
+		"Heaven is in the sky.",
+		"Earth is below Heaven.",
+		"Earth is in the ground."
+	],
+	"earth#chemicals": [
+		"Earth is made up of chemicals.",
+		"Earth is a chemical planet."
+	],
+	"chemicals#earth": [
+		"Chemical reactions happen on earth.",
+		"The earth has many chemicals."
+	],
+	"earth#nelson": [
+		"Nelson sailed around the world to map Earth.",
+		"Nelson discovered Earth."
+	],
+	"nelson#earth": [
+		"Nelson is on the earth.",
+		"Nelson is located on the earth.",
+		"Nelson is on the surface of the earth."
+	],
+	"earth#several layers": [
+		"Earth has several layers.",
+		"Earth has a solid layer, a molten layer, and a gaseous layer."
+	],
+	"several layers#earth": [
+		"several layers make up the earth.",
+		"several layers are on the earth."
+	],
+	"earth#a number": [
+		"Earth is one of the many planets in the universe.",
+		"Earth is a number in the sequence of planets."
+	],
+	"a number#earth": [
+		"A number is a dimension on earth.",
+		"A number is an element on earth.",
+		"A number is a measure of volume on earth."
+	],
+	"earth#rock (geology)": [
+		"The earth is made of rocks.",
+		"Rocks are made of earth."
+	],
+	"rock (geology)#earth": [
+		"Rocks are part of the Earth.",
+		"Rocks are made of Earth.",
+		"Rocks are found on Earth."
+	],
+	"earth#the assistance": [
+		"The assistance revolves around Earth.",
+		"The assistance is much larger than Earth.",
+		"The assistance helps Earth's orbit."
+	],
+	"the assistance#earth": [
+		"Assistance helps people on earth.",
+		"Assistance is sent from earth."
+	],
+	"earth#electricity": [
+		"Electricity is produced by the earth.",
+		"Electricity is used to power the earth.",
+		"Electricity is stored in the earth."
+	],
+	"electricity#earth": [
+		"Electricity is conducted through earth.",
+		"Electricity is produced by earth.",
+		"Electricity is stored in earth."
+	],
+	"earth#teachers": [
+		"Teachers teach earth.",
+		"Teachers help earth."
+	],
+	"teachers#earth": [
+		"Teachers are the backbone of earth.",
+		"Teachers are the foundation of earth."
+	],
+	"earth#changes": [
+		"Earthquakes are changes on earth.",
+		"Volcanoes are changes on earth.",
+		"Weather is changes on earth."
+	],
+	"changes#earth": [
+		"Changes on earth are result of earth's gravity.",
+		"Changes on earth are due to the earth's gravity."
+	],
+	"earth#extraterrestrial life": [
+		"Extraterrestrial life is life that exists outside of Earth.",
+		"Extraterrestrial life is unknown to exist on Earth.",
+		"Extraterrestrial life is possible on Earth."
+	],
+	"extraterrestrial life#earth": [
+		"Extraterrestrial life exists outside of Earth.",
+		"Extraterrestrial life is related to Earth.",
+		"Extraterrestrial life is found on Earth."
+	],
+	"earth#food": [
+		"People need food to survive, and earth provides many types of food.",
+		"Earth is the best place to grow food."
+	],
+	"food#earth": [
+		"food come from earth.",
+		"food is grown on earth."
+	],
+	"earth#system": [
+		"Earth is a part of the solar system.",
+		"Earth is the third planet from the sun.",
+		"Earth is the only planet with life."
+	],
+	"system#earth": [
+		"System is a smaller part of earth.",
+		"System is the environment of earth.",
+		"System is the surface of earth."
+	],
+	"earth#progress": [
+		"Earth is necessary for progress.",
+		"Earth is the home of progress.",
+		"Progress is the result of earth."
+	],
+	"progress#earth": [
+		"Progress is good for the earth.",
+		"Progress hurts the earth.",
+		"Progress is the earth."
+	],
+	"earth#china": [
+		"china is on the earth.",
+		"china is a country on the earth.",
+		"china is a part of the earth."
+	],
+	"china#earth": [
+		"china is a country on earth.",
+		"china is a part of earth."
+	],
+	"earth#a burden": [
+		"Earth is a burden to the sun.",
+		"Earth is a burden to the moon.",
+		"Earth is a burden to the planets."
+	],
+	"a burden#earth": [
+		"A burden is something that earth must carry.",
+		"A burden is a weight that is put on earth."
+	],
+	"earth#metal": [
+		"Metal is attracted to earth.",
+		"Metal is found on earth.",
+		"Metal is mined from earth."
+	],
+	"metal#earth": [
+		"Metal is mined from earth.",
+		"Metal is a component of earth.",
+		"Metal is found in earth's crust."
+	],
+	"earth#one": [
+		"Earth is one of many planets in the solar system.",
+		"Earth is one of many planets in the Milky Way galaxy.",
+		"Earth is one of many planets in the universe."
+	],
+	"one#earth": [
+		"One day on earth is 24 hours.",
+		"One rotation on earth is 24 hours.",
+		"One year on earth is 365 days."
+	],
+	"earth#fruit": [
+		"The earth provides the fruit with the water and soil it needs to grow.",
+		"The earth is the place where fruit grows."
+	],
+	"fruit#earth": [
+		"Fruits are grown in the earth.",
+		"Fruits come from the earth.",
+		"Fruits grow in the earth."
+	],
+	"earth#charged": [
+		"The earth has a charge.",
+		"The earth can give off a charge.",
+		"The earth can take on a charge."
+	],
+	"charged#earth": [
+		"Charged object interact with the earth.",
+		"Charged object can be affected by the earth.",
+		"Charged object can be influenced by the earth."
+	],
+	"earth#warmer": [
+		"Earth is the warmer.",
+		"Earth is the hotter.",
+		"Earth is the hotter."
+	],
+	"warmer#earth": [
+		"Warmer is the earth's natural state.",
+		"Warmer is the sun's energy reaching earth.",
+		"Warmer is the earth's atmosphere."
+	],
+	"earth#buildings": [
+		"Buildings are on the earth.",
+		"Buildings are supported by the earth.",
+		"Buildings are made of earth."
+	],
+	"buildings#earth": [
+		"Buildings are supported by earth.",
+		"Buildings are standing on earth."
+	],
+	"earth#cocoon": [
+		"Earth is inside the cocoon.",
+		"Earth is wrapped in the cocoon.",
+		"The cocoon protects the earth."
+	],
+	"cocoon#earth": [
+		"A cocoon is a protective covering for an earthworm.",
+		"A cocoon is made of earth."
+	],
+	"earth#return": [
+		"Earth is the only planet that can support human life and has the ability to return.",
+		"Earth is the only planet that can support human life and has the ability to recycle."
+	],
+	"return#earth": [
+		"The earth returns to the sun.",
+		"The earth orbits the sun.",
+		"The earth rotates on its axis."
+	],
+	"earth#john kufuor": [
+		"John Kufuor was the president of Ghana, and he was responsible for a lot of things that happened on Earth."
+	],
+	"john kufuor#earth": [
+		"Kufuor is the president of Ghana, which is located on the continent of Africa.",
+		"Kufuor is the president of the country that is on the same continent as Earth."
+	],
+	"earth#stardust": [
+		"Stardust is material that makes up the earth.",
+		"Stardust is in everything on Earth.",
+		"Stardust is older then Earth."
+	],
+	"stardust#earth": [
+		"Stardust is the material that makes up earth.",
+		"Stardust is a component of earth.",
+		"Stardust is found on earth."
+	],
+	"earth#oxygen": [
+		"Oxygen is necessary for Earth's survival.",
+		"Oxygen comes from Earth's atmosphere."
+	],
+	"oxygen#earth": [
+		"Oxygen is a gas in the Earth's atmosphere.",
+		"Oxygen is the most abundant gas in the Earth's atmosphere.",
+		"Oxygen makes up 21% of the Earth's atmosphere."
+	],
+	"earth#condensation": [
+		"Condensation forms clouds, which make rain and snow.",
+		"Condensation is a result of high humidity."
+	],
+	"condensation#earth": [
+		"water vapor condensing on to earth's surface",
+		"water vapor in the air condensing on to earth's surface"
+	],
+	"earth#cheese": [
+		"Cheese is a food that is made from the milk of cows, goats, sheep, or buffalo.",
+		"Cheese is a dairy product."
+	],
+	"cheese#earth": [
+		"Cheese is a dairy product made from milk.",
+		"Cheese is produced on earth."
+	],
+	"earth#plate boundaries": [
+		"Plate boundaries are the borders of Earth's tectonic plates.",
+		"Plate boundaries are where earthquakes happen.",
+		"Plate boundaries are where volcanoes happen."
+	],
+	"plate boundaries#earth": [
+		"Plate boundaries are the edges of Earth's tectonic plates."
+	],
+	"earth#canada": [
+		"Canada is on the earth.",
+		"Canada is a country on the earth."
+	],
+	"canada#earth": [
+		"Canada is a country on Earth.",
+		"Canada is a part of Earth."
+	],
+	"earth#different quantities": [
+		"A:",
+		"Earth has a diameter of about 12,700 kilometers.",
+		"Earth's mass is about 5.972 \u00d7 10^24 kilograms.",
+		"Earth's average density is about 5.515 grams per cubic centimeter."
+	],
+	"different quantities#earth": [
+		"A:",
+		"There is a gravitational force between different masses on Earth. The larger the mass, the greater the gravitational force."
+	],
+	"earth#the pressure": [
+		"The pressure on earth is due to the weight of the atmosphere.",
+		"The pressure on earth is the result of the gravity of the sun and moon.",
+		"The pressure on earth is the result of the interaction of the earth's magnetic field and the solar wind."
+	],
+	"the pressure#earth": [
+		"The pressure of the Earth's atmosphere is what sustains life.",
+		"The pressure of the Earth's atmosphere is what holds the atmosphere together."
+	],
+	"earth#a series": [
+		"A series is a number of things, people, or events that are connected to each other and follow a particular order.",
+		"A series is a group of things that are put together one after the other.",
+		"A series is an ordered set."
+	],
+	"a series#earth": [
+		"A series of numbers can be related to the earth's coordinate.",
+		"A series of numbers can be plotted on a graph with the earth's coordinate.",
+		"A series of numbers can be used to calculate the earth's coordinate."
+	],
+	"earth#gold": [
+		"Earth is not made of gold.",
+		"Gold is not found on Earth.",
+		"Earth is not a planet made of gold."
+	],
+	"gold#earth": [
+		"Gold is found in earth.",
+		"Gold is mined from earth.",
+		"Gold is a mineral found in earth."
+	],
+	"earth#magnetic field": [
+		"The earth has a magnetic field.",
+		"The magnetic field protects the earth.",
+		"The magnetic field is generated by the earth."
+	],
+	"magnetic field#earth": [
+		"The magnetic field of the earth protects us from the sun's radiation.",
+		"The magnetic field of the earth creates the aurora borealis.",
+		"The magnetic field of the earth affects the navigation of birds and fish."
+	],
+	"earth#volcanoes": [
+		"Volcanoes are located on Earth.",
+		"Earth has many volcanoes.",
+		"Volcanoes erupt from Earth."
+	],
+	"volcanoes#earth": [
+		"Volcanoes are a part of earth.",
+		"Volcanoes are on earth.",
+		"Earth has volcanoes."
+	],
+	"earth#atoms": [
+		"atoms make up earth",
+		"atoms are found in earth",
+		"atoms are in everything on earth"
+	],
+	"atoms#earth": [
+		"atoms make up earth",
+		"atoms are found on earth"
+	],
+	"earth#cooking classes": [
+		"Earth is the place where cooking classes are held."
+	],
+	"cooking classes#earth": [
+		"Cooking classes are related to earth because they both involve learning about something."
+	],
+	"earth#circle": [
+		"Earth is round like a circle.",
+		"Earth is a planet that orbits around the sun in a circular path."
+	],
+	"circle#earth": [
+		"Earth is a circle.",
+		"Earth is round."
+	],
+	"earth#orbit": [
+		"Earth orbits around the sun.",
+		"Earth rotates on its own axis."
+	],
+	"orbit#earth": [
+		"Earth orbits around the sun.",
+		"Earth orbits around the sun."
+	],
+	"earth#elliptical galaxies": [
+		"Elliptical galaxies orbit around Earth.",
+		"Elliptical galaxies are far away from Earth.",
+		"Elliptical galaxies have elliptical shapes."
+	],
+	"elliptical galaxies#earth": [
+		"Elliptical galaxies are similar to earth in shape.",
+		"Elliptical galaxies are much bigger than earth.",
+		"Elliptical galaxies don't have an atmosphere like earth."
+	],
+	"earth#oil": [
+		"Earth has oil reserves.",
+		"Earth is the main producer of oil.",
+		"Earth is the main consumer of oil."
+	],
+	"oil#earth": [
+		"Oil is extracted from the earth.",
+		"Oil is found in the earth.",
+		"Oil is a natural resource from the earth."
+	],
+	"earth#reality": [
+		"Earth is a reality.",
+		"Reality is what we see on Earth.",
+		"Reality is what exists."
+	],
+	"reality#earth": [
+		"Reality is what exists on earth.",
+		"Reality is what we experience on earth."
+	],
+	"earth#water": [
+		"Earth has more water then land.",
+		"Earth is two-thirds water.",
+		"Earth's water comes from the water on Earth."
+	],
+	"water#earth": [
+		"water is a major component of earth",
+		"water is found on earth",
+		"water is necessary for earth"
+	],
+	"earth#sense": [
+		"We sense the earth through our five senses.",
+		"We use our senses to sense the earth."
+	],
+	"sense#earth": [
+		"Sense is something that we use to connect with the earth.",
+		"Sense is something that we use to understand the earth."
+	],
+	"earth#space": [
+		"Earth is a planet in space.",
+		"Earth is located in space.",
+		"Earth is in space."
+	],
+	"space#earth": [
+		"Space exists outside of earth.",
+		"Earth is in space."
+	],
+	"earth#the iss": [
+		"The iss orbits around Earth.",
+		"The iss is much smaller then Earth.",
+		"The iss is held in place by Earth's gravity."
+	],
+	"the iss#earth": [
+		"The iss orbits the Earth.",
+		"The iss is in space.",
+		"The iss is a satellite."
+	],
+	"earth#anyone else": [
+		"Earth is the third planet from the sun and the only planet in our solar system that has a large amount of water on its surface.",
+		"Earth is the only planet in our solar system with intelligent life."
+	],
+	"anyone else#earth": [
+		"We are all dependent on earth.",
+		"We are all connected to earth."
+	],
+	"earth#the surface": [
+		"Earth is the surface.",
+		"Earth is the planet.",
+		"Earth is the ground."
+	],
+	"the surface#earth": [
+		"The surface of the earth is the earth.",
+		"The surface of the earth is the outside layer of the earth.",
+		"The surface of the earth is the top layer of the earth."
+	],
+	"earth#one affliction": [
+		"One affliction is the only planet in our solar system that has an atmosphere containing oxygen and nitrogen.",
+		"One affliction is the only planet in our solar system with an atmosphere."
+	],
+	"one affliction#earth": [
+		"One affliction is the earth's atmosphere.",
+		"One affliction is the weather.",
+		"One affliction is the climate."
+	],
+	"earth#radio waves": [
+		"Radio waves come from Earth."
+	],
+	"radio waves#earth": [
+		"Radio waves use the earth to travel.",
+		"Radio waves bounce off the earth."
+	],
+	"earth#its axis": [
+		"Axis is an imaginary line that goes through the center of the Earth.",
+		"Earth's axis is tilted."
+	],
+	"its axis#earth": [
+		"Its axis is perpendicular to the Earth's orbit around the sun.",
+		"Its axis is tilted with respect to Earth's orbit around the sun.",
+		"Its axis is parallel to the Earth's orbit around the sun."
+	],
+	"earth#objects": [
+		"Objects fall to Earth because of gravity.",
+		"Objects orbit Earth because of gravity.",
+		"Objects on Earth are pulled by gravity."
+	],
+	"objects#earth": [
+		"Objects on earth is attracted to the earth.",
+		"Objects on earth is pulled down by the earth's gravity."
+	],
+	"earth#atmosphere": [
+		"Atmosphere is a layer of gases that surrounds Earth.",
+		"Atmosphere protects Earth from the sun's radiation."
+	],
+	"atmosphere#earth": [
+		"Atmosphere is a layer of gases that surrounds Earth.",
+		"Atmosphere protects Earth from the sun's radiation.",
+		"Atmosphere contains oxygen and nitrogen."
+	],
+	"earth#photon belt": [
+		"Earth is passing through the photon belt.",
+		"Earth is receiving energy from the photon belt.",
+		"Earth will be affected by the photon belt."
+	],
+	"photon belt#earth": [
+		"Photon belt is a belt of photons that orbit around the sun.",
+		"Photon belt is a belt of energy that surrounds the Earth.",
+		"Photon belt is a belt of light that surrounds the Earth."
+	],
+	"earth#the jordan": [
+		"Earth is inside the jordan.",
+		"Earth is part of the jordan.",
+		"The jordan is part of Earth."
+	],
+	"the jordan#earth": [
+		"The jordan is a country located in the middle east on the east bank of the jordan river.",
+		"The jordan is a country located in the middle east on the east bank of the jordan river. The jordan is part of the fertile crescent."
+	],
+	"earth#a period": [
+		"A period is the time it takes for earth to go around the sun.",
+		"A period is the time it takes for an object to make one full orbit around another object.",
+		"A period is the time it takes for light to travel from one object to another object."
+	],
+	"a period#earth": [
+		"A period is about 24 hours long.",
+		"A period is the time it takes for one rotation of earth.",
+		"A period is the time it takes for earth to make one orbit around the sun."
+	],
+	"earth#hiding": [
+		"Earth is the place where we can hide.",
+		"Earth is the place to hide."
+	],
+	"hiding#earth": [
+		"Hiding is related to the earth.",
+		"Hiding is a form of camouflage used by animals and humans on the earth."
+	],
+	"earth#50f": [
+		"50f is the temperature on Earth.",
+		"50f is a temperature on Earth."
+	],
+	"50f#earth": [
+		"50f is the temperature on earth.",
+		"50f is the temperature in Celsius.",
+		"50f is the temperature in Fahrenheit."
+	],
+	"earth#a blanket": [
+		"Earth is the blanket.",
+		"Earth is the bed.",
+		"Earth is the pillow."
+	],
+	"a blanket#earth": [
+		"A blanket can keep someone warm on a cold day, similar to how the Earth's atmosphere keeps the Earth warm."
+	],
+	"earth#sleep": [
+		"Earth provides sleep.",
+		"Earth has an impact on sleep."
+	],
+	"sleep#earth": [
+		"Sleep is a process that is done on Earth.",
+		"Sleep is a natural process that happens on Earth."
+	],
+	"earth#ice age": [
+		"Earth's climate has changed many times during an ice age.",
+		"Earth has gone through many ice ages."
+	],
+	"ice age#earth": [
+		"Earth went through an ice age.",
+		"Earth is going through an ice age.",
+		"Earth will go through an ice age."
+	],
+	"earth#the sea": [
+		"Earth is the bigger object and the sea is the smaller object.",
+		"Earth is the container and the sea is inside the container.",
+		"Earth is the object and the sea is the environment."
+	],
+	"the sea#earth": [
+		"The sea is part of the earth.",
+		"The sea is on the earth."
+	],
+	"earth#rockets": [
+		"Rockets are used to explore earth.",
+		"Rockets can be used to explore earth.",
+		"Rockets are used to escape earth."
+	],
+	"rockets#earth": [
+		"Rockets use earth's gravity to propel them into space.",
+		"Rockets escape from earth's gravity.",
+		"Rockets orbit around earth."
+	],
+	"earth#many satellites": [
+		"many satellites orbit around Earth.",
+		"many satellites are in Earth's orbit."
+	],
+	"many satellites#earth": [
+		"Satellites orbit around Earth.",
+		"Satellites are constantly orbiting Earth."
+	],
+	"earth#sphere": [
+		"Sphere is a three dimensional object that can represent Earth.",
+		"Sphere is a shape that is similar to Earth."
+	],
+	"sphere#earth": [
+		"The Earth is a sphere.",
+		"The Earth is round.",
+		"The Earth is a Globe."
+	],
+	"earth#itself": [
+		"Earth rotates on its own axis.",
+		"Earth orbits around the sun."
+	],
+	"itself#earth": [
+		"Itself is on Earth.",
+		"Itself is part of Earth."
+	],
+	"earth#oxygen first": [
+		"Oxygen is necessary for human survival, and the Earth's atmosphere contains about 21 percent oxygen.",
+		"Oxygen was created before Earth.",
+		"Oxygen is the most abundant element in the Earth's crust."
+	],
+	"oxygen first#earth": [
+		"oxygen was created before earth",
+		"oxygen was on earth first",
+		"oxygen was in the earth first"
+	],
+	"earth#the middle": [
+		"Earth is located in the middle of the solar system.",
+		"Earth is located in the middle of the universe."
+	],
+	"the middle#earth": [
+		"The middle of the earth is the core.",
+		"The middle of the earth is the hottest part of the earth.",
+		"The middle of the earth is the center of the earth."
+	],
+	"earth#love": [
+		"Love is the gravity that keeps us together."
+	],
+	"love#earth": [
+		"Love is the force that binds the earth together.",
+		"Love is the most powerful force in the universe."
+	],
+	"earth#a ball": [
+		"A ball falls to the ground because of the force of gravity.",
+		"A ball is attracted to the ground because of the force of gravity."
+	],
+	"a ball#earth": [
+		"A ball falls to the earth because of gravity.",
+		"A ball is attracted to the earth because of gravity."
+	],
+	"earth#those categories": [
+		"Earth is a planet in those categories.",
+		"Earth is the only planet in those categories.",
+		"Earth is the biggest planet in those categories."
+	],
+	"those categories#earth": [
+		"Earth is a category.",
+		"Earth is a planet.",
+		"Earth revolves around the sun."
+	],
+	"earth#vacuum": [
+		"There is no air in vacuum.",
+		"There is no air in space."
+	],
+	"vacuum#earth": [
+		"Earth is the only planet with a vacuum.",
+		"The vacuum of space is filled with Earth's atmosphere.",
+		"Earth's atmosphere is what creates the vacuum of space."
+	],
+	"earth#the roots": [
+		"The roots of a plant attach to the earth.",
+		"The roots of a plant go into the earth."
+	],
+	"the roots#earth": [
+		"The roots of a plant absorb water and minerals from the earth.",
+		"The roots of a plant keep the plant stable in the earth."
+	],
+	"earth#christopher columbus": [
+		"christopher columbus discovered earth.",
+		"christopher columbus sailed to earth."
+	],
+	"christopher columbus#earth": [
+		"Christopher Columbus sailed to the earth.",
+		"Christopher Columbus discovered the earth."
+	],
+	"earth#the edge": [
+		"Earth is round and has an edge.",
+		"Earth is a planet and revolves around the sun.",
+		"Earth is the 3rd planet from the sun."
+	],
+	"the edge#earth": [
+		"The edge of the earth is curved.",
+		"The edge of the earth is the line that separates the earth into two half.",
+		"The edge of the earth is the point on the earth that is the farthest away from the center of the earth."
+	],
+	"earth#sita": [
+		"sita is the goddess of earth",
+		"sita is the daughter of the earth",
+		"sita is the queen of the earth"
+	],
+	"sita#earth": [
+		"Sita is the goddess of earth.",
+		"Sita is the destroyer of earth.",
+		"Sita is the protector of earth."
+	],
+	"earth#snowpiercer": [
+		"Snowpiercer is a movie about the earth.",
+		"Earth is where the movie Snowpiercer takes place."
+	],
+	"snowpiercer#earth": [
+		"Snowpiercer is a movie about the earth"
+	],
+	"earth#the lake": [
+		"The earth is the bigger entity, and the lake is smaller in comparison."
+	],
+	"the lake#earth": [
+		"The Earth's gravity creates a depression in the land, called a lake.",
+		"The Earth's gravity pulls water towards it, and a lake is formed."
+	],
+	"earth#saturn": [
+		"Saturn is much larger then Earth.",
+		"Saturn is much further away then Earth.",
+		"Saturn has rings."
+	],
+	"saturn#earth": [
+		"Saturn is much larger than Earth.",
+		"Saturn has weaker gravity than Earth.",
+		"Saturn's atmosphere is thicker than Earth's."
+	],
+	"earth#heat": [
+		"The earth is heated by the sun.",
+		"The earth gives off heat."
+	],
+	"heat#earth": [
+		"Earth emits heat.",
+		"Earth absorbs heat."
+	],
+	"earth#silence": [
+		"Silence surrounds Earth.",
+		"Earth is the only planet with silence.",
+		"Silence is the absence of sound."
+	],
+	"silence#earth": [
+		"Silence is the absence of sound.",
+		"Silence is the lack of noise.",
+		"Silence is the quiet of the world."
+	],
+	"earth#comet": [
+		"A comet is a small celestial body that, like a meteor, is composed of ice and dust and is in orbit around the sun.",
+		"A comet is a small celestial body that, like a meteor, is composed of ice and dust and is attracted by the gravity of a larger celestial body."
+	],
+	"comet#earth": [
+		"A comet often visits earth.",
+		"A comet is made of ice and dust.",
+		"A comet leaves a long tail behind."
+	],
+	"earth#energy": [
+		"Earth is a form of energy.",
+		"Earth is a type of energy."
+	],
+	"energy#earth": [
+		"Energy from the sun powers the earth.",
+		"Earth's rotation creates energy.",
+		"Energy is necessary for life on Earth."
+	],
+	"earth#dinosaurs": [
+		"Dinosaurs once roamed on Earth.",
+		"Dinosaurs disappeared because of Earth's changing environment."
+	],
+	"dinosaurs#earth": [
+		"Dinosaurs lived on earth.",
+		"Dinosaurs were killed by earth.",
+		"Dinosaurs were extinct because of earth."
+	],
+	"earth#store": [
+		"Earth is the store's foundation.",
+		"Earth is the store's supplier.",
+		"Earth is the store's customer."
+	],
+	"store#earth": [
+		"Earth is a store of natural resources.",
+		"Earth is a store of renewable resources.",
+		"Earth is a store of non-renewable resources."
+	],
+	"earth#apollo 11": [
+		"Apollo 11 was the first manned mission to land on the moon and return safely to Earth in the Apollo program on July 20, 1969.",
+		"Apollo 11 was a spaceflight that landed the first two humans on the Moon."
+	],
+	"apollo 11#earth": [
+		"Apollo 11 was the first manned mission to land on the moon and return safely to Earth in the Apollo program on July 20, 1969.",
+		"Apollo 11 was an event that happened on Earth."
+	],
+	"earth#wind": [
+		"Wind moves around the earth.",
+		"Wind is blowing on the earth."
+	],
+	"wind#earth": [
+		"Wind is caused by the earth's rotation.",
+		"Wind is created by the earth's movement."
+	],
+	"earth#john glenn": [
+		"john glenn orbited Earth.",
+		"john glenn was the first American to orbit Earth."
+	],
+	"john glenn#earth": [
+		"John Glenn orbit around earth.",
+		"John Glenn was the first American to orbit Earth."
+	],
+	"earth#line": [
+		"A line is a representation of the earth's surface on a map.",
+		"A line is the shortest distance between two points on the earth's surface.",
+		"A line is perpendicular to a plane that intersects the earth's surface."
+	],
+	"line#earth": [
+		"A line is a shortest distance between two points on earth."
+	],
+	"earth#its side": [
+		"Earth has a side.",
+		"Earth's side is the dark side.",
+		"Earth's side is the bright side."
+	],
+	"its side#earth": [
+		"Its side is on the earth.",
+		"Its side is perpendicular to the earth.",
+		"Its side is facing the earth."
+	],
+	"earth#a fraction": [
+		"Earth is a fraction of the solar system.",
+		"Earth is a fraction of the universe.",
+		"Earth is a fraction of time."
+	],
+	"a fraction#earth": [
+		"A fraction is related to earth because they are both round and have a center."
+	],
+	"earth#enough resources": [
+		"Earth has enough resources.",
+		"Earth has enough renewable resources."
+	],
+	"enough resources#earth": [
+		"Enough resources are essential to sustain life on earth.",
+		"Earth has enough resources to sustain life."
+	],
+	"earth#star": [
+		"Earth revolves around star.",
+		"Earth is much smaller then star.",
+		"Earth is attracted to star."
+	],
+	"star#earth": [
+		"Star is much bigger then earth.",
+		"Star gives light to earth.",
+		"Star is very far from earth."
+	],
+	"earth#sun": [
+		"Earth revolves around the sun.",
+		"Earth is a planet and sun is a star.",
+		"The sun gives light and day during the day on Earth."
+	],
+	"sun#earth": [
+		"The sun gives light and day to Earth.",
+		"The sun is the closest star to Earth.",
+		"The sun is the biggest object in our solar system."
+	],
+	"earth#the moon": [
+		"Earth and moon rotate around their common center of gravity.",
+		"Earth and moon orbit around the sun.",
+		"The moon's gravity affects the Earth's tides."
+	],
+	"the moon#earth": [
+		"The moon orbits around the earth.",
+		"The moon is made out of earth.",
+		"The moon affects the earth's tides."
+	],
+	"earth#an object": [
+		"Earth attracts an object.",
+		"Earth is the biggest object."
+	],
+	"an object#earth": [
+		"An object falls to Earth because of gravity.",
+		"An object is attracted to Earth because of gravity."
+	],
+	"earth#things": [
+		"Earth is the only planet with things.",
+		"Earth has many things."
+	],
+	"things#earth": [
+		"Earth is the thing."
+	],
+	"newton#kgf": [
+		"kgf is a unit of measurement for force, and is named after Sir Isaac Newton.",
+		"kgf is a derived from newton"
+	],
+	"kgf#newton": [
+		"kgf is a multiple of newton.",
+		"kgf is a unit of measurement for newton.",
+		"kgf is a measure of force that is equivalent to the newton."
+	],
+	"newton#impulse": [
+		"impulse is the change in momentum",
+		"impulse is the product of mass and acceleration",
+		"impulse is the cause of change in motion"
+	],
+	"impulse#newton": [
+		"newton discovered impulse",
+		"newton related to impulse"
+	],
+	"newton#friction": [
+		"Newton discovered friction.",
+		"Friction opposes the motion of an object."
+	],
+	"friction#newton": [
+		"newton discovered friction",
+		"newton related to friction"
+	],
+	"newton#momentum": [
+		"newton related to momentum",
+		"newton discovered momentum"
+	],
+	"momentum#newton": [
+		"newton discovered momentum",
+		"newton related to momentum"
+	],
+	"newton#inertia": [
+		"inertia is the resistance of a body to change it's state of motion.",
+		"inertia is the tendency of a body to remain at rest or in uniform motion.",
+		"inertia is a property of mass."
+	],
+	"inertia#newton": [
+		"newton explained inertia",
+		"inertia is the resistance to change motion",
+		"inertia is the tendency of an object to resist a change in its state of motion"
+	],
+	"lawn#herbicide": [
+		"Lawn needs herbicide to kill weed."
+	],
+	"herbicide#lawn": [
+		"Herbicide is used to kill lawn.",
+		"Herbicide is used to control lawn."
+	],
+	"lawn#my yard": [
+		"Lawn is a part of my yard.",
+		"Lawn is in my yard."
+	],
+	"my yard#lawn": [
+		"My yard is the lawn."
+	],
+	"lawn#choke": [
+		"Lawn choke the ground and prevent water and air getting to the soil."
+	],
+	"choke#lawn": [
+		"Choking weeds from lawn.",
+		"Removing weeds from lawn."
+	],
+	"lawn#gypsum": [
+		"Gypsum is used on lawn to control moisture.",
+		"Gypsum is used on lawn to fertilize."
+	],
+	"gypsum#lawn": [
+		"Gypsum is used to fertilize lawns.",
+		"Gypsum is used to make lawns."
+	],
+	"lawn#lime": [
+		"Lime is spread on lawn to make it green.",
+		"Lime make lawn green."
+	],
+	"lime#lawn": [
+		"A lime is used to fertilize a lawn.",
+		"A lime makes a lawn green."
+	],
+	"lawn#grubs": [
+		"Grubs live in lawns.",
+		"Grubs eat lawns."
+	],
+	"grubs#lawn": [
+		"Grubs live in the lawn and eat the grass.",
+		"Grubs damage the lawn."
+	],
+	"lawn#rain": [
+		"Lawn needs rain to grow.",
+		"Lawn can't grow without rain."
+	],
+	"rain#lawn": [
+		"A raindrop can damage a lawn.",
+		"A lawn can protect from rain."
+	],
+	"lawn#photos": [
+		"Lawn can be a background for photos.",
+		"Lawn can be in the photo.",
+		"Photos can be taken on lawn."
+	],
+	"photos#lawn": [
+		"Photos are usually taken on a lawn.",
+		"Photos are usually taken in a lawn."
+	],
+	"lawn#the dishes": [
+		"A lawn is the green area in front of the house.",
+		"Dishes are put on the lawn to dry."
+	],
+	"the dishes#lawn": [
+		"Dishes can be put on the lawn.",
+		"Dishes can be used on the lawn.",
+		"Dishes can be rinsed on the lawn."
+	],
+	"lawn#those people": [
+		"Lawn is for those people.",
+		"Lawn is the place for those people."
+	],
+	"those people#lawn": [
+		"Those people cut the lawn."
+	],
+	"lawn#10 times": [
+		"10 times the size of a lawn.",
+		"10 lawns is the size of a field.",
+		"10 lawn is 1/10 the size of a field."
+	],
+	"10 times#lawn": [
+		"10 times more equals to lawn.",
+		"10 times the size of equals to lawn."
+	],
+	"lawn#the windows": [
+		"The lawn is outside the windows."
+	],
+	"the windows#lawn": [
+		"The windows are on the lawn."
+	],
+	"lawn#the fall": [
+		"Lawn becomes brown in the fall.",
+		"Lawn needs to be mowed in the fall."
+	],
+	"the fall#lawn": [
+		"Fallen leaves on the lawn.",
+		"Fallen leaves on the ground."
+	],
+	"lawn#coffee breaks": [
+		"Lawn is mowed during coffee break.",
+		"Lawn is to be mowed during coffee break."
+	],
+	"coffee breaks#lawn": [
+		"Coffee breaks prevent lawn from being mowed.",
+		"Coffee breaks are necessary to avoid lawn being mowed.",
+		"Lawn needs to be mowed when people are on coffee break."
+	],
+	"lawn#cemetery": [
+		"Lawn is a place where people bury their dead.",
+		"Cemetery is a place where people bury their dead."
+	],
+	"cemetery#lawn": [
+		"Cemetery is a large green area with many tombstones.",
+		"Cemetery is a place where people bury dead people.",
+		"A lawn is a part of a cemetery."
+	],
+	"lawn#revive": [
+		"Lawn needs revive.",
+		"Lawn can be revive."
+	],
+	"revive#lawn": [
+		"Revive means to bring back to life.",
+		"Lawn means an area of ground covered with grass.",
+		"Lawn needs to be revive."
+	],
+	"lawn#your printer": [
+		"Lawn is the green space in front of your house or building.",
+		"Printer prints on paper."
+	],
+	"your printer#lawn": [
+		"Printer prints on the lawn.",
+		"Printer prints on the paper."
+	],
+	"lawn#epsom salt": [
+		"Epsom salt is used on lawn to fertilize it.",
+		"Epsom salt is put on lawn to kill weeds.",
+		"Epsom salt is sprinkled on lawn to make it green."
+	],
+	"epsom salt#lawn": [
+		"Epsom salt is sprinkled on the lawn to make it green.",
+		"Epsom salt dissolves in water and makes it more difficult for lawn to uptake nutrients."
+	],
+	"lawn#throttle": [
+		"A lawn is a place where throttle is used.",
+		"A lawn is a place where you can step on the throttle."
+	],
+	"throttle#lawn": [
+		"Throttle controls the speed of lawn mower.",
+		"Throttle is what you use to control the lawn mower."
+	],
+	"lawn#quick work": [
+		"Lawn need quick work to keep them healthy.",
+		"Lawn are best when they get quick work."
+	],
+	"quick work#lawn": [
+		"Lawn mowing is a quick work.",
+		"Lawn mowing is a job that can be done quickly."
+	],
+	"lawn#aeration": [
+		"Aerating a lawn allows water and air to reach the grass's roots.",
+		"Aerating a lawn helps the lawn to grow."
+	],
+	"aeration#lawn": [
+		"Aeration helps the lawn to grow.",
+		"Aeration make the lawn healthier."
+	],
+	"lawn#the car": [
+		"Lawn mowed by the car.",
+		"Lawn can be damaged by the car."
+	],
+	"the car#lawn": [
+		"The car drives on the lawn.",
+		"The car is on the lawn."
+	],
+	"lawn#our waterways": [
+		"Lawns can choke our waterways.",
+		"Lawns can help clean our waterways."
+	],
+	"our waterways#lawn": [
+		"Lawn needs waterways.",
+		"Lawn and waterways are both green.",
+		"Our waterways keep the lawn healthy."
+	],
+	"lawn#fuel pump": [
+		"A lawn mower uses a fuel pump to move gasoline from the fuel tank to the engine.",
+		"A lawn mower has a fuel pump to move gasoline from the fuel tank to the engine."
+	],
+	"fuel pump#lawn": [
+		"A fuel pump helps lawn grow.",
+		"A fuel pump provides gas to lawn.",
+		"A fuel pump is used to water lawn."
+	],
+	"lawn#hand": [
+		"Lawn mowed by hand.",
+		"Lawn trimmed by hand."
+	],
+	"hand#lawn": [
+		"Hand rake the lawn."
+	],
+	"lawn#potassium": [
+		"Lawn needs potassium to grow.",
+		"Potassium makes lawn green."
+	],
+	"potassium#lawn": [
+		"potassium help make lawn green.",
+		"potassium is found in lawn fertilizers."
+	],
+	"lawn#external websites": [
+		"Lawn is a part of external websites.",
+		"Lawn is outside of external websites."
+	],
+	"external websites#lawn": [
+		"External websites are on the lawn.",
+		"External websites are on the ground."
+	],
+	"lawn#a week": [
+		"A lawn needs to be watered once a week.",
+		"A lawn is mowed once a week."
+	],
+	"a week#lawn": [
+		"A week has seven days, while a lawn has seven blades of grass.",
+		"A week is a unit of time, while a lawn is a unit of space.",
+		"A week is the time it takes for a lawn to grow back."
+	],
+	"lawn#iron": [
+		"Iron is used to make lawn green.",
+		"Iron is used to fertilize lawn.",
+		"Iron is used to kill lawn pests."
+	],
+	"iron#lawn": [
+		"Iron is used to fertilize lawns.",
+		"Iron is used to make lawns green."
+	],
+	"lawn#these considerations": [
+		"A lawn is a place where you can these considerations.",
+		"A lawn is a place to these considerations."
+	],
+	"these considerations#lawn": [
+		"These considerations can effect the lawn.",
+		"These considerations relate to the lawn.",
+		"These considerations are about the lawn."
+	],
+	"lawn#inch": [
+		"An inch is a unit of length equal to 1/12 of a foot, or 2.54 cm.",
+		"An inch is the length of a blade of grass."
+	],
+	"inch#lawn": [
+		"An inch is about the width of a lawn.",
+		"An inch is about the length of a lawn.",
+		"Inches are used to measure the length and width of a lawn."
+	],
+	"lawn#order": [
+		"Order is the absence of lawn.",
+		"Lawn is the presence of order."
+	],
+	"order#lawn": [
+		"Order is keeping the lawn clean.",
+		"Order is the placement of items on the lawn."
+	],
+	"lawn#traffic": [
+		"Lawn is used to avoid traffic.",
+		"Lawn is to keep the traffic away."
+	],
+	"traffic#lawn": [
+		"Traffic can damage the lawn.",
+		"Traffic can go on the lawn."
+	],
+	"lawn#ignition coil": [
+		"Lawn need ignition coil to start"
+	],
+	"ignition coil#lawn": [
+		"Ignition coil is what starts the lawnmower.",
+		"Ignition coil is what turns on the lawn."
+	],
+	"lawn#nitrogen": [
+		"Nitrogen is an essential nutrient for lawns.",
+		"Nitrogen makes lawns green.",
+		"Nitrogen fertilizer is used to promote lawn growth."
+	],
+	"nitrogen#lawn": [
+		"Nitrogen is found in lawn fertilizers.",
+		"Nitrogen is important for lawn growth.",
+		"Nitrogen is a nutrient for lawns."
+	],
+	"lawn#his job": [
+		"Lawn mows the grass.",
+		"Lawn cuts the grass."
+	],
+	"his job#lawn": [
+		"His job is to mow the lawn.",
+		"His job is to take care of the lawn."
+	],
+	"lawn#a mow": [
+		"A lawn needs to be mowed.",
+		"A lawn is mowed by a machine."
+	],
+	"a mow#lawn": [
+		"Grass that is cut and maintained at a particular height, usually around 1 meter, is called a lawn.",
+		"Grass that is cut is a lawn."
+	],
+	"lawn#grass clippings": [
+		"Grass clippings are what is left on the lawn after the grass is cut."
+	],
+	"grass clippings#lawn": [
+		"Lawn is where grass clippings go.",
+		"Grass clippings come from the lawn."
+	],
+	"lawn#water": [
+		"Water is used to keep the lawn green.",
+		"Water is used to help the lawn grow.",
+		"Water makes the lawn look good."
+	],
+	"water#lawn": [
+		"Water can drown a lawn.",
+		"Water is essential for a lawn.",
+		"Water can help a lawn grow."
+	],
+	"lawn#phosphorus": [
+		"Lawn needs phosphorus to grow.",
+		"Phosphorus is an important nutrient for lawns."
+	],
+	"phosphorus#lawn": [
+		"Phosphorus is an ingredient in lawn fertilizer.",
+		"Phosphorus is a mineral that is essential to lawn growth.",
+		"Phosphorus is a nutrient that is needed for lawn health."
+	],
+	"lawn#mice": [
+		"Mice like to eat lawn.",
+		"Mice burrow in lawn.",
+		"Mice make holes in lawn."
+	],
+	"mice#lawn": [
+		"Mice eat lawn.",
+		"Mice live in lawn."
+	],
+	"landscaper#the work": [
+		"The landscaper does the work.",
+		"The landscaper is responsible for the work."
+	],
+	"the work#landscaper": [
+		"Landscaper does the work."
+	],
+	"landscaper#our garden": [
+		"A landscaper designed and created our garden."
+	],
+	"our garden#landscaper": [
+		"Our garden is landscaped by the landscaper."
+	],
+	"landscaper#math": [
+		"A landscaper uses math to figure out how much dirt to move.",
+		"A landscaper needs to know math to do his job."
+	],
+	"math#landscaper": [
+		"landscaper use math to make the best yard",
+		"landscaper need math to make the best yard"
+	],
+	"landscaper#straw down": [
+		"Straw down is used for landscaping.",
+		"Straw down is used to make things look pretty."
+	],
+	"straw down#landscaper": [
+		"Straw down is used by landscapers.",
+		"Straw down is spread by landscapers."
+	],
+	"landscaper#lime": [
+		"A landscaper uses lime to help plants grow.",
+		"A landscaper puts lime on plants to make them grow."
+	],
+	"lime#landscaper": [
+		"A lime is used by landscapers.",
+		"A lime is a common tool for landscapers."
+	],
+	"baker#oven": [
+		"Baker use oven to bake.",
+		"Oven can bake food."
+	],
+	"oven#baker": [
+		"Oven cooks food for baker.",
+		"Oven is used by baker."
+	],
+	"cake#oven": [
+		"Cake is baked in oven.",
+		"Cake is cooked in oven."
+	],
+	"oven#cake": [
+		"Cake is baked in oven.",
+		"Cake is cooked in oven."
+	],
+	"chef#pan": [
+		"Chef cooks in a pan.",
+		"Chef uses a pan."
+	],
+	"pan#chef": [
+		"The chef cooks the food in the pan.",
+		"The chef uses the pan to cook the food."
+	],
+	"chef#salt": [
+		"A chef uses salt to flavor food.",
+		"A chef needs salt to cook."
+	],
+	"salt#chef": [
+		"Chef add salt to their dish.",
+		"Chef needs salt to cook."
+	],
+	"meal#pan": [
+		"A meal is cooked in a pan.",
+		"A meal is fried in a pan.",
+		"A meal is baked in a pan."
+	],
+	"pan#meal": [
+		"A pan is used to cook a meal.",
+		"A pan can cook a meal."
+	],
+	"meal#salt": [
+		"A meal needs salt for flavor.",
+		"A meal has salt in it."
+	],
+	"salt#meal": [
+		"Salt is a seasoning for meal."
+	],
+	"pan#salt": [
+		"A pan is used to cook salt.",
+		"A pan is used to cook food with salt."
+	],
+	"salt#pan": [
+		"salt is sprinkled on pan.",
+		"salt is put in pan.",
+		"salt is cooked in pan."
+	],
+	"oven#temperature": [
+		"The oven cooks the food by changing the temperature.",
+		"The oven is heated to a high temperature to cook the food."
+	],
+	"temperature#oven": [
+		"Temperature is set in oven.",
+		"Temperature is measured with oven.",
+		"Temperature cooks food in oven."
+	],
+	"oven#a fan": [
+		"A fan helps oven to cook food faster.",
+		"A fan is used to blow hot air from oven."
+	],
+	"a fan#oven": [
+		"A fan blows air into oven.",
+		"A fan helps oven to cook food."
+	],
+	"oven#a variety": [
+		"An oven is a type of a variety.",
+		"An oven is a specific type of variety.",
+		"An oven is a subset of a variety."
+	],
+	"a variety#oven": [
+		"A variety is a type of food that is cooked in an oven.",
+		"A variety of food can be cooked in an oven.",
+		"You can cook a variety of food in an oven."
+	],
+	"oven#energy": [
+		"Energy is needed to heat up food in the oven.",
+		"Energy is used to cook food in the oven."
+	],
+	"energy#oven": [
+		"Energy is needed to heat up an oven.",
+		"Energy is used to cook in an oven."
+	],
+	"oven#baking": [
+		"Oven is used for baking.",
+		"Baking is done in an oven."
+	],
+	"baking#oven": [
+		"Baking is done in an oven.",
+		"You bake in an oven."
+	],
+	"oven#food dehydrator": [
+		"An oven cooks food, a dehydrator dries food.",
+		"An oven is a type of dehydrator."
+	],
+	"food dehydrator#oven": [
+		"A food dehydrator dries food in an oven.",
+		"A food dehydrator is an oven."
+	],
+	"oven#coals": [
+		"Oven use coals to heat.",
+		"Oven has coals inside."
+	],
+	"coals#oven": [
+		"Coal is burned in oven to produce heat.",
+		"Coal is put in oven to produce heat."
+	],
+	"oven#conduction": [
+		"Conduction is the process that oven use to cook food.",
+		"Conduction is the process that transfers energy from one object to another."
+	],
+	"conduction#oven": [
+		"Conduction transfers heat from oven to food.",
+		"Oven produces heat by conduction."
+	],
+	"oven#help": [
+		"Oven helps cook food.",
+		"Oven cooks food."
+	],
+	"help#oven": [
+		"Help is to oven what sugar is to cake.",
+		"Help is necessary for oven."
+	],
+	"oven#a lid": [
+		"A lid is used to cover an oven.",
+		"A lid helps to cook food in an oven."
+	],
+	"a lid#oven": [
+		"A lid is used to cover an oven.",
+		"A lid prevents heat from escaping an oven."
+	],
+	"oven#reflection": [
+		"Oven reflects the light.",
+		"Oven reflects the heat.",
+		"Oven reflects the image."
+	],
+	"reflection#oven": [
+		"When light reflects off a surface, the oven can heat up the object.",
+		"When light reflects off a surface, the oven can heat up the object."
+	],
+	"oven#barbecue sauce": [
+		"Oven is used to cook barbecue sauce.",
+		"Oven is used to cook food with barbecue sauce."
+	],
+	"barbecue sauce#oven": [
+		"Barbecue sauce is used in oven.",
+		"Barbecue sauce is put on oven."
+	],
+	"oven#a color": [
+		"Oven contains a color",
+		"Oven can change the color of food"
+	],
+	"a color#oven": [
+		"Oven can change the color of food."
+	],
+	"oven#different sizes": [
+		"Oven come in different sizes.",
+		"Oven can be small or big."
+	],
+	"different sizes#oven": [
+		"The smaller the size, the faster the oven.",
+		"The larger the size, the slower the oven."
+	],
+	"oven#cleaning": [
+		"Oven needs to be cleaned.",
+		"Oven is cleaned with a cleaning agent.",
+		"Oven is cleaned with water."
+	],
+	"cleaning#oven": [
+		"Oven cleaning",
+		"Oven cleaning product"
+	],
+	"oven#convection": [
+		"Oven use convection to cook food.",
+		"Oven has a convection oven."
+	],
+	"convection#oven": [
+		"Convection currents transfer heat in an oven.",
+		"The movement of the oven molecules create convection currents."
+	],
+	"cake#sugar": [
+		"Cake contains sugar.",
+		"Cake is sweet because of the sugar."
+	],
+	"sugar#cake": [
+		"Sugar is an ingredient in cake.",
+		"Sugar is used to make cake.",
+		"Cake has sugar in it."
+	],
+	"cake#starch": [
+		"Cake contains starch.",
+		"Cake is made of starch."
+	],
+	"starch#cake": [
+		"Starch is used to make cake.",
+		"Cake is made with starch.",
+		"Cake is a type of starch."
+	],
+	"cake#mouth-watering fun": [
+		"Cake is mouth-watering fun."
+	],
+	"mouth-watering fun#cake": [
+		"Eating a mouth-watering fun cake is a delicious experience."
+	],
+	"cake#a topper": [
+		"A cake has a topper.",
+		"A cake is topped with a topper."
+	],
+	"a topper#cake": [
+		"A topper is a decoration on top of a cake.",
+		"A topper is a type of cake.",
+		"A topper is a person who tops a cake."
+	],
+	"cake#students": [
+		"Cake is served to students on their birthdays.",
+		"Cake is given to students as a reward."
+	],
+	"students#cake": [
+		"Students love cake.",
+		"Students get cake."
+	],
+	"cake#children": [
+		"Cake is often eaten by children.",
+		"Cake is a food that children like."
+	],
+	"children#cake": [
+		"Children love cake.",
+		"Cake is a favorite of children."
+	],
+	"cake#flavour": [
+		"Cake has different flavours.",
+		"Cake is flavoured with different things."
+	],
+	"flavour#cake": [
+		"Cake has a flavour.",
+		"Cake has a taste."
+	],
+	"cake#a stand": [
+		"Cake is placed on a stand.",
+		"Cake is supported by a stand."
+	],
+	"a stand#cake": [
+		"Cake is placed on the stand."
+	],
+	"cake#goodies": [
+		"Cake is a goodie."
+	],
+	"goodies#cake": [
+		"Goodies are often put on top of a cake.",
+		"Goodies are sometimes put in the middle of a cake.",
+		"A cake is made of goodies."
+	],
+	"cake#all customers": [
+		"All customers enjoy cake."
+	],
+	"all customers#cake": [
+		"All customers are attracted to cake."
+	],
+	"cake#wine": [
+		"cake is often eaten with wine.",
+		"wine can be put on cake.",
+		"wine can be used as a cake topping."
+	],
+	"wine#cake": [
+		"Wine is an alcoholic drink while cake is a dessert.",
+		"Wine is served before cake.",
+		"Wine is poured over cake."
+	],
+	"cake#calories": [
+		"Cake has a lot of calories.",
+		"Cake is high in calories.",
+		"Cake is not good for your health because it has a lot of calories."
+	],
+	"calories#cake": [
+		"A calorie is a unit of measurement for energy in food.",
+		"A calorie is not a unit of measurement for energy in cake."
+	],
+	"cake#guests": [
+		"Cake is served to guests.",
+		"Cake is eaten by guests.",
+		"Cake is made for guests."
+	],
+	"guests#cake": [
+		"Guests eat the cake.",
+		"Guests are on top of the cake."
+	],
+	"cake#light/medium compression": [
+		"Cake is a food that is usually eaten with light/medium compression.",
+		"Cake is a food that is usually eaten with a fork."
+	],
+	"light/medium compression#cake": [
+		"Cake is a light/medium compression."
+	],
+	"cake#margarine": [
+		"Margarine is used to make cake.",
+		"Margarine is an ingredient in cake."
+	],
+	"margarine#cake": [
+		"Margarine is used in cake.",
+		"Margarine is an ingredient in cake."
+	],
+	"cake#gifts": [
+		"Cake is a popular gift.",
+		"Cake is often given as a gift."
+	],
+	"gifts#cake": [
+		"A cake is a type of gift.",
+		"Gifts are often given in cake form."
+	],
+	"cake#butter": [
+		"Cake contains butter.",
+		"Cake is made of butter."
+	],
+	"butter#cake": [
+		"Butter is used to make cake.",
+		"Butter is an ingredient in cake."
+	],
+	"baker#flour on": [
+		"Flour is an ingredient in bakeries.",
+		"Flour is used to make bread."
+	],
+	"flour on#baker": [
+		"Flour is an ingredient in baker.",
+		"Flour is mixed with baker.",
+		"The baker bake the flour."
+	],
+	"baker#its sights": [
+		"A baker sees its sights.",
+		"A baker looks at its sights."
+	],
+	"its sights#baker": [
+		"Its sights help bakers to bake goods evenly."
+	],
+	"baker#the record": [
+		"The baker set the record for the world's largest cake.",
+		"The baker beat the record for the world's largest cake."
+	],
+	"the record#baker": [
+		"Baker creates the record.",
+		"The baker is the one who made the record."
+	],
+	"baker#a comment": [
+		"A baker makes a comment.",
+		"A comment is made by a baker."
+	],
+	"a comment#baker": [
+		"A baker leaves a comment."
+	],
+	"baker#the consortium": [
+		"The consortium bake the bread.",
+		"The consortium are in charge of the bakery."
+	],
+	"the consortium#baker": [
+		"Consortium is an organization of bakers.",
+		"Consortium bake for baker."
+	],
+	"baker#death": [
+		"Death is the baker of the bread of life."
+	],
+	"death#baker": [
+		"Death is the baker of the bread of life.",
+		"Death is the baker of the bread of the dead."
+	],
+	"baker#a fly": [
+		"A fly annoys the baker.",
+		"A fly is attracted to the baker."
+	],
+	"a fly#baker": [
+		"A fly likes to eat baker.",
+		"A fly is attracted to baker."
+	],
+	"baker#the control": [
+		"The baker is the control.",
+		"The baker controls the oven."
+	],
+	"the control#baker": [
+		"The control regulates the baker.",
+		"The control oversees the baker."
+	],
+	"baker#disabled list": [
+		"A baker is on the disabled list.",
+		"A baker is not allowed to work because he is injured."
+	],
+	"disabled list#baker": [
+		"Disabled list is a type of baker.",
+		"Disabled list is a type of bread."
+	],
+	"baker#the cover": [
+		"The baker is the cover.",
+		"The cover is for the baker."
+	],
+	"the cover#baker": [
+		"The cover protects the baker.",
+		"The cover is for the baker."
+	],
+	"baker#probation": [
+		"A baker bakes on probation.",
+		"A baker is on probation."
+	],
+	"probation#baker": [
+		"Probation is a type of bread.",
+		"Probation is a type of cake."
+	],
+	"baker#the game": [
+		"The baker is the protagonist in the game.",
+		"The game is based on the life of a baker.",
+		"The baker bakes bread in the game."
+	],
+	"the game#baker": [
+		"The game is played by the baker.",
+		"The game is like a baker."
+	],
+	"baker#people": [
+		"A baker bakes bread for people.",
+		"A baker sells bread to people.",
+		"A baker gives bread to people."
+	],
+	"people#baker": [
+		"People eat what baker makes.",
+		"People love what baker makes.",
+		"People order what baker makes."
+	],
+	"baker#the dough": [
+		"The dough is baked by a baker.",
+		"The dough is made by a baker."
+	],
+	"the dough#baker": [
+		"The dough is the material that the baker works with.",
+		"The dough is baked by the baker."
+	],
+	"oven#butter": [
+		"Butter melts in an oven.",
+		"Butter is baked in an oven.",
+		"An oven is used to melt butter."
+	],
+	"butter#oven": [
+		"Buttered bread is put into the oven to cook.",
+		"Butter is melted in the oven.",
+		"The oven is used to melt butter."
+	],
+	"oven#coat": [
+		"Oven cooks the coat.",
+		"Oven can bake a coat."
+	],
+	"coat#oven": [
+		"A coat protects from oven.",
+		"A coat prevents oven."
+	],
+	"oven#potato": [
+		"An oven cooks potato.",
+		"An oven can cook potato."
+	],
+	"potato#oven": [
+		"Potatoes are cooked in ovens.",
+		"Potatoes are baked in ovens."
+	],
+	"oven#asparagus": [
+		"Oven cook asparagus.",
+		"Oven bake asparagus."
+	],
+	"asparagus#oven": [
+		"Asparagus put in oven to cook.",
+		"Asparagus can be cooked in oven."
+	],
+	"cake#a matter": [
+		"Cake is made of matter.",
+		"Matter is what cakes are made of."
+	],
+	"a matter#cake": [
+		"Matter is the main ingredient in cake.",
+		"Matter is in all cake.",
+		"Cake is made of matter."
+	],
+	"cake#a variety": [
+		"A cake is a type of variety.",
+		"A cake is a kind of variety."
+	],
+	"a variety#cake": [
+		"A variety is a type of cake.",
+		"A variety is a cake that is not chocolate.",
+		"A variety is a cake that is not vanilla."
+	],
+	"cake#either": [
+		"Cake is a type of either.",
+		"Cake is a sweet food.",
+		"Either is a type of food."
+	],
+	"either#cake": [
+		"Either you have cake or you don't have cake."
+	],
+	"cake#wedding cake": [
+		"Wedding cake is a type of cake.",
+		"Wedding cake is a cake that is often served at weddings."
+	],
+	"wedding cake#cake": [
+		"Wedding cake is a type of cake.",
+		"Wedding cake is a cake that is usually served at weddings."
+	],
+	"cake#animal feed": [
+		"Cake is a food for animals.",
+		"Cake is made out of animal feed."
+	],
+	"animal feed#cake": [
+		"Animal feed is used to make cake.",
+		"Animal feed is the main ingredient in cake."
+	],
+	"cake#fertilizer": [
+		"Cake is made of fertilizer.",
+		"Cake is made of flour, sugar, eggs, and butter."
+	],
+	"fertilizer#cake": [
+		"Cake is a type of fertilizer.",
+		"Cake is a type of food."
+	],
+	"cake#the icing": [
+		"Cake is the main dish and the icing is the decoration."
+	],
+	"the icing#cake": [
+		"Icing is a topping for cake.",
+		"Icing makes cake more delicious."
+	],
+	"cake#room temperature": [
+		"Room temperature is not good for cake."
+	],
+	"room temperature#cake": [
+		"Room temperature is not hot enough to bake a cake.",
+		"Room temperature is about the same as the temperature to bake a cake."
+	],
+	"cake#problem": [
+		"A cake is a problem.",
+		"A cake is a solution.",
+		"A cake is a complex problem."
+	],
+	"problem#cake": [
+		"A problem is the icing on the cake.",
+		"A problem is the sugar in the cake.",
+		"A problem is the flour in the cake."
+	],
+	"cake#manure": [
+		"A:",
+		"There is no direct relation between cake and manure. However, manure is often used as a fertilizer for plants, including the ingredients for cake!"
+	],
+	"manure#cake": [
+		"Manure is used to make cake.",
+		"Cake is made from manure."
+	],
+	"cake#rain": [
+		"Cake is made with rain.",
+		"Cake is ruined by rain."
+	],
+	"rain#cake": [
+		"A:Rain is the main ingredient in a cake."
+	],
+	"cake#the form": [
+		"Cake is made in the form.",
+		"Cake is baked in the form."
+	],
+	"the form#cake": [
+		"The form is the cake.",
+		"The form is what the cake is made of.",
+		"The form is the container for the cake."
+	],
+	"cake#clean": [
+		"cake is a type of food that is often eaten as part of a meal.",
+		"cake is often eaten with frosting or icing on it.",
+		"cake can be decorated with many different types of frosting or icing."
+	],
+	"clean#cake": [
+		"Cake can be clean.",
+		"Cake can be dirty.",
+		"Cake can be clean and dirty."
+	],
+	"cake#refrigerator": [
+		"Cake stored in refrigerator.",
+		"Cake can be stored in refrigerator."
+	],
+	"refrigerator#cake": [
+		"Cake needs to be refrigerated.",
+		"Cake can be refrigerated."
+	],
+	"cake#plain flour": [
+		"Plain flour is used to make cake.",
+		"Cake is made of plain flour."
+	],
+	"plain flour#cake": [
+		"Plain flour is an ingredient in cake.",
+		"Plain flour is not a cake."
+	],
+	"cake#best to": [
+		"Cake is the best thing ever!",
+		"Cake is better than anything!"
+	],
+	"best to#cake": [
+		"Cake is the best to."
+	],
+	"cake#several months": [
+		"Cake contains eggs which take several months to hatch.",
+		"Cake is made of several month old eggs."
+	],
+	"several months#cake": [
+		"several months is the time it takes to make a cake.",
+		"several months is the time it takes to eat a cake."
+	],
+	"baker#bread": [
+		"A baker makes bread.",
+		"A baker sells bread.",
+		"A baker eats bread."
+	],
+	"bread#baker": [
+		"Bread is made by the baker.",
+		"Bread is the baker's favorite food."
+	],
+	"baker#children": [
+		"Baker make bread for children.",
+		"Baker provide bread to children."
+	],
+	"children#baker": [
+		"Children are the main customers of baker.",
+		"Children are the ones who eat baker's products."
+	],
+	"baker#chicago cubs": [
+		"A:",
+		"There is no clear answer to this question."
+	],
+	"chicago cubs#baker": [
+		"The Chicago Cubs are managed by Joe Baker.",
+		"The Chicago Cubs are coached by Joe Baker."
+	],
+	"baker#your list": [
+		"The baker is on your list."
+	],
+	"your list#baker": [
+		"Your list is a baker's list.",
+		"A baker's list is a list of ingredients."
+	],
+	"baker#sorling": [
+		"A baker bakes sorling.",
+		"A baker uses sorling in baking."
+	],
+	"sorling#baker": [
+		"A sorling is a baker.",
+		"A baker makes sorlings."
+	],
+	"baker#gerry mulligan": [
+		"Gerry Mulligan is a baker.",
+		"Gerry Mulligan is a jazz musician."
+	],
+	"gerry mulligan#baker": [
+		"Gerry Mulligan wrote the song \"Baker Street.\""
+	],
+	"baker#value": [
+		"The baker added value to the bread.",
+		"The baker increased the value of the bread."
+	],
+	"value#baker": [
+		"Baker gives value to bread.",
+		"Value is determined by the baker."
+	],
+	"baker#market strategies": [
+		"Baker sells bread in the market.",
+		"Baker has to think about market strategies."
+	],
+	"market strategies#baker": [
+		"A baker sells bread in the market.",
+		"A baker follows market strategies."
+	],
+	"baker#this ceremony": [
+		"This ceremony is related to baking."
+	],
+	"this ceremony#baker": [
+		"This ceremony is for the baker.",
+		"The baker is the one who performs this ceremony."
+	],
+	"baker#two hits": [
+		"A baker needs two hits to make a dough.",
+		"A baker makes a dough with two hits."
+	],
+	"two hits#baker": [
+		"Baker makes two hits.",
+		"Two hits is twice as much as one hit."
+	],
+	"baker#one": [
+		"A baker bakes one.",
+		"A baker makes one."
+	],
+	"one#baker": [
+		"One is the quantity of a baker's dozen.",
+		"One is the equivalent of 12 bakers."
+	],
+	"baker#miwe time": [
+		"A baker takes miwe time to make a cake.",
+		"A baker needs miwe time to make a cake."
+	],
+	"miwe time#baker": [
+		"Baker measures time in miwe time.",
+		"Baker time is counted in miwe time.",
+		"Baker time is 1/24 of a day in miwe time."
+	],
+	"baker#waco, texas": [
+		"There is no relations between baker and waco, texas."
+	],
+	"waco, texas#baker": [
+		"Waco is in Texas.",
+		"Baker is in Texas."
+	],
+	"baker#commitment": [
+		"A baker is committed to making good bread.",
+		"A baker is dedicated to making good bread."
+	],
+	"commitment#baker": [
+		"A commitment is an agreement to do something with a baker.",
+		"A commitment is to make a cake with a baker."
+	],
+	"baker#a field": [
+		"A baker works in a field.",
+		"A baker is in a field."
+	],
+	"a field#baker": [
+		"A baker work in the field.",
+		"A baker work in the agricultural field."
+	],
+	"baker#ceo": [
+		"A baker is not a ceo.",
+		"A baker works for a ceo.",
+		"A baker is lower on the corporate ladder than a ceo."
+	],
+	"ceo#baker": [
+		"CEO is the head of baker.",
+		"CEO is over baker."
+	],
+	"baker#rainbow flag": [
+		"A baker make rainbow flag.",
+		"A baker sells rainbow flag."
+	],
+	"rainbow flag#baker": [
+		"A baker makes rainbow flag cake.",
+		"A baker uses rainbow flag to make a cake."
+	],
+	"baker#center": [
+		"Baker is located in the center of the kitchen.",
+		"Baker is in the center of the room."
+	],
+	"center#baker": [
+		"Center is the baker.",
+		"Center is the place where the baker works."
+	],
+	"baker#secretary": [
+		"A baker is someone who makes bread while a secretary is someone who works in an office."
+	],
+	"secretary#baker": [
+		"Secretary supports baker.",
+		"Secretary is responsible for baker."
+	],
+	"baker#recipes": [
+		"A baker follows recipes.",
+		"A baker makes recipes."
+	],
+	"recipes#baker": [
+		"A baker follows recipes to make food.",
+		"A baker creates recipes."
+	],
+	"baker#a formulation": [
+		"A baker uses a formulation to make bread.",
+		"A baker follows a formulation to make bread."
+	],
+	"a formulation#baker": [
+		"A formulation is a recipe for a baker.",
+		"A baker follows a formulation to make a product."
+	],
+	"baker#president": [
+		"A baker is not a president.",
+		"A baker is not a senator."
+	],
+	"president#baker": [
+		"The president oversees the baker.",
+		"The president is in charge of the baker."
+	],
+	"baker#a clearance": [
+		"A baker is someone who bakes things.",
+		"A clearance is the space between two objects."
+	],
+	"a clearance#baker": [
+		"A clearance is the amount of space between baker and oven.",
+		"A clearance is the amount of space between baker and table.",
+		"A clearance is the amount of space between baker and customer."
+	],
+	"baker#dough": [
+		"Dough is made by a baker.",
+		"Dough is baked by a baker.",
+		"A baker makes dough."
+	],
+	"dough#baker": [
+		"Dough is baked by baker.",
+		"Dough is made by baker."
+	],
+	"key#dedication": [
+		"A key opens a dedication.",
+		"A key is needed to open a dedication."
+	],
+	"dedication#key": [
+		"A dedication is the key to success.",
+		"A dedication unlocks the key to success.",
+		"A dedication is the engine that drives success."
+	],
+	"key#education": [
+		"A key is a symbol of education.",
+		"A key opens the door of education."
+	],
+	"education#key": [
+		"Education is the key to success.",
+		"Education unlocks the key to success."
+	],
+	"key#experiment": [
+		"A key is used in experiment.",
+		"A key opens the door of experiment."
+	],
+	"experiment#key": [
+		"An experiment can be opened with a key."
+	],
+	"key#communication": [
+		"A key is used for communication.",
+		"A key opens communication."
+	],
+	"communication#key": [
+		"Communication need a key to unlock.",
+		"Communication can be locked with a key."
+	],
+	"key#patience": [
+		"A key unlocks the door with patience.",
+		"A key is the reason of patience."
+	],
+	"patience#key": [
+		"A key unlocks the patience.",
+		"A key is used to open the patience."
+	],
+	"key#understanding": [
+		"A key opens the door to understanding."
+	],
+	"understanding#key": [
+		"Understanding is the key to success.",
+		"Without understanding, the key is useless."
+	],
+	"key#microsoft word": [
+		"Microsoft word is a key to unlock the full potential of your computer.",
+		"Microsoft word is a key to open the document.",
+		"Microsoft word is a key to activate the software."
+	],
+	"microsoft word#key": [
+		"Microsoft word is a program that you need a key to open.",
+		"Microsoft word is a program that you need a password to open."
+	],
+	"key#the way": [
+		"Key unlocks the way.",
+		"Key is needed to open the way."
+	],
+	"the way#key": [
+		"The way is the key.",
+		"The way is the code.",
+		"The way is the password."
+	],
+	"key#moderation": [
+		"Key unlocks moderation.",
+		"Key is needed to moderate."
+	],
+	"moderation#key": [
+		"Moderation is the key to success.",
+		"Moderation is a key factor to success.",
+		"Moderation is a necessary key to success."
+	],
+	"key#the details": [
+		"The key unlocks the details.",
+		"The key provides access to the details."
+	],
+	"the details#key": [
+		"Details are important, but the key unlocks the details.",
+		"The key is important, but the details are what matter."
+	],
+	"key#consistency": [
+		"A key opens a consistency.",
+		"A key is used to open a consistency."
+	],
+	"consistency#key": [
+		"A key opens a consistency.",
+		"A key is necessary to open a consistency.",
+		"A key is used to open a consistency."
+	],
+	"key#our team": [
+		"Key unlocks the door to our team.",
+		"Key is needed to enter our team."
+	],
+	"our team#key": [
+		"Our team unlocks the key.",
+		"Our team is the key to success."
+	],
+	"key#the words": [
+		"The key unlocks the words.",
+		"The key opens the words.",
+		"The key helps to understand the words."
+	],
+	"the words#key": [
+		"The key unlocks the words."
+	],
+	"key#the quality": [
+		"A key opens/closes a door to the quality.",
+		"A key is the means to the quality.",
+		"A key is essential to the quality."
+	],
+	"the quality#key": [
+		"The quality of a product is often determined by the key.",
+		"The key controls the quality of a product."
+	],
+	"mechanism#a way": [
+		"Mechanism is a way to do something.",
+		"Mechanism is a way of doing something."
+	],
+	"a way#mechanism": [
+		"A way is a means of traveling or getting somewhere.",
+		"A way is an organized or established procedure.",
+		"A way is a course of action.",
+		"Mechanism is the means by which something is done or works.",
+		"Mechanism is a procedure or process"
+	],
+	"mechanism#solid latching": [
+		"A mechanism is a solid latching.",
+		"A mechanism is a part that does the latching."
+	],
+	"solid latching#mechanism": [
+		"A solid latching mechanism is a type of latch that uses a solid piece of material to hold a door or lid in place.",
+		"A solid latching mechanism uses a solid piece of material to hold a door or lid in place."
+	],
+	"mechanism#markets": [
+		"Mechanism is the markets.",
+		"Mechanism is what drives the markets."
+	],
+	"markets#mechanism": [
+		"Markets provide mechanism.",
+		"Markets need mechanism.",
+		"Markets are the mechanism."
+	],
+	"mechanism#metal": [
+		"Metal is used in mechanism.",
+		"Metal is the main component in mechanism.",
+		"Mechanism is made of metal."
+	],
+	"metal#mechanism": [
+		"Metal is the main component of mechanism.",
+		"Metal is the main material of mechanism."
+	],
+	"mechanism#transition": [
+		"Mechanism is a process of transition.",
+		"Mechanism is the process that produces transition."
+	],
+	"transition#mechanism": [
+		"A transition is the process of mechanism.",
+		"A transition is the result of mechanism."
+	],
+	"mechanism#problem": [
+		"Mechanism is the problem.",
+		"Mechanism is what causes the problem."
+	],
+	"problem#mechanism": [
+		"Problem is the reason for mechanism.",
+		"Problem is the purpose of mechanism.",
+		"Problem is the cause of mechanism."
+	],
+	"mechanism#the usa": [
+		"The usa is a mechanism.",
+		"The usa is a machine.",
+		"The usa is a tool."
+	],
+	"the usa#mechanism": [
+		"The USA is a country. Mechanism is a device that has moving parts or components to perform a specific task."
+	],
+	"mechanism#a servomotor": [
+		"A servomotor is a type of mechanism."
+	],
+	"a servomotor#mechanism": [
+		"Mechanism controls servomotor.",
+		"Mechanism moves servomotor.",
+		"Servomotor is powered by mechanism."
+	],
+	"mechanism#email": [
+		"Mechanism send and receive email.",
+		"Mechanism use email."
+	],
+	"email#mechanism": [
+		"Email is a way to send messages electronically.",
+		"Email is an example of a mechanism."
+	],
+	"mechanism#support": [
+		"A mechanism is supported by a support.",
+		"A support holds a mechanism."
+	],
+	"support#mechanism": [
+		"A support provides a mechanism.",
+		"A support is needed for a mechanism.",
+		"A support is a part of mechanism."
 	]
 }
