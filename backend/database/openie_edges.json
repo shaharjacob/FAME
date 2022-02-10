@@ -61763,5 +61763,29 @@
 	"forewarning#heart attack": [],
 	"heart attack#forewarning": [],
 	"surprise#heart attack": [],
-	"heart attack#surprise": []
+	"heart attack#surprise": [],
+	"traveler#hike": [
+		"come here to"
+	],
+	"hike#traveler": [],
+	"destination#hike": [],
+	"hike#destination": [
+		"is all about"
+	],
+	"track#hike": [
+		"then take"
+	],
+	"hike#track": [],
+	"basketball#dribble": [],
+	"dribble#basketball": [
+		"will dribble"
+	],
+	"hoop#dribble": [],
+	"dribble#hoop": [
+		"is"
+	],
+	"court#dribble": [
+		"picked up"
+	],
+	"dribble#court": []
 }

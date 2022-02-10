@@ -3404,5 +3404,53 @@
 	],
 	"heart attack#surprise": [
 		"A heart attack is a surprise."
+	],
+	"traveler#hike": [
+		"A traveler hikes.",
+		"A traveler goes hiking."
+	],
+	"hike#traveler": [
+		"A traveler hikes.",
+		"A traveler enjoys hikes."
+	],
+	"destination#hike": [
+		"A hike is the journey to the destination.",
+		"A hike to the destination."
+	],
+	"hike#destination": [
+		"Hiking leads to a destination.",
+		"A hike usually goes to a destination."
+	],
+	"track#hike": [
+		"Track is a paved path for hiking.",
+		"To hike means to walk on a track."
+	],
+	"hike#track": [
+		"Hiking follows a track.",
+		"A hiking trail is a track."
+	],
+	"basketball#dribble": [
+		"To dribble is to bounce the ball off the ground with one hand.",
+		"To dribble is to keep the ball from touching the ground."
+	],
+	"dribble#basketball": [
+		"Dribble is when you move the ball around with your hands on the basketball court.",
+		"Dribble is when you move the ball on the ground."
+	],
+	"hoop#dribble": [
+		"A hoop is used for dribbling a ball.",
+		"Dribbling a ball through a hoop is a common basketball skill."
+	],
+	"dribble#hoop": [
+		"Dribble is when you move the ball around your waist and then let it go through the hoop.",
+		"To dribble is to move the ball around your waist and then let it go through the hoop."
+	],
+	"court#dribble": [
+		"Court is where dribble is done.",
+		"Court is the place where dribble is done."
+	],
+	"dribble#court": [
+		"Dribble is taking the ball and moving it around the court.",
+		"Dribble helps to move the ball around the court."
 	]
 }

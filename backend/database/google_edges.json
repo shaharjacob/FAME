@@ -34970,5 +34970,17 @@
 	"forewarning#heart attack": [],
 	"heart attack#forewarning": [],
 	"surprise#heart attack": [],
-	"heart attack#surprise": []
+	"heart attack#surprise": [],
+	"traveler#hike": [],
+	"hike#traveler": [],
+	"destination#hike": [],
+	"hike#destination": [],
+	"track#hike": [],
+	"hike#track": [],
+	"basketball#dribble": [],
+	"dribble#basketball": [],
+	"hoop#dribble": [],
+	"dribble#hoop": [],
+	"court#dribble": [],
+	"dribble#court": []
 }
