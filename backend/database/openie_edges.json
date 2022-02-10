@@ -60832,5 +60832,98 @@
 		"travel through",
 		"trek",
 		"were fixed in"
+	],
+	"sounds#earplugs": [
+		"wear"
+	],
+	"earplugs#sounds": [
+		"picks up"
+	],
+	"air#earplugs": [],
+	"earplugs#air": [],
+	"earplugs#ear": [
+		"hurt",
+		"is draining from",
+		"is inserted into",
+		"will be worn inside"
+	],
+	"ear#earplugs": [
+		"will recommend"
+	],
+	"goal#soccer": [
+		"can be used for",
+		"could be introduced in",
+		"gave",
+		"goes down in",
+		"is to get",
+		"is to offer",
+		"is to play",
+		"offer all type of",
+		"saves"
+	],
+	"soccer#goal": [
+		"distributes",
+		"feature",
+		"got a pair of",
+		"have",
+		"have been devised with just",
+		"is",
+		"is a straightforward game as",
+		"is to",
+		"perform several functions with",
+		"prevent",
+		"reach",
+		"scored",
+		"try for",
+		"used",
+		"was one of",
+		"would implement"
+	],
+	"basket#hardwood": [],
+	"hardwood#basket": [],
+	"basketball#hardwood": [
+		"has dominated",
+		"took to"
+	],
+	"hardwood#basketball": [],
+	"hardwood#hands": [
+		"allows",
+		"are",
+		"are clad by",
+		"holds",
+		"is harvested by"
+	],
+	"hands#hardwood": [
+		"assembled around",
+		"carved",
+		"carved from",
+		"crafted",
+		"crafted of",
+		"finished",
+		"made",
+		"made from",
+		"made in",
+		"mounted on",
+		"painted design on",
+		"sanded in",
+		"scraped",
+		"sculpted from",
+		"selected",
+		"stained"
+	],
+	"soccer#grass": [
+		"is a kick in",
+		"is extremely rough on",
+		"is played on"
+	],
+	"grass#soccer": [],
+	"soccer#feet": [
+		"is really a game played with",
+		"should really fit",
+		"use"
+	],
+	"feet#soccer": [
+		"are as essential as",
+		"is"
 	]
 }

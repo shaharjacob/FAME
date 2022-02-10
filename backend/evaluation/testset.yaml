@@ -361,3 +361,80 @@ mapping:
   #     - thermometer --> polygraph
   #     - temperature --> honesty
   #     - mercury --> pulse
+
+  - input: # 31
+      base: [thoughts, brain, neurons]
+      target: [astronaut, space, stars]
+      depth:
+        beam: 20
+        dfs: 2
+    output:
+      mapping:
+        - thoughts --> astronaut
+        - brain --> space
+        - neurons --> stars
+
+  - input: # 32
+      base: [water, pressure, bucket, pipe, rain]
+      target: [heat, temperature, kettle, iron, sun]
+      depth:
+        beam: 20
+        dfs: 4
+    output:
+      mapping:
+        - water --> heat
+        - pressure --> temperature
+        - bucket --> kettle
+        - pipe --> iron
+        - rain --> sun
+  
+  - input: # 33
+      base: [waves, water, shore, breakwater]
+      target: [sounds, air, earplugs, ear]
+      depth:
+        beam: 20
+        dfs: 4
+    output:
+      mapping:
+        - waves --> sounds
+        - water --> air
+        - shore --> ear
+        - breakwater --> earplugs
+  
+  - input: # 34
+      base: [goal, soccer, grass, feet]
+      target: [basket, basketball, hardwood, hands] 
+      depth:
+        beam: 20
+        dfs: 4
+    output:
+      mapping:
+        - goal --> basket
+        - soccer --> basketball
+        - grass --> hardwood
+        - feet --> hands
+   
+  - input: # 35
+      base: [seeds, fruit, bloom]
+      target: [ideas, product, success] 
+      depth:
+        beam: 20
+        dfs: 4
+    output:
+      mapping:
+        - seeds --> ideas
+        - fruit --> product
+        - bloom --> success
+
+  - input: # 36
+      base: [morning, breakfast, start, coffee]
+      target: [evening, dinner, end, wine] 
+      depth:
+        beam: 20
+        dfs: 4
+    output:
+      mapping:
+        - morning --> evening
+        - breakfast --> dinner
+        - start --> end
+        - coffee --> wine

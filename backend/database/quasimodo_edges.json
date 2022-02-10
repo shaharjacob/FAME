@@ -22703,5 +22703,21 @@
 	"winter#chic sweatshirts": [],
 	"chic sweatshirts#winter": [],
 	"winter#its peak": [],
-	"its peak#winter": []
+	"its peak#winter": [],
+	"goal#soccer": [
+		"be scored in"
+	],
+	"soccer#goal": [],
+	"basket#hardwood": [],
+	"hardwood#basket": [],
+	"basketball#hardwood": [],
+	"hardwood#basketball": [],
+	"hardwood#hands": [],
+	"hands#hardwood": [],
+	"soccer#grass": [
+		"be played on"
+	],
+	"grass#soccer": [],
+	"soccer#feet": [],
+	"feet#soccer": []
 }

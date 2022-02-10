@@ -34650,5 +34650,36 @@
 	"winter#chic sweatshirts": [],
 	"chic sweatshirts#winter": [],
 	"winter#its peak": [],
-	"its peak#winter": []
+	"its peak#winter": [],
+	"goal#soccer": [
+		"difference work in",
+		"line technology work in",
+		"scored in"
+	],
+	"soccer#goal": [
+		"announcers yell",
+		"players celebrate after a",
+		"players raise their hands after a",
+		"players run away after a",
+		"players run to the corner after a",
+		"players slide after a"
+	],
+	"basket#hardwood": [],
+	"hardwood#basket": [],
+	"basketball#hardwood": [],
+	"hardwood#basketball": [],
+	"hardwood#hands": [],
+	"hands#hardwood": [],
+	"soccer#grass": [
+		"played on"
+	],
+	"grass#soccer": [],
+	"soccer#feet": [
+		"cleats hurt my",
+		"players have small",
+		"players kick with the side of their",
+		"players take care of their",
+		"players tape their"
+	],
+	"feet#soccer": []
 }
