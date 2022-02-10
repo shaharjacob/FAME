@@ -3334,5 +3334,75 @@
 		"Coffeehouse sells coffee.",
 		"Coffeehouse contains coffee.",
 		"Coffeehouse is made from coffee."
+	],
+	"traveler#track": [
+		"A traveler follows a track.",
+		"A traveler moves on track."
+	],
+	"track#traveler": [
+		"A traveler follows the track.",
+		"A traveler leaves the track.",
+		"A traveler goes off the track."
+	],
+	"destination#track": [
+		"Destination is the final stop on the track.",
+		"Destination is the end of the track.",
+		"Destination is the final destination."
+	],
+	"track#destination": [
+		"A train track leads to a destination.",
+		"A train track is the path to the destination."
+	],
+	"basketball#court": [
+		"A basketball is played on a court.",
+		"A basketball is bounced on a court.",
+		"A basketball is shot on a court."
+	],
+	"court#basketball": [
+		"Court is where basketball is played.",
+		"Court is the size of a basketball court.",
+		"Court is the place where basketball is played."
+	],
+	"hoop#court": [
+		"A hoop is used on a court.",
+		"A hoop is used for basketball.",
+		"A hoop is round."
+	],
+	"court#hoop": [
+		"A court is where hoop is played.",
+		"A hoop is played on a court."
+	],
+	"traveler#trail": [
+		"A traveler leaves a trail behind.",
+		"A traveler walks on the trail.",
+		"A traveler walks in the trail."
+	],
+	"trail#traveler": [
+		"A traveler leaves a trail.",
+		"A traveler can follow a trail."
+	],
+	"destination#trail": [
+		"A destination is the end of a trail.",
+		"A destination is the end of a journey.",
+		"A destination is the end of a path."
+	],
+	"trail#destination": [
+		"Trail is the path to the destination.",
+		"Trail is the path to the goal."
+	],
+	"forewarning#heart attack": [
+		"A heart attack is a form of forewarning.",
+		"Forewarning can prevent heart attack."
+	],
+	"heart attack#forewarning": [
+		"A heart attack is a medical emergency that may be preceded by certain warning signs.",
+		"A heart attack is a medical emergency that may be preceded by certain symptoms."
+	],
+	"surprise#heart attack": [
+		"A surprise can cause a heart attack.",
+		"A surprise can be a heart attack."
+	],
+	"heart attack#surprise": [
+		"A heart attack is a surprise."
 	]
 }

@@ -22940,5 +22940,23 @@
 	"sugar#coffeehouse": [],
 	"coffeehouse#sugar": [],
 	"coffee#coffeehouse": [],
-	"coffeehouse#coffee": []
+	"coffeehouse#coffee": [],
+	"traveler#track": [],
+	"track#traveler": [],
+	"destination#track": [],
+	"track#destination": [],
+	"basketball#court": [
+		"has property"
+	],
+	"court#basketball": [],
+	"hoop#court": [],
+	"court#hoop": [],
+	"traveler#trail": [],
+	"trail#traveler": [],
+	"destination#trail": [],
+	"trail#destination": [],
+	"forewarning#heart attack": [],
+	"heart attack#forewarning": [],
+	"surprise#heart attack": [],
+	"heart attack#surprise": []
 }

@@ -34948,5 +34948,27 @@
 	"sugar#coffeehouse": [],
 	"coffeehouse#sugar": [],
 	"coffee#coffeehouse": [],
-	"coffeehouse#coffee": []
+	"coffeehouse#coffee": [],
+	"traveler#track": [],
+	"track#traveler": [],
+	"destination#track": [],
+	"track#destination": [],
+	"basketball#court": [
+		"half",
+		"played using the whole",
+		"roll across the"
+	],
+	"court#basketball": [],
+	"hoop#court": [],
+	"court#hoop": [],
+	"traveler#trail": [
+		"pay for the journey on the oregon"
+	],
+	"trail#traveler": [],
+	"destination#trail": [],
+	"trail#destination": [],
+	"forewarning#heart attack": [],
+	"heart attack#forewarning": [],
+	"surprise#heart attack": [],
+	"heart attack#surprise": []
 }

@@ -61696,5 +61696,72 @@
 		"brewed",
 		"have become a beacon for",
 		"serves"
-	]
+	],
+	"traveler#track": [
+		"are on"
+	],
+	"track#traveler": [
+		"is a site for"
+	],
+	"destination#track": [
+		"are all on",
+		"are totally off"
+	],
+	"track#destination": [
+		"get to",
+		"is used for"
+	],
+	"basketball#court": [
+		"are among",
+		"are worn on",
+		"fled from",
+		"follow their progress on",
+		"get back on",
+		"is on",
+		"is played on",
+		"looks to break",
+		"make a bold statement on",
+		"move a ball on",
+		"played on",
+		"shuffleboard",
+		"sized",
+		"superimposed with",
+		"take",
+		"took to",
+		"walks off"
+	],
+	"court#basketball": [
+		"add to",
+		"is the ultimate weapon in",
+		"serve as",
+		"tracks",
+		"venues in"
+	],
+	"hoop#court": [
+		"are among",
+		"keeps his game to"
+	],
+	"court#hoop": [],
+	"traveler#trail": [
+		"follows"
+	],
+	"trail#traveler": [
+		"gives",
+		"leads",
+		"supplied",
+		"takes"
+	],
+	"destination#trail": [
+		"was"
+	],
+	"trail#destination": [
+		"arrive at",
+		"climbs up to",
+		"finishes in",
+		"winds its way to"
+	],
+	"forewarning#heart attack": [],
+	"heart attack#forewarning": [],
+	"surprise#heart attack": [],
+	"heart attack#surprise": []
 }
