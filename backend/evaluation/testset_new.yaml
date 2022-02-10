@@ -73,7 +73,7 @@ mapping:
       - sight --> money
       - blind --> beggar
 
-  - input: #7 : 1/4 - no solution found
+  - input: #7 : 0/4 - no solution found
       base: [blizzard, snowflake, turbulence, salt]
       target: [army, soldier, enlistment, wound]
       depth:
@@ -86,7 +86,7 @@ mapping:
       - turbulence --> enlistment
       - salt --> wound
 
-  - input: #8 : 2/4 - - solution rank #2
+  - input: #8 : 4/4
       base: [bracelet, wrist, silver, bone] 
       target: [moat, castle, water, stone]
       depth:
@@ -184,7 +184,7 @@ mapping:
       - lawn --> hair
       - fertilizer --> gel
 
-  - input: #16 : 1/3 - solution rank #4
+  - input: #16 : 1/3 - solution rank #2
       base: [launchpad, helicopter, rotor]
       target: [divingboard, diver, fins]
       depth:
@@ -305,7 +305,7 @@ mapping:
       - rind --> butt
       - sugar --> nicotine
 
-  - input: #26 : 1/3 - solution rank #2
+  - input: #26 : 3/3
       base: [movie, screen, sound]
       target: [lightning, sky, thunder]
       depth:
@@ -353,7 +353,7 @@ mapping:
       - disease --> surprise
       - hospitalization --> seizures
       
-  - input: # 30 : 0/3 - solution rank #2
+  - input: # 30 : 3/3
       base: [thermometer, temperature, mercury]
       target: [polygraph, honesty, pulse]
       depth:
