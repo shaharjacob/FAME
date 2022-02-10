@@ -22719,5 +22719,158 @@
 	],
 	"grass#soccer": [],
 	"soccer#feet": [],
-	"feet#soccer": []
+	"feet#soccer": [],
+	"lint#fabric": [],
+	"fabric#lint": [
+		"attract"
+	],
+	"pocket#fabric": [],
+	"fabric#pocket": [],
+	"muffler#engine": [],
+	"engine#muffler": [],
+	"muffler#decibel": [],
+	"decibel#muffler": [],
+	"noise#engine": [],
+	"engine#noise": [
+		"make"
+	],
+	"noise#decibel": [
+		"be measured in",
+		"measured in"
+	],
+	"decibel#noise": [],
+	"engine#decibel": [],
+	"decibel#engine": [],
+	"aspirin#injury": [],
+	"injury#aspirin": [],
+	"aspirin#pain scale": [],
+	"pain scale#aspirin": [],
+	"pain#injury": [],
+	"injury#pain": [],
+	"pain#pain scale": [],
+	"pain scale#pain": [],
+	"injury#pain scale": [],
+	"pain scale#injury": [],
+	"basket#ingredients": [],
+	"ingredients#basket": [],
+	"picnic#ingredients": [],
+	"ingredients#picnic": [],
+	"poverty#beggar": [],
+	"beggar#poverty": [],
+	"money#beggar": [],
+	"beggar#money": [
+		"ask for"
+	],
+	"army#enlistment": [],
+	"enlistment#army": [],
+	"army#wound": [],
+	"wound#army": [],
+	"soldier#enlistment": [],
+	"enlistment#soldier": [],
+	"soldier#wound": [
+		"put dirt in",
+		"put dirt on",
+		"seal up"
+	],
+	"wound#soldier": [],
+	"enlistment#wound": [],
+	"wound#enlistment": [],
+	"blizzard#turbulence": [],
+	"turbulence#blizzard": [],
+	"blizzard#salt": [],
+	"salt#blizzard": [],
+	"snowflake#turbulence": [],
+	"turbulence#snowflake": [],
+	"snowflake#salt": [],
+	"salt#snowflake": [],
+	"turbulence#salt": [],
+	"salt#turbulence": [],
+	"moat#water": [],
+	"water#moat": [],
+	"moat#stone": [],
+	"stone#moat": [],
+	"castle#water": [
+		"be surrounded by"
+	],
+	"water#castle": [],
+	"castle#stone": [
+		"be later built in",
+		"be made of"
+	],
+	"stone#castle": [],
+	"water#stone": [],
+	"stone#water": [
+		"sink in",
+		"skim across",
+		"skip on"
+	],
+	"bracelet#silver": [],
+	"silver#bracelet": [],
+	"bracelet#bone": [],
+	"bone#bracelet": [],
+	"wrist#silver": [],
+	"silver#wrist": [],
+	"wrist#bone": [],
+	"bone#wrist": [],
+	"silver#bone": [],
+	"bone#silver": [],
+	"stomach#calories": [],
+	"calories#stomach": [],
+	"food#calories": [
+		"add",
+		"be high in",
+		"be measured in",
+		"be tested for",
+		"have"
+	],
+	"calories#food": [
+		"be calculated for",
+		"be calculated in",
+		"be counted in",
+		"be determined in",
+		"be in",
+		"be measured in",
+		"be within",
+		"differ between",
+		"has property",
+		"measure energy in"
+	],
+	"fuel#car": [
+		"be in",
+		"be measured in",
+		"be used in",
+		"leak from"
+	],
+	"car#fuel": [
+		"be efficient",
+		"be less efficient",
+		"be more efficient",
+		"burn",
+		"burn more cleanly",
+		"have",
+		"need",
+		"run on",
+		"turn gas into",
+		"use"
+	],
+	"petroleum#car": [
+		"has property"
+	],
+	"car#petroleum": [],
+	"car#dinosaurs": [],
+	"dinosaurs#car": [],
+	"ketchup#french fries": [],
+	"french fries#ketchup": [],
+	"tomato#french fries": [],
+	"french fries#tomato": [],
+	"french fries#seeds": [],
+	"seeds#french fries": [],
+	"ketchup#fries": [],
+	"fries#ketchup": [],
+	"tomato#fries": [
+		"can"
+	],
+	"fries#tomato": [],
+	"fries#seeds": [],
+	"seeds#fries": []
 }

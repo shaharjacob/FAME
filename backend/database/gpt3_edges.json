@@ -2738,5 +2738,412 @@
 		"Peel is the skin of an orange.",
 		"Peel is the outside of an orange.",
 		"Peel is what you remove from an orange."
+	],
+	"lint#fabric": [
+		"Fabric collects lint.",
+		"Fabric can be covered in lint."
+	],
+	"fabric#lint": [
+		"Fabric collects lint.",
+		"Fabric can be covered in lint.",
+		"Lint is made from fabric."
+	],
+	"pocket#fabric": [
+		"Pocket is a part of fabric.",
+		"Pocket is made of fabric.",
+		"Pocket is on the fabric."
+	],
+	"fabric#pocket": [
+		"Pocket is a small piece of fabric.",
+		"Pocket is made of fabric."
+	],
+	"ash#wood": [
+		"Ash is the remains of a wood.",
+		"Ash is the result of burning wood."
+	],
+	"wood#ash": [
+		"Wood is burned to ash.",
+		"Ash is produced from burning wood."
+	],
+	"fireplace#wood": [
+		"Fireplace uses wood to produce heat.",
+		"Wood is burned in the fireplace to produce heat."
+	],
+	"wood#fireplace": [
+		"Wood is burned in the fireplace.",
+		"Wood is used to make a fire in the fireplace."
+	],
+	"muffler#engine": [
+		"The muffler helps the engine run more quietly.",
+		"The muffler cools the engine."
+	],
+	"engine#muffler": [
+		"The engine needs the muffler to run quietly.",
+		"The engine needs the muffler to expel the exhaust."
+	],
+	"muffler#decibel": [
+		"A muffler reduces the decibel.",
+		"A muffler muffles the decibel."
+	],
+	"decibel#muffler": [
+		"Muffler reduce noise level (decibel).",
+		"Muffler helps reduce the noise level."
+	],
+	"noise#engine": [
+		"Engine makes noise.",
+		"Engine noise disturbs people."
+	],
+	"engine#noise": [
+		"Engine makes noise.",
+		"Engine is the source of noise."
+	],
+	"noise#decibel": [
+		"Noise is a sound that has a high decibel.",
+		"Noise is a sound that is too loud for human ears.",
+		"Noise is a sound that is harmful to human ears."
+	],
+	"decibel#noise": [
+		"A decibel is a unit of noise.",
+		"A decibel measures noise."
+	],
+	"engine#decibel": [
+		"engine makes sound that measure in decibels.",
+		"engine noise measure in decibels."
+	],
+	"decibel#engine": [
+		"engine creates sound waves that are measured in decibels.",
+		"engine noise is measured in decibels."
+	],
+	"aspirin#injury": [
+		"Aspirin is used to relieve pain and inflammation from injury.",
+		"Aspirin is used to reduce the symptoms of injury."
+	],
+	"injury#aspirin": [
+		"Aspirin helps to reduce the inflammation and pain caused by injury.",
+		"Aspirin is used to treat injury."
+	],
+	"aspirin#pain scale": [
+		"The pain scale is used to measure the intensity of pain.",
+		"Aspirin is a pain reliever."
+	],
+	"pain scale#aspirin": [
+		"aspirin reduce pain scale.",
+		"aspirin is a painkiller."
+	],
+	"pain#injury": [
+		"Pain is a signal of injury.",
+		"Injury cause pain."
+	],
+	"injury#pain": [
+		"Injury hurts and causes pain."
+	],
+	"pain#pain scale": [
+		"pain scale measures pain",
+		"pain scale is used to measure pain"
+	],
+	"pain scale#pain": [
+		"A pain scale measures pain.",
+		"Pain is measured on a pain scale."
+	],
+	"injury#pain scale": [
+		"Injury is measured on the pain scale.",
+		"Injury can be gauged on the pain scale."
+	],
+	"pain scale#injury": [
+		"Pain scale is used to measure injury.",
+		"Injury cause pain."
+	],
+	"basket#ingredients": [
+		"The ingredients are put into the basket.",
+		"The ingredients are in the basket."
+	],
+	"ingredients#basket": [
+		"The ingredients are put in the basket.",
+		"The ingredients are put in the container.",
+		"The ingredients are put in the bowl."
+	],
+	"picnic#ingredients": [
+		"Picnic usually has a lot of ingredients, like sandwiches, salads, desserts, and drinks."
+	],
+	"ingredients#picnic": [
+		"Picnic usually has food ingredients.",
+		"Picnic contains food ingredients."
+	],
+	"poverty#beggar": [
+		"Poverty is the cause of beggars.",
+		"Poverty is the result of beggars.",
+		"Poverty is the condition of beggars."
+	],
+	"beggar#poverty": [
+		"beggar is a symbol of poverty.",
+		"beggar is a result of poverty.",
+		"beggar is a victim of poverty."
+	],
+	"money#beggar": [
+		"beggar can use money",
+		"beggar often asks for money",
+		"beggar needs money to survive"
+	],
+	"beggar#money": [
+		"A beggar asks for money.",
+		"A beggar needs money.",
+		"A beggar steals money."
+	],
+	"army#enlistment": [
+		"Army is the group of people who enlisted.",
+		"Army is the group of people who are enlisted."
+	],
+	"enlistment#army": [
+		"Enlistment is when someone joins the army.",
+		"Army is a group of people who are enlisted."
+	],
+	"army#wound": [
+		"An army can wound an enemy.",
+		"An army can be wounded by an enemy."
+	],
+	"wound#army": [
+		"A wound is an injury that an army sustains.",
+		"A wound is a battle injury."
+	],
+	"soldier#enlistment": [
+		"A soldier enlists in the military.",
+		"A soldier signs up for the military."
+	],
+	"enlistment#soldier": [
+		"Enlistment is when a soldier signs up.",
+		"Enlistment is when a soldier joins the army.",
+		"A soldier is someone who enlists."
+	],
+	"soldier#wound": [
+		"A soldier can get wounded in battle.",
+		"A soldier can be wounded in action."
+	],
+	"wound#soldier": [
+		"A wound is received by a soldier.",
+		"A wound is inflicted on a soldier."
+	],
+	"enlistment#wound": [
+		"Enlistment is when someone joins the military and wound is when someone is injured.",
+		"Enlistment is when someone joins the military and wound is when someone is hurt."
+	],
+	"wound#enlistment": [
+		"Wound is an injury that happened during enlistment.",
+		"Wound is an injury that can happen during enlistment."
+	],
+	"blizzard#turbulence": [
+		"Turbulence is created by blizzards.",
+		"Blizzards are created by turbulence."
+	],
+	"turbulence#blizzard": [
+		"A blizzard produces turbulence.",
+		"Turbulence is caused by a blizzard."
+	],
+	"blizzard#salt": [
+		"Blizzard needs salt to form.",
+		"Salt is put on roads to avoid blizzards."
+	],
+	"salt#blizzard": [
+		"Salt is used to melt the snow in a blizzard.",
+		"Salt is sprinkled on the snow to make it melt faster."
+	],
+	"snowflake#turbulence": [
+		"Turbulence creates snowflakes.",
+		"Turbulence causes snowflakes."
+	],
+	"turbulence#snowflake": [
+		"Turbulence creates snowflakes."
+	],
+	"snowflake#salt": [
+		"Salt melted snowflake.",
+		"Snowflake is made of salt."
+	],
+	"salt#snowflake": [
+		"Salt is a mineral that is found in snowflakes."
+	],
+	"turbulence#salt": [
+		"turbulence dissolves salt.",
+		"turbulence is caused by salt.",
+		"salt creates turbulence."
+	],
+	"salt#turbulence": [
+		"Salt is used to produce turbulence.",
+		"Salt is used to make turbulence.",
+		"Salt is used to create turbulence."
+	],
+	"moat#water": [
+		"A moat is a body of water that surrounds a castle or fortress.",
+		"A moat filled with water."
+	],
+	"water#moat": [
+		"moat surrounds the water",
+		"moat is filled with water",
+		"moat is a barrier for water"
+	],
+	"moat#stone": [
+		"Moat is a water ditch around a castle or fortress, typically filled with water and defended by a drawbridge and/or pontoon bridge.",
+		"Moat is a ditch around a stone."
+	],
+	"stone#moat": [
+		"A moat surrounds a stone castle.",
+		"A moat is filled with water.",
+		"A moat is a ditch."
+	],
+	"castle#water": [
+		"A castle is built on the water.",
+		"A castle is surrounded by water."
+	],
+	"water#castle": [
+		"A castle is built on water.",
+		"A castle can be flooded by water."
+	],
+	"castle#stone": [
+		"Stone is used to build castles.",
+		"Stone castles are built with rocks."
+	],
+	"stone#castle": [
+		"A stone is the building material for a castle.",
+		"A stone is used to build a castle."
+	],
+	"water#stone": [
+		"water can wear away stone over time",
+		"water can dissolve stone over time"
+	],
+	"stone#water": [
+		"A stone is heavier then water.",
+		"A stone sinks in water."
+	],
+	"bracelet#silver": [
+		"A bracelet is often made of silver.",
+		"A bracelet is often decorated with silver."
+	],
+	"silver#bracelet": [
+		"Bracelet is made of silver.",
+		"Bracelet is ornamented with silver."
+	],
+	"bracelet#bone": [
+		"A bracelet is made of bone.",
+		"A bracelet is a type of bone."
+	],
+	"bone#bracelet": [
+		"A bracelet is made of bone.",
+		"A bracelet is a type of bone."
+	],
+	"wrist#silver": [
+		"Silver is often used to make wristbands.",
+		"Silver is often found on wrists.",
+		"Silver is often worn on wrists."
+	],
+	"silver#wrist": [
+		"Silver is often used to make wristbands.",
+		"Silver is often used to make jewelry for the wrist."
+	],
+	"wrist#bone": [
+		"A wrist is a bone in the hand."
+	],
+	"bone#wrist": [
+		"Bone is in wrist.",
+		"Bone is part of wrist."
+	],
+	"silver#bone": [
+		"Silver is used to make artificial bones.",
+		"Silver is found in bones.",
+		"Silver is used to treat bones."
+	],
+	"bone#silver": [
+		"A bone is made of silver.",
+		"A bone is silver colored.",
+		"A bone is shiny."
+	],
+	"stomach#calories": [
+		"Calories are stored in the stomach.",
+		"Calories are burnt in the stomach.",
+		"The stomach stores calories."
+	],
+	"calories#stomach": [
+		"Calories are burned in the stomach.",
+		"Calories are stored in the stomach."
+	],
+	"food#calories": [
+		"Food provides calories.",
+		"Food has calories.",
+		"Calories come from food."
+	],
+	"calories#food": [
+		"Calories are a measure of the amount of energy in food."
+	],
+	"fuel#car": [
+		"Fuel powers the car.",
+		"Fuel is needed in order for the car to run.",
+		"Fuel is put into the car."
+	],
+	"car#fuel": [
+		"A car needs fuel to run.",
+		"A car runs on fuel.",
+		"A car is fueled by gasoline."
+	],
+	"petroleum#car": [
+		"Petroleum is used to make gasoline for cars.",
+		"Petroleum is used to make plastics for cars.",
+		"Petroleum is used to make tires for cars."
+	],
+	"car#petroleum": [
+		"Petroleum is used to make gasoline for cars.",
+		"Cars use gasoline, which is made from petroleum."
+	],
+	"car#dinosaurs": [
+		"Dinosaurs evolved into cars.",
+		"Dinosaurs became extinct and cars evolved from them."
+	],
+	"dinosaurs#car": [
+		"Dinosaurs were ancestors of the car.",
+		"Dinosaurs evolved into the car.",
+		"The car is powered by dinosaurs."
+	],
+	"ketchup#french fries": [
+		"Ketchup is used on french fries.",
+		"Ketchup is put on french fries."
+	],
+	"french fries#ketchup": [
+		"French fries dipped in ketchup.",
+		"French fries and ketchup are served together.",
+		"Ketchup enhances the flavor of french fries."
+	],
+	"tomato#french fries": [
+		"Tomato is a vegetable while french fries are a type of potato dish."
+	],
+	"french fries#tomato": [
+		"French fries are dipped in tomato ketchup.",
+		"French fries are covered in tomato ketchup.",
+		"French fries are made of tomato."
+	],
+	"french fries#seeds": [
+		"French fries are made from seeds.",
+		"French fries are the seed of a potato."
+	],
+	"seeds#french fries": [
+		"Seeds are the source of french fries.",
+		"French fries come from seeds."
+	],
+	"ketchup#fries": [
+		"Ketchup is a sauce that is usually served with fries."
+	],
+	"fries#ketchup": [
+		"Fries are dipped in ketchup.",
+		"Ketchup is put on fries."
+	],
+	"tomato#fries": [
+		"Tomato is a vegetable while fries are a type of potato."
+	],
+	"fries#tomato": [
+		"Fries are dipped in tomato ketchup."
+	],
+	"fries#seeds": [
+		"Fries are made from seeds.",
+		"Fries are the seed of a potato."
+	],
+	"seeds#fries": [
+		"Seeds are the source of fries.",
+		"Seeds are planted to grow fries.",
+		"Fries are made from seeds."
 	]
 }
