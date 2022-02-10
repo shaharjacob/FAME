@@ -8414,6 +8414,7 @@
 	"book#cover": [
 		"have a back",
 		"have different",
+		"needs",
 		"say a novel on the"
 	],
 	"pillow#pillowcase": [],
@@ -9344,7 +9345,9 @@
 		"and",
 		"has a unique"
 	],
-	"ash#fireplace": [],
+	"ash#fireplace": [
+		"can be found in"
+	],
 	"lint#pocket": [],
 	"fireplace#ash": [],
 	"pocket#lint": [],
@@ -9642,7 +9645,9 @@
 		"need a"
 	],
 	"kneepad#knee": [],
-	"shell#snail": [],
+	"shell#snail": [
+		"protects"
+	],
 	"lambchop#lamb": [],
 	"chapter#book": [
 		"1 end in the",

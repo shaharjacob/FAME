@@ -44,10 +44,20 @@ prompt = [
 def get_entities_relations(entity1: str, entity2: str, engine: inflect.engine):
     with open(DATABASE_FOLDER / 'gpt3_edges.json', 'r') as f:
         content = json.load(f)
+
+    should_save = False
     if f"{entity1}#{entity2}" not in content:
-        print(f"in GPT3, {entity1}#{entity2}")
         content[f"{entity1}#{entity2}"] = get_entities_relations_api(entity1, entity2)
+        should_save = True
         time.sleep(1)
+    if f"{entity2}#{entity1}" not in content:
+        content[f"{entity2}#{entity1}"] = get_entities_relations_api(entity2, entity1)
+        should_save = True
+        time.sleep(1)
+    
+    if should_save:
+        with open(DATABASE_FOLDER / 'gpt3_edges.json', 'w') as fw:
+            json.dump(content, fw, indent='\t')
     
     relation_as_set = set()
     relations = list(set(content[f"{entity1}#{entity2}"] + content[f"{entity2}#{entity1}"]))
@@ -85,13 +95,15 @@ def get_entities_relations_api(entity1: str, entity2: str):
         frequency_penalty=0,
         presence_penalty=0
     )
-    
+        
+    relations = []
     if response:
         if response.choices and response.choices[0]:
             if "text" in response.choices[0]:
                 lines = response.choices[0]["text"].replace("A: ", "").split('\n')
-                return [line for line in lines if line]
-    return []
+                relations = [line for line in lines if line]
+                
+    return relations
 
 
 if __name__ == "__main__":

@@ -19,6 +19,7 @@ get
 give
 had
 has
+has a
 has been
 has property
 have
