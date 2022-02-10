@@ -13,7 +13,7 @@ BACKEND_DIR = Path(__file__).resolve().parent.parent
 EVALUATION_FOLDER = BACKEND_DIR / 'evaluation'
 DATABASE_FOLDER = BACKEND_DIR / 'database'
 
-OPENAI_API_KEY= os.environ.get("OPENAI_API_KEY", "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")
+OPENAI_API_KEY= os.environ.get("OPENAI_API_KEY")
 openai.api_key = OPENAI_API_KEY
 
 prompt = [
@@ -51,17 +51,18 @@ def get_entities_relations(entity1: str, entity2: str, engine: inflect.engine):
         should_save = True
         time.sleep(1)
 
-    if f"{entity2}#{entity1}" not in content:
-        content[f"{entity2}#{entity1}"] = get_entities_relations_api(entity2, entity1)
-        should_save = True
-        time.sleep(1)
+    # if f"{entity2}#{entity1}" not in content:
+    #     content[f"{entity2}#{entity1}"] = get_entities_relations_api(entity2, entity1)
+    #     should_save = True
+    #     time.sleep(1)
     
     if should_save:
         with open(DATABASE_FOLDER / 'gpt3_edges.json', 'w') as fw:
             json.dump(content, fw, indent='\t')
 
     relation_as_set = set()
-    relations = list(set(content[f"{entity1}#{entity2}"] + content[f"{entity2}#{entity1}"]))
+    # relations = list(set(content[f"{entity1}#{entity2}"] + content[f"{entity2}#{entity1}"]))
+    relations = list(set(content[f"{entity1}#{entity2}"]))
     for relation in relations:
         relation = relation.lower()
         match = re.search(f'{entity1} (.*?) {entity2}', relation)
