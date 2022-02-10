@@ -61787,5 +61787,19 @@
 	"court#dribble": [
 		"picked up"
 	],
-	"dribble#court": []
+	"dribble#court": [],
+	"nucleus#electric field": [],
+	"electric field#nucleus": [],
+	"electrons#electric field": [
+		"are accelerated by",
+		"are affected by"
+	],
+	"electric field#electrons": [
+		"accelerates",
+		"causes",
+		"is",
+		"pushes"
+	],
+	"electric field#faraday": [],
+	"faraday#electric field": []
 }

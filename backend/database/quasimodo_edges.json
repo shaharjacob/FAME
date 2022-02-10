@@ -22972,5 +22972,15 @@
 	"hoop#dribble": [],
 	"dribble#hoop": [],
 	"court#dribble": [],
-	"dribble#court": []
+	"dribble#court": [],
+	"nucleus#electric field": [],
+	"electric field#nucleus": [],
+	"electrons#electric field": [
+		"behave in",
+		"move against",
+		"produce"
+	],
+	"electric field#electrons": [],
+	"electric field#faraday": [],
+	"faraday#electric field": []
 }

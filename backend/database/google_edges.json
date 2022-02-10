@@ -34982,5 +34982,23 @@
 	"hoop#dribble": [],
 	"dribble#hoop": [],
 	"court#dribble": [],
-	"dribble#court": []
+	"dribble#court": [],
+	"nucleus#electric field": [],
+	"electric field#nucleus": [],
+	"electrons#electric field": [
+		"have",
+		"move against the",
+		"move in a uniform",
+		"move in an",
+		"move opposite to",
+		"moves in an",
+		"moving in the opposite direction of",
+		"produce an"
+	],
+	"electric field#electrons": [
+		"affect",
+		"affect the motion of the emitted"
+	],
+	"electric field#faraday": [],
+	"faraday#electric field": []
 }
