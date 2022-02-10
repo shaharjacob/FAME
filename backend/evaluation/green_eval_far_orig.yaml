@@ -76,7 +76,7 @@ mapping:
       - blindness --> poverty
       - sight --> money
 
-  - input: #8 : 3/3
+  - input: #8 : No solution found
       base: [blizzard, snowflake]
       target: [army, soldier]
       depth:
@@ -197,7 +197,7 @@ mapping:
       - furnace --> stomach
       - coal --> food
 
-  - input: #18 :
+  - input: #18 : No solution found
       base: [hoof, hoofprint]
       target: [introduction, impression]
       depth:
@@ -208,7 +208,7 @@ mapping:
       - hoof --> introduction
       - hoofprint --> impression
 
-  - input: #19 : 
+  - input: #19 : No solution found
       base: [immunization, disease]
       target: [forewarning, surprise]
       depth:
@@ -263,7 +263,7 @@ mapping:
       - knee --> snail
       - kneepad --> shell
 
-  - input: #24 :
+  - input: #24 : No solution found
       base: [lambchop, lamb]
       target: [chapter, book]
       depth:
@@ -285,7 +285,7 @@ mapping:
       - landscaper --> stylist
       - lawn --> hair
 
-  - input: #26 :
+  - input: #26 : No solution found
       base: [launchpad, helicopter]
       target: [divingboard, diver]
       depth:
@@ -296,7 +296,7 @@ mapping:
       - launchpad --> divingboard
       - helicopter --> diver
 
-  - input: #27 :
+  - input: #27 : No solution found
       base: [lawschool, lawyer]
       target: [vineyard, wine]
       depth:
@@ -373,7 +373,7 @@ mapping:
       - pen --> reservoir
       - pig --> water
       
-  - input: #34 :
+  - input: #34 : No solution found
       base: [rectangle, perimeter]
       target: [nation, border]
       depth:
@@ -384,7 +384,7 @@ mapping:
       - rectangle --> nation
       - perimeter --> border
 
-  - input: #35 :
+  - input: #35 : No solution found
       base: [revising, manuscript]
       target: [evolving, species]
       depth:
@@ -395,7 +395,7 @@ mapping:
       - revising --> evolving
       - manuscript --> species
 
-  - input: #36 : 1/3
+  - input: #36 : No solution found
       base: [saxophone, jazz]
       target: [typewriter, poetry]
       depth:
@@ -417,7 +417,7 @@ mapping:
       - sugar --> incentive
       - coffee --> deal
 
-  - input: # 38 : 
+  - input: # 38 : No solution found
       base: [thermometer, temperature]
       target: [polygraph, honesty]
       depth:
@@ -439,7 +439,7 @@ mapping:
       - train --> signal
       - track --> wire
 
-  - input: #40 : 
+  - input: #40 : No solution found
       base: [watermelon, rind]
       target: [cigarette, butt]
       depth:
