@@ -26,6 +26,7 @@ RUN pip install --upgrade pip
 RUN pip install tqdm --no-cache-dir
 RUN pip install click --no-cache-dir
 RUN pip install flask --no-cache-dir
+RUN pip install openai --no-cache-dir
 RUN pip install pyyaml --no-cache-dir
 RUN pip install pandas --no-cache-dir
 RUN pip install gensim --no-cache-dir

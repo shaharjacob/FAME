@@ -85,9 +85,6 @@ class DataCollector(object):
             if not self.engine:
                 self.engine = inflect.engine()
             gpt3_props = gpt3.get_entities_relations(entity1, entity2, self.engine)
-            # self.gpt3_edges[f"{entity1}#{entity2}"] = sorted(gpt3_props)
-            # with open(root / 'backend' / 'database' / 'gpt3_edges.json', 'w') as f4:
-            #     json.dump(self.gpt3_edges, f4, indent='\t')
         else:
             gpt3_props = []
 
@@ -122,12 +119,12 @@ class DataCollector(object):
         else:
             quasimodo_props = []
         
-        if self.api.get("quasimodo", False):
+        if self.api.get("conceptnet", False):
             concept_net_props = concept_net.get_entity_props(entity)
         else:
             concept_net_props = []
             
-        if self.api.get("quasimodo", False):
+        if self.api.get("google", False):
             google_props = google_autosuggest.get_entity_props(entity)
         else:
             google_props = []
