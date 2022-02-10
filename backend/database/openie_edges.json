@@ -60787,5 +60787,50 @@
 		"is on",
 		"reaches"
 	],
-	"its peak#winter": []
+	"its peak#winter": [],
+	"astronaut#stars": [
+		"get",
+		"reach for",
+		"reported seeing"
+	],
+	"stars#astronaut": [
+		"be",
+		"will shoot"
+	],
+	"space#stars": [
+		"collect",
+		"destroyed",
+		"has been",
+		"is",
+		"is by far",
+		"is filled with",
+		"is with",
+		"made up of",
+		"often looks like",
+		"revolves around",
+		"try",
+		"was as good as"
+	],
+	"stars#space": [
+		"are blasted into",
+		"are blown into",
+		"are distributed in",
+		"are ejected into",
+		"are expelled into",
+		"are scattered through",
+		"continues",
+		"has",
+		"have been ejected into",
+		"helped spark a new interest in",
+		"is",
+		"is located in",
+		"is racing through",
+		"is the distortion of",
+		"move through",
+		"offers",
+		"streamed into",
+		"travel through",
+		"trek",
+		"were fixed in"
+	]
 }

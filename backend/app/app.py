@@ -44,6 +44,7 @@ def mapping_entities():
             "google": True,
             "openie": True,
             "quasimodo": True,
+            "gpt3": False,
             "conceptnet": False
         }
 
@@ -152,6 +153,7 @@ def single_mapping():
         "google": True,
         "openie": True,
         "quasimodo": True,
+        "gpt3": False,
         "conceptnet": False
     }
     data_collector = DataCollector(api=api)
@@ -220,6 +222,7 @@ def two_entities():
         "google": True,
         "openie": True,
         "quasimodo": True,
+        "gpt3": False,
         "conceptnet": False
     }
     data_collector = DataCollector(api=api) 
@@ -248,6 +251,7 @@ def bipartite_graph():
         "google": True,
         "openie": True,
         "quasimodo": True,
+        "gpt3": False,
         "conceptnet": False
     }
     data_collector = DataCollector(api=api)
@@ -284,6 +288,7 @@ def clustring():
         "google": True,
         "openie": True,
         "quasimodo": True,
+        "gpt3": False,
         "conceptnet": False
     }
     data_collector = DataCollector(api=api)

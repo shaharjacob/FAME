@@ -1,0 +1,690 @@
+{
+	"answer#riddle": [
+		"Answer is the solution to a riddle.",
+		"Answer is the opposite of a riddle.",
+		"Answer is the correct response to a riddle."
+	],
+	"riddle#answer": [
+		"A riddle is a question with a hidden answer.",
+		"An answer is a solution to a riddle."
+	],
+	"key#lock": [
+		"A key opens a lock.",
+		"A key is inserted into a lock.",
+		"A key is turned in a lock."
+	],
+	"lock#key": [
+		"A lock is opened with a key.",
+		"A lock is a device that is opened with a key."
+	],
+	"ash#fireplace": [
+		"Ash is produced by a fireplace.",
+		"Ash is collected from a fireplace."
+	],
+	"fireplace#ash": [
+		"Ash is left after the fire is put out in the fireplace.",
+		"Ash is the residue of a fire in the fireplace."
+	],
+	"lint#pocket": [
+		"Lint accumulates in pockets.",
+		"Lint is often found in pockets."
+	],
+	"pocket#lint": [
+		"Pocket collects lint.",
+		"Pocket is a place where lint accumulates."
+	],
+	"aspirin#pain": [
+		"Aspirin reduces pain.",
+		"Aspirin blocks pain signals.",
+		"Aspirin prevents pain."
+	],
+	"pain#aspirin": [
+		"Aspirin is used to relieve pain.",
+		"Aspirin blocks pain signals.",
+		"Aspirin prevents pain."
+	],
+	"muffler#noise": [
+		"A muffler reduces noise.",
+		"A muffler eliminates noise.",
+		"A muffler muffle noise."
+	],
+	"noise#muffler": [
+		"A muffler reduces noise.",
+		"A muffler eliminates noise."
+	],
+	"baker#cake": [
+		"A baker makes cake.",
+		"A baker sells cake."
+	],
+	"cake#baker": [
+		"A cake is made by a baker.",
+		"A cake is baked by a baker."
+	],
+	"scientist#discovery": [
+		"Scientist make discovery.",
+		"Scientist discover things."
+	],
+	"discovery#scientist": [
+		"A scientist discovers new things.",
+		"A scientist makes new discoveries."
+	],
+	"basket#picnic": [
+		"A basket is used to carry a picnic.",
+		"A basket is used to store a picnic."
+	],
+	"picnic#basket": [
+		"A picnic is an outdoor meal that is usually eaten out of a basket.",
+		"A picnic is a meal that is usually eaten out of a basket."
+	],
+	"holster#gun": [
+		"A holster holds a gun.",
+		"A holster is not a gun."
+	],
+	"gun#holster": [
+		"A gun holster is a container that holds a gun.",
+		"A gun holster is a part of gun."
+	],
+	"basketball#hoop": [
+		"A basketball is thrown through a hoop.",
+		"A basketball is played in a hoop."
+	],
+	"hoop#basketball": [
+		"A hoop is used to play basketball.",
+		"A hoop is a part of a basketball."
+	],
+	"traveler#destination": [
+		"A traveler is going to the destination.",
+		"A traveler is going towards the destination."
+	],
+	"destination#traveler": [
+		"The destination is the place where the traveler arrives.",
+		"The destination is the place to which the traveler is going."
+	],
+	"blindness#sight": [
+		"Blindness is the lack of sight.",
+		"Sight is the ability to see."
+	],
+	"sight#blindness": [
+		"Sight is the ability to see.",
+		"Blindness is the inability to see."
+	],
+	"poverty#money": [
+		"Poverty is lack of money.",
+		"Poverty can be solved by money.",
+		"People in poverty often have little money."
+	],
+	"money#poverty": [
+		"Poverty is the lack of money.",
+		"Poverty is the state of not having money."
+	],
+	"blizzard#snowflake": [
+		"A blizzard produces snowflakes.",
+		"A blizzard contains a lot of snowflakes."
+	],
+	"snowflake#blizzard": [
+		"Snowflakes are produced from blizzards.",
+		"Blizzards contain snowflakes."
+	],
+	"army#soldier": [
+		"An Army is a group of Soldiers.",
+		"Soldiers are part of the Army."
+	],
+	"soldier#army": [
+		"A soldier is a part of the army.",
+		"A soldier defends the army."
+	],
+	"bracelet#wrist": [
+		"A bracelet is worn on the wrist.",
+		"A bracelet is a type of jewelry that is worn on the wrist."
+	],
+	"wrist#bracelet": [
+		"A wristwatch is a bracelet.",
+		"A bracelet is worn around the wrist."
+	],
+	"moat#castle": [
+		"Moat surrounds the castle.",
+		"Moat protects the castle."
+	],
+	"castle#moat": [
+		"A moat surrounds the castle.",
+		"A moat defends the castle."
+	],
+	"burger#bun": [
+		"A burger is sandwiched between two buns.",
+		"A burger has a bun.",
+		"A bun holds a burger."
+	],
+	"bun#burger": [
+		"A bun is a type of bread that is used to make a burger."
+	],
+	"book#cover": [
+		"A book has a cover.",
+		"A cover protects a book.",
+		"A cover is not a book."
+	],
+	"cover#book": [
+		"A cover protect a book.",
+		"A book cover is not a book."
+	],
+	"cleanser#face": [
+		"Cleanser is used to clean face.",
+		"Cleanser is put on face."
+	],
+	"face#cleanser": [
+		"Face is the part of body that needs to be cleansed.",
+		"Face should be cleansed with a cleanser."
+	],
+	"soap#body": [
+		"Soap cleans body.",
+		"Soap removes dirt from the body."
+	],
+	"body#soap": [
+		"A body needs soap to be clean.",
+		"A body has natural soap."
+	],
+	"eraser#pencil": [
+		"An eraser removes pencil markings.",
+		"An eraser is used to erase pencil markings."
+	],
+	"pencil#eraser": [
+		"A pencil has an eraser on the end.",
+		"A pencil can be erased with an eraser."
+	],
+	"amnesia#memory": [
+		"Memory is what we use to remember things.",
+		"Amnesia is when we can't remember things."
+	],
+	"memory#amnesia": [
+		"Memory is the ability to store and recall information.",
+		"Amnesia is the inability to remember."
+	],
+	"father#son": [
+		"Father is the male parent of a son.",
+		"Father gave birth to a son.",
+		"Father is older than son."
+	],
+	"son#father": [
+		"A son inherits from his father.",
+		"A son looks like his father.",
+		"A son loves his father."
+	],
+	"inventor#invention": [
+		"Inventor invents invention.",
+		"Invention is created by inventor."
+	],
+	"invention#inventor": [
+		"Invention is an idea of inventor.",
+		"Invention is created by inventor."
+	],
+	"flock#goose": [
+		"A flock of geese",
+		"A group of geese",
+		"A gathering of geese"
+	],
+	"goose#flock": [
+		"A goose is a member of flock.",
+		"A goose leads the flock.",
+		"Geese fly in a flock."
+	],
+	"constellation#star": [
+		"constellation is an area of the sky that is defined by the grouping of stars.",
+		"constellation is a star formation.",
+		"constellation is a map of the stars."
+	],
+	"star#constellation": [
+		"A constellation is a group of stars.",
+		"A constellation is an area in the sky.",
+		"A constellation is named after a mythological figure."
+	],
+	"foresight#future": [
+		"Foresight is looking into the future.",
+		"Future is what will happen."
+	],
+	"future#foresight": [
+		"To have foresight is to look into the future.",
+		"To have future is to look into the future."
+	],
+	"x-ray#bone": [
+		"x-rays can see through bone.",
+		"x-rays are used to see bone."
+	],
+	"bone#x-ray": [
+		"Bone absorbs x-rays.",
+		"Bone reflects x-rays."
+	],
+	"foundation#house": [
+		"The foundation is the base of the house.",
+		"The foundation supports the house."
+	],
+	"house#foundation": [
+		"A house is built on a foundation.",
+		"A house rests on a foundation."
+	],
+	"premise#argument": [
+		"The premise is the first statement of an argument.",
+		"The premise is the assumption of an argument.",
+		"The premise is the reason for an argument."
+	],
+	"argument#premise": [
+		"An argument has one or more premises.",
+		"An argument is a logical reasoning.",
+		"A premise is a statement that is assumed to be true for the sake of argument."
+	],
+	"furnace#coal": [
+		"Coal is burned in furnace to produce heat.",
+		"Coal is the main fuel for furnace."
+	],
+	"coal#furnace": [
+		"Coal is burned in furnace to produce heat.",
+		"Coal is the main fuel for furnace."
+	],
+	"stomach#food": [
+		"Stomach digests food.",
+		"Food is digested in the stomach."
+	],
+	"food#stomach": [
+		"Stomach digests food.",
+		"Food is digested in the stomach."
+	],
+	"hoof#hoofprint": [
+		"A hoofprint is left by a hoof.",
+		"A hoofprint is evidence that a hoof has been there."
+	],
+	"hoofprint#hoof": [
+		"A hoofprint is the print of a hoof.",
+		"A hoofprint is the mark left by a hoof."
+	],
+	"introduction#impression": [
+		"Introduction gives impression.",
+		"Introduction is the first impression."
+	],
+	"impression#introduction": [
+		"An impression is a first impression",
+		"An impression is an introduction"
+	],
+	"immunization#disease": [
+		"Immunization prevent disease.",
+		"Immunization protects from disease."
+	],
+	"disease#immunization": [
+		"Immunization protects from disease.",
+		"Immunization prevent disease."
+	],
+	"forewarning#surprise": [
+		"Forewarning is a warning of an event that will surprise.",
+		"Forewarning prevents surprise.",
+		"Surprise is the result of not being warned."
+	],
+	"surprise#forewarning": [
+		"A surprise is an event that was not expected and has a sudden impact.",
+		"A forewarning is an event that warns of a possible future problem or danger."
+	],
+	"jacket#zipper": [
+		"Jacket has a zipper.",
+		"Jacket is closed with a zipper."
+	],
+	"zipper#jacket": [
+		"A zipper is used to close a jacket.",
+		"A zipper is used to open a jacket.",
+		"A zipper is used to hold a jacket together."
+	],
+	"wound#suture": [
+		"A wound is an injury that is not healed.",
+		"A wound is repaired by a suture."
+	],
+	"suture#wound": [
+		"Sutures are used to close wounds.",
+		"Sutures help close wounds."
+	],
+	"ketchup#tomato": [
+		"Ketchup is made of tomato.",
+		"Ketchup is a type of tomato sauce.",
+		"Ketchup is a red sauce made from tomatoes."
+	],
+	"tomato#ketchup": [
+		"Ketchup is made from tomatoes.",
+		"Ketchup is a type of tomato sauce.",
+		"Ketchup is a type of tomato paste."
+	],
+	"fuel#petroleum": [
+		"Petroleum is a type of fuel.",
+		"Petroleum is a fossil fuel.",
+		"Petroleum is used to produce fuel."
+	],
+	"petroleum#fuel": [
+		"Petroleum is a type of fuel.",
+		"Petroleum is the source of fuel."
+	],
+	"kitten#cat": [
+		"A kitten is a baby cat.",
+		"A kitten is cute.",
+		"A kitten is playful.",
+		"Q: What is the relations between plant and sunlight?",
+		"A plant needs sunlight to grow.",
+		"A plant grows in the sunlight.",
+		"A plant"
+	],
+	"cat#kitten": [
+		"A kitten is a baby cat.",
+		"A kitten is a domesticated cat.",
+		"A kitten is a female cat."
+	],
+	"spark#fire": [
+		"Sparks are tiny pieces of fire.",
+		"Sparks are the beginning of a fire.",
+		"Sparks come from fire."
+	],
+	"fire#spark": [
+		"A spark is a small fire.",
+		"A spark is the beginning of a fire."
+	],
+	"knee#kneepad": [
+		"Knee is protected by kneepad.",
+		"Kneepad protects knee."
+	],
+	"kneepad#knee": [
+		"Kneepad protects the knee.",
+		"Kneepad is worn on the knee."
+	],
+	"snail#shell": [
+		"Snails use shells to protect their bodies.",
+		"Snails lose their shells over time.",
+		"Snails can protect themselves without shells."
+	],
+	"shell#snail": [
+		"Snails have shells."
+	],
+	"lambchop#lamb": [
+		"Lambchop is a lamb.",
+		"Lambchop is a cut of lamb."
+	],
+	"lamb#lambchop": [
+		"Lamb is a baby sheep.",
+		"Lamb is the meat of a sheep.",
+		"Lambchop is a cartoon lamb."
+	],
+	"chapter#book": [
+		"A chapter is a part of a book.",
+		"A chapter has a heading.",
+		"A chapter is numbered.",
+		"A chapter is divided into paragraphs."
+	],
+	"book#chapter": [
+		"A book has many chapters.",
+		"A chapter is a subdivision of a book.",
+		"A chapter has many paragraphs."
+	],
+	"landscaper#lawn": [
+		"A landscaper is someone who takes care of lawn.",
+		"A landscaper trims the lawn."
+	],
+	"lawn#landscaper": [
+		"A landscaper maintains the lawn.",
+		"A landscaper takes care of the lawn."
+	],
+	"stylist#hair": [
+		"A stylist is someone who styles hair.",
+		"A stylist cuts hair.",
+		"A stylist colors hair."
+	],
+	"hair#stylist": [
+		"A stylist cuts and styles hair.",
+		"A stylist is someone who cuts hair."
+	],
+	"launchpad#helicopter": [
+		"A helicopter takes off from a launchpad.",
+		"A helicopter uses a launchpad."
+	],
+	"helicopter#launchpad": [
+		"A helicopter take off from a launchpad.",
+		"A helicopter needs a launchpad to take off."
+	],
+	"divingboard#diver": [
+		"A divingboard is a platform for a diver.",
+		"A divingboard is a place for a diver to jump off.",
+		"A divingboard is used by a diver."
+	],
+	"diver#divingboard": [
+		"A diver dives from a divingboard.",
+		"A divingboard is used by divers."
+	],
+	"lawschool#lawyer": [
+		"Lawyer studied at lawschool.",
+		"Lawyer learned about laws at lawschool."
+	],
+	"lawyer#lawschool": [
+		"A lawyer is someone who studied at lawschool.",
+		"A lawyer is someone who is educated in lawschool."
+	],
+	"vineyard#wine": [
+		"Vineyard produces wine.",
+		"Vineyard is the place where wine is made."
+	],
+	"wine#vineyard": [
+		"Wine is made from vineyard.",
+		"Vineyard produces wine."
+	],
+	"movie#screen": [
+		"Movie displayed on the screen",
+		"Movie can be shown on the screen",
+		"Movie use green screen"
+	],
+	"screen#movie": [
+		"Screen displays the movie.",
+		"Screen is the place where the movie is projected."
+	],
+	"lightning#sky": [
+		"Lightning is seen in the sky.",
+		"Lightning is a part of the sky."
+	],
+	"sky#lightning": [
+		"A:",
+		"Sky is the background for lightning.",
+		"Lightning is a part of the sky."
+	],
+	"multiplication#product": [
+		"Multiplication is the operation of producing a product.",
+		"The product is the result of multiplication."
+	],
+	"product#multiplication": [
+		"Product is the result of multiplication.",
+		"Product is what is multiplied.",
+		"Multiplication is the operation of producing a product."
+	],
+	"brewing#beer": [
+		"Brewing is the process of making beer.",
+		"Brewing is the production of beer."
+	],
+	"beer#brewing": [
+		"Beer is brewed from brewing ingredients.",
+		"Beer is made from brewing ingredients."
+	],
+	"nose#scent": [
+		"Nose detects scent.",
+		"Nose is responsible for scent.",
+		"Nose has scent receptors."
+	],
+	"scent#nose": [
+		"Scent travels through the nose.",
+		"The sense of smell is located in the nose.",
+		"The sense of smell is activated by molecules that bind to receptors in the nose."
+	],
+	"antenna#signal": [
+		"Antenna receives/transmits signal.",
+		"Antenna amplify signal."
+	],
+	"signal#antenna": [
+		"Antenna receives the signal.",
+		"Antenna amplifies the signal."
+	],
+	"orchard#apple": [
+		"Apple grows on the orchard.",
+		"Apple trees are planted in the orchard."
+	],
+	"apple#orchard": [
+		"Apple trees grown in orchards.",
+		"Apple orchards produce apples."
+	],
+	"neighborhood#apartment": [
+		"A neighborhood is where you live.",
+		"An apartment is part of a neighborhood."
+	],
+	"apartment#neighborhood": [
+		"Apartment is located in a neighborhood.",
+		"Apartment is part of a neighborhood."
+	],
+	"painting#canvas": [
+		"A painting is displayed on a canvas.",
+		"A painting is created on a canvas."
+	],
+	"canvas#painting": [
+		"A canvas is used for painting.",
+		"A painting is done on a canvas."
+	],
+	"birthmark#skin": [
+		"Birthmarks are on the skin.",
+		"Birthmarks are caused by skin."
+	],
+	"skin#birthmark": [
+		"Birthmark is on the skin.",
+		"Birthmark is a blemish on the skin."
+	],
+	"pen#pig": [
+		"A pen is used to write with pig blood.",
+		"A pen is used to write with pig intestines.",
+		"A pen is used to write with pig skin."
+	],
+	"pig#pen": [
+		"Pigs live in pens.",
+		"Pigs are kept in pens.",
+		"Pigs are raised in pens."
+	],
+	"reservoir#water": [
+		"A reservoir store water.",
+		"A reservoir contain water."
+	],
+	"water#reservoir": [
+		"Reservoir store water.",
+		"Reservoir provide water.",
+		"Reservoir control water."
+	],
+	"rectangle#perimeter": [
+		"Rectangle has perimeter.",
+		"Perimeter measures the distance around a rectangle."
+	],
+	"perimeter#rectangle": [
+		"Perimeter is the distance around a rectangle.",
+		"Perimeter is the length of the four sides of a rectangle."
+	],
+	"nation#border": [
+		"Nation is represented by border.",
+		"Nation is inside border.",
+		"Nation can have more then one border."
+	],
+	"border#nation": [
+		"Nation has a border.",
+		"Nation is defined by its border.",
+		"Nation can patrol its border."
+	],
+	"revising#manuscript": [
+		"Revising is an editing process of a manuscript.",
+		"Revising make a manuscript better."
+	],
+	"manuscript#revising": [
+		"A manuscript is a first draft that needs to be revised.",
+		"A manuscript is a document that needs to be revised."
+	],
+	"evolving#species": [
+		"Species evolve over time.",
+		"Species change over time."
+	],
+	"species#evolving": [
+		"Species evolve over time.",
+		"Species develop over time."
+	],
+	"saxophone#jazz": [
+		"Saxophone is often used in jazz music.",
+		"Jazz music often includes saxophone.",
+		"Saxophone is a common instrument in jazz."
+	],
+	"jazz#saxophone": [
+		"Saxophone often played jazz.",
+		"Saxophone is a common instrument in jazz."
+	],
+	"typewriter#poetry": [
+		"A typewriter is used to produce poetry.",
+		"A typewriter is used to produce text."
+	],
+	"poetry#typewriter": [
+		"Poetry typed on typewriter.",
+		"Poetry composed on typewriter."
+	],
+	"sugar#coffee": [
+		"Sugar is put in coffee.",
+		"Coffee is put in sugar."
+	],
+	"coffee#sugar": [
+		"Coffee is bitter without sugar.",
+		"Sugar is often added to coffee to make it sweeter."
+	],
+	"incentive#deal": [
+		"An incentive is an agreement to do something in return for something else.",
+		"An incentive is a bonus for doing something."
+	],
+	"deal#incentive": [
+		"A deal is an incentive.",
+		"A deal is an agreement to give or take something of value in return for something else of value."
+	],
+	"thermometer#temperature": [
+		"A thermometer measures temperature.",
+		"A thermometer is used to measure the temperature."
+	],
+	"temperature#thermometer": [
+		"Temperature is measured by thermometer.",
+		"Temperature is indicated by thermometer.",
+		"Temperature affects thermometer."
+	],
+	"polygraph#honesty": [
+		"Polygraph measures honesty.",
+		"Polygraph detects honesty."
+	],
+	"honesty#polygraph": [
+		"A polygraph is used to detect honesty.",
+		"A polygraph measures honesty.",
+		"A polygraph is an instrument to measure honesty."
+	],
+	"train#track": [
+		"A train rides on track.",
+		"A train needs track to travel."
+	],
+	"track#train": [
+		"A track guide the train.",
+		"A track is necessary for the train."
+	],
+	"signal#wire": [
+		"Signal travels through wire.",
+		"Signal is transmitted through wire.",
+		"Signal is conveyed by wire."
+	],
+	"wire#signal": [
+		"A wire transfers a signal.",
+		"A wire is used to send a signal.",
+		"A wire carries a signal."
+	],
+	"watermelon#rind": [
+		"The watermelon has a rind.",
+		"The rind is on the watermelon."
+	],
+	"rind#watermelon": [
+		"The rind is the outer green layer of the watermelon.",
+		"The rind is the edible part of the watermelon."
+	],
+	"cigarette#butt": [
+		"Cigarette butts are often left on the ground.",
+		"Cigarette butts are often disposed of in an ashtray."
+	],
+	"butt#cigarette": [
+		"butt is the end of a cigarette.",
+		"butt is the part of a cigarette that is smoked."
+	]
+}

@@ -11,17 +11,17 @@ mapping:
       - riddle --> lock
       - logic --> mechanism
 
-  # - input: #2 : 0/3, active mapping: 0/2, correct solution not found
-  #     base: [ash, fireplace, chimney]
-  #     target: [lint, pocket, washer]
-  #     depth:
-  #       beam: 20
-  #       dfs: 4
-  #   output:
-  #     mapping:
-  #     - ash --> lint
-  #     - fireplace --> pocket
-  #     - chimney --> washer
+  - input: #2 : 0/3, active mapping: 0/2, correct solution not found
+      base: [ash, fireplace, chimney]
+      target: [lint, pocket, washer]
+      depth:
+        beam: 20
+        dfs: 4
+    output:
+      mapping:
+      - ash --> lint
+      - fireplace --> pocket
+      - chimney --> washer
 
   - input: #3 : 3/3
       base: [aspirin, pain, childbirth]
