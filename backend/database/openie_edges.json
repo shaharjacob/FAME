@@ -63036,5 +63036,56 @@
 		"was a half mile wide in",
 		"was high in",
 		"went into"
-	]
+	],
+	"earth#paradise": [
+		"are living in",
+		"be called",
+		"becomes",
+		"called",
+		"can be",
+		"can become",
+		"could be",
+		"had been",
+		"is",
+		"is like",
+		"seemed almost",
+		"should be",
+		"used to be",
+		"was transformed into",
+		"will be",
+		"will be like",
+		"will be transformed into",
+		"will become",
+		"would be",
+		"would become"
+	],
+	"paradise#earth": [
+		"called",
+		"came to",
+		"could be found here on",
+		"descended on",
+		"does exist on",
+		"existed on",
+		"found on",
+		"is",
+		"is established on",
+		"returns to",
+		"shall be restored to",
+		"was on",
+		"was removed from",
+		"was under",
+		"will be established on",
+		"will be on",
+		"will be restored to",
+		"will be returned to",
+		"will return to"
+	],
+	"earth#chemical element": [],
+	"chemical element#earth": [
+		"found here on"
+	],
+	"baker#family guardian": [
+		"joined"
+	],
+	"family guardian#baker": []
 }

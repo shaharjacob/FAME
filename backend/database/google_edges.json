@@ -35452,5 +35452,11 @@
 	"winter#rivers": [],
 	"rivers#winter": [
 		"otters survive in the"
-	]
+	],
+	"earth#paradise": [],
+	"paradise#earth": [],
+	"earth#chemical element": [],
+	"chemical element#earth": [],
+	"baker#family guardian": [],
+	"family guardian#baker": []
 }

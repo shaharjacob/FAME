@@ -23302,5 +23302,13 @@
 	"winter#cata buses": [],
 	"cata buses#winter": [],
 	"winter#rivers": [],
-	"rivers#winter": []
+	"rivers#winter": [],
+	"earth#paradise": [],
+	"paradise#earth": [
+		"be described as"
+	],
+	"earth#chemical element": [],
+	"chemical element#earth": [],
+	"baker#family guardian": [],
+	"family guardian#baker": []
 }

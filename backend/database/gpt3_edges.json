@@ -7721,5 +7721,119 @@
 		"Winter is the opposite of summer.",
 		"Winter happens after summer.",
 		"Winter is colder than summer."
+	],
+	"earth#seasons": [
+		"Earth's orbit around the sun causes the seasons.",
+		"Earth's tilt on its axis causes the seasons.",
+		"The seasons are winter, spring, summer, and fall."
+	],
+	"seasons#earth": [
+		"Earth's axis is tilted which results in the seasons.",
+		"Earth's rotation on its axis determines the seasons."
+	],
+	"earth#paradise": [
+		"There is no relations between earth and paradise."
+	],
+	"paradise#earth": [
+		"paradise is a place on earth.",
+		"paradise is a state of mind."
+	],
+	"earth#chemical element": [
+		"Earth is made up of chemical elements.",
+		"Earth is a chemical element."
+	],
+	"chemical element#earth": [
+		"Chemical element is found in earth.",
+		"Chemical element is a component of earth."
+	],
+	"earth#iss": [
+		"iss orbits around Earth.",
+		"iss is much smaller than Earth.",
+		"iss moves faster than Earth."
+	],
+	"iss#earth": [
+		"iss is a space station that orbits around earth.",
+		"iss stands for international space station."
+	],
+	"earth#sky": [
+		"Earth is under the sky.",
+		"Earth is in the sky.",
+		"Earth is surrounded by the sky."
+	],
+	"sky#earth": [
+		"The sky is above the earth.",
+		"The sky is blue because of the earth.",
+		"The sky is dark at night because of the earth."
+	],
+	"earth#a layer": [
+		"A layer is a part of earth.",
+		"A layer is on the top of earth.",
+		"A layer is the outside of earth."
+	],
+	"a layer#earth": [
+		"A layer is a thin sheet of material that covers or forms the surface of an object.",
+		"A layer can be on top of the earth."
+	],
+	"earth#satellite": [
+		"A satellite orbits around Earth.",
+		"A satellite is smaller then Earth.",
+		"A satellite is much further from Earth then moon."
+	],
+	"satellite#earth": [
+		"A satellite orbits around Earth.",
+		"A satellite is a tiny part of Earth.",
+		"A satellite is smaller than Earth."
+	],
+	"earth#a line": [
+		"A line is perpendicular to the earth.",
+		"A line is parallel to the earth."
+	],
+	"a line#earth": [
+		"A line is the shortest distance between two points on the earth.",
+		"A line is perpendicular to the surface of the earth.",
+		"A line is a great circle on the earth."
+	],
+	"earth#the air": [
+		"Earth's atmosphere contains air.",
+		"Air surrounds Earth."
+	],
+	"the air#earth": [
+		"Air surrounds earth.",
+		"Air is above and below the earth.",
+		"Air is in between the earth and the sky."
+	],
+	"earth#the environment": [
+		"Earth is a part of the environment.",
+		"Earth is the biggest environment.",
+		"Earth is in the environment."
+	],
+	"the environment#earth": [
+		"The environment is the surroundings of the earth.",
+		"The environment is what affects earth."
+	],
+	"lawn#weeds": [
+		"Weeds grow on the lawn.",
+		"Weeds are a pest on the lawn.",
+		"Weeds can be removed from the lawn."
+	],
+	"weeds#lawn": [
+		"Weeds are plants that grow in lawns.",
+		"Weeds are plants that are not desired in lawns."
+	],
+	"baker#individual dessert": [
+		"A baker makes individual desserts.",
+		"A baker can make individual desserts."
+	],
+	"individual dessert#baker": [
+		"An individual dessert is made by baker.",
+		"An individual dessert is a product of baker."
+	],
+	"baker#family guardian": [
+		"Baker is the family guardian.",
+		"Baker is responsible for the family."
+	],
+	"family guardian#baker": [
+		"family guardian protects baker.",
+		"family guardian is responsible for baker."
 	]
 }
