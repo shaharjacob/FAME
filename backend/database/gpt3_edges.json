@@ -7835,5 +7835,55 @@
 	"family guardian#baker": [
 		"family guardian protects baker.",
 		"family guardian is responsible for baker."
+	],
+	"winter#umbrella": [
+		"Winter make umbrella more necessary.",
+		"Winter is when umbrella are most commonly used."
+	],
+	"umbrella#winter": [
+		"An umbrella can be used in winter to prevent the cold.",
+		"An umbrella is often used in winter."
+	],
+	"winter#snowmobile": [
+		"Snowmobile is used in winter.",
+		"Snowmobile is used to travel in winter."
+	],
+	"snowmobile#winter": [
+		"A snowmobile is used in winter.",
+		"A snowmobile is a vehicle used in winter."
+	],
+	"winter#few months": [
+		"Winter is a few months long.",
+		"Winter is a few month of the year.",
+		"Winter is a small part of the year."
+	],
+	"few months#winter": [
+		"Winter is a few months long.",
+		"Winter occurs a few months after autumn."
+	],
+	"rain#clouds": [
+		"Clouds produce rain.",
+		"Clouds block rain."
+	],
+	"clouds#rain": [
+		"Clouds produce rain.",
+		"Clouds hold rain."
+	],
+	"rain#winds": [
+		"Winds can bring rain.",
+		"Winds can make rain."
+	],
+	"winds#rain": [
+		"Winds blow rain clouds.",
+		"Winds carry the rain.",
+		"Winds cause the rain."
+	],
+	"winter#people": [
+		"Winter is people's favorite season.",
+		"Winter is the season that people like the most."
+	],
+	"people#winter": [
+		"People need to dress warmly in winter.",
+		"People love winter."
 	]
 }

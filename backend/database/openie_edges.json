@@ -63087,5 +63087,49 @@
 	"baker#family guardian": [
 		"joined"
 	],
-	"family guardian#baker": []
+	"family guardian#baker": [],
+	"winter#people": [
+		"affects millions of",
+		"always prevent",
+		"are enjoyed by",
+		"do",
+		"goes to",
+		"has arrived for",
+		"has been a common complaint of",
+		"has left",
+		"have",
+		"is",
+		"is a common complaint of",
+		"is leaving millions of",
+		"is perfect for",
+		"keeps",
+		"makes",
+		"means different things to",
+		"means extra expenses for",
+		"often catches",
+		"was a very difficult time for",
+		"was tough on"
+	],
+	"people#winter": [
+		"are in",
+		"celebrated",
+		"come in",
+		"die in",
+		"do in",
+		"enjoy",
+		"get",
+		"get depressed in",
+		"get sick in",
+		"go there in",
+		"go through",
+		"is",
+		"love",
+		"pay",
+		"prepare for",
+		"suffer from",
+		"think of",
+		"warm",
+		"wear",
+		"were blogging about"
+	]
 }
