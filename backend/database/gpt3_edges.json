@@ -6221,5 +6221,1505 @@
 		"A support provides a mechanism.",
 		"A support is needed for a mechanism.",
 		"A support is a part of mechanism."
+	],
+	"sun#summer": [
+		"Sun is the source of summer.",
+		"Summer is the season when sun shines the most.",
+		"Sun makes things hot and summer make things hot."
+	],
+	"rain#winter": [
+		"Winter happen after rain.",
+		"Winter is colder then rain."
+	],
+	"summer#sun": [
+		"Summer is the time when the sun is the highest in the sky.",
+		"Summer is the time when the sun shines the longest.",
+		"Sun is the cause of summer."
+	],
+	"winter#rain": [
+		"Winter occurs during the rain season."
+	],
+	"sun#sunscreen": [
+		"Sunscreen protects from the sun.",
+		"Sunscreen prevents sunburn."
+	],
+	"sunscreen#sun": [
+		"Sunscreen protects from sun.",
+		"Sunscreen prevents sun."
+	],
+	"summer#sunscreen": [
+		"Sunscreen protects from the sun in summer.",
+		"Sunscreen is necessary in summer."
+	],
+	"sunscreen#summer": [
+		"Sunscreen prevents skin from tanning in summer.",
+		"Sunscreen protects from the sun in summer."
+	],
+	"rain#the crowds": [
+		"The crowds are drenched by the rain.",
+		"The crowds gather under umbrellas during the rain.",
+		"The crowds disperse when it stops raining."
+	],
+	"the crowds#rain": [
+		"The crowds increase during the rain."
+	],
+	"rain#watering": [
+		"watering helps rain fall from the sky.",
+		"watering makes rain fall from the sky."
+	],
+	"watering#rain": [
+		"When it rains, the ground gets watered.",
+		"When it rains, the plants get watered.",
+		"When it rains, the soil gets watered."
+	],
+	"rain#flies": [
+		"Flies are attracted to rain.",
+		"Flies are found near rain."
+	],
+	"flies#rain": [
+		"Flies don't like rain.",
+		"Flies come out when it rains."
+	],
+	"rain#frost": [
+		"Rain can form frost."
+	],
+	"frost#rain": [
+		"Frost is a type of rain."
+	],
+	"rain#flood": [
+		"A rainstorm can cause a flood.",
+		"Heavy rains can cause rivers to flood.",
+		"Flooding is often caused by too much rain."
+	],
+	"flood#rain": [
+		"A flood is a large amount of rain.",
+		"A flood is a lot of rain."
+	],
+	"rain#any play": [
+		"rainfall affects any play",
+		"rainfall makes any play difficult",
+		"rainfall is an important part of any play"
+	],
+	"any play#rain": [
+		"Any play is cancelled because of rain.",
+		"Any play is postponed because of rain.",
+		"Any play is moved indoors because of rain."
+	],
+	"rain#all areas": [
+		"All areas needs rain to grow.",
+		"All areas get rain."
+	],
+	"all areas#rain": [
+		"All areas need rain.",
+		"All areas get rain.",
+		"All areas are affected by rain."
+	],
+	"rain#caution": [
+		"Caution is necessary during rain.",
+		"Caution is used during rain."
+	],
+	"caution#rain": [
+		"Caution is important during rain.",
+		"It is important to be cautious during rain."
+	],
+	"rain#meteorologist": [
+		"Meteorologist predict rain.",
+		"Meteorologist study rain."
+	],
+	"meteorologist#rain": [
+		"A meteorologist predicts rain.",
+		"A meteorologist studies rain."
+	],
+	"rain#cloudy days": [
+		"Rain is more likely on cloudy days.",
+		"Cloudy days cause more rain."
+	],
+	"cloudy days#rain": [
+		"Cloudy days often lead to rain.",
+		"Cloudy days are likely to bring rain."
+	],
+	"rain#coldplay": [
+		"Coldplay wrote a song about rain.",
+		"Coldplay performed a song about rain."
+	],
+	"coldplay#rain": [
+		"Coldplay's music is often compared to the sound of rainfall.",
+		"Coldplay sings about rainy days.",
+		"Rainy weather is often associated with the moody music of Coldplay."
+	],
+	"rain#eagles": [
+		"Eagles like to eat rain.",
+		"Eagles like to drink rain.",
+		"Eagles like to fly in the rain."
+	],
+	"eagles#rain": [
+		"Eagles can be seen during rain.",
+		"Eagles are attracted to rain."
+	],
+	"rain#nhs": [
+		"NHS provides raincoats to prevent rain.",
+		"NHS provides umbrellas to prevent rain.",
+		"NHS provides rain boots to prevent rain."
+	],
+	"nhs#rain": [
+		"NHS provides health care during rain.",
+		"NHS helps people with their health during rain."
+	],
+	"rain#people": [
+		"People get wet in rain.",
+		"People need an umbrella in rain.",
+		"People like to listen rain."
+	],
+	"people#rain": [
+		"People avoid rain.",
+		"People get wet in rain.",
+		"People need rain."
+	],
+	"rain#the opportunities": [
+		"Rain can happen when there are opportunities.",
+		"Opportunities can make it rain."
+	],
+	"the opportunities#rain": [
+		"Opportunity falls from the sky like rain.",
+		"Opportunity is hidden like rain.",
+		"Opportunity is a blessing like rain."
+	],
+	"rain#the poet": [
+		"The poet wrote about rain.",
+		"The poet loved rain."
+	],
+	"the poet#rain": [
+		"The poet wrote about rain."
+	],
+	"rain#centuries": [
+		"Centuries ago, rain was less common.",
+		"Centuries ago, rain was more common."
+	],
+	"centuries#rain": [
+		"Centuries is a long time, rain falls in short time.",
+		"Centuries is a long time, rain falls everyday.",
+		"Centuries is a long time, rain falls every month."
+	],
+	"rain#nascar not": [
+		"NASCAR does not rain."
+	],
+	"nascar not#rain": [
+		"Nascar does not race in the rain.",
+		"Nascar does not like the rain."
+	],
+	"rain#bay": [
+		"Rain falls into bay.",
+		"Bay collects rain."
+	],
+	"bay#rain": [
+		"Bay influenced by rain."
+	],
+	"rain#a show": [
+		"A show is cancelled because of rain.",
+		"A show can't go on because of rain.",
+		"A rainstorm can ruin a show."
+	],
+	"a show#rain": [
+		"A show is a type of rain.",
+		"A show is a form of entertainment.",
+		"A show is a performance."
+	],
+	"rain#the crops": [
+		"Rain is essential for crops.",
+		"Rain helps crops grow."
+	],
+	"the crops#rain": [
+		"Crops need rain to grow.",
+		"Crops grow better with rain."
+	],
+	"rain#mountains": [
+		"Rain falls from the mountains."
+	],
+	"mountains#rain": [
+		"A:",
+		"Mountains cause rain because they attract moisture in the air."
+	],
+	"rain#birds": [
+		"Birds like to sing in the rain.",
+		"Birds like to eat rain.",
+		"Birds don't like to get wet in the rain."
+	],
+	"birds#rain": [
+		"Birds like to stay in the rain.",
+		"Birds don't like to stay in the rain."
+	],
+	"rain#cyclones": [
+		"Cyclones are often accompanied by rain.",
+		"Cyclones can produce rain."
+	],
+	"cyclones#rain": [
+		"Cyclones are accompanied by rain.",
+		"Cyclones are a main cause of rain.",
+		"Cyclones bring rain with them."
+	],
+	"rain#diffraction": [
+		"Diffraction is caused by the rain.",
+		"Diffraction makes the rain visible."
+	],
+	"diffraction#rain": [
+		"Diffraction is the breaking of light into colors as it passes through a narrow opening.",
+		"Diffraction is the bending of light as it passes around an object.",
+		"Rain makes light diffract."
+	],
+	"rain#the marble": [
+		"Drops of rain fall like marbles from the sky.",
+		"Raindrops fall like marbles."
+	],
+	"the marble#rain": [
+		"A marble can be used to represent rain."
+	],
+	"rain#pride": [
+		"Rain falls from the sky in response to the warm air rising up and cooling. This process, called convection, causes thunderstorms and high-pressure systems, which bring clear skies and cooler temperatures. Pride is a feeling or emotion that is associated with happiness, joy, and satisfaction."
+	],
+	"pride#rain": [
+		"Pride falls like rain.",
+		"The more pride, the more it rains."
+	],
+	"rain#mork": [
+		"A:",
+		"There is no definitive answer to this question. Some believe that rain is caused by the tears of the Norse god Mork, while others believe that rain is a product of the weather."
+	],
+	"mork#rain": [
+		"A:",
+		"There is no known relation between mork and rain."
+	],
+	"rain#fronts": [
+		"Rain is produced by fronts.",
+		"Rain is associated with fronts."
+	],
+	"fronts#rain": [
+		"Fronts bring rain.",
+		"Fronts are responsible for rain."
+	],
+	"rain#our spirits": [
+		"Some people say that rain can affect our mood and emotions."
+	],
+	"our spirits#rain": [
+		"A:",
+		"Our spirits can be related to rain as a form of cleansing. Rain can be seen as a metaphor for emotions, such as sadness or happiness. It can also be seen as a purifying force, washing away the dirt and grime that builds up in our lives."
+	],
+	"rain#chinchillas": [
+		"Chinchillas like rain."
+	],
+	"chinchillas#rain": [
+		"Chinchillas don't like rain."
+	],
+	"rain#dogs": [
+		"Dogs hate rain.",
+		"Dogs love rain."
+	],
+	"dogs#rain": [
+		"Dogs hate rain.",
+		"Dogs love rain."
+	],
+	"rain#low pressure": [
+		"Low pressure is a condition that causes rain.",
+		"Low pressure is a condition that causes clouds and fog."
+	],
+	"low pressure#rain": [
+		"Low pressure brings rain.",
+		"Low pressure is necessary for rain."
+	],
+	"rain#eleanor": [
+		"Eleanor causes rain.",
+		"Eleanor is the name of a rain goddess."
+	],
+	"eleanor#rain": [
+		"Eleanor loves the rain.",
+		"Eleanor is rained on.",
+		"Eleanor went outside in the rain."
+	],
+	"rain#dust": [
+		"Rain washes away dust.",
+		"Rain and dust are related because when it rains, the dust gets washed away."
+	],
+	"dust#rain": [
+		"Dust can turn into rain.",
+		"Dust can be carried away by rain.",
+		"Dust can be dissolve by rain."
+	],
+	"rain#auto glass": [
+		"Auto glass can be damaged by rain."
+	],
+	"auto glass#rain": [
+		"Auto glass is less likely to get foggy in rain.",
+		"Auto glass usually doesn't get foggy in rain."
+	],
+	"rain#touch": [
+		"When it rains, water touch surfaces.",
+		"When it rains, water falls from the sky."
+	],
+	"touch#rain": [
+		"Touching something can make you wet if it's raining."
+	],
+	"rain#apricot culture": [
+		"Apricot culture needs rain to grow.",
+		"Apricot culture can't grow without rain."
+	],
+	"apricot culture#rain": [
+		"Apricot culture needs rain to grow.",
+		"Apricot culture needs water to grow."
+	],
+	"rain#umbrella": [
+		"If it rains and you have an umbrella, you won't get wet.",
+		"If it rains and you don't have an umbrella, you will get wet."
+	],
+	"umbrella#rain": [
+		"An umbrella protects from rain.",
+		"An umbrella prevent rain."
+	],
+	"rain#spiders": [
+		"Spiders like to live in the rain.",
+		"Spiders come out when it rains."
+	],
+	"spiders#rain": [
+		"Spiders like to live in rain.",
+		"Spiders come out when it rains.",
+		"Spiders like to eat rain bugs."
+	],
+	"rain#the distance": [
+		"The farther away an area is from a rainstorm, the less likely it is to experience rainfall."
+	],
+	"the distance#rain": [
+		"The distance between rain and the ground is the raindrop size.",
+		"The distance between rain and the ground is the raindrop size."
+	],
+	"rain#the forecast": [
+		"The forecast predicts rain.",
+		"The forecast predicts the weather."
+	],
+	"the forecast#rain": [
+		"The forecast predicts rain.",
+		"The forecast says that it will rain."
+	],
+	"rain#forests": [
+		"Forests help to produce rain.",
+		"Forests are necessary to produce rain."
+	],
+	"forests#rain": [
+		"Forests help rain.",
+		"Forests produce rain.",
+		"Forests increase rain."
+	],
+	"rain#a match": [
+		"A match can light up the rain.",
+		"A match can make the rain stop.",
+		"A match can make the rain start."
+	],
+	"a match#rain": [
+		"A match can light up in rain.",
+		"A match can't light up in rain."
+	],
+	"rain#raincoat": [
+		"A raincoat protects from rain.",
+		"A raincoat keep the raincoat dry."
+	],
+	"raincoat#rain": [
+		"A raincoat protects from rain.",
+		"A raincoat prevents rain."
+	],
+	"rain#the rocks": [
+		"The rain washes the rocks.",
+		"The rain erodes the rocks."
+	],
+	"the rocks#rain": [
+		"The rocks increase the amount of rain."
+	],
+	"rain#pollutants": [
+		"Pollutants in rainwater.",
+		"Rain can wash pollutants away."
+	],
+	"pollutants#rain": [
+		"Pollutants in rainwater runoff can contaminate local water resources."
+	],
+	"rain#nuggets": [
+		"Rain fall on the nuggets.",
+		"Nuggets can get wet by rain."
+	],
+	"nuggets#rain": [
+		"Nuggets fall from the sky during a rainstorm.",
+		"Nuggets are made of rain."
+	],
+	"rain#toilet flushing": [
+		"flushing a toilet during a rain shower can help clear the air",
+		"flushing a toilet during a rain shower can help prevent rain"
+	],
+	"toilet flushing#rain": [
+		"A:",
+		"The sound of a toilet flushing is often compared to the sound of rain."
+	],
+	"winter#birds": [
+		"Some birds migrate to winter."
+	],
+	"birds#winter": [
+		"Birds migrate south for the winter."
+	],
+	"winter#spring": [
+		"Winter is the time of year between spring and summer.",
+		"Winter is the time of year that is colder then spring.",
+		"Winter is the time of year that is darker then spring."
+	],
+	"spring#winter": [
+		"Spring is the time of year between winter and summer.",
+		"Spring is the time of year when the weather starts to warm up.",
+		"Spring comes after winter."
+	],
+	"winter#the sun": [
+		"In winter, the sun is lower in the sky.",
+		"In winter, the sun is less visible.",
+		"In winter, the sun is weaker."
+	],
+	"the sun#winter": [
+		"The sun is the cause of winter.",
+		"The sun is the reason for winter."
+	],
+	"winter#bear": [
+		"Bears hibernate in Winter.",
+		"Bears like to eat berries in Winter."
+	],
+	"bear#winter": [
+		"Bears hibernate in winter.",
+		"Bears like to eat in winter.",
+		"Bears like to walk in winter."
+	],
+	"winter#the season": [
+		"Winter is a season."
+	],
+	"the season#winter": [
+		"Winter is a season."
+	],
+	"winter#squirrels": [
+		"Squirrels like winter because they can find more food.",
+		"Squirrels store food in winter."
+	],
+	"squirrels#winter": [
+		"Squirrels prepare for winter.",
+		"Squirrels like winter."
+	],
+	"winter#heat loss": [
+		"Winter is the time when heat loss is the most severe.",
+		"Winter is the time when heat loss is the least severe."
+	],
+	"heat loss#winter": [
+		"Winter is colder, so heat loss is faster.",
+		"Winter has less daylight, so heat loss is slower."
+	],
+	"winter#snow": [
+		"Winter is associated with snow.",
+		"Winter produces snow."
+	],
+	"snow#winter": [
+		"Snow is a main component of winter.",
+		"Winter is the season that has a lot of snow."
+	],
+	"winter#crowds": [
+		"Winter is a time when there are many crowds.",
+		"Winter is a time when there are many people."
+	],
+	"crowds#winter": [
+		"Winter is the time when people tend to crowd together indoors.",
+		"Winter is the time when people tend to gather in crowds."
+	],
+	"winter#months": [
+		"Winter is one of the four seasons, and it occurs in the months of December, January, and February."
+	],
+	"months#winter": [
+		"December, January, February are months in winter.",
+		"Winter has December, January, February."
+	],
+	"winter#problems": [
+		"Winter can cause problems like slippery roads and cold temperatures."
+	],
+	"problems#winter": [
+		"Problems increase in winter.",
+		"Problems are solved in winter."
+	],
+	"winter#sweater": [
+		"A sweater is worn in winter.",
+		"A sweater keep you warm in winter."
+	],
+	"sweater#winter": [
+		"A sweater is worn in winter.",
+		"A sweater keeps you warm in winter."
+	],
+	"winter#global warming": [
+		"Winter is colder because of global warming.",
+		"Winter is colder because of the Earth's atmosphere."
+	],
+	"global warming#winter": [
+		"Winter is colder because of global warming.",
+		"Winter is colder because of the Earth's atmosphere trapping more heat."
+	],
+	"winter#the tree": [
+		"The tree is covered in winter.",
+		"The tree is dormant in winter."
+	],
+	"the tree#winter": [
+		"The tree lose its leaves in winter.",
+		"The tree becomes dormant in winter.",
+		"The tree is covered in snow in winter."
+	],
+	"winter#summer sun": [
+		"Winter sun is lower in the sky then summer sun.",
+		"Winter sun is less bright then summer sun.",
+		"Winter sun is closer to the horizon then summer sun."
+	],
+	"summer sun#winter": [
+		"Summer sun is a time when the daylight is the longest. Winter is a time when the daylight is the shortest."
+	],
+	"winter#cardinals": [
+		"Cardinals are a common sight in winter.",
+		"Cardinals like winter."
+	],
+	"cardinals#winter": [
+		"Cardinals are found in winter."
+	],
+	"winter#this equipment": [
+		"This equipment is used in winter.",
+		"This equipment is necessary in winter."
+	],
+	"this equipment#winter": [
+		"This equipment is used in winter.",
+		"This equipment is helpful in winter."
+	],
+	"winter#robins": [
+		"Robins migrate to winter.",
+		"Robins like winter."
+	],
+	"robins#winter": [
+		"Robins usually migrate south for the winter."
+	],
+	"winter#power outages": [
+		"Winter is a cause of power outages.",
+		"Winter is when power outages happen."
+	],
+	"power outages#winter": [
+		"Winter is the main season for power outages.",
+		"Winter is the time when power outages are more common.",
+		"Winter is when power outages are more likely to happen."
+	],
+	"winter#durability": [
+		"A:",
+		"There is no specific relations between winter and durability. However, winter weather can be harsh on materials and structures, so durability may be more important during winter months."
+	],
+	"durability#winter": [
+		"Winter is more durable then summer.",
+		"Winter is the most durable season."
+	],
+	"winter#soil": [
+		"Winter is a season when the ground is covered with snow and soil is not visible.",
+		"Winter is a season when the ground is covered with snow and soil is hidden."
+	],
+	"soil#winter": [
+		"Soil freezes in winter.",
+		"Soil becomes covered in ice in winter."
+	],
+	"winter#cata buses": [
+		"Cata buses are used in winter.",
+		"Cata buses are used to avoid winter weather."
+	],
+	"cata buses#winter": [
+		"Winter is the time when cata buses run.",
+		"Winter is the time when cata buses are most needed.",
+		"Winter is the time when cata buses are least needed."
+	],
+	"winter#rivers": [
+		"Rivers freeze over in winter.",
+		"Rivers are covered in ice in winter."
+	],
+	"rivers#winter": [
+		"Rivers freeze over in winter."
+	],
+	"winter#lack": [
+		"winter is a time of year when there is a lack of sunlight.",
+		"winter is a time of year when there is a lack of warmth."
+	],
+	"lack#winter": [
+		"Lack of sunlight during winter can cause depression.",
+		"Lack of Vitamin D during winter can cause depression."
+	],
+	"winter#death": [
+		"Death often occurs in winter.",
+		"Winter is a season associated with death."
+	],
+	"death#winter": [
+		"Winter is often associated with death.",
+		"Death is often associated with winter."
+	],
+	"winter#your hands": [
+		"Your hands get cold in winter."
+	],
+	"your hands#winter": [
+		"Your hands can keep you warm in winter.",
+		"Your hands are covered in winter."
+	],
+	"winter#antibiotic": [
+		"Winter is a season and antibiotic is a medication."
+	],
+	"antibiotic#winter": [
+		"Antibiotic helps to prevent winter colds.",
+		"Antibiotic is used to treat winter colds."
+	],
+	"winter#condition": [
+		"Winter is a type of condition.",
+		"Winter is a cold condition."
+	],
+	"condition#winter": [
+		"Winter is a type of condition.",
+		"Winter is a state of the environment."
+	],
+	"winter#glove": [
+		"Gloves keep hands warm in winter."
+	],
+	"glove#winter": [
+		"Gloves keep hands warm in winter.",
+		"Gloves are worn in winter."
+	],
+	"winter#the pots": [
+		"Winter is the time when the pots are used.",
+		"Winter is the time when the pots are put away."
+	],
+	"the pots#winter": [
+		"In winter, the pots are used to store water so that it does not freeze.",
+		"In winter, the pots are used to hold hot water to keep plants warm."
+	],
+	"winter#leaf damage": [
+		"Winter can cause leaf damage.",
+		"Winter is a factor that can cause leaf damage."
+	],
+	"leaf damage#winter": [
+		"Winter causes leaves to fall off.",
+		"Winter damage leaves."
+	],
+	"winter#rescue operations": [
+		"Rescue operations are typically conducted in winter."
+	],
+	"rescue operations#winter": [
+		"Rescue operations are much more difficult in winter conditions.",
+		"Rescue operations are usually more successful in winter weather."
+	],
+	"winter#the kids": [
+		"Winter is a good time for kids to play in the snow."
+	],
+	"the kids#winter": [
+		"The kids love winter.",
+		"The kids enjoy winter."
+	],
+	"winter#language": [
+		"Winter is a time of year.",
+		"Language is a way to communicate."
+	],
+	"language#winter": [
+		"Language can be spoken in winter.",
+		"Language is used more in winter."
+	],
+	"winter#the way": [
+		"Winter is the way.",
+		"Winter is a season."
+	],
+	"the way#winter": [
+		"The way is covered in winter.",
+		"The way is slippery in winter.",
+		"The way is hard to walk on in winter."
+	],
+	"winter#meghan": [
+		"Meghan is born in winter.",
+		"Meghan likes winter."
+	],
+	"meghan#winter": [
+		"A:",
+		"There is no specific relation between Meghan and winter. However, Meghan may enjoy winter activities such as skiing, snowboarding, or ice skating."
+	],
+	"winter#any lady": [
+		"A:",
+		"There is no specific relation between winter and any lady."
+	],
+	"any lady#winter": [
+		"Any lady can wear winter clothes",
+		"Any lady can go outside in winter",
+		"Any lady can enjoy winter"
+	],
+	"winter#your feet": [
+		"Your feet get cold in winter."
+	],
+	"your feet#winter": [
+		"Your feet get cold in winter."
+	],
+	"winter#all departures": [
+		"Winter is the season in which all departures happen.",
+		"All departures happen in winter."
+	],
+	"all departures#winter": [
+		"Many departures happen in winter.",
+		"Many people leave for winter.",
+		"Many people go on winter vacations."
+	],
+	"winter#florida": [
+		"Winter is the opposite season of Floriday.",
+		"Winter is colder than Floriday."
+	],
+	"florida#winter": [
+		"A:",
+		"There is no direct relation between Florida and winter. However, Florida is generally warmer than most other U.S. states in winter, so it is a popular destination for people who want to escape the cold."
+	],
+	"winter#one course": [
+		"Winter lasts one course.",
+		"Winter is one course long."
+	],
+	"one course#winter": [
+		"One course is a type of winter.",
+		"One course usually takes place in winter."
+	],
+	"winter#africa": [
+		"A:",
+		"There is no direct relationship between winter and Africa. However, winter weather can occasionally occur in Africa, as the continent spans a wide range of latitudes."
+	],
+	"africa#winter": [
+		"Africa is in the Southern Hemisphere, so it's summer when it's winter in North America and Europe.",
+		"Africa is in the Northern Hemisphere, so it's winter when it's summer in North America and Europe."
+	],
+	"winter#the bed": [
+		"Winter make people want to stay in bed.",
+		"Winter usually means colder weather, which might make people want to stay in bed more."
+	],
+	"the bed#winter": [
+		"The bed is a place to escape from winter.",
+		"The bed helps to avoid winter."
+	],
+	"winter#cotton": [
+		"Cotton is used to make winter clothes.",
+		"Cotton is a good material to make winter clothes."
+	],
+	"cotton#winter": [
+		"Cotton is used for winter clothing.",
+		"Cotton keeps you warm in winter."
+	],
+	"winter#a display": [
+		"Winter is one of the four displays on the calendar.",
+		"Winter is a season."
+	],
+	"a display#winter": [
+		"A display is used to show winter scenes.",
+		"A display has a winter theme.",
+		"A display is used in winter."
+	],
+	"winter#minority": [
+		"Winter is the minority season.",
+		"Winter is the least popular season."
+	],
+	"minority#winter": [
+		"Minorities often experience winter conditions more intensely than the majority population.",
+		"Minorities are more likely to live in colder climates."
+	],
+	"winter#hold": [
+		"Winter is a season that typically includes cold weather.",
+		"Winter is a time to hold.",
+		"Winter is a time to be together."
+	],
+	"hold#winter": [
+		"Hold is necessary in winter.",
+		"Winter is necessary to hold."
+	],
+	"winter#a jumper": [
+		"A jumper is a garment to keep you warm in winter.",
+		"A jumper is made of wool, so it keep you warm in winter."
+	],
+	"a jumper#winter": [
+		"A jumper is a warm clothing for winter.",
+		"A jumper is made to keep you warm in winter."
+	],
+	"winter#silicone": [
+		"silicone is a key component of winter tires.",
+		"silicone is used in winter coats.",
+		"silicone helps to prevent snow and ice from sticking to surfaces."
+	],
+	"silicone#winter": [
+		"Winter is the time of year when silicone is used to make winter hats, gloves, and scarves.",
+		"Winter is the time of year when silicone is used to make water resistant and windproof fabrics."
+	],
+	"winter#moncler jacket": [
+		"Moncler jackets are popular in winter.",
+		"Moncler jackets keep you warm in winter.",
+		"Moncler jackets are good for winter weather."
+	],
+	"moncler jacket#winter": [
+		"A moncler jacket keeps you warm in winter.",
+		"A moncler jacket is perfect for winter."
+	],
+	"winter#swimmers": [
+		"Swimmers can't swim in winter.",
+		"Swimmers don't swim in winter."
+	],
+	"swimmers#winter": [
+		"Swimmers don't like winter.",
+		"Swimmers can't swim in winter.",
+		"Swimmers need to wear winter clothes when swim in winter."
+	],
+	"winter#the case": [
+		"Winter is the time of year when the case is most active.",
+		"Winter is the time of year when the case is cold.",
+		"Winter is the time of year when the case hibernates."
+	],
+	"the case#winter": [
+		"The case protects your phone from winter.",
+		"The case is used to protect your phone in winter."
+	],
+	"winter#difficulty": [
+		"Winter is more difficult then other seasons."
+	],
+	"difficulty#winter": [
+		"Winter is a difficult season.",
+		"Winter is hard."
+	],
+	"winter#an end": [
+		"Winter is the end of the year.",
+		"Winter is the last season."
+	],
+	"an end#winter": [
+		"Winter is the end of the year.",
+		"Winter is the end of a season."
+	],
+	"winter#its peak": [
+		"Winter is the time between December and February when the days are shortest and the nights are longest.",
+		"Winter is the coldest season of the year.",
+		"Winter is the time when most snow falls."
+	],
+	"its peak#winter": [
+		"Winter is the time of year when its peak is most visible.",
+		"Winter is the time of year when its peak is covered in snow."
+	],
+	"winter#it so": [
+		"Winter is a time of year when it snows.",
+		"Winter is a time of year when it's cold.",
+		"Winter is a time of year when it's dark."
+	],
+	"it so#winter": [
+		"It so cold in winter.",
+		"Winter is the time when it is so cold."
+	],
+	"winter#skiing": [
+		"Winter is the time of year when skiing is popular.",
+		"Winter is the time of year when skiing is possible."
+	],
+	"skiing#winter": [
+		"Skiing is a winter sport.",
+		"Skiing is done during winter.",
+		"Skiing is better in winter."
+	],
+	"winter#flu": [
+		"Flu is more common in winter.",
+		"Flu is caused by winter weather."
+	],
+	"flu#winter": [
+		"Flu outbreaks happen more often in winter.",
+		"Winter is a season when flu is common."
+	],
+	"winter#summer": [
+		"Winter is the time of year when it is cold.",
+		"Winter is the time of year when there is snow.",
+		"Summer is the time of year when it is warm.",
+		"Summer is the time of year when there is no snow."
+	],
+	"summer#winter": [
+		"Summer is the time between winter and autumn.",
+		"Summer is the time when it's warm.",
+		"Winter is the time between summer and spring.",
+		"Winter is the time when it's cold."
+	],
+	"winter#ants suddenly": [
+		"A:",
+		"There is no specific relation between winter and ants suddenly. However, ants are more active in warmer weather and may be less visible during winter months."
+	],
+	"ants suddenly#winter": [
+		"Ants become dormant in the winter."
+	],
+	"winter#vancouver": [
+		"Vancouver is a city in Canada.",
+		"Winter is a season in Canada."
+	],
+	"vancouver#winter": [
+		"Vancouver is located in the winter time.",
+		"Vancouver is a cold place in the winter."
+	],
+	"winter#flies": [
+		"Flies are more common in the summer.",
+		"Flies are attracted to winter."
+	],
+	"flies#winter": [
+		"Flies hibernate in winter.",
+		"Flies are attracted to winter."
+	],
+	"winter#halii kai": [
+		"Winter is the season for halii kai.",
+		"Winter is when halii kai happens."
+	],
+	"halii kai#winter": [
+		"Haliii kai means winter in Hawaiian.",
+		"Winter is the time of year when Haliii kai happens."
+	],
+	"winter#radon": [
+		"Radon is a gas that is produced during winter.",
+		"Radon is released during winter."
+	],
+	"radon#winter": [
+		"Radon levels are higher in winter.",
+		"Winter is a time when radon levels are higher."
+	],
+	"winter#tide": [
+		"There is no relations between winter and tide."
+	],
+	"tide#winter": [
+		"There is no direct relation between tide and winter."
+	],
+	"winter#air circulation": [
+		"Winter is colder because of the air circulation.",
+		"Winter is colder because of the lack of air circulation."
+	],
+	"air circulation#winter": [
+		"Winter air circulation can be very cold."
+	],
+	"winter#sids": [
+		"SIDS is more common during winter.",
+		"Winter is a peak season for SIDS."
+	],
+	"sids#winter": [
+		"SIDS is more common in winter.",
+		"SIDS happens more often in winter."
+	],
+	"winter#viruses": [
+		"Viruses increase in the winter.",
+		"Viruses spread more easily in the winter."
+	],
+	"viruses#winter": [
+		"Viruses cause winter illnesses.",
+		"Viruses increase in number in winter.",
+		"Viruses are more active in winter."
+	],
+	"winter#animals not": [
+		"Winter is not good for animals not.",
+		"Animals not don't like winter."
+	],
+	"animals not#winter": [
+		"Animals hibernate in winter."
+	],
+	"winter#full swing": [
+		"Winter is a full swing season.",
+		"Winter is the time when full swing sports are popular."
+	],
+	"full swing#winter": [
+		"Full swing is a winter sport.",
+		"Full swing is played in winter."
+	],
+	"winter#kick": [
+		"In winter, people often kick a snowball.",
+		"Winter is a good time to kick a snowball."
+	],
+	"kick#winter": [
+		"Kicking a ball in winter is fun.",
+		"Kicking a ball in winter keeps you warm."
+	],
+	"winter#camping": [
+		"Winter is not a good time to go camping.",
+		"Winter is a good time to go camping."
+	],
+	"camping#winter": [
+		"Camping is popular in winter.",
+		"Winter is a good time for camping.",
+		"Camping is good in winter."
+	],
+	"winter#northbridge plaza": [
+		"Northbridge plaza is a place where you can buy winter clothes.",
+		"Northbridge plaza is a place where you can find winter clothes."
+	],
+	"northbridge plaza#winter": [
+		"Northbridge plaza is a popular place to go winter.",
+		"Northbridge plaza is a place where people go to enjoy winter.",
+		"Northbridge plaza is a place where winter is celebrated."
+	],
+	"winter#24 hours": [
+		"Winter is a season that has 24 hours."
+	],
+	"24 hours#winter": [
+		"24 hours is the amount of time in a day.",
+		"Winter is the time of year when it is cold."
+	],
+	"winter#opportunities": [
+		"Winter is a good time to take advantage of opportunities.",
+		"Winter is a good time to find opportunities."
+	],
+	"opportunities#winter": [
+		"Winter is the time of year with the most opportunities.",
+		"Winter is the time of year with the fewest opportunities.",
+		"Winter is the time of year with the same opportunities as other times of year."
+	],
+	"winter#los angeles": [
+		"Los Angeles doesn't have a winter."
+	],
+	"los angeles#winter": [
+		"Los Angeles is not in the winter."
+	],
+	"winter#earnest": [
+		"Earning is associated with winter.",
+		"Winter is a time to earnest."
+	],
+	"earnest#winter": [
+		"earnest is Winter",
+		"earnest is a kind of winter"
+	],
+	"winter#some": [
+		"Winter is associated with Christmas and some people celebrate it.",
+		"Winter is a time when some sports are played."
+	],
+	"some#winter": [
+		"winter happens in some places.",
+		"winter is one of the seasons."
+	],
+	"winter#no2": [
+		"Winter is colder than surrounding areas because of high levels of no2.",
+		"no2 helps form winter ice."
+	],
+	"no2#winter": [
+		"Nitrogen dioxide is produced during winter.",
+		"Nitrogen dioxide occurs during winter."
+	],
+	"winter#i get": [
+		"I get to enjoy winter.",
+		"I get to dress warm in winter."
+	],
+	"i get#winter": [
+		"I get winter by getting a lot of snow.",
+		"I get winter when I go outside."
+	],
+	"winter#october": [
+		"Winter begins in october.",
+		"October is the beginning of winter."
+	],
+	"october#winter": [
+		"October is the beginning of winter.",
+		"October is the time of winter."
+	],
+	"winter#get dark": [
+		"Winter is when the days get shorter and it gets dark earlier."
+	],
+	"get dark#winter": [
+		"Winter makes it get dark.",
+		"It gets dark earlier in winter."
+	],
+	"winter#vitamin": [
+		"Vitamin helps the body to stay healthy during winter.",
+		"Vitamin is necessary to help the body during winter."
+	],
+	"vitamin#winter": [
+		"Vitamin helps protect you from winter colds.",
+		"Vitamin is important in winter."
+	],
+	"winter#i feel": [
+		"I feel cold in winter."
+	],
+	"i feel#winter": [
+		"I feel cold in winter.",
+		"I feel happy in winter."
+	],
+	"winter#humidity": [
+		"Winter is drier then humidity."
+	],
+	"humidity#winter": [
+		"Humidity is higher in winter.",
+		"Humidity is lower in winter."
+	],
+	"winter#9 months": [
+		"Winter is about 9 months long.",
+		"Winter is 9 months after autumn."
+	],
+	"9 months#winter": [
+		"Winter is 9 months long.",
+		"Winter is the 9th month of the year."
+	],
+	"winter#co2": [
+		"co2 is emitted more in winter",
+		"co2 traps the heat in winter",
+		"co2 is the main component of global warming"
+	],
+	"co2#winter": [
+		"co2 increase in winter.",
+		"co2 is released more in winter."
+	],
+	"winter#error (baseball)": [
+		"Error is more common in winter games.",
+		"Error is more likely in winter games."
+	],
+	"error (baseball)#winter": [
+		"Error (baseball) is common in winter.",
+		"Error (baseball) is more common in winter."
+	],
+	"winter#warmth": [
+		"Winter is cold while warmth is the opposite.",
+		"Winter brings cold while warmth brings heat."
+	],
+	"warmth#winter": [
+		"Winter is cold and has less warmth.",
+		"Winter is the time of year when it's colder."
+	],
+	"winter#a fielder": [
+		"A fielder is used in winter.",
+		"A fielder helps in winter."
+	],
+	"a fielder#winter": [
+		"A fielder protects the winter.",
+		"A fielder preserves the winter.",
+		"A fielder saves the winter."
+	],
+	"winter#temperature": [
+		"Winter is colder then temperature.",
+		"Winter is when temperature is lower then usual."
+	],
+	"temperature#winter": [
+		"Winter is colder then temperature.",
+		"Winter is when temperature is lower."
+	],
+	"winter#day": [
+		"Winter is a time of year when days are shorter."
+	],
+	"rain#the clouds": [
+		"Clouds produce rain.",
+		"Clouds are necessary for rain."
+	],
+	"the clouds#rain": [
+		"Clouds produce rain.",
+		"Clouds are the origin of rain."
+	],
+	"rain#performances": [
+		"Rain can ruin performances.",
+		"Rain can cause performances to be canceled."
+	],
+	"performances#rain": [
+		"A performance is cancelled because of the rain.",
+		"A performance is better in the rain.",
+		"A performance is outside and it rains."
+	],
+	"winter#indirect heat": [
+		"Indirect heat helps warm winter air.",
+		"Indirect heat is used to warm winter air."
+	],
+	"indirect heat#winter": [
+		"Winter is the season when indirect heat is used.",
+		"Winter is the time when indirect heat is the most used."
+	],
+	"winter#high elevations": [
+		"Winter is more common at high elevations.",
+		"Winter is colder at high elevations."
+	],
+	"high elevations#winter": [
+		"Winter is generally more severe the higher in elevation one lives."
+	],
+	"winter#the spring": [
+		"Winter is the time before the spring.",
+		"Winter is the time after the fall."
+	],
+	"the spring#winter": [
+		"Winter is the time when the spring is inactive."
+	],
+	"winter#this year": [
+		"This year is winter.",
+		"This year is a winter.",
+		"This year is during winter."
+	],
+	"this year#winter": [
+		"This year is winter.",
+		"This year is during winter."
+	],
+	"winter#effect": [
+		"Winter is the effect of the Earth's tilt on its axis."
+	],
+	"effect#winter": [
+		"Winter is the effect of the Earth's tilt on its axis.",
+		"Winter is the result of the Earth's tilt on its axis."
+	],
+	"winter#australia": [
+		"Winter is not typically associated with Australia."
+	],
+	"australia#winter": [
+		"australia is in the southern hemisphere so it has winter when the northern hemisphere has summer."
+	],
+	"winter#ears get": [
+		"Winter can make ears get cold."
+	],
+	"ears get#winter": [
+		"When it winter, ears get cold.",
+		"When it winter, ears need to be covered."
+	],
+	"winter#get cold": [
+		"Winter is the season when you get cold.",
+		"In winter, you get cold."
+	],
+	"get cold#winter": [
+		"Winter is when you get cold.",
+		"Winter is the time of year when you get cold."
+	],
+	"day#winter": [
+		"Winter occurs during the day.",
+		"Winter is the dark time of the year."
+	],
+	"winter#penguins": [
+		"Penguins love winter.",
+		"Penguins live in winter.",
+		"Penguins are born in winter."
+	],
+	"penguins#winter": [
+		"Penguins usually live in winter.",
+		"Penguins migrate to winter."
+	],
+	"winter#valley": [
+		"A valley is often covered in winter.",
+		"A valley is located between mountains."
+	],
+	"valley#winter": [
+		"Winter is located in the valley.",
+		"Valley is located in the winter."
+	],
+	"winter#half": [
+		"Half of the year is winter.",
+		"Winter is for half the year."
+	],
+	"half#winter": [
+		"Half of the year is winter.",
+		"Winter is half the year."
+	],
+	"winter#bears hibernate": [
+		"Bears hibernate in winter.",
+		"Bears sleep in winter.",
+		"Bears eat in winter."
+	],
+	"bears hibernate#winter": [
+		"Bears hibernate in winter.",
+		"Bears hibernate because of winter."
+	],
+	"winter#hand": [
+		"Winter is cold and hands need to be protected.",
+		"Winter is a time of year and hands are a body part."
+	],
+	"hand#winter": [
+		"Hands are colder in winter.",
+		"Hands are covered in winter."
+	],
+	"winter#thunder": [
+		"Winter is colder then thunder.",
+		"Winter is darker then thunder.",
+		"Winter lasts longer then thunder."
+	],
+	"thunder#winter": [
+		"Thunder is often associated with winter weather.",
+		"Thunder is sometimes heard during winter weather."
+	],
+	"winter#50 %": [
+		"winter is 50% colder then summer."
+	],
+	"50 %#winter": [
+		"50% of the year is winter.",
+		"Winter is 50% of the year."
+	],
+	"winter#the press": [
+		"Winter is a time when the press is very busy.",
+		"The press is very active in winter."
+	],
+	"the press#winter": [
+		"The press release winter weather advisories.",
+		"The press covers winter weather."
+	],
+	"winter#hurt more": [
+		"Winter can hurt more because of the cold weather."
+	],
+	"hurt more#winter": [
+		"Hurt more happen more in winter.",
+		"Hurt more is common in winter."
+	],
+	"winter#the fall": [
+		"Winter occurs after the fall.",
+		"Winter is colder then the fall."
+	],
+	"the fall#winter": [
+		"Fall is the season before winter.",
+		"Fall is the time when winter starts."
+	],
+	"winter#front": [
+		"Winter is caused by the front.",
+		"Winter is the coldest season.",
+		"The front brings winter weather."
+	],
+	"front#winter": [
+		"Winter comes after front.",
+		"Winter is located at the front."
+	],
+	"winter#margaret lea": [
+		"Margaret lea wrote winter."
+	],
+	"margaret lea#winter": [
+		"Margret lea wrote winter.",
+		"Margret lea was born in winter."
+	],
+	"winter#the defects": [
+		"Winter is the cause of the defects.",
+		"Winter creates the defects."
+	],
+	"the defects#winter": [
+		"Winter is caused by defects in the atmosphere.",
+		"Winter is the result of defects in the atmosphere."
+	],
+	"winter#an appearance": [
+		"Winter is an appearance of cold weather.",
+		"Winter is an appearance of snow."
+	],
+	"an appearance#winter": [
+		"Winter can make people appear colder.",
+		"Winter can make people appear to have a lack of color."
+	],
+	"winter#covid": [
+		"Winter is the time of year when covid appears.",
+		"Winter is the time of year when covid is most active.",
+		"Winter is the time of year when covid is the most dangerous."
+	],
+	"covid#winter": [
+		"Covid is a virus that causes winter illnesses.",
+		"Covid is a virus that is more active in winter."
+	],
+	"winter#a vengeance": [
+		"Winter is a time of a vengeance.",
+		"Winter provides a time for vengeance."
+	],
+	"a vengeance#winter": [
+		"Winter is a season of vengeance.",
+		"Winter is the time when people take revenge.",
+		"Winter is a time for bloodshed."
+	],
+	"winter#fiber": [
+		"Winter clothes are made of fiber.",
+		"Winter clothes keep you warm because of fiber."
+	],
+	"fiber#winter": [
+		"Fiber helps keep warm in winter.",
+		"Fiber is used in winter clothing."
+	],
+	"winter#the coast": [
+		"Winter is a season on the coast. ",
+		"Winter is colder then the coast."
+	],
+	"the coast#winter": [
+		"The coast can have winter weather.",
+		"Winter weather can be on the coast."
+	],
+	"winter#sense": [
+		"Winter makes us use our sense more because we have to bundled up.",
+		"Winter is the time when we use our sense the most."
+	],
+	"sense#winter": [
+		"Sense is dull during winter.",
+		"Sense is inactive during winter."
+	],
+	"winter#action": [
+		"Action is popular in winter.",
+		"Action scenes are popular in winter."
+	],
+	"action#winter": [
+		"Action is more popular in winter.",
+		"Winter is the best time for action."
+	],
+	"winter#maize": [
+		"Maize is a crop that is planted in the winter.",
+		"Maize is harvested in the winter."
+	],
+	"maize#winter": [
+		"Maize is harvested in winter.",
+		"Maize is planted in winter."
+	],
+	"winter#a comeback": [
+		"Winter is a time when many TV shows have a comeback.",
+		"Winter is a time when many TV shows come back."
+	],
+	"a comeback#winter": [
+		"A comeback happens in winter.",
+		"A comeback is associated with winter.",
+		"A comeback takes place in winter."
+	],
+	"winter#wi.": [
+		"Wi. is an abbreviation for winter."
+	],
+	"wi.#winter": [
+		"Wi. stands for the winter Olympics.",
+		"Wi. is the abbreviation for winter."
+	],
+	"winter#the corps": [
+		"The corps is a winter sport.",
+		"The corps practiced in winter."
+	],
+	"the corps#winter": [
+		"The corps protects from the winter weather.",
+		"The corps insulates from the winter weather."
+	],
+	"winter#gift": [
+		"Christmas is a winter holiday, and one of the main traditions is gift-giving.",
+		"Winter is a time when people give gifts to each other."
+	],
+	"gift#winter": [
+		"Christmas is a gift from winter.",
+		"Winter brings gift."
+	],
+	"winter#the top": [
+		"Winter is the time of year when the top is most visible.",
+		"Winter is the time of year when the top is used most."
+	],
+	"the top#winter": [
+		"Winter is at the top of the year.",
+		"Winter is the coldest season."
+	],
+	"winter#force": [
+		"Winter is a force of nature.",
+		"Winter is a type of force."
+	],
+	"force#winter": [
+		"Winter is a time of year when there is a lot of force.",
+		"Winter is a time of year when the force is strongest."
+	],
+	"winter#august 2003": [
+		"august 2003 is the winter solstice.",
+		"august 2003 is the time of the year when winter begins."
+	],
+	"august 2003#winter": [
+		"August 2003 is summer.",
+		"Winter is in the opposite season of august 2003."
+	],
+	"winter#water": [
+		"Winter is a season of water.",
+		"Winter is colder then water."
+	],
+	"water#winter": [
+		"Winter is a season with water.",
+		"In winter, water freezes."
+	],
+	"winter#2010": [
+		"2010 is winter."
+	],
+	"2010#winter": [
+		"Winter begins in 2010."
+	],
+	"winter#summers": [
+		"Winter is the time of year when it's coldest.",
+		"Summer is the time of year when it's hottest."
+	],
+	"summers#winter": [
+		"Summer is the time of the year when it is hot.",
+		"Winter is the time of the year when it is cold."
+	],
+	"winter#the summer": [
+		"Winter is the opposite of summer."
+	],
+	"the summer#winter": [
+		"Winter is the opposite of summer.",
+		"Winter happens after summer.",
+		"Winter is colder than summer."
 	]
 }

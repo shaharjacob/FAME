@@ -23290,5 +23290,17 @@
 	"key#communication": [],
 	"communication#key": [
 		"has property"
-	]
+	],
+	"rain#any play": [],
+	"any play#rain": [],
+	"rain#a match": [],
+	"a match#rain": [],
+	"rain#pollutants": [],
+	"pollutants#rain": [],
+	"winter#heat loss": [],
+	"heat loss#winter": [],
+	"winter#cata buses": [],
+	"cata buses#winter": [],
+	"winter#rivers": [],
+	"rivers#winter": []
 }

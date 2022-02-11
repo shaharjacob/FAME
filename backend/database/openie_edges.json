@@ -62973,5 +62973,68 @@
 		"support",
 		"will be",
 		"will play"
+	],
+	"rain#any play": [
+		"prevented"
+	],
+	"any play#rain": [],
+	"rain#a match": [],
+	"a match#rain": [],
+	"rain#pollutants": [
+		"can actually remove many of",
+		"can pick up",
+		"carries",
+		"collects",
+		"contained",
+		"decrease",
+		"eliminates",
+		"keep",
+		"picks up",
+		"prevent",
+		"washes",
+		"will filter"
+	],
+	"pollutants#rain": [
+		"acidify",
+		"cause",
+		"contribute to",
+		"fall in",
+		"found in",
+		"linked to"
+	],
+	"winter#heat loss": [
+		"prevent"
+	],
+	"heat loss#winter": [],
+	"winter#cata buses": [],
+	"cata buses#winter": [],
+	"winter#rivers": [
+		"enter",
+		"flows from",
+		"fly fishing on",
+		"has arrived on",
+		"has just tightened its grip on",
+		"have left",
+		"have prevented",
+		"hit",
+		"is a beautiful season on",
+		"proceeded down",
+		"was taken of",
+		"will restore"
+	],
+	"rivers#winter": [
+		"are frozen in",
+		"are simply",
+		"flows in",
+		"freezes during",
+		"had been kept open during",
+		"have",
+		"is a magical place in",
+		"remain through",
+		"remains dry in",
+		"spent",
+		"was a half mile wide in",
+		"was high in",
+		"went into"
 	]
 }
