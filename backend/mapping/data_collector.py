@@ -7,6 +7,7 @@ from typing import List, Optional, Dict, Set
 from . import openIE
 from . import concept_net
 from . import google_autosuggest
+from . import gpt3
 from .quasimodo import Quasimodo
 
 root = Path(__file__).resolve().parent.parent.parent
@@ -25,6 +26,8 @@ class DataCollector(object):
             self.quasimodo_edges = read_json(root / 'backend' / 'database' / 'quasimodo_edges.json')
         if api.get("conceptnet", False):
             self.conceptnet_edges = read_json(root / 'backend' / 'database' / 'conceptnet_edges.json')
+        # if api.get("gpt3", False):
+        #     self.gpt3_edges = read_json(root / 'backend' / 'database' / 'gpt3_edges.json')
 
         self.stopwords = read_stopwords(root / 'backend' / 'frequency' / 'stopwords.txt')
 
@@ -77,11 +80,19 @@ class DataCollector(object):
                     json.dump(self.conceptnet_edges, f3, indent='\t')
         else:
             concept_net_props = []
+        
+        if self.api.get("gpt3", False):
+            if not self.engine:
+                self.engine = inflect.engine()
+            gpt3_props = gpt3.get_entities_relations(entity1, entity2, self.engine)
+        else:
+            gpt3_props = []
 
         quasimodo_props = [prop for prop in quasimodo_props if prop not in self.stopwords]
         autosuggets_props = [prop for prop in autosuggets_props if prop not in self.stopwords]
         concept_net_props = [prop for prop in concept_net_props if prop not in self.stopwords]
         openie_props = [prop for prop in openie_props if prop not in self.stopwords]
+        gpt3_props = [prop for prop in gpt3_props if prop not in self.stopwords]
 
         if from_where:
             return {
@@ -89,9 +100,10 @@ class DataCollector(object):
                 "quasimodo": sorted(list(set(quasimodo_props))),
                 "concept_net": sorted(list(set(concept_net_props))),
                 "google_autosuggest": sorted(list(set(autosuggets_props))),
+                "gpt3": sorted(list(set(gpt3_props))),
             }
 
-        return sorted(list(set(quasimodo_props + autosuggets_props + concept_net_props + openie_props)))
+        return sorted(list(set(quasimodo_props + autosuggets_props + concept_net_props + openie_props + gpt3_props)))
     
 
     def get_entitiy_props(self, entity: str, from_where: bool = False) -> List[str]:
@@ -107,12 +119,12 @@ class DataCollector(object):
         else:
             quasimodo_props = []
         
-        if self.api.get("quasimodo", False):
+        if self.api.get("conceptnet", False):
             concept_net_props = concept_net.get_entity_props(entity)
         else:
             concept_net_props = []
             
-        if self.api.get("quasimodo", False):
+        if self.api.get("google", False):
             google_props = google_autosuggest.get_entity_props(entity)
         else:
             google_props = []
@@ -142,6 +154,7 @@ if __name__ == '__main__':
         "google": True,
         "openie": True,
         "quasimodo": True,
+        "gpt3": True,
         "conceptnet": False
     }
     data_collector = DataCollector(api=api)

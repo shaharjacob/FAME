@@ -13,5 +13,6 @@ graphviz==0.18
 networkx==2.6.3
 scikit-learn==1.0
 
+openai
 transformers==4.10.3
 sentence_transformers==2.1.0

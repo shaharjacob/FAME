@@ -44,6 +44,7 @@ def mapping_entities():
             "google": True,
             "openie": True,
             "quasimodo": True,
+            "gpt3": False,
             "conceptnet": False
         }
 
@@ -152,6 +153,7 @@ def single_mapping():
         "google": True,
         "openie": True,
         "quasimodo": True,
+        "gpt3": True,
         "conceptnet": False
     }
     data_collector = DataCollector(api=api)
@@ -179,7 +181,10 @@ def single_mapping():
             continue
 
         # we want the weight of each edge between two nodes.
-        similatiry_edges = [(prop1, prop2, get_edge_score(prop1, prop2, model, freq)) for prop1 in props_edge1 for prop2 in props_edge2]
+        similatiry_edges = [
+            (prop1, prop2, get_edge_score(prop1, prop2, model, freq)) 
+            for prop1 in props_edge1 for prop2 in props_edge2
+        ]
         
         for thresh in utils.DISTANCE_TRESHOLDS:
             clustered_sentences_1: Dict[int, List[str]] = model.clustering(props_edge1, distance_threshold=thresh)
@@ -220,6 +225,7 @@ def two_entities():
         "google": True,
         "openie": True,
         "quasimodo": True,
+        "gpt3": False,
         "conceptnet": False
     }
     data_collector = DataCollector(api=api) 
@@ -248,6 +254,7 @@ def bipartite_graph():
         "google": True,
         "openie": True,
         "quasimodo": True,
+        "gpt3": False,
         "conceptnet": False
     }
     data_collector = DataCollector(api=api)
@@ -284,6 +291,7 @@ def clustring():
         "google": True,
         "openie": True,
         "quasimodo": True,
+        "gpt3": False,
         "conceptnet": False
     }
     data_collector = DataCollector(api=api)

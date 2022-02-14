@@ -1,5 +1,5 @@
 mapping:
-  - input:
+  - input: #1
       base: [baker, cake, recipe, ingredients] 
       target: [scientist, discovery, research, data]
       depth:
@@ -12,7 +12,7 @@ mapping:
       - recipe --> research
       - ingredients --> data
 
-  - input:
+  - input: #2
       base: [eraser, pencil, paper]
       target: [amnesia, memory, mind]
       depth:
@@ -24,7 +24,7 @@ mapping:
       - pencil --> memory
       - paper --> mind
 
-  - input:
+  - input: #3
       base: [jacket, zipper, cold]
       target: [wound, suture, infection]
       depth:
@@ -36,7 +36,7 @@ mapping:
       - zipper --> suture
       - cold --> infection
   
-  - input:
+  - input: #4
       base: [train, track, steel]
       target: [signal, wire, copper]
       depth:
@@ -48,19 +48,19 @@ mapping:
       - track --> wire
       - steel --> copper
 
-  - input:
+  - input: #5
       base: [thoughts, brain, neurons]
       target: [astronaut, space, stars]
       depth:
         beam: 20
-        dfs: 2
+        dfs: 4
     output:
       mapping:
         - thoughts --> astronaut
         - brain --> space
         - neurons --> stars
 
-  - input:
+  - input: #6
       base: [water, pressure, bucket, pipe, rain]
       target: [heat, temperature, kettle, iron, sun]
       depth:
@@ -74,7 +74,7 @@ mapping:
         - pipe --> iron
         - rain --> sun
   
-  - input:
+  - input: #7
       base: [waves, water, shore, breakwater]
       target: [sounds, air, earplugs, ear]
       depth:
@@ -87,7 +87,7 @@ mapping:
         - shore --> ear
         - breakwater --> earplugs
   
-  - input:
+  - input: #8
       base: [goal, soccer, grass, feet]
       target: [basket, basketball, hardwood, hands] 
       depth:
@@ -100,7 +100,7 @@ mapping:
         - grass --> hardwood
         - feet --> hands
   
-  - input:
+  - input: #9
       base: [seeds, fruit, bloom]
       target: [ideas, product, success] 
       depth:
@@ -112,7 +112,7 @@ mapping:
         - fruit --> product
         - bloom --> success
 
-  - input:
+  - input: #10
       base: [morning, breakfast, start, coffee]
       target: [evening, dinner, end, wine] 
       depth:

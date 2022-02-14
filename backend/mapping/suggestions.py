@@ -128,6 +128,7 @@ def get_score_between_two_entitites(entity1: str, entity2: str) -> float:
         "google": True,
         "openie": True,
         "quasimodo": True,
+        "gpt3": False,
         "conceptnet": False
     }
     data_collector = DataCollector(api=api)

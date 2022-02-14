@@ -8414,6 +8414,7 @@
 	"book#cover": [
 		"have a back",
 		"have different",
+		"needs",
 		"say a novel on the"
 	],
 	"pillow#pillowcase": [],
@@ -9344,7 +9345,9 @@
 		"and",
 		"has a unique"
 	],
-	"ash#fireplace": [],
+	"ash#fireplace": [
+		"can be found in"
+	],
 	"lint#pocket": [],
 	"fireplace#ash": [],
 	"pocket#lint": [],
@@ -9642,7 +9645,9 @@
 		"need a"
 	],
 	"kneepad#knee": [],
-	"shell#snail": [],
+	"shell#snail": [
+		"protects"
+	],
 	"lambchop#lamb": [],
 	"chapter#book": [
 		"1 end in the",
@@ -34650,5 +34655,810 @@
 	"winter#chic sweatshirts": [],
 	"chic sweatshirts#winter": [],
 	"winter#its peak": [],
-	"its peak#winter": []
+	"its peak#winter": [],
+	"goal#soccer": [
+		"difference work in",
+		"line technology work in",
+		"scored in"
+	],
+	"soccer#goal": [
+		"announcers yell",
+		"players celebrate after a",
+		"players raise their hands after a",
+		"players run away after a",
+		"players run to the corner after a",
+		"players slide after a"
+	],
+	"basket#hardwood": [],
+	"hardwood#basket": [],
+	"basketball#hardwood": [],
+	"hardwood#basketball": [],
+	"hardwood#hands": [],
+	"hands#hardwood": [],
+	"soccer#grass": [
+		"played on"
+	],
+	"grass#soccer": [],
+	"soccer#feet": [
+		"cleats hurt my",
+		"players have small",
+		"players kick with the side of their",
+		"players take care of their",
+		"players tape their"
+	],
+	"feet#soccer": [],
+	"lint#fabric": [],
+	"fabric#lint": [],
+	"pocket#fabric": [],
+	"fabric#pocket": [],
+	"muffler#engine": [],
+	"engine#muffler": [],
+	"muffler#decibel": [],
+	"decibel#muffler": [],
+	"noise#engine": [],
+	"engine#noise": [
+		"make",
+		"make a rattling",
+		"make knocking",
+		"making",
+		"making ticking",
+		"produce"
+	],
+	"noise#decibel": [
+		"limited to 90"
+	],
+	"decibel#noise": [],
+	"engine#decibel": [],
+	"decibel#engine": [],
+	"aspirin#injury": [],
+	"injury#aspirin": [],
+	"aspirin#pain scale": [],
+	"pain scale#aspirin": [],
+	"pain#injury": [],
+	"injury#pain": [
+		"cause"
+	],
+	"pain#pain scale": [],
+	"pain scale#pain": [],
+	"injury#pain scale": [],
+	"pain scale#injury": [],
+	"basket#ingredients": [],
+	"ingredients#basket": [],
+	"picnic#ingredients": [],
+	"ingredients#picnic": [],
+	"poverty#beggar": [],
+	"beggar#poverty": [],
+	"money#beggar": [],
+	"beggar#money": [],
+	"army#enlistment": [],
+	"enlistment#army": [],
+	"army#wound": [],
+	"wound#army": [],
+	"soldier#enlistment": [],
+	"enlistment#soldier": [],
+	"soldier#wound": [],
+	"wound#soldier": [],
+	"enlistment#wound": [],
+	"wound#enlistment": [],
+	"blizzard#turbulence": [],
+	"turbulence#blizzard": [],
+	"blizzard#salt": [],
+	"salt#blizzard": [],
+	"snowflake#turbulence": [],
+	"turbulence#snowflake": [],
+	"snowflake#salt": [],
+	"salt#snowflake": [],
+	"turbulence#salt": [],
+	"salt#turbulence": [],
+	"moat#water": [
+		"filled with"
+	],
+	"water#moat": [],
+	"moat#stone": [],
+	"stone#moat": [],
+	"castle#water": [
+		"get",
+		"have"
+	],
+	"water#castle": [],
+	"castle#stone": [],
+	"stone#castle": [],
+	"water#stone": [
+		"cause kidney",
+		"facilitate the passage of kidney",
+		"good for kidney",
+		"help with kidney",
+		"prevent kidney"
+	],
+	"stone#water": [
+		"age get",
+		"age man get",
+		"and the metal piece experience loss of weight in",
+		"bounce on",
+		"feel lighter in",
+		"feel lighter when it was under the",
+		"filter",
+		"float in",
+		"float on",
+		"sink in",
+		"skip across",
+		"skip on"
+	],
+	"bracelet#silver": [],
+	"silver#bracelet": [],
+	"bracelet#bone": [],
+	"bone#bracelet": [],
+	"wrist#silver": [],
+	"silver#wrist": [],
+	"wrist#bone": [
+		"composed of short",
+		"have so many",
+		"turn"
+	],
+	"bone#wrist": [],
+	"silver#bone": [],
+	"bone#silver": [],
+	"stomach#calories": [],
+	"calories#stomach": [],
+	"food#calories": [
+		"companies measure",
+		"get",
+		"have",
+		"have so many",
+		"labels include",
+		"measured in",
+		"not have",
+		"scales count",
+		"scientists determine",
+		"zero"
+	],
+	"calories#food": [
+		"determined in",
+		"differ between",
+		"in"
+	],
+	"fuel#car": [
+		"efficiency affect",
+		"flow in a",
+		"gauge work in",
+		"gauge work in a",
+		"injection help a",
+		"injector work in a",
+		"move a",
+		"power",
+		"used in",
+		"work in a"
+	],
+	"car#fuel": [
+		"air conditioning use more",
+		"aircon use",
+		"burn",
+		"consume",
+		"consume more",
+		"consume too much",
+		"need",
+		"not use solid",
+		"run on gasoline and not rocket",
+		"use",
+		"use fossil"
+	],
+	"petroleum#car": [
+		"power",
+		"used in"
+	],
+	"car#petroleum": [],
+	"car#dinosaurs": [],
+	"dinosaurs#car": [],
+	"ketchup#french fries": [],
+	"french fries#ketchup": [],
+	"tomato#french fries": [],
+	"french fries#tomato": [],
+	"french fries#seeds": [],
+	"seeds#french fries": [],
+	"ketchup#fries": [
+		"go with"
+	],
+	"fries#ketchup": [],
+	"tomato#fries": [],
+	"fries#tomato": [],
+	"fries#seeds": [],
+	"seeds#fries": [],
+	"birthmark#strech mark": [],
+	"strech mark#birthmark": [],
+	"birthmark#laser": [],
+	"laser#birthmark": [],
+	"skin#strech mark": [],
+	"strech mark#skin": [],
+	"skin#laser": [
+		"heal after",
+		"itch after"
+	],
+	"laser#skin": [
+		"affect the",
+		"hair removal affect the",
+		"hair removal burn",
+		"hair removal not work on dark",
+		"hair removal work on dark",
+		"help your",
+		"lighten",
+		"lipo tighten",
+		"not work on dark",
+		"tighten",
+		"work on"
+	],
+	"strech mark#laser": [],
+	"laser#strech mark": [],
+	"painting#tear": [],
+	"tear#painting": [],
+	"painting#eraser": [],
+	"eraser#painting": [],
+	"canvas#tear": [],
+	"tear#canvas": [],
+	"canvas#eraser": [],
+	"eraser#canvas": [],
+	"tear#eraser": [],
+	"eraser#tear": [],
+	"reservoir#scum": [],
+	"scum#reservoir": [],
+	"water#scum": [
+		"produce"
+	],
+	"scum#water": [],
+	"pen#mud": [],
+	"mud#pen": [],
+	"pig#mud": [
+		"eat",
+		"like",
+		"like to play in the",
+		"make",
+		"need",
+		"play in",
+		"roll around in the",
+		"roll in",
+		"roll in the",
+		"wallow in"
+	],
+	"mud#pig": [],
+	"typewriter#poet": [],
+	"poet#typewriter": [],
+	"poetry#poet": [],
+	"poet#poetry": [
+		"compare stammer with",
+		"define",
+		"like writing rhythmic",
+		"relay their messages in",
+		"use alliteration in",
+		"use lines in",
+		"use lyric",
+		"use repetition in",
+		"use stanzas in",
+		"utilize graphical elements in",
+		"write"
+	],
+	"saxophone#musician": [],
+	"musician#saxophone": [
+		"play the alto"
+	],
+	"jazz#musician": [],
+	"musician#jazz": [],
+	"incentive#dealership": [],
+	"dealership#incentive": [],
+	"deal#dealership": [],
+	"dealership#deal": [],
+	"sugar#coffeehouse": [],
+	"coffeehouse#sugar": [],
+	"coffee#coffeehouse": [],
+	"coffeehouse#coffee": [],
+	"traveler#track": [],
+	"track#traveler": [],
+	"destination#track": [],
+	"track#destination": [],
+	"basketball#court": [
+		"half",
+		"played using the whole",
+		"roll across the"
+	],
+	"court#basketball": [],
+	"hoop#court": [],
+	"court#hoop": [],
+	"traveler#trail": [
+		"pay for the journey on the oregon"
+	],
+	"trail#traveler": [],
+	"destination#trail": [],
+	"trail#destination": [],
+	"forewarning#heart attack": [],
+	"heart attack#forewarning": [],
+	"surprise#heart attack": [],
+	"heart attack#surprise": [],
+	"traveler#hike": [],
+	"hike#traveler": [],
+	"destination#hike": [],
+	"hike#destination": [],
+	"track#hike": [],
+	"hike#track": [],
+	"basketball#dribble": [],
+	"dribble#basketball": [],
+	"hoop#dribble": [],
+	"dribble#hoop": [],
+	"court#dribble": [],
+	"dribble#court": [],
+	"nucleus#electric field": [],
+	"electric field#nucleus": [],
+	"electrons#electric field": [
+		"have",
+		"move against the",
+		"move in a uniform",
+		"move in an",
+		"move opposite to",
+		"moves in an",
+		"moving in the opposite direction of",
+		"produce an"
+	],
+	"electric field#electrons": [
+		"affect",
+		"affect the motion of the emitted"
+	],
+	"electric field#faraday": [],
+	"faraday#electric field": [],
+	"earth#man": [],
+	"man#earth": [
+		"appear on",
+		"arrive on",
+		"come to",
+		"exist on",
+		"feel lighter on moon than on",
+		"fulfill the command to subdue and fill the",
+		"get on",
+		"made satellites orbit",
+		"on",
+		"originate on",
+		"suffer from pain and suffering on",
+		"suffer pain and agony on"
+	],
+	"earth#each other": [
+		"subsystem interact with",
+		"subsystems interact with",
+		"sun and moon move around"
+	],
+	"each other#earth": [],
+	"earth#distance": [],
+	"distance#earth": [
+		"affect the way stars appear from",
+		"from the sun affect the temperature of"
+	],
+	"gravity#the attraction": [],
+	"the attraction#gravity": [],
+	"gravity#distance": [
+		"act at a",
+		"affect",
+		"affect total stopping",
+		"affected by",
+		"affected by mass and",
+		"change with",
+		"decrease with",
+		"depend on mass and",
+		"get weaker with",
+		"related to mass and",
+		"stronger at long",
+		"weaken with",
+		"work over long"
+	],
+	"distance#gravity": [
+		"affect",
+		"affect the force of",
+		"affect the strength of",
+		"affect the strength of the force of",
+		"and",
+		"and mass affect",
+		"and mass affect the force of",
+		"between objects related to",
+		"between two objects affect the pull of",
+		"related to"
+	],
+	"gravity#the formation": [],
+	"the formation#gravity": [],
+	"gravity#buoyancy": [
+		"affect"
+	],
+	"buoyancy#gravity": [
+		"related to",
+		"related to specific"
+	],
+	"gravity#friction": [
+		"affect",
+		"and"
+	],
+	"friction#gravity": [
+		"affect",
+		"affect acceleration due to"
+	],
+	"gravity#time": [
+		"affect",
+		"bend",
+		"bend space",
+		"related to",
+		"slow",
+		"transcend",
+		"warp",
+		"warp the flow of"
+	],
+	"time#gravity": [
+		"affect",
+		"affected by",
+		"cause",
+		"create",
+		"depends on",
+		"dilation cause",
+		"slow down with",
+		"slower near",
+		"warped by"
+	],
+	"gravity#acceleration": [
+		"affect",
+		"affect angular",
+		"affect gravitational",
+		"an",
+		"cause",
+		"cause uniform",
+		"the same as"
+	],
+	"acceleration#gravity": [
+		"9.8 for",
+		"affect"
+	],
+	"gravity#weight": [
+		"affect",
+		"affect an object's mass and",
+		"affect mass and",
+		"affect your",
+		"gives objects their",
+		"impact",
+		"related to"
+	],
+	"weight#gravity": [
+		"affect",
+		"affect surface",
+		"affect the center of",
+		"affected by",
+		"and mass related to",
+		"change",
+		"change on planets with higher acceleration due to",
+		"change with",
+		"depend on",
+		"different from",
+		"of an object affect",
+		"relate to",
+		"related to",
+		"related to the acceleration of"
+	],
+	"earth#cycles": [
+		"have a day and night",
+		"have a water",
+		"systems interact in the phosphorus",
+		"systems interact in the rock",
+		"systems interact in the water"
+	],
+	"cycles#earth": [],
+	"earth#crops": [],
+	"crops#earth": [
+		"affect the"
+	],
+	"earth#6 days": [],
+	"6 days#earth": [],
+	"earth#front": [],
+	"front#earth": [],
+	"earth#chemicals": [],
+	"chemicals#earth": [
+		"affect",
+		"cycling necessary for life on the",
+		"evolution explain the origin of life on",
+		"evolution support the origin of life on",
+		"properties of water help to shape and reshape the"
+	],
+	"earth#several layers": [],
+	"several layers#earth": [],
+	"earth#a number": [],
+	"a number#earth": [],
+	"earth#rock (geology)": [],
+	"rock (geology)#earth": [],
+	"earth#the assistance": [],
+	"the assistance#earth": [],
+	"earth#teachers": [],
+	"teachers#earth": [],
+	"earth#changes": [
+		"and its living things",
+		"distance from the sun",
+		"experience seasonal",
+		"have seasonal",
+		"overshoot day",
+		"polarity",
+		"seasons",
+		"tilt"
+	],
+	"changes#earth": [
+		"in earth's systems affect the growth of life on",
+		"in seasons takes place due to the movement of the",
+		"in the solar system affect our lives on",
+		"in the sun's energy affect the climate on",
+		"the",
+		"to the mass of the star affect the orbital path of"
+	],
+	"earth#extraterrestrial life": [],
+	"extraterrestrial life#earth": [],
+	"earth#food": [
+		"friendly farming help produce more",
+		"provide"
+	],
+	"food#earth": [
+		"get on"
+	],
+	"earth#system": [
+		"a",
+		"a closed",
+		"a unique planet in the solar",
+		"act as a network of",
+		"affect the solar",
+		"an open and closed",
+		"became the most habitable planet in the solar",
+		"become the most habitable planet in the solar",
+		"capable of supporting life in the solar",
+		"compare with other objects in the solar",
+		"compared to other planets in the solar",
+		"considered a",
+		"considered a closed",
+		"considered an open system and a closed",
+		"considered unique among the planets in the solar",
+		"different from other planets in the solar",
+		"form as part of the solar",
+		"have the most active plate tectonic",
+		"is considered the most favored planet in the solar",
+		"like a closed",
+		"move in the solar",
+		"move within the solar",
+		"need all four earth",
+		"orbit the sun and not a planet in the solar",
+		"part of a",
+		"the only habitable planet in the solar",
+		"work as a"
+	],
+	"system#earth": [],
+	"earth#progress": [],
+	"progress#earth": [],
+	"earth#china": [
+		"breeze made in",
+		"day celebrated in"
+	],
+	"china#earth": [
+		"have a monopoly on rare"
+	],
+	"earth#a burden": [],
+	"a burden#earth": [],
+	"earth#metal": [
+		"make"
+	],
+	"metal#earth": [
+		"come to",
+		"form in the",
+		"formed in the",
+		"get on",
+		"made in the"
+	],
+	"earth#fruit": [],
+	"fruit#earth": [
+		"fall on"
+	],
+	"earth#return": [],
+	"return#earth": [],
+	"earth#john kufuor": [],
+	"john kufuor#earth": [],
+	"earth#stardust": [],
+	"stardust#earth": [
+		"get to"
+	],
+	"earth#condensation": [],
+	"condensation#earth": [
+		"affect the",
+		"work on"
+	],
+	"earth#cheese": [],
+	"cheese#earth": [],
+	"earth#canada": [
+		"day celebrated in"
+	],
+	"canada#earth": [
+		"the most admired country on"
+	],
+	"earth#different quantities": [],
+	"different quantities#earth": [],
+	"earth#the pressure": [],
+	"the pressure#earth": [
+		"change as you go from the surface to the center of",
+		"change as you go toward the center of the",
+		"increase as you go deeper into the"
+	],
+	"earth#a series": [],
+	"a series#earth": [],
+	"earth#atoms": [],
+	"atoms#earth": [
+		"get to",
+		"make up all matter on"
+	],
+	"earth#cooking classes": [],
+	"cooking classes#earth": [],
+	"earth#circle": [
+		"a perfect",
+		"rotate"
+	],
+	"circle#earth": [],
+	"earth#reality": [],
+	"reality#earth": [
+		"stone get to"
+	],
+	"earth#sense": [],
+	"sense#earth": [],
+	"earth#one affliction": [],
+	"one affliction#earth": [],
+	"earth#a fraction": [],
+	"a fraction#earth": [],
+	"earth#enough resources": [],
+	"enough resources#earth": [],
+	"newton#kgf": [],
+	"kgf#newton": [
+		"related to"
+	],
+	"newton#impulse": [],
+	"impulse#newton": [],
+	"newton#friction": [],
+	"friction#newton": [
+		"measured in"
+	],
+	"newton#momentum": [
+		"define force by using"
+	],
+	"momentum#newton": [],
+	"newton#inertia": [
+		"discover",
+		"first law of motion related to"
+	],
+	"inertia#newton": [],
+	"lawn#cemetery": [],
+	"cemetery#lawn": [],
+	"lawn#quick work": [],
+	"quick work#lawn": [],
+	"lawn#external websites": [],
+	"external websites#lawn": [],
+	"oven#temperature": [
+		"maintain"
+	],
+	"temperature#oven": [],
+	"oven#a fan": [
+		"have"
+	],
+	"a fan#oven": [],
+	"oven#a variety": [],
+	"a variety#oven": [],
+	"oven#energy": [],
+	"energy#oven": [
+		"conserved in the system of the pizza and the wood-fired",
+		"transfer in a solar",
+		"transferred in a fan"
+	],
+	"oven#baking": [
+		"temperature affect"
+	],
+	"baking#oven": [
+		"pan warped in",
+		"pans bend in the",
+		"pans pop in the",
+		"pans warp in the",
+		"paper burn in",
+		"sheet bend in",
+		"sheet warp in",
+		"sheets warp in the",
+		"soda clean",
+		"trays bend in the",
+		"trays warp in the"
+	],
+	"oven#food dehydrator": [],
+	"food dehydrator#oven": [],
+	"oven#coals": [],
+	"coals#oven": [],
+	"oven#conduction": [],
+	"conduction#oven": [
+		"used in a solar",
+		"work in a solar"
+	],
+	"oven#help": [],
+	"help#oven": [],
+	"oven#a lid": [],
+	"a lid#oven": [],
+	"oven#reflection": [],
+	"reflection#oven": [],
+	"oven#barbecue sauce": [],
+	"barbecue sauce#oven": [],
+	"oven#a color": [],
+	"a color#oven": [],
+	"oven#different sizes": [],
+	"different sizes#oven": [],
+	"oven#cleaning": [
+		"smell after",
+		"smoke after"
+	],
+	"cleaning#oven": [],
+	"oven#convection": [],
+	"convection#oven": [
+		"oven compare to regular",
+		"oven differ from regular",
+		"ovens different from conventional",
+		"work in a solar"
+	],
+	"cake#a topper": [],
+	"a topper#cake": [],
+	"cake#students": [],
+	"students#cake": [],
+	"cake#a stand": [],
+	"a stand#cake": [],
+	"cake#animal feed": [],
+	"animal feed#cake": [],
+	"cake#fertilizer": [],
+	"fertilizer#cake": [],
+	"cake#the icing": [],
+	"the icing#cake": [],
+	"cake#room temperature": [
+		"ingredients need to be"
+	],
+	"room temperature#cake": [],
+	"cake#problem": [],
+	"problem#cake": [],
+	"cake#manure": [],
+	"manure#cake": [],
+	"cake#rain": [],
+	"rain#cake": [],
+	"cake#the form": [],
+	"the form#cake": [],
+	"cake#clean": [],
+	"clean#cake": [],
+	"cake#refrigerator": [],
+	"refrigerator#cake": [],
+	"cake#plain flour": [
+		"flour different from"
+	],
+	"plain flour#cake": [
+		"used in"
+	],
+	"cake#best to": [],
+	"best to#cake": [],
+	"cake#several months": [],
+	"several months#cake": [],
+	"key#dedication": [],
+	"dedication#key": [],
+	"key#education": [],
+	"education#key": [
+		"contribute to community development answer"
+	],
+	"key#communication": [],
+	"communication#key": [],
+	"rain#any play": [],
+	"any play#rain": [],
+	"rain#a match": [],
+	"a match#rain": [],
+	"rain#pollutants": [],
+	"pollutants#rain": [],
+	"winter#heat loss": [],
+	"heat loss#winter": [],
+	"winter#cata buses": [],
+	"cata buses#winter": [],
+	"winter#rivers": [],
+	"rivers#winter": [
+		"otters survive in the"
+	],
+	"earth#paradise": [],
+	"paradise#earth": [],
+	"earth#chemical element": [],
+	"chemical element#earth": [],
+	"baker#family guardian": [],
+	"family guardian#baker": [],
+	"winter#people": [],
+	"people#winter": []
 }

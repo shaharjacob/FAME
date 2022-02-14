@@ -106,6 +106,7 @@ def evaluate(model_name: str,
             "google": True,
             "openie": True,
             "quasimodo": True,
+            "gpt3": True,
             "conceptnet": False
         }
         
@@ -141,7 +142,7 @@ def evaluate(model_name: str,
     success_pres = round((results.correct_answers / results.total_maps) * 100, 1)
     print(f'{COLORS["OKGREEN"]}Total: {results.correct_answers}/{results.total_maps} ({success_pres}%){mistake_because_of_coverage_string}{COLORS["ENDC"]}')
     
-    print(f'{COLORS["OKGREEN"]}Total (anywhere): {results.correct_anywhere}/{results.total_maps}{COLORS["ENDC"]}')
+    # print(f'{COLORS["OKGREEN"]}Total (anywhere): {results.correct_anywhere}/{results.total_maps}{COLORS["ENDC"]}')
     
     if results.total_full_maps - results.total_full_maps_correct > 0:
         mistake_because_of_coverage = round(((results.total_full_maps - results.total_full_maps_from_active) / (results.total_full_maps - results.total_full_maps_correct)) * 100, 1)

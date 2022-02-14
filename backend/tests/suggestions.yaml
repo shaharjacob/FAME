@@ -53,7 +53,7 @@ mapping:
       algo: beam
       depth: 20
       solution_rank: 1 # from all solutions
-      num_of_suggestions: 3
+      num_of_suggestions: 2
       google: True
       openie: True
       quasimodo: True
@@ -67,7 +67,6 @@ mapping:
       suggestions:
         - sun
         - the sun
-        - moon
     ignore: False
 
   - input: #4
@@ -76,7 +75,7 @@ mapping:
       algo: dfs
       depth: 4
       solution_rank: 1 # from all solutions
-      num_of_suggestions: 3
+      num_of_suggestions: 2
       google: True
       openie: True
       quasimodo: True
@@ -90,7 +89,6 @@ mapping:
       suggestions:
         - sun
         - the sun
-        - moon
     ignore: False
 
   - input: #5
@@ -183,7 +181,7 @@ mapping:
       algo: dfs
       depth: 4
       solution_rank: 2 # from all solutions
-      num_of_suggestions: 4
+      num_of_suggestions: 2
       google: True
       openie: True
       quasimodo: True
@@ -197,8 +195,6 @@ mapping:
       suggestions:
         - butter
         - sugar # the expected one
-        - onion
-        - flour
     ignore: True
 
   - input: #10

@@ -13,17 +13,17 @@ mapping:
         - gravity --> electricity
         - newton --> faraday
   
-  - input: #2 : 3/3
-      base: [thoughts, brain, neurons]
-      target: [astronaut, space, black hole]
-      depth:
-        beam: 20
-        dfs: 2
-    output:
-      mapping:
-        - thoughts --> astronaut
-        - brain --> space
-        - neurons --> black hole
+  # - input: #2 : 3/3
+  #     base: [thoughts, brain, neurons]
+  #     target: [astronaut, space, black hole]
+  #     depth:
+  #       beam: 20
+  #       dfs: 2
+  #   output:
+  #     mapping:
+  #       - thoughts --> astronaut
+  #       - brain --> space
+  #       - neurons --> black hole
   
   - input: #3 : 3/3
       base: [cars, road, wheels]
@@ -49,19 +49,19 @@ mapping:
         - summer --> winter
         - sunscreen --> umbrella
   
-  - input: #5 : 5/5
-      base: [water, pressure, bucket, pipe, rain]
-      target: [heat, temperature, kettle, iron, sun]
-      depth:
-        beam: 20
-        dfs: 4
-    output:
-      mapping:
-        - water --> heat
-        - pressure --> temperature
-        - bucket --> kettle
-        - pipe --> iron
-        - rain --> sun
+  # - input: #5 : 5/5
+  #     base: [water, pressure, bucket, pipe, rain]
+  #     target: [heat, temperature, kettle, iron, sun]
+  #     depth:
+  #       beam: 20
+  #       dfs: 4
+  #   output:
+  #     mapping:
+  #       - water --> heat
+  #       - pressure --> temperature
+  #       - bucket --> kettle
+  #       - pipe --> iron
+  #       - rain --> sun
   
   - input: #6 : 4/4
       base: [waves, water, shore, breakwater]
@@ -161,30 +161,30 @@ mapping:
         - building --> tree
         - neighborhood --> forest
 
-  - input: #14 : 4/4
-      base: [goal, football, grass, feet]
-      target: [basket, basketball, parquet, hands] 
-      depth:
-        beam: 20
-        dfs: 4
-    output:
-      mapping:
-        - goal --> basket
-        - football --> basketball
-        - grass --> parquet
-        - feet --> hands
+  # - input: #14 : 4/4
+  #     base: [goal, football, grass, feet]
+  #     target: [basket, basketball, parquet, hands] 
+  #     depth:
+  #       beam: 20
+  #       dfs: 4
+  #   output:
+  #     mapping:
+  #       - goal --> basket
+  #       - football --> basketball
+  #       - grass --> parquet
+  #       - feet --> hands
 
-  - input: #15 : 3/3
-      base: [seeds, fruit, bloom]
-      target: [ideas, product, success] 
-      depth:
-        beam: 20
-        dfs: 4
-    output:
-      mapping:
-        - seeds --> ideas
-        - fruit --> product
-        - bloom --> success
+  # - input: #15 : 3/3
+  #     base: [seeds, fruit, bloom]
+  #     target: [ideas, product, success] 
+  #     depth:
+  #       beam: 20
+  #       dfs: 4
+  #   output:
+  #     mapping:
+  #       - seeds --> ideas
+  #       - fruit --> product
+  #       - bloom --> success
 
   - input: #16 : 3/3
       base: [buildings, foundations, crack]
@@ -237,18 +237,18 @@ mapping:
         - language --> math
         - letter --> digit
 
-  - input: #20 : 4/4
-      base: [morning, breakfast, start, coffee]
-      target: [evening, dinner, end, wine] 
-      depth:
-        beam: 20
-        dfs: 4
-    output:
-      mapping:
-        - morning --> evening
-        - breakfast --> dinner
-        - start --> end
-        - coffee --> wine
+  # - input: #20 : 4/4
+  #     base: [morning, breakfast, start, coffee]
+  #     target: [evening, dinner, end, wine] 
+  #     depth:
+  #       beam: 20
+  #       dfs: 4
+  #   output:
+  #     mapping:
+  #       - morning --> evening
+  #       - breakfast --> dinner
+  #       - start --> end
+  #       - coffee --> wine
 
   - input: #21 : 3/3
       base: [education, teacher, school]
