@@ -1,7 +1,7 @@
 {
   "name": "webapp",
   "version": "0.1.0",
-  "proxy": "http://backend:5031",
+  "proxy": "http://localhost:5031",
   "private": true,
   "dependencies": {
     "@blueprintjs/core": "^3.44.3",

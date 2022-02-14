@@ -4,7 +4,6 @@ import CreatableSelect from 'react-select/creatable';
 
 import './TwoEntitiesDemo.css'
 import { options } from '../../utils'
-import Hayadata from '../../assets/mapping-entities-hayadata.png'
 
 
 const TwoEntitiesDemo = () => {
@@ -19,7 +18,7 @@ const TwoEntitiesDemo = () => {
 
     return (
         <div className="two-entities-demo-container">
-            <img src={Hayadata} alt="logo" className="logo" />
+            <img src="" alt="Deleted for anonymity" className="logo" />
             <div className="two-entities-demo-selects-grid">
                 <div>
                     <span className="mid-title">Entity 1</span>

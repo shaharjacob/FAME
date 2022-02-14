@@ -89,7 +89,7 @@ class TestMappingNoSuggestoins(unittest.TestCase):
             spec = yaml.load(y, Loader=yaml.SafeLoader)
         mapping_spec = spec["mapping"]
         for tv in mapping_spec:
-            if tv["ignore"]:
+            if tv.get("ignore", False):
                 continue
             
             args = {
@@ -128,7 +128,7 @@ class TestMappingNoSuggestoins(unittest.TestCase):
             spec = yaml.load(y, Loader=yaml.SafeLoader)
         mapping_spec = spec["mapping"]
         for tv in mapping_spec:
-            if tv["ignore"]:
+            if tv.get("ignore", False):
                 continue            
             
             args = {
@@ -169,7 +169,7 @@ class TestMappingSuggestoins(unittest.TestCase):
             spec = yaml.load(y, Loader=yaml.SafeLoader)
         mapping_spec = spec["mapping"]
         for tv in mapping_spec:
-            if tv["ignore"]:
+            if tv.get("ignore", False):
                 continue
             
             args = {

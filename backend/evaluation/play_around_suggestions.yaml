@@ -12,7 +12,6 @@ mapping:
         - newton --> faraday
       suggestions:
         - sun
-    ignore: False
 
   - input:
       base: [landscaper, lawn]
@@ -26,7 +25,6 @@ mapping:
         - lawn --> hair
       suggestions:
         - fertilizer
-    ignore: False
   
   - input:
       base: [chef, meal, pan, salt] 
@@ -41,8 +39,7 @@ mapping:
         - pan --> oven
       suggestions:
         - butter
-        - sugar # the expected one
-    ignore: False
+        - sugar
 
   - input:
       base: [answer, logic, riddle]
@@ -56,9 +53,8 @@ mapping:
         - logic --> mechanism
       suggestions:
         - problem
-        - lock # the expected one
+        - lock
         - feedback
-    ignore: False
 
   - input:
       base: [sun, summer, sunscreen]
@@ -72,4 +68,3 @@ mapping:
         - summer --> winter
       suggestions:
         - umbrella
-    ignore: False

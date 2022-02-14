@@ -49,27 +49,6 @@ mapping:
     ignore: False
 
   - input: #3
-      base: [thoughts, brain, neurons]
-      target: [astronaut, space, black hole]
-      depth:
-        dfs: 2
-        beam: 20
-    output:
-      mapping:
-        - thoughts --> astronaut
-        - brain --> space
-        - neurons --> black hole
-      relations: 
-        dfs:
-          - [[thoughts, brain], [astronaut, space]]
-          - [[brain, neurons], [space, black hole]]
-        beam:
-          - [[thoughts, brain], [astronaut, space]]
-          - [[brain, neurons], [space, black hole]]
-      score: 5.135
-    ignore: False
-  
-  - input: #4
       base: [cars, road, wheels]
       target: [boats, river, sail]
       depth:
@@ -90,7 +69,7 @@ mapping:
       score: 9.019
     ignore: False
 
-  - input: #5
+  - input: #4
       base: [sunscreen, sun, summer]
       target: [umbrella, rain, winter]
       depth:

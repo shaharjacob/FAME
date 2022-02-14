@@ -1,18 +1,527 @@
 mapping:
-  # - input:
-  #     base: [b1, b2, ...]
-  #     target: [t1, t2, ...]
-  #     depth:
-  #       beam: 20
-  #       dfs: 4
-  #   output:
-  #     mapping:
-  #       - b1 --> t2
-  #       - b2 --> t1
+  - input: #1
+      base: [solar system, sun, planet, gravity, newton]
+      target: [atom, nucleus, electron, electricity, faraday]
+      depth:
+        beam: 20
+        dfs: 4
+    output:
+      mapping:
+        - sun --> nucleus
+        - planet --> electron
+        - solar system --> atom
+        - gravity --> electricity
+        - newton --> faraday
+  
+  - input: #2
+      base: [thoughts, brain, neurons]
+      target: [astronaut, space, stars]
+      depth:
+        beam: 20
+        dfs: 4
+    output:
+      mapping:
+        - thoughts --> astronaut
+        - brain --> space
+        - neurons --> stars
+  
+  - input: #3
+      base: [cars, road, wheels]
+      target: [boats, river, sail]
+      depth:
+        beam: 20
+        dfs: 4
+    output:
+      mapping:
+        - cars --> boats
+        - road --> river
+        - wheels --> sail
+  
+  - input: #4
+      base: [sunscreen, sun, summer]
+      target: [umbrella, rain, winter]
+      depth:
+        beam: 20
+        dfs: 4
+    output:
+      mapping:
+        - sun --> rain
+        - summer --> winter
+        - sunscreen --> umbrella
+  
+  - input: #5
+      base: [water, pressure, bucket, pipe, rain]
+      target: [heat, temperature, kettle, iron, sun]
+      depth:
+        beam: 20
+        dfs: 4
+    output:
+      mapping:
+        - water --> heat
+        - pressure --> temperature
+        - bucket --> kettle
+        - pipe --> iron
+        - rain --> sun
+  
+  - input: #6
+      base: [waves, water, shore, breakwater]
+      target: [sounds, air, earplugs, ear]
+      depth:
+        beam: 20
+        dfs: 4
+    output:
+      mapping:
+        - waves --> sounds
+        - water --> air
+        - shore --> ear
+        - breakwater --> earplugs
 
-  - input:
-      base: [aspirin, pain, childbirth]
-      target: [muffler, noise, night]
+  - input: #7
+      base: [respiration, animal, food]
+      target: [combustion, fire, fuel]
+      depth:
+        beam: 20
+        dfs: 4
+    output:
+      mapping:
+        - respiration --> combustion
+        - animal --> fire
+        - food --> fuel
+
+  - input: #8
+      base: [light, bright, lens]
+      target: [sound, loud, horn]
+      depth:
+        beam: 20
+        dfs: 4
+    output:
+      mapping:
+        - light --> sound
+        - bright --> loud
+        - lens --> horn
+
+  - input: #9
+      base: [computer, processing, bug]
+      target: [brain, thinking, mistake]
+      depth:
+        beam: 20
+        dfs: 4
+    output:
+      mapping:
+        - computer --> brain
+        - processing --> thinking
+        - bug --> mistake
+
+  - input: #10
+      base: [war, soldiers, weapon]
+      target: [court, lawyer, evidence] 
+      depth:
+        beam: 20
+        dfs: 4
+    output:
+      mapping:
+        - war --> court
+        - soldiers --> lawyer
+        - weapon --> evidence
+
+  - input: #11
+      base: [blood, vein, hospital]
+      target: [people, bus, garage] 
+      depth:
+        beam: 20
+        dfs: 4
+    output:
+      mapping:
+        - blood --> people
+        - vein --> bus
+        - hospital --> garage
+
+  - input: #12
+      base: [law, crime, death]
+      target: [medicine, illness, life] 
+      depth:
+        beam: 20
+        dfs: 4
+    output:
+      mapping:
+        - law --> medicine
+        - crime --> illness
+        - death --> life
+
+  - input: #13
+      base: [room, apartment, building, neighborhood]
+      target: [leaf, branch, tree, forest] 
+      depth:
+        beam: 20
+        dfs: 4
+    output:
+      mapping:
+        - room --> leaf
+        - apartment --> branch
+        - building --> tree
+        - neighborhood --> forest
+
+  - input: #14
+      base: [goal, football, grass, feet]
+      target: [basket, basketball, hardwood, hands] 
+      depth:
+        beam: 20
+        dfs: 4
+    output:
+      mapping:
+        - goal --> basket
+        - football --> basketball
+        - grass --> hardwood
+        - feet --> hands
+
+  - input: #15
+      base: [seeds, fruit, bloom]
+      target: [ideas, product, success] 
+      depth:
+        beam: 20
+        dfs: 4
+    output:
+      mapping:
+        - seeds --> ideas
+        - fruit --> product
+        - bloom --> success
+
+  - input: #16
+      base: [buildings, foundations, crack]
+      target: [theories, reasons, flaw] 
+      depth:
+        beam: 20
+        dfs: 4
+    output:
+      mapping:
+        - buildings --> theories
+        - foundations --> reasons
+        - crack --> flaw
+
+  - input: #17
+      base: [cover, book, paper, wood]
+      target: [pillowcase, pillow, feather, chicken] 
+      depth:
+        beam: 20
+        dfs: 4
+    output:
+      mapping:
+        - cover --> pillowcase
+        - book --> pillow
+        - paper --> feather
+        - wood --> chicken
+
+  - input: #18
+      base: [captain, ship, water, harbor]
+      target: [pilot, airplane, air, airport] 
+      depth:
+        beam: 20
+        dfs: 4
+    output:
+      mapping:
+        - captain --> pilot
+        - ship --> airplane
+        - water --> air
+        - harbor --> airport
+
+  - input: #19
+      base: [letter, word, sentence, language]
+      target: [digit, number, equation, math] 
+      depth:
+        beam: 20
+        dfs: 4
+    output:
+      mapping:
+        - word --> number
+        - sentence --> equation
+        - language --> math
+        - letter --> digit
+
+  - input: #20
+      base: [morning, breakfast, start, coffee]
+      target: [evening, dinner, end, wine] 
+      depth:
+        beam: 20
+        dfs: 4
+    output:
+      mapping:
+        - morning --> evening
+        - breakfast --> dinner
+        - start --> end
+        - coffee --> wine
+
+  - input: #21
+      base: [education, teacher, school]
+      target: [healthcare, doctor, hospital] 
+      depth:
+        beam: 20
+        dfs: 4
+    output:
+      mapping:
+        - education --> healthcare
+        - teacher --> doctor
+        - school --> hospital
+
+  - input: #22
+      base: [vacuum cleaner, dust, electricity]
+      target: [black hole, planet, gravity] 
+      depth:
+        beam: 20
+        dfs: 4
+    output:
+      mapping:
+        - vacuum cleaner --> black hole
+        - dust --> planet
+        - electricity --> gravity
+
+  - input: #23
+      base: [motorcycle, motorcyclist, fuel]
+      target: [singer, microphone, electricity] 
+      depth:
+        beam: 20
+        dfs: 4
+    output:
+      mapping:
+        - motorcyclist --> singer
+        - motorcycle --> microphone
+        - fuel --> electricity
+
+  - input: #24
+      base: [refrigerator, cold, air conditioner]
+      target: [oven, hot, heater] 
+      depth:
+        beam: 20
+        dfs: 4
+    output:
+      mapping:
+        - refrigerator --> oven
+        - cold --> hot
+        - air conditioner --> heater
+
+  - input: #25
+      base: [singer, song, lyrics]
+      target: [programmer, code, logic] 
+      depth:
+        beam: 20
+        dfs: 4
+    output:
+      mapping:
+        - singer --> programmer
+        - song --> code
+        - lyrics --> logic
+
+  - input: #26
+      base: [eraser, pencil, paper]
+      target: [delete, keyboard, screen] 
+      depth:
+        beam: 20
+        dfs: 4
+    output:
+      mapping:
+        - eraser --> delete
+        - pencil --> keyboard
+        - paper --> screen
+
+  - input: #27
+      base: [flowers, bouquet, ribbon]
+      target: [players, team, coach] 
+      depth:
+        beam: 20
+        dfs: 4
+    output:
+      mapping:
+        - flowers --> players
+        - bouquet --> team
+        - ribbon --> coach
+
+  - input: #28
+      base: [feet, socks, shirt, football]
+      target: [hands, gloves, pants, basketball] 
+      depth:
+        beam: 20
+        dfs: 4
+    output:
+      mapping:
+        - feet --> hands
+        - socks --> gloves
+        - shirt --> pants
+        - football --> basketball
+
+  - input: #29
+      base: [clock, dial, time]
+      target: [radio, frequency, audio] 
+      depth:
+        beam: 20
+        dfs: 4
+    output:
+      mapping:
+        - clock --> radio
+        - dial --> frequency
+        - time --> audio
+
+  - input: #30
+      base: [king, kingdom, crown]
+      target: [motorcyclist, motorcycle, helmet] 
+      depth:
+        beam: 20
+        dfs: 4
+    output:
+      mapping:
+        - king --> motorcyclist
+        - kingdom --> motorcycle
+        - crown --> helmet
+
+  - input: #31
+      base: [ski, skis, snow, funicular]
+      target: [golf, club, grass, cart] 
+      depth:
+        beam: 20
+        dfs: 4
+    output:
+      mapping:
+        - ski --> golf
+        - skis --> club
+        - snow --> grass
+        - funicular --> cart
+  
+  - input: #32
+      base: [tv, picture, living room]
+      target: [radio, sound, car] 
+      depth:
+        beam: 20
+        dfs: 4
+    output:
+      mapping:
+        - tv --> radio
+        - picture --> sound
+        - living room --> car
+
+  - input: #33
+      base: [client, internet, website]
+      target: [surfer, sea, wave]
+      depth:
+        beam: 20
+        dfs: 4
+    output:
+      mapping:
+        - client --> surfer
+        - internet --> sea
+        - website --> wave
+  
+  - input: #34
+      base: [foresight, future, hope, joy] 
+      target: [hindsight, past, depression, crying]
+      depth:
+        beam: 20
+        dfs: 4
+    output:
+      mapping:
+      - foresight --> hindsight
+      - future --> past
+      - hope --> depression
+      - joy --> crying
+  
+  - input: #35
+      base: [sun, earth, water, sunscreen]
+      target: [nucleus, electrons, energy, cytoplasm]
+      depth:
+        beam: 20
+        dfs: 4
+    output:
+      mapping:
+      - sun --> nucleus
+      - earth --> electrons
+      - water --> energy
+      - sunscreen --> cytoplasm
+
+  - input: #36
+      base: [battery, copper wire, resistor]
+      target: [pump, pipe, valve]
+      depth:
+        beam: 20
+        dfs: 4
+    output:
+      mapping:
+        - battery --> pump
+        - copper wire --> pipe
+        - resistor --> 
+
+  - input: #37
+      base: [baker, cake, recipe, ingredients] 
+      target: [scientist, discovery, research, data]
+      depth:
+        beam: 20
+        dfs: 4
+    output:
+      mapping:
+      - baker --> scientist
+      - cake --> discovery
+      - recipe --> research
+      - ingredients --> data
+
+  - input: #38
+      base: [eraser, pencil, paper]
+      target: [amnesia, memory, mind]
+      depth:
+        beam: 20
+        dfs: 4
+    output:
+      mapping:
+      - eraser --> amnesia
+      - pencil --> memory
+      - paper --> mind
+
+  - input: #39
+      base: [jacket, zipper, cold]
+      target: [wound, suture, infection]
+      depth:
+        beam: 20
+        dfs: 4
+    output:
+      mapping:
+      - jacket --> wound
+      - zipper --> suture
+      - cold --> infection
+  
+  - input: #40
+      base: [train, track, steel]
+      target: [signal, wire, copper]
+      depth:
+        beam: 20
+        dfs: 4
+    output:
+      mapping:
+      - train --> signal
+      - track --> wire
+      - steel --> copper
+
+  - input: #41
+      base: [answer, riddle, logic]
+      target: [key, lock, mechanism]
+      depth:
+        beam: 20
+        dfs: 4
+    output:
+      mapping:
+      - answer --> key
+      - riddle --> lock
+      - logic --> mechanism
+
+  - input: #42
+      base: [ash, fireplace, wood]
+      target: [lint, pocket, fabric]
+      depth:
+        beam: 20
+        dfs: 4
+    output:
+      mapping:
+      - ash --> lint
+      - fireplace --> pocket
+      - wood --> fabric
+
+  - input: #43
+      base: [aspirin, pain, injury, pain scale]
+      target: [muffler, noise, engine, decibel]
       depth:
         beam: 20
         dfs: 4
@@ -20,4 +529,285 @@ mapping:
       mapping:
       - aspirin --> muffler
       - pain --> noise
-      - childbirth --> night
+      - injury --> engine
+      - pain scale --> decibel
+
+  - input: #44
+      base: [basket, picnic, ingredients]
+      target: [holster, gun, bullets] 
+      depth:
+        beam: 20
+        dfs: 4
+    output:
+      mapping:
+      - basket --> holster
+      - picnic --> gun
+      - ingredients --> bullets
+
+  - input: #45
+      base: [blindness, sight, blind] 
+      target: [poverty, money, beggar]
+      depth:
+        beam: 20
+        dfs: 4
+    output:
+      mapping:
+      - blindness --> poverty
+      - sight --> money
+      - blind --> beggar
+
+  - input: #46
+      base: [blizzard, snowflake, turbulence, salt]
+      target: [army, soldier, enlistment, wound]
+      depth:
+        beam: 20
+        dfs: 4
+    output:
+      mapping:
+      - blizzard --> army
+      - snowflake --> soldier
+      - turbulence --> enlistment
+      - salt --> wound
+
+  - input: #47
+      base: [bracelet, wrist, silver, bone] 
+      target: [moat, castle, water, stone]
+      depth:
+        beam: 20
+        dfs: 4
+    output:
+      mapping:
+      - bracelet --> moat
+      - wrist --> castle
+      - silver --> water
+      - bone --> stone
+
+  - input: #48
+      base: [burger, bun, meat]
+      target: [book, cover, papers]
+      depth:
+        beam: 20
+        dfs: 4
+    output:
+      mapping:
+      - burger --> book
+      - bun --> cover
+      - meat --> papers
+
+  - input: #49
+      base: [flock, goose, lake]
+      target: [constellation, star, sky]
+      depth:
+        beam: 20
+        dfs: 4
+    output:
+      mapping:
+      - flock --> constellation
+      - goose --> star
+      - lake --> sky
+
+  - input: #50
+      base: [furnace, coal, heat]
+      target: [stomach, food, energy]
+      depth:
+        beam: 20
+        dfs: 4
+    output:
+      mapping:
+      - furnace --> stomach
+      - coal --> food
+      - heat --> energy
+
+  - input: #51
+      base: [ketchup, tomato, french fries, seeds]
+      target: [fuel, petroleum, car, dinosaurs]
+      depth:
+        beam: 20
+        dfs: 4
+    output:
+      mapping:
+      - ketchup --> fuel
+      - tomato --> petroleum
+      - french fries --> car
+      - seeds --> dinosaurs
+
+  - input: #52
+      base: [landscaper, lawn, fertilizer]
+      target: [stylist, hair, gel]
+      depth:
+        beam: 20
+        dfs: 4
+    output:
+      mapping:
+      - landscaper --> stylist
+      - lawn --> hair
+      - fertilizer --> gel
+
+  - input: #53
+      base: [launchpad, helicopter, rotor]
+      target: [divingboard, diver, fins]
+      depth:
+        beam: 20
+        dfs: 4
+    output:
+      mapping:
+      - launchpad --> divingboard
+      - helicopter --> diver
+      - rotor --> fins
+
+  - input: #54
+      base: [lawschool, lawyer, experience]
+      target: [vineyard, wine, aging]
+      depth:
+        beam: 20
+        dfs: 4
+    output:
+      mapping:
+      - lawschool --> vineyard
+      - lawyer --> wine
+      - experience --> aging
+
+  - input: #55
+      base: [multiplication, product, mathematician]
+      target: [brewing, beer, brewer]
+      depth:
+        beam: 20
+        dfs: 4
+    output:
+      mapping:
+      - multiplication --> brewing
+      - product --> beer
+      - mathematician --> brewer
+
+  - input: #56
+      base: [nose, scent, snot]
+      target: [antenna, signal, radiation]
+      depth:
+        beam: 20
+        dfs: 4
+    output:
+      mapping:
+      - nose --> antenna
+      - scent --> signal
+      - snot --> radiation
+
+  - input: #57
+      base: [painting, canvas, tear, eraser]
+      target: [birthmark, skin, strech mark, laser]
+      depth:
+        beam: 20
+        dfs: 4
+    output:
+      mapping:
+      - painting --> birthmark
+      - canvas --> skin
+      - tear --> stretch mark
+      - eraser --> laser
+
+  - input: #58
+      base: [pen, pig, mud]
+      target: [reservoir, water, scum]
+      depth:
+        beam: 20
+        dfs: 4
+    output:
+      mapping:
+      - pen --> reservoir
+      - pig --> water
+      - mud --> scum
+
+  - input: #59
+      base: [saxophone, jazz, musician ]
+      target: [typewriter, poetry, poet]
+      depth:
+        beam: 20
+        dfs: 4
+    output:
+      mapping:
+      - saxophone --> typewriter
+      - jazz --> poetry
+      - musician --> poet
+
+  - input: #60
+      base: [sugar, coffee, coffeehouse]
+      target: [incentive, deal, dealership]
+      depth:
+        beam: 20
+        dfs: 4
+    output:
+      mapping:
+      - sugar --> incentive
+      - coffee --> deal
+      - coffeehouse --> dealership
+
+  - input: #61
+      base: [watermelon, rind, sugar]
+      target: [cigarette, butt, nicotine]
+      depth:
+        beam: 20
+        dfs: 4
+    output:
+      mapping:
+      - watermelon --> cigarette
+      - rind --> butt
+      - sugar --> nicotine
+
+  - input: #62
+      base: [movie, screen, sound]
+      target: [lightning, sky, thunder]
+      depth:
+        beam: 20
+        dfs: 4
+    output:
+      mapping:
+      - movie --> lightning
+      - screen --> sky
+      - sound --> thunder
+
+  - input: #63
+      base: [basketball, hoop, court]
+      target: [traveler, destination, track]
+      depth:
+        beam: 20
+        dfs: 4
+    output:
+      mapping:
+      - basketball --> traveler
+      - hoop --> destination
+      - court --> track
+
+  - input: #64
+      base: [kitten, cat, rat]
+      target: [spark, fire, wood]
+      depth:
+        beam: 20
+        dfs: 4
+    output:
+      mapping:
+      - kitten --> spark
+      - cat --> fire
+      - rat --> wood
+
+  - input: #65
+      base: [immunization, disease, hospitalization]
+      target: [forewarning, surprise, heart attack]
+      depth:
+        beam: 20
+        dfs: 4
+    output:
+      mapping:
+      - immunization --> forewarning
+      - disease --> surprise
+      - hospitalization --> seizures
+      
+  - input: #66
+      base: [thermometer, temperature, mercury]
+      target: [polygraph, honesty, pulse]
+      depth:
+        beam: 20
+        dfs: 4
+    output:
+      mapping:
+      - thermometer --> polygraph
+      - temperature --> honesty
+      - mercury --> pulse

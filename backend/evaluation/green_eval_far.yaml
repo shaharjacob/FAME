@@ -1,7 +1,7 @@
 mapping:
-  - input: #1 : 0/3
-      base: [answer, riddle, logic]
-      target: [key, lock, mechanism]
+  - input: #1
+      base: [answer, riddle]
+      target: [key, lock]
       depth:
         beam: 20
         dfs: 4
@@ -9,11 +9,10 @@ mapping:
       mapping:
       - answer --> key
       - riddle --> lock
-      - logic --> mechanism
 
-  - input: #2 : 0/3
-      base: [ash, fireplace, chimney]
-      target: [lint, pocket, washer]
+  - input: #2
+      base: [ash, fireplace]
+      target: [lint, pocket]
       depth:
         beam: 20
         dfs: 4
@@ -21,11 +20,10 @@ mapping:
       mapping:
       - ash --> lint
       - fireplace --> pocket
-      - chimney --> washer
 
-  - input: #3 : 3/3
-      base: [aspirin, pain, childbirth]
-      target: [muffler, noise, night]
+  - input: #3
+      base: [aspirin, pain]
+      target: [muffler, noise]
       depth:
         beam: 20
         dfs: 4
@@ -33,11 +31,10 @@ mapping:
       mapping:
       - aspirin --> muffler
       - pain --> noise
-      - childbirth --> night
 
-  - input: #4 : 4/4
-      base: [baker, cake, recipe, ingredients] 
-      target: [scientist, discovery, research, data]
+  - input: #4
+      base: [baker, cake] 
+      target: [scientist, discovery]
       depth:
         beam: 20
         dfs: 4
@@ -45,12 +42,10 @@ mapping:
       mapping:
       - baker --> scientist
       - cake --> discovery
-      - recipe --> research
-      - ingredients --> data
 
-  - input: #5 : 1/3
-      base: [basket, picnic, food]
-      target: [holster, gun, bullets] 
+  - input: #5
+      base: [basket, picnic]
+      target: [holster, gun] 
       depth:
         beam: 20
         dfs: 4
@@ -58,9 +53,8 @@ mapping:
       mapping:
       - basket --> holster
       - picnic --> gun
-      - food --> bullets
-      
-  - input: #6 : 2/2 TODO
+
+  - input: #6
       base: [basketball, hoop]
       target: [traveler, destination]
       depth:
@@ -71,9 +65,9 @@ mapping:
       - basketball --> traveler
       - hoop --> destination
 
-  - input: #7 : 3/3
-      base: [blindness, sight, blind] 
-      target: [poverty, money, poor]
+  - input: #7
+      base: [blindness, sight] 
+      target: [poverty, money]
       depth:
         beam: 20
         dfs: 4
@@ -81,11 +75,10 @@ mapping:
       mapping:
       - blindness --> poverty
       - sight --> money
-      - blind --> poor
 
-  - input: #8 : 3/3
-      base: [blizzard, snowflake, winter]
-      target: [army, soldier, war]
+  - input: #8
+      base: [blizzard, snowflake]
+      target: [army, soldier]
       depth:
         beam: 20
         dfs: 4
@@ -93,11 +86,10 @@ mapping:
       mapping:
       - blizzard --> army
       - snowflake --> soldier
-      - winter --> war
 
-  - input: #9 : 0/3
-      base: [bracelet, wrist, gypsum] 
-      target: [moat, castle, wall]
+  - input: #9
+      base: [bracelet, wrist] 
+      target: [moat, castle]
       depth:
         beam: 20
         dfs: 4
@@ -105,11 +97,10 @@ mapping:
       mapping:
       - bracelet --> moat
       - wrist --> castle
-      - gypsum --> wall
 
-  - input: #10 : 3/4
-      base: [burger, bun, meat, appetite]
-      target: [book, cover, words, leisure]
+  - input: #10
+      base: [burger, bun]
+      target: [book, cover]
       depth:
         beam: 20
         dfs: 4
@@ -117,23 +108,21 @@ mapping:
       mapping:
       - burger --> book
       - bun --> cover
-      - meat --> words
-      - appetite --> leisure
 
-  - input: #11 : 2/2 (but using the nearest) TODO
+  - input: #11
       base: [cleanser, face]
-      target: [soap, body] # [absolution, sinner]
+      target: [absolution, sinner]
       depth:
         beam: 20
         dfs: 4
     output:
       mapping:
-        - cleanser --> soap # absolution
-        - face --> body # sinner
+        - cleanser --> absolution 
+        - face --> sinner
 
-  - input: #12 : 3/3
-      base: [eraser, pencil, paper]
-      target: [amnesia, memory, mind]
+  - input: #12
+      base: [eraser, pencil]
+      target: [amnesia, memory]
       depth:
         beam: 20
         dfs: 4
@@ -141,11 +130,10 @@ mapping:
       mapping:
       - eraser --> amnesia
       - pencil --> memory
-      - paper --> mind
 
-  - input: #13 : 1/3 (correct solution not found)
-      base: [father, son, baby]
-      target: [inventor, invention, idea]
+  - input: #13
+      base: [father, son]
+      target: [inventor, invention]
       depth:
         beam: 20
         dfs: 4
@@ -153,11 +141,10 @@ mapping:
       mapping:
       - father --> inventor
       - son --> invention
-      - baby --> idea
 
-  - input: #14 : 3/3
-      base: [flock, goose, lake]
-      target: [constellation, star, sky]
+  - input: #14
+      base: [flock, goose]
+      target: [constellation, star]
       depth:
         beam: 20
         dfs: 4
@@ -165,9 +152,8 @@ mapping:
       mapping:
       - flock --> constellation
       - goose --> star
-      - lake --> sky
 
-  - input: #15 : 2/2 TODO
+  - input: #15
       base: [foresight, future] 
       target: [x-ray, bone]
       depth:
@@ -178,9 +164,9 @@ mapping:
       - foresight --> x-ray
       - future --> bone
 
-  - input: #16 : 2/3 (correct solution not found)
-      base: [foundation, house, stairs]
-      target: [premise, argument, punctuation] 
+  - input: #16
+      base: [foundation, house]
+      target: [premise, argument] 
       depth:
         beam: 20
         dfs: 4
@@ -188,11 +174,10 @@ mapping:
       mapping:
       - foundation --> premise
       - house --> argument
-      - stairs --> punctuation
 
-  - input: #17 : 3/3
-      base: [furnace, coal, heat]
-      target: [stomach, food, energy]
+  - input: #17
+      base: [furnace, coal]
+      target: [stomach, food]
       depth:
         beam: 20
         dfs: 4
@@ -200,9 +185,8 @@ mapping:
       mapping:
       - furnace --> stomach
       - coal --> food
-      - heat --> energy
 
-  - input: #18 No solution found : TODO
+  - input: #18
       base: [hoof, hoofprint]
       target: [introduction, impression]
       depth:
@@ -213,7 +197,7 @@ mapping:
       - hoof --> introduction
       - hoofprint --> impression
 
-  - input: #19 No solution found : TODO
+  - input: #19
       base: [immunization, disease]
       target: [forewarning, surprise]
       depth:
@@ -224,9 +208,9 @@ mapping:
       - immunization --> forewarning
       - disease --> surprise
 
-  - input: #20 : 3/3
-      base: [jacket, zipper, chilling]
-      target: [wound, suture, pollution]
+  - input: #20
+      base: [jacket, zipper]
+      target: [wound, suture]
       depth:
         beam: 20
         dfs: 4
@@ -234,11 +218,10 @@ mapping:
       mapping:
       - jacket --> wound
       - zipper --> suture
-      - chilling --> pollution
 
-  - input: #21 : 1/3 (correct solution not found)
-      base: [ketchup, tomato, seeds]
-      target: [fuel, petroleum, dinosaurs]
+  - input: #21
+      base: [ketchup, tomato]
+      target: [fuel, petroleum]
       depth:
         beam: 20
         dfs: 4
@@ -246,11 +229,10 @@ mapping:
       mapping:
       - ketchup --> fuel
       - tomato --> petroleum
-      - seeds --> dinosaurs
 
-  - input: #22 : 3/3
-      base: [kitten, cat, rats]
-      target: [spark, fire, water]
+  - input: #22
+      base: [kitten, cat]
+      target: [spark, fire]
       depth:
         beam: 20
         dfs: 4
@@ -258,11 +240,10 @@ mapping:
       mapping:
       - kitten --> spark
       - cat --> fire
-      - rats --> water
 
-  - input: #23 : 1/3 (correct solution not found)
-      base: [knee, kneepad, plastic]
-      target: [snail, shell, protein]
+  - input: #23
+      base: [knee, kneepad]
+      target: [snail, shell]
       depth:
         beam: 20
         dfs: 4
@@ -270,11 +251,10 @@ mapping:
       mapping:
       - knee --> snail
       - kneepad --> shell
-      - plastic --> protein
 
-  - input: #24 : No solution found
-      base: [lambchop, lamb, barbecue]
-      target: [chapter, book, studies]
+  - input: #24
+      base: [lambchop, lamb]
+      target: [chapter, book]
       depth:
         beam: 20
         dfs: 4
@@ -282,11 +262,10 @@ mapping:
       mapping: 
       - lambchop --> chapter
       - lamb --> book
-      - barbecue --> studies
 
-  - input: #25 : 3/3
-      base: [landscaper, lawn, fertilizer]
-      target: [stylist, hair, gel]
+  - input: #25
+      base: [landscaper, lawn]
+      target: [stylist, hair]
       depth:
         beam: 20
         dfs: 4
@@ -294,11 +273,10 @@ mapping:
       mapping:
       - landscaper --> stylist
       - lawn --> hair
-      - fertilizer --> gel
 
-  - input: #26 : 0/3 (correct solution not found)
-      base: [launchpad, helicopter, rotor]
-      target: [divingboard, diver, fins]
+  - input: #26
+      base: [launchpad, helicopter]
+      target: [divingboard, diver]
       depth:
         beam: 20
         dfs: 4
@@ -306,11 +284,10 @@ mapping:
       mapping:
       - launchpad --> divingboard
       - helicopter --> diver
-      - rotor --> fins
 
-  - input: #27 : 0/3 (correct solution not found)
-      base: [lawschool, lawyer, experience]
-      target: [vineyard, wine, aging]
+  - input: #27
+      base: [lawschool, lawyer]
+      target: [vineyard, wine]
       depth:
         beam: 20
         dfs: 4
@@ -318,9 +295,8 @@ mapping:
       mapping:
       - lawschool --> vineyard
       - lawyer --> wine
-      - experience --> aging
 
-  - input: #28 : 2/2 TODO
+  - input: #28
       base: [movie, screen]
       target: [lightning, sky]
       depth:
@@ -331,9 +307,9 @@ mapping:
       - movie --> lightning
       - screen --> sky
 
-  - input: #29 : 2/3 (correct solution not found)
-      base: [multiplication, product, mathematician]
-      target: [brewing, beer, brewer]
+  - input: #29
+      base: [multiplication, product]
+      target: [brewing, beer]
       depth:
         beam: 20
         dfs: 4
@@ -341,11 +317,10 @@ mapping:
       mapping:
       - multiplication --> brewing
       - product --> beer
-      - mathematician --> brewer
 
-  - input: #30 : 3/3
-      base: [nose, scent, snot]
-      target: [antenna, signal, radiation]
+  - input: #30
+      base: [nose, scent]
+      target: [antenna, signal]
       depth:
         beam: 20
         dfs: 4
@@ -353,11 +328,10 @@ mapping:
       mapping:
       - nose --> antenna
       - scent --> signal
-      - snot --> radiation
 
-  - input: #31 : 0/3 (correct solution not found)
-      base: [orchard, apple, agriculture]
-      target: [neighborhood, apartment, construction]
+  - input: #31
+      base: [orchard, apple]
+      target: [neighborhood, apartment]
       depth:
         beam: 20
         dfs: 4
@@ -365,11 +339,10 @@ mapping:
       mapping:
       - orchard --> neighborhood
       - apple --> apartment
-      - agriculture --> construction
 
-  - input: #32 : 1/3 (correct solution not found)
-      base: [painting, canvas, dust]
-      target: [birthmark, skin, sweat]
+  - input: #32
+      base: [painting, canvas]
+      target: [birthmark, skin]
       depth:
         beam: 20
         dfs: 4
@@ -377,11 +350,10 @@ mapping:
       mapping:
       - painting --> birthmark
       - canvas --> skin
-      - dust --> sweat
 
-  - input: #33 : 1/3 (correct solution found and ranked #3)
-      base: [pen, pig, food]
-      target: [reservoir, water, drink]
+  - input: #33
+      base: [pen, pig]
+      target: [reservoir, water]
       depth:
         beam: 20
         dfs: 4
@@ -389,11 +361,10 @@ mapping:
       mapping:
       - pen --> reservoir
       - pig --> water
-      - food --> drink
       
-  - input: #34 : No solution found
-      base: [rectangle, perimeter, centroid]
-      target: [nation, border, cities]
+  - input: #34
+      base: [rectangle, perimeter]
+      target: [nation, border]
       depth:
         beam: 20
         dfs: 4
@@ -401,9 +372,8 @@ mapping:
       mapping:
       - rectangle --> nation
       - perimeter --> border
-      - centroid --> cities
 
-  - input: #35 : No solution found : TODO
+  - input: #35
       base: [revising, manuscript]
       target: [evolving, species]
       depth:
@@ -414,9 +384,9 @@ mapping:
       - revising --> evolving
       - manuscript --> species
 
-  - input: #36 : 1/3
-      base: [saxophone, jazz, orchestra]
-      target: [typewriter, poetry, anthology]
+  - input: #36
+      base: [saxophone, jazz]
+      target: [typewriter, poetry]
       depth:
         beam: 20
         dfs: 4
@@ -424,11 +394,10 @@ mapping:
       mapping:
       - saxophone --> typewriter
       - jazz --> poetry
-      - orchestra --> anthology
 
-  - input: #37 : 2/4 (correct solution found and ranked #5)
-      base: [sugar, coffee, aroma, caffeine]
-      target: [incentive, deal, interest, money]
+  - input: #37
+      base: [sugar, coffee]
+      target: [incentive, deal]
       depth:
         beam: 20
         dfs: 4
@@ -436,12 +405,10 @@ mapping:
       mapping:
       - sugar --> incentive
       - coffee --> deal
-      - aroma --> interest
-      - caffeine --> money
 
-  - input: # 38 : No solution found
-      base: [thermometer, temperature, mercury]
-      target: [polygraph, honesty, pulse]
+  - input: # 38
+      base: [thermometer, temperature]
+      target: [polygraph, honesty]
       depth:
         beam: 20
         dfs: 4
@@ -449,11 +416,10 @@ mapping:
       mapping:
       - thermometer --> polygraph
       - temperature --> honesty
-      - mercury --> pulse
 
-  - input: #39 : 3/3
-      base: [train, track, steel]
-      target: [signal, wire, copper]
+  - input: #39
+      base: [train, track]
+      target: [signal, wire]
       depth:
         beam: 20
         dfs: 4
@@ -461,11 +427,10 @@ mapping:
       mapping:
       - train --> signal
       - track --> wire
-      - steel --> copper
 
-  - input: #40 : 2/3 (correct solution not found)
-      base: [watermelon, rind, sugar]
-      target: [cigarette, butt, nicotine]
+  - input: #40
+      base: [watermelon, rind]
+      target: [cigarette, butt]
       depth:
         beam: 20
         dfs: 4
@@ -473,4 +438,3 @@ mapping:
       mapping:
       - watermelon --> cigarette
       - rind --> butt
-      - sugar --> nicotine
