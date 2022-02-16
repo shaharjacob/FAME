@@ -2,9 +2,12 @@ mapping:
   - input: #1
       base: [solar system, sun, planet, gravity, newton]
       target: [atom, nucleus, electron, electricity, faraday]
-      depth:
-        dfs: 4
-        beam: 20
+      algo: beam
+      depth: 20
+      google: True
+      openie: True
+      quasimodo: True
+      conceptnet: False
     output:
       mapping:
         - sun --> nucleus
@@ -12,103 +15,163 @@ mapping:
         - solar system --> atom
         - gravity --> electricity
         - newton --> faraday
-      relations: 
-        dfs:
-          - [[sun, planet], [nucleus, electron]]
-          - [[solar system, planet], [atom, electron]]
-          - [[planet, gravity], [electron, electricity]]
-          - [[gravity, newton], [electricity, faraday]]
-        beam:
-          - [[sun, planet], [nucleus, electron]]
-          - [['solar system', 'gravity'], ['atom', 'electricity']]
-          - [[gravity, newton], [electricity, faraday]]
       score: 21.04
     ignore: False
-
+  
   - input: #2
+      base: [solar system, sun, planet, gravity, newton]
+      target: [atom, nucleus, electron, electricity, faraday]
+      algo: dfs
+      depth: 4
+      google: True
+      openie: True
+      quasimodo: True
+      conceptnet: False
+    output:
+      mapping:
+        - sun --> nucleus
+        - planet --> electron
+        - solar system --> atom
+        - gravity --> electricity
+        - newton --> faraday
+      score: 21.04
+    ignore: 
+    
+  - input: #3
       base: [earth, sun, gravity, newton]
       target: [electrons, nucleus, electricity, faraday]
-      depth:
-        dfs: 2
-        beam: 20
+      algo: beam
+      depth: 20
+      google: True
+      openie: True
+      quasimodo: True
+      conceptnet: False
     output:
       mapping:
         - earth --> electrons
         - sun --> nucleus
         - gravity --> electricity
         - newton --> faraday
-      relations: 
-        dfs:
-          - [[earth, sun], [electrons, nucleus]]
-          - [[earth, gravity], [electrons, electricity]]
-          - [[gravity, newton], [electricity, faraday]]
-        beam:
-          - [[earth, sun], [electrons, nucleus]]
-          - [[gravity, newton], [electricity, faraday]]
       score: 9.482
     ignore: False
 
-  - input: #3
+  - input: #4
+      base: [earth, sun, gravity, newton]
+      target: [electrons, nucleus, electricity, faraday]
+      algo: dfs
+      depth: 2
+      google: True
+      openie: True
+      quasimodo: True
+      conceptnet: False
+    output:
+      mapping:
+        - earth --> electrons
+        - sun --> nucleus
+        - gravity --> electricity
+        - newton --> faraday
+      score: 9.482
+    ignore: False
+  
+  - input: #5
       base: [thoughts, brain, neurons]
       target: [astronaut, space, black hole]
-      depth:
-        dfs: 2
-        beam: 20
+      algo: beam
+      depth: 20
+      google: True
+      openie: True
+      quasimodo: True
+      conceptnet: False
     output:
       mapping:
         - thoughts --> astronaut
         - brain --> space
         - neurons --> black hole
-      relations: 
-        dfs:
-          - [[thoughts, brain], [astronaut, space]]
-          - [[brain, neurons], [space, black hole]]
-        beam:
-          - [[thoughts, brain], [astronaut, space]]
-          - [[brain, neurons], [space, black hole]]
+      score: 5.135
+    ignore: False
+
+  - input: #6
+      base: [thoughts, brain, neurons]
+      target: [astronaut, space, black hole]
+      algo: dfs
+      depth: 2
+      google: True
+      openie: True
+      quasimodo: True
+      conceptnet: False
+    output:
+      mapping:
+        - thoughts --> astronaut
+        - brain --> space
+        - neurons --> black hole
       score: 5.135
     ignore: False
   
-  - input: #4
+  - input: #7
       base: [cars, road, wheels]
       target: [boats, river, sail]
-      depth:
-        dfs: 2
-        beam: 20
+      algo: beam
+      depth: 20
+      google: True
+      openie: True
+      quasimodo: True
+      conceptnet: False
     output:
       mapping:
         - cars --> boats
         - road --> river
         - wheels --> sail
-      relations: 
-        dfs:
-          - [[cars, road], [boats, river]]
-          - [[cars, wheels], [boats, sail]]
-        beam:
-          - [[cars, road], [boats, river]]
-          - [[cars, wheels], [boats, sail]]
       score: 9.019
     ignore: False
-
-  - input: #5
+  
+  - input: #8
+      base: [cars, road, wheels]
+      target: [boats, river, sail]
+      algo: dfs
+      depth: 2
+      google: True
+      openie: True
+      quasimodo: True
+      conceptnet: False
+    output:
+      mapping:
+        - cars --> boats
+        - road --> river
+        - wheels --> sail
+      score: 9.019
+    ignore: False
+  
+  - input: #9
       base: [sunscreen, sun, summer]
       target: [umbrella, rain, winter]
-      depth:
-        dfs: 2
-        beam: 20
+      algo: beam
+      depth: 20
+      google: True
+      openie: True
+      quasimodo: True
+      conceptnet: False
     output:
       mapping:
         - sun --> rain
         - summer --> winter
         - sunscreen --> umbrella
-      relations: 
-        dfs:
-          - [[sun, summer], [rain, winter]]
-          - [[sunscreen, sun], [umbrella, rain]]
-        beam:
-          - [[sun, summer], [rain, winter]]
-          - [[sunscreen, sun], [umbrella, rain]]
+      score: 7.082
+    ignore: False
+
+  - input: #10
+      base: [sunscreen, sun, summer]
+      target: [umbrella, rain, winter]
+      algo: dfs
+      depth: 2
+      google: True
+      openie: True
+      quasimodo: True
+      conceptnet: False
+    output:
+      mapping:
+        - sun --> rain
+        - summer --> winter
+        - sunscreen --> umbrella
       score: 7.082
     ignore: False
   
-
