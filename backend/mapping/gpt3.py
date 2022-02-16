@@ -7,13 +7,14 @@ from pathlib import Path
 
 import yaml
 import openai
+from openai.error import AuthenticationError
 from tqdm import tqdm
 
 BACKEND_DIR = Path(__file__).resolve().parent.parent
 EVALUATION_FOLDER = BACKEND_DIR / 'evaluation'
 DATABASE_FOLDER = BACKEND_DIR / 'database'
 
-OPENAI_API_KEY= os.environ.get("OPENAI_API_KEY")
+OPENAI_API_KEY= os.environ.get("OPENAI_API_KEY", "")
 openai.api_key = OPENAI_API_KEY
 
 prompt = [
@@ -88,15 +89,18 @@ def get_entities_relations_api(entity1: str, entity2: str):
     question = [f"Q: What is the relations between {entity1} and {entity2}?"]
     prompt_s =  "\n".join(prompt + question)
 
-    response = openai.Completion.create(
-        engine="text-davinci-001",
-        prompt=prompt_s,
-        temperature=0.7,
-        max_tokens=64,
-        top_p=1,
-        frequency_penalty=0,
-        presence_penalty=0
-    )
+    try:
+        response = openai.Completion.create(
+            engine="text-davinci-001",
+            prompt=prompt_s,
+            temperature=0.7,
+            max_tokens=64,
+            top_p=1,
+            frequency_penalty=0,
+            presence_penalty=0
+        )
+    except AuthenticationError as e:
+        raise e
         
     relations = []
     if response:

@@ -84,7 +84,11 @@ class DataCollector(object):
         if self.api.get("gpt3", False):
             if not self.engine:
                 self.engine = inflect.engine()
-            gpt3_props = gpt3.get_entities_relations(entity1, entity2, self.engine)
+            try:
+                gpt3_props = gpt3.get_entities_relations(entity1, entity2, self.engine)
+            except:
+                self.api["gpt3"] = False
+                gpt3_props = []
         else:
             gpt3_props = []
 
