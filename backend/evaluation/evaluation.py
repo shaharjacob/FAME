@@ -1,3 +1,4 @@
+import os
 import sys
 from typing import List
 from pathlib import Path
@@ -106,7 +107,7 @@ def evaluate(model_name: str,
             "google": True,
             "openie": True,
             "quasimodo": True,
-            "gpt3": True,
+            "gpt3": True if 'CI' in os.environ else False,
             "conceptnet": False
         }
         
