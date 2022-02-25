@@ -18,32 +18,36 @@ OPENAI_API_KEY= os.environ.get("OPENAI_API_KEY", "")
 openai.api_key = OPENAI_API_KEY
 
 prompt = [
-    "Q: What is the relations between blizzard and snowflake?",
+    "Q: What are the relations between blizzard and snowflake?",
     "A: A blizzard produces snowflakes.",
     "A: A blizzard contains a lot of snowflakes.",
     "",
-    "Q: What is the relations between umbrella and rain?",
+    "Q: What are the relations between umbrella and rain?",
     "A: An umbrella protects from rain.",
-    "A: An umbrella prevent rain.",
+    "A: An umbrella provides adequate protection from rain.",
     "",
-    "Q: What is the relations between movie and screen?",
-    "A: Movie displayed on the screen",
-    "A: Movie can be shown on the screen",
-    "A: Movie use green screen",
+    "Q: What are the relations between movie and screen?",
+    "A: A movie displayed on a screen",
+    "A: A movie can be shown on a screen",
     "",
-    "Q: What is the relations between gravity and newton?",
-    "A: newton discovered gravity",
-    "A: newton related to gravity",
+    "Q: What are the relations between Newton and gravity?",
+    "A: Newton discovered gravity.",
+    "A: Newton invented gravity.",
     "",
-    "Q: What is the relations between electron and nucleus?",
-    "A: An electron revolves around nucleus.",
-    "A: An electron is mush smaller then nucleus.",
-    "A: An electron attracts nucleus.",
+    "Q: What are the relations between electron and nucleus?",
+    "A: An electron revolves around the nucleus.",
+    "A: An electron is mush smaller than the nucleus.",
+    "A: An electron attracts the nucleus.",
     "",
+    "Q: What are the relations between water and pipe?",
+    "A: Water flows through the pipe",
+    "A: Water passes through the pipe",
+    ""
 ]
 
 def get_entities_relations(entity1: str, entity2: str, engine: inflect.engine):
-    with open(DATABASE_FOLDER / 'gpt3_edges.json', 'r') as f:
+    db_file = DATABASE_FOLDER / 'gpt3_edges.json'
+    with open(db_file, 'r') as f:
         content = json.load(f)
 
     should_save = False
@@ -52,18 +56,18 @@ def get_entities_relations(entity1: str, entity2: str, engine: inflect.engine):
         should_save = True
         time.sleep(1)
 
-    # if f"{entity2}#{entity1}" not in content:
-    #     content[f"{entity2}#{entity1}"] = get_entities_relations_api(entity2, entity1)
-    #     should_save = True
-    #     time.sleep(1)
-    
+    if f"{entity2}#{entity1}" not in content:
+        content[f"{entity2}#{entity1}"] = get_entities_relations_api(entity2, entity1)
+        should_save = True
+        time.sleep(1)
+
     if should_save:
-        with open(DATABASE_FOLDER / 'gpt3_edges.json', 'w') as fw:
+        with open(db_file, 'w') as fw:
             json.dump(content, fw, indent='\t')
 
     relation_as_set = set()
-    # relations = list(set(content[f"{entity1}#{entity2}"] + content[f"{entity2}#{entity1}"]))
-    relations = list(set(content[f"{entity1}#{entity2}"]))
+    relations = list(set(content[f"{entity1}#{entity2}"] + content[f"{entity2}#{entity1}"]))
+    # relations = list(set(content[f"{entity1}#{entity2}"]))
     for relation in relations:
         relation = relation.lower()
         match = re.search(f'{entity1} (.*?) {entity2}', relation)
@@ -74,19 +78,26 @@ def get_entities_relations(entity1: str, entity2: str, engine: inflect.engine):
         else:
             if not engine:
                 engine = inflect.engine()
-            entity2 = engine.plural(entity2)
-            match = re.search(f'{entity1} (.*?) {entity2}', relation)
+            _entity2 = engine.plural(entity2)
+            match = re.search(f'{entity1} (.*?) {_entity2}', relation)
             if match:
                 relation = match.group(1).strip()
                 if relation:
                     relation_as_set.add(relation)
+            else:
+                _entity1 = engine.plural(entity1)
+                match = re.search(f'{_entity1} (.*?) {entity2}', relation)
+                if match:
+                    relation = match.group(1).strip()
+                    if relation:
+                        relation_as_set.add(relation)
     
-    return list(relation_as_set)
+    return sorted(list(relation_as_set))
 
 
 
 def get_entities_relations_api(entity1: str, entity2: str):
-    question = [f"Q: What is the relations between {entity1} and {entity2}?"]
+    question = [f"Q: What are the relations between {entity1} and {entity2}?"]
     prompt_s =  "\n".join(prompt + question)
 
     try:
@@ -114,22 +125,35 @@ def get_entities_relations_api(entity1: str, entity2: str):
 
 if __name__ == "__main__":
 
-    pass
-
-    # with open(DATABASE_FOLDER / 'gpt3_edges.json', 'r') as f:
+    # with open(DATABASE_FOLDER / 'gpt3_edges2.json', 'r') as f:
     #     current_content = json.load(f)
 
-    # with open(EVALUATION_FOLDER / 'green_eval_far_orig.yaml', 'r') as y:
-    #     spec = yaml.load(y, Loader=yaml.SafeLoader)
-    # mapping_spec = spec["mapping"]
+    with open(EVALUATION_FOLDER / 'green_eval_far_orig.yaml', 'r') as y:
+        spec = yaml.load(y, Loader=yaml.SafeLoader)
+    mapping_spec = spec["mapping"]
+    content = {}
+    engine = inflect.engine()
+    for mapping in tqdm(mapping_spec):
+        i = mapping['input']
+        for domain in ['base', 'target']:
+            entities = i[domain]
+            for direction in range(2):
+                e1 = entities[direction]
+                e2 = entities[(direction+1)%2]
 
-    # engine = inflect.engine()
-    # for mapping in tqdm(mapping_spec):
-    #     i = mapping['input']
-    #     for domain in ['base', 'target']:
-    #         entities = i[domain]
-    #         for direction in range(2):
-    #             relations = get_entities_relations(entities[direction], entities[(direction+1)%2], engine)
-    #             print(f"{entities[direction]}#{entities[(direction+1)%2]}")
-    #             print(f"{relations}")
-    #             print()
+                relations = get_entities_relations(e1, e2, engine)
+                content[f"{e1}#{e2}"] = relations
+
+                # if f"{e1}#{e2}" in current_content:
+                #     continue
+
+                # relations = get_entities_relations_api(e1, e2)
+                # current_content[f"{e1}#{e2}"] = relations
+    
+                # with open(DATABASE_FOLDER / 'gpt3_edges2.json', 'w') as fw:
+                #     json.dump(current_content, fw, indent='\t')
+
+                # time.sleep(1)
+
+    with open(DATABASE_FOLDER / 'gpt_relations_both_direction.json', 'w') as fw:
+        json.dump(content, fw, indent='\t')
