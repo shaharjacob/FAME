@@ -107,10 +107,10 @@ def evaluate(model_name: str,
             "google": True,
             "openie": True,
             "quasimodo": True,
-            "gpt3": True if 'CI' in os.environ else False,
+            "gpt3": True if 'CI' not in os.environ else False,
             "conceptnet": False
         }
-        
+
         algo_func = beam_search_wrapper if algorithm == 'beam' else dfs_wrapper
         solutions = mapping_wrapper(algo_func, 
                                     base=tv["input"]["base"], 
