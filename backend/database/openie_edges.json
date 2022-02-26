@@ -63315,5 +63315,15 @@
 		"may turn to"
 	],
 	"antacid#relieve indigestion": [],
-	"relieve indigestion#antacid": []
+	"relieve indigestion#antacid": [],
+	"antacid#pain": [
+		"relieve"
+	],
+	"pain#antacid": [
+		"may be relieved by"
+	],
+	"antacid#the discomfort": [],
+	"the discomfort#antacid": [],
+	"antacid#the symptoms": [],
+	"the symptoms#antacid": []
 }

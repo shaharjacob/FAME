@@ -23420,5 +23420,13 @@
 	"antacid#relieve indigestion": [
 		"help"
 	],
-	"relieve indigestion#antacid": []
+	"relieve indigestion#antacid": [],
+	"antacid#pain": [
+		"can quit"
+	],
+	"pain#antacid": [],
+	"antacid#the discomfort": [],
+	"the discomfort#antacid": [],
+	"antacid#the symptoms": [],
+	"the symptoms#antacid": []
 }

@@ -35609,5 +35609,15 @@
 	"antacid#relieve indigestion": [
 		"work to"
 	],
-	"relieve indigestion#antacid": []
+	"relieve indigestion#antacid": [],
+	"antacid#pain": [
+		"relieve",
+		"relieve stomach",
+		"used to relieve gastric"
+	],
+	"pain#antacid": [],
+	"antacid#the discomfort": [],
+	"the discomfort#antacid": [],
+	"antacid#the symptoms": [],
+	"the symptoms#antacid": []
 }
