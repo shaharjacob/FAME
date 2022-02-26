@@ -227,19 +227,19 @@ def get_entity_suggestions(entity: str, prop: str, plural_and_singular: bool = F
     return list(set(suggestions))
 
 
-def get_entity_props(entity: str):
-    # given an entity, it will give some props that charactrize this entity.
-    # for example, given entity 'newton', it will return props like: derived unit, fundamental unit, measure of
-    google_db = read_json(root / 'backend' / 'database' / 'google_nodes.json')
-    if entity not in google_db:
-        suggestions = []
-        for p in ["is a", "is a type of"]:
-            model = GoogleAutoSuggestEntityProps(entity, p)
-            suggestions.extend(model.suggestinos)
-        google_db[entity] = sorted(list(set(suggestions)))
-        with open(root / 'backend' / 'database' / 'google_nodes.json', 'w') as f:
-            json.dump(google_db, f, indent='\t')
-    return google_db[entity]
+# def get_entity_props(entity: str):
+#     # given an entity, it will give some props that charactrize this entity.
+#     # for example, given entity 'newton', it will return props like: derived unit, fundamental unit, measure of
+#     google_db = read_json(root / 'backend' / 'database' / 'google_nodes.json')
+#     if entity not in google_db:
+#         suggestions = []
+#         for p in ["is a", "is a type of"]:
+#             model = GoogleAutoSuggestEntityProps(entity, p)
+#             suggestions.extend(model.suggestinos)
+#         google_db[entity] = sorted(list(set(suggestions)))
+#         with open(root / 'backend' / 'database' / 'google_nodes.json', 'w') as f:
+#             json.dump(google_db, f, indent='\t')
+#     return google_db[entity]
 
 
 def get_entities_relations(entity1: str, entity2: str, plural_and_singular: bool = True, verbose: bool = False) -> Dict[str, List[str]]:

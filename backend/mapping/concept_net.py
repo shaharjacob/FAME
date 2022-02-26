@@ -113,41 +113,41 @@ def get_entities_relations(entity1: str, entity2: str, engine: inflect.engine = 
     return has_props + capable_of + type_of + used_for
 
 
-def get_entity_props(entity: str, engine: inflect.engine = None, n_best: int = 5, weight_thresh: int = 1, plural_and_singular: bool = False, override_db: bool = False) -> List[str]:
-    if not engine and plural_and_singular:
-        engine = inflect.engine()
+# def get_entity_props(entity: str, engine: inflect.engine = None, n_best: int = 5, weight_thresh: int = 1, plural_and_singular: bool = False, override_db: bool = False) -> List[str]:
+#     if not engine and plural_and_singular:
+#         engine = inflect.engine()
 
-    # we want the props of a single entity
-    # we first check if the entity exists in the db - if not, we extract if from the conceptNet API.
-    conceptnet_db = read_json(root / 'backend' / 'database' / 'conceptnet_nodes.json')
-    should_save = False
+#     # we want the props of a single entity
+#     # we first check if the entity exists in the db - if not, we extract if from the conceptNet API.
+#     conceptnet_db = read_json(root / 'backend' / 'database' / 'conceptnet_nodes.json')
+#     should_save = False
 
-    if entity not in conceptnet_db:
-        conceptnet_db[entity] = {}
-        should_save = True
+#     if entity not in conceptnet_db:
+#         conceptnet_db[entity] = {}
+#         should_save = True
 
-    if "hasProperty" not in conceptnet_db[entity] or override_db:
-        conceptnet_db[entity]["hasProperty"] = hasProperty(engine, entity, n_best, weight_thresh, plural_and_singular)
-        should_save = True
+#     if "hasProperty" not in conceptnet_db[entity] or override_db:
+#         conceptnet_db[entity]["hasProperty"] = hasProperty(engine, entity, n_best, weight_thresh, plural_and_singular)
+#         should_save = True
     
-    if "capableOf" not in conceptnet_db[entity] or override_db:
-        conceptnet_db[entity]["capableOf"] = capableOf(engine, entity, n_best, weight_thresh, plural_and_singular)
-        should_save = True
+#     if "capableOf" not in conceptnet_db[entity] or override_db:
+#         conceptnet_db[entity]["capableOf"] = capableOf(engine, entity, n_best, weight_thresh, plural_and_singular)
+#         should_save = True
 
-    if "isA" not in conceptnet_db[entity] or override_db:
-        conceptnet_db[entity]["isA"] = isA(engine, entity, n_best, weight_thresh, plural_and_singular)
-        should_save = True
+#     if "isA" not in conceptnet_db[entity] or override_db:
+#         conceptnet_db[entity]["isA"] = isA(engine, entity, n_best, weight_thresh, plural_and_singular)
+#         should_save = True
 
-    if "usedFor" not in conceptnet_db[entity] or override_db:
-        conceptnet_db[entity]["usedFor"] = usedFor(engine, entity, n_best, weight_thresh, plural_and_singular)
-        should_save = True
+#     if "usedFor" not in conceptnet_db[entity] or override_db:
+#         conceptnet_db[entity]["usedFor"] = usedFor(engine, entity, n_best, weight_thresh, plural_and_singular)
+#         should_save = True
     
-    if should_save:
-        with open(root / 'backend' / 'database' / 'conceptnet_nodes.json', 'w') as f:
-            json.dump(conceptnet_db, f, indent='\t')
+#     if should_save:
+#         with open(root / 'backend' / 'database' / 'conceptnet_nodes.json', 'w') as f:
+#             json.dump(conceptnet_db, f, indent='\t')
             
-    # sorting for abc..
-    return sorted(list(set(conceptnet_db[entity]["hasProperty"] + conceptnet_db[entity]["capableOf"] + conceptnet_db[entity]["isA"] + conceptnet_db[entity]["usedFor"])))
+#     # sorting for abc..
+#     return sorted(list(set(conceptnet_db[entity]["hasProperty"] + conceptnet_db[entity]["capableOf"] + conceptnet_db[entity]["isA"] + conceptnet_db[entity]["usedFor"])))
 
 
 if __name__ == '__main__':

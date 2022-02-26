@@ -122,39 +122,39 @@ def get_suggestions_for_missing_entities(base_not_mapped_entity: str,
     return suggests_list
 
 
-def get_score_between_two_entitites(entity1: str, entity2: str) -> float:
-    model = SentenceEmbedding()
-    api = {
-        "google": True,
-        "openie": True,
-        "quasimodo": True,
-        "gpt3": False,
-        "conceptnet": False
-    }
-    data_collector = DataCollector(api=api)
-    json_folder = root / 'backend' / 'frequency'
-    freq = Frequencies(json_folder / 'freq.json', threshold=FREQUENCY_THRESHOLD)
+# def get_score_between_two_entitites(entity1: str, entity2: str) -> float:
+#     model = SentenceEmbedding()
+#     api = {
+#         "google": True,
+#         "openie": True,
+#         "quasimodo": True,
+#         "gpt3": False,
+#         "conceptnet": False
+#     }
+#     data_collector = DataCollector(api=api)
+#     json_folder = root / 'backend' / 'frequency'
+#     freq = Frequencies(json_folder / 'freq.json', threshold=FREQUENCY_THRESHOLD)
         
-    props1 = data_collector.get_entitiy_props(entity1)
-    props2 = data_collector.get_entitiy_props(entity2)
-    if not props1 or not props2:
-        return 0
+#     props1 = data_collector.get_entitiy_props(entity1)
+#     props2 = data_collector.get_entitiy_props(entity2)
+#     if not props1 or not props2:
+#         return 0
 
-    similatiry_edges = utils.get_maximum_weighted_match(model, props1, props2, freq=freq)
-    similatiry_edges = sorted(similatiry_edges, key=lambda x: x[2], reverse=True)
-    similatiry_edges = similatiry_edges[:3]
-    return round(sum([val[2] for val in similatiry_edges]) / len(similatiry_edges), 3)
+#     similatiry_edges = utils.get_maximum_weighted_match(model, props1, props2, freq=freq)
+#     similatiry_edges = sorted(similatiry_edges, key=lambda x: x[2], reverse=True)
+#     similatiry_edges = similatiry_edges[:3]
+#     return round(sum([val[2] for val in similatiry_edges]) / len(similatiry_edges), 3)
 
 
-def get_best_matches_for_entity(entity: str, entities: List[str], n_best: int = 5, verbose: bool = False) -> List[str]:
-    best = [(entity, e, get_score_between_two_entitites(e, entity)) for e in entities]
-    best = sorted(best, key=lambda x: x[2], reverse=True)
-    if verbose:
-        for val in best:
-            spaces = len(val[0]) + len(val[1])
-            secho(f"({val[0]}, {val[1]})", fg="blue", nl=False)
-            secho(f"{' '.join([]*(60-spaces))} {val[2]}", fg="blue", bold=True)
-    return best[:n_best]
+# def get_best_matches_for_entity(entity: str, entities: List[str], n_best: int = 5, verbose: bool = False) -> List[str]:
+#     best = [(entity, e, get_score_between_two_entitites(e, entity)) for e in entities]
+#     best = sorted(best, key=lambda x: x[2], reverse=True)
+#     if verbose:
+#         for val in best:
+#             spaces = len(val[0]) + len(val[1])
+#             secho(f"({val[0]}, {val[1]})", fg="blue", nl=False)
+#             secho(f"{' '.join([]*(60-spaces))} {val[2]}", fg="blue", bold=True)
+#     return best[:n_best]
 
 
 def get_new_domains(first_domain: str, solution: Solution, entity_not_mapped_yet: str, clusters_representors: List[str]) -> dict:
@@ -431,5 +431,6 @@ def mapping_suggestions_wrapper(
         
 
 if __name__ == '__main__':
-    res = get_best_matches_for_entity("newton", ["faraday", "sky", "window", "paper", "photo", "apple", "tomato", "wall", "home", "horse"])
-    print(res)
+    pass
+    # res = get_best_matches_for_entity("newton", ["faraday", "sky", "window", "paper", "photo", "apple", "tomato", "wall", "home", "horse"])
+    # print(res)
