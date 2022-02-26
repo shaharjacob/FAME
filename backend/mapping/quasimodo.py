@@ -182,12 +182,12 @@ class Quasimodo:
             df = df.nlargest(n_largest, 'plausibility')
         return df
 
-    def save_predicates(self):
-        values = [val.replace("_", " ").lower() for val in self.data["predicate"].tolist()]
-        dict_counter = Counter(values)
-        d = {k: v for k, v in sorted(dict_counter.items(), key=lambda x: x[1], reverse=True)}
-        with open('database/predicates.json', 'w') as f:
-            json.dump(d, f, indent='\t')
+    # def save_predicates(self):
+    #     values = [val.replace("_", " ").lower() for val in self.data["predicate"].tolist()]
+    #     dict_counter = Counter(values)
+    #     d = {k: v for k, v in sorted(dict_counter.items(), key=lambda x: x[1], reverse=True)}
+    #     with open('database/predicates.json', 'w') as f:
+    #         json.dump(d, f, indent='\t')
     
 
 def merge_tsvs(output: str = 'quasimodo.tsv'):

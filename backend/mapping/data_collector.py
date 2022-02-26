@@ -106,37 +106,37 @@ class DataCollector(object):
         return sorted(list(set(quasimodo_props + autosuggets_props + concept_net_props + openie_props + gpt3_props)))
     
 
-    def get_entitiy_props(self, entity: str, from_where: bool = False) -> List[str]:
-        if self.api.get("quasimodo", False):
-            quasimodo_db = read_json(root / 'backend' / 'database' / 'quasimodo_nodes.json')
-            if entity not in quasimodo_db:
-                if not self.quasimodo:
-                    self.quasimodo = Quasimodo(path=root / 'backend' / 'tsv' / 'merged' / 'quasimodo.tsv')
-                quasimodo_db[entity] = sorted([[prop[0], prop[1]] for prop in self.quasimodo.get_entity_props(entity, n_largest=5)])
-                with open(root / 'backend' / 'database' / 'quasimodo_nodes.json', 'w') as f1:
-                    json.dump(quasimodo_db, f1, indent='\t')
-            quasimodo_props = [f"{prop[0]} {prop[1]}" for prop in quasimodo_db[entity]]
-        else:
-            quasimodo_props = []
+    # def get_entitiy_props(self, entity: str, from_where: bool = False) -> List[str]:
+    #     if self.api.get("quasimodo", False):
+    #         quasimodo_db = read_json(root / 'backend' / 'database' / 'quasimodo_nodes.json')
+    #         if entity not in quasimodo_db:
+    #             if not self.quasimodo:
+    #                 self.quasimodo = Quasimodo(path=root / 'backend' / 'tsv' / 'merged' / 'quasimodo.tsv')
+    #             quasimodo_db[entity] = sorted([[prop[0], prop[1]] for prop in self.quasimodo.get_entity_props(entity, n_largest=5)])
+    #             with open(root / 'backend' / 'database' / 'quasimodo_nodes.json', 'w') as f1:
+    #                 json.dump(quasimodo_db, f1, indent='\t')
+    #         quasimodo_props = [f"{prop[0]} {prop[1]}" for prop in quasimodo_db[entity]]
+    #     else:
+    #         quasimodo_props = []
         
-        if self.api.get("conceptnet", False):
-            concept_net_props = concept_net.get_entity_props(entity)
-        else:
-            concept_net_props = []
+    #     if self.api.get("conceptnet", False):
+    #         concept_net_props = concept_net.get_entity_props(entity)
+    #     else:
+    #         concept_net_props = []
             
-        if self.api.get("google", False):
-            google_props = google_autosuggest.get_entity_props(entity)
-        else:
-            google_props = []
+    #     if self.api.get("google", False):
+    #         google_props = google_autosuggest.get_entity_props(entity)
+    #     else:
+    #         google_props = []
 
-        if from_where:
-            return {
-                "quasimodo": sorted(list(set(quasimodo_props))),
-                "concept_net": sorted(list(set(concept_net_props))),
-                "google_autosuggest": sorted(list(set(google_props))),
-            }
+    #     if from_where:
+    #         return {
+    #             "quasimodo": sorted(list(set(quasimodo_props))),
+    #             "concept_net": sorted(list(set(concept_net_props))),
+    #             "google_autosuggest": sorted(list(set(google_props))),
+    #         }
 
-        return sorted(list(set(quasimodo_props + concept_net_props + google_props)))
+    #     return sorted(list(set(quasimodo_props + concept_net_props + google_props)))
 
 
 def read_json(path: str) -> Dict[str, List[str]]:
