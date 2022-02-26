@@ -7,6 +7,7 @@ mapping:
       google: True
       openie: True
       quasimodo: True
+      gpt3: False
       conceptnet: False
     output:
       mapping:
@@ -15,7 +16,7 @@ mapping:
         - solar system --> atom
         - gravity --> electricity
         - newton --> faraday
-      score: 21.04
+      score: 22.968
     ignore: False
   
   - input: #2
@@ -26,6 +27,7 @@ mapping:
       google: True
       openie: True
       quasimodo: True
+      gpt3: False
       conceptnet: False
     output:
       mapping:
@@ -34,8 +36,8 @@ mapping:
         - solar system --> atom
         - gravity --> electricity
         - newton --> faraday
-      score: 21.04
-    ignore: 
+      score: 22.968
+    ignore: False
     
   - input: #3
       base: [earth, sun, gravity, newton]
@@ -45,6 +47,7 @@ mapping:
       google: True
       openie: True
       quasimodo: True
+      gpt3: False
       conceptnet: False
     output:
       mapping:
@@ -52,7 +55,7 @@ mapping:
         - sun --> nucleus
         - gravity --> electricity
         - newton --> faraday
-      score: 9.482
+      score: 10.078
     ignore: False
 
   - input: #4
@@ -63,6 +66,7 @@ mapping:
       google: True
       openie: True
       quasimodo: True
+      gpt3: False
       conceptnet: False
     output:
       mapping:
@@ -70,41 +74,43 @@ mapping:
         - sun --> nucleus
         - gravity --> electricity
         - newton --> faraday
-      score: 9.482
+      score: 10.078
     ignore: False
   
   - input: #5
       base: [thoughts, brain, neurons]
-      target: [astronaut, space, black hole]
+      target: [astronaut, space, stars]
       algo: beam
       depth: 20
       google: True
       openie: True
       quasimodo: True
+      gpt3: True
       conceptnet: False
     output:
       mapping:
-        - thoughts --> astronaut
         - brain --> space
-        - neurons --> black hole
-      score: 5.135
+        - neurons --> stars
+        - thoughts --> astronaut
+      score: 7.335
     ignore: False
 
   - input: #6
       base: [thoughts, brain, neurons]
-      target: [astronaut, space, black hole]
+      target: [astronaut, space, stars]
       algo: dfs
-      depth: 2
+      depth: 4
       google: True
       openie: True
       quasimodo: True
+      gpt3: True
       conceptnet: False
     output:
       mapping:
-        - thoughts --> astronaut
         - brain --> space
-        - neurons --> black hole
-      score: 5.135
+        - neurons --> stars
+        - thoughts --> astronaut
+      score: 7.335
     ignore: False
   
   - input: #7
@@ -115,13 +121,14 @@ mapping:
       google: True
       openie: True
       quasimodo: True
+      gpt3: False
       conceptnet: False
     output:
       mapping:
         - cars --> boats
         - road --> river
         - wheels --> sail
-      score: 9.019
+      score: 9.607
     ignore: False
   
   - input: #8
@@ -132,13 +139,14 @@ mapping:
       google: True
       openie: True
       quasimodo: True
+      gpt3: False
       conceptnet: False
     output:
       mapping:
         - cars --> boats
         - road --> river
         - wheels --> sail
-      score: 9.019
+      score: 9.607
     ignore: False
   
   - input: #9
@@ -149,13 +157,14 @@ mapping:
       google: True
       openie: True
       quasimodo: True
+      gpt3: False
       conceptnet: False
     output:
       mapping:
+        - sunscreen --> umbrella
         - sun --> rain
         - summer --> winter
-        - sunscreen --> umbrella
-      score: 7.082
+      score: 9.053
     ignore: False
 
   - input: #10
@@ -166,12 +175,13 @@ mapping:
       google: True
       openie: True
       quasimodo: True
+      gpt3: False
       conceptnet: False
     output:
       mapping:
+        - sunscreen --> umbrella
         - sun --> rain
         - summer --> winter
-        - sunscreen --> umbrella
-      score: 7.082
+      score: 9.053
     ignore: False
   

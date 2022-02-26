@@ -9,18 +9,19 @@ mapping:
       google: True
       openie: True
       quasimodo: True
+      gpt3: False
       conceptnet: False
     output:
       mapping:
         - earth --> electrons
         - sun --> nucleus
         - gravity --> electricity
-        - newton --> benjamin franklin
+        - newton --> franklin
       suggestions:
-        - benjamin franklin
         - franklin
-        - benjamin
+        - benjamin franklin
         - humans
+        - benjamin
     ignore: False
   
   - input: #2
@@ -33,18 +34,19 @@ mapping:
       google: True
       openie: True
       quasimodo: True
+      gpt3: False
       conceptnet: False
     output:
       mapping:
         - earth --> electrons
         - sun --> nucleus
         - gravity --> electricity
-        - newton --> benjamin franklin
+        - newton --> franklin
       suggestions:
-        - benjamin franklin
         - franklin
-        - benjamin
+        - benjamin franklin
         - humans
+        - benjamin
     ignore: False
 
   - input: #3
@@ -57,6 +59,7 @@ mapping:
       google: True
       openie: True
       quasimodo: True
+      gpt3: False
       conceptnet: False
     output:
       mapping:
@@ -79,6 +82,7 @@ mapping:
       google: True
       openie: True
       quasimodo: True
+      gpt3: False
       conceptnet: False
     output:
       mapping:
@@ -101,6 +105,7 @@ mapping:
       google: True
       openie: True
       quasimodo: True
+      gpt3: False
       conceptnet: False
     output:
       mapping:
@@ -122,6 +127,7 @@ mapping:
       google: True
       openie: True
       quasimodo: True
+      gpt3: False
       conceptnet: False
     output:
       mapping:
@@ -143,15 +149,16 @@ mapping:
       google: True
       openie: True
       quasimodo: True
+      gpt3: False
       conceptnet: False
     output:
       mapping:
         - aspirin --> antacid
         - pain --> heartburn
-        - fracture --> cancer
+        - fracture --> stress
       suggestions:
-        - cancer
         - stress
+        - cancer
     ignore: False
 
   - input: #8
@@ -164,27 +171,29 @@ mapping:
       google: True
       openie: True
       quasimodo: True
+      gpt3: False
       conceptnet: False
     output:
       mapping:
         - aspirin --> antacid
         - pain --> heartburn
-        - fracture --> cancer
+        - fracture --> stress
       suggestions:
-        - cancer
         - stress
+        - cancer
     ignore: False
 
   - input: #9
       base: [chef, meal, pan, salt] 
       target: [baker, cake, oven]
-      algo: dfs
-      depth: 4
-      solution_rank: 2 # from all solutions
-      num_of_suggestions: 2
+      algo: beam
+      depth: 20
+      solution_rank: 1 # from all solutions
+      num_of_suggestions: 1
       google: True
       openie: True
       quasimodo: True
+      gpt3: True
       conceptnet: False
     output:
       mapping:
@@ -193,26 +202,26 @@ mapping:
         - pan --> oven
         - salt --> sugar
       suggestions:
-        - butter
-        - sugar # the expected one
-    ignore: True
+        - sugar
+    ignore: False
 
   - input: #10
       base: [key, mechanism]
       target: [answer, riddle, logic]
       algo: dfs
       depth: 4
-      solution_rank: 3 # from all solutions
+      solution_rank: 1 # from all solutions
       num_of_suggestions: 3
       google: True
       openie: True
       quasimodo: True
+      gpt3: True
       conceptnet: False
     output:
       mapping:
         - key --> answer
         - mechanism --> logic
-        - lock --> riddle
+        - problem --> riddle
       suggestions: # suggestions where riddle is the missing one
         - problem
         - lock # the expected one
@@ -224,17 +233,18 @@ mapping:
       target: [answer, riddle, logic]
       algo: beam
       depth: 20
-      solution_rank: 3 # from all solutions
+      solution_rank: 1 # from all solutions
       num_of_suggestions: 3
       google: True
       openie: True
       quasimodo: True
+      gpt3: True
       conceptnet: False
     output:
       mapping:
         - key --> answer
         - mechanism --> logic
-        - lock --> riddle
+        - problem --> riddle
       suggestions: # suggestions where riddle is the missing one
         - problem
         - lock # the expected one

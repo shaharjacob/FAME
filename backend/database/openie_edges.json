@@ -63248,5 +63248,72 @@
 	"lawn#plumbing": [
 		"fix"
 	],
-	"plumbing#lawn": []
+	"plumbing#lawn": [],
+	"antacid#calcium carbonate": [
+		"contains"
+	],
+	"calcium carbonate#antacid": [
+		"is",
+		"is used as",
+		"is used in"
+	],
+	"antacid#tetracycline": [
+		"can stop"
+	],
+	"tetracycline#antacid": [],
+	"antacid#acid indigestion": [],
+	"acid indigestion#antacid": [],
+	"antacid#this medication": [],
+	"this medication#antacid": [],
+	"antacid#digestion": [
+		"inhibits"
+	],
+	"digestion#antacid": [],
+	"antacid#simethicone": [
+		"also contain"
+	],
+	"simethicone#antacid": [],
+	"antacid#aluminum": [
+		"contain",
+		"have"
+	],
+	"aluminum#antacid": [
+		"is present in"
+	],
+	"antacid#working": [
+		"does"
+	],
+	"working#antacid": [],
+	"antacid#strong bases": [],
+	"strong bases#antacid": [],
+	"antacid#magnesium": [
+		"are high in",
+		"contain"
+	],
+	"magnesium#antacid": [
+		"are used as",
+		"found in",
+		"is"
+	],
+	"antacid#acid reflex": [],
+	"acid reflex#antacid": [],
+	"antacid#calcium": [
+		"also contain"
+	],
+	"calcium#antacid": [
+		"is",
+		"is taken with",
+		"is used as",
+		"is used in"
+	],
+	"antacid#stomach discomfort": [],
+	"stomach discomfort#antacid": [],
+	"antacid#relieve heartburn": [],
+	"relieve heartburn#antacid": [],
+	"antacid#indigestion": [],
+	"indigestion#antacid": [
+		"may turn to"
+	],
+	"antacid#relieve indigestion": [],
+	"relieve indigestion#antacid": []
 }

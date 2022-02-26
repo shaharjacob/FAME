@@ -15,7 +15,8 @@ EVALUATION_FOLDER = BACKEND_DIR / 'evaluation'
 DATABASE_FOLDER = BACKEND_DIR / 'database'
 
 OPENAI_API_KEY= os.environ.get("OPENAI_API_KEY", "")
-openai.api_key = OPENAI_API_KEY
+if 'CI' not in os.environ:
+    openai.api_key = OPENAI_API_KEY
 
 prompt = [
     "Q: What are the relations between blizzard and snowflake?",

@@ -5909,5 +5909,66 @@
 	"lawn#enlisted": [],
 	"key#is the result of applying": [],
 	"key#is the outcome of a": [],
-	"mechanism#is a problem that requires": []
+	"mechanism#is a problem that requires": [],
+	"antacid#contain": [
+		"strong bases",
+		"bases",
+		"acid"
+	],
+	"antacid#given for chest": [],
+	"antacid#kill": [],
+	"antacid#may dampen": [],
+	"antacid#can be killed with": [],
+	"antacid#help my chest": [],
+	"antacid#given to patients with chest": [],
+	"antacid#naproxen may relieve": [],
+	"antacid#take": [],
+	"antacid#has been used to treat": [],
+	"antacid#provide temporary relief of": [],
+	"antacid#used for": [],
+	"antacid#relieve chest": [],
+	"antacid#is to use": [],
+	"antacid#and ibuprofen lessen the sensation of": [],
+	"antacid#inhibit": [],
+	"antacid#stop chest": [],
+	"antacid#help chest": [],
+	"antacid#acetaminophen can help ease": [],
+	"antacid#work for chest": [],
+	"antacid#alleviates": [],
+	"antacid#controls": [],
+	"antacid#cause epigastric": [],
+	"antacid#can be used for": [],
+	"antacid#stop": [
+		"acid indigestion",
+		"working",
+		"heartburn"
+	],
+	"antacid#often benefit from": [],
+	"antacid#reduces": [],
+	"antacid#good for chest": [],
+	"antacid#are used to treat": [],
+	"antacid#is widely used for": [],
+	"antacid#can help reduce": [],
+	"antacid#cause stomach": [],
+	"antacid#relievers": [],
+	"antacid#can reduce": [
+		"stomach discomfort"
+	],
+	"antacid#relieve": [
+		"pain of indigestion",
+		"upset stomach",
+		"indigestion"
+	],
+	"antacid#help": [
+		"indigestion",
+		"relieve heartburn",
+		"acid reflex",
+		"relieve indigestion",
+		"heartburn"
+	],
+	"antacid#can also help with": [],
+	"antacid#can relieve": [
+		"indigestion"
+	],
+	"antacid#helps to relieve": []
 }

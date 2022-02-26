@@ -10889,5 +10889,66 @@
 	"lawn#enlisted": [],
 	"key#is the result of applying": [],
 	"key#is the outcome of a": [],
-	"mechanism#is a problem that requires": []
+	"mechanism#is a problem that requires": [],
+	"antacid#contain": [
+		"aluminum",
+		"magnesium",
+		"calcium carbonate",
+		"simethicone",
+		"calcium"
+	],
+	"antacid#given for chest": [],
+	"antacid#kill": [],
+	"antacid#may dampen": [],
+	"antacid#can be killed with": [],
+	"antacid#help my chest": [],
+	"antacid#given to patients with chest": [],
+	"antacid#naproxen may relieve": [],
+	"antacid#take": [
+		"this medication"
+	],
+	"antacid#has been used to treat": [],
+	"antacid#provide temporary relief of": [],
+	"antacid#used for": [],
+	"antacid#relieve chest": [],
+	"antacid#is to use": [],
+	"antacid#and ibuprofen lessen the sensation of": [],
+	"antacid#inhibit": [
+		"digestion"
+	],
+	"antacid#stop chest": [],
+	"antacid#help chest": [],
+	"antacid#acetaminophen can help ease": [],
+	"antacid#work for chest": [],
+	"antacid#alleviates": [
+		"symptoms"
+	],
+	"antacid#controls": [],
+	"antacid#cause epigastric": [],
+	"antacid#can be used for": [],
+	"antacid#stop": [
+		"tetracycline"
+	],
+	"antacid#often benefit from": [],
+	"antacid#reduces": [
+		"stomach acidity",
+		"gastric acid",
+		"chromium absorption"
+	],
+	"antacid#good for chest": [],
+	"antacid#are used to treat": [],
+	"antacid#is widely used for": [],
+	"antacid#can help reduce": [],
+	"antacid#cause stomach": [],
+	"antacid#relievers": [],
+	"antacid#can reduce": [],
+	"antacid#relieve": [
+		"pain",
+		"the discomfort",
+		"the symptoms"
+	],
+	"antacid#help": [],
+	"antacid#can also help with": [],
+	"antacid#can relieve": [],
+	"antacid#helps to relieve": []
 }

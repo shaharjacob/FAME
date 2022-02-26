@@ -103,6 +103,7 @@ class TestMappingNoSuggestoins(unittest.TestCase):
                 "openie": tv["input"]["openie"],
                 "quasimodo": tv["input"]["quasimodo"],
                 "conceptnet": tv["input"]["conceptnet"],
+                "gpt3": tv["input"]["gpt3"]
             }
 
             algo_wrapper = beam_search_wrapper if tv['input']['algo'] == 'beam' else dfs_wrapper
@@ -142,6 +143,7 @@ class TestMappingSuggestoins(unittest.TestCase):
                 "google": tv['input']['google'],
                 "openie": tv['input']['openie'],
                 "quasimodo": tv['input']['quasimodo'],
+                "gpt3": tv['input']['gpt3'],
                 "conceptnet": tv['input']['conceptnet'],
             }
 

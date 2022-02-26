@@ -23361,5 +23361,64 @@
 	"lawn#your landscape": [],
 	"your landscape#lawn": [],
 	"lawn#plumbing": [],
-	"plumbing#lawn": []
+	"plumbing#lawn": [],
+	"antacid#calcium carbonate": [],
+	"calcium carbonate#antacid": [
+		"be in",
+		"be suitable as",
+		"be used as",
+		"be used in",
+		"has property"
+	],
+	"antacid#tetracycline": [],
+	"tetracycline#antacid": [],
+	"antacid#acid indigestion": [
+		"stop"
+	],
+	"acid indigestion#antacid": [],
+	"antacid#this medication": [],
+	"this medication#antacid": [],
+	"antacid#digestion": [
+		"affect"
+	],
+	"digestion#antacid": [],
+	"antacid#simethicone": [],
+	"simethicone#antacid": [],
+	"antacid#aluminum": [],
+	"aluminum#antacid": [],
+	"antacid#working": [
+		"has property",
+		"stop"
+	],
+	"working#antacid": [],
+	"antacid#strong bases": [
+		"contain"
+	],
+	"strong bases#antacid": [],
+	"antacid#magnesium": [],
+	"magnesium#antacid": [],
+	"antacid#acid reflex": [
+		"help"
+	],
+	"acid reflex#antacid": [],
+	"antacid#calcium": [],
+	"calcium#antacid": [],
+	"antacid#stomach discomfort": [
+		"can reduce"
+	],
+	"stomach discomfort#antacid": [],
+	"antacid#relieve heartburn": [
+		"help"
+	],
+	"relieve heartburn#antacid": [],
+	"antacid#indigestion": [
+		"can relieve",
+		"help",
+		"relieve"
+	],
+	"indigestion#antacid": [],
+	"antacid#relieve indigestion": [
+		"help"
+	],
+	"relieve indigestion#antacid": []
 }
