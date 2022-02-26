@@ -35460,5 +35460,164 @@
 	"baker#family guardian": [],
 	"family guardian#baker": [],
 	"winter#people": [],
-	"people#winter": []
+	"people#winter": [],
+	"lawn#the fence": [],
+	"the fence#lawn": [],
+	"lawn#grass": [
+		"mower collect",
+		"mower cut",
+		"mower leave clumps of",
+		"mowers collect",
+		"mowers cut",
+		"weed killer not kill"
+	],
+	"grass#lawn": [
+		"bad for",
+		"clippings help the"
+	],
+	"lawn#the park": [],
+	"the park#lawn": [],
+	"lawn#the cars": [],
+	"the cars#lawn": [],
+	"lawn#seed": [
+		"go to",
+		"going to",
+		"grass go to"
+	],
+	"seed#lawn": [],
+	"lawn#my area": [],
+	"my area#lawn": [],
+	"lawn#the store": [],
+	"the store#lawn": [],
+	"lawn#tress": [],
+	"tress#lawn": [],
+	"lawn#scythe": [],
+	"scythe#lawn": [],
+	"lawn#spectacular views": [],
+	"spectacular views#lawn": [],
+	"lawn#spring sign": [],
+	"spring sign#lawn": [],
+	"lawn#a lot": [],
+	"a lot#lawn": [],
+	"lawn#dog pee": [],
+	"dog pee#lawn": [
+		"burn",
+		"kill my",
+		"kill the"
+	],
+	"lawn#recreation": [],
+	"recreation#lawn": [],
+	"lawn#church": [],
+	"church#lawn": [],
+	"lawn#this service": [],
+	"this service#lawn": [],
+	"lawn#some laundry": [],
+	"some laundry#lawn": [],
+	"lawn#160 calories": [],
+	"160 calories#lawn": [],
+	"lawn#your landscape": [],
+	"your landscape#lawn": [],
+	"lawn#plumbing": [],
+	"plumbing#lawn": [],
+	"antacid#symptoms": [],
+	"symptoms#antacid": [],
+	"antacid#calcium carbonate": [],
+	"calcium carbonate#antacid": [
+		"an effective",
+		"not used as an",
+		"the best",
+		"used as an",
+		"used in",
+		"work as an"
+	],
+	"antacid#tetracycline": [],
+	"tetracycline#antacid": [],
+	"antacid#acid indigestion": [
+		"relieve"
+	],
+	"acid indigestion#antacid": [],
+	"antacid#acid": [
+		"neutralize",
+		"neutralize stomach",
+		"reduce",
+		"reduce stomach",
+		"work to neutralize stomach"
+	],
+	"acid#antacid": [],
+	"antacid#this medication": [],
+	"this medication#antacid": [],
+	"antacid#digestion": [
+		"affect",
+		"affect protein"
+	],
+	"digestion#antacid": [],
+	"antacid#simethicone": [],
+	"simethicone#antacid": [],
+	"antacid#aluminum": [],
+	"aluminum#antacid": [],
+	"antacid#working": [
+		"stop"
+	],
+	"working#antacid": [],
+	"antacid#strong bases": [],
+	"strong bases#antacid": [],
+	"antacid#magnesium": [
+		"affect"
+	],
+	"magnesium#antacid": [
+		"carbonate work as an",
+		"hydroxide",
+		"hydroxide a good",
+		"hydroxide used as an",
+		"hydroxide work as an",
+		"in",
+		"trisilicate"
+	],
+	"antacid#acid reflex": [],
+	"acid reflex#antacid": [],
+	"antacid#calcium": [],
+	"calcium#antacid": [
+		"carbonate an effective",
+		"carbonate not used as an",
+		"carbonate the best",
+		"carbonate used as an",
+		"carbonate used in",
+		"carbonate work as an",
+		"hydroxide used in",
+		"obtained from",
+		"work as an"
+	],
+	"antacid#stomach discomfort": [
+		"help decrease"
+	],
+	"stomach discomfort#antacid": [],
+	"antacid#relieve heartburn": [
+		"work to"
+	],
+	"relieve heartburn#antacid": [],
+	"antacid#indigestion": [
+		"cure",
+		"give us relief from pain due to",
+		"help",
+		"help in the problem of",
+		"relieve",
+		"relieve acid",
+		"treat",
+		"work"
+	],
+	"indigestion#antacid": [],
+	"antacid#relieve indigestion": [
+		"work to"
+	],
+	"relieve indigestion#antacid": [],
+	"antacid#pain": [
+		"relieve",
+		"relieve stomach",
+		"used to relieve gastric"
+	],
+	"pain#antacid": [],
+	"antacid#the discomfort": [],
+	"the discomfort#antacid": [],
+	"antacid#the symptoms": [],
+	"the symptoms#antacid": []
 }

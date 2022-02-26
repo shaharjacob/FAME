@@ -23312,5 +23312,121 @@
 	"baker#family guardian": [],
 	"family guardian#baker": [],
 	"winter#people": [],
-	"people#winter": []
+	"people#winter": [],
+	"lawn#the fence": [],
+	"the fence#lawn": [],
+	"lawn#grass": [
+		"have"
+	],
+	"grass#lawn": [
+		"be standard for",
+		"be used on"
+	],
+	"lawn#the park": [],
+	"the park#lawn": [],
+	"lawn#the cars": [],
+	"the cars#lawn": [],
+	"lawn#seed": [
+		"go to"
+	],
+	"seed#lawn": [
+		"can"
+	],
+	"lawn#my area": [],
+	"my area#lawn": [],
+	"lawn#the store": [],
+	"the store#lawn": [],
+	"lawn#tress": [],
+	"tress#lawn": [],
+	"lawn#scythe": [],
+	"scythe#lawn": [],
+	"lawn#spectacular views": [],
+	"spectacular views#lawn": [],
+	"lawn#spring sign": [],
+	"spring sign#lawn": [],
+	"lawn#a lot": [],
+	"a lot#lawn": [],
+	"lawn#dog pee": [],
+	"dog pee#lawn": [],
+	"lawn#recreation": [],
+	"recreation#lawn": [],
+	"lawn#church": [],
+	"church#lawn": [],
+	"lawn#this service": [],
+	"this service#lawn": [],
+	"lawn#some laundry": [],
+	"some laundry#lawn": [],
+	"lawn#160 calories": [],
+	"160 calories#lawn": [],
+	"lawn#your landscape": [],
+	"your landscape#lawn": [],
+	"lawn#plumbing": [],
+	"plumbing#lawn": [],
+	"antacid#calcium carbonate": [],
+	"calcium carbonate#antacid": [
+		"be in",
+		"be suitable as",
+		"be used as",
+		"be used in",
+		"has property"
+	],
+	"antacid#tetracycline": [],
+	"tetracycline#antacid": [],
+	"antacid#acid indigestion": [
+		"stop"
+	],
+	"acid indigestion#antacid": [],
+	"antacid#this medication": [],
+	"this medication#antacid": [],
+	"antacid#digestion": [
+		"affect"
+	],
+	"digestion#antacid": [],
+	"antacid#simethicone": [],
+	"simethicone#antacid": [],
+	"antacid#aluminum": [],
+	"aluminum#antacid": [],
+	"antacid#working": [
+		"has property",
+		"stop"
+	],
+	"working#antacid": [],
+	"antacid#strong bases": [
+		"contain"
+	],
+	"strong bases#antacid": [],
+	"antacid#magnesium": [],
+	"magnesium#antacid": [],
+	"antacid#acid reflex": [
+		"help"
+	],
+	"acid reflex#antacid": [],
+	"antacid#calcium": [],
+	"calcium#antacid": [],
+	"antacid#stomach discomfort": [
+		"can reduce"
+	],
+	"stomach discomfort#antacid": [],
+	"antacid#relieve heartburn": [
+		"help"
+	],
+	"relieve heartburn#antacid": [],
+	"antacid#indigestion": [
+		"can relieve",
+		"help",
+		"relieve"
+	],
+	"indigestion#antacid": [],
+	"antacid#relieve indigestion": [
+		"help"
+	],
+	"relieve indigestion#antacid": [],
+	"antacid#pain": [
+		"can quit"
+	],
+	"pain#antacid": [],
+	"antacid#the discomfort": [],
+	"the discomfort#antacid": [],
+	"antacid#the symptoms": [],
+	"the symptoms#antacid": []
 }
