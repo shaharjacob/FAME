@@ -51,7 +51,8 @@ class TestFunctions(unittest.TestCase):
 
 
     def test_quasimodo(self):
-        merge_tsvs()
+        if 'CI' in os.environ:
+            merge_tsvs()
         quasimodo = Quasimodo(path=str(backend_dir / 'tsv' / 'merged' / 'quasimodo.tsv'))
         
         # testing quasimodo.get_entity_props
@@ -77,84 +78,45 @@ class TestFunctions(unittest.TestCase):
         self.assertEqual(reference, actual)
 
         # testing get_best_matches_for_entity
-        reference = [('newton', 'faraday', 0.887),  ('newton', 'wall', 0.508), ('newton', 'apple', 0.463), ('newton', 'paper', 0.425), ('newton', 'window', 0.417)]
+        reference = [('newton', 'faraday', 0.887),  ('newton', 'wall', 0.508), ('newton', 'apple', 0.463), ('newton', 'window', 0.409), ('newton', 'paper', 0.405)]
         actual = suggestions.get_best_matches_for_entity("newton", ["faraday", "sky", "window", "paper", "photo", "apple", "tomato", "wall", "home", "horse"])
         self.assertEqual(reference, actual)
 
 
 class TestMappingNoSuggestoins(unittest.TestCase):
 
-    def test_beam(self):
+    def test_without_suggestions(self):
         with open(TEST_FOLDER / 'tests.yaml', 'r') as y:
             spec = yaml.load(y, Loader=yaml.SafeLoader)
         mapping_spec = spec["mapping"]
         for tv in mapping_spec:
-            if tv.get("ignore", False):
+            if tv["ignore"]:
                 continue
             
             args = {
                 "num_of_suggestions": 0,
-                "N": tv["input"]["depth"]['beam'],
+                "N": tv["input"]["depth"],
                 "verbose": True,
                 "freq_th": FREQUENCY_THRESHOLD,
                 "model_name": 'msmarco-distilbert-base-v4',
-                "google": True,
-                "openie": True,
-                "quasimodo": True,
-                "conceptnet": False,
+                "google": tv["input"]["google"],
+                "openie": tv["input"]["openie"],
+                "quasimodo": tv["input"]["quasimodo"],
+                "conceptnet": tv["input"]["conceptnet"],
+                "gpt3": tv["input"]["gpt3"]
             }
-            solutions = beam_search_wrapper(base=tv["input"]["base"], 
-                                            target=tv["input"]["target"],
-                                            args=args)
+
+            algo_wrapper = beam_search_wrapper if tv['input']['algo'] == 'beam' else dfs_wrapper
+            solutions = algo_wrapper(
+                base=tv["input"]["base"], 
+                target=tv["input"]["target"],
+                args=args
+            )
             solution = solutions[0]
 
             # check the mapping
             actual = solution.mapping
             reference = tv["output"]["mapping"]
-            self.assertEqual(reference, actual)
-
-            # check the relations
-            actual = [[list(relation[0]), list(relation[1])] for relation in solution.relations]
-            reference = tv["output"]["relations"]['beam']
-            self.assertEqual(reference, actual)
-
-            # check the score
-            actual = solution.score
-            reference = tv["output"]["score"]
-            self.assertEqual(round(reference, 3), round(actual, 3))
-    
-    def test_dfs(self):
-        with open(TEST_FOLDER / 'tests.yaml', 'r') as y:
-            spec = yaml.load(y, Loader=yaml.SafeLoader)
-        mapping_spec = spec["mapping"]
-        for tv in mapping_spec:
-            if tv.get("ignore", False):
-                continue            
-            
-            args = {
-                "num_of_suggestions": 0,
-                "N": tv["input"]["depth"]['dfs'],
-                "verbose": True,
-                "freq_th": FREQUENCY_THRESHOLD,
-                "model_name": 'msmarco-distilbert-base-v4',
-                "google": True,
-                "openie": True,
-                "quasimodo": True,
-                "conceptnet": False,
-            }
-            solutions = dfs_wrapper(base=tv["input"]["base"], 
-                                    target=tv["input"]["target"],
-                                    args=args)
-            solution = solutions[0]
-
-            # check the mapping
-            actual = solution.mapping
-            reference = tv["output"]["mapping"]
-            self.assertEqual(reference, actual)
-
-            # check the relations
-            actual = [[list(relation[0]), list(relation[1])] for relation in solution.relations]
-            reference = tv["output"]["relations"]['dfs']
             self.assertEqual(reference, actual)
 
             # check the score
@@ -169,7 +131,7 @@ class TestMappingSuggestoins(unittest.TestCase):
             spec = yaml.load(y, Loader=yaml.SafeLoader)
         mapping_spec = spec["mapping"]
         for tv in mapping_spec:
-            if tv.get("ignore", False):
+            if tv["ignore"]:
                 continue
             
             args = {
@@ -181,6 +143,7 @@ class TestMappingSuggestoins(unittest.TestCase):
                 "google": tv['input']['google'],
                 "openie": tv['input']['openie'],
                 "quasimodo": tv['input']['quasimodo'],
+                "gpt3": tv['input']['gpt3'],
                 "conceptnet": tv['input']['conceptnet'],
             }
 

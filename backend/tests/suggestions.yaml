@@ -9,18 +9,19 @@ mapping:
       google: True
       openie: True
       quasimodo: True
+      gpt3: False
       conceptnet: False
     output:
       mapping:
         - earth --> electrons
         - sun --> nucleus
         - gravity --> electricity
-        - newton --> benjamin franklin
+        - newton --> franklin
       suggestions:
-        - benjamin franklin
         - franklin
-        - benjamin
+        - benjamin franklin
         - humans
+        - benjamin
     ignore: False
   
   - input: #2
@@ -33,21 +34,112 @@ mapping:
       google: True
       openie: True
       quasimodo: True
+      gpt3: False
       conceptnet: False
     output:
       mapping:
         - earth --> electrons
         - sun --> nucleus
         - gravity --> electricity
-        - newton --> benjamin franklin
+        - newton --> franklin
       suggestions:
-        - benjamin franklin
         - franklin
-        - benjamin
+        - benjamin franklin
         - humans
+        - benjamin
     ignore: False
 
   - input: #3
+      base: [earth, newton, gravity]
+      target: [electrons, nucleus, electricity, faraday]
+      algo: beam
+      depth: 20
+      solution_rank: 1 # from all solutions
+      num_of_suggestions: 2
+      google: True
+      openie: True
+      quasimodo: True
+      gpt3: False
+      conceptnet: False
+    output:
+      mapping:
+        - earth --> electrons
+        - gravity --> electricity
+        - newton --> faraday
+        - sun --> nucleus
+      suggestions:
+        - sun
+        - the sun
+    ignore: False
+
+  - input: #4
+      base: [earth, newton, gravity]
+      target: [electrons, nucleus, electricity, faraday]
+      algo: dfs
+      depth: 4
+      solution_rank: 1 # from all solutions
+      num_of_suggestions: 2
+      google: True
+      openie: True
+      quasimodo: True
+      gpt3: False
+      conceptnet: False
+    output:
+      mapping:
+        - earth --> electrons
+        - gravity --> electricity
+        - newton --> faraday
+        - sun --> nucleus
+      suggestions:
+        - sun
+        - the sun
+    ignore: False
+
+  - input: #5
+      base: [landscaper, lawn]
+      target: [stylist, hair, gel]
+      algo: beam
+      depth: 20
+      solution_rank: 1 # from all solutions
+      num_of_suggestions: 2
+      google: True
+      openie: True
+      quasimodo: True
+      gpt3: False
+      conceptnet: False
+    output:
+      mapping:
+        - landscaper --> stylist
+        - lawn --> hair
+        - fertilizer --> gel
+      suggestions:
+        - fertilizer
+        - water
+    ignore: False
+
+  - input: #6
+      base: [landscaper, lawn]
+      target: [stylist, hair, gel]
+      algo: dfs
+      depth: 4
+      solution_rank: 1 # from all solutions
+      num_of_suggestions: 2
+      google: True
+      openie: True
+      quasimodo: True
+      gpt3: False
+      conceptnet: False
+    output:
+      mapping:
+        - landscaper --> stylist
+        - lawn --> hair
+        - fertilizer --> gel
+      suggestions:
+        - fertilizer
+        - water
+    ignore: False
+
+  - input: #7
       base: [aspirin, pain, fracture]
       target: [antacid, heartburn]
       algo: dfs
@@ -57,18 +149,19 @@ mapping:
       google: True
       openie: True
       quasimodo: True
+      gpt3: False
       conceptnet: False
     output:
       mapping:
         - aspirin --> antacid
         - pain --> heartburn
-        - fracture --> cancer
+        - fracture --> stress
       suggestions:
-        - cancer
         - stress
+        - cancer
     ignore: False
 
-  - input: #4
+  - input: #8
       base: [aspirin, pain, fracture]
       target: [antacid, heartburn]
       algo: beam
@@ -78,14 +171,59 @@ mapping:
       google: True
       openie: True
       quasimodo: True
+      gpt3: False
       conceptnet: False
     output:
       mapping:
         - aspirin --> antacid
         - pain --> heartburn
-        - fracture --> cancer
+        - fracture --> stress
       suggestions:
-        - cancer
         - stress
+        - cancer
     ignore: False
 
+  - input: #9
+      base: [chef, meal, pan, salt] 
+      target: [baker, cake, oven]
+      algo: beam
+      depth: 20
+      solution_rank: 1 # from all solutions
+      num_of_suggestions: 1
+      google: True
+      openie: True
+      quasimodo: True
+      gpt3: True
+      conceptnet: False
+    output:
+      mapping:
+        - chef --> baker
+        - meal --> cake
+        - pan --> oven
+        - salt --> sugar
+      suggestions:
+        - sugar
+    ignore: False
+
+  - input: #10
+      base: [key, mechanism]
+      target: [answer, riddle, logic]
+      algo: dfs
+      depth: 4
+      solution_rank: 1 # from all solutions
+      num_of_suggestions: 3
+      google: True
+      openie: True
+      quasimodo: True
+      gpt3: True
+      conceptnet: False
+    output:
+      mapping:
+        - key --> answer
+        - mechanism --> logic
+        - problem --> riddle
+      suggestions: # suggestions where riddle is the missing one
+        - problem
+        - lock # the expected one
+        - feedback
+    ignore: False
