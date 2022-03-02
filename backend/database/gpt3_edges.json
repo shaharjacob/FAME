@@ -2781,5 +2781,166 @@
 	"coffee#start": [
 		"Coffee starts the day.",
 		"Coffee is the first thing many people drink in the morning."
+	],
+	"key#security": [
+		"A key is used to provide security.",
+		"A key is a measure of security."
+	],
+	"security#key": [
+		"A security key is used to unlock a door.",
+		"A security key is a device used to open a door."
+	],
+	"key#the back": [
+		"The key opens the back.",
+		"The key unlocks the back."
+	],
+	"the back#key": [
+		"The back is the key.",
+		"The back unlocks the key."
+	],
+	"key#the end": [
+		"The key opens the end.",
+		"The key unlocks the end."
+	],
+	"the end#key": [
+		"The end is the key's destination.",
+		"The end is the key's purpose."
+	],
+	"key#feedback": [
+		"A key is a device that provides feedback.",
+		"A key is a tool used to provide feedback."
+	],
+	"feedback#key": [
+		"Feedback is a key factor in learning.",
+		"Feedback is essential for learning."
+	],
+	"key#investment": [
+		"A key opens an investment.",
+		"A key unlocks an investment."
+	],
+	"investment#key": [
+		"Investment unlocks the key.",
+		"Investment is the key to success."
+	],
+	"key#small changes": [
+		"A key can make small changes.",
+		"A key can initiate small changes."
+	],
+	"small changes#key": [
+		"A small change can be a key to a big change.",
+		"A small change can be the key to a big change."
+	],
+	"key#our team": [
+		"The key opens the door to our team.",
+		"The key unlocks the door to our team."
+	],
+	"our team#key": [
+		"Our team is the key to winning.",
+		"Our team is the most important part of winning."
+	],
+	"key#puzzle": [
+		"A key opens a puzzle.",
+		"A key is inserted into a puzzle."
+	],
+	"puzzle#key": [
+		"A puzzle can be unlocked with a key.",
+		"A puzzle can be solved with a key."
+	],
+	"key#a plan": [
+		"A key opens a plan.",
+		"A key is used to open a plan."
+	],
+	"a plan#key": [
+		"A key opens a plan.",
+		"A key is used to open a plan."
+	],
+	"key#money": [
+		"A key opens the door to money.",
+		"A key unlocks the door to money."
+	],
+	"money#key": [
+		"Money can open locks with a key.",
+		"Money can be exchanged for a key."
+	],
+	"key#octet (computing)": [
+		"A key is an octet (computing).",
+		"A key is an 8-bit number."
+	],
+	"octet (computing)#key": [
+		"An octet is a set of 8 keys.",
+		"An octet is a set of 8 characters."
+	],
+	"key#choice": [
+		"A key unlocks a choice.",
+		"A key is needed to unlock a choice."
+	],
+	"choice#key": [
+		"A key unlocks a choice.",
+		"A key opens a choice."
+	],
+	"key#leverage": [
+		"A key is a tool for leverage.",
+		"A key is a tool for applying leverage."
+	],
+	"leverage#key": [
+		"A lever is a key used to turn a bolt.",
+		"A lever is a key used to open a lock."
+	],
+	"key#harness": [
+		"A key unlocks a harness.",
+		"A key opens a harness."
+	],
+	"harness#key": [
+		"The harness is used to attach the key.",
+		"The harness holds the key in place."
+	],
+	"key#fish": [
+		"A key opens the fish's mouth.",
+		"A key opens the door to the fish's stomach."
+	],
+	"fish#key": [
+		"Fish need keys to unlock their tanks.",
+		"Fish need keys to get out of their tanks."
+	],
+	"key#the house": [
+		"The key opens the house.",
+		"The key unlocks the house."
+	],
+	"the house#key": [
+		"The house is opened with a key.",
+		"The house can be opened with a key."
+	],
+	"key#the difference": [
+		"The key unlocks the difference.",
+		"The key opens the difference."
+	],
+	"the difference#key": [
+		"The difference is the key.",
+		"The key is the difference."
+	],
+	"key#experiment": [
+		"The key opens the door to the laboratory.",
+		"The key unlocks the door to the laboratory."
+	],
+	"experiment#key": [
+		"The key opens the door to the experiment room.",
+		"The key is necessary to open the door to the experiment room."
+	],
+	"key#lime pie": [
+		"Key lime pie is made with key limes.",
+		"Key lime pie contains key lime."
+	],
+	"lime pie#key": [
+		"Lime pie is the key to my heart.",
+		"Lime pie is the key to happiness.",
+		"Lime pie is the key to a good time."
+	],
+	"key#problem": [
+		"A key opens a problem.",
+		"A key is used to open a problem."
+	],
+	"problem#key": [
+		"A problem is solved by finding the key.",
+		"A problem is unlocked by the key."
 	]
 }

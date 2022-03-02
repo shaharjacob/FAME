@@ -108,7 +108,8 @@ def evaluate(model_name: str,
             "openie": True,
             "quasimodo": True,
             "gpt3": True if 'CI' not in os.environ else False,
-            "conceptnet": False
+            "conceptnet": False,
+            "use_base_mapping": tv["output"]["mapping"] if tv["input"].get("use_base_mapping", False) else []
         }
 
         algo_func = beam_search_wrapper if algorithm == 'beam' else dfs_wrapper

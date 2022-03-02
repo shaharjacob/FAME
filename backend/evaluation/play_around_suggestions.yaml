@@ -2,6 +2,7 @@ mapping:
   - input:
       base: [earth, newton, gravity]
       target: [electrons, nucleus, electricity, faraday]
+      use_base_mapping: False
       depth:
         beam: 20
         dfs: 4
@@ -16,6 +17,7 @@ mapping:
   - input:
       base: [landscaper, lawn]
       target: [stylist, hair, gel]
+      use_base_mapping: False
       depth:
         beam: 20
         dfs: 4
@@ -29,6 +31,7 @@ mapping:
   - input:
       base: [chef, meal, pan, salt] 
       target: [baker, cake, oven]
+      use_base_mapping: False
       depth:
         beam: 20
         dfs: 4
@@ -44,6 +47,7 @@ mapping:
   - input:
       base: [answer, logic, riddle]
       target: [key, mechanism]
+      use_base_mapping: True
       depth:
         beam: 20
         dfs: 4
@@ -59,6 +63,7 @@ mapping:
   - input:
       base: [sun, summer, sunscreen]
       target: [rain, winter]
+      use_base_mapping: False
       depth:
         beam: 20
         dfs: 4

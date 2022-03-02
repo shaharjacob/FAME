@@ -5970,5 +5970,8 @@
 	"antacid#can relieve": [
 		"indigestion"
 	],
-	"antacid#helps to relieve": []
+	"antacid#helps to relieve": [],
+	"key#poses a question and the": [],
+	"key#is a solution to a": [],
+	"key#is a question and the": []
 }

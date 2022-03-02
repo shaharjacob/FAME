@@ -102,8 +102,35 @@ def beam_search_wrapper(
     cache = {"scores": {}, "mappings": set(), "relations": set()}
     best_results = mapping.get_best_pair_mapping(unmutables, available_pairs, cache)
 
-    # this is an array of solutions we going to update in the mapping function.
-    solutions = [Solution(
+    if args["use_base_mapping"]:
+        actual_base = [v.split('-->')[0].strip() for v in args["use_base_mapping"]]
+        actual_target = [v.split('-->')[1].strip() for v in args["use_base_mapping"]]
+        solutions = [
+            Solution(
+                mapping=args["use_base_mapping"], 
+                relations=[], 
+                scores=[], 
+                score=0, 
+                actual_base=actual_base, 
+                actual_target=actual_target, 
+                actual_indecies={
+                    'base': {
+                        b: i for i,b in enumerate(actual_base)
+                    }, 
+                    'target': {
+                        t: i for i,t in enumerate(actual_target)
+                    }
+                }, 
+                length=len(actual_base),
+                coverage=[],
+                availables=copy.deepcopy(available_pairs),
+                sorted_results=copy.deepcopy(best_results)
+            ) 
+        ]
+    else:
+        # this is an array of solutions we going to update in the mapping function.
+        solutions = [
+            Solution(
                 mapping=[], 
                 relations=[], 
                 scores=[], 
@@ -114,14 +141,16 @@ def beam_search_wrapper(
                 length=0,
                 coverage=[],
                 availables=copy.deepcopy(available_pairs),
-                sorted_results=copy.deepcopy(best_results)) 
-                for _ in range(args["N"])]
+                sorted_results=copy.deepcopy(best_results)
+            ) 
+            for _ in range(args["N"])
+        ]
 
-    beam_search(base=base, 
-                target=target, 
-                solutions=solutions,
-                cache=cache, 
-                args=args)
+        beam_search(base=base, 
+                    target=target, 
+                    solutions=solutions,
+                    cache=cache, 
+                    args=args)
     
     suggestions_solutions = mapping_suggestions_wrapper(base, 
                                                         target,
