@@ -8,7 +8,7 @@
 </p>
 
 <p align="center">
-  <a href="https://github.com/shaharjacob/autoSME/actions"><img src="https://img.shields.io/badge/CI-passing-brightgreen?logo=github" alt="ci"/></a>
+  <a href="https://github.com/shaharjacob/FAME/actions"><img src="https://img.shields.io/badge/CI-passing-brightgreen?logo=github" alt="ci"/></a>
   <a href="https://new.huji.ac.il/"><img src="https://img.shields.io/badge/license-HUJI-orange?logo=data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAcCAMAAABf788oAAAAAXNSR0IB2cksfwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAfJQTFRFAAAAhBYdhBYdhBQehRYchBYdhBYdhhQcgxcdhBYdhRYdhRYdiBoehBYbhBYdhRYdhRYdiRQUhxIYiA0Uhw8WWLyaWbmYWbqYWrWVWrWVWrWVWrWVWrWVWrWVWrWVWrWVWrWVWrWVWrWVWrWVWrWVWrWVWrWVhRYdhRYdWrWVWrWVXq+hhhsbhRYdhRYdhRYdLZu7L5u5WbybWrWVWrWVW7SXZ0I8iBQZhBYdhRYdhBYdLZm4Lpq5Lpq5W7WXWrWVW7WVI6aVFqWWbzUyhhQafSAjKKDALpq5Lpq5WrWVWrWVXLeWF6GUGqOVKY2CgCAghxYdOhkeLZ+/Lpq5Lpq5WrSVWrWVXbiXN414GaCSG6KUFKiZRG1kRBAUJQ0QLGp/L6HCL5q7WrWVXbiYM4VxCFJMGqCSG6KUGKucJw4SKA8THjg/CXyHYb+cRZqCClFKC1VOGp6QG6KUG6KUFqabKBEUISswC36LDnqHQnZjDFRNC1RNGZqNG6OVC36LDnqHDnqHDnqHfoNnYXRfCFNMC1NMFod7DXyJDnqHDnqHD3qHeYZrfoJoZHhiC1RNC1NLD3qHDnqHEHuEfoNpf4Jof4JoX3VgCFNMC1RNfoJof4Jof4JoZ3hiBFBKf4Jof4JokYpsfoJofoNofoJofoNofoJoGpeVtAAAAKZ0Uk5TAEDCDAS4wwgX48FVBAjP/74BS4NRIHEwUf92W35yin+VjqGcq6i1WhG3wAEBbPOCCRICxc4FQPH/4hgTnZQI1NUo6P//jsv/1w7a3bb//////v/3QhTg//7+///////5hgMc6P///+VXtv/VGCPv////4jMBKev9jT34/90jY//rJAi7/+pDBtPzNwOL/9dAO2oBBZL7/9QbZPn/0COl4xakyzR2H3JJuTYAAAEFSURBVHicY2AAAkYmZgZkwMLKxo4iwMHJxc2DLMDLxy8giKJESFgEhc8gKiaOKiAhKYUqIC0pgyogKymHKiAvqYAqoCiphCqgLKmCKqAqqQYk1TXgApqSWto6unr6DAwGhiC+kbGkiamZuYWllbWNLUjAzl7SwdHJ2YXf1c3dAyTg6SXp7ePr5x8QGBQcAhIIDQuPiIyKjomNi09IBAkkJaekpkWlZ2RmZeeALcnNyy8oLCouKS0rrwALVFZVV9fUAhl19Q2NQKqpuaW6tQ0k097R2cXA0N3T29LXD3HhhImTGCZPmTpt+gwkf8ycNXvOXGSPzZs9fwGKTxcuWozq9SVLUfkAsI84+DFKNqYAAAAASUVORK5CYII=" alt="license"/></a>
   <a href="https://hub.docker.com/"><img src="https://img.shields.io/badge/-docker-gray?logo=docker" alt="docker"/></a>
   <a href="https://reactjs.org/"><img src="https://img.shields.io/badge/-react-grey?logo=react" alt="react"/></a>
@@ -27,11 +27,11 @@ docker pull shaharjacob/msbackend
 docker pull shaharjacob/mswebapp  
 
 # crating a network to combine both containers  
-docker network create "autoSME"  
+docker network create "FAME"  
 
 # running both containers
-docker run -d -p 5031:5031 --name backend --network "autoSME" -e "FLASK_ENV=development" -e "FLASK_APP=app.app" -e "SENTENCE_TRANSFORMERS_HOME=cache" shaharjacob/msbackend flask run --host "0.0.0.0" --port 5031  
-docker run -d -p 3000:3000 --name webapp --network "autoSME" shaharjacob/mswebapp npm start
+docker run -d -p 5031:5031 --name backend --network "FAME" -e "FLASK_ENV=development" -e "FLASK_APP=app.app" -e "SENTENCE_TRANSFORMERS_HOME=cache" shaharjacob/msbackend flask run --host "0.0.0.0" --port 5031  
+docker run -d -p 3000:3000 --name webapp --network "FAME" shaharjacob/mswebapp npm start
 ```
 
 After few seconds you can open browser at: <a href="https://localhost:3000/">https://localhost:3000/</a>  
@@ -66,8 +66,8 @@ More details about the execute command can be found under **Execute** section.
 ### **Option 2:**
 Install dependencies and run on your local PC.  
 ```bash
-git clone https://github.com/shaharjacob/autoSME.git
-cd autoSME
+git clone https://github.com/shaharjacob/FAME.git
+cd FAME
 pip install -r requirements.txt
 ```  
 Now you ready for the execute command detailed in **Execute** section.  
@@ -105,7 +105,7 @@ npm start
 ### **Option 3:**
 Running on the university cluster using exsiting repo (without demo, only backend).
 1) ssh to phoenix cluster.
-2) ```cd /cs/labs/dshahaf/shahar.jacob/autoSME```
+2) ```cd /cs/labs/dshahaf/shahar.jacob/FAME```
 3) Edit the shell script under the root folder called `runme.sh` with the command you want to run (see **Execute** section).
 4) Run the following command:  
 ```bash

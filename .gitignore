@@ -3,6 +3,7 @@
 *.pyc
 .vscode
 .idea/
+*.env
 
 backend/tsv/merged
 backend/cache
