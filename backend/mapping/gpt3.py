@@ -37,7 +37,7 @@ prompt = [
     "",
     "Q: What are the relations between electron and nucleus?",
     "A: An electron revolves around the nucleus.",
-    "A: An electron is mush smaller than the nucleus.",
+    "A: An electron is much smaller than the nucleus.",
     "A: An electron attracts the nucleus.",
     "",
     "Q: What are the relations between water and pipe?",
