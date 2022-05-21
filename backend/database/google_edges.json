@@ -9671,9 +9671,13 @@
 	"divingboard#diver": [],
 	"helicopter#launchpad": [],
 	"diver#divingboard": [],
-	"lawschool#lawyer": [],
+	"lawschool#lawyer": [
+		"trains",
+		"prepares"
+	],
 	"vineyard#wine": [
-		"make"
+		"make",
+		"cooks"
 	],
 	"lawyer#lawschool": [],
 	"wine#vineyard": [],
