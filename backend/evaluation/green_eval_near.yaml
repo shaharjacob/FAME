@@ -1,5 +1,5 @@
 mapping:
-  - input: #1 : 2/2
+  - input: #1 : 
       base: [answer, riddle]
       target: [solution, problem]
       depth:
@@ -10,7 +10,7 @@ mapping:
       - answer --> solution
       - riddle --> problem
 
-  - input: #2 : 0/2
+  - input: #2 :
       base: [ash, fireplace]
       target: [soot, chimney]
       depth:
@@ -285,7 +285,7 @@ mapping:
       - launchpad --> runway
       - helicopter --> airplane
 
-  - input: #27 : No solution found
+  - input: #27 : 2/2
       base: [lawschool, lawyer]
       target: [medschool, doctor]
       depth:

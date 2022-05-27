@@ -11,83 +11,114 @@ from mapping.dfs import dfs_wrapper
 from mapping.mapping import FREQUENCY_THRESHOLD
 from mapping.beam_search import beam_search_wrapper
 from mapping.quasimodo import Quasimodo, merge_tsvs
-from mapping import concept_net, suggestions, google_autosuggest
+from mapping import concept_net, google_autosuggest
 
 
-TEST_FOLDER = backend_dir / 'tests'
+with open(backend_dir / 'tests' / 'tests.yaml', 'r') as y:
+    spec = yaml.load(y, Loader=yaml.SafeLoader)
 
 class TestFunctions(unittest.TestCase):
 
+    if 'CI' in os.environ:
+        merge_tsvs()
+    quasimodo = Quasimodo(path=str(backend_dir / 'tsv' / 'merged' / 'quasimodo.tsv'))
+    
     # def test_concept_net(self):
-    #     # testing concept_net.get_entities_relations
-    #     reference = ['revolving around the']
-    #     actual = concept_net.get_entities_relations("earth", "sun")
-    #     self.assertEqual(sorted(reference), sorted(actual))
+    #     for test in spec["concept_net_relations"]:
+    #         reference = test['output']
+    #         actual = concept_net.get_entities_relations(
+    #             test["input"]["entities"][0], 
+    #             test["input"]["entities"][1]
+    #         )
+    #         self.assertTrue(
+    #             len(set(reference) - set(actual)) == 0, 
+    #             f"sorted(reference)={sorted(reference)}, sorted(actual)={sorted(actual)}, Expect at least one to be matched"
+    #         )
 
-    #     # testing concept_net.get_entity_props
-    #     reference = ['4.5 billion years old', 'a word', 'an oblate sphereoid', 'an oblate spheroid', 'finite', 'flat', 'one astronomical unit from the Sun', 'one of many planets', 'receive rain from clouds', 'revolving around the sun', 'round like a ball', 'spherical', 'spherical in shape', 'very beautiful', 'very heavy']
-    #     actual = concept_net.get_entity_props("earth", n_best=10)
-    #     self.assertEqual(sorted(reference), sorted(actual))
-
-
-    def test_google_autosuggest(self):
-        # testing google_autosuggest.get_entities_relations
-        # reference = ['revolve around', 'orbit', 'circle the', 'rotate around', 'move around the', 'spin around the', 'not fall into', 'move around']
-        reference = ['revolve around', 'rotate around the', 'orbit', 'need the', 'rotate around', 'not collide with', 'orbit around the', 'spin around the', 'orbit the', 'start orbiting the', 'form after the formation of', 'from the formation of the']
-        actual = google_autosuggest.get_entities_relations("earth", "sun").get("props")
+    def test_google_autosuggest_relations(self):
         # the return values changed all the time, so we just check the API is not broken.
-        self.assertTrue(set(reference) & set(actual))
+        for test in spec["google_autosuggest_relations"]:
+            reference = test["output"]
+            actual = google_autosuggest.get_entities_relations(
+                test["input"]["entities"][0], 
+                test["input"]["entities"][1]
+            ).get("props", [])
+            self.assertTrue(
+                len(set(reference) & set(actual)) > 0, 
+                f"sorted(reference)={sorted(reference)}, sorted(actual)={sorted(actual)}, Expect at least one to be matched"
+            )
+    
+    def test_google_autosuggest_suggestions(self):
+        # the return values changed all the time, so we just check the API is not broken.
+        for test in spec["google_autosuggest_suggestions"]:
+            reference = test["output"]
+            actual = google_autosuggest.get_entity_suggestions(
+                test["input"]["entities"][0], 
+                test["input"]["entities"][1]
+            )
+            
+            self.assertTrue(
+                len(set(reference) & set(actual)) > 0, 
+                f"sorted(reference)={sorted(reference)}, sorted(actual)={sorted(actual)}, Expect at least one to be matched"
+            )
 
-        # # testing google_autosuggest.get_entity_props
-        # reference = ['derived unit', 'fundamental unit', 'derived unit why', 'unit for measuring', 'unit of', 'fundamental unit or derived unit', 'measure of']
-        # actual = google_autosuggest.get_entity_props("newton")
-        # self.assertEqual(sorted(reference), sorted(actual))
 
-        # testing google_autosuggest.get_entity_suggestions
-        # reference = ['benjamin franklin', 'edison', 'faraday']
-        reference = ['benjamin franklin', 'faraday', 'they']
-        actual = google_autosuggest.get_entity_suggestions("electricity", "discovered")
-        self.assertEqual(sorted(reference), sorted(actual))
-
-
-    def test_quasimodo(self):
-        if 'CI' in os.environ:
-            merge_tsvs()
-        quasimodo = Quasimodo(path=str(backend_dir / 'tsv' / 'merged' / 'quasimodo.tsv'))
-        
-        # testing quasimodo.get_entity_props
-        reference = ['has body part hoof', 'eat grass', 'has body part leg', 'need horseshoes', 'has body part nose']
-        actual = [f"{prop[0]} {prop[1]}" for prop in quasimodo.get_entity_props('horse', n_largest=5, plural_and_singular=True)]
-        self.assertEqual(sorted(reference), sorted(actual))
-        
-        # testing quasimodo.get_entities_relations
-        reference = ['be to', 'rotate around', 'pull in', 'orbit', 'be closest star to']
-        actual = quasimodo.get_entities_relations('sun', 'earth', n_largest=5, plural_and_singular=True)
-        self.assertEqual(sorted(reference), sorted(actual))
-
-        # testing quasimodo.get_similarity_between_entities
-        reference = ['has temperature hot', 'has property aesthetic', 'has color blue', 'be in space', 'has property round']
-        actual = [f"{prop[0]} {prop[1]}" for prop in quasimodo.get_similarity_between_entities('sun', 'earth', n_largest=5, plural_and_singular=True)]
-        self.assertEqual(sorted(reference), sorted(actual))
+    def test_quasimodo_props(self):  
+        for test in spec["quasimodo_props"]:
+            reference = test["output"]
+            actual = [
+                f"{prop[0]} {prop[1]}" 
+                for prop in self.quasimodo.get_entity_props(
+                    entity=test["input"]["entities"][0], 
+                    n_largest=test["input"]["n_largest"], 
+                    plural_and_singular=test["input"]["plural_and_singular"]
+                )
+            ]
+            self.assertEqual(
+                sorted(reference),
+                sorted(actual),
+                f"sorted(reference)={sorted(reference)} != sorted(actual)={sorted(actual)}"
+            )
     
 
-    # def test_suggestions(self):
-    #     # testing get_score_between_two_entitites
-    #     reference = 0.887
-    #     actual = suggestions.get_score_between_two_entitites("newton", "faraday")
-    #     self.assertEqual(reference, actual)
+    def test_quasimodo_relations(self):
+        for test in spec["quasimodo_relations"]:
+            reference = test["output"]
+            actual = self.quasimodo.get_entities_relations(
+                entity1=test["input"]["entities"][0], 
+                entity2=test["input"]["entities"][1], 
+                n_largest=test["input"]["n_largest"], 
+                plural_and_singular=test["input"]["plural_and_singular"]
+            )
+            self.assertEqual(
+                sorted(reference), 
+                sorted(actual),
+                f"sorted(reference)={sorted(reference)} != sorted(actual)={sorted(actual)}"
+            )
+    
 
-    #     # testing get_best_matches_for_entity
-    #     reference = [('newton', 'faraday', 0.887),  ('newton', 'wall', 0.508), ('newton', 'apple', 0.463), ('newton', 'window', 0.409), ('newton', 'paper', 0.405)]
-    #     actual = suggestions.get_best_matches_for_entity("newton", ["faraday", "sky", "window", "paper", "photo", "apple", "tomato", "wall", "home", "horse"])
-    #     self.assertEqual(reference, actual)
+    def test_quasimodo_similarity_between_entities(self):
+        for test in spec["quasimodo_similarity_between_entities"]:
+            reference = test["output"]
+            actual = [
+                f"{prop[0]} {prop[1]}" 
+                for prop in self.quasimodo.get_similarity_between_entities(
+                    entity1=test["input"]["entities"][0], 
+                    entity2=test["input"]["entities"][1], 
+                    n_largest=test["input"]["n_largest"], 
+                    plural_and_singular=test["input"]["plural_and_singular"]
+                )
+            ]
+            self.assertEqual(
+                sorted(reference), 
+                sorted(actual),
+                f"sorted(reference)={sorted(reference)} != sorted(actual)={sorted(actual)}"
+            )
 
 
 class TestMappingNoSuggestoins(unittest.TestCase):
 
     def test_without_suggestions(self):
-        with open(TEST_FOLDER / 'tests.yaml', 'r') as y:
-            spec = yaml.load(y, Loader=yaml.SafeLoader)
         mapping_spec = spec["mapping"]
         for tv in mapping_spec:
             if tv["ignore"]:
@@ -122,14 +153,12 @@ class TestMappingNoSuggestoins(unittest.TestCase):
             # check the score
             actual = solution.score
             reference = tv["output"]["score"]
-            self.assertEqual(round(reference, 3), round(actual, 3))
+            self.assertEqual(round(reference, 3), round(actual, 3), f'base={tv["input"]["base"]}, target={tv["input"]["target"]}')
 
 class TestMappingSuggestoins(unittest.TestCase):
 
     def test_suggestoins(self):
-        with open(TEST_FOLDER / 'suggestions.yaml', 'r') as y:
-            spec = yaml.load(y, Loader=yaml.SafeLoader)
-        mapping_spec = spec["mapping"]
+        mapping_spec = spec["suggestions"]
         for tv in mapping_spec:
             if tv["ignore"]:
                 continue

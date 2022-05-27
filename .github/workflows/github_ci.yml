@@ -22,9 +22,12 @@ jobs:
         python backend/tests/ci.py
       env:
         CI: True
-    - name: Evaluation
+    - name: Green Eval Far
       run: |
-        python backend/evaluation/evaluation.py --yaml validation.yaml --algo beam
-    - name: Test-set
+        python backend/evaluation/evaluation.py --yaml green_eval_far.yaml --algo beam --num-of-suggestions 0
+    - name: Green Eval Near
       run: |
-        python backend/evaluation/evaluation.py --yaml testset.yaml --algo beam
+        python backend/evaluation/evaluation.py --yaml green_eval_near.yaml --algo beam --num-of-suggestions 0
+    - name: Extended Problems
+      run: |
+        python backend/evaluation/evaluation.py --yaml testset_new.yaml --algo beam --num-of-suggestions 0

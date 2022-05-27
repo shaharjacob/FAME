@@ -1,3 +1,82 @@
+concept_net_relations:
+  - input:
+      entities:
+        - earth
+        - sun
+    output:
+      - revolving around the
+
+google_autosuggest_relations:
+  - input: 
+      entities:
+        - earth
+        - sun
+    output: 
+      - revolve around 
+      - rotate around the 
+      - orbit
+      - need the
+      - rotate around
+      - not collide with
+      - orbit around the
+      - spin around the
+      - orbit the
+      - start orbiting the
+      - form after the formation of
+      - from the formation of the
+
+google_autosuggest_suggestions:
+  - input: 
+      entities:
+        - electricity
+        - discovered
+      method: google_autosuggest.get_entity_suggestions
+    output: 
+      - benjamin franklin 
+      - faraday 
+      - edison
+
+quasimodo_props:
+  - input:
+      entities:
+        - horse
+      plural_and_singular: true
+      n_largest: 5
+    output:
+      - has body part hoof
+      - eat grass
+      - has body part leg
+      - need horseshoes
+      - has body part nose
+
+quasimodo_relations:
+  - input:
+      entities:
+        - sun
+        - earth
+      plural_and_singular: true
+      n_largest: 5
+    output:
+      - be to
+      - rotate around
+      - pull in
+      - orbit
+      - be closest star to
+
+quasimodo_similarity_between_entities:
+  - input:
+      entities:
+        - sun
+        - earth
+      plural_and_singular: true
+      n_largest: 5
+    output:
+      - has temperature hot
+      - has property aesthetic
+      - has color blue
+      - be in space
+      - has property round
+
 mapping:
   - input: #1
       base: [solar system, sun, planet, gravity, newton]
@@ -19,25 +98,25 @@ mapping:
       score: 22.968
     ignore: False
   
-  - input: #2
-      base: [solar system, sun, planet, gravity, newton]
-      target: [atom, nucleus, electron, electricity, faraday]
-      algo: dfs
-      depth: 4
-      google: True
-      openie: True
-      quasimodo: True
-      gpt3: False
-      conceptnet: False
-    output:
-      mapping:
-        - sun --> nucleus
-        - planet --> electron
-        - solar system --> atom
-        - gravity --> electricity
-        - newton --> faraday
-      score: 22.968
-    ignore: False
+  # - input: #2
+  #     base: [solar system, sun, planet, gravity, newton]
+  #     target: [atom, nucleus, electron, electricity, faraday]
+  #     algo: dfs
+  #     depth: 4
+  #     google: True
+  #     openie: True
+  #     quasimodo: True
+  #     gpt3: False
+  #     conceptnet: False
+  #   output:
+  #     mapping:
+  #       - sun --> nucleus
+  #       - planet --> electron
+  #       - solar system --> atom
+  #       - gravity --> electricity
+  #       - newton --> faraday
+  #     score: 22.968
+  #   ignore: False
     
   - input: #3
       base: [earth, sun, gravity, newton]
@@ -58,24 +137,24 @@ mapping:
       score: 10.078
     ignore: False
 
-  - input: #4
-      base: [earth, sun, gravity, newton]
-      target: [electrons, nucleus, electricity, faraday]
-      algo: dfs
-      depth: 2
-      google: True
-      openie: True
-      quasimodo: True
-      gpt3: False
-      conceptnet: False
-    output:
-      mapping:
-        - earth --> electrons
-        - sun --> nucleus
-        - gravity --> electricity
-        - newton --> faraday
-      score: 10.078
-    ignore: False
+  # - input: #4
+  #     base: [earth, sun, gravity, newton]
+  #     target: [electrons, nucleus, electricity, faraday]
+  #     algo: dfs
+  #     depth: 2
+  #     google: True
+  #     openie: True
+  #     quasimodo: True
+  #     gpt3: False
+  #     conceptnet: False
+  #   output:
+  #     mapping:
+  #       - earth --> electrons
+  #       - sun --> nucleus
+  #       - gravity --> electricity
+  #       - newton --> faraday
+  #     score: 10.078
+  #   ignore: False
   
   - input: #5
       base: [thoughts, brain, neurons]
@@ -95,23 +174,23 @@ mapping:
       score: 7.335
     ignore: False
 
-  - input: #6
-      base: [thoughts, brain, neurons]
-      target: [astronaut, space, stars]
-      algo: dfs
-      depth: 4
-      google: True
-      openie: True
-      quasimodo: True
-      gpt3: True
-      conceptnet: False
-    output:
-      mapping:
-        - brain --> space
-        - neurons --> stars
-        - thoughts --> astronaut
-      score: 7.335
-    ignore: False
+  # - input: #6
+  #     base: [thoughts, brain, neurons]
+  #     target: [astronaut, space, stars]
+  #     algo: dfs
+  #     depth: 4
+  #     google: True
+  #     openie: True
+  #     quasimodo: True
+  #     gpt3: True
+  #     conceptnet: False
+  #   output:
+  #     mapping:
+  #       - brain --> space
+  #       - neurons --> stars
+  #       - thoughts --> astronaut
+  #     score: 7.335
+  #   ignore: False
   
   - input: #7
       base: [cars, road, wheels]
@@ -131,23 +210,23 @@ mapping:
       score: 9.607
     ignore: False
   
-  - input: #8
-      base: [cars, road, wheels]
-      target: [boats, river, sail]
-      algo: dfs
-      depth: 2
-      google: True
-      openie: True
-      quasimodo: True
-      gpt3: False
-      conceptnet: False
-    output:
-      mapping:
-        - cars --> boats
-        - road --> river
-        - wheels --> sail
-      score: 9.607
-    ignore: False
+  # - input: #8
+  #     base: [cars, road, wheels]
+  #     target: [boats, river, sail]
+  #     algo: dfs
+  #     depth: 2
+  #     google: True
+  #     openie: True
+  #     quasimodo: True
+  #     gpt3: False
+  #     conceptnet: False
+  #   output:
+  #     mapping:
+  #       - cars --> boats
+  #       - road --> river
+  #       - wheels --> sail
+  #     score: 9.607
+  #   ignore: False
   
   - input: #9
       base: [sunscreen, sun, summer]
@@ -167,11 +246,32 @@ mapping:
       score: 9.053
     ignore: False
 
-  - input: #10
-      base: [sunscreen, sun, summer]
-      target: [umbrella, rain, winter]
-      algo: dfs
-      depth: 2
+  # - input: #10
+  #     base: [sunscreen, sun, summer]
+  #     target: [umbrella, rain, winter]
+  #     algo: dfs
+  #     depth: 2
+  #     google: True
+  #     openie: True
+  #     quasimodo: True
+  #     gpt3: False
+  #     conceptnet: False
+  #   output:
+  #     mapping:
+  #       - sunscreen --> umbrella
+  #       - sun --> rain
+  #       - summer --> winter
+  #     score: 9.053
+  #   ignore: False
+  
+suggestions:
+  - input: #1
+      base: [earth, sun, gravity, newton]
+      target: [electrons, nucleus, electricity]
+      algo: beam
+      depth: 20
+      solution_rank: 1 # from all solutions
+      num_of_suggestions: 4
       google: True
       openie: True
       quasimodo: True
@@ -179,9 +279,217 @@ mapping:
       conceptnet: False
     output:
       mapping:
-        - sunscreen --> umbrella
-        - sun --> rain
-        - summer --> winter
-      score: 9.053
+        - earth --> electrons
+        - sun --> nucleus
+        - gravity --> electricity
+        - newton --> franklin
+      suggestions:
+        - franklin
+        - benjamin franklin
+        - humans
+        - benjamin
     ignore: False
   
+  # - input: #2
+  #     base: [earth, sun, gravity, newton]
+  #     target: [electrons, nucleus, electricity]
+  #     algo: dfs
+  #     depth: 4
+  #     solution_rank: 1 # from all solutions
+  #     num_of_suggestions: 4
+  #     google: True
+  #     openie: True
+  #     quasimodo: True
+  #     gpt3: False
+  #     conceptnet: False
+  #   output:
+  #     mapping:
+  #       - earth --> electrons
+  #       - sun --> nucleus
+  #       - gravity --> electricity
+  #       - newton --> franklin
+  #     suggestions:
+  #       - franklin
+  #       - benjamin franklin
+  #       - humans
+  #       - benjamin
+  #   ignore: False
+
+  - input: #3
+      base: [earth, newton, gravity]
+      target: [electrons, nucleus, electricity, faraday]
+      algo: beam
+      depth: 20
+      solution_rank: 1 # from all solutions
+      num_of_suggestions: 2
+      google: True
+      openie: True
+      quasimodo: True
+      gpt3: False
+      conceptnet: False
+    output:
+      mapping:
+        - earth --> electrons
+        - gravity --> electricity
+        - newton --> faraday
+        - sun --> nucleus
+      suggestions:
+        - sun
+        - the sun
+    ignore: False
+
+  # - input: #4
+  #     base: [earth, newton, gravity]
+  #     target: [electrons, nucleus, electricity, faraday]
+  #     algo: dfs
+  #     depth: 4
+  #     solution_rank: 1 # from all solutions
+  #     num_of_suggestions: 2
+  #     google: True
+  #     openie: True
+  #     quasimodo: True
+  #     gpt3: False
+  #     conceptnet: False
+  #   output:
+  #     mapping:
+  #       - earth --> electrons
+  #       - gravity --> electricity
+  #       - newton --> faraday
+  #       - sun --> nucleus
+  #     suggestions:
+  #       - sun
+  #       - the sun
+  #   ignore: False
+
+  - input: #5
+      base: [landscaper, lawn]
+      target: [stylist, hair, gel]
+      algo: beam
+      depth: 20
+      solution_rank: 1 # from all solutions
+      num_of_suggestions: 2
+      google: True
+      openie: True
+      quasimodo: True
+      gpt3: False
+      conceptnet: False
+    output:
+      mapping:
+        - landscaper --> stylist
+        - lawn --> hair
+        - fertilizer --> gel
+      suggestions:
+        - fertilizer
+        - water
+    ignore: False
+
+  # - input: #6
+  #     base: [landscaper, lawn]
+  #     target: [stylist, hair, gel]
+  #     algo: dfs
+  #     depth: 4
+  #     solution_rank: 1 # from all solutions
+  #     num_of_suggestions: 2
+  #     google: True
+  #     openie: True
+  #     quasimodo: True
+  #     gpt3: False
+  #     conceptnet: False
+  #   output:
+  #     mapping:
+  #       - landscaper --> stylist
+  #       - lawn --> hair
+  #       - fertilizer --> gel
+  #     suggestions:
+  #       - fertilizer
+  #       - water
+  #   ignore: False
+
+  # - input: #7
+  #     base: [aspirin, pain, fracture]
+  #     target: [antacid, heartburn]
+  #     algo: dfs
+  #     depth: 4
+  #     solution_rank: 1 # from all solutions
+  #     num_of_suggestions: 2
+  #     google: True
+  #     openie: True
+  #     quasimodo: True
+  #     gpt3: False
+  #     conceptnet: False
+  #   output:
+  #     mapping:
+  #       - aspirin --> antacid
+  #       - pain --> heartburn
+  #       - fracture --> stress
+  #     suggestions:
+  #       - stress
+  #       - cancer
+  #   ignore: False
+
+  - input: #8
+      base: [aspirin, pain, fracture]
+      target: [antacid, heartburn]
+      algo: beam
+      depth: 20
+      solution_rank: 1 # from all solutions
+      num_of_suggestions: 2
+      google: True
+      openie: True
+      quasimodo: True
+      gpt3: False
+      conceptnet: False
+    output:
+      mapping:
+        - aspirin --> antacid
+        - pain --> heartburn
+        - fracture --> stress
+      suggestions:
+        - stress
+        - cancer
+    ignore: False
+
+  - input: #9
+      base: [chef, meal, pan, salt] 
+      target: [baker, cake, oven]
+      algo: beam
+      depth: 20
+      solution_rank: 1 # from all solutions
+      num_of_suggestions: 1
+      google: True
+      openie: True
+      quasimodo: True
+      gpt3: True
+      conceptnet: False
+    output:
+      mapping:
+        - chef --> baker
+        - meal --> cake
+        - pan --> oven
+        - salt --> sugar
+      suggestions:
+        - sugar
+    ignore: False
+
+  # - input: #10
+  #     base: [key, mechanism]
+  #     target: [answer, riddle, logic]
+  #     algo: dfs
+  #     depth: 4
+  #     solution_rank: 1 # from all solutions
+  #     num_of_suggestions: 3
+  #     google: True
+  #     openie: True
+  #     quasimodo: True
+  #     gpt3: True
+  #     conceptnet: False
+  #   output:
+  #     mapping:
+  #       - key --> answer
+  #       - mechanism --> logic
+  #       - problem --> riddle
+  #     suggestions: # suggestions where riddle is the missing one
+  #       - problem
+  #       - lock # the expected one
+  #       - feedback
+  #   ignore: True

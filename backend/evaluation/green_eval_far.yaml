@@ -274,7 +274,7 @@ mapping:
       - lambchop --> chapter
       - lamb --> book
 
-  - input: #25 : 3/3
+  - input: #25 : 
       base: [landscaper, lawn]
       target: [stylist, hair]
       depth:
@@ -296,7 +296,7 @@ mapping:
       - launchpad --> divingboard
       - helicopter --> diver
 
-  - input: #27 : No solution found
+  - input: #27 :
       base: [lawschool, lawyer]
       target: [vineyard, wine]
       depth:
