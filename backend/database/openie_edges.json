@@ -65192,5 +65192,152 @@
 		"will say to"
 	],
 	"path#follower": [],
-	"follower#path": []
+	"follower#path": [],
+	"obstructions#destination": [],
+	"difficulties#goal": [],
+	"destination#obstructions": [],
+	"goal#difficulties": [
+		"is",
+		"is fraught with"
+	],
+	"difficulties#plan": [],
+	"plan#difficulties": [
+		"are equal in",
+		"bump into",
+		"faced a series of",
+		"has",
+		"is fraught with",
+		"ran into",
+		"was attended with"
+	],
+	"difficulties#parson": [],
+	"parson#difficulties": [],
+	"difficulties#partner": [
+		"rather are"
+	],
+	"partner#difficulties": [
+		"are having",
+		"can cause"
+	],
+	"goal#parson": [],
+	"parson#goal": [],
+	"goal#partner": [
+		"has been to be",
+		"is also working with",
+		"is for",
+		"is to",
+		"is to be",
+		"is to become",
+		"is to bring value to",
+		"is to find",
+		"is to get",
+		"is to have",
+		"is to help",
+		"is to hire",
+		"is to make",
+		"is to offer",
+		"is to provide",
+		"is to provide each of",
+		"is to support",
+		"is to work as",
+		"is to work with",
+		"will be to"
+	],
+	"partner#goal": [
+		"achieve",
+		"are committed to",
+		"banded together with",
+		"contribute to",
+		"exemplifies",
+		"have",
+		"is set up",
+		"met",
+		"reach",
+		"share",
+		"were able to achieve",
+		"work together to achieve"
+	],
+	"plan#parson": [],
+	"parson#plan": [
+		"then begins putting"
+	],
+	"plan#partner": [
+		"acts primarily as",
+		"can be found at",
+		"extend towards",
+		"identifies",
+		"is for",
+		"is overruled by",
+		"is pleased to",
+		"is to",
+		"only cover",
+		"please enter",
+		"sets out",
+		"will become"
+	],
+	"partner#plan": [
+		"approved",
+		"are living with",
+		"are working on",
+		"developed",
+		"devise",
+		"evaluate",
+		"have",
+		"is one of",
+		"is set up",
+		"make",
+		"must sign off on",
+		"please enter",
+		"quietly pursues",
+		"should share details of",
+		"will develop"
+	],
+	"parson#partner": [],
+	"partner#parson": [],
+	"obstructions#route": [],
+	"route#obstructions": [
+		"must be completely free from",
+		"should be kept clear of"
+	],
+	"obstructions#traveller": [],
+	"traveller#obstructions": [],
+	"obstructions#companion": [],
+	"companion#obstructions": [],
+	"destination#traveller": [
+		"offers"
+	],
+	"traveller#destination": [
+		"are stranded overseas in",
+		"enjoy",
+		"fly into",
+		"has",
+		"has reached",
+		"reach",
+		"return to"
+	],
+	"destination#companion": [
+		"can be"
+	],
+	"companion#destination": [],
+	"route#traveller": [
+		"is perfect for",
+		"offers",
+		"takes"
+	],
+	"traveller#route": [
+		"abandoned",
+		"are travelling",
+		"has a choice of"
+	],
+	"route#companion": [],
+	"companion#route": [
+		"were searching for",
+		"will be following"
+	],
+	"traveller#companion": [
+		"is"
+	],
+	"companion#traveller": [
+		"are the responsibility of"
+	]
 }

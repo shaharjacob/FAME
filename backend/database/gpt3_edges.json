@@ -3948,5 +3948,167 @@
 	"follower#path": [
 		"A follower travels on the path.",
 		"A follower is drawn to the path."
+	],
+	"obstructions#destination": [
+		"An obstruction can prevent something from reaching its destination.",
+		"An obstruction can block something from reaching its destination."
+	],
+	"destination#obstructions": [
+		"A destination is an object that obstructs movement.",
+		"An obstacle is something that stands in the way of a destination."
+	],
+	"difficulties#goal": [
+		"Difficulties are what stands in the way of achieving a goal.",
+		"Achieving a goal requires overcoming difficulties."
+	],
+	"goal#difficulties": [
+		"A:",
+		"Goal = Difficulty"
+	],
+	"difficulties#plan": [
+		"Difficulties are best overcome by having a plan.",
+		"Difficulties can be overcome by having a plan."
+	],
+	"plan#difficulties": [
+		"It's not easy to make a plan.",
+		"It's hard to make a plan."
+	],
+	"difficulties#parson": [
+		"Difficulties are things that parson encounter.",
+		"Difficulties are the problems that parson face."
+	],
+	"parson#difficulties": [
+		"Parson tackles difficulties.",
+		"Parson overcomes difficulties."
+	],
+	"difficulties#partner": [
+		"Difficulties are best faced with a partner.",
+		"Difficulties are best faced with a support network."
+	],
+	"partner#difficulties": [
+		"Difficulties can arise in a partnership.",
+		"Difficulties can be encountered in a partnership."
+	],
+	"goal#plan": [
+		"A goal is a plan with a purpose.",
+		"A goal is a plan with a desired outcome."
+	],
+	"plan#goal": [
+		"A plan is a step-by-step guide to achieving a goal.",
+		"A plan is a road map to achieving a goal."
+	],
+	"goal#parson": [
+		"A goal is scored by a parson.",
+		"A goal is the aim of a parson."
+	],
+	"parson#goal": [
+		"A parson is someone who helps people achieve their goals.",
+		"A parson is someone who helps people reach their goals."
+	],
+	"goal#partner": [
+		"A goal is scored by hitting the ball into the partner's goal.",
+		"A goal is the result of scoring by hitting the ball into the partner's goal."
+	],
+	"partner#goal": [
+		"A partner helps achieve the goal.",
+		"A partner is necessary to achieve the goal."
+	],
+	"plan#parson": [
+		"A plan is a diagram of a building.",
+		"A parson is a person who plans."
+	],
+	"parson#plan": [
+		"A parson is a person who plans.",
+		"A parson is someone who plans."
+	],
+	"plan#partner": [
+		"A plan is a type of partnership.",
+		"A plan is made with a partner."
+	],
+	"partner#plan": [
+		"A partner helps make a plan.",
+		"A partner is someone who helps make a plan."
+	],
+	"parson#partner": [
+		"A parson is a partner in a marriage.",
+		"A parson is someone's partner."
+	],
+	"partner#parson": [
+		"A partner is someone who helps a parson.",
+		"A partner is someone who works with a parson."
+	],
+	"obstructions#route": [
+		"An obstruction blocks the route.",
+		"An obstruction interrupts the route."
+	],
+	"route#obstructions": [
+		"A route is a way to get to a destination without obstruction.",
+		"A route is a path to a destination without obstruction."
+	],
+	"obstructions#traveller": [
+		"A:",
+		"An obstruction can prevent a traveller from reaching their destination."
+	],
+	"traveller#obstructions": [
+		"A traveller can avoid obstructions.",
+		"A traveller can take a detour to avoid obstructions."
+	],
+	"obstructions#companion": [
+		"A:",
+		"An obstruction can be a companion.",
+		"A:",
+		"An obstruction can provide company."
+	],
+	"companion#obstructions": [
+		"A companion can provide obstructions.",
+		"A companion can obstruct an object."
+	],
+	"destination#route": [
+		"A destination is the end of a route.",
+		"A destination is the final stop on a route."
+	],
+	"route#destination": [
+		"A route is the path between the starting point and the destination.",
+		"The destination is the end point of the route."
+	],
+	"destination#traveller": [
+		"A traveller goes to a destination.",
+		"A traveller arrives at a destination."
+	],
+	"traveller#destination": [
+		"A traveller goes to a destination.",
+		"A traveller arrives at a destination."
+	],
+	"destination#companion": [
+		"A destination is a place where a companion is travelling to.",
+		"A destination is a place where a companion is going."
+	],
+	"companion#destination": [
+		"A companion is someone who travels to the same destination.",
+		"A companion is someone who accompanies someone to the same destination."
+	],
+	"route#traveller": [
+		"The route is the path the traveller takes.",
+		"The traveller follows the route."
+	],
+	"traveller#route": [
+		"A traveller follows a route.",
+		"A traveller takes a route."
+	],
+	"route#companion": [
+		"A route is a path with a companion.",
+		"A route is a path that is traveled with a companion."
+	],
+	"companion#route": [
+		"A companion is someone who travels along the route.",
+		"A companion is someone who accompanies you on the route."
+	],
+	"traveller#companion": [
+		"A traveller is accompanied by a companion.",
+		"A traveller is accompanied by a travel companion."
+	],
+	"companion#traveller": [
+		"A companion accompanies a traveller.",
+		"A companion is someone who travels with someone."
 	]
 }
