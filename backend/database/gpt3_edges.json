@@ -3755,5 +3755,53 @@
 	"table#speed": [
 		"A table has a certain speed.",
 		"A table can be moved at a certain speed."
+	],
+	"foundations#buildings": [
+		"The foundations support the buildings.",
+		"The buildings rest on the foundations."
+	],
+	"buildings#foundations": [
+		"Buildings are supported by foundations.",
+		"Buildings rest on foundations."
+	],
+	"reasons#theories": [
+		"A reason is a justification for a theory.",
+		"A reason is a basis for a theory."
+	],
+	"theories#reasons": [
+		"A theory is a proposed explanation for a phenomenon, while a reason is a purpose or motive for something."
+	],
+	"reasons#flaw": [
+		"A reason is a flaw.",
+		"A reason is a mistake.",
+		"A reason is a defect."
+	],
+	"flaw#reasons": [
+		"A flaw is a reason for something to not be perfect.",
+		"A flaw is a reason for something to not be as good as it could be."
+	],
+	"theories#flaw": [
+		"A theory is flawed.",
+		"A theory has a flaw."
+	],
+	"flaw#theories": [
+		"A flaw is a mistake in a theory.",
+		"A flaw is an error in a theory."
+	],
+	"foundations#crack": [
+		"The foundation's cracks can cause the building to collapse.",
+		"The foundation's cracks weaken the building."
+	],
+	"crack#foundations": [
+		"Cracks can undermine the foundations.",
+		"Cracks can cause the foundations to fail."
+	],
+	"buildings#crack": [
+		"Buildings are susceptible to cracking.",
+		"Buildings can crack."
+	],
+	"crack#buildings": [
+		"Cracks in buildings can cause them to collapse.",
+		"Cracks in buildings can lead to their structural failure."
 	]
 }
