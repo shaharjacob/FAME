@@ -23557,5 +23557,85 @@
 	],
 	"carbon dioxide#fuel": [
 		"be used as"
-	]
+	],
+	"orbit#gravity": [],
+	"gravity#orbit": [
+		"affect",
+		"hold planets in",
+		"keep in",
+		"keep moon in",
+		"keep objects in",
+		"keep planets in",
+		"keep plant in",
+		"keep satellites in",
+		"keep things in"
+	],
+	"projectile#gravity": [],
+	"gravity#projectile": [],
+	"trajectory#gravity": [],
+	"gravity#trajectory": [],
+	"air#gravity": [
+		"be affected by"
+	],
+	"gravity#air": [],
+	"computer#memory": [
+		"need",
+		"retrieve"
+	],
+	"memory#computer": [
+		"be important in",
+		"be low on",
+		"be measured in",
+		"be needed in",
+		"be organized in",
+		"be required in",
+		"be stored in",
+		"be used in",
+		"needed for"
+	],
+	"mind#muscles": [],
+	"muscles#mind": [],
+	"mind#senses": [],
+	"senses#mind": [],
+	"memory#muscles": [],
+	"muscles#memory": [
+		"have"
+	],
+	"memory#senses": [],
+	"senses#memory": [
+		"affect",
+		"be associated with"
+	],
+	"memory#mistake": [],
+	"mistake#memory": [],
+	"muscles#senses": [
+		"has property"
+	],
+	"senses#muscles": [],
+	"muscles#mistake": [],
+	"mistake#muscles": [],
+	"senses#mistake": [],
+	"mistake#senses": [],
+	"computer#outputs": [],
+	"outputs#computer": [],
+	"computer#inputs": [],
+	"inputs#computer": [
+		"be necessary for"
+	],
+	"memory#outputs": [],
+	"outputs#memory": [],
+	"memory#inputs": [],
+	"inputs#memory": [],
+	"memory#bug": [],
+	"bug#memory": [],
+	"outputs#inputs": [
+		"has property"
+	],
+	"inputs#outputs": [
+		"be transformed into"
+	],
+	"outputs#bug": [],
+	"bug#outputs": [],
+	"inputs#bug": [],
+	"bug#inputs": []
 }

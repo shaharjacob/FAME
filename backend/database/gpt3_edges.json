@@ -3255,5 +3255,318 @@
 	"carbon dioxide#fuel": [
 		"A:",
 		"Carbon dioxide is a by-product of fuel combustion."
+	],
+	"projectile#trajectory": [
+		"A projectile is anything that is thrown or projected.",
+		"The trajectory is the path that the projectile follows."
+	],
+	"trajectory#projectile": [
+		"A projectile is anything that is thrown or projected.",
+		"A projectile follows a trajectory."
+	],
+	"planet#orbit": [
+		"A planet orbits around the sun.",
+		"A planet revolves around the sun."
+	],
+	"orbit#planet": [
+		"A planet orbits around the sun.",
+		"A planet revolves around the sun."
+	],
+	"planet#space": [
+		"A planet resides in space.",
+		"A planet occupies space."
+	],
+	"space#planet": [
+		"Space exists between planets.",
+		"Space is infinite, and planets are finite."
+	],
+	"orbit#sun": [
+		"The orbit of a planet around the sun.",
+		"The orbit of a planet is a path that it takes around the sun."
+	],
+	"sun#orbit": [
+		"The sun's orbit is elliptical.",
+		"The sun's orbit is not a perfect circle."
+	],
+	"orbit#space": [
+		"Orbit is a path that an object traces around a larger object in space.",
+		"Orbit is the path of an object around a larger object in space."
+	],
+	"space#orbit": [
+		"A space is the orbit of an object around a larger one.",
+		"A space is the area in which an object revolves around a larger one."
+	],
+	"orbit#gravity": [
+		"Orbit is affected by gravity.",
+		"Orbit is a result of gravity."
+	],
+	"gravity#orbit": [
+		"Gravity pulls an object towards the center of the orbit.",
+		"Gravity creates an orbit."
+	],
+	"sun#space": [
+		"The sun is in space.",
+		"The sun is located in space."
+	],
+	"space#sun": [
+		"Space is located around the sun.",
+		"Space is illuminated by the sun."
+	],
+	"space#gravity": [
+		"Gravity exists in space.",
+		"Gravity affects space."
+	],
+	"gravity#space": [
+		"Gravity exists in space.",
+		"Gravity is present in space."
+	],
+	"projectile#earth": [
+		"A projectile is affected by the earth's gravity.",
+		"A projectile is pulled towards the earth by gravity."
+	],
+	"earth#projectile": [
+		"A projectile is fired from the earth.",
+		"A projectile is propelled away from the earth."
+	],
+	"projectile#air": [
+		"A projectile fired in the air experiences air resistance.",
+		"A projectile in the air is slowed by air resistance."
+	],
+	"air#projectile": [],
+	"projectile#gravity": [
+		"A projectile is affected by gravity.",
+		"A projectile falls due to gravity."
+	],
+	"gravity#projectile": [
+		"Gravity affects the projectile's trajectory.",
+		"Gravity affects the projectile's speed."
+	],
+	"trajectory#earth": [
+		"A trajectory is the path of an object as it moves through space.",
+		"The trajectory of an object is determined by the Earth's gravity."
+	],
+	"earth#trajectory": [
+		"The trajectory of an object is determined by the earth's gravity.",
+		"The trajectory of an object is determined by the earth's force."
+	],
+	"trajectory#air": [
+		"A trajectory is the path of an object in the air.",
+		"A trajectory is determined by the air."
+	],
+	"air#trajectory": [
+		"Air resistance affects the trajectory of an object.",
+		"Air resistance determines the trajectory of an object."
+	],
+	"trajectory#gravity": [
+		"The trajectory of an object is determined by gravity.",
+		"The trajectory of an object is affected by gravity."
+	],
+	"gravity#trajectory": [
+		"Gravity affects the trajectory of an object.",
+		"The trajectory of an object is affected by gravity."
+	],
+	"earth#air": [
+		"Earth creates air.",
+		"Earth is the source of air."
+	],
+	"air#earth": [
+		"Air surrounds earth.",
+		"Air is above earth.",
+		"Air is below earth."
+	],
+	"earth#gravity": [
+		"Gravity is the force that attracts objects towards the center of the earth.",
+		"Gravity is the natural force that attracts objects towards the center of the earth."
+	],
+	"gravity#earth": [
+		"Gravity is the force that attracts objects towards the center of the Earth.",
+		"Gravity is the natural force that attracts objects towards the center of the Earth."
+	],
+	"air#gravity": [
+		"Air is affected by gravity.",
+		"Air is pulled down by gravity."
+	],
+	"gravity#air": [
+		"Gravity pulls air down.",
+		"Gravity affects air pressure."
+	],
+	"computer#memory": [
+		"A computer has a memory.",
+		"A computer stores data in its memory."
+	],
+	"memory#computer": [
+		"A computer stores memory.",
+		"Memory is stored on a computer."
+	],
+	"mind#muscles": [
+		"The mind controls the muscles."
+	],
+	"muscles#mind": [
+		"Muscles are controlled by the mind.",
+		"Muscles are moved by the mind."
+	],
+	"mind#senses": [
+		"The mind controls the senses.",
+		"The mind interprets the senses."
+	],
+	"senses#mind": [
+		"Senses input information to the mind.",
+		"The mind receives input from the senses."
+	],
+	"mind#mistake": [
+		"A mistake can be a result of the mind.",
+		"The mind can lead to mistakes."
+	],
+	"mistake#mind": [
+		"A mistake is a product of the mind.",
+		"A mistake is a reflection of the mind."
+	],
+	"memory#muscles": [
+		"Memory is stored in muscles.",
+		"Memory is encoded in muscles."
+	],
+	"muscles#memory": [
+		"Muscles store memory.",
+		"Muscles are necessary for storing memory."
+	],
+	"memory#senses": [
+		"Memory is based on the senses.",
+		"Memory is the result of the senses."
+	],
+	"senses#memory": [
+		"Sensory input is stored in short-term memory, which is then transferred to long-term memory.",
+		"Sensory input is stored in short-term memory, which can be recalled later."
+	],
+	"memory#mistake": [
+		"A memory is an error-free record of past events.",
+		"A memory can be inaccurate."
+	],
+	"mistake#memory": [
+		"Memory is where we store our mistakes.",
+		"Mistakes are often remembered because they are embarrassing.",
+		"Memory is the ability to remember mistakes."
+	],
+	"muscles#senses": [
+		"Muscles are what allow senses to function.",
+		"Muscles are necessary for senses to work."
+	],
+	"senses#muscles": [
+		"The senses control the muscles.",
+		"The senses are responsible for the movement of the muscles."
+	],
+	"muscles#mistake": [
+		"Muscles enable us to make mistakes.",
+		"Muscles are necessary for making mistakes."
+	],
+	"mistake#muscles": [
+		"Mistakes are often the result of incorrect muscle movements.",
+		"Muscle movements often lead to mistakes."
+	],
+	"senses#mistake": [
+		"Our senses can lead us to mistakes.",
+		"Our senses can deceive us."
+	],
+	"mistake#senses": [
+		"Mistakes can be detected through the senses.",
+		"Sensory information can help avoid mistakes."
+	],
+	"computer#outputs": [
+		"A computer has outputs.",
+		"A computer can produce outputs."
+	],
+	"outputs#computer": [
+		"Outputs are generated by the computer.",
+		"Outputs are the results of the computer."
+	],
+	"buyer#merchandise": [
+		"The buyer purchases the merchandise.",
+		"The buyer buys the merchandise."
+	],
+	"merchandise#buyer": [
+		"The merchandise is bought by the buyer.",
+		"The merchandise is sold to the buyer."
+	],
+	"believer#belief": [
+		"A believer believes in a belief."
+	],
+	"belief#believer": [
+		"A belief is something that a believer believes in.",
+		"A belief is a thought or opinion that a person believes."
+	],
+	"computer#inputs": [
+		"A computer accepts inputs from various sources.",
+		"A computer receives inputs from various sources."
+	],
+	"inputs#computer": [
+		"An input is data that is entered into a computer.",
+		"Data that is entered into a computer is an input."
+	],
+	"computer#bug": [
+		"A computer has software bugs.",
+		"A computer has insects."
+	],
+	"bug#computer": [],
+	"memory#outputs": [
+		"Outputs can be stored in memory.",
+		"Outputs can be remembered."
+	],
+	"outputs#memory": [
+		"Outputs are stored in memory.",
+		"Outputs are saved in memory."
+	],
+	"money#budget": [
+		"Money is allocated in the budget.",
+		"The budget determines how much money is available."
+	],
+	"budget#money": [
+		"A budget is a plan for the spending of money.",
+		"A budget is a limit on the amount of money that can be spent."
+	],
+	"memory#inputs": [
+		"The input is stored in the memory.",
+		"The input is remembered by the memory."
+	],
+	"inputs#memory": [
+		"Inputs store data in memory.",
+		"Inputs are necessary to store data in memory."
+	],
+	"time#schedule": [
+		"A schedule organizes time.",
+		"Time cannot be scheduled."
+	],
+	"schedule#time": [
+		"A schedule tells you what time something is.",
+		"A schedule is a plan of what time something happens."
+	],
+	"memory#bug": [
+		"Memory is like a bug because it can be hard to find and it's important to squash them.",
+		"Memory is like a bug because it's small and can cause a lot of damage."
+	],
+	"bug#memory": [
+		"Memory is where a bug is stored.",
+		"Memory is where bugs are stored."
+	],
+	"outputs#inputs": [
+		"Outputs are the results of inputs.",
+		"Outputs are what come from inputs."
+	],
+	"inputs#outputs": [
+		"The input is the data that is entered into a system, while the output is the data that is produced by the system."
+	],
+	"outputs#bug": [
+		"Outputs report and track bug activity.",
+		"Outputs are where bug activity is tracked."
+	],
+	"bug#outputs": [
+		"Bugs produce outputs.",
+		"Bugs generate outputs."
+	],
+	"inputs#bug": [
+		"Bug is a result of inputs.",
+		"Bug is a type of input."
+	],
+	"bug#inputs": [
+		"A:",
+		"Bug captures inputs for processing."
 	]
 }
