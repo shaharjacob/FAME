@@ -23432,5 +23432,106 @@
 	"burner#thermodynamics": [],
 	"thermodynamics#burner": [],
 	"water tower#hydrodynamics": [],
-	"hydrodynamics#water tower": []
+	"hydrodynamics#water tower": [],
+	"respiration#oxygen": [
+		"get",
+		"need",
+		"require",
+		"use"
+	],
+	"oxygen#respiration": [
+		"be important in",
+		"be important to",
+		"be necessary for",
+		"be needed for",
+		"be used in",
+		"become in",
+		"play role in"
+	],
+	"respiration#carbon dioxide": [
+		"add",
+		"produce"
+	],
+	"carbon dioxide#respiration": [
+		"be formed during",
+		"has property"
+	],
+	"animal#oxygen": [
+		"breathe",
+		"breathe in",
+		"get",
+		"need",
+		"require",
+		"take in",
+		"use",
+		"use most instead"
+	],
+	"oxygen#animal": [
+		"be common in",
+		"be important for",
+		"be important to",
+		"be taken in by",
+		"be used by"
+	],
+	"animal#carbon dioxide": [
+		"breathe",
+		"breathe out",
+		"give off",
+		"make",
+		"produce",
+		"release",
+		"use"
+	],
+	"carbon dioxide#animal": [
+		"affect",
+		"kill"
+	],
+	"food#oxygen": [],
+	"oxygen#food": [
+		"affect"
+	],
+	"food#carbon dioxide": [],
+	"carbon dioxide#food": [
+		"preserve"
+	],
+	"oxygen#carbon dioxide": [
+		"be converted into",
+		"become",
+		"have",
+		"produce"
+	],
+	"carbon dioxide#oxygen": [
+		"be different from",
+		"be different to",
+		"be heavier than",
+		"become",
+		"dissolve better than",
+		"has property",
+		"make",
+		"need",
+		"react with",
+		"turn into"
+	],
+	"combustion#oxygen": [
+		"need",
+		"require"
+	],
+	"oxygen#combustion": [
+		"be required for",
+		"be used for",
+		"support"
+	],
+	"combustion#carbon dioxide": [],
+	"carbon dioxide#combustion": [
+		"be formed during"
+	],
+	"slot machines#reels": [],
+	"bacteria#genes": [
+		"can recognize"
+	],
+	"reels#slot machines": [],
+	"genes#bacteria": [
+		"be organized in",
+		"be transferred between"
+	]
 }

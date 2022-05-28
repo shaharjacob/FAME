@@ -1,18 +1,18 @@
-import os
-from pathlib import Path
-from typing import List, Tuple, Dict
+from typing import List, Dict
 
+import torch
 import numpy as np
 from click import secho
 from sklearn.cluster import AgglomerativeClustering
 from sentence_transformers import SentenceTransformer, util
 
-from mapping.data_collector import DataCollector
+device = "cuda" if torch.cuda.is_available() else "cpu"
+# device = "mps" if torch.backends.mps.is_available() else device
 
 
 class SentenceEmbedding(SentenceTransformer):
     def __init__(self, model: str = 'msmarco-distilbert-base-v4'):
-        super().__init__(model)
+        super().__init__(model, device=device)
         self.embaddings = {}
 
     

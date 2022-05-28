@@ -35627,5 +35627,208 @@
 	"burner#thermodynamics": [],
 	"thermodynamics#burner": [],
 	"water tower#hydrodynamics": [],
-	"hydrodynamics#water tower": []
+	"hydrodynamics#water tower": [],
+	"respiration#oxygen": [
+		"affect",
+		"get",
+		"of fats require more",
+		"produce more atp in the presence of",
+		"receive",
+		"require",
+		"use",
+		"uses"
+	],
+	"oxygen#respiration": [
+		"a critical component of aerobic",
+		"affect",
+		"affect cellular",
+		"affect the process of cellular",
+		"and carbon dioxide levels in the blood affect",
+		"concentration affect cellular",
+		"consumed during cellular",
+		"do in cellular",
+		"enter the cell for cellular",
+		"get into the mitochondria in cellular",
+		"get to the cells for",
+		"important in aerobic",
+		"important in cellular",
+		"involved in cellular",
+		"levels affect cellular",
+		"necessary for cellular",
+		"necessary in aerobic cellular",
+		"needed for",
+		"needed in cellular",
+		"play a minor role in",
+		"play such an important role in cellular",
+		"reduced in cellular",
+		"supplied for artificial",
+		"used during cellular",
+		"used in",
+		"used in aerobic",
+		"used in cellular"
+	],
+	"respiration#carbon dioxide": [
+		"add",
+		"increase the level of"
+	],
+	"carbon dioxide#respiration": [
+		"a byproduct of cellular",
+		"affect",
+		"affect cellular",
+		"affect the rate of",
+		"concentration affect",
+		"concentration affect the rate of",
+		"formed in cellular",
+		"important in",
+		"important in cellular",
+		"is produced during",
+		"levels affect cellular",
+		"produced during cellular",
+		"produced in",
+		"produced in aerobic",
+		"produced in cellular",
+		"related to cellular",
+		"the most important chemical regulator of",
+		"used in cellular"
+	],
+	"animal#oxygen": [
+		"adapt to low",
+		"and plants living in water and soil get",
+		"and plants need",
+		"breathe",
+		"cells get",
+		"cells need",
+		"cells take in",
+		"get",
+		"in eggs get",
+		"living in soil take in",
+		"need",
+		"need a continuous supply of",
+		"need to inhale",
+		"obtain",
+		"require",
+		"take",
+		"use"
+	],
+	"oxygen#animal": [
+		"added to the atmosphere important to",
+		"affect",
+		"and glucose get to the mitochondria of plants and",
+		"consumption have to be normalized when comparing to",
+		"consumption have to be normalized when comparing two",
+		"cycle between plants and",
+		"important for plants and",
+		"important to",
+		"important to humans and",
+		"needed by both plants and",
+		"taken in by",
+		"transported by blood in",
+		"used by plants and",
+		"useful to"
+	],
+	"animal#carbon dioxide": [
+		"affect",
+		"benefit from",
+		"breathe out",
+		"exhale",
+		"get rid of",
+		"need",
+		"produce",
+		"release",
+		"use"
+	],
+	"carbon dioxide#animal": [
+		"affect",
+		"affect plants and",
+		"bad for",
+		"cycle back and forth between plants and",
+		"stun",
+		"used to slaughter",
+		"used to stun"
+	],
+	"food#oxygen": [],
+	"oxygen#food": [
+		"affect",
+		"affect the functional properties of",
+		"break down",
+		"help in using up the",
+		"important in",
+		"need",
+		"spoil"
+	],
+	"food#carbon dioxide": [
+		"miles create"
+	],
+	"carbon dioxide#food": [
+		"affect",
+		"in",
+		"preserve",
+		"used in"
+	],
+	"oxygen#carbon dioxide": [
+		"and",
+		"become",
+		"change to",
+		"diffuse faster than",
+		"require a larger partial pressure gradient than",
+		"turn into"
+	],
+	"carbon dioxide#oxygen": [
+		"affect",
+		"affect hemoglobin's affinity for",
+		"carried in dissolved form in the blood than",
+		"change into",
+		"diffuse faster than",
+		"displace",
+		"dissolve better in plasma than",
+		"exchanged with",
+		"heavier than",
+		"more soluble in blood than",
+		"more soluble in water than",
+		"more soluble than",
+		"need",
+		"obtain",
+		"remove",
+		"turn into",
+		"turned into"
+	],
+	"combustion#oxygen": [
+		"need",
+		"require"
+	],
+	"oxygen#combustion": [
+		"a supporter of",
+		"affect",
+		"cause",
+		"help",
+		"help in",
+		"necessary for",
+		"needed for",
+		"play in",
+		"required for",
+		"support",
+		"used in"
+	],
+	"combustion#carbon dioxide": [
+		"release"
+	],
+	"carbon dioxide#combustion": [
+		"does not support",
+		"produced in"
+	],
+	"slot machines#reels": [],
+	"bacteria#genes": [
+		"acquire new",
+		"acquire resistance",
+		"exchange",
+		"share",
+		"transfer"
+	],
+	"reels#slot machines": [],
+	"genes#bacteria": [
+		"expression controlled in",
+		"expression regulated in",
+		"for erythrogenic toxin get passed between",
+		"introduced into"
+	]
 }

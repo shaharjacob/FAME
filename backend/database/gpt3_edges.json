@@ -2887,5 +2887,334 @@
 		"A bucket can be filled with water to study hydrodynamics.",
 		"A bucket is a good tool for studying hydrodynamics."
 	],
-	"hydrodynamics#bucket": []
+	"hydrodynamics#bucket": [],
+	"sounds#wall": [
+		"A:",
+		"Sounds bounce off of walls."
+	],
+	"wall#sounds": [
+		"Wall reflects sounds.",
+		"Wall amplifies sounds."
+	],
+	"sounds#insulation": [
+		"Insulation absorbs sounds."
+	],
+	"insulation#sounds": [],
+	"wall#air": [],
+	"air#wall": [],
+	"wall#insulation": [
+		"Wall is insulated by insulation.",
+		"Wall is covered by insulation."
+	],
+	"insulation#wall": [
+		"Insulation helps keep the wall warm.",
+		"Insulation prevents the wall from getting too warm."
+	],
+	"air#insulation": [
+		"Insulation prevents air from escaping.",
+		"Insulation keeps the air inside."
+	],
+	"insulation#air": [
+		"Insulation prevents air from entering or leaving.",
+		"Insulation helps to keep air from entering or leaving."
+	],
+	"solar system#sun": [
+		"The solar system orbits around the sun.",
+		"The solar system is revolving around the sun."
+	],
+	"sun#solar system": [
+		"The sun is the center of the solar system.",
+		"The sun is the biggest star in the solar system."
+	],
+	"atom#nucleus": [
+		"Atom is the smallest particle of an element that has the chemical properties of that element.",
+		"The nucleus is the center of the atom."
+	],
+	"nucleus#atom": [
+		"The nucleus is the heart of the atom.",
+		"The nucleus is the most important part of the atom."
+	],
+	"atom#electron": [
+		"Atom is the smallest particle of an element that has the chemical properties of the element.",
+		"An electron is a subatomic particle that orbits the nucleus of an atom."
+	],
+	"electron#atom": [
+		"Electrons orbit the nucleus of an atom."
+	],
+	"atom#electromagnetism": [
+		"Atom is affected by electromagnetism.",
+		"Atom is composed of electromagnetism."
+	],
+	"electromagnetism#atom": [
+		"Electromagnetism is the force that binds atoms together.",
+		"Electromagnetism is the force that holds atoms together."
+	],
+	"nucleus#electron": [
+		"The nucleus contains the electrons.",
+		"The electrons orbit around the nucleus."
+	],
+	"electron#nucleus": [
+		"A:",
+		"An electron orbits the nucleus."
+	],
+	"nucleus#electromagnetism": [
+		"Electromagnetism affects the nucleus.",
+		"Electromagnetism surrounds the nucleus."
+	],
+	"electromagnetism#nucleus": [
+		"A:",
+		"Electromagnetism is the force that attracts electrons and nuclei together."
+	],
+	"electron#electromagnetism": [
+		"Electromagnetism attracts electrons."
+	],
+	"electromagnetism#electron": [
+		"Electromagnetism attracts electrons."
+	],
+	"solar system#planet": [
+		"A solar system contains one or more planets.",
+		"Planets orbit around the sun in a solar system."
+	],
+	"planet#solar system": [
+		"A planet orbits around the sun.",
+		"A planet is a part of the solar system."
+	],
+	"solar system#gravity": [
+		"The gravity of the sun affects the planets in the solar system.",
+		"The gravity of the planets affects the sun in the solar system."
+	],
+	"gravity#solar system": [
+		"Gravity affects the solar system.",
+		"The gravity of the sun affects the planets in the solar system."
+	],
+	"sun#planet": [
+		"The sun is the source of light and heat for planets.",
+		"The sun is the biggest object in the solar system.",
+		"The sun is the center of the solar system."
+	],
+	"planet#sun": [
+		"A planet revolves around the sun.",
+		"A planet is much smaller than the sun."
+	],
+	"sun#gravity": [
+		"The sun produces gravity.",
+		"The sun creates gravity."
+	],
+	"gravity#sun": [
+		"A:",
+		"The gravity of the sun affects the planets orbiting around it."
+	],
+	"planet#gravity": [
+		"A planet orbits around the sun due to gravity.",
+		"A planet revolves around the sun because of gravity."
+	],
+	"gravity#planet": [
+		"Gravity affects planets.",
+		"Gravity is what keeps planets in orbit."
+	],
+	"atom#charge": [
+		"Atom has a charge.",
+		"Atom has a positive charge.",
+		"Atom has a negative charge."
+	],
+	"charge#atom": [
+		"Charge is the force that attracts atoms together.",
+		"Charge is what makes atoms stick together."
+	],
+	"nucleus#charge": [
+		"The nucleus has a positive charge.",
+		"The nucleus has a negative charge."
+	],
+	"charge#nucleus": [
+		"Charge attracts the nucleus."
+	],
+	"electron#charge": [
+		"Electrons have a negative charge.",
+		"Electrons are negatively charged."
+	],
+	"charge#electron": [
+		"Charge is the property of an electron.",
+		"Charge is the amount of energy an electron has."
+	],
+	"electromagnetism#charge": [
+		"Electromagnetism is the force that attracts or repels charged particles.",
+		"Electromagnetism is the interaction between charged particles."
+	],
+	"charge#electromagnetism": [
+		"Charge creates electromagnetism.",
+		"Charge is the cause of electromagnetism."
+	],
+	"solar system#mass": [
+		"A:",
+		"The mass of the solar system affects the orbits of the planets."
+	],
+	"mass#solar system": [
+		"A:",
+		"The mass of an object affects the gravitational pull it has on objects in the solar system."
+	],
+	"sun#mass": [
+		"The sun has the mass of about 333,000 Earths.",
+		"The sun has the mass of about 333,000 planets."
+	],
+	"mass#sun": [
+		"A:"
+	],
+	"planet#mass": [
+		"A planet has mass.",
+		"A planet is a large object that has mass."
+	],
+	"mass#planet": [
+		"The mass of a planet affects its gravitational pull.",
+		"The mass of a planet determines its gravitational pull."
+	],
+	"gravity#mass": [
+		"Gravity is a force that is exerted by a mass.",
+		"Gravity is the result of the mass of an object."
+	],
+	"mass#gravity": [
+		"The more mass an object has, the more gravity it has."
+	],
+	"combustion#fire": [
+		"Combustion is the process that produces fire.",
+		"Combustion is what makes fire."
+	],
+	"fire#combustion": [
+		"Combustion is the process that produces fire.",
+		"Fire cannot exist without combustion."
+	],
+	"respiration#animal": [
+		"Respiration is the process that occurs in animals.",
+		"Respiration is the process that takes place in animals."
+	],
+	"animal#respiration": [
+		"Animals respire in order to obtain oxygen.",
+		"Animals breathe in order to obtain oxygen."
+	],
+	"respiration#food": [
+		"Respiration breaks down food molecules to release energy.",
+		"Respiration is necessary to break down food molecules to release energy."
+	],
+	"food#respiration": [
+		"A:",
+		"Food is necessary for respiration."
+	],
+	"respiration#oxygen": [
+		"Oxygen is necessary for respiration.",
+		"Respiration requires oxygen."
+	],
+	"oxygen#respiration": [
+		"Oxygen is necessary for respiration.",
+		"Oxygen is a component of respiration."
+	],
+	"respiration#carbon dioxide": [
+		"Respiration releases carbon dioxide.",
+		"Carbon dioxide is a by-product of respiration."
+	],
+	"carbon dioxide#respiration": [
+		"Carbon dioxide is a by-product of respiration.",
+		"Carbon dioxide is necessary for respiration."
+	],
+	"animal#food": [
+		"Animals eat food.",
+		"Animals need food to survive."
+	],
+	"food#animal": [
+		"Food is what animals eat.",
+		"Animals eat food."
+	],
+	"animal#oxygen": [
+		"Animals breathe oxygen.",
+		"Animals need oxygen to survive."
+	],
+	"oxygen#animal": [
+		"Animals need oxygen to survive.",
+		"Animals breathe in oxygen."
+	],
+	"animal#carbon dioxide": [
+		"Animals breathe in carbon dioxide."
+	],
+	"carbon dioxide#animal": [
+		"Carbon dioxide is a gas that animals exhale.",
+		"Carbon dioxide is a gas that animals produce."
+	],
+	"food#oxygen": [
+		"The human body needs food to produce oxygen.",
+		"Eating food provides the body with oxygen."
+	],
+	"oxygen#food": [
+		"Oxygen is necessary for the body to digest food.",
+		"Oxygen is one of the elements of food."
+	],
+	"food#carbon dioxide": [
+		"A:",
+		"Food produces carbon dioxide."
+	],
+	"carbon dioxide#food": [
+		"Carbon dioxide is a by-product of food.",
+		"Carbon dioxide is a waste product of food."
+	],
+	"sound#horn": [
+		"Sound waves are emitted by the horn.",
+		"Sound waves are amplified by the horn."
+	],
+	"horn#sound": [
+		"A horn emits sound.",
+		"A horn makes sound."
+	],
+	"light#lens": [
+		"A lens can focus light.",
+		"A lens can bend light."
+	],
+	"lens#light": [
+		"A lens can focus light.",
+		"A lens can bend light.",
+		"A lens can magnify light."
+	],
+	"oxygen#carbon dioxide": [
+		"Oxygen is used up by plants to create carbon dioxide.",
+		"Carbon dioxide is created when oxygen is used by plants."
+	],
+	"carbon dioxide#oxygen": [
+		"Carbon dioxide is produced when oxygen is used.",
+		"Carbon dioxide is a waste product of oxygen."
+	],
+	"combustion#fuel": [
+		"Combustion occurs when fuel is ignited.",
+		"Combustion is the process of burning fuel."
+	],
+	"fuel#combustion": [
+		"Fuel is burned in a combustion engine.",
+		"The combustion of fuel produces energy."
+	],
+	"slot machines#reels": [
+		"Slot machines have reels.",
+		"Slot machines have spinning reels."
+	],
+	"reels#slot machines": [
+		"Slot machines have reels.",
+		"Slot machines have one or more reels."
+	],
+	"combustion#oxygen": [
+		"Combustion needs oxygen.",
+		"Oxygen is necessary for combustion."
+	],
+	"oxygen#combustion": [
+		"Oxygen is necessary for combustion."
+	],
+	"bacteria#genes": [
+		"Bacteria transfer their genes to other bacteria.",
+		"Bacteria can exchange their genes with other bacteria."
+	],
+	"genes#bacteria": [
+		"Genes are found in bacteria.",
+		"Genes are located in bacteria."
+	],
+	"combustion#carbon dioxide": [
+		"Combustion produces carbon dioxide.",
+		"Carbon dioxide is a product of combustion."
+	],
+	"carbon dioxide#combustion": [
+		"Carbon dioxide is a by-product of combustion.",
+		"Carbon dioxide is a waste product of combustion."
+	]
 }
