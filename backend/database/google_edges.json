@@ -36109,5 +36109,25 @@
 		"airlines make",
 		"apps make"
 	],
-	"schedule#time": []
+	"schedule#time": [],
+	"light#darkness": [
+		"affect the",
+		"dispel",
+		"overcome",
+		"work in"
+	],
+	"knowledge#confusion": [],
+	"darkness#light": [
+		"faster than",
+		"respond to"
+	],
+	"confusion#knowledge": [],
+	"knowledge#interpretation": [],
+	"interpretation#knowledge": [],
+	"confusion#interpretation": [],
+	"interpretation#confusion": [],
+	"light#view": [],
+	"view#light": [],
+	"darkness#view": [],
+	"view#darkness": []
 }

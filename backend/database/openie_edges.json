@@ -64855,5 +64855,122 @@
 		"show",
 		"start",
 		"wake up at"
-	]
+	],
+	"light#darkness": [
+		"appeared in",
+		"becomes",
+		"broke through",
+		"came into",
+		"can be swallowed only by",
+		"curse",
+		"dispels",
+		"embraced",
+		"enters",
+		"has",
+		"is",
+		"is better than",
+		"is from",
+		"is in",
+		"meets",
+		"penetrated",
+		"pierced",
+		"still shines in",
+		"was separated from",
+		"will always overcome"
+	],
+	"knowledge#confusion": [
+		"is",
+		"leads to",
+		"started"
+	],
+	"darkness#light": [
+		"becomes",
+		"come into",
+		"come to",
+		"comes",
+		"find",
+		"gives way to",
+		"hates",
+		"hateth",
+		"have seen",
+		"is",
+		"is the absence of",
+		"is the lack of",
+		"is the opposite of",
+		"meets",
+		"see",
+		"turns into",
+		"turns to",
+		"will be brought to",
+		"will see"
+	],
+	"confusion#knowledge": [
+		"is the lack of"
+	],
+	"knowledge#interpretation": [
+		"is",
+		"provides a mental tool for",
+		"takes the form of"
+	],
+	"interpretation#knowledge": [
+		"relies on"
+	],
+	"confusion#interpretation": [
+		"stems from"
+	],
+	"interpretation#confusion": [
+		"created",
+		"has caused",
+		"identifies"
+	],
+	"light#view": [
+		"are",
+		"are hidden from",
+		"block",
+		"came into",
+		"come through",
+		"disappeared from",
+		"enjoy",
+		"flashed in",
+		"has",
+		"hearted",
+		"is blocked from",
+		"magnifies",
+		"offer",
+		"provided",
+		"remained in",
+		"sprang into",
+		"stole into",
+		"was eventually lost from",
+		"were in",
+		"would be hidden from"
+	],
+	"view#light": [
+		"add to",
+		"are discussed in",
+		"are examined in",
+		"came to",
+		"can shed",
+		"get directions for",
+		"has",
+		"has been revised in",
+		"is brought to",
+		"is flooded with",
+		"is rounded off with",
+		"is untenable in",
+		"led",
+		"made in",
+		"match",
+		"serves",
+		"shows",
+		"spans about",
+		"waikiki",
+		"was spectacular with"
+	],
+	"darkness#view": [
+		"comes into",
+		"is",
+		"stole"
+	],
+	"view#darkness": []
 }

@@ -23672,5 +23672,24 @@
 	"money#budget": [],
 	"time#schedule": [],
 	"budget#money": [],
-	"schedule#time": []
+	"schedule#time": [],
+	"light#darkness": [
+		"be better than"
+	],
+	"knowledge#confusion": [],
+	"darkness#light": [
+		"be attracted to",
+		"be faster than",
+		"can remove",
+		"has movement"
+	],
+	"confusion#knowledge": [],
+	"knowledge#interpretation": [],
+	"interpretation#knowledge": [],
+	"confusion#interpretation": [],
+	"interpretation#confusion": [],
+	"light#view": [],
+	"view#light": [],
+	"darkness#view": [],
+	"view#darkness": []
 }

@@ -3803,5 +3803,53 @@
 	"crack#buildings": [
 		"Cracks in buildings can cause them to collapse.",
 		"Cracks in buildings can lead to their structural failure."
+	],
+	"light#darkness": [
+		"Light is the absence of darkness.",
+		"Darkness is the absence of light."
+	],
+	"darkness#light": [
+		"Darkness is the absence of light.",
+		"Darkness is the absence of photons."
+	],
+	"knowledge#confusion": [
+		"Knowledge dispels confusion.",
+		"Knowledge is the opposite of confusion."
+	],
+	"confusion#knowledge": [
+		"Confusion can lead to knowledge.",
+		"Confusion can be a source of knowledge."
+	],
+	"knowledge#interpretation": [
+		"Knowledge is the object, interpretation is the process.",
+		"Knowledge is what is known, interpretation is how it is known."
+	],
+	"interpretation#knowledge": [
+		"Interpretation is a form of knowledge.",
+		"Interpretation is a way of acquiring knowledge."
+	],
+	"confusion#interpretation": [
+		"Confusion can lead to different interpretations.",
+		"Interpretations can be confused."
+	],
+	"interpretation#confusion": [
+		"Interpretation clears up confusion.",
+		"Interpretation resolves confusion."
+	],
+	"light#view": [
+		"Light allows us to see.",
+		"Light is necessary for sight."
+	],
+	"view#light": [
+		"Light is necessary to see an object.",
+		"Light allows an object to be seen."
+	],
+	"darkness#view": [
+		"Darkness blocks view.",
+		"Darkness hides view."
+	],
+	"view#darkness": [
+		"Darkness blocks view.",
+		"Darkness obstructs view."
 	]
 }
