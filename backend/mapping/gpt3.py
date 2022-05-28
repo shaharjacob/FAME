@@ -14,6 +14,8 @@ BACKEND_DIR = Path(__file__).resolve().parent.parent
 EVALUATION_FOLDER = BACKEND_DIR / 'evaluation'
 DATABASE_FOLDER = BACKEND_DIR / 'database'
 
+from dotenv import load_dotenv
+load_dotenv()
 OPENAI_API_KEY= os.environ.get("OPENAI_API_KEY", "")
 if 'CI' not in os.environ:
     openai.api_key = OPENAI_API_KEY
