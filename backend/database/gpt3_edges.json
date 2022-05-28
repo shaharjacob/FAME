@@ -3851,5 +3851,102 @@
 	"view#darkness": [
 		"Darkness blocks view.",
 		"Darkness obstructs view."
+	],
+	"machine#power": [
+		"A machine needs power to function.",
+		"A machine cannot function without power."
+	],
+	"power#machine": [
+		"A machine needs power to run.",
+		"A machine cannot function without power."
+	],
+	"mind#intelligence": [
+		"A:",
+		"There is no definitive answer to this question. Some people might say that mind and intelligence are the same thing, while others might say that they are completely different concepts."
+	],
+	"intelligence#mind": [
+		"Intelligence is a property of the mind.",
+		"Intelligence is the ability to learn.",
+		"Intelligence is the ability to think."
+	],
+	"mind#therapy": [
+		"Mind influences therapy.",
+		"Therapy influences mind."
+	],
+	"therapy#mind": [
+		"Therapy changes the mind.",
+		"Therapy affects the mind."
+	],
+	"intelligence#therapy": [
+		"Intelligence is a component of therapy.",
+		"Intelligence is a necessary component of therapy."
+	],
+	"therapy#intelligence": [
+		"A:",
+		"There is no definitive answer to this question. Some people might say that therapy can increase intelligence, while others might say that there is no connection between the two."
+	],
+	"machine#repair": [
+		"A machine can be repaired.",
+		"A machine can be fixed."
+	],
+	"repair#machine": [
+		"A machine can be repaired.",
+		"A machine can be fixed."
+	],
+	"power#repair": [
+		"Repairing power equipment can increase its power output.",
+		"Repairing power equipment can improve its power output."
+	],
+	"repair#power": [
+		"Repair restores power.",
+		"Repair is necessary for power."
+	],
+	"leader#path": [
+		"A leader can set the path for a group.",
+		"A leader can show the path for a group."
+	],
+	"path#leader": [
+		"A path is followed by a leader.",
+		"A path is the route followed by a leader."
+	],
+	"speaker#argument": [
+		"A speaker makes an argument.",
+		"A speaker voices an argument."
+	],
+	"argument#speaker": [
+		"The speaker gives an argument.",
+		"The speaker makes an argument."
+	],
+	"speaker#listener": [
+		"The speaker transmits sound waves to the listener.",
+		"The speaker emits sound waves to the listener."
+	],
+	"listener#speaker": [
+		"A listener hears the speaker.",
+		"A listener understands the speaker."
+	],
+	"argument#listener": [
+		"The listener is influenced by the argument.",
+		"The listener is persuaded by the argument."
+	],
+	"listener#argument": [
+		"A listener understands an argument.",
+		"A listener evaluates an argument."
+	],
+	"leader#follower": [
+		"A leader guides the followers.",
+		"A leader leads the followers."
+	],
+	"follower#leader": [
+		"A follower is someone who follows a leader.",
+		"A follower is someone who is led by a leader."
+	],
+	"path#follower": [
+		"The path is the thing being followed.",
+		"The path is the thing that is being followed."
+	],
+	"follower#path": [
+		"A follower travels on the path.",
+		"A follower is drawn to the path."
 	]
 }

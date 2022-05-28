@@ -36129,5 +36129,48 @@
 	"light#view": [],
 	"view#light": [],
 	"darkness#view": [],
-	"view#darkness": []
+	"view#darkness": [],
+	"machine#power": [],
+	"mind#intelligence": [],
+	"power#machine": [],
+	"intelligence#mind": [],
+	"intelligence#therapy": [],
+	"therapy#intelligence": [],
+	"power#repair": [],
+	"repair#power": [],
+	"leader#path": [],
+	"speaker#argument": [
+		"prove her",
+		"structure this part of the",
+		"use language to enhance his"
+	],
+	"path#leader": [
+		"goal theory of leadership view the role of a"
+	],
+	"argument#speaker": [],
+	"speaker#listener": [
+		"affects the mindset of the audience or",
+		"characterize himself in relation to his",
+		"need to monitor the response of the",
+		"thank the",
+		"think he was smarter than the",
+		"threatens to send the police for the",
+		"try to convince",
+		"want to be friends with the"
+	],
+	"listener#speaker": [
+		"console the",
+		"tease the"
+	],
+	"argument#listener": [],
+	"listener#argument": [],
+	"leader#follower": [
+		"different from a",
+		"fail to protect the interest of their"
+	],
+	"follower#leader": [
+		"perceive an ethical"
+	],
+	"path#follower": [],
+	"follower#path": []
 }
