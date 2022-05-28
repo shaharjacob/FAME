@@ -36208,5 +36208,9 @@
 	"route#companion": [],
 	"companion#route": [],
 	"traveller#companion": [],
-	"companion#traveller": []
+	"companion#traveller": [],
+	"soldier#defeat": [],
+	"defeat#soldier": [],
+	"soldier#weapon": [],
+	"weapon#soldier": []
 }

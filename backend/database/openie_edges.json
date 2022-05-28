@@ -65339,5 +65339,121 @@
 	],
 	"companion#traveller": [
 		"are the responsibility of"
+	],
+	"argument#debater": [],
+	"debater#argument": [
+		"understand"
+	],
+	"argument#acceptance": [
+		"depends on"
+	],
+	"acceptance#argument": [],
+	"argument#logic": [
+		"are always invalid in",
+		"defies",
+		"falls on",
+		"followed",
+		"has",
+		"here stretches the bounds of",
+		"is based on",
+		"is devoid of",
+		"lacks",
+		"relies on",
+		"rests on",
+		"sounds reminiscent of"
+	],
+	"logic#argument": [
+		"allows for",
+		"applied to",
+		"is",
+		"is similar to",
+		"is the cornerstone of",
+		"is the study of",
+		"makes"
+	],
+	"debater#acceptance": [],
+	"acceptance#debater": [],
+	"debater#logic": [],
+	"logic#debater": [],
+	"acceptance#logic": [],
+	"logic#acceptance": [],
+	"war#defeat": [
+		"accept",
+		"contributed to",
+		"could result in",
+		"ended in",
+		"ended with",
+		"had ended in",
+		"had engineered",
+		"help",
+		"is always the admission of",
+		"led to",
+		"made",
+		"marked the climax of",
+		"must always be seen as",
+		"resulted in",
+		"saved israel from",
+		"suffered",
+		"was",
+		"was a declaration of",
+		"was a recipe for",
+		"were expressions of"
+	],
+	"defeat#war": [
+		"go to",
+		"marked a turning point in",
+		"precipitated",
+		"turned the tide of",
+		"were turning points in"
+	],
+	"soldier#defeat": [
+		"returned in"
+	],
+	"defeat#soldier": [
+		"fight off"
+	],
+	"soldier#weapon": [
+		"aimed",
+		"cocked",
+		"drew",
+		"fired",
+		"had",
+		"held",
+		"kept",
+		"lay",
+		"lay down",
+		"move",
+		"opened fire with",
+		"pointed",
+		"put down",
+		"raised",
+		"switch",
+		"took out",
+		"used",
+		"waved",
+		"were armed with",
+		"were drawing"
+	],
+	"weapon#soldier": [
+		"abducted",
+		"approaches",
+		"are issued to",
+		"are typically used by",
+		"began shooting",
+		"carried by",
+		"is intended to provide",
+		"make",
+		"turned to",
+		"were being used to kill",
+		"will be turned against"
+	],
+	"defeat#weapon": [
+		"has to do with",
+		"unlock"
+	],
+	"weapon#defeat": [
+		"is to have",
+		"means",
+		"were essential for"
 	]
 }

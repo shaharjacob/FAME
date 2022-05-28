@@ -4110,5 +4110,100 @@
 	"companion#traveller": [
 		"A companion accompanies a traveller.",
 		"A companion is someone who travels with someone."
+	],
+	"war#soldier": [
+		"War is fought by soldiers.",
+		"War is a conflict in which soldiers fight."
+	],
+	"soldier#war": [
+		"A soldier participates in war.",
+		"A soldier fights in war."
+	],
+	"argument#debater": [
+		"The debater presents the argument.",
+		"The debater argues the argument."
+	],
+	"debater#argument": [
+		"A debater participates in an argument.",
+		"A debater presents an argument."
+	],
+	"argument#acceptance": [
+		"An argument is an attempt to persuade someone to accept a particular point of view.",
+		"An acceptance is the result of an argument."
+	],
+	"acceptance#argument": [
+		"An acceptance is an argument's conclusion.",
+		"An acceptance is an argument's premise."
+	],
+	"argument#logic": [
+		"An argument is based on logic.",
+		"An argument is a logical sequence of statements."
+	],
+	"logic#argument": [
+		"A logic is an argument that is valid.",
+		"A logic is an argument that is sound."
+	],
+	"debater#acceptance": [
+		"A debater accepts an argument.",
+		"A debater agrees to an argument."
+	],
+	"acceptance#debater": [
+		"The debater accepts the arguments of the other debater.",
+		"The debater agrees to the arguments of the other debater."
+	],
+	"debater#logic": [
+		"Logic is used in debater.",
+		"Logic is a tool used by debaters."
+	],
+	"logic#debater": [
+		"Logic is used by debaters.",
+		"Logic is necessary for debaters."
+	],
+	"acceptance#logic": [
+		"There is no logical connection between acceptance and logic."
+	],
+	"logic#acceptance": [
+		"Logic is the process of accepting a proposition.",
+		"Logic is the process of verifying a proposition."
+	],
+	"war#defeat": [
+		"War can lead to defeat.",
+		"War can cause defeat."
+	],
+	"defeat#war": [
+		"Defeat is the outcome of war.",
+		"War can lead to defeat."
+	],
+	"war#weapon": [
+		"War is fought with weapons.",
+		"War is a conflict that is fought with weapons."
+	],
+	"weapon#war": [
+		"Weapon is used in war.",
+		"Weapon is a tool of war."
+	],
+	"soldier#defeat": [
+		"A soldier can be defeated in battle.",
+		"A soldier can be defeated in combat."
+	],
+	"defeat#soldier": [
+		"Defeat means the soldier has died.",
+		"Defeat means the soldier has been captured."
+	],
+	"soldier#weapon": [
+		"A soldier uses a weapon.",
+		"A soldier is protected by a weapon."
+	],
+	"weapon#soldier": [
+		"A weapon is used by a soldier.",
+		"A weapon is a tool used by a soldier."
+	],
+	"defeat#weapon": [
+		"Defeat can be caused by a weapon.",
+		"A weapon can be used to defeat someone."
+	],
+	"weapon#defeat": [
+		"A weapon is used to defeat an opponent.",
+		"A weapon is used to overcome an opponent."
 	]
 }
