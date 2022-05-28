@@ -1,7 +1,8 @@
 mapping:
-  - input:
+  - input: #1
       base: [earth, newton, gravity]
       target: [electrons, nucleus, electricity, faraday]
+      use_base_mapping: False
       depth:
         beam: 20
         dfs: 4
@@ -14,9 +15,10 @@ mapping:
         - sun
     ignore: False
 
-  - input:
+  - input: #2
       base: [landscaper, lawn]
       target: [stylist, hair, gel]
+      use_base_mapping: False
       depth:
         beam: 20
         dfs: 4
@@ -28,9 +30,10 @@ mapping:
         - fertilizer
     ignore: False
   
-  - input:
+  - input: #3
       base: [chef, meal, pan, salt] 
       target: [baker, cake, oven]
+      use_base_mapping: False
       depth:
         beam: 20
         dfs: 4
@@ -44,9 +47,10 @@ mapping:
         - sugar # the expected one
     ignore: False
 
-  - input:
+  - input: #4
       base: [answer, logic, riddle]
       target: [key, mechanism]
+      use_base_mapping: True
       depth:
         beam: 20
         dfs: 4
@@ -60,9 +64,10 @@ mapping:
         - feedback
     ignore: False
 
-  - input:
+  - input: #5
       base: [sun, summer, sunscreen]
       target: [rain, winter]
+      use_base_mapping: False
       depth:
         beam: 20
         dfs: 4
