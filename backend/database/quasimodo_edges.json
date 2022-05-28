@@ -23668,5 +23668,9 @@
 	"billiards#speed": [],
 	"speed#billiards": [],
 	"speed#table": [],
-	"table#speed": []
+	"table#speed": [],
+	"money#budget": [],
+	"time#schedule": [],
+	"budget#money": [],
+	"schedule#time": []
 }
