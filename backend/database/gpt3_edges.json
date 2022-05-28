@@ -3216,5 +3216,44 @@
 	"carbon dioxide#combustion": [
 		"Carbon dioxide is a by-product of combustion.",
 		"Carbon dioxide is a waste product of combustion."
+	],
+	"fire#fuel": [
+		"A:",
+		"Fire needs fuel to burn."
+	],
+	"fuel#fire": [
+		"Fuel is needed to produce fire.",
+		"Fuel is necessary to create a fire."
+	],
+	"fire#oxygen": [
+		"Fire needs oxygen to burn.",
+		"Oxygen is necessary for fire to burn."
+	],
+	"oxygen#fire": [
+		"Oxygen is necessary for fire.",
+		"Oxygen fuels fire."
+	],
+	"fire#carbon dioxide": [
+		"Fire produces carbon dioxide.",
+		"Carbon dioxide is a waste product of fire."
+	],
+	"carbon dioxide#fire": [
+		"Carbon dioxide is a gas that is produced when coal, oil, or natural gas is burned."
+	],
+	"fuel#oxygen": [
+		"Fuel needs oxygen to burn.",
+		"Fuel is oxidized by oxygen."
+	],
+	"oxygen#fuel": [
+		"Oxygen is a fuel.",
+		"Oxygen is a component of fuel."
+	],
+	"fuel#carbon dioxide": [
+		"Fuel produces carbon dioxide.",
+		"Fuel is composed of carbon dioxide."
+	],
+	"carbon dioxide#fuel": [
+		"A:",
+		"Carbon dioxide is a by-product of fuel combustion."
 	]
 }

@@ -23533,5 +23533,29 @@
 	"genes#bacteria": [
 		"be organized in",
 		"be transferred between"
+	],
+	"fire#oxygen": [
+		"can burn without",
+		"get with",
+		"go out without",
+		"has property",
+		"need",
+		"require"
+	],
+	"oxygen#fire": [
+		"distribute",
+		"has property",
+		"react with"
+	],
+	"fuel#oxygen": [],
+	"oxygen#fuel": [
+		"has property"
+	],
+	"fuel#carbon dioxide": [
+		"produce",
+		"release"
+	],
+	"carbon dioxide#fuel": [
+		"be used as"
 	]
 }

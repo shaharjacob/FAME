@@ -35830,5 +35830,47 @@
 		"expression regulated in",
 		"for erythrogenic toxin get passed between",
 		"introduced into"
+	],
+	"fire#oxygen": [
+		"affect",
+		"burn in space without",
+		"need",
+		"need air and",
+		"needs",
+		"remove",
+		"requires",
+		"use"
+	],
+	"oxygen#fire": [
+		"affect",
+		"cause",
+		"create",
+		"fuel",
+		"help",
+		"important to",
+		"make",
+		"necessary for",
+		"needed for",
+		"needed to start a",
+		"required for",
+		"start",
+		"start a",
+		"support"
+	],
+	"fuel#oxygen": [
+		"burn without",
+		"cell needs",
+		"contains"
+	],
+	"oxygen#fuel": [
+		"used in rocket"
+	],
+	"fuel#carbon dioxide": [],
+	"carbon dioxide#fuel": [
+		"affect fossil",
+		"become locked up in limestone and fossil",
+		"emissions weigh more than the original",
+		"not used as",
+		"produced from burning fossil"
 	]
 }
