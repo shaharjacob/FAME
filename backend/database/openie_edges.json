@@ -64472,5 +64472,300 @@
 		"is located in",
 		"turn off",
 		"was found in"
+	],
+	"breeds#selection": [
+		"was shaped primarily by"
+	],
+	"species#competition": [
+		"does",
+		"is in"
+	],
+	"selection#breeds": [],
+	"competition#species": [],
+	"species#adaptation": [
+		"possess"
+	],
+	"adaptation#species": [
+		"have evolved in",
+		"made"
+	],
+	"species#fitness": [
+		"has very"
+	],
+	"fitness#species": [],
+	"competition#adaptation": [],
+	"adaptation#competition": [],
+	"competition#fitness": [
+		"is another level of",
+		"started with"
+	],
+	"fitness#competition": [
+		"challenge",
+		"is measured relative to",
+		"participate in"
+	],
+	"adaptation#fitness": [
+		"is"
+	],
+	"fitness#adaptation": [
+		"requires a compromise in"
+	],
+	"breeds#conformance": [],
+	"conformance#breeds": [],
+	"breeds#popularity": [
+		"began to grow in",
+		"began to increase in",
+		"continued to gain",
+		"continues to increase in",
+		"declined in",
+		"definitely deserves",
+		"gained",
+		"gained in",
+		"had risen in",
+		"has grown enormously in",
+		"has increased in",
+		"has steadily gained",
+		"have been rising in",
+		"increased in",
+		"is gaining",
+		"is growing in",
+		"listed in",
+		"reached the height of",
+		"received",
+		"rose in"
+	],
+	"popularity#breeds": [],
+	"selection#conformance": [],
+	"conformance#selection": [],
+	"selection#popularity": [
+		"are",
+		"is quickly increasing in",
+		"were made based on"
+	],
+	"popularity#selection": [
+		"comes",
+		"wont influence"
+	],
+	"conformance#popularity": [],
+	"popularity#conformance": [],
+	"balls#billiards": [
+		"is",
+		"is 15 on",
+		"was edited by",
+		"will be at"
+	],
+	"molecules#gas": [
+		"are formed from",
+		"enter",
+		"is the same for",
+		"move freely in",
+		"will become"
+	],
+	"billiards#balls": [
+		"get",
+		"sink"
+	],
+	"gas#molecules": [
+		"consists of",
+		"contain equal number of",
+		"evaporated",
+		"had to be",
+		"ionize",
+		"is",
+		"is carried by",
+		"is for on",
+		"is made of",
+		"is used to separate",
+		"may ionize"
+	],
+	"molecules#container": [],
+	"container#molecules": [],
+	"gas#temperature": [
+		"are used to obtain",
+		"cannot be liquefied at",
+		"cool through",
+		"depends on",
+		"has",
+		"increase",
+		"is",
+		"is a function of",
+		"is affected by",
+		"is at",
+		"is causing a rise in",
+		"is compressed",
+		"is cooled to",
+		"is directly proportional to",
+		"is favored at",
+		"is heated to",
+		"is kept at",
+		"mean a rise in",
+		"operates over",
+		"practically ceases at"
+	],
+	"temperature#gas": [
+		"affect",
+		"are considered",
+		"becomes",
+		"caused a further addition of",
+		"is",
+		"is due to",
+		"produce an image of",
+		"so do",
+		"would be cold enough for"
+	],
+	"gas#container": [
+		"are periodically taken from",
+		"are the mixed together in",
+		"escape from",
+		"expand to fill",
+		"fills",
+		"is forced into",
+		"is provided in",
+		"is stored in",
+		"leaves",
+		"passed through",
+		"take the shape of",
+		"was pumped into",
+		"will expand to fill",
+		"will take"
+	],
+	"container#gas": [
+		"is filled with",
+		"release",
+		"release small amounts of",
+		"see"
+	],
+	"temperature#container": [
+		"controlled",
+		"rise in",
+		"then refrigerate in",
+		"then store in",
+		"then transfer to"
+	],
+	"container#temperature": [
+		"allow to sit at",
+		"are at",
+		"are processed at",
+		"bring to",
+		"keep at",
+		"let stand at",
+		"may rupture due to very",
+		"set aside at",
+		"should be brought to",
+		"sit at",
+		"store at",
+		"warm up to"
+	],
+	"balls#speed": [
+		"are shot at",
+		"bat",
+		"began to lose",
+		"can be pre-set at",
+		"change",
+		"comes at",
+		"depends on",
+		"has",
+		"hit the ground with",
+		"increased",
+		"is",
+		"is bowled at",
+		"is thrown at",
+		"is travelling at",
+		"loses",
+		"moves at",
+		"showed",
+		"swing",
+		"use",
+		"was moved at"
+	],
+	"speed#balls": [
+		"adjusts",
+		"can catch",
+		"catch",
+		"cut",
+		"far youll be able to drive",
+		"generates",
+		"improve after",
+		"increases",
+		"is",
+		"is crucial for hitting",
+		"keeps",
+		"launch",
+		"personalized",
+		"sealed",
+		"should bring",
+		"spin",
+		"spin to"
+	],
+	"balls#table": [
+		"are on",
+		"flew off",
+		"flies off of",
+		"goes across",
+		"goes off",
+		"has hit",
+		"hits",
+		"hits the edge of",
+		"is forced off",
+		"is left on",
+		"is placed on",
+		"jumped off",
+		"leaves",
+		"left on",
+		"remains on",
+		"repeatedly tilt",
+		"sits on",
+		"stays on",
+		"were off"
+	],
+	"table#balls": [
+		"curled up into",
+		"detects",
+		"drew out",
+		"features",
+		"has",
+		"have coughed up",
+		"hit",
+		"holds up to",
+		"includes a full set of",
+		"is fitted with",
+		"is one of",
+		"keep",
+		"opens on",
+		"sat",
+		"serve",
+		"sized",
+		"swing",
+		"was"
+	],
+	"billiards#speed": [],
+	"speed#billiards": [],
+	"billiards#table": [
+		"first became",
+		"has",
+		"is played on",
+		"played on"
+	],
+	"table#billiards": [],
+	"speed#table": [
+		"are given in",
+		"bring to",
+		"enjoy a meal at",
+		"included with",
+		"is included with",
+		"is provided with",
+		"is unaffected by"
+	],
+	"table#speed": [
+		"comes with",
+		"contains",
+		"dictates",
+		"feeds using",
+		"felt suited",
+		"is",
+		"is then rotated at",
+		"run at",
+		"should give some indication on",
+		"shows"
 	]
 }

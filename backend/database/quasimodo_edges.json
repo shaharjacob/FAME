@@ -23637,5 +23637,36 @@
 	"outputs#bug": [],
 	"bug#outputs": [],
 	"inputs#bug": [],
-	"bug#inputs": []
+	"bug#inputs": [],
+	"molecules#container": [],
+	"container#molecules": [],
+	"gas#temperature": [
+		"affect",
+		"be affected by",
+		"be less soluble at",
+		"obey gas law in"
+	],
+	"temperature#gas": [
+		"affect",
+		"be related for"
+	],
+	"gas#container": [
+		"can fill",
+		"cause pressure within",
+		"fill",
+		"fill completely",
+		"fill up",
+		"put into"
+	],
+	"container#gas": [
+		"can"
+	],
+	"temperature#container": [],
+	"container#temperature": [],
+	"balls#speed": [],
+	"speed#balls": [],
+	"billiards#speed": [],
+	"speed#billiards": [],
+	"speed#table": [],
+	"table#speed": []
 }

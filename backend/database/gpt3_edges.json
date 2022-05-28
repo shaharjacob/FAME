@@ -3568,5 +3568,192 @@
 	"bug#inputs": [
 		"A:",
 		"Bug captures inputs for processing."
+	],
+	"breeds#selection": [
+		"Breeds are created through selection.",
+		"Selection is what creates breeds."
+	],
+	"selection#breeds": [
+		"Selection breeds new breeds.",
+		"Breeds are selected through the process of selection."
+	],
+	"species#competition": [
+		"Species compete for resources.",
+		"Species compete against each other."
+	],
+	"competition#species": [
+		"Competition drives natural selection and the evolution of species.",
+		"Competition is necessary for the natural selection and evolution of species."
+	],
+	"species#adaptation": [
+		"Species evolve adaptations to their environment.",
+		"Species adapt to their environment."
+	],
+	"adaptation#species": [
+		"Adaptation is the process that leads to the development of new species.",
+		"Adaptation is the process that allows species to survive in new environments."
+	],
+	"species#fitness": [
+		"Species with higher fitness are more likely to survive and reproduce.",
+		"Species that are fittest are more likely to survive and reproduce."
+	],
+	"fitness#species": [
+		"Fitness is a measure of the ability of a species to survive and reproduce.",
+		"Fitness is the ability of an individual to survive and reproduce."
+	],
+	"competition#adaptation": [
+		"Competition is the process of adaptation.",
+		"Competition is the result of adaptation."
+	],
+	"adaptation#competition": [
+		"A:",
+		"Adaptation and competition are two ways that living things interact with their environment. Adaptation is when an organism evolves in order to better survive in its environment. Competition is when organisms compete for limited resources."
+	],
+	"competition#fitness": [
+		"Competition improves fitness."
+	],
+	"fitness#competition": [
+		"Fitness is a competition.",
+		"Fitness is a race."
+	],
+	"adaptation#fitness": [
+		"A:",
+		"Adaptation is the process that allows an organism to adjust to its environment, while fitness is the ability of an organism to produce offspring."
+	],
+	"fitness#adaptation": [
+		"A:",
+		"Fitness is the ability of an organism to reproduce. Adaptation is the process by which organisms change their traits in order to survive in their environment."
+	],
+	"breeds#conformance": [
+		"Breeds are characterized by their conformance.",
+		"Breeds conform to a certain standard."
+	],
+	"conformance#breeds": [
+		"Conformance is the ability of a dog to breed with another dog of the same breed.",
+		"Conformance is the ability of a dog to produce offspring of the same breed."
+	],
+	"breeds#popularity": [],
+	"popularity#breeds": [
+		"Popularity affects the breeds.",
+		"The breeds affect the popularity."
+	],
+	"selection#conformance": [
+		"A:",
+		"Selection is the process of choosing specific items from a larger set, while conformance is the act of following the norms or expectations of a particular group. In general, selection is the more powerful of the two forces, as it allows individuals or groups to choose which behaviors or traits are best suited"
+	],
+	"conformance#selection": [
+		"Conformance is the result of selection.",
+		"Conformance is the outcome of selection."
+	],
+	"selection#popularity": [
+		"Selection is based on popularity.",
+		"The more popular something is, the more likely it is to be selected."
+	],
+	"popularity#selection": [
+		"The more popular something is, the more likely it is to be selected.",
+		"The more popular something is, the more likely it is to be chosen."
+	],
+	"conformance#popularity": [
+		"Conformance is a measure of how popular something is.",
+		"Conformance is a way of measuring how popular something is."
+	],
+	"popularity#conformance": [
+		"Popularity is often based on conformity.",
+		"Being popular usually means conforming to what is popular."
+	],
+	"balls#billiards": [
+		"Balls are used in the game of billiards.",
+		"Balls are used in the game of pool.",
+		"Balls are used in the game of snooker."
+	],
+	"billiards#balls": [
+		"Balls are used in billiards.",
+		"Balls are the main part of billiards."
+	],
+	"molecules#gas": [
+		"Molecules are the smallest particles of a gas.",
+		"Molecules are the building blocks of a gas."
+	],
+	"gas#molecules": [
+		"Gas is made up of molecules.",
+		"Gas is composed of molecules."
+	],
+	"molecules#temperature": [
+		"Molecules move faster as the temperature rises.",
+		"The faster the molecules move, the higher the temperature."
+	],
+	"temperature#molecules": [
+		"The higher the temperature, the more active the molecules.",
+		"The higher the temperature, the more kinetic energy the molecules have."
+	],
+	"molecules#container": [
+		"Molecules are in the container.",
+		"Molecules are in the space inside the container."
+	],
+	"container#molecules": [
+		"The container holds the molecules together.",
+		"The container confines the molecules."
+	],
+	"gas#temperature": [
+		"The higher the temperature, the more gas is present.",
+		"The higher the temperature, the more gas is active."
+	],
+	"temperature#gas": [
+		"Temperature affects the pressure of gas.",
+		"Temperature determines the pressure of gas."
+	],
+	"gas#container": [
+		"A gas takes up the container.",
+		"A gas fills up the container."
+	],
+	"container#gas": [
+		"A container confines gas."
+	],
+	"temperature#container": [
+		"Temperature affects the container.",
+		"The container affects the temperature."
+	],
+	"container#temperature": [
+		"The container affects the temperature of the object.",
+		"The container moderates the temperature of the object."
+	],
+	"balls#speed": [
+		"Balls travel at a certain speed."
+	],
+	"speed#balls": [
+		"Balls travel faster when there is more speed.",
+		"Balls travel more quickly when there is more speed."
+	],
+	"balls#table": [
+		"Balls roll on the table.",
+		"Balls are placed on the table."
+	],
+	"table#balls": [
+		"A table is a surface on which balls can be placed.",
+		"A table is a good place to put balls."
+	],
+	"billiards#speed": [
+		"Speed affects the distance a billiard ball travels.",
+		"The faster the ball is hit, the further it will travel."
+	],
+	"speed#billiards": [
+		"Speed is how fast the balls travel in billiards.",
+		"Speed is how fast the balls travel in pool."
+	],
+	"billiards#table": [
+		"The billiards game is played on a table.",
+		"The billiards game is played with tables."
+	],
+	"table#billiards": [
+		"A table is used for playing billiards.",
+		"A table is a necessary part of playing billiards."
+	],
+	"speed#table": [
+		"A:",
+		"There is no direct relationship between speed and table."
+	],
+	"table#speed": [
+		"A table has a certain speed.",
+		"A table can be moved at a certain speed."
 	]
 }
