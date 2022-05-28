@@ -2781,5 +2781,102 @@
 	"coffee#start": [
 		"Coffee starts the day.",
 		"Coffee is the first thing many people drink in the morning."
+	],
+	"water#water tower": [
+		"A water tower stores water.",
+		"A water tower is a high structure that stores water."
+	],
+	"water tower#water": [
+		"The water tower stores water.",
+		"The water tower provides a reservoir for water."
+	],
+	"heat#burner": [
+		"Heat is produced by the burner.",
+		"Heat is emitted by the burner."
+	],
+	"burner#heat": [
+		"The burner creates heat.",
+		"The burner produces heat."
+	],
+	"water#hydrodynamics": [
+		"Hydrodynamics is the study of fluids in motion.",
+		"Water is a fluid and hydrodynamics is the study of it."
+	],
+	"hydrodynamics#water": [
+		"Hydrodynamics is the study of water movement.",
+		"Hydrodynamics is the science of water movement."
+	],
+	"heat#thermodynamics": [
+		"Heat is a product of thermodynamics.",
+		"Heat is a form of energy.",
+		"Heat is the transfer of energy."
+	],
+	"thermodynamics#heat": [
+		"Thermodynamics is the study of heat.",
+		"Thermodynamics is the application of heat."
+	],
+	"temperature#burner": [
+		"The temperature of the burner affects the temperature of the object.",
+		"The temperature of the burner determines the temperature of the object."
+	],
+	"burner#temperature": [
+		"The burner produces the temperature.",
+		"The burner creates the temperature."
+	],
+	"temperature#thermodynamics": [
+		"Temperature is a measure of thermodynamics.",
+		"Temperature is a property of thermodynamics."
+	],
+	"thermodynamics#temperature": [
+		"Thermodynamics is the study of temperature.",
+		"Temperature is a measure of thermodynamics."
+	],
+	"burner#kettle": [
+		"The burner heats the kettle.",
+		"The burner provides heat to the kettle."
+	],
+	"kettle#burner": [
+		"The kettle is heated by the burner.",
+		"The burner heats the kettle."
+	],
+	"burner#thermodynamics": [
+		"The burner produces heat.",
+		"The burner supplies heat."
+	],
+	"thermodynamics#burner": [
+		"The burner creates heat energy which is used in thermodynamics.",
+		"The burner is used in thermodynamics to create heat energy."
+	],
+	"kettle#thermodynamics": [
+		"The kettle boils the water and the water changes state from liquid to gas due to thermodynamics.",
+		"The kettle is a tool that uses thermodynamics to change the state of water."
+	],
+	"thermodynamics#kettle": [
+		"Heat from the kettle is transferred to the water, making it boil",
+		"The kettle is used to boil water"
+	],
+	"pressure#water tower": [
+		"The pressure of the water tower is the pressure of the water.",
+		"The pressure of the water tower is the pressure at which the water is stored."
+	],
+	"water tower#pressure": [
+		"A water tower creates pressure.",
+		"A water tower increases the water pressure."
+	],
+	"pressure#hydrodynamics": [
+		"Pressure is a key factor in hydrodynamics.",
+		"Pressure affects hydrodynamics."
+	],
+	"hydrodynamics#pressure": [
+		"Hydrodynamics is the study of fluids in motion.",
+		"Pressure is a measure of the force per unit area."
+	],
+	"water tower#bucket": [
+		"A bucket is filled with water from the water tower",
+		"A bucket is filled with water from the water tower by a pump."
+	],
+	"bucket#water tower": [
+		"A bucket can be filled with water from the water tower.",
+		"A bucket can be used to get water from the water tower."
 	]
 }
