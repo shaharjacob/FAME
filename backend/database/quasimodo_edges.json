@@ -23770,5 +23770,9 @@
 	],
 	"weapon#soldier": [
 		"assigned to"
-	]
+	],
+	"buyer#merchandise": [],
+	"believer#belief": [],
+	"merchandise#buyer": [],
+	"belief#believer": []
 }

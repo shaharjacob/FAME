@@ -36212,5 +36212,9 @@
 	"soldier#defeat": [],
 	"defeat#soldier": [],
 	"soldier#weapon": [],
-	"weapon#soldier": []
+	"weapon#soldier": [],
+	"buyer#merchandise": [],
+	"believer#belief": [],
+	"merchandise#buyer": [],
+	"belief#believer": []
 }

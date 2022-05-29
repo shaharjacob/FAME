@@ -65455,5 +65455,18 @@
 		"is to have",
 		"means",
 		"were essential for"
-	]
+	],
+	"buyer#merchandise": [
+		"are interested in",
+		"are receiving",
+		"pays",
+		"pays for"
+	],
+	"believer#belief": [],
+	"merchandise#buyer": [
+		"is delivered to",
+		"is received by",
+		"is shipped to"
+	],
+	"belief#believer": []
 }
