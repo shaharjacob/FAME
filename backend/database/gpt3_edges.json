@@ -3532,16 +3532,13 @@
 	],
 	"breeds#selection": [
 		"Breeds are created through selection.",
-		"Selection is what creates breeds."
+		"Breeds are selected through the process of selection."
 	],
 	"selection#breeds": [
 		"Selection breeds new breeds.",
-		"Breeds are selected through the process of selection."
+		"Selection is what creates breeds."
 	],
-	"species#competition": [
-		"Species compete for resources.",
-		"Species compete against each other."
-	],
+	"species#competition": [],
 	"competition#species": [
 		"Competition drives natural selection and the evolution of species.",
 		"Competition is necessary for the natural selection and evolution of species."
@@ -3919,20 +3916,12 @@
 		"Goal = Difficulty"
 	],
 	"difficulties#plan": [
-		"Difficulties are best overcome by having a plan.",
+		"Difficulties interrupts the plan.",
 		"Difficulties can be overcome by having a plan."
 	],
 	"plan#difficulties": [
-		"It's not easy to make a plan.",
+		"The plan has a lot of difficulties.",
 		"It's hard to make a plan."
-	],
-	"difficulties#parson": [
-		"Difficulties are things that parson encounter.",
-		"Difficulties are the problems that parson face."
-	],
-	"parson#difficulties": [
-		"Parson tackles difficulties.",
-		"Parson overcomes difficulties."
 	],
 	"difficulties#partner": [
 		"Difficulties are best faced with a partner.",
@@ -3950,14 +3939,6 @@
 		"A plan is a step-by-step guide to achieving a goal.",
 		"A plan is a road map to achieving a goal."
 	],
-	"goal#parson": [
-		"A goal is scored by a parson.",
-		"A goal is the aim of a parson."
-	],
-	"parson#goal": [
-		"A parson is someone who helps people achieve their goals.",
-		"A parson is someone who helps people reach their goals."
-	],
 	"goal#partner": [
 		"A goal is scored by hitting the ball into the partner's goal.",
 		"A goal is the result of scoring by hitting the ball into the partner's goal."
@@ -3966,14 +3947,6 @@
 		"A partner helps achieve the goal.",
 		"A partner is necessary to achieve the goal."
 	],
-	"plan#parson": [
-		"A plan is a diagram of a building.",
-		"A parson is a person who plans."
-	],
-	"parson#plan": [
-		"A parson is a person who plans.",
-		"A parson is someone who plans."
-	],
 	"plan#partner": [
 		"A plan is a type of partnership.",
 		"A plan is made with a partner."
@@ -3981,14 +3954,6 @@
 	"partner#plan": [
 		"A partner helps make a plan.",
 		"A partner is someone who helps make a plan."
-	],
-	"parson#partner": [
-		"A parson is a partner in a marriage.",
-		"A parson is someone's partner."
-	],
-	"partner#parson": [
-		"A partner is someone who helps a parson.",
-		"A partner is someone who works with a parson."
 	],
 	"obstructions#route": [
 		"An obstruction blocks the route.",
@@ -4155,5 +4120,36 @@
 	"weapon#defeat": [
 		"A weapon is used to defeat an opponent.",
 		"A weapon is used to overcome an opponent."
+	],
+	"difficulties#person": [
+		"Difficulties are an obstacle that people face.",
+		"Difficulties are something that people have to endure."
+	],
+	"person#difficulties": [
+		"A person can experience difficulties.",
+		"A person can have difficulties."
+	],
+	"goal#person": [
+		"A goal is scored by a person.",
+		"A goal is a target scored by a person."
+	],
+	"person#goal": [
+		"A person scores a goal.",
+		"A person achieves a goal."
+	],
+	"plan#person": [
+		"A plan is a blueprint for a person.",
+		"A plan is a guide for a person."
+	],
+	"person#plan": [
+		"A person makes a plan."
+	],
+	"person#partner": [
+		"A person has a partner.",
+		"A person is partnered with someone."
+	],
+	"partner#person": [
+		"A partner is someone's person.",
+		"A partner is someone's significant other."
 	]
 }

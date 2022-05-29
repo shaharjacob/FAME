@@ -79,7 +79,7 @@ mapping:
       - air --> space
       - gravity --> gravity
   
-  - input: #A7 : 1/4
+  - input: #A7 : 2/4 - solution rank 6
       base: [breeds, selection, conformance, popularity]
       target: [species, competition, adaptation, fitness]
       depth:
@@ -92,7 +92,7 @@ mapping:
       - conformance --> adaptation
       - popularity --> fitness
   
-  - input: #A8 : 2/4
+  - input: #A8 : 2/4 - solution rank 3
       base: [balls, billiards, speed, table]
       target: [molecules, gas, temperature, container]
       depth:
@@ -166,9 +166,9 @@ mapping:
       - buildings --> theories
       - crack --> flaw
   
-  - input: #M4 : 1/5
+  - input: #M4 : 5/5
       base: [obstructions, destination, route, traveller, companion]
-      target: [difficulties, goal, plan, parson, partner]
+      target: [difficulties, goal, plan, person, partner]
       depth:
         beam: 20
         dfs: 4
@@ -177,8 +177,8 @@ mapping:
       - obstructions --> difficulties
       - destination --> goal
       - route --> plan
-      - traveller --> parson
-      - companion --> companion
+      - traveller --> person
+      - companion --> partner
 
   - input: #M5 : 2/2
       base: [money, budget]

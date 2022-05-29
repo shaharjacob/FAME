@@ -5343,7 +5343,9 @@
 		"selection produce",
 		"selection produce adaptations in a"
 	],
-	"species#fitness": [],
+	"species#fitness": [
+		"should growth with"
+	],
 	"fitness#species": [],
 	"competition#adaptation": [
 		"for resources lead to",
@@ -36179,20 +36181,12 @@
 	"goal#difficulties": [],
 	"difficulties#plan": [],
 	"plan#difficulties": [],
-	"difficulties#parson": [],
-	"parson#difficulties": [],
 	"difficulties#partner": [],
 	"partner#difficulties": [],
-	"goal#parson": [],
-	"parson#goal": [],
 	"goal#partner": [],
 	"partner#goal": [],
-	"plan#parson": [],
-	"parson#plan": [],
 	"plan#partner": [],
 	"partner#plan": [],
-	"parson#partner": [],
-	"partner#parson": [],
 	"obstructions#route": [],
 	"route#obstructions": [],
 	"obstructions#traveller": [],
@@ -36216,5 +36210,20 @@
 	"buyer#merchandise": [],
 	"believer#belief": [],
 	"merchandise#buyer": [],
-	"belief#believer": []
+	"belief#believer": [],
+	"difficulties#person": [],
+	"person#difficulties": [],
+	"goal#person": [
+		"setting so important for each"
+	],
+	"person#goal": [
+		"achieve",
+		"achieve a"
+	],
+	"plan#person": [],
+	"person#plan": [
+		"with a disability need a support"
+	],
+	"person#partner": [],
+	"partner#person": []
 }

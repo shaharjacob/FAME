@@ -23732,20 +23732,12 @@
 	"goal#difficulties": [],
 	"difficulties#plan": [],
 	"plan#difficulties": [],
-	"difficulties#parson": [],
-	"parson#difficulties": [],
 	"difficulties#partner": [],
 	"partner#difficulties": [],
-	"goal#parson": [],
-	"parson#goal": [],
 	"goal#partner": [],
 	"partner#goal": [],
-	"plan#parson": [],
-	"parson#plan": [],
 	"plan#partner": [],
 	"partner#plan": [],
-	"parson#partner": [],
-	"partner#parson": [],
 	"obstructions#route": [],
 	"route#obstructions": [],
 	"obstructions#traveller": [],
@@ -23774,5 +23766,18 @@
 	"buyer#merchandise": [],
 	"believer#belief": [],
 	"merchandise#buyer": [],
-	"belief#believer": []
+	"belief#believer": [],
+	"difficulties#person": [],
+	"person#difficulties": [],
+	"goal#person": [
+		"can help",
+		"differ from"
+	],
+	"person#goal": [
+		"set"
+	],
+	"plan#person": [],
+	"person#plan": [],
+	"person#partner": [],
+	"partner#person": []
 }
