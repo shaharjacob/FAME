@@ -652,10 +652,7 @@
 	],
 	"problem#solution": [
 		"A problem is a difficulty to be solved.",
-		"A problem is an obstacle to be overcome.",
-		"Q: What are the relations between plant and sunlight?",
-		"A plant needs sunlight to grow.",
-		"A plant needs sunlight to photosynthesis."
+		"A problem is an obstacle to be overcome."
 	],
 	"soot#chimney": [
 		"Soot accumulates on the inside of the chimney.",
@@ -767,10 +764,7 @@
 	],
 	"structure#base": [
 		"The base supports the structure.",
-		"The base is the foundation of the structure.",
-		"Q: What are the relations between light and dark?",
-		"Light is the absence of darkness.",
-		"Darkness is the absence of light."
+		"The base is the foundation of the structure."
 	],
 	"woodstove#wood": [
 		"The woodstove uses wood to produce heat.",
@@ -996,10 +990,7 @@
 	],
 	"logic#riddle": [
 		"Logic is used to solve riddles.",
-		"Logic is the key to solving riddles.",
-		"Q: What are the relations between light and darkness?",
-		"Light dispels darkness.",
-		"Darkness cannot exist where there is light."
+		"Logic is the key to solving riddles."
 	],
 	"lint#fabric": [
 		"Lint is made of fabric.",
@@ -1464,10 +1455,7 @@
 	],
 	"mind#memory": [
 		"The mind stores memories.",
-		"The mind recalls memories.",
-		"Q: What are the relations between light and mirror?",
-		"A light reflects off a mirror.",
-		"A light is redirected by a mirror."
+		"The mind recalls memories."
 	],
 	"eraser#paper": [
 		"An eraser removes pencil marks from paper.",
@@ -2419,10 +2407,7 @@
 	],
 	"pipe#bucket": [
 		"The pipe transfers the water from the bucket.",
-		"The pipe fills the bucket with water.",
-		"Q: What are the relations between heart and blood?",
-		"The heart pumps the blood.",
-		"The heart circulates the blood."
+		"The pipe fills the bucket with water."
 	],
 	"bucket#rain": [
 		"A bucket can collect rain.",
@@ -2497,11 +2482,7 @@
 	],
 	"ear#earplugs": [
 		"Earplugs protect the ear from noise.",
-		"Earplugs keep the ear from hearing noise.",
-		"Q: What are the relations between light and dark?",
-		"Light creates the appearance of day.",
-		"Light makes it possible to see during the day.",
-		"A:"
+		"Earplugs keep the ear from hearing noise."
 	],
 	"waves#shore": [
 		"Waves crash against the shore.",
@@ -2889,7 +2870,6 @@
 	],
 	"hydrodynamics#bucket": [],
 	"sounds#wall": [
-		"A:",
 		"Sounds bounce off of walls."
 	],
 	"wall#sounds": [
@@ -2954,7 +2934,6 @@
 		"The electrons orbit around the nucleus."
 	],
 	"electron#nucleus": [
-		"A:",
 		"An electron orbits the nucleus."
 	],
 	"nucleus#electromagnetism": [
@@ -2962,7 +2941,6 @@
 		"Electromagnetism surrounds the nucleus."
 	],
 	"electromagnetism#nucleus": [
-		"A:",
 		"Electromagnetism is the force that attracts electrons and nuclei together."
 	],
 	"electron#electromagnetism": [
@@ -3001,7 +2979,6 @@
 		"The sun creates gravity."
 	],
 	"gravity#sun": [
-		"A:",
 		"The gravity of the sun affects the planets orbiting around it."
 	],
 	"planet#gravity": [
@@ -3045,20 +3022,16 @@
 		"Charge is the cause of electromagnetism."
 	],
 	"solar system#mass": [
-		"A:",
 		"The mass of the solar system affects the orbits of the planets."
 	],
 	"mass#solar system": [
-		"A:",
 		"The mass of an object affects the gravitational pull it has on objects in the solar system."
 	],
 	"sun#mass": [
 		"The sun has the mass of about 333,000 Earths.",
 		"The sun has the mass of about 333,000 planets."
 	],
-	"mass#sun": [
-		"A:"
-	],
+	"mass#sun": [],
 	"planet#mass": [
 		"A planet has mass.",
 		"A planet is a large object that has mass."
@@ -3095,7 +3068,6 @@
 		"Respiration is necessary to break down food molecules to release energy."
 	],
 	"food#respiration": [
-		"A:",
 		"Food is necessary for respiration."
 	],
 	"respiration#oxygen": [
@@ -3146,7 +3118,6 @@
 		"Oxygen is one of the elements of food."
 	],
 	"food#carbon dioxide": [
-		"A:",
 		"Food produces carbon dioxide."
 	],
 	"carbon dioxide#food": [
@@ -3218,7 +3189,6 @@
 		"Carbon dioxide is a waste product of combustion."
 	],
 	"fire#fuel": [
-		"A:",
 		"Fire needs fuel to burn."
 	],
 	"fuel#fire": [
@@ -3253,7 +3223,6 @@
 		"Fuel is composed of carbon dioxide."
 	],
 	"carbon dioxide#fuel": [
-		"A:",
 		"Carbon dioxide is a by-product of fuel combustion."
 	],
 	"projectile#trajectory": [
@@ -3438,14 +3407,10 @@
 		"Sensory input is stored in short-term memory, which can be recalled later."
 	],
 	"memory#mistake": [
-		"A memory is an error-free record of past events.",
-		"A memory can be inaccurate."
-	],
-	"mistake#memory": [
 		"Memory is where we store our mistakes.",
-		"Mistakes are often remembered because they are embarrassing.",
 		"Memory is the ability to remember mistakes."
 	],
+	"mistake#memory": [],
 	"muscles#senses": [
 		"Muscles are what allow senses to function.",
 		"Muscles are necessary for senses to work."
@@ -3542,10 +3507,7 @@
 		"Memory is like a bug because it can be hard to find and it's important to squash them.",
 		"Memory is like a bug because it's small and can cause a lot of damage."
 	],
-	"bug#memory": [
-		"Memory is where a bug is stored.",
-		"Memory is where bugs are stored."
-	],
+	"bug#memory": [],
 	"outputs#inputs": [
 		"Outputs are the results of inputs.",
 		"Outputs are what come from inputs."
@@ -3566,7 +3528,6 @@
 		"Bug is a type of input."
 	],
 	"bug#inputs": [
-		"A:",
 		"Bug captures inputs for processing."
 	],
 	"breeds#selection": [
@@ -3606,7 +3567,6 @@
 		"Competition is the result of adaptation."
 	],
 	"adaptation#competition": [
-		"A:",
 		"Adaptation and competition are two ways that living things interact with their environment. Adaptation is when an organism evolves in order to better survive in its environment. Competition is when organisms compete for limited resources."
 	],
 	"competition#fitness": [
@@ -3617,11 +3577,9 @@
 		"Fitness is a race."
 	],
 	"adaptation#fitness": [
-		"A:",
 		"Adaptation is the process that allows an organism to adjust to its environment, while fitness is the ability of an organism to produce offspring."
 	],
 	"fitness#adaptation": [
-		"A:",
 		"Fitness is the ability of an organism to reproduce. Adaptation is the process by which organisms change their traits in order to survive in their environment."
 	],
 	"breeds#conformance": [
@@ -3638,7 +3596,6 @@
 		"The breeds affect the popularity."
 	],
 	"selection#conformance": [
-		"A:",
 		"Selection is the process of choosing specific items from a larger set, while conformance is the act of following the norms or expectations of a particular group. In general, selection is the more powerful of the two forces, as it allows individuals or groups to choose which behaviors or traits are best suited"
 	],
 	"conformance#selection": [
@@ -3749,7 +3706,6 @@
 		"A table is a necessary part of playing billiards."
 	],
 	"speed#table": [
-		"A:",
 		"There is no direct relationship between speed and table."
 	],
 	"table#speed": [
@@ -3861,7 +3817,6 @@
 		"A machine cannot function without power."
 	],
 	"mind#intelligence": [
-		"A:",
 		"There is no definitive answer to this question. Some people might say that mind and intelligence are the same thing, while others might say that they are completely different concepts."
 	],
 	"intelligence#mind": [
@@ -3882,7 +3837,6 @@
 		"Intelligence is a necessary component of therapy."
 	],
 	"therapy#intelligence": [
-		"A:",
 		"There is no definitive answer to this question. Some people might say that therapy can increase intelligence, while others might say that there is no connection between the two."
 	],
 	"machine#repair": [
@@ -3962,7 +3916,6 @@
 		"Achieving a goal requires overcoming difficulties."
 	],
 	"goal#difficulties": [
-		"A:",
 		"Goal = Difficulty"
 	],
 	"difficulties#plan": [
@@ -4046,7 +3999,6 @@
 		"A route is a path to a destination without obstruction."
 	],
 	"obstructions#traveller": [
-		"A:",
 		"An obstruction can prevent a traveller from reaching their destination."
 	],
 	"traveller#obstructions": [
@@ -4054,9 +4006,7 @@
 		"A traveller can take a detour to avoid obstructions."
 	],
 	"obstructions#companion": [
-		"A:",
 		"An obstruction can be a companion.",
-		"A:",
 		"An obstruction can provide company."
 	],
 	"companion#obstructions": [

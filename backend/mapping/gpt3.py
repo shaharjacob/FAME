@@ -128,7 +128,15 @@ def get_entities_relations_api(entity1: str, entity2: str):
         if response.choices and response.choices[0]:
             if "text" in response.choices[0]:
                 lines = response.choices[0]["text"].replace("A: ", "").split('\n')
-                relations = [line for line in lines if line and line != 'None']
+                relations = []
+                for line in lines:
+                    if line:
+                        if line not in ['None', 'A:']:
+                            if line.startswith("Q:"):
+                                break
+                            relations.append(line)
+
+                relations = [line for line in lines if line and line != 'None' and line]
 
     return relations
 

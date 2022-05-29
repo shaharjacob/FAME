@@ -64185,30 +64185,10 @@
 		"were uploaded to"
 	],
 	"mind#muscles": [
-		"can be likened to",
-		"controls",
-		"is",
-		"is like",
-		"is to",
-		"is used to control",
-		"keeps",
-		"loosen",
-		"strengthen",
-		"stressed"
+		"controls"
 	],
 	"muscles#mind": [
-		"affects",
-		"calm",
-		"center",
-		"clears",
-		"depend on",
-		"focus",
-		"rejuvenate",
-		"relax",
-		"so does",
-		"soothe",
-		"stimulate",
-		"took on"
+		"depend on"
 	],
 	"mind#senses": [
 		"adheres to",
@@ -64264,7 +64244,8 @@
 	],
 	"mistake#mind": [
 		"change",
-		"keep in"
+		"keep in",
+		"are stored in"
 	],
 	"memory#muscles": [
 		"is",
@@ -64297,15 +64278,11 @@
 		"tied to"
 	],
 	"memory#mistake": [
-		"be",
-		"reduces",
-		"will wipe"
+		"reduces"
 	],
 	"mistake#memory": [
 		"are immediately committed to",
-		"are stored in",
-		"can make",
-		"could wipe out"
+		"are stored in"
 	],
 	"muscles#senses": [
 		"expatiate on",
@@ -64411,13 +64388,7 @@
 		"may be an address of"
 	],
 	"memory#bug": [],
-	"bug#memory": [
-		"caused an increase in",
-		"causes",
-		"fix for",
-		"is",
-		"showed evidence of"
-	],
+	"bug#memory": [],
 	"outputs#inputs": [
 		"becomes",
 		"exceeds",
