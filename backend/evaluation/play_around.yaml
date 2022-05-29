@@ -1,23 +1,249 @@
 mapping:
-  # - input:
-  #     base: [b1, b2, ...]
-  #     target: [t1, t2, ...]
-  #     depth:
-  #       beam: 20
-  #       dfs: 4
-  #   output:
-  #     mapping:
-  #       - b1 --> t2
-  #       - b2 --> t1
-
-  - input:
-      base: [aspirin, pain, childbirth]
-      target: [muffler, noise, night]
+  - input: #A1 : 5/5
+      base: [solar system, sun, planet, gravity, mass]
+      target: [atom, nucleus, electron, electromagnetism, charge]
       depth:
         beam: 20
         dfs: 4
     output:
       mapping:
-      - aspirin --> muffler
-      - pain --> noise
-      - childbirth --> night
+      - solar system --> atom
+      - sun --> nucleus
+      - planet --> electron
+      - gravity --> electromagnetism
+      - mass --> charge
+
+  - input: #A2: 5/5
+      base: [water, pressure, water tower, bucket, hydrodynamics]
+      target: [heat, temperature, burner, kettle, thermodynamics]
+      depth:
+        beam: 20
+        dfs: 4
+    output:
+      mapping:
+      - water --> heat
+      - pressure --> temperature
+      - water tower --> burner
+      - bucket --> kettle
+      - hydrodynamics --> thermodynamics
+  
+  - input: #A3 : 4/4
+      base: [waves, shore, water, breakwater]
+      target: [sounds, wall, air, insulation]
+      depth:
+        beam: 20
+        dfs: 4
+    output:
+      mapping:
+      - waves --> sounds
+      - shore --> wall
+      - water --> air
+      - breakwater --> insulation
+
+  - input: #A4 : 5/5
+      base: [combustion, fire, fuel, oxygen, carbon dioxide]
+      target: [respiration, animal, food, oxygen, carbon dioxide]
+      depth:
+        beam: 20
+        dfs: 4
+    output:
+      mapping:
+      - combustion --> respiration
+      - fire --> animal
+      - fuel --> food
+      - oxygen --> oxygen
+      - carbon dioxide --> carbon dioxide
+  
+  - input: #A5 : 2/2
+      base: [sound, horn]
+      target: [light, lens]
+      depth:
+        beam: 20
+        dfs: 4
+    output:
+      mapping:
+      - sound --> light
+      - horn --> lens
+  
+  - input: #A6 : 5/5
+      base: [projectile, trajectory, earth, air, gravity]
+      target: [planet, orbit, sun, space, gravity]
+      depth:
+        beam: 20
+        dfs: 4
+    output:
+      mapping:
+      - projectile --> planet
+      - trajectory --> orbit
+      - earth --> sun
+      - air --> space
+      - gravity --> gravity
+  
+  - input: #A7 : 1/4
+      base: [breeds, selection, conformance, popularity]
+      target: [species, competition, adaptation, fitness]
+      depth:
+        beam: 20
+        dfs: 4
+    output:
+      mapping:
+      - breeds --> species
+      - selection --> competition
+      - conformance --> adaptation
+      - popularity --> fitness
+  
+  - input: #A8 : 2/4
+      base: [balls, billiards, speed, table]
+      target: [molecules, gas, temperature, container]
+      depth:
+        beam: 20
+        dfs: 4
+    output:
+      mapping:
+      - balls --> molecules
+      - billiards --> gas
+      - speed --> temperature
+      - table --> container
+  
+  - input: #A9 : 3/5 - solution rank 2
+      base: [computer, memory, outputs, inputs, bug]
+      target: [mind, memory, muscles, senses, mistake]
+      depth:
+        beam: 20
+        dfs: 4
+    output:
+      mapping:
+      - computer --> mind
+      - memory --> memory
+      - outputs --> muscles
+      - inputs --> senses
+      - bug --> mistake
+  
+  - input: #A10 : 2/2
+      base: [slot machines, reels]
+      target: [bacteria, genes]
+      depth:
+        beam: 20
+        dfs: 4
+    output:
+      mapping:
+      - slot machines --> bacteria
+      - reels --> genes
+
+  - input: #M1 : 4/4
+      base: [war, soldier, defeat, weapon]
+      target: [argument, debater, acceptance, logic]
+      depth:
+        beam: 20
+        dfs: 4
+    output:
+      mapping:
+      - war --> argument
+      - soldier --> debater
+      - defeat --> acceptance
+      - weapon --> logic
+  
+  - input: #M2 : 2/2
+      base: [buyer, merchandise]
+      target: [believer, belief]
+      depth:
+        beam: 20
+        dfs: 4
+    output:
+      mapping:
+      - buyer --> believer
+      - merchandise --> belief
+  
+  - input: #M3 : 3/3
+      base: [foundations, buildings, crack]
+      target: [reasons, theories, flaw]
+      depth:
+        beam: 20
+        dfs: 4
+    output:
+      mapping:
+      - foundations --> reasons
+      - buildings --> theories
+      - crack --> flaw
+  
+  - input: #M4 : 1/5
+      base: [obstructions, destination, route, traveller, companion]
+      target: [difficulties, goal, plan, parson, partner]
+      depth:
+        beam: 20
+        dfs: 4
+    output:
+      mapping:
+      - obstructions --> difficulties
+      - destination --> goal
+      - route --> plan
+      - traveller --> parson
+      - companion --> companion
+
+  - input: #M5 : 2/2
+      base: [money, budget]
+      target: [time, schedule]
+      depth:
+        beam: 20
+        dfs: 4
+    output:
+      mapping:
+      - money --> time
+      - budget --> schedule
+  
+  - input: #M6 : 2/2
+      base: [seeds, fruit]
+      target: [ideas, product]
+      depth:
+        beam: 20
+        dfs: 4
+    output:
+      mapping:
+      - seeds --> ideas
+      - fruit --> product
+
+  - input: #M7 : 3/3
+      base: [machine, power, repair]
+      target: [mind, intelligence, therapy]
+      depth:
+        beam: 20
+        dfs: 4
+    output:
+      mapping:
+      - machine --> mind
+      - power --> intelligence
+      - repair --> therapy
+
+  # - input: #M8
+  #     base: [object]
+  #     target: [idea]
+  #     depth:
+  #       beam: 20
+  #       dfs: 4
+  #   output:
+  #     mapping:
+  #     - object --> idea
+
+  - input: #M9 : 3/3
+      base: [leader, path, follower]
+      target: [speaker, argument, listener]
+      depth:
+        beam: 20
+        dfs: 4
+    output:
+      mapping:
+      - leader --> speaker
+      - path --> argument
+      - follower --> listener
+
+  - input: #M10 : 3/3
+      base: [light, darkness, view]
+      target: [knowledge, confusion, interpretation]
+      depth:
+        beam: 20
+        dfs: 4
+    output:
+      mapping:
+      - light --> knowledge
+      - darkness --> confusion
+      - view --> interpretation
