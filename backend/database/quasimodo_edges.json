@@ -23779,5 +23779,18 @@
 	"plan#person": [],
 	"person#plan": [],
 	"person#partner": [],
-	"partner#person": []
+	"partner#person": [],
+	"birthmark#stretch mark": [],
+	"stretch mark#birthmark": [],
+	"skin#stretch mark": [],
+	"stretch mark#skin": [
+		"appear on",
+		"has body part"
+	],
+	"stretch mark#laser": [
+		"has property"
+	],
+	"laser#stretch mark": [],
+	"laserk#birthmark": [],
+	"birthmark#laserk": []
 }

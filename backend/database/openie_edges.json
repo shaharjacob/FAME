@@ -12842,12 +12842,10 @@
 	"painting#canvas": [
 		"are oils on",
 		"are ready to hang on",
-		"are used on",
 		"comes on",
 		"goes on",
 		"is",
 		"is acrylic on",
-		"is applied to",
 		"is laid on",
 		"is oil on",
 		"is on",
@@ -65557,5 +65555,57 @@
 		"should be",
 		"support",
 		"train against"
-	]
+	],
+	"birthmark#stretch mark": [],
+	"stretch mark#birthmark": [],
+	"skin#stretch mark": [
+		"are the source of",
+		"avoid",
+		"called",
+		"can lead to",
+		"care products for",
+		"eliminate",
+		"even erase all signs of",
+		"has",
+		"includes",
+		"is",
+		"is the caretaker of",
+		"minimize",
+		"prevent",
+		"prevent the formation of",
+		"produce",
+		"recover from",
+		"reduce the appearance of",
+		"reduces",
+		"remove",
+		"say goodbye to"
+	],
+	"stretch mark#skin": [
+		"are buried deeply in",
+		"are caused by",
+		"are fine lines on",
+		"are ugly scars on",
+		"chapped",
+		"damaged",
+		"form in",
+		"helps create",
+		"is one of",
+		"is rubbing",
+		"keeps",
+		"occur across",
+		"occur on",
+		"strengthens",
+		"tighten"
+	],
+	"stretch mark#laser": [
+		"can be reduced with",
+		"is",
+		"is with"
+	],
+	"laser#stretch mark": [
+		"cannot remove",
+		"reduce the appearance of"
+	],
+	"laserk#birthmark": [],
+	"birthmark#laserk": []
 }

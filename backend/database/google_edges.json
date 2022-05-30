@@ -36225,5 +36225,22 @@
 		"with a disability need a support"
 	],
 	"person#partner": [],
-	"partner#person": []
+	"partner#person": [],
+	"birthmark#stretch mark": [],
+	"stretch mark#birthmark": [],
+	"skin#stretch mark": [
+		"get"
+	],
+	"stretch mark#skin": [
+		"affect your",
+		"appear on"
+	],
+	"stretch mark#laser": [],
+	"laser#stretch mark": [
+		"remove",
+		"treatment done for",
+		"work on"
+	],
+	"laserk#birthmark": [],
+	"birthmark#laserk": []
 }

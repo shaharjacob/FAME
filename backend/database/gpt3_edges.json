@@ -4151,5 +4151,35 @@
 	"partner#person": [
 		"A partner is someone's person.",
 		"A partner is someone's significant other."
+	],
+	"birthmark#stretch mark": [
+		"Birthmarks are stretch marks.",
+		"Stretch marks are birthmarks."
+	],
+	"stretch mark#birthmark": [
+		"A stretch mark is a birthmark."
+	],
+	"skin#stretch mark": [
+		"Stretch marks are caused by skin stretching."
+	],
+	"stretch mark#skin": [
+		"Stretch marks are caused by skin stretching.",
+		"Stretch marks are caused by skin tearing."
+	],
+	"stretch mark#laser": [
+		"Laser can remove stretch marks.",
+		"Laser is effective in removing stretch marks."
+	],
+	"laser#stretch mark": [
+		"Laser can help remove stretch marks.",
+		"Laser can help reduce the appearance of stretch marks."
+	],
+	"birthmark#laserk": [
+		"Birthmarks can be removed with laser surgery.",
+		"Birthmarks can be removed with laser treatment."
+	],
+	"laserk#birthmark": [
+		"A laserk removes birthmarks.",
+		"A laserk can get rid of birthmarks."
 	]
 }
