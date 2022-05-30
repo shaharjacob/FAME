@@ -232,9 +232,9 @@ mapping:
       - scent --> signal
       - snot --> radiation
 
-  - input: #20 : 2/4
+  - input: #20 : 4/4
       base: [painting, canvas, tear, eraser]
-      target: [birthmark, skin, strech mark, laser]
+      target: [birthmark, skin, stretch mark, laser]
       depth:
         beam: 20
         dfs: 4
