@@ -16,6 +16,9 @@ services:
       - FLASK_ENV=development
       - FLASK_APP=app.app
       - SENTENCE_TRANSFORMERS_HOME=cache
+      - OPENAI_API_KEY=${OPENAI_API_KEY}
+    env_file:
+      - .env
     working_dir: /backend
     command: flask run --host 0.0.0.0 --port 5031
   
