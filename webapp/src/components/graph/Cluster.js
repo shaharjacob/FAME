@@ -42,8 +42,8 @@ const Cluster = () => {
         }).then(data => {
             if (!IsEmpty(data)) {
                 setData(data)
-                setGraph(data[0.8]["graph"])
-                setOptions(data[0.8]["options"])
+                setGraph(data[0.5]["graph"])
+                setOptions(data[0.5]["options"])
             }
             else {
                 setNoMatchFound(true)
@@ -78,7 +78,7 @@ const Cluster = () => {
                 </div>
                 <div className="slider">
                     <Slider
-                        defaultValue={0.8}
+                        defaultValue={0.5}
                         getAriaValueText={valuetext}
                         aria-labelledby="discrete-slider-small-steps"
                         step={0.1}

@@ -9,13 +9,14 @@ import GoogleLogo from '../../assets/google.png'
 import QuasimodoLogo from '../../assets/quasimodo.png'
 import ConceptnetLogo from '../../assets/conceptnet.png'
 import OpenIELogo from '../../assets/openie.jpg'
+import GPT3Logo from '../../assets/gpt3.png'
 
 const TwoEntities = () => {
 
     let location = useLocation()
 
-    const [firstDirection, setFirstDirection] = useState({quasimodo: "", concept_net: "", google_autosuggest: "", openie: ""})
-    const [secondDirection, setSecondDirection] = useState({quasimodo: "", concept_net: "", google_autosuggest: "", openie: ""})
+    const [firstDirection, setFirstDirection] = useState({quasimodo: "", concept_net: "", google_autosuggest: "", openie: "", gpt3: ""})
+    const [secondDirection, setSecondDirection] = useState({quasimodo: "", concept_net: "", google_autosuggest: "", openie: "", gpt3: ""})
     const [entity1, setEntity1] = useState("")
     const [entity2, setEntity2] = useState("")
     const [isLoading, setIsLoading] = useState(true)
@@ -99,6 +100,13 @@ const TwoEntities = () => {
                             </tr>
                             <tr>
                                 <td className="content">
+                                    <img className="resource-logo" src={GPT3Logo} alg="gpt3" /><br/>
+                                    <span style={{fontSize: '10px'}}>GPT3</span>
+                                </td>
+                                <td className="content props" dangerouslySetInnerHTML={{__html: firstDirection.gpt3}}></td>
+                            </tr>
+                            <tr>
+                                <td className="content">
                                     <img className="resource-logo" src={ConceptnetLogo} alg="conceptnet" /><br/>
                                     <span style={{fontSize: '10px'}}>ConceptNet</span>
                                 </td>
@@ -148,6 +156,13 @@ const TwoEntities = () => {
                                     <span style={{fontSize: '10px'}}>OpenIE</span>
                                 </td>
                                 <td className="content props" dangerouslySetInnerHTML={{__html: secondDirection.openie}}></td>
+                            </tr>
+                            <tr>
+                                <td className="content">
+                                    <img className="resource-logo" src={GPT3Logo} alg="gpt3" /><br/>
+                                    <span style={{fontSize: '10px'}}>GPT3</span>
+                                </td>
+                                <td className="content props" dangerouslySetInnerHTML={{__html: secondDirection.gpt3}}></td>
                             </tr>
                             <tr>
                                 <td className="content">

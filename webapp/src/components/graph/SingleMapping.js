@@ -15,13 +15,14 @@ import { IsEmpty } from '../../utils'
 const SingleMapping = () => {
 
     let location = useLocation()
+    const default_dist_th = 0.5
 
     // graph viewer
     const [data, setData] = useState({})
     const [graph, setGraph] = useState({})
     const [options, setOptions] = useState({})
     const [graphSelect, setGraphSelect] = useState(0)
-    const [distThreshold, setDistThreshold] = useState(0.8)
+    const [distThreshold, setDistThreshold] = useState(default_dist_th)
     const [similarityThreshold, setSimilarityThreshold] = useState(0.00)
     const [currB, setCurrB] = useState([])
     const [currT, setCurrT] = useState([])
@@ -69,20 +70,20 @@ const SingleMapping = () => {
             let idx = 0
             let length = Object.keys(data).length
             for (let i = 0; i < length; i++) {
-                if (!IsEmpty(data[i][0.8]["graph"])) {
+                if (!IsEmpty(data[i][default_dist_th]["graph"])) {
                     idx = i
                     break
                 }
             }
-            if (!IsEmpty(data[idx][0.8]["graph"])) {
+            if (!IsEmpty(data[idx][default_dist_th]["graph"])) {
                 setData(data)
-                setGraph(data[idx][0.8]["graph"])
-                setOptions(data[idx][0.8]["options"])
+                setGraph(data[idx][default_dist_th]["graph"])
+                setOptions(data[idx][default_dist_th]["options"])
                 setScores([
-                    data[0][0.8]["score"],
-                    data[1][0.8]["score"],
-                    data[2][0.8]["score"],
-                    data[3][0.8]["score"]
+                    data[0][default_dist_th]["score"],
+                    data[1][default_dist_th]["score"],
+                    data[2][default_dist_th]["score"],
+                    data[3][default_dist_th]["score"]
                 ])
             }
             else {

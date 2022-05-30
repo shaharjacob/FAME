@@ -39,12 +39,12 @@ def mapping_entities():
     # top_n = utils.get_int(request.args.get('top'), 3)
     args = {
             "num_of_suggestions": utils.get_int(request.args.get('suggestions'), 3),
-            "N": utils.get_int(request.args.get('depth'), 4),
+            "N": utils.get_int(request.args.get('depth'), 20),
             "verbose": True,
             "google": True,
             "openie": True,
             "quasimodo": True,
-            "gpt3": False,
+            "gpt3": True,
             "conceptnet": False
         }
 
@@ -225,7 +225,7 @@ def two_entities():
         "google": True,
         "openie": True,
         "quasimodo": True,
-        "gpt3": False,
+        "gpt3": True,
         "conceptnet": False
     }
     data_collector = DataCollector(api=api) 
@@ -254,7 +254,7 @@ def bipartite_graph():
         "google": True,
         "openie": True,
         "quasimodo": True,
-        "gpt3": False,
+        "gpt3": True,
         "conceptnet": False
     }
     data_collector = DataCollector(api=api)
@@ -291,7 +291,7 @@ def clustring():
         "google": True,
         "openie": True,
         "quasimodo": True,
-        "gpt3": False,
+        "gpt3": True,
         "conceptnet": False
     }
     data_collector = DataCollector(api=api)
