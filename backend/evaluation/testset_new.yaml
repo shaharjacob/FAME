@@ -341,7 +341,7 @@ mapping:
       - cat --> fire
       - rat --> wood
 
-  - input: #29 : 1/3
+  - input: #29 : 1/3 - solution rank 3
       base: [immunization, disease, hospitalization]
       target: [forewarning, surprise, heart attack]
       depth:
@@ -351,7 +351,7 @@ mapping:
       mapping:
       - immunization --> forewarning
       - disease --> surprise
-      - hospitalization --> seizures
+      - hospitalization --> heart attack
       
   - input: # 30 : 0/3 - solution rank 3
       base: [thermometer, temperature, mercury]
