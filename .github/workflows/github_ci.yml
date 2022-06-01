@@ -30,4 +30,4 @@ jobs:
         python backend/evaluation/evaluation.py --yaml green_eval_near.yaml --algo beam --num-of-suggestions 0
     - name: Extended Problems
       run: |
-        python backend/evaluation/evaluation.py --yaml testset_new.yaml --algo beam --num-of-suggestions 0
+        python backend/evaluation/evaluation.py --yaml testset.yaml --algo beam --num-of-suggestions 0

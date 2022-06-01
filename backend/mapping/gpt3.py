@@ -5,10 +5,8 @@ import time
 import inflect
 from pathlib import Path
 
-import yaml
 import openai
 from openai.error import AuthenticationError
-from tqdm import tqdm
 
 BACKEND_DIR = Path(__file__).resolve().parent.parent
 EVALUATION_FOLDER = BACKEND_DIR / 'evaluation'
@@ -109,7 +107,7 @@ def get_entities_relations(entity1: str, entity2: str, engine: inflect.engine):
 def get_entities_relations_api(entity1: str, entity2: str):
     question = [f"Q: What are the relations between {entity1} and {entity2}?"]
     prompt_s =  "\n".join(prompt + question)
-
+    response = None
     try:
         response = openai.Completion.create(
             engine="text-davinci-001",
@@ -121,7 +119,7 @@ def get_entities_relations_api(entity1: str, entity2: str):
             presence_penalty=0
         )
     except AuthenticationError as e:
-        raise e
+        print(f"{e}")
         
     relations = []
     if response:
