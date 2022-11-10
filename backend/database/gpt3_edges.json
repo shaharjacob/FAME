@@ -6929,5 +6929,13 @@
 	"panama#panama canal": [
 		"The Panama Canal connects the Pacific and Atlantic oceans.",
 		"The Panama Canal is in Panama."
+	],
+	"decision making#policy making": [
+		"A:",
+		"Decision making is the process of making choices by evaluating options and selecting the best one. Policy making is the process of making decisions that affect the organization as a whole."
+	],
+	"policy making#decision making": [
+		"Policy making is a type of decision making.",
+		"Policy making is a type of decision making process."
 	]
 }
