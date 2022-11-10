@@ -25136,5 +25136,27 @@
 	],
 	"panama#panama canal": [],
 	"decision making#policy making": [],
-	"policy making#decision making": []
+	"policy making#decision making": [],
+	"bucket#iron bucket": [],
+	"iron bucket#bucket": [],
+	"cultural relics#unearthed": [],
+	"oolong tea#package": [],
+	"unearthed#cultural relics": [],
+	"package#oolong tea": [],
+	"potatoes#crisps": [],
+	"milk#milk powder": [],
+	"crisps#potatoes": [],
+	"milk powder#milk": [
+		"be cheaper than",
+		"be made from",
+		"be prepared from"
+	],
+	"droplets#ocean": [],
+	"ocean#droplets": [],
+	"tactics#war": [
+		"be important in"
+	],
+	"strategy#campaign": [],
+	"war#tactics": [],
+	"campaign#strategy": []
 }

@@ -6881,5 +6881,64 @@
 	"policy making#decision making": [
 		"Policy making is a type of decision making.",
 		"Policy making is a type of decision making process."
+	],
+	"bucket#iron bucket": [
+		"A bucket is made of iron."
+	],
+	"iron bucket#bucket": [
+		"A bucket is a container made of iron."
+	],
+	"cultural relics#unearthed": [
+		"Cultural relics are unearthed relics.",
+		"Relics found from excavation are called cultural relics."
+	],
+	"unearthed#cultural relics": [
+		"Unearthed cultural relics are the cultural relics that have been dug out from the ground."
+	],
+	"oolong tea#package": [
+		"Oolong tea is packaged in a box.",
+		"Oolong tea is packaged in a bag."
+	],
+	"package#oolong tea": [
+		"Package protects the oolong tea.",
+		"Package is necessary for the oolong tea."
+	],
+	"potatoes#crisps": [
+		"Potatoes are processed into crisps.",
+		"Crisps are made from potatoes."
+	],
+	"crisps#potatoes": [],
+	"milk#milk powder": [
+		"Milk powder is a concentrated form of milk.",
+		"Milk powder is made from milk."
+	],
+	"milk powder#milk": [
+		"Milk powder is made from milk.",
+		"Milk powder is a concentrated form of milk."
+	],
+	"droplets#ocean": [
+		"The droplets fall from the ocean.",
+		"The droplets originate from the ocean."
+	],
+	"ocean#droplets": [
+		"Ocean water droplets",
+		"Ocean water is in the form of droplets"
+	],
+	"tactics#war": [
+		"Tactics are used in war.",
+		"Tactics are a part of war."
+	],
+	"war#tactics": [
+		"War is a tactic.",
+		"War is a strategic plan."
+	],
+	"strategy#campaign": [
+		"A strategy is a part of a campaign.",
+		"A campaign has multiple strategies.",
+		"A strategy is a plan of action."
+	],
+	"campaign#strategy": [
+		"A campaign employs a strategy.",
+		"A campaign is a plan of action employing a strategy."
 	]
 }

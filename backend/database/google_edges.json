@@ -38148,5 +38148,28 @@
 		"profit from the"
 	],
 	"decision making#policy making": [],
-	"policy making#decision making": []
+	"policy making#decision making": [],
+	"bucket#iron bucket": [],
+	"iron bucket#bucket": [],
+	"cultural relics#unearthed": [],
+	"oolong tea#package": [],
+	"unearthed#cultural relics": [],
+	"package#oolong tea": [],
+	"potatoes#crisps": [
+		"chips called"
+	],
+	"milk#milk powder": [],
+	"crisps#potatoes": [],
+	"milk powder#milk": [
+		"cheaper than",
+		"made from"
+	],
+	"droplets#ocean": [],
+	"ocean#droplets": [],
+	"tactics#war": [
+		"change in the civil"
+	],
+	"strategy#campaign": [],
+	"war#tactics": [],
+	"campaign#strategy": []
 }
