@@ -4209,7 +4209,6 @@
 		"Yogurt is a dairy product made from milk."
 	],
 	"yogurt#milk": [
-		"A:",
 		"Yogurt is made from milk."
 	],
 	"pickled cabbage#cabbage": [
@@ -4221,7 +4220,6 @@
 		"Pickled cabbage is a type of cabbage."
 	],
 	"martial arts#tai chi": [
-		"A:",
 		"Tai chi is a form of martial arts."
 	],
 	"tai chi#martial arts": [
@@ -4315,9 +4313,7 @@
 		"Police enforce traffic laws for drivers.",
 		"Police stop drivers who break the law."
 	],
-	"dance#rap": [
-		"A:"
-	],
+	"dance#rap": [],
 	"rap#dance": [
 		"Rap music often inspires dancers."
 	],
@@ -4392,7 +4388,6 @@
 		"Pants are an article of clothing."
 	],
 	"rain#snow": [
-		"A:",
 		"Rain and snow are both types of precipitation."
 	],
 	"snow#rain": [
@@ -4455,7 +4450,6 @@
 		"Bad news often causes sorrow."
 	],
 	"computer#radiation": [
-		"A:",
 		"Computer screens and other electronic devices emit a type of radiation called blue light. This type of radiation is known to be harmful to the eyes and can cause eye fatigue and other problems."
 	],
 	"radiation#computer": [
@@ -4541,7 +4535,6 @@
 		"Work is a necessary part of learning."
 	],
 	"water#water cup": [
-		"A:",
 		"Water fills the cup.",
 		"Water is poured into the cup."
 	],
@@ -4699,10 +4692,7 @@
 		"The Netherlands is a country, and Japan is a country.",
 		"The Netherlands is a smaller country, and Japan is a larger country."
 	],
-	"japan#netherlands": [
-		"A:",
-		"Unknown."
-	],
+	"japan#netherlands": [],
 	"china#india": [
 		"China and India are two different countries."
 	],
@@ -4710,7 +4700,6 @@
 		"India is a country in Asia, while China is a country in Europe."
 	],
 	"germany#united kingdom": [
-		"A:",
 		"There are no specific relations between Germany and the United Kingdom. However, they are both European countries and share a number of cultural similarities. Additionally, they are both members of the European Union."
 	],
 	"united kingdom#germany": [
@@ -4731,9 +4720,7 @@
 	"spain#sweden": [
 		"Spain is a country in Europe, while Sweden is a country in North America."
 	],
-	"golf#baseball": [
-		"A:"
-	],
+	"golf#baseball": [],
 	"baseball#golf": [],
 	"volleyball#football": [
 		"Football is bigger than volleyball."
@@ -4743,9 +4730,7 @@
 		"Football and volleyball are both activities."
 	],
 	"billiards#shot put": [],
-	"shot put#billiards": [
-		"A:"
-	],
+	"shot put#billiards": [],
 	"table tennis#tennis": [
 		"Table tennis is a type of tennis.",
 		"Table tennis is a miniature version of tennis."
@@ -5107,7 +5092,6 @@
 		"To look forward to is to anticipate something good."
 	],
 	"expect#look forward to": [
-		"A:",
 		"Expect means to look forward to something that is going to happen."
 	],
 	"wisdom#language": [
@@ -5122,7 +5106,6 @@
 		"Be overfastidious in wording means to be excessively particular about wordings."
 	],
 	"be excessively particular about wordings#be overfastidious in wording": [
-		"A:",
 		"There is no direct relation between being excessively particular about wordings and being overfastidious in wording. However, being excessively particular about wordings may lead to being overfastidious in wording, as it can result in a focus on minor details to the point of missing the overall message."
 	],
 	"intelligence quotient#emotional intelligence": [
@@ -5242,7 +5225,6 @@
 		"The setting sun is the sun at the end of the day."
 	],
 	"setting sun#morning sun": [
-		"A:",
 		"The setting sun is the sun that sets below the horizon, while the morning sun is the sun that rises in the morning."
 	],
 	"juvenile#singer": [
@@ -5273,7 +5255,6 @@
 		"Walking means to move forward by putting one foot in front of the other."
 	],
 	"depressed#lost": [
-		"A:",
 		"Depressed people may feel lost.",
 		"People who are depressed may have feelings of being lost or purposeless."
 	],
@@ -5351,7 +5332,6 @@
 	"uk#lion": [],
 	"lion#uk": [],
 	"humanities#physics": [
-		"A:",
 		"There is no clear answer to this question. It is possible that there is a clear divide between the two subjects, with humanities focusing on the study of people and their cultures, and physics focusing on the study of the natural world. However, it is also possible that the two subjects intersect, with"
 	],
 	"physics#humanities": [
@@ -5384,7 +5364,6 @@
 		"Mints are often found in milk candy."
 	],
 	"milk candy#mints": [
-		"A:",
 		"There are no specific relations between milk candy and mints. However, they are both types of candy."
 	],
 	"australia#riding on the back of a sheep": [],
@@ -5403,9 +5382,7 @@
 		"China has the largest population."
 	],
 	"united states#on wheels": [],
-	"on wheels#united states": [
-		"A:"
-	],
+	"on wheels#united states": [],
 	"russia#the gas station of the world": [
 		"Russia is the largest country in the world.",
 		"Russia has the largest reserves of natural gas in the world."
@@ -5491,11 +5468,9 @@
 		"A library is a place where books are stored."
 	],
 	"three-dimensional war#digital war": [
-		"A:",
 		"A three-dimensional war is fought in physical space, while a digital war is fought in a virtual space."
 	],
 	"digital war#three-dimensional war": [
-		"A:",
 		"There is no direct relationship between digital war and three-dimensional war. However, digital war can be seen as a subset of three-dimensional war, as it takes place in a virtual environment."
 	],
 	"democratic management#autocratic management": [
@@ -5515,7 +5490,6 @@
 		"Aerobic exercise helps with medical slimming."
 	],
 	"medical slimming#aerobic exercise": [
-		"A:",
 		"Aerobic exercise is good for medical slimming."
 	],
 	"performance rewards#material rewards": [
@@ -5634,7 +5608,6 @@
 		"An investor with credibility is likely to be more successful."
 	],
 	"employees#entrepreneurs": [
-		"A:",
 		"Employees are people who are hired by entrepreneurs to help run their businesses."
 	],
 	"entrepreneurs#employees": [
@@ -5710,16 +5683,13 @@
 		"Resignation is the act of quitting a job or position, while entrepreneurship is the process of designing, launching, and running a new business."
 	],
 	"entrepreneurship#resignation": [
-		"A:",
 		"Entrepreneurship is the process of designing, launching, and running a new business, or enterprise. Resignation is the voluntary act of giving up one's job or position."
 	],
 	"become a monk#resume secular life": [
-		"A:",
 		"Becoming a monk means suspending one's secular life.",
 		"Resuming one's secular life means ceasing to be a monk."
 	],
 	"resume secular life#become a monk": [
-		"A:",
 		"There is no one-size-fits-all answer to this question, as the decision to resume secular life or become a monk depends on the individual's personal circumstances and goals."
 	],
 	"black#color": [
@@ -5766,11 +5736,9 @@
 		"Mineral water contains added minerals."
 	],
 	"chinese chess#military chess": [
-		"A:",
 		"There is no direct relation between chinese chess and military chess. However, they are both types of chess."
 	],
 	"military chess#chinese chess": [
-		"A:",
 		"Military chess is a strategy game that is played on a board that is 8x8 squares. The game is played by two people, each controlling 16 pieces. The pieces are arranged on the board in a similar way to chinese chess, with the exception that there is no river in the middle"
 	],
 	"mount tai#high mountain": [
@@ -5881,7 +5849,6 @@
 		"A sponge can hold foaming agent."
 	],
 	"alcohol#china-baijiu": [
-		"A:",
 		"Alcohol is used to produce china-baijiu."
 	],
 	"china-baijiu#alcohol": [
@@ -5901,7 +5868,6 @@
 		"Wealthy people can donate money to poverty alleviation."
 	],
 	"poverty alleviation#wealthy": [
-		"A:",
 		"There is no direct relation between poverty alleviation and wealthy. However, wealthier countries are often able to provide more resources for poverty alleviation initiatives. Additionally, wealthier people within a country can often be more effective in advocating for and contributing to poverty alleviation programs."
 	],
 	"drying#dehumidifying": [
@@ -5922,7 +5888,6 @@
 	"backwardness#advancing": [],
 	"advancing#backwardness": [],
 	"health#defend": [
-		"A:",
 		"Health defends the body from disease and infection."
 	],
 	"defend#health": [
@@ -5979,7 +5944,6 @@
 		"Depression is a type of illness."
 	],
 	"profit#quality": [
-		"A:",
 		"There is no definitive answer to this question. In some cases, it may be assumed that higher quality products lead to higher profits (due to customers being willing to pay more), while in other cases it may be assumed that lower quality products can lead to higher profits (due to increased production volume and"
 	],
 	"quality#profit": [
@@ -6003,7 +5967,6 @@
 		"Infestation can decrease production."
 	],
 	"reduced production#infestation": [
-		"A:",
 		"Reduced production is likely to occur when there is an infestation."
 	],
 	"youth#adulthood": [
@@ -6067,7 +6030,6 @@
 		"Freedom allows for thought."
 	],
 	"thought#freedom": [
-		"A:",
 		"There is no definitive answer to this question. Some people might say that thought requires freedom in order to exist, while others may argue that thought can exist without freedom. Ultimately, it is up to each individual to decide what they believe."
 	],
 	"bright moon#human brain": [
@@ -6102,7 +6064,6 @@
 		"Summer is the season when it is hot."
 	],
 	"hot#summer": [
-		"A:",
 		"Hot is associated with summer."
 	],
 	"army#war": [
@@ -6293,7 +6254,6 @@
 		"Hunger can be appeased with bread."
 	],
 	"bread#hunger": [
-		"A:",
 		"Bread satisfies hunger."
 	],
 	"cold#wardrobe": [
@@ -6424,7 +6384,6 @@
 		"Plastic film mulch can increase the temperature and water retention of the soil."
 	],
 	"increased temperature and water retention#plastic film mulch": [
-		"A:",
 		"There is a positive correlation between increased temperature and water retention, and the use of plastic film mulch. When the temperature increases, the water retention capacity of the soil also increases, which leads to an increase in the amount of water that the soil can hold. This, in turn, results"
 	],
 	"field management#frost and pest": [
@@ -6443,33 +6402,27 @@
 		"Adverse reactions are side effects that occur during the clinical trials of new drugs."
 	],
 	"weather forecast#satellite cloud image": [
-		"A:",
 		"The weather forecast relies on satellite cloud images to predict the weather."
 	],
 	"satellite cloud image#weather forecast": [
 		"Satellite cloud images are used to generate weather forecasts."
 	],
 	"rectify the market#purify the atmosphere": [
-		"A:",
 		"There is no direct relation between rectify the market and purify the atmosphere. However, each of these concepts may be seen as indirectly impacting the other. Rectifying the market may help to improve the overall well-being of citizens, and as a result, this may have a positive impact on"
 	],
 	"purify the atmosphere#rectify the market": [],
 	"butterfly#cricket": [],
-	"cricket#butterfly": [
-		"A:"
-	],
+	"cricket#butterfly": [],
 	"mulberries#flowers": [
 		"Mulberries grow on flowering trees.",
 		"Mulberries are borne on flowering trees."
 	],
 	"flowers#mulberries": [
-		"A:",
 		"Flowers are pollinated by bees who eat the mulberries."
 	],
 	"begonia#sea cucumber": [],
 	"sea cucumber#begonia": [],
 	"parrot#seagull": [
-		"A:",
 		"A seagull is a type of bird that typically lives near water, whereas a parrot is a type of bird that can be found in many different parts of the world."
 	],
 	"seagull#parrot": [
@@ -6485,7 +6438,6 @@
 		"A sun is a star that is very close."
 	],
 	"swan#plastic": [
-		"A:",
 		"There are no relations between swan and plastic."
 	],
 	"plastic#swan": [
@@ -6493,7 +6445,6 @@
 		"Swan is a type of plastic."
 	],
 	"dubai#tokyo": [
-		"A:",
 		"Dubai is located in the United Arab Emirates and Tokyo is located in Japan."
 	],
 	"tokyo#dubai": [],
@@ -6516,9 +6467,7 @@
 		"Watermelon can be consumed from a glass.",
 		"Watermelon can be placed in a glass."
 	],
-	"glass#watermelon": [
-		"A:"
-	],
+	"glass#watermelon": [],
 	"word#express": [
 		"Words can express feelings.",
 		"Words can communicate feelings."
@@ -6664,7 +6613,6 @@
 		"An aircraft is too fast for a cannon to shoot down."
 	],
 	"cannon#aircraft": [
-		"A:",
 		"A cannon can be mounted on an aircraft."
 	],
 	"traffic lights#switch cabinet": [
@@ -6684,7 +6632,6 @@
 		"A jack is 100 feet long."
 	],
 	"hand-cranked bed#foot-pedalled bicycle": [
-		"A:",
 		"There is no direct relationship between a hand-cranked bed and a foot-pedalled bicycle. However, they are both types of transportation that can get people from point A to point B."
 	],
 	"foot-pedalled bicycle#hand-cranked bed": [],
@@ -6899,7 +6846,6 @@
 		"China is by the yangtze river."
 	],
 	"nile#africa": [
-		"A:",
 		"The Nile River flows through Africa."
 	],
 	"africa#nile": [
@@ -6915,7 +6861,6 @@
 		"The United States is on the Mississippi River."
 	],
 	"volga#russia": [
-		"A:",
 		"The Volga is a river in Russia."
 	],
 	"russia#volga": [
@@ -6931,7 +6876,6 @@
 		"The Panama Canal is in Panama."
 	],
 	"decision making#policy making": [
-		"A:",
 		"Decision making is the process of making choices by evaluating options and selecting the best one. Policy making is the process of making decisions that affect the organization as a whole."
 	],
 	"policy making#decision making": [
