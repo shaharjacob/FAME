@@ -4391,7 +4391,8 @@
 		"Rain and snow are both types of precipitation."
 	],
 	"snow#rain": [
-		"Snow is a form of rain."
+		"Snow is a form of rain.",
+		"Snow can be turn into rain"
 	],
 	"thermos#plate": [
 		"A thermos is a container with a plate on the bottom.",
@@ -4410,12 +4411,10 @@
 		"A capacitor warms up when it is connected to a heater."
 	],
 	"acoustic equipment#display": [
-		"Acoustic equipment is used to display sound.",
 		"Acoustic equipment is used to amplify sound."
 	],
 	"display#acoustic equipment": [
-		"Display refers to acoustic equipment.",
-		"Display is a type of acoustic equipment."
+		"Display refers to acoustic equipment."
 	],
 	"tv#game console": [
 		"A game console is used to play tv games.",
@@ -4427,11 +4426,11 @@
 	],
 	"pesticides#pollution": [
 		"Pesticides pollute the environment.",
-		"Pesticides contaminate the environment."
+		"Pesticides may contribute to the pollution."
 	],
 	"pollution#pesticides": [
 		"Pollution harms crops and increases the need for pesticides.",
-		"Pesticides cause pollution."
+		"Pollution may cause because of the pesticides."
 	],
 	"exercise#health": [
 		"Exercise leads to good health.",

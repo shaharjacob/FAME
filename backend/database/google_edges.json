@@ -8455,7 +8455,9 @@
 		"swain hesitate to help the other",
 		"the last to leave a sinking"
 	],
-	"pilot#airplane": [],
+	"pilot#airplane": [
+		"work in"
+	],
 	"ship#captain": [],
 	"airplane#pilot": [],
 	"pilot#air": [
@@ -36450,8 +36452,6 @@
 	"tv#game console": [],
 	"game console#tv": [],
 	"pesticides#pollution": [
-		"affect air",
-		"affect water",
 		"and fertilizers cause water",
 		"and fertilizers contribute to",
 		"cause",
@@ -36487,6 +36487,7 @@
 		"affect"
 	],
 	"engine#car": [
+		"is part of the",
 		"light come on in",
 		"light on in",
 		"light on in my",
@@ -36501,6 +36502,7 @@
 	],
 	"ink#brush": [],
 	"car#engine": [
+		"contains",
 		"dealerships clean",
 		"detailers clean",
 		"headlights dim when you start the",
@@ -36514,11 +36516,14 @@
 	"sky#moonlight": [],
 	"sailboat#sea": [],
 	"sea#sailboat": [],
-	"wings#butterfly": [],
+	"wings#butterfly": [
+		"are necessary for"
+	],
 	"butterfly#wings": [
 		"break their",
 		"close its",
 		"close their",
+		"contains",
 		"dry their",
 		"flap its",
 		"flap their",
@@ -36912,6 +36917,7 @@
 		"go back to",
 		"have to be returned to",
 		"important to",
+		"is the natinal animal of",
 		"live in",
 		"live in southwest",
 		"only come from",
@@ -37187,13 +37193,16 @@
 		"live in",
 		"survive in"
 	],
-	"australia#koala": [],
+	"australia#koala": [
+		"protect"
+	],
 	"koala#australia": [
 		"an endangered animal in some parts of",
 		"considered a vulnerable species in",
 		"get to",
 		"have to live in",
 		"important to",
+		"is the natinal animal of",
 		"live in",
 		"live in eastern",
 		"live in the east coast of",
@@ -37429,7 +37438,7 @@
 		"your favorite"
 	],
 	"rice#grain": [
-		"a"
+		"is a kind of"
 	],
 	"color#black": [
 		"turn"
@@ -37579,8 +37588,11 @@
 	"quality#profit": [
 		"lead to increases in both productivity and"
 	],
-	"cold#chilly": [],
+	"cold#chilly": [
+		"may be because of"
+	],
 	"chilly#cold": [
+		"can lead to",
 		"mean"
 	],
 	"calligraphy#elegant": [],
@@ -38091,7 +38103,8 @@
 		"fruits and seeds help a",
 		"grow",
 		"help the",
-		"important to a"
+		"important to a",
+		"is a kind of"
 	],
 	"vehicle#automobile": [],
 	"population#people": [],
