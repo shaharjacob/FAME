@@ -25056,7 +25056,9 @@
 	],
 	"woman#miss manners": [],
 	"miss manners#woman": [],
-	"denominator#divisor": [],
+	"denominator#divisor": [
+		"is also called"
+	],
 	"inside corner#outside corner": [],
 	"divisor#denominator": [],
 	"outside corner#inside corner": [],
@@ -25066,7 +25068,9 @@
 	"ordinate#abscissa": [
 		"be different from"
 	],
-	"percent#percentage": [],
+	"percent#percentage": [
+		"is also called"
+	],
 	"percentage#percent": [],
 	"pen#ink": [
 		"can",

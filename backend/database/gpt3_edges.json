@@ -5832,8 +5832,7 @@
 		"Baking powder is used to make steamed bread."
 	],
 	"grain#feed": [
-		"Grain is the main feed for livestock.",
-		"Grain is the main ingredient in livestock feed."
+		"Grain is the main feed for livestock."
 	],
 	"feed#grain": [
 		"Grain is fed to animals.",
@@ -5841,7 +5840,8 @@
 	],
 	"foaming agent#sponge": [
 		"The foaming agent makes the sponge more effective at soaking up water.",
-		"The foaming agent makes the sponge expand and hold more water."
+		"The foaming agent makes the sponge expand and hold more water.",
+		"The foaming agent is necessary for making sponge."
 	],
 	"sponge#foaming agent": [
 		"A sponge absorbs foaming agent.",
@@ -5855,8 +5855,7 @@
 		"Baijiu is a type of alcohol."
 	],
 	"steel#automobile": [
-		"Steel is used in the manufacture of automobiles.",
-		"Steel is an important component of automobiles."
+		"Steel is used in the manufacture of automobiles."
 	],
 	"automobile#steel": [
 		"Steel makes up the frame of an automobile.",

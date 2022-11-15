@@ -37503,11 +37503,14 @@
 	"volume#cubic": [],
 	"ampere#current": [
 		"defined for an alternating",
-		"maxwell law explain the flow of"
+		"maxwell law explain the flow of",
+		"is the unit of measurement of"
 	],
 	"cubic#volume": [],
 	"kinetic energy#joules": [],
-	"joules#kinetic energy": [],
+	"joules#kinetic energy": [
+		"is the unit's measurement for"
+	],
 	"mass#kilogram": [
 		"measured in"
 	],
@@ -37529,7 +37532,9 @@
 	"grain#feed": [],
 	"steamed bread#baking powder": [],
 	"feed#grain": [],
-	"foaming agent#sponge": [],
+	"foaming agent#sponge": [
+		"is a necessary component for making"
+	],
 	"sponge#foaming agent": [],
 	"alcohol#china-baijiu": [],
 	"china-baijiu#alcohol": [],
