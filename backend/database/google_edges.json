@@ -37081,7 +37081,8 @@
 		"activity improve knowledge skills and"
 	],
 	"understanding#learning": [
-		"of human development help a teacher to facilitate"
+		"of human development help a teacher to facilitate",
+		"lead to"
 	],
 	"wealth#poverty": [
 		"affect",
@@ -37761,6 +37762,7 @@
 		"made for our",
 		"market related to",
 		"power a",
+		"provides power to the",
 		"used in",
 		"used in a",
 		"work in",
@@ -37787,7 +37789,9 @@
 		"cause",
 		"produce"
 	],
-	"wind#kite": [],
+	"wind#kite": [
+		"provides power to the"
+	],
 	"kite#wind": [
 		"surfers go against the"
 	],
@@ -38069,13 +38073,16 @@
 		"come out of",
 		"come out of a",
 		"flow in a ballpoint",
+		"necessary for",
 		"made for",
 		"not come out of a",
 		"not coming out of",
 		"stay in",
 		"stay in a"
 	],
-	"toothpaste#toothbrush": [],
+	"toothpaste#toothbrush": [
+		"is necessary for"
+	],
 	"mobile phone#computer": [
 		"a",
 		"considered as a",

@@ -4742,8 +4742,7 @@
 		"Water polo is a type of basketball."
 	],
 	"peace#war": [
-		"War is the absence of peace.",
-		"War is the opposite of peace."
+		"Peace is the opposite of war."
 	],
 	"war#peace": [
 		"War is the absence of peace.",
@@ -4770,7 +4769,8 @@
 		"Heredity is the cause of variation."
 	],
 	"neat#messy": [
-		"Neat is the opposite of messy."
+		"Neat is the opposite of messy.",
+		"Neat is better than messy."
 	],
 	"messy#neat": [
 		"Messy implies that things are not in order, while neat means that things are in order."
