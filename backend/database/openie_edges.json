@@ -69216,7 +69216,9 @@
 	],
 	"contract#signinature": [],
 	"application#accept": [],
-	"signinature#contract": [],
+	"signinature#contract": [
+		"is necessary for a valid"
+	],
 	"accept#application": [
 		"decline",
 		"focused on",
