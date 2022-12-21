@@ -37759,6 +37759,7 @@
 	"gasoline#car": [
 		"burn in a",
 		"good for",
+		"is the energy source of",
 		"made for our",
 		"market related to",
 		"power a",
@@ -38729,11 +38730,14 @@
 		"bulb",
 		"intensity affect"
 	],
-	"current#light": [],
+	"current#light": [
+		"is the energy source of"
+	],
 	"light#glow": [
 		"bugs",
 		"bulb",
-		"bulbs"
+		"bulbs",
+		"need current to"
 	],
 	"glow#light": [
 		"in the dark need",

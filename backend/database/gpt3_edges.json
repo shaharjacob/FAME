@@ -7585,6 +7585,7 @@
 	],
 	"physics#einstein": [
 		"Einstein was a physicist.",
+		"Physics was the main field of activity of Einstein",
 		"Einstein was a very famous physicist."
 	],
 	"hume#philosophy": [
@@ -7592,6 +7593,7 @@
 	],
 	"philosophy#hume": [
 		"Hume was a philosopher.",
+		"Philosophy was the main field of activity of Hume",
 		"Hume was a great philosopher."
 	],
 	"hume#agnosticism": [
@@ -7607,7 +7609,8 @@
 		"Philosophy is the study of general and fundamental problems concerning matters such as existence, knowledge, values, reason, mind, and language. Agnosticism is the view that the truth value of certain claims \u2013 especially metaphysical and religious claims such as the existence of God or the supernatural \u2013 is"
 	],
 	"agnosticism#philosophy": [
-		"Agnosticism is a philosophical position that holds that it is impossible to know whether or not God exists."
+		"Agnosticism is a philosophical position that holds that it is impossible to know whether or not God exists.",
+		"Agnosticism a subfield of philosophy"
 	],
 	"einstein#theory of relativity": [
 		"Einstein developed the theory of relativity.",
@@ -7623,7 +7626,8 @@
 	],
 	"theory of relativity#physics": [
 		"The theory of relativity is a physical theory.",
-		"The theory of relativity is a part of physics."
+		"The theory of relativity is a part of physics.",
+		"The theory of relativity a subfield of physics"
 	],
 	"radio#tv": [
 		"Radio waves are converted into TV signals.",
@@ -8020,15 +8024,19 @@
 		"Geography is the study of the Earth's surface, its features, and the relationships between them. Physical geography is the study of the Earth's physical features and the processes that shape them."
 	],
 	"physical geography#geography": [
+		"physical geography is a branch of geography",
 		"physical geography is the study of the natural features of the Earth's surface, while geography is the study of the people, places, and environments on Earth."
 	],
 	"candy#fruit candy": [],
-	"fruit candy#candy": [],
+	"fruit candy#candy": [
+		"Fruit candy is a type of candy."
+	],
 	"candy#sesame candy": [
 		"Sesame candy is a type of candy."
 	],
 	"sesame candy#candy": [
 		"Sesame candy is a type of candy.",
+		"Sesame candy is a kind of candy.",
 		"Sesame candy is a candy that contains sesame seeds."
 	],
 	"fruit candy#sesame candy": [
@@ -8038,7 +8046,6 @@
 		"Sesame candy doesn't have any relations with fruit candy."
 	],
 	"geography#economic geography": [
-		"A:",
 		"Geography is the study of the physical features of the earth, while economic geography is the study of the spatial distribution of economic activities and the factors that influence them."
 	],
 	"economic geography#geography": [
@@ -8046,7 +8053,6 @@
 		"Geography is the study of Earth's physical features."
 	],
 	"physical geography#economic geography": [
-		"A:",
 		"Physical geography is the study of the natural features of the Earth, including its landforms, climates, and ecosystems.",
 		"Economic geography is the study of how people use the natural resources of the Earth to produce goods and services."
 	],
@@ -8054,7 +8060,6 @@
 		"Economic geography is the study of where economic activities take place, while physical geography is the study of the natural features of the Earth."
 	],
 	"art dealer#broker": [
-		"A:",
 		"An art dealer is a broker for art."
 	],
 	"broker#art dealer": [
@@ -8073,7 +8078,6 @@
 		"An actor may receive remuneration for their work."
 	],
 	"remuneration#actor": [
-		"A remuneration is a payment to an actor.",
 		"An actor is paid a remuneration."
 	],
 	"performer#remuneration": [
@@ -8081,6 +8085,7 @@
 		"A performer may receive remuneration for their work."
 	],
 	"remuneration#performer": [
+		"A remuneration is a payment to the performer.",
 		"The performer is remunerated for their work.",
 		"The performer is rewarded for their work."
 	],
