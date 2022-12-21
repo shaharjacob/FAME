@@ -174,6 +174,13 @@ def update_paris_map(pairs_map: List[List[SingleMatch]],
 def get_all_possible_pairs_map(base: List[str], target: List[str]) -> List[List[SingleMatch]]:
     # complexity: (n choose 2) * (n choose 2) * 2
 
+    # return [
+    #     [
+    #         [(base[0], base[1]), (target[0], target[1])],
+    #         [(base[1], base[0]), (target[1], target[0])]
+    #     ]
+    # ]
+
     base_comb = list(combinations(base, 2))
     target_comb = list(combinations(target, 2))
     target_comb += [(val[1], val[0]) for val in target_comb]

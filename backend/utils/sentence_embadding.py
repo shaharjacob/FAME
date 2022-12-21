@@ -7,7 +7,7 @@ from sklearn.cluster import AgglomerativeClustering
 from sentence_transformers import SentenceTransformer, util
 
 device = "cuda" if torch.cuda.is_available() else "cpu"
-# device = "mps" if torch.backends.mps.is_available() else device
+device = "mps" if torch.backends.mps.is_available() else device
 
 
 class SentenceEmbedding(SentenceTransformer):

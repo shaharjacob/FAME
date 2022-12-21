@@ -48,6 +48,7 @@ class DataCollector(object):
             if f"{entity1}#{entity2}" in self.openie:
                 openie_props = self.openie[f"{entity1}#{entity2}"]
             else:
+                # openie_props = []
                 openie_props = openIE.entities_relations_wrapper(entity1, entity2, n=0)
                 self.openie[f"{entity1}#{entity2}"] = sorted(openie_props)
                 with open(root / 'backend' / 'database' / 'openie_edges.json', 'w') as f4:

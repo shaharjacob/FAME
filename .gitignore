@@ -5,6 +5,7 @@
 .idea/
 *.env
 
+backend/mapping/openie_data
 backend/tsv/merged
 backend/cache
 cache

@@ -62,12 +62,12 @@ def get_entities_relations(entity1: str, entity2: str, engine: inflect.engine):
     if f"{entity1}#{entity2}" not in content:
         content[f"{entity1}#{entity2}"] = get_entities_relations_api(entity1, entity2)
         should_save = True
-        time.sleep(1)
+        time.sleep(0.1)
 
     if f"{entity2}#{entity1}" not in content:
         content[f"{entity2}#{entity1}"] = get_entities_relations_api(entity2, entity1)
         should_save = True
-        time.sleep(1)
+        time.sleep(0.1)
 
     if should_save:
         with open(db_file, 'w') as fw:
@@ -78,7 +78,7 @@ def get_entities_relations(entity1: str, entity2: str, engine: inflect.engine):
     # relations = list(set(content[f"{entity1}#{entity2}"]))
     for relation in relations:
         relation = relation.lower()
-        match = re.search(f'{entity1} (.*?) {entity2}', relation)
+        match = re.search(f'{entity1} (.*?) {entity2}', relation, flags=re.IGNORECASE)
         if match:
             relation = match.group(1).strip()
             if relation:
@@ -87,14 +87,14 @@ def get_entities_relations(entity1: str, entity2: str, engine: inflect.engine):
             if not engine:
                 engine = inflect.engine()
             _entity2 = engine.plural(entity2)
-            match = re.search(f'{entity1} (.*?) {_entity2}', relation)
+            match = re.search(f'{entity1} (.*?) {_entity2}', relation, flags=re.IGNORECASE)
             if match:
                 relation = match.group(1).strip()
                 if relation:
                     relation_as_set.add(relation)
             else:
                 _entity1 = engine.plural(entity1)
-                match = re.search(f'{_entity1} (.*?) {entity2}', relation)
+                match = re.search(f'{_entity1} (.*?) {entity2}', relation, flags=re.IGNORECASE)
                 if match:
                     relation = match.group(1).strip()
                     if relation:
@@ -129,7 +129,7 @@ def get_entities_relations_api(entity1: str, entity2: str):
                 relations = []
                 for line in lines:
                     if line:
-                        if line not in ['None', 'A:']:
+                        if line != "None" and line != "A:":
                             if line.startswith("Q:"):
                                 break
                             relations.append(line)
