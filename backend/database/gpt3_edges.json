@@ -6938,5 +6938,1081 @@
 	"campaign#strategy": [
 		"A campaign employs a strategy.",
 		"A campaign is a plan of action employing a strategy."
+	],
+	"bucket#bucket": [
+		"A bucket is a container that can hold water",
+		"A bucket is a tool used to hold and carry water"
+	],
+	"white pigeon#pigeon": [
+		"White pigeons are a type of pigeon."
+	],
+	"pigeon#white pigeon": [
+		"White pigeons are domesticated pigeons.",
+		"Pigeons come in many colors, including white."
+	],
+	"female pigeon#pigeon": [
+		"Female pigeons lay eggs that hatch into pigeons.",
+		"Female pigeons are able to lay eggs that will hatch into pigeons."
+	],
+	"pigeon#female pigeon": [
+		"Female pigeons lay eggs.",
+		"Female pigeons incubate eggs.",
+		"Female pigeons care for their young."
+	],
+	"car#electric car": [
+		"A car runs on gasoline, while an electric car runs on electricity."
+	],
+	"electric car#car": [
+		"Electric cars run on batteries, while gasoline cars run on gasoline.",
+		"Electric cars are powered by electricity, while gasoline cars are powered by gasoline."
+	],
+	"electric vehicle#electric car": [
+		"Electric vehicles are powered by electricity, while electric cars are powered by batteries."
+	],
+	"electric car#electric vehicle": [
+		"An electric car is a type of electric vehicle."
+	],
+	"soldier#military doctor": [
+		"A soldier is a military doctor.",
+		"A soldier is someone who is given medical attention by a military doctor."
+	],
+	"military doctor#soldier": [
+		"A military doctor heals soldiers.",
+		"A military doctor helps soldiers."
+	],
+	"doctor#military doctor": [
+		"A doctor is a civilian medical doctor.",
+		"A military doctor is a doctor who serves in the military."
+	],
+	"military doctor#doctor": [
+		"A military doctor is a doctor.",
+		"A military doctor is a physician."
+	],
+	"oolong tea#sales": [
+		"Oolong tea is a popular drink in Asia, and its sales are increasing.",
+		"Oolong tea is a popular drink in Asia, and its demand is increasing."
+	],
+	"sales#oolong tea": [
+		"There is no direct relationship between sales and oolong tea. However, if sales increase, it is likely that demand for oolong tea will also increase as it is a popular tea beverage."
+	],
+	"package#sales": [
+		"A package is a sales tool.",
+		"A package is a container for sales materials."
+	],
+	"sales#package": [
+		"Sales are packaged.",
+		"Sales are in a package."
+	],
+	"cultural relics#identification": [
+		"Identification is the process of ascertaining the cultural relics.",
+		"Identification is the process of verifying the cultural relics."
+	],
+	"identification#cultural relics": [
+		"Identification is the process of identifying cultural relics.",
+		"Identification is the determination of the cultural identity of an artifact."
+	],
+	"unearthed#identification": [
+		"unearthed refers to the identification of something that has been hidden.",
+		"unearthed means to identify something that has been hidden."
+	],
+	"identification#unearthed": [
+		"Identification is the discovery or identification of something that has been hidden or concealed.",
+		"Identification is the uncovering of something that has been hidden or concealed."
+	],
+	"milk#protein": [
+		"Milk contains protein.",
+		"Protein is found in milk."
+	],
+	"protein#milk": [
+		"Milk contains proteins.",
+		"Proteins are found in milk."
+	],
+	"milk powder#protein": [
+		"A:",
+		"Milk powder contains protein."
+	],
+	"protein#milk powder": [
+		"A:",
+		"Protein is found in milk powder."
+	],
+	"potatoes#starch": [
+		"Potatoes contain starch.",
+		"Potatoes are a source of starch."
+	],
+	"starch#potatoes": [
+		"Starch is found in potatoes.",
+		"Potatoes are a source of starch."
+	],
+	"crisps#starch": [
+		"Crisps are made of starch.",
+		"Crisps are made of potato starch."
+	],
+	"starch#crisps": [
+		"Starch is the main ingredient in crisps.",
+		"Crisps are made of starch."
+	],
+	"droplets#resources": [
+		"A droplet is a unit of a resource.",
+		"A droplet is a small amount of a resource."
+	],
+	"resources#droplets": [
+		"Resources are the droplets' source.",
+		"Resources are what the droplets are made of."
+	],
+	"ocean#resources": [
+		"The ocean is a source of resources.",
+		"The ocean provides resources."
+	],
+	"resources#ocean": [
+		"Resources come from the ocean.",
+		"Resources are found in the ocean."
+	],
+	"paper#knowledge": [
+		"Knowledge is written on paper.",
+		"Paper is a good medium for conveying knowledge."
+	],
+	"knowledge#paper": [
+		"Knowledge can be written on paper.",
+		"Knowledge can be recorded on paper."
+	],
+	"book#knowledge": [
+		"A book is a source of knowledge.",
+		"A book can provide knowledge."
+	],
+	"knowledge#book": [
+		"Book is a container of knowledge.",
+		"Book is a storehouse of knowledge."
+	],
+	"strategy#success or failure": [
+		"A strategy can lead to success or failure.",
+		"A strategy can result in success or failure."
+	],
+	"success or failure#strategy": [
+		"A successful strategy leads to success.",
+		"A failed strategy leads to failure."
+	],
+	"campaign#success or failure": [
+		"A successful campaign is one that leads to success.",
+		"A successful campaign is one that has a good chance of achieving its goals."
+	],
+	"success or failure#campaign": [
+		"A successful campaign leads to success.",
+		"A failed campaign leads to failure."
+	],
+	"tactics#victory or defeat": [
+		"A:",
+		"Tactics can lead to victory or defeat."
+	],
+	"victory or defeat#tactics": [
+		"Victory or defeat is the result of tactics.",
+		"Tactics decides victory or defeat."
+	],
+	"war#victory or defeat": [
+		"War can result in victory or defeat."
+	],
+	"victory or defeat#war": [
+		"War can lead to victory or defeat.",
+		"Victory or defeat can be the outcome of a war."
+	],
+	"preparing lesson#teaching": [
+		"A:",
+		"Preparing a lesson plan is the first step of teaching."
+	],
+	"teaching#preparing lesson": [
+		"A:",
+		"Teaching involves preparing and delivering lessons."
+	],
+	"case filing#investigating": [
+		"Case filing is the first step of investigating.",
+		"Investigating is the process of examining a case."
+	],
+	"investigating#case filing": [
+		"Investigating is a pre-requisite for case filing.",
+		"Investigating is a necessary step before filing a case."
+	],
+	"case filing#adjudicating": [
+		"Case filing refers to the process of submitting a legal case to a court for adjudication."
+	],
+	"adjudicating#case filing": [
+		"Adjudicating is the process of reviewing a case and issuing a ruling.",
+		"Filing a case refers to the act of submitting a legal complaint to a court."
+	],
+	"investigating#adjudicating": [
+		"Investigating is the first step of adjudicating.",
+		"Investigating is the process of adjudicating.",
+		"Adjudicating is the result of investigating."
+	],
+	"adjudicating#investigating": [
+		"A:",
+		"Adjudicating is a form of investigating."
+	],
+	"preparing lesson#reviewing": [
+		"Preparing a lesson helps to review the material.",
+		"Reviewing helps to prepare for a lesson."
+	],
+	"reviewing#preparing lesson": [
+		"Reviewing a lesson prepares you for teaching it.",
+		"Preparing a lesson involves reviewing it."
+	],
+	"teaching#reviewing": [
+		"Reviewing is a form of teaching.",
+		"Teaching is a form of reviewing."
+	],
+	"reviewing#teaching": [
+		"A:",
+		"Reviewing is a type of teaching."
+	],
+	"yellow#red": [
+		"Yellow is the color that is created when red and green light are combined.",
+		"Red and yellow are complementary colors."
+	],
+	"red#yellow": [
+		"Red and yellow are two colors that are complementary to each other.",
+		"Red and yellow are two colors that are opposite each other on the color wheel."
+	],
+	"sad#happy": [
+		"Sad is the opposite of happy.",
+		"Sad is the absence of happiness."
+	],
+	"happy#sad": [
+		"A:",
+		"Happy and sad are emotions."
+	],
+	"sad#angry": [
+		"Sad and angry are two opposite emotions.",
+		"Sad and angry are two conflicting emotions."
+	],
+	"angry#sad": [
+		"A:",
+		"Angry is the opposite of sad."
+	],
+	"happy#angry": [
+		"A:",
+		"Happy and angry are emotions."
+	],
+	"angry#happy": [
+		"Anger is the opposite of happiness.",
+		"Anger is the absence of happiness."
+	],
+	"yellow#white": [
+		"Yellow is the color of white light minus the blue light.",
+		"Yellow is the lightest color.",
+		"Yellow is made up of white and black."
+	],
+	"white#yellow": [
+		"White is the opposite of yellow on the color wheel.",
+		"White is made up of all the colors of the rainbow, while yellow is made up of just one color.",
+		"White is the result of mixing all the colors of the light spectrum, while yellow is the result of mixing"
+	],
+	"red#white": [
+		"Red is opposite to white on the color wheel.",
+		"Red is the opposite of white on the color wheel."
+	],
+	"white#red": [
+		"White is the opposite of red.",
+		"Red is the opposite of white."
+	],
+	"probability#possibility": [
+		"Probability is the likelihood of something happening, while possibility is the chance of something happening.",
+		"Probability is the likelihood of something happening, while possibility is the chance of something happening."
+	],
+	"possibility#probability": [
+		"Probability is the likelihood of something happening.",
+		"Possibility is the chance that something could happen."
+	],
+	"siamese#twin": [
+		"Siamese twins are two people who were born from a single egg.",
+		"Siamese twins share the same body."
+	],
+	"twin#siamese": [
+		"Siamese twins share a single body.",
+		"Twins can either be siamese or not."
+	],
+	"siamese#biology": [
+		"Siamese twins are two people who are physically connected.",
+		"Siamese twins share the same biology."
+	],
+	"biology#siamese": [
+		"Siamese twins are two babies that are born from the same egg and share the same body.",
+		"Siamese twins are two babies that are born from the same womb."
+	],
+	"twin#biology": [
+		"Twins have the same biology.",
+		"Twins share the same biology."
+	],
+	"biology#twin": [
+		"Biological twins are two individuals who are born from the same fertilized egg.",
+		"Biological twins share the same DNA."
+	],
+	"probability#logic": [
+		"Probability is a branch of logic.",
+		"Probability is a subset of logic."
+	],
+	"logic#probability": [
+		"Logic is concerned with certainty, while probability is concerned with likelihood.",
+		"Logic is the study of reasoning, while probability is the study of chance."
+	],
+	"possibility#logic": [
+		"Logic can be used to explore possibilities.",
+		"Logic is used to determine the possibilities."
+	],
+	"logic#possibility": [
+		"Logic deals with what is possible.",
+		"Logic is the study of what is possible."
+	],
+	"electric vehicle#motorcycle": [
+		"Electric vehicles are powered by electricity, while motorcycles are powered by gasoline."
+	],
+	"motorcycle#electric vehicle": [
+		"A:",
+		"There is no direct relationship between a motorcycle and electric vehicle. However, electric vehicles may eventually replace motorcycles as the main mode of transportation due to their environmental benefits."
+	],
+	"wine#champagne": [
+		"Wine is a type of champagne.",
+		"Champagne is a type of wine."
+	],
+	"champagne#wine": [
+		"Champagne is a type of wine.",
+		"Champagne is a sparkling wine."
+	],
+	"wine#health wine": [
+		"Wine has health benefits.",
+		"Wine is healthy for you."
+	],
+	"health wine#wine": [
+		"Health wine has less alcohol than regular wine."
+	],
+	"champagne#health wine": [
+		"Champagne is a type of health wine.",
+		"Champagne is a healthier type of wine."
+	],
+	"health wine#champagne": [
+		"Health wine and champagne are both types of wine.",
+		"Health wine is a type of champagne.",
+		"Champagne is a type of health wine."
+	],
+	"electric vehicle#ambulance": [
+		"Electric vehicles can be used as ambulances.",
+		"Electric vehicles can be used for ambulance purposes."
+	],
+	"ambulance#electric vehicle": [],
+	"motorcycle#ambulance": [
+		"Motorcycles can be used as ambulances.",
+		"Motorcycles can be used to transport patients in an emergency."
+	],
+	"ambulance#motorcycle": [
+		"An ambulance is transported by a motorcycle.",
+		"A motorcycle is used to transport an ambulance."
+	],
+	"archaeology#cultural relics": [
+		"Archaeology is the study of cultural relics.",
+		"Cultural relics are the objects of archaeology."
+	],
+	"cultural relics#archaeology": [
+		"Cultural relics are objects of archaeological study.",
+		"Archaeology is the study of cultural relics."
+	],
+	"education#talent": [
+		"Education helps develop talent.",
+		"Education is necessary to develop talent."
+	],
+	"talent#education": [
+		"Talent is more important than education.",
+		"Education is more important than talent."
+	],
+	"education#enterprise": [
+		"Education provides the basis for enterprise.",
+		"Education is necessary for enterprise."
+	],
+	"enterprise#education": [
+		"A:",
+		"An enterprise needs a well-educated workforce to be successful.",
+		"A:",
+		"An enterprise can benefit from a good education."
+	],
+	"talent#enterprise": [
+		"Talent is the source of enterprise.",
+		"Talent is the driving force of enterprise."
+	],
+	"enterprise#talent": [
+		"Enterprise cultivates talent.",
+		"Enterprise provides a place for talent to grow."
+	],
+	"archaeology#museums": [
+		"A:",
+		"Museums display archaeological finds."
+	],
+	"museums#archaeology": [
+		"Museum exhibitions are based on archaeological finds.",
+		"Museums preserve archaeological finds."
+	],
+	"cultural relics#museums": [
+		"Museums preserve cultural relics.",
+		"Cultural relics are preserved by museums."
+	],
+	"museums#cultural relics": [
+		"Museums preserve cultural relics."
+	],
+	"textbook#student": [
+		"A textbook is a source of information for a student.",
+		"A textbook is a teacher for a student."
+	],
+	"student#textbook": [
+		"A student uses a textbook.",
+		"A student reads a textbook."
+	],
+	"weapon#battlefield": [
+		"Weapon is used on the battlefield.",
+		"Weapon is used to kill on the battlefield."
+	],
+	"battlefield#weapon": [
+		"A battlefield is a location where weapons are used.",
+		"A battlefield is a place where weapons are employed."
+	],
+	"soldier#battlefield": [
+		"A soldier is on the battlefield.",
+		"A soldier fights on the battlefield."
+	],
+	"battlefield#soldier": [
+		"A battlefield is where soldiers fight.",
+		"A battlefield is where soldiers are stationed."
+	],
+	"textbook#classroom": [
+		"A textbook is used in a classroom.",
+		"A textbook is often used in a classroom."
+	],
+	"classroom#textbook": [
+		"A textbook is often used in a classroom.",
+		"A textbook is a necessary tool for a classroom."
+	],
+	"student#classroom": [
+		"A student is in a classroom.",
+		"A student attends a classroom."
+	],
+	"classroom#student": [
+		"A classroom is where a student learns.",
+		"A classroom is a place where students learn."
+	],
+	"medic#doctor": [
+		"A medic is someone who helps doctors.",
+		"A medic is a doctor's assistant."
+	],
+	"doctor#medic": [
+		"A doctor is a medic.",
+		"A doctor is a medical professional."
+	],
+	"medic#soldier": [
+		"A medic saves soldiers.",
+		"A medic helps soldiers."
+	],
+	"soldier#medic": [
+		"A medic helps a soldier heal.",
+		"A medic keeps a soldier healthy."
+	],
+	"wood#paper": [
+		"Wood is made of paper.",
+		"Wood is a type of paper."
+	],
+	"paper#wood": [
+		"Paper is made out of wood pulp.",
+		"Paper is made out of wood."
+	],
+	"wheat#flour": [
+		"Wheat is ground to produce flour."
+	],
+	"flour#wheat": [
+		"Flour is made from wheat."
+	],
+	"flour#bread": [
+		"Flour is an ingredient in bread.",
+		"Flour is a component of bread."
+	],
+	"bread#flour": [
+		"Flour is used to make bread.",
+		"Flour is an ingredient in bread."
+	],
+	"wood#book": [
+		"A wood book is a rare item.",
+		"A wood book is a type of book."
+	],
+	"book#wood": [
+		"A book is made of wood.",
+		"A book is composed of wood."
+	],
+	"shackle#get rid of": [
+		"The shackle is used to get rid of something.",
+		"The shackle is used to remove something."
+	],
+	"get rid of#shackle": [
+		"get rid of - to set free, liberate",
+		"shackle - to chain, fetter"
+	],
+	"tension#relieve": [
+		"Tension is relieved by relieve.",
+		"Tension is reduced by relieve."
+	],
+	"relieve#tension": [
+		"Relief reduces tension.",
+		"Relief eliminates tension."
+	],
+	"tension#relax": [
+		"Tension is the opposite of relax.",
+		"Tension is the absence of relax.",
+		"Q: What are the relations between a and an?",
+		"A is the indefinite article and an is the definite article.",
+		"A is used before a word that begins with a conson"
+	],
+	"relax#tension": [
+		"Relaxing reduces tension.",
+		"Relaxing is the opposite of tension."
+	],
+	"relieve#relax": [
+		"Relief relaxes the body.",
+		"Relief eliminates stress and tension."
+	],
+	"relax#relieve": [
+		"Relaxing can relieve stress.",
+		"Relaxing can help relieve stress."
+	],
+	"shackle#freedom": [
+		"A shackle restricts freedom.",
+		"A shackle limits freedom."
+	],
+	"freedom#shackle": [
+		"Freedom is the absence of shackle.",
+		"Freedom is the removal of shackle."
+	],
+	"get rid of#freedom": [
+		"A:",
+		"There is no direct relation between \"get rid of\" and \"freedom.\" \"Get rid of\" usually means to remove something, while \"freedom\" usually means the absence of restrictions. However, in some cases, \"freedom\" may also mean being able to do something."
+	],
+	"freedom#get rid of": [
+		"Get rid of means to lose freedom.",
+		"Freedom cannot be gotten rid of."
+	],
+	"music#rock": [
+		"Music is often played with rock.",
+		"Music is often combined with rock."
+	],
+	"rock#music": [
+		"Rock music is inspired by the blues.",
+		"Rock music is a derivative of the blues."
+	],
+	"social contact#wechat": [
+		"Wechat is a social media platform that enables social contacts."
+	],
+	"wechat#social contact": [
+		"Wechat is a social contact app."
+	],
+	"social contact#immediacy": [
+		"Social contact can be immediate.",
+		"Social contact can be delayed."
+	],
+	"immediacy#social contact": [
+		"Immediacy enhances social contact.",
+		"Immediacy is necessary for social contact."
+	],
+	"wechat#immediacy": [
+		"Wechat provides immediacy."
+	],
+	"immediacy#wechat": [
+		"Wechat is an immediacy tool.",
+		"Wechat allows for immediacy communication."
+	],
+	"music#entertainment": [
+		"Music is a form of entertainment.",
+		"Music entertains people."
+	],
+	"entertainment#music": [
+		"Music is a form of entertainment.",
+		"Entertainment can include music."
+	],
+	"rock#entertainment": [
+		"A:"
+	],
+	"entertainment#rock": [
+		"Entertainment is a form of rock.",
+		"Entertainment is a type of rock."
+	],
+	"talent#excellent": [
+		"Talent is a requirement for excellent.",
+		"Excellent requires talent."
+	],
+	"excellent#talent": [
+		"Excellent is an attribute of talent.",
+		"Talent is a result of excellent."
+	],
+	"society#harmonic": [
+		"Society affects harmonic."
+	],
+	"harmonic#society": [
+		"A harmonic is pleasing to the ear and is often used in music.",
+		"A harmonic is in tune with society."
+	],
+	"society#build": [
+		"Society shapes the built environment.",
+		"Society creates the built environment."
+	],
+	"build#society": [
+		"A:",
+		"A build can reflect the society in which it exists."
+	],
+	"harmonic#build": [
+		"A harmonic is an architectural build.",
+		"A harmonic is an element of an architectural build."
+	],
+	"build#harmonic": [
+		"A build creates harmonic."
+	],
+	"talent#promote": [
+		"Talent is required to be promoted.",
+		"Talent is a necessary condition for being promoted."
+	],
+	"promote#talent": [
+		"Talent is what is promoted.",
+		"Promote means to advance the interests of someone or something."
+	],
+	"excellent#promote": [
+		"Excellent can promote."
+	],
+	"promote#excellent": [
+		"Excellent is a good quality that may be promoted.",
+		"Excellent is something that can be improved through promotion."
+	],
+	"einstein#physics": [
+		"Einstein developed the theory of relativity.",
+		"Einstein was a great physicist."
+	],
+	"physics#einstein": [
+		"Einstein was a physicist.",
+		"Einstein was a very famous physicist."
+	],
+	"hume#philosophy": [
+		"Hume was a philosopher who wrote about the philosophy of empiricism."
+	],
+	"philosophy#hume": [
+		"Hume was a philosopher.",
+		"Hume was a great philosopher."
+	],
+	"hume#agnosticism": [
+		"Hume was an agnostic.",
+		"Hume was an atheist."
+	],
+	"agnosticism#hume": [
+		"Agnosticism is a philosophy proposed by hume.",
+		"Agnosticism is a viewpoint attributed to hume."
+	],
+	"philosophy#agnosticism": [
+		"A:",
+		"Philosophy is the study of general and fundamental problems concerning matters such as existence, knowledge, values, reason, mind, and language. Agnosticism is the view that the truth value of certain claims \u2013 especially metaphysical and religious claims such as the existence of God or the supernatural \u2013 is"
+	],
+	"agnosticism#philosophy": [
+		"Agnosticism is a philosophical position that holds that it is impossible to know whether or not God exists."
+	],
+	"einstein#theory of relativity": [
+		"Einstein developed the theory of relativity.",
+		"Einstein was the first person to develop the theory of relativity."
+	],
+	"theory of relativity#einstein": [
+		"Einstein developed the theory of relativity.",
+		"Einstein proposed the theory of relativity."
+	],
+	"physics#theory of relativity": [
+		"Theory of relativity is a physical theory.",
+		"Theory of relativity is a more accurate physical theory."
+	],
+	"theory of relativity#physics": [
+		"The theory of relativity is a physical theory.",
+		"The theory of relativity is a part of physics."
+	],
+	"radio#tv": [
+		"Radio waves are converted into TV signals.",
+		"Radio waves are used to transmit TV signals."
+	],
+	"tv#radio": [
+		"A tv receives radio signals.",
+		"A tv can show radio programs."
+	],
+	"steamed#braised": [
+		"Braised food is cooked with steam.",
+		"Braised food is cooked with a small amount of water."
+	],
+	"braised#steamed": [
+		"Braised food is cooked in a small amount of liquid, while steamed food is cooked in steam."
+	],
+	"steamed#deep-fried": [
+		"Steamed food is cooked in water, while deep-fried food is cooked in oil."
+	],
+	"deep-fried#steamed": [
+		"Deep-fried food is cooked in hot oil, while steamed food is cooked in hot water or steam."
+	],
+	"braised#deep-fried": [
+		"They are both cooking methods."
+	],
+	"deep-fried#braised": [
+		"A:",
+		"Deep-fried food is cooked by immersing it in hot oil, while braised food is cooked by simmering it in liquid."
+	],
+	"radio#newspaper": [
+		"Radio broadcasts news while newspapers print news."
+	],
+	"newspaper#radio": [
+		"Radio broadcasts news stories from newspapers.",
+		"Newspapers print stories that are later read on the radio."
+	],
+	"tv#newspaper": [
+		"A television can show newspapers.",
+		"A television can display newspapers."
+	],
+	"newspaper#tv": [
+		"Newspaper is read while tv is watched.",
+		"Newspaper is used to prop up a tv."
+	],
+	"size#weight": [
+		"A:",
+		"There is no direct relation between size and weight. However, larger objects typically weigh more than smaller objects."
+	],
+	"weight#size": [
+		"Weight is a measure of the size of an object."
+	],
+	"true and false#more and less": [
+		"False is more than true.",
+		"False is less than more."
+	],
+	"more and less#true and false": [
+		"A:",
+		"More means that there is more of something.",
+		"Less means that there is less of something.",
+		"True means that something is accurate or correct.",
+		"False means that something is inaccurate or incorrect."
+	],
+	"true and false#data": [
+		"Data can be true or false.",
+		"True and false are two possible values of data."
+	],
+	"data#true and false": [
+		"Data can be true or false.",
+		"Data can be represented as true or false values."
+	],
+	"more and less#data": [
+		"More data means less information.",
+		"Less data means more information."
+	],
+	"data#more and less": [
+		"A:",
+		"Data is more than just a single number.",
+		"More data gives a more complete and accurate picture.",
+		"Less data can lead to inaccurate conclusions."
+	],
+	"size#object": [
+		"The size of an object is determined by its mass."
+	],
+	"object#size": [
+		"The size of an object is relative to its environment."
+	],
+	"weight#object": [
+		"Weight is the force that opposes the motion of an object.",
+		"Weight is the measure of the force of gravity on an object."
+	],
+	"object#weight": [
+		"An object's weight is the measure of the force of gravity on it.",
+		"The weight of an object is the force of gravity on it."
+	],
+	"hong kong#macau": [
+		"Macau was a Portuguese colony, and is now a Special Administrative Region of China. Hong Kong was a British colony, and is now a Special Administrative Region of China."
+	],
+	"macau#hong kong": [
+		"Macau is a territory of China, while Hong Kong is a Special Administrative Region of China."
+	],
+	"guangdong#guangxi": [
+		"Guangdong is a province in China while Guangxi is a autonomous region.",
+		"Guangdong and Guangxi are two different places."
+	],
+	"guangxi#guangdong": [
+		"Guangxi and Guangdong are provinces in China."
+	],
+	"guangdong#guangdong and guangxi": [
+		"Guangdong is a province in southern China, bordering Guangxi to the west.",
+		"Guangdong and Guangxi are two provinces in southern China."
+	],
+	"guangdong and guangxi#guangdong": [
+		"Guangdong is a province in southern China, while Guangxi is a province adjacent to Guangdong. Guangdong is geographically smaller than Guangxi."
+	],
+	"guangxi#guangdong and guangxi": [
+		"Guangxi is a province in China that borders Guangdong and Vietnam.",
+		"Guangxi and Guangdong are two provinces in China.",
+		"Guangxi is a province in China. Guangdong is a province in China that borders Guangxi and Vietnam."
+	],
+	"guangdong and guangxi#guangxi": [
+		"Guangdong and Guangxi are two provinces in China.",
+		"Guangdong is north of Guangxi.",
+		"Guangxi is south of Guangdong."
+	],
+	"hong kong#hong kong and macau": [
+		"Hong Kong and Macau are two Special Administrative Regions of China."
+	],
+	"hong kong and macau#hong kong": [
+		"Macau is a Special Administrative Region of Hong Kong.",
+		"Hong Kong and Macau are two Special Administrative Regions of China."
+	],
+	"macau#hong kong and macau": [
+		"A:",
+		"Macau and Hong Kong are two Special Administrative Regions of China."
+	],
+	"hong kong and macau#macau": [
+		"Hong Kong and Macau are two Special Administrative Regions of the People's Republic of China."
+	],
+	"zhejiang#hainan": [
+		"Zhejiang is a province in China while Hainan is a province in south China.",
+		"Zhejiang is a coastal province while Hainan is an island province."
+	],
+	"hainan#zhejiang": [
+		"A:",
+		"There is no direct relationship between Hainan and Zhejiang provinces. However, both provinces are located in China. Additionally, Zhejiang is known for its manufacturing and Hainan is known for its tourism."
+	],
+	"china#singapore": [
+		"A:",
+		"China and Singapore have a long and complex history. China was first established as a country in 221 BC, while Singapore was founded in 1819. Throughout the years, the two countries have had a number of interactions, both positive and negative. Today, the two countries maintain strong diplomatic relations, with"
+	],
+	"singapore#china": [
+		"A:",
+		"There is no definitive answer to this question as the relations between Singapore and China are complex and ever-changing. However, some possible relations between the two countries could include economic ties, cultural exchange, and political relations."
+	],
+	"china#asia": [
+		"China is a part of Asia.",
+		"Asia is a continent that includes China."
+	],
+	"asia#china": [
+		"Asia is a continent that includes China.",
+		"China is a country located in Asia."
+	],
+	"singapore#asia": [
+		"Singapore is in Asia.",
+		"Singapore is a country in Asia."
+	],
+	"asia#singapore": [
+		"Asia is the continent that Singapore is located on."
+	],
+	"zhejiang#china": [
+		"Zhejiang is a province in China."
+	],
+	"china#zhejiang": [
+		"Zhejiang is in China.",
+		"Zhejiang is a province in China."
+	],
+	"hainan#china": [
+		"There is no specific relation between hainan and china."
+	],
+	"china#hainan": [
+		"China is a province of Hainan.",
+		"Hainan is a province of China."
+	],
+	"light#current": [
+		"Light is a type of current.",
+		"Light is one form of current."
+	],
+	"current#light": [
+		"Electricity creates light."
+	],
+	"light#glow": [
+		"Light makes things glow."
+	],
+	"glow#light": [
+		"Glow is a type of light.",
+		"Glow is emitted by light."
+	],
+	"current#glow": [
+		"Electricity causes a glow.",
+		"Electricity makes a light bulb glow."
+	],
+	"glow#current": [
+		"Glow is a result of current.",
+		"Glow is caused by current."
+	],
+	"car#run": [
+		"A car can run."
+	],
+	"run#car": [
+		"A run can power a car.",
+		"A run can turn the engine of a car."
+	],
+	"gasoline#run": [
+		"A:",
+		"Gasoline is used to make a car run."
+	],
+	"run#gasoline": [
+		"A car runs on gasoline.",
+		"Gasoline powers a car."
+	],
+	"power#supervision": [
+		"Power is the ability to direct or enforce obedience, while supervision is the act of overseeing or monitoring.",
+		"Power is the ability to make decisions, while supervision is the act of providing guidance."
+	],
+	"supervision#power": [
+		"Supervision is a form of power.",
+		"Supervision is a tool of power."
+	],
+	"ideal#action": [
+		"An ideal is a perfect action.",
+		"An ideal is a perfect example of an action."
+	],
+	"action#ideal": [
+		"Action is the process of realizing an ideal.",
+		"Action is the process of reaching an ideal."
+	],
+	"ideal#daydream": [
+		"An ideal is a perfect daydream.",
+		"An ideal is the perfect daydream."
+	],
+	"daydream#ideal": [
+		"A daydream is an ideal.",
+		"A daydream is a perfect fantasy."
+	],
+	"action#daydream": [
+		"Action interrupts daydreaming.",
+		"Action is incompatible with daydreaming."
+	],
+	"daydream#action": [
+		"Daydreaming distracts from action.",
+		"Daydreaming can prevent someone from acting."
+	],
+	"power#corruption": [
+		"Power can lead to corruption.",
+		"Corruption can lead to power."
+	],
+	"corruption#power": [
+		"Corruption often results from power.",
+		"Corruption is often caused by power."
+	],
+	"supervision#corruption": [
+		"Supervision can prevent corruption.",
+		"Supervision can reduce corruption."
+	],
+	"corruption#supervision": [
+		"Corruption can be reduced with effective supervision.",
+		"Supervision can help to reduce corruption."
+	],
+	"baiyangdian#fishing boat": [
+		"Baiyangdian is a place where many fishing boats are moored."
+	],
+	"fishing boat#baiyangdian": [],
+	"library#title page": [
+		"A library contains title pages.",
+		"A library has title pages."
+	],
+	"title page#library": [
+		"A title page is the first page of a book or other document.",
+		"A title page is found at the beginning of a book."
+	],
+	"books#title page": [
+		"A book has a title page.",
+		"A title page is a page at the beginning of a book."
+	],
+	"title page#books": [
+		"A title page is the first page of a book.",
+		"A title page is the cover of a book."
+	],
+	"baiyangdian#scull": [
+		"Baiyangdian is the source of the scull.",
+		"Baiyangdian is the place where the scull comes from."
+	],
+	"scull#baiyangdian": [
+		"A:",
+		"There is no direct relationship between scull and baiyangdian."
+	],
+	"fishing boat#scull": [
+		"A fishing boat is propelled by a scull.",
+		"A fishing boat is propelled by a scull."
+	],
+	"scull#fishing boat": [
+		"A scull is pulled by a fishing boat.",
+		"A fishing boat is propelled by a scull."
+	],
+	"energy#nuclear energy": [
+		"Nuclear energy is a type of energy.",
+		"Nuclear energy is a form of energy."
+	],
+	"nuclear energy#energy": [
+		"Nuclear energy is a type of energy.",
+		"Nuclear energy is a form of energy."
+	],
+	"material#wood": [
+		"Material is the substance that wood is made of.",
+		"Material is the component of wood."
+	],
+	"wood#material": [
+		"Wood is a type of material.",
+		"Wood is a natural material."
+	],
+	"material#furniture": [
+		"A material is used to make furniture.",
+		"Furniture is made out of a material."
+	],
+	"furniture#material": [
+		"Furniture is made of material.",
+		"Furniture is composed of material."
+	],
+	"wood#furniture": [
+		"Wood is used to make furniture."
+	],
+	"furniture#wood": [
+		"Furniture is made of wood.",
+		"Furniture is composed of wood."
+	],
+	"energy#nuclear weapon": [
+		"A nuclear weapon releases energy.",
+		"A nuclear weapon uses energy to detonate."
+	],
+	"nuclear weapon#energy": [
+		"A nuclear weapon releases energy.",
+		"A nuclear weapon creates energy."
+	],
+	"nuclear energy#nuclear weapon": [
+		"Nuclear energy can be used to produce nuclear weapon.",
+		"Nuclear weapon can produce nuclear energy."
+	],
+	"nuclear weapon#nuclear energy": [
+		"A nuclear weapon is a type of nuclear energy.",
+		"A nuclear weapon is a type of nuclear power."
+	],
+	"flour#egg": [
+		"A flour and egg mixture is used to make cakes, cookies, and other pastries.",
+		"A flour and egg mixture is used to make bread."
+	],
+	"egg#flour": [
+		"A:",
+		"The flour will coat the egg and keep it together."
+	],
+	"cement#rebar": [
+		"Cement hardens when it is mixed with water and rebar is used to reinforce the cement."
+	],
+	"rebar#cement": [
+		"A:",
+		"Reinforcing bar (rebar) is a steel bar or mesh of steel wires used as a tensioning device in reinforced concrete and reinforced masonry structures. It is usually formed into a lattice pattern."
+	],
+	"cement#house": [
+		"Cement is used to build houses.",
+		"Cement is an essential material for constructing a house."
+	],
+	"house#cement": [
+		"A house is made of cement."
+	],
+	"rebar#house": [],
+	"house#rebar": [],
+	"flour#cake": [
+		"Flour is an ingredient in cake.",
+		"Cake is made from flour."
+	],
+	"cake#flour": [
+		"Cake is made from flour.",
+		"Flour is a main ingredient in cake."
+	],
+	"egg#cake": [
+		"An egg is an ingredient in a cake.",
+		"A cake is made from eggs."
+	],
+	"cake#egg": [
+		"A cake contains eggs.",
+		"Eggs are used to make cake."
 	]
 }

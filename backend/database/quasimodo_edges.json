@@ -25160,5 +25160,453 @@
 	],
 	"strategy#campaign": [],
 	"war#tactics": [],
-	"campaign#strategy": []
+	"campaign#strategy": [],
+	"bucket#bucket": [],
+	"white pigeon#pigeon": [],
+	"pigeon#white pigeon": [],
+	"female pigeon#pigeon": [],
+	"pigeon#female pigeon": [
+		"chase"
+	],
+	"car#electric car": [],
+	"electric car#car": [
+		"be different from",
+		"has property"
+	],
+	"electric vehicle#electric car": [],
+	"electric car#electric vehicle": [],
+	"soldier#military doctor": [],
+	"military doctor#soldier": [],
+	"doctor#military doctor": [],
+	"military doctor#doctor": [],
+	"oolong tea#sales": [],
+	"sales#oolong tea": [],
+	"package#sales": [],
+	"sales#package": [],
+	"cultural relics#identification": [],
+	"identification#cultural relics": [],
+	"unearthed#identification": [],
+	"identification#unearthed": [],
+	"milk#protein": [
+		"be in",
+		"have"
+	],
+	"protein#milk": [
+		"be in"
+	],
+	"milk powder#protein": [],
+	"protein#milk powder": [],
+	"potatoes#starch": [
+		"contain",
+		"has property",
+		"have",
+		"make",
+		"produce",
+		"remove"
+	],
+	"starch#potatoes": [
+		"be in",
+		"be made in",
+		"be present in",
+		"be produced in",
+		"get into"
+	],
+	"crisps#starch": [],
+	"starch#crisps": [],
+	"droplets#resources": [],
+	"resources#droplets": [],
+	"ocean#resources": [],
+	"resources#ocean": [],
+	"paper#knowledge": [],
+	"knowledge#paper": [],
+	"book#knowledge": [
+		"be best and vastest source of",
+		"increase"
+	],
+	"knowledge#book": [],
+	"strategy#success or failure": [],
+	"success or failure#strategy": [],
+	"campaign#success or failure": [],
+	"success or failure#campaign": [],
+	"tactics#victory or defeat": [],
+	"victory or defeat#tactics": [],
+	"war#victory or defeat": [],
+	"victory or defeat#war": [],
+	"preparing lesson#teaching": [],
+	"case filing#investigating": [],
+	"teaching#preparing lesson": [],
+	"investigating#case filing": [],
+	"case filing#adjudicating": [],
+	"adjudicating#case filing": [],
+	"investigating#adjudicating": [],
+	"adjudicating#investigating": [],
+	"preparing lesson#reviewing": [],
+	"reviewing#preparing lesson": [],
+	"teaching#reviewing": [],
+	"reviewing#teaching": [],
+	"yellow#red": [
+		"be afraid of",
+		"has color",
+		"hate"
+	],
+	"sad#happy": [
+		"has property"
+	],
+	"red#yellow": [
+		"make"
+	],
+	"happy#sad": [
+		"be better than",
+		"has property"
+	],
+	"sad#angry": [],
+	"angry#sad": [],
+	"happy#angry": [],
+	"angry#happy": [],
+	"yellow#white": [
+		"see against"
+	],
+	"white#yellow": [
+		"go",
+		"has color",
+		"look",
+		"turn"
+	],
+	"red#white": [
+		"can"
+	],
+	"white#red": [
+		"has color"
+	],
+	"probability#possibility": [],
+	"siamese#twin": [],
+	"possibility#probability": [
+		"be related to"
+	],
+	"twin#siamese": [],
+	"siamese#biology": [],
+	"biology#siamese": [],
+	"twin#biology": [],
+	"biology#twin": [],
+	"probability#logic": [],
+	"logic#probability": [],
+	"possibility#logic": [],
+	"logic#possibility": [],
+	"electric vehicle#motorcycle": [],
+	"wine#champagne": [],
+	"motorcycle#electric vehicle": [],
+	"champagne#wine": [
+		"be different from",
+		"be more expensive than",
+		"be more intoxicating than",
+		"differ from"
+	],
+	"wine#health wine": [],
+	"health wine#wine": [],
+	"champagne#health wine": [],
+	"health wine#champagne": [],
+	"electric vehicle#ambulance": [],
+	"ambulance#electric vehicle": [],
+	"motorcycle#ambulance": [],
+	"ambulance#motorcycle": [],
+	"archaeology#cultural relics": [],
+	"education#talent": [],
+	"cultural relics#archaeology": [],
+	"talent#education": [],
+	"education#enterprise": [],
+	"enterprise#education": [],
+	"talent#enterprise": [],
+	"enterprise#talent": [],
+	"archaeology#museums": [],
+	"museums#archaeology": [],
+	"cultural relics#museums": [],
+	"museums#cultural relics": [],
+	"textbook#student": [
+		"help"
+	],
+	"student#textbook": [
+		"read"
+	],
+	"weapon#battlefield": [],
+	"battlefield#weapon": [],
+	"soldier#battlefield": [
+		"be in",
+		"get morphine on"
+	],
+	"battlefield#soldier": [],
+	"textbook#classroom": [],
+	"classroom#textbook": [],
+	"student#classroom": [
+		"be violent in",
+		"can eat in",
+		"can keep",
+		"can learn outside",
+		"can use pads in",
+		"can use technology in",
+		"have behavior in",
+		"misbehave in",
+		"need technology in",
+		"use technology in"
+	],
+	"classroom#student": [
+		"affect"
+	],
+	"medic#doctor": [
+		"be called"
+	],
+	"doctor#medic": [],
+	"medic#soldier": [],
+	"soldier#medic": [],
+	"wheat#flour": [
+		"be converted into",
+		"be made into",
+		"be turned into",
+		"be turned to",
+		"become",
+		"get turned into",
+		"has property",
+		"make"
+	],
+	"flour#wheat": [
+		"be better than",
+		"be turned into",
+		"come from"
+	],
+	"flour#bread": [
+		"affect",
+		"be good for",
+		"be important in",
+		"be in",
+		"be needed in",
+		"be used in",
+		"do in",
+		"make"
+	],
+	"bread#flour": [
+		"be more nutritious than",
+		"need"
+	],
+	"shackle#get rid of": [],
+	"tension#relieve": [],
+	"get rid of#shackle": [],
+	"relieve#tension": [],
+	"tension#relax": [],
+	"relax#tension": [],
+	"relieve#relax": [],
+	"relax#relieve": [],
+	"shackle#freedom": [],
+	"freedom#shackle": [],
+	"get rid of#freedom": [],
+	"freedom#get rid of": [],
+	"music#rock": [],
+	"social contact#wechat": [],
+	"rock#music": [
+		"has property"
+	],
+	"wechat#social contact": [],
+	"social contact#immediacy": [],
+	"immediacy#social contact": [],
+	"wechat#immediacy": [],
+	"immediacy#wechat": [],
+	"music#entertainment": [
+		"has property"
+	],
+	"entertainment#music": [],
+	"rock#entertainment": [],
+	"entertainment#rock": [],
+	"talent#excellent": [],
+	"society#harmonic": [],
+	"excellent#talent": [],
+	"harmonic#society": [],
+	"society#build": [],
+	"build#society": [],
+	"harmonic#build": [],
+	"build#harmonic": [],
+	"talent#promote": [],
+	"promote#talent": [],
+	"excellent#promote": [],
+	"promote#excellent": [],
+	"einstein#physics": [],
+	"hume#philosophy": [],
+	"physics#einstein": [],
+	"philosophy#hume": [],
+	"hume#agnosticism": [],
+	"agnosticism#hume": [],
+	"philosophy#agnosticism": [],
+	"agnosticism#philosophy": [],
+	"einstein#theory of relativity": [
+		"have"
+	],
+	"theory of relativity#einstein": [],
+	"physics#theory of relativity": [],
+	"theory of relativity#physics": [],
+	"radio#tv": [
+		"be faster than"
+	],
+	"steamed#braised": [],
+	"tv#radio": [
+		"be better than"
+	],
+	"braised#steamed": [],
+	"steamed#deep-fried": [],
+	"deep-fried#steamed": [],
+	"braised#deep-fried": [],
+	"deep-fried#braised": [],
+	"radio#newspaper": [],
+	"newspaper#radio": [],
+	"tv#newspaper": [],
+	"newspaper#tv": [],
+	"size#weight": [],
+	"true and false#more and less": [],
+	"weight#size": [],
+	"more and less#true and false": [],
+	"true and false#data": [],
+	"data#true and false": [],
+	"more and less#data": [],
+	"data#more and less": [],
+	"size#object": [],
+	"object#size": [
+		"have"
+	],
+	"weight#object": [],
+	"object#weight": [
+		"be measured in",
+		"have"
+	],
+	"hong kong#macau": [],
+	"guangdong#guangxi": [],
+	"macau#hong kong": [],
+	"guangxi#guangdong": [],
+	"guangdong#guangdong and guangxi": [],
+	"guangdong and guangxi#guangdong": [],
+	"guangxi#guangdong and guangxi": [],
+	"guangdong and guangxi#guangxi": [],
+	"hong kong#hong kong and macau": [],
+	"hong kong and macau#hong kong": [],
+	"macau#hong kong and macau": [],
+	"hong kong and macau#macau": [],
+	"zhejiang#hainan": [],
+	"china#singapore": [],
+	"hainan#zhejiang": [],
+	"singapore#china": [],
+	"china#asia": [
+		"take over"
+	],
+	"asia#china": [],
+	"singapore#asia": [],
+	"asia#singapore": [],
+	"zhejiang#china": [],
+	"china#zhejiang": [],
+	"hainan#china": [],
+	"china#hainan": [],
+	"light#current": [],
+	"current#light": [],
+	"light#glow": [
+		"can"
+	],
+	"glow#light": [
+		"stick up"
+	],
+	"current#glow": [],
+	"glow#current": [],
+	"car#run": [
+		"can",
+		"has movement",
+		"need",
+		"need gas",
+		"need gasoline",
+		"use oil"
+	],
+	"run#car": [],
+	"gasoline#run": [],
+	"run#gasoline": [],
+	"power#supervision": [],
+	"ideal#action": [],
+	"supervision#power": [],
+	"action#ideal": [],
+	"ideal#daydream": [],
+	"daydream#ideal": [
+		"has property"
+	],
+	"action#daydream": [],
+	"daydream#action": [],
+	"power#corruption": [],
+	"corruption#power": [],
+	"supervision#corruption": [],
+	"corruption#supervision": [],
+	"baiyangdian#fishing boat": [],
+	"fishing boat#baiyangdian": [],
+	"library#title page": [],
+	"title page#library": [],
+	"books#title page": [],
+	"title page#books": [],
+	"baiyangdian#scull": [],
+	"scull#baiyangdian": [],
+	"fishing boat#scull": [],
+	"scull#fishing boat": [],
+	"energy#nuclear energy": [],
+	"material#wood": [
+		"be such as"
+	],
+	"nuclear energy#energy": [
+		"be called",
+		"be considered",
+		"be converted into",
+		"be different from",
+		"be good source of",
+		"be transformed into",
+		"has property"
+	],
+	"wood#material": [
+		"has property"
+	],
+	"material#furniture": [],
+	"furniture#material": [],
+	"wood#furniture": [
+		"be made into",
+		"make"
+	],
+	"furniture#wood": [
+		"be made from",
+		"has property"
+	],
+	"energy#nuclear weapon": [],
+	"nuclear weapon#energy": [],
+	"nuclear energy#nuclear weapon": [
+		"develop"
+	],
+	"nuclear weapon#nuclear energy": [],
+	"flour#egg": [
+		"can"
+	],
+	"cement#rebar": [],
+	"egg#flour": [],
+	"rebar#cement": [],
+	"cement#house": [],
+	"house#cement": [],
+	"rebar#house": [],
+	"house#rebar": [],
+	"flour#cake": [
+		"be added to",
+		"be important in",
+		"be in",
+		"be used in"
+	],
+	"cake#flour": [
+		"has property"
+	],
+	"egg#cake": [
+		"affect",
+		"be added to",
+		"be important in",
+		"be in",
+		"be needed in",
+		"be used in",
+		"help"
+	],
+	"cake#egg": [
+		"has property",
+		"have",
+		"need"
+	]
 }

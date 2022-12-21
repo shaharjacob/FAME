@@ -38196,5 +38196,681 @@
 	],
 	"strategy#campaign": [],
 	"war#tactics": [],
-	"campaign#strategy": []
+	"campaign#strategy": [],
+	"bucket#bucket": [],
+	"white pigeon#pigeon": [],
+	"pigeon#white pigeon": [],
+	"female pigeon#pigeon": [],
+	"pigeon#female pigeon": [],
+	"car#electric car": [
+		"guys hate",
+		"heater work in an"
+	],
+	"electric car#car": [],
+	"electric vehicle#electric car": [],
+	"electric car#electric vehicle": [],
+	"soldier#military doctor": [],
+	"military doctor#soldier": [],
+	"doctor#military doctor": [],
+	"military doctor#doctor": [],
+	"oolong tea#sales": [],
+	"sales#oolong tea": [],
+	"package#sales": [],
+	"sales#package": [],
+	"cultural relics#identification": [],
+	"identification#cultural relics": [],
+	"unearthed#identification": [],
+	"identification#unearthed": [],
+	"milk#protein": [
+		"a",
+		"a good source of",
+		"affect whey",
+		"contain",
+		"have",
+		"have so much",
+		"high in",
+		"test positive for"
+	],
+	"protein#milk": [
+		"get into",
+		"powder clump in",
+		"powder not dissolve in"
+	],
+	"milk powder#protein": [],
+	"protein#milk powder": [],
+	"potatoes#starch": [
+		"a",
+		"contain",
+		"contain large amounts of",
+		"contains",
+		"convert glucose to",
+		"have",
+		"need",
+		"rich in",
+		"store",
+		"store their"
+	],
+	"starch#potatoes": [
+		"broken down into glucose in",
+		"in"
+	],
+	"crisps#starch": [],
+	"starch#crisps": [],
+	"droplets#resources": [],
+	"resources#droplets": [],
+	"ocean#resources": [
+		"a natural",
+		"a valuable",
+		"thermal energy conversion a renewable",
+		"water a renewable"
+	],
+	"resources#ocean": [],
+	"paper#knowledge": [],
+	"knowledge#paper": [],
+	"book#knowledge": [
+		"give you",
+		"increase",
+		"represent"
+	],
+	"knowledge#book": [],
+	"strategy#success or failure": [],
+	"success or failure#strategy": [],
+	"campaign#success or failure": [],
+	"success or failure#campaign": [],
+	"tactics#victory or defeat": [],
+	"victory or defeat#tactics": [],
+	"war#victory or defeat": [],
+	"victory or defeat#war": [],
+	"preparing lesson#teaching": [],
+	"case filing#investigating": [],
+	"teaching#preparing lesson": [],
+	"investigating#case filing": [],
+	"case filing#adjudicating": [],
+	"adjudicating#case filing": [],
+	"investigating#adjudicating": [],
+	"adjudicating#investigating": [],
+	"preparing lesson#reviewing": [],
+	"reviewing#preparing lesson": [],
+	"teaching#reviewing": [],
+	"reviewing#teaching": [],
+	"yellow#red": [
+		"and",
+		"dye look",
+		"food coloring look",
+		"gold turn",
+		"marrow turn",
+		"roses turn"
+	],
+	"sad#happy": [
+		"music make me",
+		"music make you",
+		"songs make me",
+		"things make me"
+	],
+	"red#yellow": [
+		"and green",
+		"and green light make",
+		"and green make",
+		"bull",
+		"lentils turn",
+		"lipstick make my teeth look",
+		"sox in",
+		"sox uniform",
+		"sox wear",
+		"sox wearing",
+		"tulips turn"
+	],
+	"happy#sad": [
+		"birthday song sound",
+		"childhood memories make me",
+		"couples make me",
+		"endings make me",
+		"events make me",
+		"memories make me",
+		"movies make me",
+		"music make me",
+		"relate to",
+		"songs make me",
+		"things make me"
+	],
+	"sad#angry": [],
+	"angry#sad": [],
+	"happy#angry": [],
+	"angry#happy": [],
+	"yellow#white": [
+		"chicks turn",
+		"daffodils turn",
+		"dandelions turn",
+		"ducks turn",
+		"gold",
+		"gold turn",
+		"roses turn",
+		"shea butter turn",
+		"tangs turn"
+	],
+	"white#yellow": [
+		"cheese better than",
+		"clothes turn",
+		"gloss go",
+		"gold cheaper than",
+		"gold turn",
+		"gold turning",
+		"gold white and yellow gold",
+		"grout turning",
+		"hair turn",
+		"hair turning",
+		"nail polish turn",
+		"of eye",
+		"paint turn",
+		"paint turning",
+		"plastic turn",
+		"rice turn",
+		"sheets turn",
+		"shirts turn",
+		"shoes turn",
+		"towels turn"
+	],
+	"red#white": [
+		"ball swings more than",
+		"blood cells differ from",
+		"blood cells live longer than",
+		"brick turn",
+		"bricks turn",
+		"bull change to",
+		"bull f1",
+		"bull livery",
+		"green and blue make",
+		"hair turn",
+		"lights flash",
+		"lipstick make teeth look",
+		"look in black and",
+		"meat red and white meat",
+		"wine have more calories than",
+		"wine hit me harder than",
+		"wine stronger than"
+	],
+	"white#red": [
+		"dogs fur turn",
+		"dogs turn",
+		"lettuce turn",
+		"meat white and red meat",
+		"of eye",
+		"of eye turn",
+		"of my eye",
+		"part of eye",
+		"people's face turn",
+		"sox wear",
+		"wine affect me more than",
+		"wine make me drunker than",
+		"wine make my face",
+		"wine white and red wine",
+		"zinfandel"
+	],
+	"probability#possibility": [],
+	"siamese#twin": [],
+	"possibility#probability": [
+		"different from"
+	],
+	"twin#siamese": [],
+	"siamese#biology": [],
+	"biology#siamese": [],
+	"twin#biology": [
+		"occur"
+	],
+	"biology#twin": [],
+	"probability#logic": [
+		"element relate to"
+	],
+	"logic#probability": [],
+	"possibility#logic": [],
+	"logic#possibility": [],
+	"electric vehicle#motorcycle": [],
+	"wine#champagne": [
+		"more expensive than"
+	],
+	"motorcycle#electric vehicle": [],
+	"champagne#wine": [
+		"better than",
+		"called sparkling",
+		"differ from",
+		"differ from white",
+		"different from",
+		"different from sparkling",
+		"have less calories than",
+		"less calories than",
+		"more expensive than"
+	],
+	"wine#health wine": [],
+	"health wine#wine": [],
+	"champagne#health wine": [],
+	"health wine#champagne": [],
+	"electric vehicle#ambulance": [],
+	"ambulance#electric vehicle": [],
+	"motorcycle#ambulance": [],
+	"ambulance#motorcycle": [],
+	"archaeology#cultural relics": [],
+	"education#talent": [
+		"better than",
+		"important than",
+		"more important than"
+	],
+	"cultural relics#archaeology": [],
+	"talent#education": [],
+	"education#enterprise": [
+		"and training important to business"
+	],
+	"enterprise#education": [],
+	"talent#enterprise": [],
+	"enterprise#talent": [],
+	"archaeology#museums": [],
+	"museums#archaeology": [],
+	"cultural relics#museums": [],
+	"museums#cultural relics": [],
+	"textbook#student": [],
+	"student#textbook": [],
+	"weapon#battlefield": [],
+	"battlefield#weapon": [
+		"2042 have so few"
+	],
+	"soldier#battlefield": [
+		"communicate on the"
+	],
+	"battlefield#soldier": [
+		"5 have female"
+	],
+	"textbook#classroom": [
+		"important in a second language"
+	],
+	"classroom#textbook": [],
+	"student#classroom": [
+		"archive a class in google",
+		"disrupt the",
+		"engagement important in the",
+		"engagement look in the",
+		"join ap",
+		"join google",
+		"join my wevideo",
+		"learn best in the",
+		"log into google",
+		"make noise in the",
+		"misbehave in the",
+		"need technology in the",
+		"react to the first plants in their",
+		"see their grades in google",
+		"sit in the back of the",
+		"turn in work on google",
+		"wander around the",
+		"with disabilities benefit from inclusion in a"
+	],
+	"classroom#student": [
+		"arrangement facilitate collaborative learning between",
+		"facilities impact the learning of the",
+		"jobs help",
+		"management affect",
+		"management gives impact to the learning of the"
+	],
+	"medic#doctor": [],
+	"doctor#medic": [],
+	"medic#soldier": [],
+	"soldier#medic": [],
+	"wheat#flour": [
+		"become",
+		"become white",
+		"berries cost more than",
+		"flour better than white",
+		"get turned into",
+		"made into",
+		"turn to"
+	],
+	"flour#wheat": [
+		"made from"
+	],
+	"flour#bread": [
+		"affect",
+		"do in",
+		"in",
+		"make",
+		"turn into",
+		"used in",
+		"work in"
+	],
+	"bread#flour": [
+		"contain soya",
+		"flour differ from all purpose",
+		"flour differ from ap",
+		"flour different from regular",
+		"need",
+		"need strong"
+	],
+	"shackle#get rid of": [],
+	"tension#relieve": [],
+	"get rid of#shackle": [],
+	"relieve#tension": [],
+	"tension#relax": [],
+	"relax#tension": [],
+	"relieve#relax": [],
+	"relax#relieve": [],
+	"shackle#freedom": [],
+	"freedom#shackle": [],
+	"get rid of#freedom": [],
+	"freedom#get rid of": [],
+	"music#rock": [
+		"of tears for fears reminiscent of progressive"
+	],
+	"social contact#wechat": [],
+	"rock#music": [
+		"and roll influence pop",
+		"bands record",
+		"n roll",
+		"n roll change"
+	],
+	"wechat#social contact": [],
+	"social contact#immediacy": [],
+	"immediacy#social contact": [],
+	"wechat#immediacy": [],
+	"immediacy#wechat": [],
+	"music#entertainment": [
+		"a form of",
+		"solve a problem in the creation of",
+		"solving a problem in the creation of",
+		"used for"
+	],
+	"entertainment#music": [],
+	"rock#entertainment": [],
+	"entertainment#rock": [],
+	"talent#excellent": [],
+	"society#harmonic": [],
+	"excellent#talent": [],
+	"harmonic#society": [],
+	"society#build": [],
+	"build#society": [],
+	"harmonic#build": [],
+	"build#harmonic": [],
+	"talent#promote": [],
+	"promote#talent": [],
+	"excellent#promote": [],
+	"promote#excellent": [],
+	"einstein#physics": [
+		"change",
+		"learn",
+		"not believe in quantum",
+		"study"
+	],
+	"hume#philosophy": [],
+	"physics#einstein": [],
+	"philosophy#hume": [],
+	"hume#agnosticism": [],
+	"agnosticism#hume": [],
+	"philosophy#agnosticism": [],
+	"agnosticism#philosophy": [],
+	"einstein#theory of relativity": [
+		"come up with the",
+		"develop the",
+		"discover the special",
+		"explain the",
+		"prove his",
+		"publish his",
+		"test his"
+	],
+	"theory of relativity#einstein": [],
+	"physics#theory of relativity": [],
+	"theory of relativity#physics": [],
+	"radio#tv": [
+		"adjust to the popularity of",
+		"ahead of",
+		"change to compete with",
+		"keep popping up on my roku"
+	],
+	"steamed#braised": [],
+	"tv#radio": [
+		"better than a"
+	],
+	"braised#steamed": [],
+	"steamed#deep-fried": [],
+	"deep-fried#steamed": [],
+	"braised#deep-fried": [],
+	"deep-fried#braised": [],
+	"radio#newspaper": [
+		"affect"
+	],
+	"newspaper#radio": [
+		"begin to suffer in the 1920s with the ascent of",
+		"initially react to increasing popularity of"
+	],
+	"tv#newspaper": [],
+	"newspaper#tv": [
+		"better than"
+	],
+	"size#weight": [
+		"affect",
+		"impact"
+	],
+	"true and false#more and less": [],
+	"weight#size": [
+		"and upthrust compare in",
+		"gain affect",
+		"lifting increase muscle",
+		"loss affect bra",
+		"loss affect breast"
+	],
+	"more and less#true and false": [],
+	"true and false#data": [],
+	"data#true and false": [],
+	"more and less#data": [],
+	"data#more and less": [],
+	"size#object": [
+		"affect the space occupied by an"
+	],
+	"object#size": [],
+	"weight#object": [
+		"affect falling",
+		"affect the speed of a falling",
+		"and mass of an",
+		"of an"
+	],
+	"object#weight": [
+		"get its",
+		"have",
+		"on earth have"
+	],
+	"hong kong#macau": [],
+	"guangdong#guangxi": [],
+	"macau#hong kong": [
+		"different from"
+	],
+	"guangxi#guangdong": [],
+	"guangdong#guangdong and guangxi": [],
+	"guangdong and guangxi#guangdong": [],
+	"guangxi#guangdong and guangxi": [],
+	"guangdong and guangxi#guangxi": [],
+	"hong kong#hong kong and macau": [],
+	"hong kong and macau#hong kong": [],
+	"macau#hong kong and macau": [],
+	"hong kong and macau#macau": [],
+	"zhejiang#hainan": [],
+	"china#singapore": [
+		"help",
+		"important to",
+		"loan 2 pandas to",
+		"view",
+		"want"
+	],
+	"hainan#zhejiang": [],
+	"singapore#china": [
+		"important to",
+		"love",
+		"related to"
+	],
+	"china#asia": [
+		"and india influence southeast",
+		"compare in size with other countries in",
+		"influence east",
+		"influence southeast",
+		"influence the world beyond east",
+		"located in",
+		"lose power and influence in"
+	],
+	"asia#china": [],
+	"singapore#asia": [
+		"contribute to the growth of the oil industry in southeast",
+		"dubbed as the switzerland of",
+		"enjoy the highest gdp in southeast",
+		"in",
+		"the richest country in"
+	],
+	"asia#singapore": [],
+	"zhejiang#china": [],
+	"china#zhejiang": [],
+	"hainan#china": [
+		"part of"
+	],
+	"china#hainan": [],
+	"light#current": [
+		"bulb",
+		"intensity affect"
+	],
+	"current#light": [],
+	"light#glow": [
+		"bugs",
+		"bulb",
+		"bulbs"
+	],
+	"glow#light": [
+		"in the dark need",
+		"in the dark things need",
+		"stick give off",
+		"sticks produce",
+		"worm produce",
+		"worms get their",
+		"worms make",
+		"worms produce"
+	],
+	"current#glow": [],
+	"glow#current": [],
+	"car#run": [
+		"and buses",
+		"batteries",
+		"insurance work in a hit and",
+		"need fuel to",
+		"need gas to",
+		"need oil to"
+	],
+	"run#car": [],
+	"gasoline#run": [
+		"engine",
+		"make a car"
+	],
+	"run#gasoline": [],
+	"power#supervision": [],
+	"ideal#action": [],
+	"supervision#power": [],
+	"action#ideal": [],
+	"ideal#daydream": [],
+	"daydream#ideal": [],
+	"action#daydream": [],
+	"daydream#action": [],
+	"power#corruption": [
+		"bring",
+		"cause",
+		"lead to"
+	],
+	"corruption#power": [
+		"take place in abuse of"
+	],
+	"supervision#corruption": [],
+	"corruption#supervision": [],
+	"baiyangdian#fishing boat": [],
+	"fishing boat#baiyangdian": [],
+	"library#title page": [],
+	"title page#library": [],
+	"books#title page": [
+		"have",
+		"have two"
+	],
+	"title page#books": [],
+	"baiyangdian#scull": [],
+	"scull#baiyangdian": [],
+	"fishing boat#scull": [],
+	"scull#fishing boat": [],
+	"energy#nuclear energy": [
+		"made from"
+	],
+	"material#wood": [],
+	"nuclear energy#energy": [
+		"better than renewable",
+		"clean",
+		"compared to other sources of",
+		"create",
+		"differ from chemical",
+		"give us",
+		"make",
+		"potential",
+		"produce",
+		"the best",
+		"used for"
+	],
+	"wood#material": [
+		"a composite",
+		"a good",
+		"a good building",
+		"a sustainable",
+		"an opaque",
+		"become example of a porous",
+		"such a popular craft",
+		"that is not burning differ from a non flammable"
+	],
+	"material#furniture": [],
+	"furniture#material": [],
+	"wood#furniture": [
+		"good for",
+		"used for",
+		"used in making"
+	],
+	"furniture#wood": [],
+	"energy#nuclear weapon": [],
+	"nuclear weapon#energy": [],
+	"nuclear energy#nuclear weapon": [],
+	"nuclear weapon#nuclear energy": [],
+	"flour#egg": [],
+	"cement#rebar": [
+		"need"
+	],
+	"egg#flour": [],
+	"rebar#cement": [],
+	"cement#house": [
+		"an integral part in building",
+		"good for"
+	],
+	"house#cement": [],
+	"rebar#house": [],
+	"house#rebar": [],
+	"flour#cake": [
+		"affect",
+		"used in"
+	],
+	"cake#flour": [
+		"and pastry flours differ from other",
+		"flour differ from all purpose",
+		"flour differ from regular",
+		"flour different from all purpose",
+		"flour different from bread",
+		"taste like"
+	],
+	"egg#cake": [
+		"added to",
+		"affect",
+		"go in",
+		"in",
+		"make",
+		"smell in",
+		"used in"
+	],
+	"cake#egg": [
+		"mix need",
+		"mixes need",
+		"need",
+		"smell like",
+		"taste like",
+		"taste without"
+	]
 }

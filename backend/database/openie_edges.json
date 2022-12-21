@@ -70517,5 +70517,946 @@
 		"is home to",
 		"took control of",
 		"would gain control of"
+	],
+	"bucket#iron bucket": [],
+	"iron bucket#bucket": [],
+	"bucket#bucket": [],
+	"white pigeon#pigeon": [],
+	"pigeon#white pigeon": [],
+	"female pigeon#pigeon": [],
+	"pigeon#female pigeon": [],
+	"car#electric car": [
+		"be"
+	],
+	"electric car#car": [
+		"buy"
+	],
+	"electric vehicle#electric car": [],
+	"electric car#electric vehicle": [],
+	"soldier#military doctor": [],
+	"military doctor#soldier": [],
+	"doctor#military doctor": [],
+	"military doctor#doctor": [],
+	"cultural relics#unearthed": [],
+	"oolong tea#package": [],
+	"unearthed#cultural relics": [],
+	"package#oolong tea": [],
+	"oolong tea#sales": [],
+	"sales#oolong tea": [],
+	"package#sales": [],
+	"sales#package": [],
+	"cultural relics#identification": [],
+	"identification#cultural relics": [],
+	"unearthed#identification": [],
+	"identification#unearthed": [],
+	"potatoes#crisps": [],
+	"milk#milk powder": [
+		"prepare from",
+		"skim"
+	],
+	"crisps#potatoes": [],
+	"milk powder#milk": [
+		"malt"
+	],
+	"milk#protein": [
+		"also contain",
+		"be also good source of",
+		"be another source of",
+		"be fantastic source of",
+		"be high in",
+		"be very good source of",
+		"be whey",
+		"contain",
+		"eliminate",
+		"will offer all of"
+	],
+	"protein#milk": [
+		"be",
+		"be derive from",
+		"be extract from",
+		"be find in",
+		"be from",
+		"be isolate from",
+		"be make from",
+		"come from",
+		"consist of",
+		"exist in"
+	],
+	"milk powder#protein": [],
+	"protein#milk powder": [],
+	"potatoes#starch": [
+		"be",
+		"be good source of",
+		"be high in",
+		"be mostly",
+		"be rich in",
+		"contain",
+		"have"
+	],
+	"starch#potatoes": [],
+	"crisps#starch": [],
+	"starch#crisps": [],
+	"droplets#ocean": [],
+	"ocean#droplets": [],
+	"droplets#resources": [],
+	"resources#droplets": [],
+	"ocean#resources": [],
+	"resources#ocean": [],
+	"paper#knowledge": [
+		"be to contribute to",
+		"be to improve",
+		"be to summarize",
+		"consolidate",
+		"contribute to",
+		"discuss state of",
+		"examine politics of",
+		"must make contribution to",
+		"present at",
+		"review current state of"
+	],
+	"knowledge#paper": [],
+	"book#knowledge": [
+		"add to",
+		"assume certain level of",
+		"be base on",
+		"be collection of",
+		"be distillation of",
+		"be encyclopedia of",
+		"be full of",
+		"be great wealth of",
+		"be pack full of",
+		"be store of"
+	],
+	"knowledge#book": [
+		"be",
+		"be available in",
+		"be contain in",
+		"be find in",
+		"be gain from",
+		"be impart in",
+		"be like",
+		"be on",
+		"be present in",
+		"can be gain from"
+	],
+	"tactics#war": [],
+	"strategy#campaign": [
+		"win"
+	],
+	"war#tactics": [],
+	"campaign#strategy": [
+		"be",
+		"be base on",
+		"be on",
+		"develop"
+	],
+	"strategy#success or failure": [],
+	"success or failure#strategy": [],
+	"campaign#success or failure": [],
+	"success or failure#campaign": [],
+	"tactics#victory or defeat": [],
+	"victory or defeat#tactics": [],
+	"war#victory or defeat": [
+		"end in"
+	],
+	"victory or defeat#war": [],
+	"preparing lesson#teaching": [],
+	"case filing#investigating": [],
+	"teaching#preparing lesson": [],
+	"investigating#case filing": [],
+	"case filing#adjudicating": [],
+	"adjudicating#case filing": [],
+	"investigating#adjudicating": [],
+	"adjudicating#investigating": [],
+	"preparing lesson#reviewing": [],
+	"reviewing#preparing lesson": [],
+	"teaching#reviewing": [],
+	"reviewing#teaching": [],
+	"yellow#red": [
+		"be",
+		"be below",
+		"be closer to",
+		"be upgrade to",
+		"edge with",
+		"give way to",
+		"go to",
+		"have word for",
+		"join",
+		"turn to"
+	],
+	"sad#happy": [
+		"be"
+	],
+	"red#yellow": [
+		"be over",
+		"be replace by",
+		"be show in",
+		"be wire from",
+		"become",
+		"led",
+		"look at",
+		"meet",
+		"turn to"
+	],
+	"happy#sad": [
+		"are",
+		"be",
+		"turn to"
+	],
+	"sad#angry": [],
+	"angry#sad": [],
+	"happy#angry": [],
+	"angry#happy": [
+		"get"
+	],
+	"yellow#white": [
+		"be"
+	],
+	"white#yellow": [],
+	"red#white": [
+		"be",
+		"can destroy",
+		"go to",
+		"have bleed into",
+		"stop"
+	],
+	"white#red": [
+		"be in",
+		"become unite with",
+		"go to"
+	],
+	"probability#possibility": [],
+	"siamese#twin": [],
+	"possibility#probability": [
+		"be",
+		"be now",
+		"become",
+		"become image of",
+		"can become"
+	],
+	"twin#siamese": [],
+	"siamese#biology": [],
+	"biology#siamese": [],
+	"twin#biology": [],
+	"biology#twin": [],
+	"probability#logic": [],
+	"logic#probability": [],
+	"possibility#logic": [],
+	"logic#possibility": [],
+	"electric vehicle#motorcycle": [],
+	"wine#champagne": [
+		"come from",
+		"include",
+		"may only be call",
+		"pour in",
+		"produce in"
+	],
+	"motorcycle#electric vehicle": [],
+	"champagne#wine": [
+		"be",
+		"be just",
+		"be more than just",
+		"is"
+	],
+	"wine#health wine": [],
+	"health wine#wine": [],
+	"champagne#health wine": [],
+	"health wine#champagne": [],
+	"electric vehicle#ambulance": [],
+	"ambulance#electric vehicle": [],
+	"motorcycle#ambulance": [
+		"be transport via"
+	],
+	"ambulance#motorcycle": [],
+	"archaeology#cultural relics": [],
+	"education#talent": [],
+	"cultural relics#archaeology": [],
+	"talent#education": [
+		"be more important than"
+	],
+	"education#enterprise": [
+		"be"
+	],
+	"enterprise#education": [],
+	"talent#enterprise": [],
+	"enterprise#talent": [
+		"retain"
+	],
+	"archaeology#museums": [],
+	"museums#archaeology": [],
+	"cultural relics#museums": [],
+	"museums#cultural relics": [],
+	"textbook#student": [
+		"assist",
+		"be",
+		"be aim at",
+		"be available for",
+		"be available to",
+		"be provide to",
+		"be responsibility of",
+		"be write directly to",
+		"provide",
+		"will help"
+	],
+	"student#textbook": [
+		"be give",
+		"be read",
+		"can borrow",
+		"can buy",
+		"can listen to",
+		"comprehend",
+		"damage",
+		"evaluate",
+		"generally read",
+		"get"
+	],
+	"weapon#battlefield": [
+		"find on"
+	],
+	"battlefield#weapon": [],
+	"soldier#battlefield": [
+		"be in",
+		"be kill on",
+		"be lose on",
+		"be still on",
+		"be wound on",
+		"die on",
+		"find on",
+		"give their life on",
+		"have be bury on",
+		"have be on"
+	],
+	"battlefield#soldier": [],
+	"textbook#classroom": [
+		"be use in"
+	],
+	"classroom#textbook": [],
+	"student#classroom": [
+		"achieve success in",
+		"alternate between",
+		"apply concept learn in",
+		"apply knowledge learn in",
+		"apply lesson learn in",
+		"approach",
+		"be",
+		"be already be teach in",
+		"be ask to leave",
+		"be center of"
+	],
+	"classroom#student": [
+		"assess",
+		"be",
+		"be available to",
+		"be clear of",
+		"be for",
+		"be full of",
+		"be great way to reach",
+		"be to guide",
+		"educate",
+		"focus on"
+	],
+	"medic#doctor": [
+		"be"
+	],
+	"doctor#medic": [],
+	"medic#soldier": [],
+	"soldier#medic": [
+		"be",
+		"prevent"
+	],
+	"wheat#flour": [
+		"make",
+		"make into",
+		"mill into",
+		"must be grind into",
+		"process into",
+		"produce",
+		"sell as",
+		"use to make"
+	],
+	"flour#wheat": [
+		"be",
+		"be basically grind",
+		"be make from",
+		"be make out of",
+		"be to",
+		"have",
+		"make from"
+	],
+	"flour#bread": [
+		"bake",
+		"be main ingredient of",
+		"be to",
+		"be use for",
+		"be use for make",
+		"become",
+		"can be make into",
+		"give",
+		"knead into",
+		"make"
+	],
+	"bread#flour": [
+		"be make from",
+		"be make out of",
+		"be make with",
+		"crumb instead of",
+		"make with",
+		"put"
+	],
+	"shackle#get rid of": [],
+	"tension#relieve": [],
+	"get rid of#shackle": [],
+	"relieve#tension": [],
+	"tension#relax": [],
+	"relax#tension": [],
+	"relieve#relax": [],
+	"relax#relieve": [],
+	"shackle#freedom": [],
+	"freedom#shackle": [],
+	"get rid of#freedom": [],
+	"freedom#get rid of": [],
+	"music#rock": [
+		"alternative",
+		"be",
+		"be combination of",
+		"be gonna",
+		"be mainly",
+		"be mixture of",
+		"be mostly",
+		"contain element of",
+		"range from",
+		"would be"
+	],
+	"social contact#wechat": [],
+	"rock#music": [
+		"'n'roll",
+		"be",
+		"be barely consider",
+		"be still about make",
+		"be your source for",
+		"become",
+		"enjoy",
+		"have become",
+		"improvise",
+		"influence"
+	],
+	"wechat#social contact": [],
+	"social contact#immediacy": [],
+	"immediacy#social contact": [],
+	"wechat#immediacy": [],
+	"immediacy#wechat": [],
+	"music#entertainment": [
+		"be also",
+		"be best for",
+		"be for",
+		"be great form of",
+		"be just",
+		"be my only source of",
+		"be primary source of",
+		"be provide for",
+		"be ultimate source of",
+		"provide"
+	],
+	"entertainment#music": [
+		"be provide by",
+		"consist of",
+		"have nothing to do with",
+		"include",
+		"listen to",
+		"live"
+	],
+	"rock#entertainment": [],
+	"entertainment#rock": [],
+	"talent#excellent": [],
+	"society#harmonic": [],
+	"excellent#talent": [],
+	"harmonic#society": [],
+	"society#build": [],
+	"build#society": [],
+	"harmonic#build": [],
+	"build#harmonic": [],
+	"talent#promote": [],
+	"promote#talent": [],
+	"excellent#promote": [],
+	"promote#excellent": [],
+	"einstein#physics": [
+		"addict to",
+		"be also circumspect about",
+		"be award nobel prize for",
+		"be award nobel prize in",
+		"be to",
+		"do in",
+		"do to",
+		"revolutionise",
+		"show through",
+		"win nobel prize for"
+	],
+	"hume#philosophy": [
+		"soon turn his attention to"
+	],
+	"physics#einstein": [
+		"be",
+		"celebrate centenary of",
+		"influence"
+	],
+	"philosophy#hume": [],
+	"hume#agnosticism": [],
+	"agnosticism#hume": [],
+	"philosophy#agnosticism": [],
+	"agnosticism#philosophy": [],
+	"einstein#theory of relativity": [],
+	"theory of relativity#einstein": [],
+	"physics#theory of relativity": [],
+	"theory of relativity#physics": [],
+	"radio#tv": [
+		"appear on",
+		"be",
+		"be ahead of",
+		"be cheaper than",
+		"even watch",
+		"multichannel",
+		"see on",
+		"see something on",
+		"show on",
+		"turn on"
+	],
+	"steamed#braised": [],
+	"tv#radio": [
+		"be ahead of",
+		"be death of",
+		"be from",
+		"be go to eliminate",
+		"do n\u2019t kill",
+		"hear something on",
+		"hear song on",
+		"kill",
+		"listen to on",
+		"so be"
+	],
+	"braised#steamed": [],
+	"steamed#deep-fried": [],
+	"deep-fried#steamed": [],
+	"braised#deep-fried": [],
+	"deep-fried#braised": [],
+	"radio#newspaper": [
+		"be go to kill",
+		"be suppose to kill",
+		"buy",
+		"challenge",
+		"even read",
+		"kill",
+		"open",
+		"read",
+		"read in",
+		"will kill"
+	],
+	"newspaper#radio": [
+		"be well ahead of",
+		"even listen to",
+		"even talk",
+		"have",
+		"hear on",
+		"listen on",
+		"listen to",
+		"read on",
+		"turn on",
+		"work in"
+	],
+	"tv#newspaper": [
+		"avoid",
+		"be in",
+		"get",
+		"open",
+		"open up",
+		"pick up",
+		"read",
+		"read in"
+	],
+	"newspaper#tv": [
+		"be on",
+		"broadcast",
+		"broadcast on",
+		"compete with",
+		"flip on",
+		"have",
+		"hear on",
+		"listen to",
+		"look at",
+		"watch news on"
+	],
+	"size#weight": [
+		"also come",
+		"as be",
+		"be determine by",
+		"have to do with",
+		"refer to"
+	],
+	"true and false#more and less": [],
+	"weight#size": [
+		"be",
+		"be affect by",
+		"be as important as",
+		"be base on",
+		"be determine by",
+		"be directly proportional to",
+		"pack",
+		"should be heavy for",
+		"should be proportional to",
+		"vary by"
+	],
+	"more and less#true and false": [],
+	"true and false#data": [],
+	"data#true and false": [],
+	"more and less#data": [],
+	"data#more and less": [],
+	"size#object": [
+		"determine distance to",
+		"make"
+	],
+	"object#size": [
+		"appear to be",
+		"appear to be about",
+		"appear to increase in",
+		"be specify by",
+		"increase in",
+		"object",
+		"range in",
+		"seem to be",
+		"should be scale to",
+		"vary depend on"
+	],
+	"weight#object": [
+		"be dependent on",
+		"be distribute throughout",
+		"be force exert by",
+		"be force on"
+	],
+	"object#weight": [
+		"be relate to",
+		"be same as",
+		"be to lose",
+		"have"
+	],
+	"hong kong#macau": [
+		"be",
+		"go to"
+	],
+	"guangdong#guangxi": [],
+	"macau#hong kong": [
+		"be",
+		"be near",
+		"be to fly into",
+		"have more visible colonial history than"
+	],
+	"guangxi#guangdong": [],
+	"guangdong#guangdong and guangxi": [],
+	"guangdong and guangxi#guangdong": [],
+	"guangxi#guangdong and guangxi": [],
+	"guangdong and guangxi#guangxi": [],
+	"hong kong#hong kong and macau": [],
+	"hong kong and macau#hong kong": [],
+	"macau#hong kong and macau": [],
+	"hong kong and macau#macau": [],
+	"zhejiang#hainan": [],
+	"china#singapore": [
+		"be",
+		"be currently",
+		"visit",
+		"will head for",
+		"win 4-0 away to"
+	],
+	"hainan#zhejiang": [],
+	"singapore#china": [
+		"be",
+		"be from",
+		"be in",
+		"be part of",
+		"be sincere in help",
+		"go to",
+		"join",
+		"mainland",
+		"recognise"
+	],
+	"china#asia": [
+		"be drive force of",
+		"be largest country in",
+		"be largest producer in",
+		"be most ground to",
+		"be only country in",
+		"be part of",
+		"dominate",
+		"have",
+		"have any military ambition in",
+		"take over much of"
+	],
+	"asia#china": [
+		"have be dominate by",
+		"have much admiration for",
+		"include",
+		"include country like",
+		"lead by",
+		"look to",
+		"now want better relationship with",
+		"start in",
+		"will include much of"
+	],
+	"singapore#asia": [
+		"be already",
+		"be first in",
+		"be in",
+		"be largest in",
+		"be rank top in",
+		"become first country in",
+		"have",
+		"have be rank most competitive city in",
+		"have best judicial system in",
+		"perform"
+	],
+	"asia#singapore": [
+		"have live in",
+		"include",
+		"will take place in"
+	],
+	"zhejiang#china": [
+		"be",
+		"be one of"
+	],
+	"china#zhejiang": [
+		"be"
+	],
+	"hainan#china": [
+		"attract visitor from",
+		"be",
+		"be one of",
+		"be southernmost part of"
+	],
+	"china#hainan": [
+		"be weather in"
+	],
+	"light#current": [],
+	"current#light": [],
+	"light#glow": [
+		"appear to",
+		"be",
+		"be able to",
+		"be begin to",
+		"begin to",
+		"give",
+		"give off",
+		"have",
+		"leave",
+		"will continue to"
+	],
+	"glow#light": [
+		"be",
+		"give",
+		"led"
+	],
+	"current#glow": [
+		"begin to"
+	],
+	"glow#current": [],
+	"car#run": [
+		"be in",
+		"be limit to",
+		"be on",
+		"do",
+		"finish",
+		"go for",
+		"go on",
+		"have get lot of",
+		"have have",
+		"have just complete"
+	],
+	"run#car": [
+		"grab",
+		"jump in",
+		"start"
+	],
+	"gasoline#run": [],
+	"run#gasoline": [],
+	"power#supervision": [],
+	"ideal#action": [
+		"be put into",
+		"be turn into"
+	],
+	"supervision#power": [],
+	"action#ideal": [],
+	"ideal#daydream": [],
+	"daydream#ideal": [],
+	"action#daydream": [
+		"be only",
+		"is"
+	],
+	"daydream#action": [],
+	"power#corruption": [
+		"attract",
+		"be",
+		"be engage in",
+		"can lead to",
+		"come",
+		"inevitably lead to",
+		"often lead to",
+		"punish",
+		"will lead to"
+	],
+	"corruption#power": [
+		"be abuse of",
+		"be dishonest exploitation of",
+		"be in",
+		"be relate to",
+		"be to limit"
+	],
+	"supervision#corruption": [],
+	"corruption#supervision": [],
+	"baiyangdian#fishing boat": [],
+	"fishing boat#baiyangdian": [],
+	"library#title page": [
+		"stamp on"
+	],
+	"title page#library": [],
+	"books#title page": [],
+	"title page#books": [],
+	"baiyangdian#scull": [],
+	"scull#baiyangdian": [],
+	"fishing boat#scull": [],
+	"scull#fishing boat": [],
+	"energy#nuclear energy": [
+		"be",
+		"be call"
+	],
+	"material#wood": [
+		"act like",
+		"be",
+		"be apply to",
+		"be petrify",
+		"can be of",
+		"can be work just like",
+		"feel like",
+		"feel of",
+		"make from",
+		"reclaim"
+	],
+	"nuclear energy#energy": [
+		"be most expensive form of",
+		"be only source of"
+	],
+	"wood#material": [
+		"be excellent choice of",
+		"be factor behind",
+		"be for build",
+		"be great choice of",
+		"be more than just",
+		"be popular choice of",
+		"be use as",
+		"be use for build",
+		"find",
+		"remain"
+	],
+	"material#furniture": [
+		"be use for",
+		"cover",
+		"ignite",
+		"provide"
+	],
+	"furniture#material": [
+		"be make from",
+		"depend on",
+		"make from"
+	],
+	"wood#furniture": [
+		"be good for make",
+		"be ideal for",
+		"be make into",
+		"be popular for",
+		"be use in make",
+		"be use to make",
+		"can be use for",
+		"have be use for",
+		"paint",
+		"use for"
+	],
+	"furniture#wood": [
+		"be",
+		"be handmade from",
+		"be make from",
+		"be make of",
+		"be make out of",
+		"can be make from",
+		"can enhance natural look of",
+		"look for",
+		"make from",
+		"make of"
+	],
+	"energy#nuclear weapon": [
+		"be responsible for"
+	],
+	"nuclear weapon#energy": [
+		"release huge amount of"
+	],
+	"nuclear energy#nuclear weapon": [
+		"be inextricably link to"
+	],
+	"nuclear weapon#nuclear energy": [],
+	"flour#egg": [
+		"absorb",
+		"add",
+		"beat",
+		"beat up",
+		"crack",
+		"gradually whisk in",
+		"have be combine with",
+		"scramble",
+		"then dip in",
+		"then dip into"
+	],
+	"cement#rebar": [],
+	"egg#flour": [
+		"add to",
+		"be incorporate into",
+		"beat in",
+		"cut into",
+		"dredge in",
+		"enrich",
+		"pour into",
+		"sift",
+		"then fold in",
+		"then sift in"
+	],
+	"rebar#cement": [],
+	"cement#house": [],
+	"house#cement": [
+		"be",
+		"be make of"
+	],
+	"rebar#house": [],
+	"house#rebar": [],
+	"flour#cake": [
+		"be make into",
+		"be to",
+		"can be make into",
+		"give",
+		"make",
+		"make into",
+		"set"
+	],
+	"cake#flour": [
+		"be compose of",
+		"be make with",
+		"sift together",
+		"stir together"
+	],
+	"egg#cake": [
+		"be in",
+		"can be use in",
+		"funnel",
+		"give",
+		"take"
+	],
+	"cake#egg": [
+		"be",
+		"crack",
+		"require",
+		"scramble"
 	]
 }
