@@ -25608,5 +25608,286 @@
 		"has property",
 		"have",
 		"need"
-	]
+	],
+	"geography#physical geography": [],
+	"candy#fruit candy": [],
+	"physical geography#geography": [
+		"affect"
+	],
+	"fruit candy#candy": [],
+	"candy#sesame candy": [],
+	"sesame candy#candy": [],
+	"fruit candy#sesame candy": [],
+	"sesame candy#fruit candy": [],
+	"geography#economic geography": [],
+	"economic geography#geography": [],
+	"physical geography#economic geography": [],
+	"economic geography#physical geography": [],
+	"art dealer#broker": [],
+	"actor#performer": [],
+	"broker#art dealer": [],
+	"performer#actor": [],
+	"actor#remuneration": [],
+	"remuneration#actor": [],
+	"performer#remuneration": [],
+	"remuneration#performer": [],
+	"art dealer#commission": [],
+	"commission#art dealer": [],
+	"broker#commission": [
+		"get"
+	],
+	"commission#broker": [],
+	"contradiction#conflict": [],
+	"contact#communication": [],
+	"conflict#contradiction": [],
+	"communication#contact": [],
+	"contact#integration": [],
+	"integration#contact": [],
+	"communication#integration": [],
+	"integration#communication": [],
+	"contradiction#war": [],
+	"war#contradiction": [],
+	"conflict#war": [],
+	"war#conflict": [],
+	"grape wine#famous wine": [],
+	"convertible#sports car": [],
+	"famous wine#grape wine": [],
+	"sports car#convertible": [],
+	"convertible#engine": [],
+	"engine#convertible": [],
+	"sports car#engine": [],
+	"engine#sports car": [],
+	"grape wine#alcohol": [],
+	"alcohol#grape wine": [],
+	"famous wine#alcohol": [],
+	"alcohol#famous wine": [],
+	"artist#paints": [
+		"can"
+	],
+	"musician#piano": [],
+	"paints#artist": [
+		"has property"
+	],
+	"piano#musician": [],
+	"musician#playing": [
+		"wear headphones"
+	],
+	"playing#musician": [],
+	"piano#playing": [],
+	"playing#piano": [],
+	"artist#drawing": [
+		"apply fixative to",
+		"give depth to",
+		"make",
+		"use"
+	],
+	"drawing#artist": [],
+	"paints#drawing": [],
+	"drawing#paints": [],
+	"province#hebei": [],
+	"fruit#peach": [
+		"be like"
+	],
+	"hebei#province": [],
+	"peach#fruit": [],
+	"fruit#peach pit": [],
+	"peach pit#fruit": [],
+	"peach#peach pit": [],
+	"peach pit#peach": [],
+	"province#shijiazhuang": [],
+	"shijiazhuang#province": [],
+	"hebei#shijiazhuang": [],
+	"shijiazhuang#hebei": [],
+	"word of mouth#box office": [],
+	"quality#price": [
+		"be more important than"
+	],
+	"box office#word of mouth": [],
+	"price#quality": [],
+	"quality#goods": [
+		"has trait"
+	],
+	"goods#quality": [],
+	"price#goods": [
+		"has trait"
+	],
+	"goods#price": [],
+	"word of mouth#movie": [],
+	"movie#word of mouth": [],
+	"box office#movie": [],
+	"movie#box office": [],
+	"displacement#fuel consumption": [],
+	"distance#weight": [],
+	"fuel consumption#displacement": [],
+	"weight#distance": [],
+	"distance#postage": [],
+	"postage#distance": [],
+	"weight#postage": [],
+	"postage#weight": [],
+	"displacement#cost": [],
+	"cost#displacement": [],
+	"fuel consumption#cost": [],
+	"cost#fuel consumption": [],
+	"country#government": [
+		"can work without",
+		"create",
+		"have",
+		"need"
+	],
+	"field army#operation department": [],
+	"government#country": [
+		"can stabilize value in"
+	],
+	"operation department#field army": [],
+	"field army#give advice": [],
+	"give advice#field army": [],
+	"operation department#give advice": [],
+	"give advice#operation department": [],
+	"country#administration": [],
+	"administration#country": [],
+	"government#administration": [
+		"need"
+	],
+	"administration#government": [
+		"be referred as"
+	],
+	"conception#writing": [],
+	"design#production": [],
+	"writing#conception": [],
+	"production#design": [],
+	"design#sales": [],
+	"sales#design": [],
+	"production#sales": [],
+	"sales#production": [],
+	"conception#publishing": [],
+	"publishing#conception": [],
+	"writing#publishing": [],
+	"publishing#writing": [],
+	"housing#real estate": [],
+	"apple#fruit": [
+		"be considered",
+		"be forbidden",
+		"has property",
+		"ripen"
+	],
+	"real estate#housing": [],
+	"fruit#apple": [
+		"be depicted as",
+		"has property"
+	],
+	"apple#edible": [],
+	"edible#apple": [],
+	"fruit#edible": [
+		"fly",
+		"has property"
+	],
+	"edible#fruit": [],
+	"housing#mortgage": [],
+	"mortgage#housing": [],
+	"real estate#mortgage": [],
+	"mortgage#real estate": [],
+	"skin#organ": [
+		"be classified as",
+		"be considered",
+		"be considered as",
+		"be described as",
+		"be example of",
+		"can be",
+		"has property"
+	],
+	"hotel#venue": [],
+	"organ#skin": [],
+	"venue#hotel": [],
+	"hotel#receiving guests": [],
+	"receiving guests#hotel": [],
+	"venue#receiving guests": [],
+	"receiving guests#venue": [],
+	"skin#regulate body temperature": [],
+	"regulate body temperature#skin": [],
+	"organ#regulate body temperature": [],
+	"regulate body temperature#organ": [],
+	"teapot#purple clay": [],
+	"road#asphalt": [
+		"be made more of",
+		"be made of",
+		"be paved with",
+		"has property"
+	],
+	"purple clay#teapot": [],
+	"asphalt#road": [
+		"be used for"
+	],
+	"road#pave": [],
+	"pave#road": [],
+	"asphalt#pave": [],
+	"pave#asphalt": [],
+	"teapot#carve": [],
+	"carve#teapot": [],
+	"purple clay#carve": [],
+	"carve#purple clay": [],
+	"child#girl": [],
+	"little dog#puppy": [],
+	"girl#child": [
+		"has property",
+		"want"
+	],
+	"puppy#little dog": [],
+	"little dog#dog": [
+		"scare"
+	],
+	"dog#little dog": [],
+	"child#minor": [],
+	"minor#child": [],
+	"girl#minor": [],
+	"minor#girl": [],
+	"gas stove#housewife": [],
+	"scissors#barber": [],
+	"housewife#gas stove": [],
+	"barber#scissors": [],
+	"scissors#hairdressing": [],
+	"hairdressing#scissors": [],
+	"barber#hairdressing": [],
+	"hairdressing#barber": [],
+	"gas stove#cooking": [],
+	"cooking#gas stove": [],
+	"housewife#cooking": [],
+	"cooking#housewife": [],
+	"civil law#law": [
+		"be different from",
+		"differ from"
+	],
+	"banyan tree#plant": [],
+	"law#civil law": [],
+	"plant#banyan tree": [],
+	"banyan tree#gardener": [],
+	"gardener#banyan tree": [],
+	"plant#gardener": [],
+	"gardener#plant": [
+		"can"
+	],
+	"civil law#judge": [],
+	"judge#civil law": [],
+	"law#judge": [],
+	"judge#law": [
+		"be above",
+		"can make",
+		"create",
+		"enforce",
+		"make",
+		"make errors in"
+	],
+	"siberian tiger#panda": [],
+	"lao#algerian": [],
+	"panda#siberian tiger": [],
+	"algerian#lao": [],
+	"lao#language": [],
+	"language#lao": [],
+	"algerian#language": [],
+	"language#algerian": [],
+	"siberian tiger#mammal": [],
+	"mammal#siberian tiger": [],
+	"panda#mammal": [
+		"has property"
+	],
+	"mammal#panda": []
 }

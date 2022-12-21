@@ -38872,5 +38872,411 @@
 		"smell like",
 		"taste like",
 		"taste without"
-	]
+	],
+	"geography#physical geography": [],
+	"candy#fruit candy": [],
+	"physical geography#geography": [
+		"affect human",
+		"affect political",
+		"differ from cultural",
+		"differ from human",
+		"different from human",
+		"impact human"
+	],
+	"fruit candy#candy": [],
+	"candy#sesame candy": [],
+	"sesame candy#candy": [],
+	"fruit candy#sesame candy": [],
+	"sesame candy#fruit candy": [],
+	"geography#economic geography": [],
+	"economic geography#geography": [],
+	"physical geography#economic geography": [],
+	"economic geography#physical geography": [],
+	"art dealer#broker": [],
+	"actor#performer": [],
+	"broker#art dealer": [],
+	"performer#actor": [],
+	"actor#remuneration": [],
+	"remuneration#actor": [],
+	"performer#remuneration": [],
+	"remuneration#performer": [],
+	"art dealer#commission": [],
+	"commission#art dealer": [],
+	"broker#commission": [
+		"and agents split",
+		"charge",
+		"get",
+		"get their",
+		"make money with zero"
+	],
+	"commission#broker": [
+		"work for mortgage"
+	],
+	"contradiction#conflict": [],
+	"contact#communication": [],
+	"conflict#contradiction": [],
+	"communication#contact": [],
+	"contact#integration": [],
+	"integration#contact": [],
+	"communication#integration": [],
+	"integration#communication": [],
+	"contradiction#war": [],
+	"war#contradiction": [],
+	"conflict#war": [
+		"between labor and management increase after the",
+		"called the cold",
+		"lead to",
+		"occur during the cold",
+		"over slavery cause the civil",
+		"start",
+		"theory explain",
+		"turn into a world"
+	],
+	"war#conflict": [
+		"never the solution to any",
+		"photographer and remains show",
+		"photographer present",
+		"photographer show",
+		"widen to become a world"
+	],
+	"grape wine#famous wine": [],
+	"convertible#sports car": [],
+	"famous wine#grape wine": [],
+	"sports car#convertible": [],
+	"convertible#engine": [],
+	"engine#convertible": [],
+	"sports car#engine": [],
+	"engine#sports car": [],
+	"grape wine#alcohol": [],
+	"alcohol#grape wine": [],
+	"famous wine#alcohol": [],
+	"alcohol#famous wine": [],
+	"artist#paints": [
+		"use",
+		"use acrylic",
+		"use oil"
+	],
+	"musician#piano": [
+		"put his head on the"
+	],
+	"paints#artist": [],
+	"piano#musician": [],
+	"musician#playing": [
+		"wear headphones when",
+		"wear headphones while"
+	],
+	"playing#musician": [],
+	"piano#playing": [],
+	"playing#piano": [],
+	"artist#drawing": [
+		"break the rules of proportion in the caricature",
+		"film themselves",
+		"give depth to their",
+		"make",
+		"most likely create this",
+		"most often show textures in a",
+		"record themselves",
+		"show space in a painting or",
+		"use continuous line",
+		"use perspective"
+	],
+	"drawing#artist": [],
+	"paints#drawing": [],
+	"drawing#paints": [],
+	"province#hebei": [],
+	"fruit#peach": [],
+	"hebei#province": [],
+	"peach#fruit": [
+		"tree dropping",
+		"trees bear",
+		"trees drop"
+	],
+	"fruit#peach pit": [],
+	"peach pit#fruit": [],
+	"peach#peach pit": [
+		"pit called"
+	],
+	"peach pit#peach": [],
+	"province#shijiazhuang": [],
+	"shijiazhuang#province": [],
+	"hebei#shijiazhuang": [],
+	"shijiazhuang#hebei": [],
+	"word of mouth#box office": [],
+	"quality#price": [
+		"affect",
+		"more important than"
+	],
+	"box office#word of mouth": [],
+	"price#quality": [
+		"indicate",
+		"relate to"
+	],
+	"quality#goods": [
+		"education",
+		"of life"
+	],
+	"goods#quality": [],
+	"price#goods": [
+		"controls interfere with the efficient allocation of",
+		"of primary products fluctuate compared with manufactured",
+		"say"
+	],
+	"goods#price": [
+		"and services have a"
+	],
+	"word of mouth#movie": [],
+	"movie#word of mouth": [],
+	"box office#movie": [],
+	"movie#box office": [
+		"bros do at the",
+		"elvis do at",
+		"elvis doing at",
+		"failed",
+		"make money at",
+		"marry me do at the",
+		"respect do at the"
+	],
+	"displacement#fuel consumption": [],
+	"distance#weight": [
+		"affect",
+		"traveled related to molecular"
+	],
+	"fuel consumption#displacement": [],
+	"weight#distance": [
+		"affect",
+		"affect stopping",
+		"affect total stopping",
+		"relate to",
+		"related to"
+	],
+	"distance#postage": [],
+	"postage#distance": [],
+	"weight#postage": [],
+	"postage#weight": [],
+	"displacement#cost": [],
+	"cost#displacement": [],
+	"fuel consumption#cost": [],
+	"cost#fuel consumption": [],
+	"country#government": [
+		"adopt federal system of",
+		"adopt unitary system of",
+		"have a",
+		"have different forms of",
+		"need a",
+		"need a strong",
+		"practice federal system of",
+		"shape their",
+		"throughout the world develop different forms of",
+		"undergo a change from their previous form of"
+	],
+	"field army#operation department": [],
+	"government#country": [
+		"address the rising environmental problems in the",
+		"agencies affect distribution in high-income developed",
+		"become more involved in the economies of many",
+		"borrow money from other",
+		"control who can immigrate into a",
+		"debt affect the development of a",
+		"decide to build a railroad across the",
+		"elected in a democratic",
+		"ensure law and order in the",
+		"ensure to end the inequity in the",
+		"expenditure impact on the economy of a",
+		"formed in our",
+		"give money to other",
+		"import most of its products from other",
+		"important in a",
+		"influence the type of economic system in a",
+		"maintain regional balance in the",
+		"needed in a",
+		"of venezuela differ from that of other",
+		"promote economic growth in capitalist",
+		"promote peace and order in the",
+		"provide leadership for a",
+		"solve the unemployment problem in our"
+	],
+	"operation department#field army": [],
+	"field army#give advice": [],
+	"give advice#field army": [],
+	"operation department#give advice": [],
+	"give advice#operation department": [],
+	"country#administration": [],
+	"administration#country": [],
+	"government#administration": [
+		"have three branches of",
+		"need",
+		"respond to social changes during the clinton"
+	],
+	"administration#government": [
+		"of justice act change local"
+	],
+	"conception#writing": [],
+	"design#production": [],
+	"writing#conception": [],
+	"production#design": [],
+	"design#sales": [
+		"affect decision at point of"
+	],
+	"sales#design": [],
+	"production#sales": [
+		"capacity and manpower influence"
+	],
+	"sales#production": [
+		"forecasting help in the field of"
+	],
+	"conception#publishing": [],
+	"publishing#conception": [],
+	"writing#publishing": [],
+	"publishing#writing": [
+		"important in creative"
+	],
+	"housing#real estate": [],
+	"apple#fruit": [
+		"a",
+		"a good",
+		"become a devil",
+		"called a false",
+		"not a",
+		"not a true",
+		"referred to as a false",
+		"ripen other",
+		"the best",
+		"trees bear",
+		"trees drop their",
+		"trees produce"
+	],
+	"real estate#housing": [],
+	"fruit#apple": [],
+	"apple#edible": [],
+	"edible#apple": [],
+	"fruit#edible": [],
+	"edible#fruit": [],
+	"housing#mortgage": [],
+	"mortgage#housing": [
+		"interest rates affect the price of"
+	],
+	"real estate#mortgage": [],
+	"mortgage#real estate": [],
+	"skin#organ": [
+		"act as a sense",
+		"act as a sensory",
+		"act as an excretory",
+		"an",
+		"an excretory",
+		"and lungs classified as excretory",
+		"cancer affect the",
+		"cancer spread to other",
+		"classified as an",
+		"considered also as an excretory",
+		"considered an",
+		"different from other sense",
+		"protect your",
+		"serve as sense",
+		"shunt blood to the vital",
+		"the largest",
+		"the largest sense",
+		"work with other"
+	],
+	"hotel#venue": [],
+	"organ#skin": [],
+	"venue#hotel": [],
+	"hotel#receiving guests": [],
+	"receiving guests#hotel": [],
+	"venue#receiving guests": [],
+	"receiving guests#venue": [],
+	"skin#regulate body temperature": [
+		"blood vessels and sweat glands",
+		"help"
+	],
+	"regulate body temperature#skin": [],
+	"organ#regulate body temperature": [],
+	"regulate body temperature#organ": [],
+	"teapot#purple clay": [],
+	"road#asphalt": [],
+	"purple clay#teapot": [],
+	"asphalt#road": [
+		"used for"
+	],
+	"road#pave": [],
+	"pave#road": [],
+	"asphalt#pave": [],
+	"pave#asphalt": [],
+	"teapot#carve": [],
+	"carve#teapot": [],
+	"purple clay#carve": [],
+	"carve#purple clay": [],
+	"child#girl": [],
+	"little dog#puppy": [],
+	"girl#child": [
+		"prove to the elderly man that she was not a"
+	],
+	"puppy#little dog": [],
+	"little dog#dog": [],
+	"dog#little dog": [],
+	"child#minor": [
+		"support work for"
+	],
+	"minor#child": [],
+	"girl#minor": [],
+	"minor#girl": [],
+	"gas stove#housewife": [],
+	"scissors#barber": [
+		"over comb technique used by"
+	],
+	"housewife#gas stove": [],
+	"barber#scissors": [
+		"hold",
+		"use hair thinning",
+		"use thinning"
+	],
+	"scissors#hairdressing": [],
+	"hairdressing#scissors": [],
+	"barber#hairdressing": [],
+	"hairdressing#barber": [],
+	"gas stove#cooking": [],
+	"cooking#gas stove": [],
+	"housewife#cooking": [],
+	"cooking#housewife": [],
+	"civil law#law": [
+		"better than common",
+		"differ from common",
+		"differ from criminal",
+		"different from criminal"
+	],
+	"banyan tree#plant": [],
+	"law#civil law": [],
+	"plant#banyan tree": [],
+	"banyan tree#gardener": [],
+	"gardener#banyan tree": [],
+	"plant#gardener": [],
+	"gardener#plant": [
+		"prune",
+		"use moss sticks to trail money"
+	],
+	"civil law#judge": [],
+	"judge#civil law": [],
+	"law#judge": [
+		"ensure the independence of"
+	],
+	"judge#law": [
+		"enforce the",
+		"interpret the",
+		"make",
+		"make common",
+		"make contract"
+	],
+	"siberian tiger#panda": [],
+	"lao#algerian": [],
+	"panda#siberian tiger": [],
+	"algerian#lao": [],
+	"lao#language": [],
+	"language#lao": [],
+	"algerian#language": [],
+	"language#algerian": [],
+	"siberian tiger#mammal": [],
+	"mammal#siberian tiger": [],
+	"panda#mammal": [
+		"a"
+	],
+	"mammal#panda": []
 }

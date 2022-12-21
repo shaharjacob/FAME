@@ -71458,5 +71458,634 @@
 		"crack",
 		"require",
 		"scramble"
-	]
+	],
+	"geography#physical geography": [],
+	"candy#fruit candy": [],
+	"physical geography#geography": [],
+	"fruit candy#candy": [],
+	"candy#sesame candy": [],
+	"sesame candy#candy": [],
+	"fruit candy#sesame candy": [],
+	"sesame candy#fruit candy": [],
+	"geography#economic geography": [],
+	"economic geography#geography": [],
+	"physical geography#economic geography": [],
+	"economic geography#physical geography": [],
+	"art dealer#broker": [],
+	"actor#performer": [
+		"grow as"
+	],
+	"broker#art dealer": [],
+	"performer#actor": [
+		"be"
+	],
+	"actor#remuneration": [],
+	"remuneration#actor": [],
+	"performer#remuneration": [],
+	"remuneration#performer": [],
+	"art dealer#commission": [],
+	"commission#art dealer": [],
+	"broker#commission": [
+		"also charge",
+		"be offer share of",
+		"be pay on",
+		"charge",
+		"generate",
+		"make",
+		"often work on",
+		"receive",
+		"will be pay",
+		"will get"
+	],
+	"commission#broker": [
+		"be",
+		"be give to",
+		"be pay to",
+		"be payable to",
+		"have",
+		"pay for",
+		"pay out to",
+		"pay to",
+		"suspend",
+		"will be pay to"
+	],
+	"contradiction#conflict": [],
+	"contact#communication": [
+		"be"
+	],
+	"conflict#contradiction": [],
+	"communication#contact": [
+		"keep in",
+		"please",
+		"stay in"
+	],
+	"contact#integration": [],
+	"integration#contact": [],
+	"communication#integration": [
+		"be essential tool for"
+	],
+	"integration#communication": [
+		"enhance level of",
+		"require"
+	],
+	"contradiction#war": [],
+	"war#contradiction": [
+		"be in"
+	],
+	"conflict#war": [
+		"be",
+		"be also know as",
+		"be know as",
+		"be prisoner of",
+		"be refer to as",
+		"become know as",
+		"develop into",
+		"have lead to",
+		"start",
+		"withdraw from"
+	],
+	"war#conflict": [
+		"be all about",
+		"be cause by",
+		"be portray as",
+		"be see as",
+		"begin with",
+		"contribute to",
+		"die in",
+		"grow out of",
+		"refer to",
+		"resolve"
+	],
+	"grape wine#famous wine": [],
+	"convertible#sports car": [],
+	"famous wine#grape wine": [],
+	"sports car#convertible": [],
+	"convertible#engine": [],
+	"engine#convertible": [],
+	"sports car#engine": [],
+	"engine#sports car": [],
+	"grape wine#alcohol": [],
+	"alcohol#grape wine": [],
+	"famous wine#alcohol": [],
+	"alcohol#famous wine": [],
+	"artist#paints": [],
+	"musician#piano": [
+		"be",
+		"play",
+		"play instrument such as",
+		"sit at",
+		"sit down at",
+		"study"
+	],
+	"paints#artist": [],
+	"piano#musician": [
+		"be",
+		"be to",
+		"make"
+	],
+	"musician#playing": [],
+	"playing#musician": [],
+	"piano#playing": [
+		"keep on"
+	],
+	"playing#piano": [],
+	"artist#drawing": [
+		"be really good at",
+		"begin",
+		"concentrate almost entirely on",
+		"contribute",
+		"cover good portion of",
+		"create",
+		"execute",
+		"focus on",
+		"produce",
+		"start out"
+	],
+	"drawing#artist": [
+		"above be",
+		"be",
+		"be also",
+		"be basic activity common to",
+		"be create by",
+		"be make by",
+		"be sign by",
+		"depict",
+		"have be hand sign by",
+		"include portrait of"
+	],
+	"paints#drawing": [],
+	"drawing#paints": [],
+	"province#hebei": [],
+	"fruit#peach": [
+		"dry",
+		"include",
+		"peel"
+	],
+	"hebei#province": [],
+	"peach#fruit": [
+		"be",
+		"be know as",
+		"be see as",
+		"dry",
+		"place"
+	],
+	"fruit#peach pit": [],
+	"peach pit#fruit": [],
+	"peach#peach pit": [],
+	"peach pit#peach": [],
+	"province#shijiazhuang": [],
+	"shijiazhuang#province": [],
+	"hebei#shijiazhuang": [],
+	"shijiazhuang#hebei": [
+		"be consider economic center of"
+	],
+	"word of mouth#box office": [],
+	"quality#price": [
+		"alone qualify",
+		"be",
+		"be as important as",
+		"be awesome for",
+		"be excellent for",
+		"be far more important than",
+		"be good at",
+		"be good enough for",
+		"be good for",
+		"be impressive for"
+	],
+	"box office#word of mouth": [],
+	"price#quality": [
+		"accurately appraise",
+		"be acceptable for",
+		"be awesome for",
+		"be best for",
+		"be bit high for",
+		"be comparable to",
+		"be depend on",
+		"be directly relate to",
+		"be excellent for",
+		"be expensive for"
+	],
+	"quality#goods": [
+		"be very"
+	],
+	"goods#quality": [
+		"be",
+		"be of",
+		"be very impress with",
+		"cost",
+		"must \"possess"
+	],
+	"price#goods": [
+		"agree for",
+		"be mark on",
+		"charge for",
+		"display on",
+		"distribute",
+		"hold back",
+		"manufacture",
+		"mark on",
+		"receive for",
+		"take delivery of"
+	],
+	"goods#price": [
+		"as be",
+		"be export at",
+		"be higher than",
+		"be limit to",
+		"come at",
+		"fail to pay",
+		"fluctuate significantly in",
+		"keep",
+		"shall be",
+		"will be invoice at"
+	],
+	"word of mouth#movie": [],
+	"movie#word of mouth": [],
+	"box office#movie": [
+		"hit"
+	],
+	"movie#box office": [
+		"be",
+		"be do well at",
+		"be highly successful at",
+		"be huge disappointment at",
+		"be perform well at",
+		"be very successful at",
+		"clean up at",
+		"die at",
+		"do",
+		"do fairly well at"
+	],
+	"displacement#fuel consumption": [],
+	"distance#weight": [],
+	"fuel consumption#displacement": [],
+	"weight#distance": [
+		"be base on",
+		"decrease discretely with",
+		"decrease with"
+	],
+	"distance#postage": [],
+	"postage#distance": [
+		"be charge by"
+	],
+	"weight#postage": [
+		"make"
+	],
+	"postage#weight": [
+		"be base on",
+		"be calculate base on",
+		"be calculate by",
+		"be calculate on",
+		"depend on",
+		"go by",
+		"stamp",
+		"will be base on",
+		"will be calculate by",
+		"will be charge by"
+	],
+	"displacement#cost": [],
+	"cost#displacement": [],
+	"fuel consumption#cost": [
+		"reduce"
+	],
+	"cost#fuel consumption": [],
+	"country#government": [
+		"accuse",
+		"be by",
+		"be central to",
+		"be control by",
+		"be do by",
+		"be now govern by",
+		"be on",
+		"be push",
+		"be recognize by",
+		"be result of"
+	],
+	"field army#operation department": [],
+	"government#country": [
+		"ban",
+		"be",
+		"be biggest concern for",
+		"be destroy",
+		"be equal to",
+		"be good for",
+		"be govern",
+		"be highest authority in",
+		"be major employer in",
+		"be one of"
+	],
+	"operation department#field army": [],
+	"field army#give advice": [],
+	"give advice#field army": [],
+	"operation department#give advice": [],
+	"give advice#operation department": [],
+	"country#administration": [
+		"be",
+		"be head under",
+		"be under",
+		"have"
+	],
+	"administration#country": [
+		"be destroy",
+		"be do more for",
+		"be do to",
+		"be harm",
+		"be take",
+		"destroy",
+		"have administer",
+		"have be disastrous to",
+		"have do more harm to",
+		"have fail"
+	],
+	"government#administration": [
+		"be",
+		"bring",
+		"charge with",
+		"have direct",
+		"interfere with",
+		"outsource",
+		"reform",
+		"regulate"
+	],
+	"administration#government": [
+		"have expand",
+		"reduce size of"
+	],
+	"conception#writing": [],
+	"design#production": [
+		"add lot to",
+		"be choose for",
+		"be finalize for",
+		"be its place in",
+		"be ready for",
+		"be release to",
+		"be then put into",
+		"have already go into",
+		"have be put into",
+		"remain unchanged until"
+	],
+	"writing#conception": [],
+	"production#design": [
+		"be",
+		"only improve",
+		"set"
+	],
+	"design#sales": [],
+	"sales#design": [],
+	"production#sales": [],
+	"sales#production": [],
+	"conception#publishing": [],
+	"publishing#conception": [],
+	"writing#publishing": [],
+	"publishing#writing": [],
+	"housing#real estate": [],
+	"apple#fruit": [
+		"be",
+		"be among",
+		"be call",
+		"be generic term for",
+		"be good weight of",
+		"be instance of",
+		"be just",
+		"extend",
+		"grape",
+		"make"
+	],
+	"real estate#housing": [],
+	"fruit#apple": [
+		"be",
+		"be as large as",
+		"be like",
+		"be often depict as",
+		"be round like",
+		"can be",
+		"include",
+		"is",
+		"like",
+		"prefer"
+	],
+	"apple#edible": [],
+	"edible#apple": [],
+	"fruit#edible": [],
+	"edible#fruit": [],
+	"housing#mortgage": [
+		"have",
+		"insure"
+	],
+	"mortgage#housing": [
+		"be secure by"
+	],
+	"real estate#mortgage": [
+		"back",
+		"be by control",
+		"be call",
+		"be know as",
+		"be presently subject to",
+		"be secure by",
+		"be subject to",
+		"purchase exist"
+	],
+	"mortgage#real estate": [
+		"be lien against",
+		"be loan secure by",
+		"be pledge of",
+		"be secure by",
+		"invest in",
+		"normally involve",
+		"repossess",
+		"sell"
+	],
+	"skin#organ": [
+		"be",
+		"be actually",
+		"be also",
+		"be connect to",
+		"be consider",
+		"be one of",
+		"be use as",
+		"sense"
+	],
+	"hotel#venue": [
+		"also offer variety of dine",
+		"also provide variety of",
+		"also serve as",
+		"be",
+		"be close to",
+		"be from",
+		"be most seek after",
+		"be near",
+		"be very close to",
+		"become"
+	],
+	"organ#skin": [
+		"include"
+	],
+	"venue#hotel": [
+		"be also",
+		"be in",
+		"stay at"
+	],
+	"hotel#receiving guests": [],
+	"receiving guests#hotel": [],
+	"venue#receiving guests": [],
+	"receiving guests#venue": [],
+	"skin#regulate body temperature": [],
+	"regulate body temperature#skin": [],
+	"organ#regulate body temperature": [],
+	"regulate body temperature#organ": [],
+	"teapot#purple clay": [],
+	"road#asphalt": [
+		"be",
+		"be cover with",
+		"be extendable with",
+		"be mostly",
+		"be pave with",
+		"be paved with",
+		"be strip of",
+		"have be pave with"
+	],
+	"purple clay#teapot": [],
+	"asphalt#road": [
+		"make",
+		"surface",
+		"then place on"
+	],
+	"road#pave": [],
+	"pave#road": [],
+	"asphalt#pave": [],
+	"pave#asphalt": [],
+	"teapot#carve": [],
+	"carve#teapot": [],
+	"purple clay#carve": [],
+	"carve#purple clay": [],
+	"child#girl": [
+		"accept presence of",
+		"be be raise as",
+		"be live as",
+		"be more common in",
+		"identify as",
+		"look like",
+		"raise as",
+		"sell",
+		"size",
+		"will be"
+	],
+	"little dog#puppy": [],
+	"girl#child": [
+		"be among",
+		"be expect to have",
+		"be get with",
+		"be marry with",
+		"be one of",
+		"carry",
+		"give birth to",
+		"kill",
+		"look like",
+		"love"
+	],
+	"puppy#little dog": [],
+	"little dog#dog": [],
+	"dog#little dog": [],
+	"child#minor": [
+		"be consider",
+		"be still",
+		"may be",
+		"must be",
+		"remain"
+	],
+	"minor#child": [
+		"be",
+		"be consider",
+		"be define as",
+		"prevent significant harm to"
+	],
+	"girl#minor": [
+		"be still"
+	],
+	"minor#girl": [],
+	"gas stove#housewife": [],
+	"scissors#barber": [
+		"be to"
+	],
+	"housewife#gas stove": [],
+	"barber#scissors": [],
+	"scissors#hairdressing": [],
+	"hairdressing#scissors": [],
+	"barber#hairdressing": [],
+	"hairdressing#barber": [],
+	"gas stove#cooking": [],
+	"cooking#gas stove": [
+		"be do on"
+	],
+	"housewife#cooking": [],
+	"cooking#housewife": [],
+	"civil law#law": [
+		"be area of",
+		"be contrary to",
+		"can actually cover wide area of"
+	],
+	"banyan tree#plant": [],
+	"law#civil law": [
+		"be base on",
+		"be base upon",
+		"include"
+	],
+	"plant#banyan tree": [],
+	"banyan tree#gardener": [],
+	"gardener#banyan tree": [],
+	"plant#gardener": [
+		"feed"
+	],
+	"gardener#plant": [
+		"be",
+		"be passionate about",
+		"be put out",
+		"buy",
+		"care for",
+		"choose",
+		"cultivate",
+		"grow",
+		"replace",
+		"tend to"
+	],
+	"civil law#judge": [
+		"have be take over by"
+	],
+	"judge#civil law": [],
+	"law#judge": [
+		"also forbid",
+		"be by",
+		"be decide by",
+		"be for",
+		"depend on",
+		"deprive",
+		"prevent",
+		"qualify",
+		"stand as",
+		"will be overturn by"
+	],
+	"judge#law": [
+		"also find",
+		"be above",
+		"be faithful to",
+		"be follow",
+		"be guarantee by",
+		"be ignorant of",
+		"be lay out by",
+		"be report to be faithful to",
+		"be to interpret",
+		"be unaware of"
+	],
+	"siberian tiger#panda": [],
+	"lao#algerian": [],
+	"panda#siberian tiger": [],
+	"algerian#lao": [],
+	"lao#language": [],
+	"language#lao": [],
+	"algerian#language": [],
+	"language#algerian": [],
+	"siberian tiger#mammal": [],
+	"mammal#siberian tiger": [],
+	"panda#mammal": [],
+	"mammal#panda": []
 }

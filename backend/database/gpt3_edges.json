@@ -8014,5 +8014,770 @@
 	"cake#egg": [
 		"A cake contains eggs.",
 		"Eggs are used to make cake."
+	],
+	"geography#physical geography": [
+		"A:",
+		"Geography is the study of the Earth's surface, its features, and the relationships between them. Physical geography is the study of the Earth's physical features and the processes that shape them."
+	],
+	"physical geography#geography": [
+		"physical geography is the study of the natural features of the Earth's surface, while geography is the study of the people, places, and environments on Earth."
+	],
+	"candy#fruit candy": [],
+	"fruit candy#candy": [],
+	"candy#sesame candy": [
+		"Sesame candy is a type of candy."
+	],
+	"sesame candy#candy": [
+		"Sesame candy is a type of candy.",
+		"Sesame candy is a candy that contains sesame seeds."
+	],
+	"fruit candy#sesame candy": [
+		"They are both types of candy."
+	],
+	"sesame candy#fruit candy": [
+		"Sesame candy doesn't have any relations with fruit candy."
+	],
+	"geography#economic geography": [
+		"A:",
+		"Geography is the study of the physical features of the earth, while economic geography is the study of the spatial distribution of economic activities and the factors that influence them."
+	],
+	"economic geography#geography": [
+		"Economic geography is a branch of geography.",
+		"Geography is the study of Earth's physical features."
+	],
+	"physical geography#economic geography": [
+		"A:",
+		"Physical geography is the study of the natural features of the Earth, including its landforms, climates, and ecosystems.",
+		"Economic geography is the study of how people use the natural resources of the Earth to produce goods and services."
+	],
+	"economic geography#physical geography": [
+		"Economic geography is the study of where economic activities take place, while physical geography is the study of the natural features of the Earth."
+	],
+	"art dealer#broker": [
+		"A:",
+		"An art dealer is a broker for art."
+	],
+	"broker#art dealer": [
+		"A broker is an intermediary between an art dealer and a buyer."
+	],
+	"actor#performer": [
+		"An actor is a performer.",
+		"A performer is an actor."
+	],
+	"performer#actor": [
+		"A performer is an actor.",
+		"An actor is a performer."
+	],
+	"actor#remuneration": [
+		"An actor may be remunerated for their work.",
+		"An actor may receive remuneration for their work."
+	],
+	"remuneration#actor": [
+		"A remuneration is a payment to an actor.",
+		"An actor is paid a remuneration."
+	],
+	"performer#remuneration": [
+		"A performer may be remunerated for their work.",
+		"A performer may receive remuneration for their work."
+	],
+	"remuneration#performer": [
+		"The performer is remunerated for their work.",
+		"The performer is rewarded for their work."
+	],
+	"art dealer#commission": [
+		"An art dealer charges commission.",
+		"An art dealer gets commission for their work."
+	],
+	"commission#art dealer": [
+		"An art dealer commissions an artist.",
+		"A commission is an agreement between an artist and an art dealer."
+	],
+	"broker#commission": [
+		"A broker charges commission.",
+		"A broker gets commission."
+	],
+	"commission#broker": [
+		"A commission is paid to a broker.",
+		"A commission is a fee paid to a broker."
+	],
+	"contradiction#conflict": [
+		"A contradiction is a form of conflict.",
+		"A contradiction is a type of conflict."
+	],
+	"conflict#contradiction": [
+		"A conflict is a contradiction.",
+		"A contradiction is a conflict."
+	],
+	"contact#communication": [
+		"Contact is necessary for communication.",
+		"Communication cannot take place without contact."
+	],
+	"communication#contact": [
+		"Communication is the contact between people.",
+		"Communication is the act of making contact with someone."
+	],
+	"contact#integration": [
+		"Contact is when two objects touch.",
+		"Integration is when two objects merge."
+	],
+	"integration#contact": [
+		"A contact is an area where two surfaces meet and integrate.",
+		"Contact is a place where two surfaces meet."
+	],
+	"communication#integration": [
+		"Communication is the process of integrating different parts of a system.",
+		"Integration is the process of communication."
+	],
+	"integration#communication": [
+		"Integration is the process of combining multiple communication channels into a single unified system.",
+		"Integration allows for more efficient communication."
+	],
+	"contradiction#war": [
+		"A contradiction is the root of war.",
+		"War is born from contradictions."
+	],
+	"war#contradiction": [
+		"War is a state of contradiction.",
+		"War is a condition of contradiction."
+	],
+	"conflict#war": [
+		"War is a conflict that has reached a certain level of intensity.",
+		"War is a type of conflict.",
+		"War is a more severe type of conflict."
+	],
+	"war#conflict": [
+		"War is a conflict between two or more groups.",
+		"War is a type of conflict."
+	],
+	"grape wine#famous wine": [],
+	"famous wine#grape wine": [],
+	"convertible#sports car": [
+		"A convertible is a sports car.",
+		"A convertible is a type of sports car."
+	],
+	"sports car#convertible": [
+		"A convertible has a sports car body.",
+		"A convertible is a type of sports car."
+	],
+	"convertible#engine": [
+		"A convertible has an engine.",
+		"A convertible needs an engine."
+	],
+	"engine#convertible": [
+		"The engine makes the convertible go.",
+		"The engine powers the convertible."
+	],
+	"sports car#engine": [],
+	"engine#sports car": [
+		"The engine powers the sports car.",
+		"The engine is what makes the sports car go."
+	],
+	"grape wine#alcohol": [
+		"Wine is fermented grape juice and contains alcohol.",
+		"Wine is an alcoholic beverage made from fermented grapes."
+	],
+	"alcohol#grape wine": [
+		"Alcohol is a component of grape wine.",
+		"Alcohol is a type of grape wine."
+	],
+	"famous wine#alcohol": [
+		"Alcohol is a component of famous wine.",
+		"Alcohol is a main ingredient of famous wine."
+	],
+	"alcohol#famous wine": [
+		"Wine is an alcoholic beverage.",
+		"Alcohol is a main ingredient in wine."
+	],
+	"artist#paints": [
+		"An artist uses paints to create a painting.",
+		"Paints are used by artists to create paintings."
+	],
+	"paints#artist": [
+		"The artist uses paints to create a work of art.",
+		"The artist creates a work of art with paints."
+	],
+	"musician#piano": [
+		"A musician produces music on a piano.",
+		"A musician uses a piano to produce music."
+	],
+	"piano#musician": [
+		"A musician plays the piano.",
+		"A musician uses the piano."
+	],
+	"musician#playing": [
+		"A musician can play an instrument.",
+		"A musician can play music."
+	],
+	"playing#musician": [
+		"A musician plays music."
+	],
+	"piano#playing": [
+		"The piano can be played.",
+		"Playing the piano is possible."
+	],
+	"playing#piano": [
+		"Playing the piano requires skill.",
+		"Playing the piano is a skill."
+	],
+	"artist#drawing": [
+		"An artist creates a drawing.",
+		"A drawing can be created by an artist."
+	],
+	"drawing#artist": [
+		"A drawing is an artwork created by an artist.",
+		"An artist creates drawings."
+	],
+	"paints#drawing": [
+		"Paints are used to draw.",
+		"Paint is used to produce drawings."
+	],
+	"drawing#paints": [
+		"A drawing is made with paints.",
+		"A drawing is a painting."
+	],
+	"province#hebei": [
+		"Province is a large geographical area, while hebei is a smaller administrative division within a province."
+	],
+	"hebei#province": [
+		"Hebei is a province in China.",
+		"Hebei is one of the provinces in China."
+	],
+	"fruit#peach": [
+		"The peach is a fruit.",
+		"The peach is a type of fruit."
+	],
+	"peach#fruit": [
+		"A peach is a fruit.",
+		"A peach is a type of fruit."
+	],
+	"fruit#peach pit": [
+		"The pit is the seed of a peach.",
+		"The pit is a part of a peach."
+	],
+	"peach pit#fruit": [
+		"The peach pit is the seed of the fruit.",
+		"The peach pit is inside the fruit."
+	],
+	"peach#peach pit": [
+		"The peach pit contains the seed of the peach."
+	],
+	"peach pit#peach": [
+		"The peach pit is inside the peach.",
+		"The peach pit is the seed of the peach."
+	],
+	"province#shijiazhuang": [
+		"province is the bigger division, while shijiazhuang is a city under the province.",
+		"province is a higher level division, while shijiazhuang is a lower level division."
+	],
+	"shijiazhuang#province": [
+		"Shijiazhuang is a province in China.",
+		"Shijiazhuang is a city in Hebei Province, China."
+	],
+	"hebei#shijiazhuang": [
+		"Hebei is the province where Shijiazhuang is located.",
+		"Hebei is north of Shijiazhuang."
+	],
+	"shijiazhuang#hebei": [
+		"Hebei is a province located in Shijiazhuang.",
+		"Shijiazhuang is the capital of Hebei province."
+	],
+	"word of mouth#box office": [
+		"Word of mouth is a more important factor in box office receipts than advertising.",
+		"Word of mouth is more important in box office receipts than advertising."
+	],
+	"box office#word of mouth": [],
+	"quality#price": [
+		"Quality affects the price.",
+		"The quality of a product affects the price."
+	],
+	"price#quality": [
+		"There is a positive correlation between price and quality.",
+		"Higher prices usually correspond to higher quality products."
+	],
+	"quality#goods": [
+		"Quality is the degree of excellence of a good.",
+		"Quality is how good a good is."
+	],
+	"goods#quality": [
+		"Goods can be of different qualities.",
+		"Goods can be of high or low quality."
+	],
+	"price#goods": [
+		"Price is how much goods cost.",
+		"Price is the equivalent of goods."
+	],
+	"goods#price": [
+		"Goods are bought and sold at a price.",
+		"The price of goods is what buyers pay to sellers."
+	],
+	"word of mouth#movie": [
+		"Word of mouth is a marketing technique for movies.",
+		"Word of mouth is when people talk about a movie."
+	],
+	"movie#word of mouth": [
+		"A movie's success relies on word of mouth.",
+		"A movie's success depends on word of mouth."
+	],
+	"box office#movie": [
+		"The box office is where people buy movie tickets.",
+		"The box office is where movies are shown."
+	],
+	"movie#box office": [
+		"Movie is projected onto a box office screen.",
+		"Movie is displayed on a box office screen."
+	],
+	"displacement#fuel consumption": [
+		"Displacement is a measure of fuel consumption.",
+		"More displacement means more fuel consumption."
+	],
+	"fuel consumption#displacement": [
+		"A:",
+		"There is no direct relationship between fuel consumption and displacement. However, fuel consumption is generally inversely proportional to displacement \u2013 the larger the displacement of an engine, the less fuel it will consume per hour."
+	],
+	"distance#weight": [
+		"The further away an object is, the less weight it has."
+	],
+	"weight#distance": [
+		"A:",
+		"The weight of an object depends on its distance from the Earth."
+	],
+	"distance#postage": [
+		"The distance affects the postage.",
+		"The distance between two points determines the postage."
+	],
+	"postage#distance": [
+		"The farther the distance, the more postage required.",
+		"The postage required is inversely proportional to the distance."
+	],
+	"weight#postage": [
+		"The weight of a letter affects the postage.",
+		"The weight of a letter determines the postage."
+	],
+	"postage#weight": [
+		"The postage depends on the weight.",
+		"The postage is heavier for heavier items."
+	],
+	"displacement#cost": [
+		"A:",
+		"There is no direct relation between displacement and cost. However, displacement may be a factor that affects cost, for example if there is a need to move a large quantity of material to a new location."
+	],
+	"cost#displacement": [
+		"The cost of displacement is the amount of money it takes to move something a certain distance.",
+		"The cost of displacement is the amount of money it takes to move something a certain distance."
+	],
+	"fuel consumption#cost": [
+		"Fuel consumption affects the cost of running a vehicle.",
+		"The more fuel a car consumes, the more it costs to operate."
+	],
+	"cost#fuel consumption": [
+		"The cost of fuel consumption",
+		"The amount of fuel consumed affects the cost"
+	],
+	"country#government": [
+		"A country has a government.",
+		"The government of a country is responsible for its citizens."
+	],
+	"government#country": [
+		"The government is the ruling power in a country.",
+		"The government is responsible for the well-being of the citizens of a country."
+	],
+	"field army#operation department": [
+		"Field army is a part of operation department.",
+		"Field army is a part of the operation department."
+	],
+	"operation department#field army": [
+		"Operation department is responsible for supplying field army.",
+		"Operation department supports field army."
+	],
+	"field army#give advice": [
+		"Field army gives advice."
+	],
+	"give advice#field army": [],
+	"operation department#give advice": [
+		"Operation department gives advice."
+	],
+	"give advice#operation department": [
+		"A:",
+		"The relations between give advice and operation department are that give advice is a service that the operation department provides."
+	],
+	"country#administration": [
+		"A country has an administration.",
+		"The administration governs the country."
+	],
+	"administration#country": [
+		"Administration is responsible for the country.",
+		"Administration governs the country."
+	],
+	"government#administration": [
+		"The government provides the administration.",
+		"The government oversees the administration."
+	],
+	"administration#government": [
+		"Administration is a part of government.",
+		"Administration is a part of the government."
+	],
+	"conception#writing": [
+		"Conception is the beginning of the writing process.",
+		"Conception is the inception of writing."
+	],
+	"writing#conception": [
+		"Writing is a form of conception.",
+		"Writing is a way of conceiving ideas."
+	],
+	"design#production": [
+		"The design of a product determines its production.",
+		"The design of a product precedes its production."
+	],
+	"production#design": [
+		"The design of a product affects its production.",
+		"The production of a product affects its design."
+	],
+	"design#sales": [
+		"Design affects sales.",
+		"Good design can help improve sales."
+	],
+	"sales#design": [
+		"Sales are necessary for design.",
+		"Sales are the goal of design."
+	],
+	"production#sales": [
+		"Production creates sales.",
+		"Sales are a result of production."
+	],
+	"sales#production": [
+		"Sales are a result of production.",
+		"Sales are generated from production."
+	],
+	"conception#publishing": [
+		"Conception is the process of producing a publication.",
+		"Conception is the act of creating a publication."
+	],
+	"publishing#conception": [
+		"Publishing is the process of conceiving and creating a work."
+	],
+	"writing#publishing": [
+		"Writing is the process of creating a publication.",
+		"Writing is the first step of the publication process."
+	],
+	"publishing#writing": [
+		"Publishing involves writing.",
+		"Writing is a necessary step in publishing."
+	],
+	"housing#real estate": [
+		"Housing is a type of real estate.",
+		"Real estate includes housing."
+	],
+	"real estate#housing": [
+		"A house is a type of real estate.",
+		"Real estate is a type of housing."
+	],
+	"apple#fruit": [
+		"An apple is a type of fruit.",
+		"Apples are fruit."
+	],
+	"fruit#apple": [
+		"A fruit is the edible seed-bearing structure of a plant.",
+		"An apple is a fruit."
+	],
+	"apple#edible": [
+		"An apple is an edible fruit.",
+		"An apple is a type of edible fruit."
+	],
+	"edible#apple": [
+		"An apple is edible.",
+		"An apple is a type of edible."
+	],
+	"fruit#edible": [
+		"A fruit is an edible.",
+		"A fruit is a type of edible."
+	],
+	"edible#fruit": [
+		"An edible is a fruit.",
+		"A fruit is an edible."
+	],
+	"housing#mortgage": [
+		"A housing is mortgaged.",
+		"A mortgage secures a housing."
+	],
+	"mortgage#housing": [
+		"A mortgage is a loan used to purchase a housing.",
+		"A mortgage is a type of loan used to finance the purchase of a home or other real estate."
+	],
+	"real estate#mortgage": [
+		"A mortgage is a loan against real estate.",
+		"Real estate can be mortgaged."
+	],
+	"mortgage#real estate": [
+		"A mortgage is a loan against real estate.",
+		"A mortgage is a legal agreement to borrow money against the equity of a property."
+	],
+	"skin#organ": [
+		"Skin is an organ.",
+		"Skin is the organ that covers the organs."
+	],
+	"organ#skin": [
+		"The organ is inside the skin.",
+		"The organ is protected by the skin."
+	],
+	"hotel#venue": [
+		"A hotel provides a venue for an event.",
+		"A hotel is a venue for an event."
+	],
+	"venue#hotel": [
+		"A venue is a place where a hotel is located.",
+		"A hotel is a place where a venue is located."
+	],
+	"hotel#receiving guests": [
+		"A hotel is a place where guests are received.",
+		"A hotel is a place where people stay."
+	],
+	"receiving guests#hotel": [
+		"A hotel is a place where people can stay when they are receiving guests.",
+		"A hotel is a place where people can stay when they are visiting."
+	],
+	"venue#receiving guests": [
+		"A venue is a place where receiving guests.",
+		"A venue is a place for receiving guests."
+	],
+	"receiving guests#venue": [
+		"A venue is where receiving guests take place.",
+		"A venue is where a party is held."
+	],
+	"skin#regulate body temperature": [
+		"Skin regulates body temperature by releasing or retaining heat."
+	],
+	"regulate body temperature#skin": [
+		"Regulate body temperature is necessary for skin health.",
+		"Regulate body temperature is necessary to keep skin healthy."
+	],
+	"organ#regulate body temperature": [
+		"The organ helps to regulate body temperature by secreting sweat.",
+		"The organ helps to maintain body temperature by secreting sweat."
+	],
+	"regulate body temperature#organ": [
+		"Regulate body temperature is an organ function."
+	],
+	"teapot#purple clay": [
+		"A teapot is made of purple clay.",
+		"A teapot is made of porcelain."
+	],
+	"purple clay#teapot": [
+		"Clay is the material used to make a teapot.",
+		"Clay is the main ingredient of a teapot."
+	],
+	"road#asphalt": [
+		"The road is paved with asphalt.",
+		"The road is covered with asphalt."
+	],
+	"asphalt#road": [
+		"The asphalt is the surface of the road.",
+		"The asphalt is the top layer of the road."
+	],
+	"road#pave": [
+		"A road is paved with asphalt or concrete.",
+		"A road is covered with a layer of asphalt or concrete."
+	],
+	"pave#road": [
+		"A pave is a road.",
+		"A pave is the surface of a road."
+	],
+	"asphalt#pave": [
+		"Asphalt is used to pave roads."
+	],
+	"pave#asphalt": [
+		"Pave is a type of asphalt.",
+		"Asphalt is a type of pave."
+	],
+	"teapot#carve": [
+		"A teapot is carved from a block of material.",
+		"A teapot is chiseled from a block of material."
+	],
+	"carve#teapot": [
+		"Carving is used to create designs on the surface of a teapot.",
+		"Carving is used to create a teapot."
+	],
+	"purple clay#carve": [
+		"A:",
+		"Purple clay can be carved into different shapes."
+	],
+	"carve#purple clay": [
+		"Carve is to cut or shape something from a material.",
+		"Purple clay is a type of pottery clay that is a deep purple color."
+	],
+	"child#girl": [
+		"A child is a girl.",
+		"A child is a female."
+	],
+	"girl#child": [
+		"A girl is a child.",
+		"A girl is a young person."
+	],
+	"little dog#puppy": [
+		"A little dog grows into a puppy.",
+		"A little dog is a baby dog."
+	],
+	"puppy#little dog": [
+		"A puppy is a little dog."
+	],
+	"little dog#dog": [
+		"The little dog is a dog.",
+		"The little dog is a type of dog."
+	],
+	"dog#little dog": [
+		"A little dog is a type of dog."
+	],
+	"child#minor": [
+		"A child is a minor.",
+		"A child is defined as a minor."
+	],
+	"minor#child": [
+		"A minor is a child.",
+		"A minor is a young person."
+	],
+	"girl#minor": [
+		"A girl is a minor."
+	],
+	"minor#girl": [
+		"A minor is a girl.",
+		"A girl can be a minor."
+	],
+	"gas stove#housewife": [
+		"A:",
+		"The gas stove cooks food for the housewife."
+	],
+	"housewife#gas stove": [
+		"A housewife uses a gas stove to cook food.",
+		"A housewife cooks food on a gas stove."
+	],
+	"scissors#barber": [
+		"A barber uses scissors to cut hair.",
+		"A barber uses scissors to trim hair."
+	],
+	"barber#scissors": [
+		"The barber uses scissors to cut hair.",
+		"The barber uses scissors to cut hair."
+	],
+	"scissors#hairdressing": [
+		"scissors are used for hairdressing.",
+		"scissors are used to cut hair."
+	],
+	"hairdressing#scissors": [
+		"Hairdressing is done with scissors.",
+		"Hairdressing scissors are used for cutting hair."
+	],
+	"barber#hairdressing": [
+		"A barber cuts hair.",
+		"A barber is a professional who cuts hair."
+	],
+	"hairdressing#barber": [
+		"A hairdresser cuts hair while a barber shaves beards."
+	],
+	"gas stove#cooking": [
+		"Gas stove cooks the food."
+	],
+	"cooking#gas stove": [
+		"Cooking requires a gas stove.",
+		"A gas stove is necessary for cooking."
+	],
+	"housewife#cooking": [
+		"A housewife cooks.",
+		"A housewife is someone who cooks."
+	],
+	"cooking#housewife": [
+		"Cooking is the activity of a housewife.",
+		"Cooking is a task that is often done by housewives."
+	],
+	"civil law#law": [
+		"civil law is a branch of law.",
+		"civil law is a subset of law."
+	],
+	"law#civil law": [
+		"Law is the foundation of civil law.",
+		"Civil law is based on law."
+	],
+	"banyan tree#plant": [
+		"Banyan trees are plants.",
+		"Banyan trees are a type of plant."
+	],
+	"plant#banyan tree": [
+		"A plant grows out of the soil and a banyan tree grows from a plant.",
+		"A plant is a type of banyan tree."
+	],
+	"banyan tree#gardener": [
+		"A gardener takes care of a banyan tree.",
+		"A gardener is responsible for the well-being of a banyan tree."
+	],
+	"gardener#banyan tree": [
+		"The gardener plants the banyan tree.",
+		"The gardener takes care of the banyan tree."
+	],
+	"plant#gardener": [
+		"A plant needs a gardener to grow.",
+		"A plant needs a gardener to survive."
+	],
+	"gardener#plant": [
+		"A gardener takes care of plants.",
+		"A gardener plants plants."
+	],
+	"civil law#judge": [
+		"A civil law is a law created by a judge.",
+		"A civil law is a law enacted by a judge."
+	],
+	"judge#civil law": [
+		"A judge administers civil law.",
+		"A judge is responsible for civil law."
+	],
+	"law#judge": [
+		"The law is enforced by the judge.",
+		"The law is interpreted by the judge."
+	],
+	"judge#law": [
+		"A judge administers law.",
+		"A judge interprets law."
+	],
+	"siberian tiger#panda": [
+		"A:",
+		"There is no definitive answer to this question as the two animals are not closely related. Siberian tigers are from the Panthera genus, while pandas are from the Ailuropoda genus."
+	],
+	"panda#siberian tiger": [
+		"Panda is a type of siberian tiger.",
+		"Panda is a subspecies of siberian tiger."
+	],
+	"lao#algerian": [
+		"They are two separate countries.",
+		"They are two different languages."
+	],
+	"algerian#lao": [],
+	"lao#language": [
+		"Lao is the language.",
+		"Lao is a language."
+	],
+	"language#lao": [
+		"Lao is a language.",
+		"Lao is spoken by people."
+	],
+	"algerian#language": [
+		"Algerian is a language.",
+		"Algerian is a language spoken in Algeria."
+	],
+	"language#algerian": [
+		"Language is spoken by Algerians.",
+		"Algerian is a language spoken in Algeria."
+	],
+	"siberian tiger#mammal": [
+		"A siberian tiger is a mammal.",
+		"A siberian tiger is a type of mammal."
+	],
+	"mammal#siberian tiger": [
+		"A mammal is a warm-blooded vertebrate animal that suckles its young with milk.",
+		"The siberian tiger is a mammal."
+	],
+	"panda#mammal": [
+		"Panda is a mammal.",
+		"Panda is a type of mammal."
+	],
+	"mammal#panda": [
+		"A mammal is a type of panda.",
+		"A mammal is a type of bear."
 	]
 }
