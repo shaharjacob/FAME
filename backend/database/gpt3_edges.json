@@ -5033,8 +5033,7 @@
 		"Learning enables understanding."
 	],
 	"understanding#learning": [
-		"Understanding precedes learning.",
-		"Understanding is a prerequisite for learning."
+		"Understanding precedes learning."
 	],
 	"wealth#poverty": [
 		"Wealth is the state of having an abundance of money and possessions, while poverty is the state of having little or no money and possessions."
@@ -5276,12 +5275,10 @@
 		"An obsession is a journey or search for something, while a quest is a strong desire for something."
 	],
 	"jiaozuo#yuntai mountain": [
-		"Jiaozuo is in the vicinity of Yuntai Mountain.",
-		"Jiaozuo is close to Yuntai Mountain."
+		"Jiaozuo is in the vicinity of Yuntai Mountain."
 	],
 	"yuntai mountain#jiaozuo": [
-		"Yuntai mountain is located in Jiaozuo.",
-		"Jiaozuo is located near the Yuntai mountain."
+		"Yuntai mountain is located in Jiaozuo."
 	],
 	"hong kong#bauhinia": [
 		"Hong Kong has a bauhinia as its emblem."
@@ -5309,7 +5306,7 @@
 	],
 	"west lake#hangzhou": [
 		"Hangzhou is located on the west side of West Lake. ",
-		"Hangzhou is located next to West Lake."
+		"West Lake is located in Hangzhou."
 	],
 	"america#bald eagle": [
 		"America has a bald eagle as its national bird.",
@@ -5613,6 +5610,7 @@
 		"Entrepreneurs are the ones who hire the employees."
 	],
 	"medications#curing": [
+		"Medications can be used for curing",
 		"Medications cure illnesses.",
 		"Medications treat illnesses."
 	],
@@ -5621,7 +5619,7 @@
 		"Medications are used to cure illnesses."
 	],
 	"skateboard#sports": [
-		"Skateboarding is a type of sport."
+		"Skateboard is a type of sport."
 	],
 	"sports#skateboard": [],
 	"food#hunger": [
@@ -5695,13 +5693,10 @@
 	],
 	"color#black": [],
 	"rice#grain": [
-		"Rice is a grain.",
-		"Rice is a cereal."
+		"Rice is a kind of grain.",
+		"Rice is a type of grain."
 	],
-	"grain#rice": [
-		"Grain is the seed of rice.",
-		"Grain is a type of rice."
-	],
+	"grain#rice": [],
 	"grass#trees": [
 		"Grass grows around trees.",
 		"Grass depends on trees for sustenance."
@@ -5793,8 +5788,7 @@
 		"Voltage is the measure of potential energy between two points and is measured in volts. Resistance is the opposition to the flow of electrons and is measured in ohms."
 	],
 	"chinese characters#symbols": [
-		"Chinese characters are symbols.",
-		"Chinese characters are ideograms."
+		"Chinese characters are looks like symbols."
 	],
 	"symbols#chinese characters": [
 		"Symbols are used to represent chinese characters.",
@@ -5868,7 +5862,7 @@
 		"There is no direct relation between poverty alleviation and wealthy. However, wealthier countries are often able to provide more resources for poverty alleviation initiatives. Additionally, wealthier people within a country can often be more effective in advocating for and contributing to poverty alleviation programs."
 	],
 	"drying#dehumidifying": [
-		"Drying removes moisture from the air, while dehumidifying removes moisture from a material."
+		"Drying can be achieved from dehumidifying."
 	],
 	"dehumidifying#drying": [
 		"Dehumidifying removes moisture from the air, which reduces the drying time.",
@@ -6303,11 +6297,11 @@
 	],
 	"insomnia#drowsiness": [
 		"Insomnia is the inability to fall asleep.",
-		"Drowsiness is the feeling of wanting to sleep."
+		"Insomnia is the inability to fall asleep or to remain asleep for an adequate length of time."
 	],
 	"drowsiness#insomnia": [
 		"Drowsiness is the feeling of sleepiness or tiredness.",
-		"Insomnia is the inability to fall asleep or to remain asleep for an adequate length of time."
+		"Drowsiness is the feeling of wanting to sleep."
 	],
 	"hunger#appetite": [
 		"Hunger is the sensation of appetite.",
@@ -6650,10 +6644,11 @@
 	],
 	"volcano#lava": [
 		"A volcano is formed by the accumulation of lava.",
-		"Lava is the molten rock that is expelled by a volcano."
+		"A volcano is formed from the eruption of lava."
 	],
 	"lava#volcano": [
-		"A volcano is formed from the eruption of lava.",
+		"Lava is emitted from the volcano",
+		"Lava is the molten rock that is expelled by a volcano.",
 		"Lava is the hot molten rock that is expelled from a volcano."
 	],
 	"wheat#bread": [
@@ -6665,8 +6660,8 @@
 		"Wheat is used to make bread."
 	],
 	"automobile#exhaust": [
-		"Exhaust is emitted from automobiles.",
-		"Exhaust is produced by automobiles."
+		"Exhaust is emitted from automobile.",
+		"Exhaust is produced by automobile."
 	],
 	"exhaust#automobile": [
 		"Exhaust gases are expelled from the automobile.",
@@ -6807,6 +6802,7 @@
 		"A plant grows flowers."
 	],
 	"flower#plant": [
+		"A flower is a kind of plant.",
 		"A flower grows on a plant.",
 		"A flower is a part of a plant."
 	],

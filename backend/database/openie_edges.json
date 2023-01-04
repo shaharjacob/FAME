@@ -27609,6 +27609,7 @@
 		"used to generate"
 	],
 	"electricity#energy": [
+		"becomes",
 		"comes from",
 		"generate",
 		"generated from",
@@ -65759,7 +65760,7 @@
 	"customs#habit": [
 		"becomes",
 		"has become",
-		"is"
+		"can become"
 	],
 	"man#adult": [
 		"accused of gunning down",
@@ -66202,10 +66203,11 @@
 		"fell out of",
 		"gives",
 		"got out of",
-		"is",
+		"is a part of",
 		"is in",
 		"is out of",
 		"is the heart of",
+		"is the main component in the",
 		"is the most important part of",
 		"is to",
 		"makes",
@@ -66274,6 +66276,7 @@
 	],
 	"sea#sailboat": [],
 	"wings#butterfly": [
+		"is part of the",
 		"is the only way for",
 		"make"
 	],
@@ -66602,7 +66605,8 @@
 		"walks with"
 	],
 	"fire extinguisher#dry powder": [
-		"contains"
+		"contains",
+		"uses"
 	],
 	"desk#book": [
 		"also has",
@@ -66626,7 +66630,9 @@
 		"was covered with",
 		"was full of"
 	],
-	"dry powder#fire extinguisher": [],
+	"dry powder#fire extinguisher": [
+		"is necessary for"
+	],
 	"book#desk": [
 		"are available at",
 		"are kept at",
@@ -66661,7 +66667,9 @@
 		"manage"
 	],
 	"printer#printing paper": [],
-	"printing paper#printer": [],
+	"printing paper#printer": [
+		"necessary for"
+	],
 	"electric light#wire": [],
 	"wire#electric light": [],
 	"selection#choice": [
@@ -66974,7 +66982,10 @@
 		"is removed by",
 		"pumped into"
 	],
-	"windmill#air": [],
+	"windmill#air": [
+		"is moved by the",
+		"uses the energy of the"
+	],
 	"ship#sea water": [],
 	"river water#generator": [],
 	"generator#river water": [],
@@ -67485,7 +67496,7 @@
 		"works on"
 	],
 	"ultrasound#mechanical waves": [
-		"is"
+		"is a kind of"
 	],
 	"limit#constant": [],
 	"mechanical waves#ultrasound": [],
@@ -67494,6 +67505,7 @@
 		"stretched to"
 	],
 	"steamship#ship": [
+		"is a kind of",
 		"replaced"
 	],
 	"ship#steamship": [
@@ -67507,20 +67519,11 @@
 	"conciliation#good offices": [],
 	"struggle#success": [
 		"achieve",
-		"can only have a chance of",
-		"celebrate",
-		"find",
 		"has already produced",
-		"see",
-		"was",
-		"was crowned with",
-		"will determine the height of"
+		"lead to"
 	],
 	"heavy snow#closing the mountain": [],
-	"success#struggle": [
-		"is",
-		"is born of"
-	],
+	"success#struggle": [],
 	"closing the mountain#heavy snow": [],
 	"learning#understanding": [
 		"build",
@@ -67528,15 +67531,12 @@
 		"encourages",
 		"grounded in",
 		"have detailed",
-		"humbled in",
-		"include gaining",
 		"is dedicated to",
 		"leads to",
 		"must be based on"
 	],
 	"understanding#learning": [
-		"enhance",
-		"will have"
+		"enhance"
 	],
 	"wealth#poverty": [
 		"also inherited",
@@ -68611,9 +68611,7 @@
 		"is applied across",
 		"is to identify"
 	],
-	"chinese characters#symbols": [
-		"were"
-	],
+	"chinese characters#symbols": [],
 	"dolphin#sea fish": [],
 	"symbols#chinese characters": [
 		"are based on"
