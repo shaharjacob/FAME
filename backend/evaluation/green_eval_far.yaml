@@ -111,25 +111,14 @@ mapping:
 
   - input: #11 :
       base: [cleanser, face]
-      target: [soap, body] # [absolution, sinner]
+      target: [soap, body]
       depth:
         beam: 20
         dfs: 4
     output:
       mapping:
-        - cleanser --> soap # absolution
-        - face --> body # sinner
-
-  # - input: #11 :
-  #     base: [cleanser, face]
-  #     target: [absolution, sinner]
-  #     depth:
-  #       beam: 20
-  #       dfs: 4
-  #   output:
-  #     mapping:
-  #       - cleanser --> absolution
-  #       - face --> sinner
+        - cleanser --> soap
+        - face --> body
 
   - input: #12 : 
       base: [eraser, pencil]

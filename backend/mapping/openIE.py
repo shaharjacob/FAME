@@ -2,6 +2,9 @@ from typing import List
 from pathlib import Path
 from collections import Counter
 
+import warnings
+warnings.simplefilter(action='ignore', category=FutureWarning)
+
 import requests
 import pandas as pd
 from click import secho
@@ -145,12 +148,15 @@ def get_entities_relations(
         current_dir / 'openie_data' / f'{first_letter}' / f'{second_letter}.tsv', 
         sep='\t',
         names=["subject", "predicate", "object"],
-        error_bad_lines=False
+        error_bad_lines=False,
+        warn_bad_lines=False,
+        engine='python'
     )
 
     df = df.loc[(df['subject'] == entity1) & (df['object'] == entity2)]
     counter = Counter(df["predicate"].tolist()).most_common(n)
-    relations.append([relation[0] for relation in counter])
+    if counter:
+        relations.extend([relation[0] for relation in counter])
 
 
 def get_entity_suggestions_wrapper(entity: str,
