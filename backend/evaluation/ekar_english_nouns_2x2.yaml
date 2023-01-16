@@ -1,0 +1,925 @@
+mapping:
+-   input: # 2/2
+        base:
+        - plant
+        - coal
+        depth:
+            beam: 20
+            dfs: 4
+        target:
+        - milk
+        - yogurt
+    output:
+        mapping:
+        - plant --> milk
+        - coal --> yogurt
+-   input: # 2/2
+        base:
+        - martial arts
+        - tai chi
+        depth:
+            beam: 20
+            dfs: 4
+        target:
+        - athletics
+        - hurdles
+    output:
+        mapping:
+        - martial arts --> athletics
+        - tai chi --> hurdles
+-   input: # 2/2
+        base:
+        - customs
+        - habit
+        depth:
+            beam: 20
+            dfs: 4
+        target:
+        - electricity
+        - energy
+    output:
+        mapping:
+        - customs --> electricity
+        - habit --> energy
+-   input: # 0/2 - attributes relations
+        base:
+        - ice
+        - fog
+        depth:
+            beam: 20
+            dfs: 4
+        target:
+        - grass
+        - tree
+    output:
+        mapping:
+        - ice --> grass
+        - fog --> tree
+-   input: # 2/2
+        base:
+        - rain
+        - snow
+        depth:
+            beam: 20
+            dfs: 4
+        target:
+        - tv
+        - game console
+    output:
+        mapping:
+        - rain --> tv
+        - snow --> game console
+-   input: # 2/2
+        base:
+        - pesticides
+        - pollution
+        depth:
+            beam: 20
+            dfs: 4
+        target:
+        - exercise
+        - health
+    output:
+        mapping:
+        - pesticides --> exercise
+        - pollution --> health
+-   input: # 2/2
+        base:
+        - engine
+        - car
+        depth:
+            beam: 20
+            dfs: 4
+        target:
+        - wings
+        - butterfly
+    output:
+        mapping:
+        - engine --> wings
+        - car --> butterfly
+-   input: # 0/2- attributes relations
+        base:
+        - city
+        - rural
+        depth:
+            beam: 20
+            dfs: 4
+        target:
+        - hardware
+        - software
+    output:
+        mapping:
+        - city --> hardware
+        - rural --> software
+-   input: # 2/2
+        base:
+        - water
+        - water cup
+        depth:
+            beam: 20
+            dfs: 4
+        target:
+        - goods
+        - container
+    output:
+        mapping:
+        - water --> goods
+        - water cup --> container
+-   input: # 2/2
+        base:
+        - fire extinguisher
+        - dry powder
+        depth:
+            beam: 20
+            dfs: 4
+        target:
+        - printer
+        - printing paper
+    output:
+        mapping:
+        - fire extinguisher --> printer
+        - dry powder --> printing paper
+-   input: # 0/2 - attributes relations
+        base:
+        - mung beans
+        - peas
+        depth:
+            beam: 20
+            dfs: 4
+        target:
+        - soy milk
+        - oatmeal
+    output:
+        mapping:
+        - mung beans --> soy milk
+        - peas --> oatmeal
+-   input: # 0/2 - attirbutes relations
+        base:
+        - netherlands
+        - japan
+        depth:
+            beam: 20
+            dfs: 4
+        target:
+        - germany
+        - united kingdom
+    output:
+        mapping:
+        - netherlands --> germany
+        - japan --> united kingdom
+-   input: # 2/2
+        base:
+        - golf
+        - baseball
+        depth:
+            beam: 20
+            dfs: 4
+        target:
+        - table tennis
+        - tennis
+    output:
+        mapping:
+        - golf --> table tennis
+        - baseball --> tennis
+-   input: # 2/2
+        base:
+        - peace
+        - war
+        depth:
+            beam: 20
+            dfs: 4
+        target:
+        - neat
+        - messy
+    output:
+        mapping:
+        - peace --> neat
+        - war --> messy
+-   input: # 2/2
+        base:
+        - air
+        - windmill
+        depth:
+            beam: 20
+            dfs: 4
+        target:
+        - river water
+        - generator
+    output:
+        mapping:
+        - air --> river water
+        - windmill --> generator
+-   input: # 2/2
+        base:
+        - camel
+        - desert
+        depth:
+            beam: 20
+            dfs: 4
+        target:
+        - whale
+        - ocean
+    output:
+        mapping:
+        - camel --> whale
+        - desert --> ocean
+-   input: # 2/2
+        base:
+        - criminal
+        - prison
+        depth:
+            beam: 20
+            dfs: 4
+        target:
+        - patient
+        - hospital
+    output:
+        mapping:
+        - criminal --> patient
+        - prison --> hospital
+-   input: # 2/2
+        base:
+        - clan
+        - tribe
+        depth:
+            beam: 20
+            dfs: 4
+        target:
+        - hydrogen chloride
+        - hydrochloric acid
+    output:
+        mapping:
+        - clan --> hydrogen chloride
+        - tribe --> hydrochloric acid
+-   input: # 2/2
+        base:
+        - dictionary
+        - words
+        depth:
+            beam: 20
+            dfs: 4
+        target:
+        - map
+        - location
+    output:
+        mapping:
+        - dictionary --> map
+        - words --> location
+-   input: # 2/2
+        base:
+        - ultrasound
+        - mechanical waves
+        depth:
+            beam: 20
+            dfs: 4
+        target:
+        - steamship
+        - ship
+    output:
+        mapping:
+        - ultrasound --> steamship
+        - mechanical waves --> ship
+-   input: # 2/2
+        base:
+        - struggle
+        - success
+        depth:
+            beam: 20
+            dfs: 4
+        target:
+        - learning
+        - understanding
+    output:
+        mapping:
+        - struggle --> learning
+        - success --> understanding
+-   input: # 0/2 - attributes relations
+        base:
+        - soy sauce
+        - salt
+        depth:
+            beam: 20
+            dfs: 4
+        target:
+        - chicken essence
+        - monosodium glutamate
+    output:
+        mapping:
+        - soy sauce --> chicken essence
+        - salt --> monosodium glutamate
+-   input: # 2/2
+        base:
+        - fallacy
+        - conclusion
+        depth:
+            beam: 20
+            dfs: 4
+        target:
+        - veto
+        - vote
+    output:
+        mapping:
+        - fallacy --> veto
+        - conclusion --> vote
+-   input: # 0/2
+        base:
+        - woodcarving
+        - wood
+        depth:
+            beam: 20
+            dfs: 4
+        target:
+        - rice noodles
+        - rice
+    output:
+        mapping:
+        - woodcarving --> rice noodles
+        - wood --> rice
+-   input: # 2/2
+        base:
+        - expert
+        - official
+        depth:
+            beam: 20
+            dfs: 4
+        target:
+        - juvenile
+        - singer
+    output:
+        mapping:
+        - expert --> juvenile
+        - official --> singer
+-   input: # 2/2
+        base:
+        - understand
+        - comprehension
+        depth:
+            beam: 20
+            dfs: 4
+        target:
+        - quest
+        - obsession
+    output:
+        mapping:
+        - understand --> quest
+        - comprehension --> obsession
+-   input: # 2/2
+        base:
+        - jiaozuo
+        - yuntai mountain
+        depth:
+            beam: 20
+            dfs: 4
+        target:
+        - hangzhou
+        - west lake
+    output:
+        mapping:
+        - jiaozuo --> hangzhou
+        - yuntai mountain --> west lake
+-   input: # 2/2
+        base:
+        - china
+        - panda
+        depth:
+            beam: 20
+            dfs: 4
+        target:
+        - australia
+        - koala
+    output:
+        mapping:
+        - china --> australia
+        - panda --> koala
+-   input: # 2/2
+        base:
+        - humanities
+        - physics
+        depth:
+            beam: 20
+            dfs: 4
+        target:
+        - northerners
+        - hubei people
+    output:
+        mapping:
+        - humanities --> northerners
+        - physics --> hubei people
+-   input: # 0/2
+        base:
+        - sowing
+        - crops
+        depth:
+            beam: 20
+            dfs: 4
+        target:
+        - cooking
+        - gourmet
+    output:
+        mapping:
+        - sowing --> cooking
+        - crops --> gourmet
+-   input: # 2/2
+        base:
+        - rice
+        - rice porridge
+        depth:
+            beam: 20
+            dfs: 4
+        target:
+        - books
+        - library
+    output:
+        mapping:
+        - rice --> books
+        - rice porridge --> library
+-   input: # 2/2
+        base:
+        - wood
+        - table
+        depth:
+            beam: 20
+            dfs: 4
+        target:
+        - leather
+        - leather shoes
+    output:
+        mapping:
+        - wood --> leather
+        - table --> leather shoes
+-   input: # 2/2
+        base:
+        - painting
+        - landscape
+        depth:
+            beam: 20
+            dfs: 4
+        target:
+        - work
+        - hero
+    output:
+        mapping:
+        - painting --> work
+        - landscape --> hero
+-   input: # 2/2
+        base:
+        - flute
+        - musician
+        depth:
+            beam: 20
+            dfs: 4
+        target:
+        - broom
+        - cleaner
+    output:
+        mapping:
+        - flute --> broom
+        - musician --> cleaner
+-   input: # 2/2
+        base:
+        - medications
+        - curing
+        depth:
+            beam: 20
+            dfs: 4
+        target:
+        - skateboard
+        - sports
+    output:
+        mapping:
+        - medications --> skateboard
+        - curing --> sports
+-   input: # 2/2
+        base:
+        - panda
+        - china
+        depth:
+            beam: 20
+            dfs: 4
+        target:
+        - koala
+        - australia
+    output:
+        mapping:
+        - panda --> koala
+        - china --> australia
+-   input: # 2/2
+        base:
+        - black
+        - color
+        depth:
+            beam: 20
+            dfs: 4
+        target:
+        - rice
+        - grain
+    output:
+        mapping:
+        - black --> rice
+        - color --> grain
+-   input: # 0/2 - attributes relations
+        base:
+        - mineral water
+        - pure water
+        depth:
+            beam: 20
+            dfs: 4
+        target:
+        - chinese chess
+        - military chess
+    output:
+        mapping:
+        - mineral water --> chinese chess
+        - pure water --> military chess
+-   input: # 2/2
+        base:
+        - current
+        - ampere
+        depth:
+            beam: 20
+            dfs: 4
+        target:
+        - kinetic energy
+        - joules
+    output:
+        mapping:
+        - current --> kinetic energy
+        - ampere --> joules
+-   input: # 0/2
+        base:
+        - chinese characters
+        - symbols
+        depth:
+            beam: 20
+            dfs: 4
+        target:
+        - rice
+        - grain
+    output:
+        mapping:
+        - chinese characters --> rice
+        - symbols --> grain
+-   input: # 2/2
+        base:
+        - baking powder
+        - steamed bread
+        depth:
+            beam: 20
+            dfs: 4
+        target:
+        - foaming agent
+        - sponge
+    output:
+        mapping:
+        - baking powder --> foaming agent
+        - steamed bread --> sponge
+-   input: # 0/2
+        base:
+        - wealthy
+        - poverty alleviation
+        depth:
+            beam: 20
+            dfs: 4
+        target:
+        - drying
+        - dehumidifying
+    output:
+        mapping:
+        - wealthy --> drying
+        - poverty alleviation --> dehumidifying
+-   input: # 2/2
+        base:
+        - business
+        - taxation
+        depth:
+            beam: 20
+            dfs: 4
+        target:
+        - borrowing books
+        - returning
+    output:
+        mapping:
+        - business --> borrowing books
+        - taxation --> returning
+-   input: # 2/2
+        base:
+        - illness
+        - depression
+        depth:
+            beam: 20
+            dfs: 4
+        target:
+        - cold
+        - chilly
+    output:
+        mapping:
+        - illness --> cold
+        - depression --> chilly
+-   input: # 2/2
+        base:
+        - youth
+        - adulthood
+        depth:
+            beam: 20
+            dfs: 4
+        target:
+        - girls
+        - women
+    output:
+        mapping:
+        - youth --> girls
+        - adulthood --> women
+-   input: # 2/2
+        base:
+        - air
+        - human beings
+        depth:
+            beam: 20
+            dfs: 4
+        target:
+        - freedom
+        - thought
+    output:
+        mapping:
+        - air --> freedom
+        - human beings --> thought
+-   input: # 2/2
+        base:
+        - students
+        - honest
+        depth:
+            beam: 20
+            dfs: 4
+        target:
+        - law
+        - justice
+    output:
+        mapping:
+        - students --> law
+        - honest --> justice
+-   input: # 2/2
+        base:
+        - bird
+        - egg
+        depth:
+            beam: 20
+            dfs: 4
+        target:
+        - frog
+        - egg
+    output:
+        mapping:
+        - bird --> frog
+        - egg --> egg
+-   input: # 2/2
+        base:
+        - contract
+        - signinature
+        depth:
+            beam: 20
+            dfs: 4
+        target:
+        - graduation certificate
+        - stamp
+    output:
+        mapping:
+        - contract --> graduation certificate
+        - signinature --> stamp
+-   input: # 0/2 - attributes relations
+        base:
+        - atm
+        - bank clerk
+        depth:
+            beam: 20
+            dfs: 4
+        target:
+        - vending machine
+        - salesperson
+    output:
+        mapping:
+        - atm --> vending machine
+        - bank clerk --> salesperson
+-   input: # 2/2
+        base:
+        - hammer
+        - nail
+        depth:
+            beam: 20
+            dfs: 4
+        target:
+        - roller
+        - ground
+    output:
+        mapping:
+        - hammer --> roller
+        - nail --> ground
+-   input: # 2/2
+        base:
+        - thirst
+        - teacup
+        depth:
+            beam: 20
+            dfs: 4
+        target:
+        - cold
+        - wardrobe
+    output:
+        mapping:
+        - thirst --> cold
+        - teacup --> wardrobe
+-   input: # 2/2
+        base:
+        - gasoline
+        - car
+        depth:
+            beam: 20
+            dfs: 4
+        target:
+        - wind
+        - kite
+    output:
+        mapping:
+        - gasoline --> wind
+        - car --> kite
+-   input: # 0/2 - coverage
+        base:
+        - insomnia
+        - drowsiness
+        depth:
+            beam: 20
+            dfs: 4
+        target:
+        - asphyxiation
+        - oxygen
+    output:
+        mapping:
+        - insomnia --> asphyxiation
+        - drowsiness --> oxygen
+-   input: # 2/2
+        base:
+        - pilot
+        - airplane
+        depth:
+            beam: 20
+            dfs: 4
+        target:
+        - teacher
+        - classroom
+    output:
+        mapping:
+        - pilot --> teacher
+        - airplane --> classroom
+-   input: # 0/2 - attributes relations
+        base:
+        - butterfly
+        - cricket
+        depth:
+            beam: 20
+            dfs: 4
+        target:
+        - parrot
+        - seagull
+    output:
+        mapping:
+        - butterfly --> parrot
+        - cricket --> seagull
+-   input: # 0/2 - attributes relations
+        base:
+        - swan
+        - plastic
+        depth:
+            beam: 20
+            dfs: 4
+        target:
+        - watermelon
+        - glass
+    output:
+        mapping:
+        - swan --> watermelon
+        - plastic --> glass
+-   input: # 2/2
+        base:
+        - word
+        - express
+        depth:
+            beam: 20
+            dfs: 4
+        target:
+        - argumentative paper
+        - argumentation
+    output:
+        mapping:
+        - word --> argumentative paper
+        - express --> argumentation
+-   input: # 2/2
+        base:
+        - chopping knife
+        - food
+        depth:
+            beam: 20
+            dfs: 4
+        target:
+        - towel
+        - body
+    output:
+        mapping:
+        - chopping knife --> towel
+        - food --> body
+-   input: # 2/2
+        base:
+        - book
+        - paper
+        depth:
+            beam: 20
+            dfs: 4
+        target:
+        - dishes
+        - radish
+    output:
+        mapping:
+        - book --> dishes
+        - paper --> radish
+-   input: # 2/2
+        base:
+        - volcano
+        - lava
+        depth:
+            beam: 20
+            dfs: 4
+        target:
+        - automobile
+        - exhaust
+    output:
+        mapping:
+        - volcano --> automobile
+        - lava --> exhaust
+-   input: # 0/2 - too general "can be"
+        base:
+        - man
+        - athlete
+        depth:
+            beam: 20
+            dfs: 4
+        target:
+        - businessman
+        - father
+    output:
+        mapping:
+        - man --> businessman
+        - athlete --> father
+-   input: # 2/2
+        base:
+        - denominator
+        - divisor
+        depth:
+            beam: 20
+            dfs: 4
+        target:
+        - percent
+        - percentage
+    output:
+        mapping:
+        - denominator --> percent
+        - divisor --> percentage
+-   input: # 2/2
+        base:
+        - pen
+        - ink
+        depth:
+            beam: 20
+            dfs: 4
+        target:
+        - toothbrush
+        - toothpaste
+    output:
+        mapping:
+        - pen --> toothbrush
+        - ink --> toothpaste
+-   input: # 2/2
+        base:
+        - plant
+        - flower
+        depth:
+            beam: 20
+            dfs: 4
+        target:
+        - grain
+        - rice
+    output:
+        mapping:
+        - plant --> grain
+        - flower --> rice
+-   input: # 2/2
+        base:
+        - yangtze river
+        - china
+        depth:
+            beam: 20
+            dfs: 4
+        target:
+        - volga
+        - russia
+    output:
+        mapping:
+        - yangtze river --> volga
+        - china --> russia

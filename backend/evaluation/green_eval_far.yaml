@@ -1,5 +1,5 @@
 mapping:
-  - input: #1
+  - input: #1 : 
       base: [answer, riddle]
       target: [key, lock]
       depth:
@@ -10,7 +10,7 @@ mapping:
       - answer --> key
       - riddle --> lock
 
-  - input: #2
+  - input: #2 : 
       base: [ash, fireplace]
       target: [lint, pocket]
       depth:
@@ -21,7 +21,7 @@ mapping:
       - ash --> lint
       - fireplace --> pocket
 
-  - input: #3
+  - input: #3 : 
       base: [aspirin, pain]
       target: [muffler, noise]
       depth:
@@ -32,7 +32,7 @@ mapping:
       - aspirin --> muffler
       - pain --> noise
 
-  - input: #4
+  - input: #4 : 
       base: [baker, cake] 
       target: [scientist, discovery]
       depth:
@@ -43,7 +43,7 @@ mapping:
       - baker --> scientist
       - cake --> discovery
 
-  - input: #5
+  - input: #5 : 
       base: [basket, picnic]
       target: [holster, gun] 
       depth:
@@ -54,7 +54,7 @@ mapping:
       - basket --> holster
       - picnic --> gun
 
-  - input: #6
+  - input: #6 : 
       base: [basketball, hoop]
       target: [traveler, destination]
       depth:
@@ -65,7 +65,7 @@ mapping:
       - basketball --> traveler
       - hoop --> destination
 
-  - input: #7
+  - input: #7 : 3/3
       base: [blindness, sight] 
       target: [poverty, money]
       depth:
@@ -76,7 +76,7 @@ mapping:
       - blindness --> poverty
       - sight --> money
 
-  - input: #8
+  - input: #8 : No solution found
       base: [blizzard, snowflake]
       target: [army, soldier]
       depth:
@@ -87,7 +87,7 @@ mapping:
       - blizzard --> army
       - snowflake --> soldier
 
-  - input: #9
+  - input: #9 :
       base: [bracelet, wrist] 
       target: [moat, castle]
       depth:
@@ -98,7 +98,7 @@ mapping:
       - bracelet --> moat
       - wrist --> castle
 
-  - input: #10
+  - input: #10 :
       base: [burger, bun]
       target: [book, cover]
       depth:
@@ -109,18 +109,18 @@ mapping:
       - burger --> book
       - bun --> cover
 
-  - input: #11
+  - input: #11 :
       base: [cleanser, face]
-      target: [absolution, sinner]
+      target: [soap, body]
       depth:
         beam: 20
         dfs: 4
     output:
       mapping:
-        - cleanser --> absolution 
-        - face --> sinner
+        - cleanser --> soap
+        - face --> body
 
-  - input: #12
+  - input: #12 : 
       base: [eraser, pencil]
       target: [amnesia, memory]
       depth:
@@ -131,7 +131,7 @@ mapping:
       - eraser --> amnesia
       - pencil --> memory
 
-  - input: #13
+  - input: #13 :
       base: [father, son]
       target: [inventor, invention]
       depth:
@@ -142,7 +142,7 @@ mapping:
       - father --> inventor
       - son --> invention
 
-  - input: #14
+  - input: #14 : 3/3
       base: [flock, goose]
       target: [constellation, star]
       depth:
@@ -153,7 +153,7 @@ mapping:
       - flock --> constellation
       - goose --> star
 
-  - input: #15
+  - input: #15 :
       base: [foresight, future] 
       target: [x-ray, bone]
       depth:
@@ -164,7 +164,7 @@ mapping:
       - foresight --> x-ray
       - future --> bone
 
-  - input: #16
+  - input: #16 :
       base: [foundation, house]
       target: [premise, argument] 
       depth:
@@ -175,7 +175,7 @@ mapping:
       - foundation --> premise
       - house --> argument
 
-  - input: #17
+  - input: #17 :
       base: [furnace, coal]
       target: [stomach, food]
       depth:
@@ -186,7 +186,7 @@ mapping:
       - furnace --> stomach
       - coal --> food
 
-  - input: #18
+  - input: #18 : No solution found
       base: [hoof, hoofprint]
       target: [introduction, impression]
       depth:
@@ -197,7 +197,7 @@ mapping:
       - hoof --> introduction
       - hoofprint --> impression
 
-  - input: #19
+  - input: #19 : No solution found
       base: [immunization, disease]
       target: [forewarning, surprise]
       depth:
@@ -208,7 +208,7 @@ mapping:
       - immunization --> forewarning
       - disease --> surprise
 
-  - input: #20
+  - input: #20 : 
       base: [jacket, zipper]
       target: [wound, suture]
       depth:
@@ -219,7 +219,7 @@ mapping:
       - jacket --> wound
       - zipper --> suture
 
-  - input: #21
+  - input: #21 : 
       base: [ketchup, tomato]
       target: [fuel, petroleum]
       depth:
@@ -230,7 +230,7 @@ mapping:
       - ketchup --> fuel
       - tomato --> petroleum
 
-  - input: #22
+  - input: #22 : 3/3
       base: [kitten, cat]
       target: [spark, fire]
       depth:
@@ -241,7 +241,7 @@ mapping:
       - kitten --> spark
       - cat --> fire
 
-  - input: #23
+  - input: #23 : 
       base: [knee, kneepad]
       target: [snail, shell]
       depth:
@@ -252,7 +252,7 @@ mapping:
       - knee --> snail
       - kneepad --> shell
 
-  - input: #24
+  - input: #24 : No solution found
       base: [lambchop, lamb]
       target: [chapter, book]
       depth:
@@ -263,7 +263,7 @@ mapping:
       - lambchop --> chapter
       - lamb --> book
 
-  - input: #25
+  - input: #25 : 
       base: [landscaper, lawn]
       target: [stylist, hair]
       depth:
@@ -274,7 +274,7 @@ mapping:
       - landscaper --> stylist
       - lawn --> hair
 
-  - input: #26
+  - input: #26 : No solution found
       base: [launchpad, helicopter]
       target: [divingboard, diver]
       depth:
@@ -285,7 +285,7 @@ mapping:
       - launchpad --> divingboard
       - helicopter --> diver
 
-  - input: #27
+  - input: #27 :
       base: [lawschool, lawyer]
       target: [vineyard, wine]
       depth:
@@ -296,7 +296,7 @@ mapping:
       - lawschool --> vineyard
       - lawyer --> wine
 
-  - input: #28
+  - input: #28 : 
       base: [movie, screen]
       target: [lightning, sky]
       depth:
@@ -307,7 +307,7 @@ mapping:
       - movie --> lightning
       - screen --> sky
 
-  - input: #29
+  - input: #29 : 
       base: [multiplication, product]
       target: [brewing, beer]
       depth:
@@ -318,7 +318,7 @@ mapping:
       - multiplication --> brewing
       - product --> beer
 
-  - input: #30
+  - input: #30 : 
       base: [nose, scent]
       target: [antenna, signal]
       depth:
@@ -329,7 +329,7 @@ mapping:
       - nose --> antenna
       - scent --> signal
 
-  - input: #31
+  - input: #31 :
       base: [orchard, apple]
       target: [neighborhood, apartment]
       depth:
@@ -340,7 +340,7 @@ mapping:
       - orchard --> neighborhood
       - apple --> apartment
 
-  - input: #32
+  - input: #32 : 
       base: [painting, canvas]
       target: [birthmark, skin]
       depth:
@@ -351,7 +351,7 @@ mapping:
       - painting --> birthmark
       - canvas --> skin
 
-  - input: #33
+  - input: #33 : 
       base: [pen, pig]
       target: [reservoir, water]
       depth:
@@ -362,7 +362,7 @@ mapping:
       - pen --> reservoir
       - pig --> water
       
-  - input: #34
+  - input: #34 : No solution found
       base: [rectangle, perimeter]
       target: [nation, border]
       depth:
@@ -373,7 +373,7 @@ mapping:
       - rectangle --> nation
       - perimeter --> border
 
-  - input: #35
+  - input: #35 : No solution found
       base: [revising, manuscript]
       target: [evolving, species]
       depth:
@@ -384,7 +384,7 @@ mapping:
       - revising --> evolving
       - manuscript --> species
 
-  - input: #36
+  - input: #36 : No solution found
       base: [saxophone, jazz]
       target: [typewriter, poetry]
       depth:
@@ -395,7 +395,7 @@ mapping:
       - saxophone --> typewriter
       - jazz --> poetry
 
-  - input: #37
+  - input: #37 : 
       base: [sugar, coffee]
       target: [incentive, deal]
       depth:
@@ -406,7 +406,7 @@ mapping:
       - sugar --> incentive
       - coffee --> deal
 
-  - input: # 38
+  - input: # 38 : No solution found
       base: [thermometer, temperature]
       target: [polygraph, honesty]
       depth:
@@ -417,7 +417,7 @@ mapping:
       - thermometer --> polygraph
       - temperature --> honesty
 
-  - input: #39
+  - input: #39 : 
       base: [train, track]
       target: [signal, wire]
       depth:
@@ -428,7 +428,7 @@ mapping:
       - train --> signal
       - track --> wire
 
-  - input: #40
+  - input: #40 : No solution found
       base: [watermelon, rind]
       target: [cigarette, butt]
       depth:

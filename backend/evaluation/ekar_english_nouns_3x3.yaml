@@ -1,0 +1,596 @@
+mapping:
+-   input: # 0/3 - attributes relations AND too general
+        base:
+        - white pigeon
+        - female pigeon
+        - pigeon
+        depth:
+            beam: 20
+            dfs: 4
+        target:
+        - bucket
+        - iron bucket
+        - bucket
+    output:
+        mapping:
+        - white pigeon --> bucket
+        - female pigeon --> iron bucket
+        - pigeon --> bucket
+-   input: # 0/3 - triple/intersection relation AND too general
+        base:
+        - soldier
+        - doctor
+        - military doctor
+        depth:
+            beam: 20
+            dfs: 4
+        target:
+        - car
+        - electric vehicle
+        - electric car
+    output:
+        mapping:
+        - soldier --> car
+        - doctor --> electric vehicle
+        - military doctor --> electric car
+-   input: # 1/3 - triple/intersection relation
+        base:
+        - cultural relics
+        - unearthed
+        - identification
+        depth:
+            beam: 20
+            dfs: 4
+        target:
+        - oolong tea
+        - package
+        - sales
+    output:
+        mapping:
+        - cultural relics --> oolong tea
+        - unearthed --> package
+        - identification --> sales
+-   input: # 3/3
+        base:
+        - potatoes
+        - crisps
+        - starch
+        depth:
+            beam: 20
+            dfs: 4
+        target:
+        - milk
+        - milk powder
+        - protein
+    output:
+        mapping:
+        - potatoes --> milk
+        - crisps --> milk powder
+        - starch --> protein
+-   input: # 3/3
+        base:
+        - paper
+        - book
+        - knowledge
+        depth:
+            beam: 20
+            dfs: 4
+        target:
+        - droplets
+        - ocean
+        - resources
+    output:
+        mapping:
+        - paper --> droplets
+        - book --> ocean
+        - knowledge --> resources
+-   input: # 3/3
+        base:
+        - tactics
+        - war
+        - victory or defeat
+        depth:
+            beam: 20
+            dfs: 4
+        target:
+        - strategy
+        - campaign
+        - success or failure
+    output:
+        mapping:
+        - tactics --> strategy
+        - war --> campaign
+        - victory or defeat --> success or failure
+-   input: #  0/3 - attributes relations
+        base:
+        - yellow
+        - red
+        - white
+        depth:
+            beam: 20
+            dfs: 4
+        target:
+        - sad
+        - happy
+        - angry
+    output:
+        mapping:
+        - yellow --> sad
+        - red --> happy
+        - white --> angry
+-   input: # 0/3
+        base:
+        - probability
+        - possibility
+        - logic
+        depth:
+            beam: 20
+            dfs: 4
+        target:
+        - siamese
+        - twin
+        - biology
+    output:
+        mapping:
+        - probability --> siamese
+        - possibility --> twin
+        - logic --> biology
+-   input: # 0/3 - attributes relations
+        base:
+        - electric vehicle
+        - motorcycle
+        - ambulance
+        depth:
+            beam: 20
+            dfs: 4
+        target:
+        - wine
+        - champagne
+        - health wine
+    output:
+        mapping:
+        - electric vehicle --> wine
+        - motorcycle --> champagne
+        - ambulance --> health wine
+-   input: # 3/3
+        base:
+        - archaeology
+        - cultural relics
+        - museums
+        depth:
+            beam: 20
+            dfs: 4
+        target:
+        - education
+        - talent
+        - enterprise
+    output:
+        mapping:
+        - archaeology --> education
+        - cultural relics --> talent
+        - museums --> enterprise
+-   input: # 3/3
+        base:
+        - textbook
+        - student
+        - classroom
+        depth:
+            beam: 20
+            dfs: 4
+        target:
+        - weapon
+        - soldier
+        - battlefield
+    output:
+        mapping:
+        - textbook --> weapon
+        - student --> soldier
+        - classroom --> battlefield
+-   input: # 0/3 - triple/intersection relation
+        base:
+        - electric car
+        - electric vehicle
+        - car
+        depth:
+            beam: 20
+            dfs: 4
+        target:
+        - medic
+        - doctor
+        - soldier
+    output:
+        mapping:
+        - electric car --> medic
+        - electric vehicle --> doctor
+        - car --> soldier
+-   input: # 3/3
+        base:
+        - wood
+        - paper
+        - book
+        depth:
+            beam: 20
+            dfs: 4
+        target:
+        - wheat
+        - flour
+        - bread
+    output:
+        mapping:
+        - wood --> wheat
+        - paper --> flour
+        - book --> bread
+-   input: # 0/3 (correct solution #4)
+        base:
+        - music
+        - rock
+        - entertainment
+        depth:
+            beam: 20
+            dfs: 4
+        target:
+        - social contact
+        - wechat
+        - immediacy
+    output:
+        mapping:
+        - music --> social contact
+        - rock --> wechat
+        - entertainment --> immediacy
+-   input:  # 3/3
+        base:
+        - einstein
+        - physics
+        - theory of relativity
+        depth:
+            beam: 20
+            dfs: 4
+        target:
+        - hume
+        - philosophy
+        - agnosticism
+    output:
+        mapping:
+        - einstein --> hume
+        - physics --> philosophy
+        - theory of relativity --> agnosticism
+-   input: # 0/3 - attributes relations
+        base:
+        - radio
+        - tv
+        - newspaper
+        depth:
+            beam: 20
+            dfs: 4
+        target:
+        - steamed
+        - braised
+        - deep-fried
+    output:
+        mapping:
+        - radio --> steamed
+        - tv --> braised
+        - newspaper --> deep-fried
+-   input: # 0/3 - attributes relations AND triple/intersection relation
+        base:
+        - hong kong
+        - macau
+        - hong kong and macau
+        depth:
+            beam: 20
+            dfs: 4
+        target:
+        - guangdong
+        - guangxi
+        - guangdong and guangxi
+    output:
+        mapping:
+        - hong kong --> guangdong
+        - macau --> guangxi
+        - hong kong and macau --> guangdong and guangxi
+-   input: # 1/3 - attributes relations AND no order
+        base:
+        - zhejiang
+        - hainan
+        - china
+        depth:
+            beam: 20
+            dfs: 4
+        target:
+        - china
+        - singapore
+        - asia
+    output:
+        mapping:
+        - zhejiang --> china
+        - hainan --> singapore
+        - china --> asia
+-   input: # 0/3 - triple/intersection relations
+        base:
+        - power
+        - supervision
+        - corruption
+        depth:
+            beam: 20
+            dfs: 4
+        target:
+        - ideal
+        - action
+        - daydream
+    output:
+        mapping:
+        - power --> ideal
+        - supervision --> action
+        - corruption --> daydream
+-   input: # 3/3
+        base:
+        - baiyangdian
+        - fishing boat
+        - scull
+        depth:
+            beam: 20
+            dfs: 4
+        target:
+        - library
+        - books
+        - title page
+    output:
+        mapping:
+        - baiyangdian --> library
+        - fishing boat --> books
+        - scull --> title page
+-   input: # 3/3
+        base:
+        - energy
+        - nuclear energy
+        - nuclear weapon
+        depth:
+            beam: 20
+            dfs: 4
+        target:
+        - material
+        - wood
+        - furniture
+    output:
+        mapping:
+        - energy --> material
+        - nuclear energy --> wood
+        - nuclear weapon --> furniture
+-   input: # 3/3
+        base:
+        - flour
+        - egg
+        - cake
+        depth:
+            beam: 20
+            dfs: 4
+        target:
+        - cement
+        - rebar
+        - house
+    output:
+        mapping:
+        - flour --> cement
+        - egg --> rebar
+        - cake --> house
+-   input: # 3/3
+        base:
+        - geography
+        - physical geography
+        - economic geography
+        depth:
+            beam: 20
+            dfs: 4
+        target:
+        - candy
+        - fruit candy
+        - sesame candy
+    output:
+        mapping:
+        - geography --> candy
+        - physical geography --> fruit candy
+        - economic geography --> sesame candy
+-   input: # 3/3
+        base:
+        - art dealer
+        - broker
+        - commission
+        depth:
+            beam: 20
+            dfs: 4
+        target:
+        - actor
+        - performer
+        - remuneration
+    output:
+        mapping:
+        - art dealer --> actor
+        - broker --> performer
+        - commission --> remuneration
+-   input: # 3/3
+        base:
+        - contradiction
+        - conflict
+        - war
+        depth:
+            beam: 20
+            dfs: 4
+        target:
+        - contact
+        - communication
+        - integration
+    output:
+        mapping:
+        - contradiction --> contact
+        - conflict --> communication
+        - war --> integration
+-   input: # 1/3  - attributes relations
+        base:
+        - grape wine
+        - famous wine
+        - alcohol
+        depth:
+            beam: 20
+            dfs: 4
+        target:
+        - convertible
+        - sports car
+        - engine
+    output:
+        mapping:
+        - grape wine --> convertible
+        - famous wine --> sports car
+        - alcohol --> engine
+-   input: # 0/3 - triple/intersection relation
+        base:
+        - artist
+        - paints
+        - drawing
+        depth:
+            beam: 20
+            dfs: 4
+        target:
+        - musician
+        - piano
+        - playing
+    output:
+        mapping:
+        - artist --> musician
+        - paints --> piano
+        - drawing --> playing
+-   input: # 3/3
+        base:
+        - province
+        - hebei
+        - shijiazhuang
+        depth:
+            beam: 20
+            dfs: 4
+        target:
+        - fruit
+        - peach
+        - peach pit
+    output:
+        mapping:
+        - province --> fruit
+        - hebei --> peach
+        - shijiazhuang --> peach pit
+-   input: # 3/3
+        base:
+        - word of mouth
+        - box office
+        - movie
+        depth:
+            beam: 20
+            dfs: 4
+        target:
+        - quality
+        - price
+        - goods
+    output:
+        mapping:
+        - word of mouth --> quality
+        - box office --> price
+        - movie --> goods
+-   input: # 1/3 - triple/intersection relation
+        base:
+        - displacement
+        - fuel consumption
+        - cost
+        depth:
+            beam: 20
+            dfs: 4
+        target:
+        - distance
+        - weight
+        - postage
+    output:
+        mapping:
+        - displacement --> distance
+        - fuel consumption --> weight
+        - cost --> postage
+-   input: # 0/3 - triple/intersection relation
+        base:
+        - conception
+        - writing
+        - publishing
+        depth:
+            beam: 20
+            dfs: 4
+        target:
+        - design
+        - production
+        - sales
+    output:
+        mapping:
+        - conception --> design
+        - writing --> production
+        - publishing --> sales
+-   input: # 0/3 - too general
+        base:
+        - child
+        - girl
+        - minor
+        depth:
+            beam: 20
+            dfs: 4
+        target:
+        - little dog
+        - puppy
+        - dog
+    output:
+        mapping:
+        - child --> little dog
+        - girl --> puppy
+        - minor --> dog
+-   input: # 3/3
+        base:
+        - gas stove
+        - housewife
+        - cooking
+        depth:
+            beam: 20
+            dfs: 4
+        target:
+        - scissors
+        - barber
+        - hairdressing
+    output:
+        mapping:
+        - gas stove --> scissors
+        - housewife --> barber
+        - cooking --> hairdressing
+-   input: # 3/3
+        base:
+        - civil law
+        - law
+        - judge
+        depth:
+            beam: 20
+            dfs: 4
+        target:
+        - banyan tree
+        - plant
+        - gardener
+    output:
+        mapping:
+        - civil law --> banyan tree
+        - law --> plant
+        - judge --> gardener
+-   input: # 3/3
+        base:
+        - siberian tiger
+        - panda
+        - mammal
+        depth:
+            beam: 20
+            dfs: 4
+        target:
+        - lao
+        - algerian
+        - language
+    output:
+        mapping:
+        - siberian tiger --> lao
+        - panda --> algerian
+        - mammal --> language

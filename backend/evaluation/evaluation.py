@@ -8,14 +8,12 @@ import torch
 import click
 from click import secho
 
-backend_dir = Path(__file__).resolve().parent.parent
+current_dir = Path(__file__).resolve().parent
+backend_dir = current_dir.parent
 sys.path.insert(0, str(backend_dir))
 from mapping.dfs import dfs_wrapper
 from mapping.beam_search import beam_search_wrapper
 from mapping.mapping import Solution, FREQUENCY_THRESHOLD, mapping_wrapper
-
-EVALUATION_FOLDER = Path(__file__).resolve().parent
-root = EVALUATION_FOLDER.resolve().parent.parent
 
 COLORS = {
     "HEADER": '\033[95m',
@@ -77,7 +75,6 @@ def update_result(correct_mapping: List[str], solutions: List[Solution], result:
             
         
 
-
 def evaluate(model_name: str, 
              freq_th: float, 
              path: str, 
@@ -88,8 +85,8 @@ def evaluate(model_name: str,
     if algorithm not in ['beam', 'dfs']:
             secho("[ERROR] unsupported algorithm. (supported are 'beam' or 'dfs').")
             exit(1)
-            
-    with open(EVALUATION_FOLDER / path, 'r') as y:
+
+    with open(current_dir / path, 'r') as y:
         spec = yaml.load(y, Loader=yaml.SafeLoader)
     mapping_spec = spec["mapping"]
     results = Results()
