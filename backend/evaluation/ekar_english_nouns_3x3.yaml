@@ -1,5 +1,5 @@
 mapping:
--   input: # 0/3 (0/0)
+-   input: # 0/3 - attributes relations AND too general
         base:
         - white pigeon
         - female pigeon
@@ -8,8 +8,6 @@ mapping:
             beam: 20
             dfs: 4
         target:
-        # attributes - they are both types of bucket (wtf?!)
-        # relations are too general - "can be"
         - bucket
         - iron bucket
         - bucket
@@ -18,10 +16,8 @@ mapping:
         - white pigeon --> bucket
         - female pigeon --> iron bucket
         - pigeon --> bucket
--   input: # 0/3 (correct solution #5)
+-   input: # 0/3 - triple/intersection relation AND too general
         base:
-        # relations are too general - "can be"
-        # military doctor is the intersection of the two (triple relation)
         - soldier
         - doctor
         - military doctor
@@ -37,7 +33,7 @@ mapping:
         - soldier --> car
         - doctor --> electric vehicle
         - military doctor --> electric car
--   input: # 1/3
+-   input: # 1/3 - triple/intersection relation
         base:
         - cultural relics
         - unearthed
@@ -105,9 +101,8 @@ mapping:
         - tactics --> strategy
         - war --> campaign
         - victory or defeat --> success or failure
--   input: #  0/3 (correct solution #2)
+-   input: #  0/3 - attributes relations
         base:
-        # attributes - are all colors, but there are other colors besides...
         - yellow
         - red
         - white
@@ -140,7 +135,7 @@ mapping:
         - probability --> siamese
         - possibility --> twin
         - logic --> biology
--   input: # 0/3 (correct solution #4)
+-   input: # 0/3 - attributes relations
         base:
         - electric vehicle
         - motorcycle
@@ -191,7 +186,7 @@ mapping:
         - textbook --> weapon
         - student --> soldier
         - classroom --> battlefield
--   input: # 0/3 (correct solution #5)
+-   input: # 0/3 - triple/intersection relation
         base:
         - electric car
         - electric vehicle
@@ -259,7 +254,7 @@ mapping:
         - einstein --> hume
         - physics --> philosophy
         - theory of relativity --> agnosticism
--   input: # 0/3 (0/0)
+-   input: # 0/3 - attributes relations
         base:
         - radio
         - tv
@@ -276,24 +271,7 @@ mapping:
         - radio --> steamed
         - tv --> braised
         - newspaper --> deep-fried
--   input: # 0/3
-        base:
-        - size
-        - weight
-        - object
-        depth:
-            beam: 20
-            dfs: 4
-        target:
-        - true and false
-        - more and less
-        - data
-    output:
-        mapping:
-        - size --> true and false
-        - weight --> more and less
-        - object --> data
--   input: # 0/3
+-   input: # 0/3 - attributes relations AND triple/intersection relation
         base:
         - hong kong
         - macau
@@ -310,7 +288,7 @@ mapping:
         - hong kong --> guangdong
         - macau --> guangxi
         - hong kong and macau --> guangdong and guangxi
--   input: # 1/3 (correct solution #2)
+-   input: # 1/3 - attributes relations AND no order
         base:
         - zhejiang
         - hainan
@@ -327,24 +305,7 @@ mapping:
         - zhejiang --> china
         - hainan --> singapore
         - china --> asia
--   input: # 0/3 (correct solution #4)
-        base:
-        - car
-        - gasoline
-        - run
-        depth:
-            beam: 20
-            dfs: 4
-        target:
-        - light
-        - current
-        - glow
-    output:
-        mapping:
-        - car --> light
-        - gasoline --> current
-        - run --> glow
--   input: # 0/3
+-   input: # 0/3 - triple/intersection relations
         base:
         - power
         - supervision
@@ -463,7 +424,7 @@ mapping:
         - contradiction --> contact
         - conflict --> communication
         - war --> integration
--   input: # 1/3 (correct solution #3)
+-   input: # 1/3  - attributes relations
         base:
         - grape wine
         - famous wine
@@ -480,7 +441,7 @@ mapping:
         - grape wine --> convertible
         - famous wine --> sports car
         - alcohol --> engine
--   input: # 0/3
+-   input: # 0/3 - triple/intersection relation
         base:
         - artist
         - paints
@@ -531,7 +492,7 @@ mapping:
         - word of mouth --> quality
         - box office --> price
         - movie --> goods
--   input: # 1/3
+-   input: # 1/3 - triple/intersection relation
         base:
         - displacement
         - fuel consumption
@@ -548,7 +509,7 @@ mapping:
         - displacement --> distance
         - fuel consumption --> weight
         - cost --> postage
--   input: # 0/3
+-   input: # 0/3 - triple/intersection relation
         base:
         - conception
         - writing
@@ -565,24 +526,7 @@ mapping:
         - conception --> design
         - writing --> production
         - publishing --> sales
--   input: # 0/3 (correct solution #4)
-        base:
-        - housing
-        - real estate
-        - mortgage
-        depth:
-            beam: 20
-            dfs: 4
-        target:
-        - apple
-        - fruit
-        - edible
-    output:
-        mapping:
-        - housing --> apple
-        - real estate --> fruit
-        - mortgage --> edible
--   input: # 0/3 (correct solution #5)
+-   input: # 0/3 - too general
         base:
         - child
         - girl

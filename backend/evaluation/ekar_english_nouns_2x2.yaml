@@ -1,5 +1,5 @@
 mapping:
--   input:
+-   input: # 2/2
         base:
         - plant
         - coal
@@ -13,7 +13,7 @@ mapping:
         mapping:
         - plant --> milk
         - coal --> yogurt
--   input:
+-   input: # 2/2
         base:
         - martial arts
         - tai chi
@@ -27,7 +27,7 @@ mapping:
         mapping:
         - martial arts --> athletics
         - tai chi --> hurdles
--   input:
+-   input: # 2/2
         base:
         - customs
         - habit
@@ -41,7 +41,7 @@ mapping:
         mapping:
         - customs --> electricity
         - habit --> energy
--   input:
+-   input: # 0/2 - attributes relations
         base:
         - ice
         - fog
@@ -55,7 +55,7 @@ mapping:
         mapping:
         - ice --> grass
         - fog --> tree
--   input:
+-   input: # 2/2
         base:
         - rain
         - snow
@@ -69,7 +69,7 @@ mapping:
         mapping:
         - rain --> tv
         - snow --> game console
--   input:
+-   input: # 2/2
         base:
         - pesticides
         - pollution
@@ -83,7 +83,7 @@ mapping:
         mapping:
         - pesticides --> exercise
         - pollution --> health
--   input:
+-   input: # 2/2
         base:
         - engine
         - car
@@ -97,7 +97,7 @@ mapping:
         mapping:
         - engine --> wings
         - car --> butterfly
--   input:
+-   input: # 0/2- attributes relations
         base:
         - city
         - rural
@@ -111,7 +111,7 @@ mapping:
         mapping:
         - city --> hardware
         - rural --> software
--   input:
+-   input: # 2/2
         base:
         - water
         - water cup
@@ -125,7 +125,7 @@ mapping:
         mapping:
         - water --> goods
         - water cup --> container
--   input:
+-   input: # 2/2
         base:
         - fire extinguisher
         - dry powder
@@ -139,7 +139,7 @@ mapping:
         mapping:
         - fire extinguisher --> printer
         - dry powder --> printing paper
--   input:
+-   input: # 0/2 - attributes relations
         base:
         - mung beans
         - peas
@@ -153,7 +153,7 @@ mapping:
         mapping:
         - mung beans --> soy milk
         - peas --> oatmeal
--   input:
+-   input: # 0/2 - attirbutes relations
         base:
         - netherlands
         - japan
@@ -167,7 +167,7 @@ mapping:
         mapping:
         - netherlands --> germany
         - japan --> united kingdom
--   input:
+-   input: # 2/2
         base:
         - golf
         - baseball
@@ -181,7 +181,7 @@ mapping:
         mapping:
         - golf --> table tennis
         - baseball --> tennis
--   input:
+-   input: # 2/2
         base:
         - peace
         - war
@@ -195,7 +195,7 @@ mapping:
         mapping:
         - peace --> neat
         - war --> messy
--   input:
+-   input: # 2/2
         base:
         - air
         - windmill
@@ -209,7 +209,7 @@ mapping:
         mapping:
         - air --> river water
         - windmill --> generator
--   input:
+-   input: # 2/2
         base:
         - camel
         - desert
@@ -223,7 +223,7 @@ mapping:
         mapping:
         - camel --> whale
         - desert --> ocean
--   input:
+-   input: # 2/2
         base:
         - criminal
         - prison
@@ -237,7 +237,7 @@ mapping:
         mapping:
         - criminal --> patient
         - prison --> hospital
--   input:
+-   input: # 2/2
         base:
         - clan
         - tribe
@@ -251,7 +251,7 @@ mapping:
         mapping:
         - clan --> hydrogen chloride
         - tribe --> hydrochloric acid
--   input:
+-   input: # 2/2
         base:
         - dictionary
         - words
@@ -265,7 +265,7 @@ mapping:
         mapping:
         - dictionary --> map
         - words --> location
--   input:
+-   input: # 2/2
         base:
         - ultrasound
         - mechanical waves
@@ -279,7 +279,7 @@ mapping:
         mapping:
         - ultrasound --> steamship
         - mechanical waves --> ship
--   input:
+-   input: # 2/2
         base:
         - struggle
         - success
@@ -293,7 +293,7 @@ mapping:
         mapping:
         - struggle --> learning
         - success --> understanding
--   input:
+-   input: # 0/2 - attributes relations
         base:
         - soy sauce
         - salt
@@ -307,7 +307,7 @@ mapping:
         mapping:
         - soy sauce --> chicken essence
         - salt --> monosodium glutamate
--   input:
+-   input: # 2/2
         base:
         - fallacy
         - conclusion
@@ -321,7 +321,7 @@ mapping:
         mapping:
         - fallacy --> veto
         - conclusion --> vote
--   input:
+-   input: # 0/2
         base:
         - woodcarving
         - wood
@@ -335,7 +335,7 @@ mapping:
         mapping:
         - woodcarving --> rice noodles
         - wood --> rice
--   input:
+-   input: # 2/2
         base:
         - expert
         - official
@@ -349,7 +349,7 @@ mapping:
         mapping:
         - expert --> juvenile
         - official --> singer
--   input:
+-   input: # 2/2
         base:
         - understand
         - comprehension
@@ -363,7 +363,7 @@ mapping:
         mapping:
         - understand --> quest
         - comprehension --> obsession
--   input:
+-   input: # 2/2
         base:
         - jiaozuo
         - yuntai mountain
@@ -377,7 +377,7 @@ mapping:
         mapping:
         - jiaozuo --> hangzhou
         - yuntai mountain --> west lake
--   input:
+-   input: # 2/2
         base:
         - china
         - panda
@@ -391,7 +391,7 @@ mapping:
         mapping:
         - china --> australia
         - panda --> koala
--   input:
+-   input: # 2/2
         base:
         - humanities
         - physics
@@ -405,7 +405,7 @@ mapping:
         mapping:
         - humanities --> northerners
         - physics --> hubei people
--   input:
+-   input: # 0/2
         base:
         - sowing
         - crops
@@ -419,7 +419,7 @@ mapping:
         mapping:
         - sowing --> cooking
         - crops --> gourmet
--   input:
+-   input: # 2/2
         base:
         - rice
         - rice porridge
@@ -433,7 +433,7 @@ mapping:
         mapping:
         - rice --> books
         - rice porridge --> library
--   input:
+-   input: # 2/2
         base:
         - wood
         - table
@@ -447,7 +447,7 @@ mapping:
         mapping:
         - wood --> leather
         - table --> leather shoes
--   input:
+-   input: # 2/2
         base:
         - painting
         - landscape
@@ -461,7 +461,7 @@ mapping:
         mapping:
         - painting --> work
         - landscape --> hero
--   input:
+-   input: # 2/2
         base:
         - flute
         - musician
@@ -475,7 +475,7 @@ mapping:
         mapping:
         - flute --> broom
         - musician --> cleaner
--   input:
+-   input: # 2/2
         base:
         - medications
         - curing
@@ -489,7 +489,7 @@ mapping:
         mapping:
         - medications --> skateboard
         - curing --> sports
--   input:
+-   input: # 2/2
         base:
         - panda
         - china
@@ -503,7 +503,7 @@ mapping:
         mapping:
         - panda --> koala
         - china --> australia
--   input:
+-   input: # 2/2
         base:
         - black
         - color
@@ -517,7 +517,7 @@ mapping:
         mapping:
         - black --> rice
         - color --> grain
--   input:
+-   input: # 0/2 - attributes relations
         base:
         - mineral water
         - pure water
@@ -531,7 +531,7 @@ mapping:
         mapping:
         - mineral water --> chinese chess
         - pure water --> military chess
--   input:
+-   input: # 2/2
         base:
         - current
         - ampere
@@ -545,7 +545,7 @@ mapping:
         mapping:
         - current --> kinetic energy
         - ampere --> joules
--   input:
+-   input: # 0/2
         base:
         - chinese characters
         - symbols
@@ -559,7 +559,7 @@ mapping:
         mapping:
         - chinese characters --> rice
         - symbols --> grain
--   input:
+-   input: # 2/2
         base:
         - baking powder
         - steamed bread
@@ -573,7 +573,7 @@ mapping:
         mapping:
         - baking powder --> foaming agent
         - steamed bread --> sponge
--   input:
+-   input: # 0/2
         base:
         - wealthy
         - poverty alleviation
@@ -587,7 +587,7 @@ mapping:
         mapping:
         - wealthy --> drying
         - poverty alleviation --> dehumidifying
--   input:
+-   input: # 2/2
         base:
         - business
         - taxation
@@ -601,7 +601,7 @@ mapping:
         mapping:
         - business --> borrowing books
         - taxation --> returning
--   input:
+-   input: # 2/2
         base:
         - illness
         - depression
@@ -615,7 +615,7 @@ mapping:
         mapping:
         - illness --> cold
         - depression --> chilly
--   input:
+-   input: # 2/2
         base:
         - youth
         - adulthood
@@ -629,7 +629,7 @@ mapping:
         mapping:
         - youth --> girls
         - adulthood --> women
--   input:
+-   input: # 2/2
         base:
         - air
         - human beings
@@ -643,7 +643,7 @@ mapping:
         mapping:
         - air --> freedom
         - human beings --> thought
--   input:
+-   input: # 2/2
         base:
         - students
         - honest
@@ -657,7 +657,7 @@ mapping:
         mapping:
         - students --> law
         - honest --> justice
--   input:
+-   input: # 2/2
         base:
         - bird
         - egg
@@ -671,7 +671,7 @@ mapping:
         mapping:
         - bird --> frog
         - egg --> egg
--   input:
+-   input: # 2/2
         base:
         - contract
         - signinature
@@ -685,7 +685,7 @@ mapping:
         mapping:
         - contract --> graduation certificate
         - signinature --> stamp
--   input:
+-   input: # 0/2 - attributes relations
         base:
         - atm
         - bank clerk
@@ -699,7 +699,7 @@ mapping:
         mapping:
         - atm --> vending machine
         - bank clerk --> salesperson
--   input:
+-   input: # 2/2
         base:
         - hammer
         - nail
@@ -713,7 +713,7 @@ mapping:
         mapping:
         - hammer --> roller
         - nail --> ground
--   input:
+-   input: # 2/2
         base:
         - thirst
         - teacup
@@ -727,7 +727,7 @@ mapping:
         mapping:
         - thirst --> cold
         - teacup --> wardrobe
--   input:
+-   input: # 2/2
         base:
         - gasoline
         - car
@@ -741,7 +741,7 @@ mapping:
         mapping:
         - gasoline --> wind
         - car --> kite
--   input:
+-   input: # 0/2 - coverage
         base:
         - insomnia
         - drowsiness
@@ -755,7 +755,7 @@ mapping:
         mapping:
         - insomnia --> asphyxiation
         - drowsiness --> oxygen
--   input:
+-   input: # 2/2
         base:
         - pilot
         - airplane
@@ -769,7 +769,7 @@ mapping:
         mapping:
         - pilot --> teacher
         - airplane --> classroom
--   input:
+-   input: # 0/2 - attributes relations
         base:
         - butterfly
         - cricket
@@ -783,7 +783,7 @@ mapping:
         mapping:
         - butterfly --> parrot
         - cricket --> seagull
--   input:
+-   input: # 0/2 - attributes relations
         base:
         - swan
         - plastic
@@ -797,7 +797,7 @@ mapping:
         mapping:
         - swan --> watermelon
         - plastic --> glass
--   input:
+-   input: # 2/2
         base:
         - word
         - express
@@ -811,21 +811,7 @@ mapping:
         mapping:
         - word --> argumentative paper
         - express --> argumentation
--   input:
-        base:
-        - dilemma
-        - facing
-        depth:
-            beam: 20
-            dfs: 4
-        target:
-        - problem
-        - solve
-    output:
-        mapping:
-        - dilemma --> problem
-        - facing --> solve
--   input:
+-   input: # 2/2
         base:
         - chopping knife
         - food
@@ -839,7 +825,7 @@ mapping:
         mapping:
         - chopping knife --> towel
         - food --> body
--   input:
+-   input: # 2/2
         base:
         - book
         - paper
@@ -853,7 +839,7 @@ mapping:
         mapping:
         - book --> dishes
         - paper --> radish
--   input:
+-   input: # 2/2
         base:
         - volcano
         - lava
@@ -867,7 +853,7 @@ mapping:
         mapping:
         - volcano --> automobile
         - lava --> exhaust
--   input:
+-   input: # 0/2 - too general "can be"
         base:
         - man
         - athlete
@@ -881,7 +867,7 @@ mapping:
         mapping:
         - man --> businessman
         - athlete --> father
--   input:
+-   input: # 2/2
         base:
         - denominator
         - divisor
@@ -895,7 +881,7 @@ mapping:
         mapping:
         - denominator --> percent
         - divisor --> percentage
--   input:
+-   input: # 2/2
         base:
         - pen
         - ink
@@ -909,7 +895,7 @@ mapping:
         mapping:
         - pen --> toothbrush
         - ink --> toothpaste
--   input:
+-   input: # 2/2
         base:
         - plant
         - flower
@@ -923,7 +909,7 @@ mapping:
         mapping:
         - plant --> grain
         - flower --> rice
--   input:
+-   input: # 2/2
         base:
         - yangtze river
         - china
