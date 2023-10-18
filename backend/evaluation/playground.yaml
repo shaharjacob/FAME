@@ -1,0 +1,15 @@
+mapping:
+-   input:
+        base:
+        - plant
+        - coal
+        depth:
+            beam: 20
+            dfs: 4
+        target:
+        - milk
+        - yogurt
+    output:
+        mapping:
+        - plant --> milk
+        - coal --> yogurt

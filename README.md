@@ -57,7 +57,7 @@ docker exec -it backend bash
 ```  
 You should be now in **backend** folder, and should run:  
 ```bash
-python evaluation/evaluation.py --yaml play_around.yaml
+python evaluation/evaluation.py --yaml playground.yaml
 ```
 More details about the execute command can be found under **Execute** section.  
 &nbsp;  
@@ -120,21 +120,21 @@ The job id shown when the job in submitted.
 
 # Execute
 Execution is done by configure a yaml file.
-Examples for yaml files can be found under: `backend/evalution`, in particular you can use `backend/evalution/play_around.yaml`.  
+Examples for yaml files can be found under: `backend/evalution`, in particular you can use `backend/evalution/playground.yaml`.  
 You can see inside this file a template (in comment), and another example.  
 After editting the yaml by adding another entry, you can use the following command:  
 ```bash
-python backend/evaluation/evaluation.py --yaml play_around.yaml
+python backend/evaluation/evaluation.py --yaml playground.yaml
 ```  
 If you want the suggestions to be available, add `--suggestions`.  This is not recommend unless you looking for suggstions.  
 By default, the script is running all the entries in the yaml. If you want to run specific entry, use `--specify {entry number, start from 1}`. You can specify muliple entries.  
 For example, running the first entry only:  
 ```bash
-python backend/evaluation/evaluation.py --yaml play_around.yaml --specify 1
+python backend/evaluation/evaluation.py --yaml playground.yaml --specify 1
 ```  
 Running the first and the third entries:  
 ```bash
-python backend/evaluation/evaluation.py --yaml play_around.yaml --specify 1 --specify 3
+python backend/evaluation/evaluation.py --yaml playground.yaml --specify 1 --specify 3
 ```  
 &nbsp;  
 
