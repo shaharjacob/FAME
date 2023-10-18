@@ -1,5 +1,5 @@
 mapping:
--   input: # 0/3 - attributes relations AND too general
+-   input: # 0/3 - attributes relations type 2
         base:
         - white pigeon
         - female pigeon
@@ -101,7 +101,7 @@ mapping:
         - tactics --> strategy
         - war --> campaign
         - victory or defeat --> success or failure
--   input: #  0/3 - attributes relations
+-   input: #  0/3 - attributes relations type 1
         base:
         - yellow
         - red
@@ -135,7 +135,7 @@ mapping:
         - probability --> siamese
         - possibility --> twin
         - logic --> biology
--   input: # 0/3 - attributes relations
+-   input: # 0/3 - attributes relations type 2
         base:
         - electric vehicle
         - motorcycle
@@ -254,7 +254,7 @@ mapping:
         - einstein --> hume
         - physics --> philosophy
         - theory of relativity --> agnosticism
--   input: # 0/3 - attributes relations
+-   input: # 0/3 - attributes relations type 1
         base:
         - radio
         - tv
@@ -271,7 +271,7 @@ mapping:
         - radio --> steamed
         - tv --> braised
         - newspaper --> deep-fried
--   input: # 0/3 - attributes relations AND triple/intersection relation
+-   input: # 0/3 - attributes relations type 1 AND triple/intersection relation
         base:
         - hong kong
         - macau
@@ -288,7 +288,7 @@ mapping:
         - hong kong --> guangdong
         - macau --> guangxi
         - hong kong and macau --> guangdong and guangxi
--   input: # 1/3 - attributes relations AND no order
+-   input: # 1/3 - attributes relations type 1 AND no order
         base:
         - zhejiang
         - hainan
@@ -424,7 +424,7 @@ mapping:
         - contradiction --> contact
         - conflict --> communication
         - war --> integration
--   input: # 1/3  - attributes relations
+-   input: # 1/3  - attributes relations type 2
         base:
         - grape wine
         - famous wine

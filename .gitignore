@@ -4,7 +4,9 @@
 .vscode
 .idea/
 
+backend/mapping/openie_data/*
 backend/tsv/merged
 backend/cache
 university.txt
 runme.sh
+cache/*

@@ -41,7 +41,7 @@ mapping:
         mapping:
         - customs --> electricity
         - habit --> energy
--   input: # 0/2 - attributes relations
+-   input: # 0/2 - attributes relations type 1
         base:
         - ice
         - fog
@@ -97,7 +97,7 @@ mapping:
         mapping:
         - engine --> wings
         - car --> butterfly
--   input: # 0/2- attributes relations
+-   input: # 0/2- attributes relations type 1
         base:
         - city
         - rural
@@ -139,7 +139,7 @@ mapping:
         mapping:
         - fire extinguisher --> printer
         - dry powder --> printing paper
--   input: # 0/2 - attributes relations
+-   input: # 0/2 - attributes relations type 1
         base:
         - mung beans
         - peas
@@ -153,7 +153,7 @@ mapping:
         mapping:
         - mung beans --> soy milk
         - peas --> oatmeal
--   input: # 0/2 - attirbutes relations
+-   input: # 0/2 - attributes relations type 2
         base:
         - netherlands
         - japan
@@ -293,7 +293,7 @@ mapping:
         mapping:
         - struggle --> learning
         - success --> understanding
--   input: # 0/2 - attributes relations
+-   input: # 0/2 - attributes relations type 1
         base:
         - soy sauce
         - salt
@@ -517,7 +517,7 @@ mapping:
         mapping:
         - black --> rice
         - color --> grain
--   input: # 0/2 - attributes relations
+-   input: # 0/2 - attributes relations type 1
         base:
         - mineral water
         - pure water
@@ -685,7 +685,7 @@ mapping:
         mapping:
         - contract --> graduation certificate
         - signinature --> stamp
--   input: # 0/2 - attributes relations
+-   input: # 0/2 - attributes relations type 1
         base:
         - atm
         - bank clerk
@@ -769,7 +769,7 @@ mapping:
         mapping:
         - pilot --> teacher
         - airplane --> classroom
--   input: # 0/2 - attributes relations
+-   input: # 0/2 - attributes relations type 1
         base:
         - butterfly
         - cricket
@@ -783,7 +783,7 @@ mapping:
         mapping:
         - butterfly --> parrot
         - cricket --> seagull
--   input: # 0/2 - attributes relations
+-   input: # 0/2 - attributes relations type 1
         base:
         - swan
         - plastic
