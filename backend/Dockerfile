@@ -17,9 +17,11 @@ RUN apt-get install -y \
 RUN apt-get update
 
 # Get Rust
-RUN curl https://sh.rustup.rs -sSf | bash -s -- -y
+# RUN curl https://sh.rustup.rs -sSf | bash -s -- -y
+RUN curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
 
 ENV PATH="/root/.cargo/bin:${PATH}"
+RUN . /root/.cargo/env
 ##################################################
 
 RUN pip install --upgrade pip
@@ -38,5 +40,5 @@ RUN pip install flask-cors --no-cache-dir
 RUN pip install scikit-learn --no-cache-dir
 RUN pip install python-dotenv --no-cache-dir
 RUN pip install beautifulsoup4 --no-cache-dir
-RUN pip install transformers==4.10.3 --no-cache-dir
+RUN pip install transformers==4.16 --no-cache-dir
 RUN pip install sentence_transformers --no-cache-dir
