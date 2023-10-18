@@ -34,7 +34,7 @@ docker run -d -p 5031:5031 --name backend --network "FAME" -e "FLASK_ENV=develop
 docker run -d -p 3000:3000 --name webapp --network "FAME" shaharjacob/mswebapp npm start
 ```
 
-After few seconds you can open browser at: <a href="https://localhost:3000/">https://localhost:3000/</a>  
+After few seconds you can open browser at: <a href="http://localhost:3000/">http://localhost:3000/</a>  
 The first run may take a few second because it download the sBERT model into the container.  
 
 **Verbose:**  
