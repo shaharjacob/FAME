@@ -4,6 +4,7 @@ import { useHistory } from 'react-router-dom'
 import { options } from '../../utils'
 import './SingleMappingDemo.css'
 import RightArrow from '../../assets/arrow-right.svg'
+import Hayadata from '../../assets/mapping-entities-hayadata.png'
 
 
 const SingleMappingDemo = () => {
@@ -35,7 +36,7 @@ const SingleMappingDemo = () => {
 
     return (
         <div className="single-mapping-demo-container">
-            <img src="" alt="Deleted for anonymity" className="logo" />
+            <img src={Hayadata} alt="logo" className="logo" />
             <div className="single-mapping-demo-selects-grid">
                 <div>
                     <span className="mid-title">Base 1</span>
