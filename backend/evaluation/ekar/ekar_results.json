@@ -1,0 +1,4345 @@
+[
+	{
+		"base": [
+			"plant",
+			"coal"
+		],
+		"target": [
+			"white wine",
+			"aged vinegar"
+		],
+		"mapping": [
+			"plant --> white wine",
+			"coal --> aged vinegar"
+		],
+		"score": 1.0,
+		"ekar_answer": false,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"plant",
+			"coal"
+		],
+		"target": [
+			"starch",
+			"corn"
+		],
+		"mapping": [
+			"plant --> starch",
+			"coal --> corn"
+		],
+		"score": 3.782,
+		"ekar_answer": false,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"plant",
+			"coal"
+		],
+		"target": [
+			"milk",
+			"yogurt"
+		],
+		"mapping": [
+			"plant --> milk",
+			"coal --> yogurt"
+		],
+		"score": 4.661,
+		"ekar_answer": true,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"plant",
+			"coal"
+		],
+		"target": [
+			"pickled cabbage",
+			"cabbage"
+		],
+		"mapping": [
+			"plant --> pickled cabbage",
+			"coal --> cabbage"
+		],
+		"score": 0.696,
+		"ekar_answer": false,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"martial arts",
+			"tai chi"
+		],
+		"target": [
+			"swimming",
+			"diving"
+		],
+		"mapping": [
+			"martial arts --> swimming",
+			"tai chi --> diving"
+		],
+		"score": 0.779,
+		"ekar_answer": false,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"martial arts",
+			"tai chi"
+		],
+		"target": [
+			"athletics",
+			"hurdles"
+		],
+		"mapping": [
+			"martial arts --> athletics",
+			"tai chi --> hurdles"
+		],
+		"score": 0.784,
+		"ekar_answer": true,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"martial arts",
+			"tai chi"
+		],
+		"target": [
+			"fencing",
+			"shooting"
+		],
+		"mapping": [],
+		"score": 0,
+		"ekar_answer": false,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"martial arts",
+			"tai chi"
+		],
+		"target": [
+			"weightlifting",
+			"judo"
+		],
+		"mapping": [],
+		"score": 0,
+		"ekar_answer": false,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"customs",
+			"habit"
+		],
+		"target": [
+			"man",
+			"adult"
+		],
+		"mapping": [
+			"customs --> man",
+			"habit --> adult"
+		],
+		"score": 1.641,
+		"ekar_answer": false,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"customs",
+			"habit"
+		],
+		"target": [
+			"eating",
+			"life"
+		],
+		"mapping": [
+			"customs --> eating",
+			"habit --> life"
+		],
+		"score": 1.263,
+		"ekar_answer": false,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"customs",
+			"habit"
+		],
+		"target": [
+			"electricity",
+			"energy"
+		],
+		"mapping": [
+			"customs --> electricity",
+			"habit --> energy"
+		],
+		"score": 0.883,
+		"ekar_answer": true,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"customs",
+			"habit"
+		],
+		"target": [
+			"hobbies",
+			"specialty"
+		],
+		"mapping": [
+			"customs --> hobbies",
+			"habit --> specialty"
+		],
+		"score": 0.219,
+		"ekar_answer": false,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"ice",
+			"fog"
+		],
+		"target": [
+			"iron",
+			"soil"
+		],
+		"mapping": [
+			"ice --> iron",
+			"fog --> soil"
+		],
+		"score": 0.836,
+		"ekar_answer": false,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"ice",
+			"fog"
+		],
+		"target": [
+			"grass",
+			"tree"
+		],
+		"mapping": [
+			"ice --> grass",
+			"fog --> tree"
+		],
+		"score": 1.025,
+		"ekar_answer": true,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"ice",
+			"fog"
+		],
+		"target": [
+			"cold",
+			"fever"
+		],
+		"mapping": [
+			"ice --> cold",
+			"fog --> fever"
+		],
+		"score": 1.409,
+		"ekar_answer": false,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"ice",
+			"fog"
+		],
+		"target": [
+			"clothes",
+			"pants"
+		],
+		"mapping": [
+			"ice --> clothes",
+			"fog --> pants"
+		],
+		"score": 0.506,
+		"ekar_answer": false,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"rain",
+			"snow"
+		],
+		"target": [
+			"thermos",
+			"plate"
+		],
+		"mapping": [
+			"rain --> thermos",
+			"snow --> plate"
+		],
+		"score": 0.792,
+		"ekar_answer": false,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"rain",
+			"snow"
+		],
+		"target": [
+			"heater",
+			"capacitor"
+		],
+		"mapping": [
+			"rain --> heater",
+			"snow --> capacitor"
+		],
+		"score": 0.611,
+		"ekar_answer": false,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"rain",
+			"snow"
+		],
+		"target": [
+			"acoustic equipment",
+			"display"
+		],
+		"mapping": [
+			"rain --> acoustic equipment",
+			"snow --> display"
+		],
+		"score": 0.386,
+		"ekar_answer": false,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"rain",
+			"snow"
+		],
+		"target": [
+			"tv",
+			"game console"
+		],
+		"mapping": [
+			"rain --> tv",
+			"snow --> game console"
+		],
+		"score": 1.216,
+		"ekar_answer": true,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"pesticides",
+			"pollution"
+		],
+		"target": [
+			"sun",
+			"temperature"
+		],
+		"mapping": [
+			"pesticides --> sun",
+			"pollution --> temperature"
+		],
+		"score": 1.677,
+		"ekar_answer": false,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"pesticides",
+			"pollution"
+		],
+		"target": [
+			"exercise",
+			"health"
+		],
+		"mapping": [
+			"pesticides --> exercise",
+			"pollution --> health"
+		],
+		"score": 1.926,
+		"ekar_answer": true,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"pesticides",
+			"pollution"
+		],
+		"target": [
+			"bad news",
+			"sorrow"
+		],
+		"mapping": [
+			"pesticides --> bad news",
+			"pollution --> sorrow"
+		],
+		"score": 1.563,
+		"ekar_answer": false,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"pesticides",
+			"pollution"
+		],
+		"target": [
+			"computer",
+			"radiation"
+		],
+		"mapping": [
+			"pesticides --> computer",
+			"pollution --> radiation"
+		],
+		"score": 0.216,
+		"ekar_answer": false,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"engine",
+			"car"
+		],
+		"target": [
+			"ink",
+			"brush"
+		],
+		"mapping": [
+			"engine --> ink",
+			"car --> brush"
+		],
+		"score": 2.196,
+		"ekar_answer": false,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"engine",
+			"car"
+		],
+		"target": [
+			"moonlight",
+			"sky"
+		],
+		"mapping": [
+			"engine --> moonlight",
+			"car --> sky"
+		],
+		"score": 1.893,
+		"ekar_answer": false,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"engine",
+			"car"
+		],
+		"target": [
+			"sailboat",
+			"sea"
+		],
+		"mapping": [
+			"engine --> sailboat",
+			"car --> sea"
+		],
+		"score": 1.188,
+		"ekar_answer": false,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"engine",
+			"car"
+		],
+		"target": [
+			"wings",
+			"butterfly"
+		],
+		"mapping": [
+			"engine --> wings",
+			"car --> butterfly"
+		],
+		"score": 3.079,
+		"ekar_answer": true,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"city",
+			"rural"
+		],
+		"target": [
+			"street",
+			"neighborhood"
+		],
+		"mapping": [
+			"city --> street",
+			"rural --> neighborhood"
+		],
+		"score": 2.507,
+		"ekar_answer": false,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"city",
+			"rural"
+		],
+		"target": [
+			"industry",
+			"agriculture"
+		],
+		"mapping": [
+			"city --> industry",
+			"rural --> agriculture"
+		],
+		"score": 2.947,
+		"ekar_answer": false,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"city",
+			"rural"
+		],
+		"target": [
+			"hardware",
+			"software"
+		],
+		"mapping": [
+			"city --> hardware",
+			"rural --> software"
+		],
+		"score": 2.968,
+		"ekar_answer": true,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"city",
+			"rural"
+		],
+		"target": [
+			"study",
+			"work"
+		],
+		"mapping": [
+			"city --> study",
+			"rural --> work"
+		],
+		"score": 2.85,
+		"ekar_answer": false,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"water",
+			"water cup"
+		],
+		"target": [
+			"clothes",
+			"hangers"
+		],
+		"mapping": [
+			"water --> clothes",
+			"water cup --> hangers"
+		],
+		"score": 0.721,
+		"ekar_answer": false,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"water",
+			"water cup"
+		],
+		"target": [
+			"house",
+			"windows"
+		],
+		"mapping": [
+			"water --> house",
+			"water cup --> windows"
+		],
+		"score": 0.613,
+		"ekar_answer": false,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"water",
+			"water cup"
+		],
+		"target": [
+			"goods",
+			"container"
+		],
+		"mapping": [
+			"water --> goods",
+			"water cup --> container"
+		],
+		"score": 1.263,
+		"ekar_answer": true,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"water",
+			"water cup"
+		],
+		"target": [
+			"crutches",
+			"wheelchair"
+		],
+		"mapping": [
+			"water --> crutches",
+			"water cup --> wheelchair"
+		],
+		"score": 0.214,
+		"ekar_answer": false,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"fire extinguisher",
+			"dry powder"
+		],
+		"target": [
+			"desk",
+			"book"
+		],
+		"mapping": [
+			"fire extinguisher --> desk",
+			"dry powder --> book"
+		],
+		"score": 0.424,
+		"ekar_answer": false,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"fire extinguisher",
+			"dry powder"
+		],
+		"target": [
+			"learning",
+			"responsibility"
+		],
+		"mapping": [
+			"fire extinguisher --> learning",
+			"dry powder --> responsibility"
+		],
+		"score": 0.333,
+		"ekar_answer": false,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"fire extinguisher",
+			"dry powder"
+		],
+		"target": [
+			"printer",
+			"printing paper"
+		],
+		"mapping": [],
+		"score": 0,
+		"ekar_answer": true,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"fire extinguisher",
+			"dry powder"
+		],
+		"target": [
+			"electric light",
+			"wire"
+		],
+		"mapping": [],
+		"score": 0,
+		"ekar_answer": false,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"mung beans",
+			"peas"
+		],
+		"target": [
+			"red beans",
+			"soy milk"
+		],
+		"mapping": [],
+		"score": 0,
+		"ekar_answer": false,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"mung beans",
+			"peas"
+		],
+		"target": [
+			"soy milk",
+			"oatmeal"
+		],
+		"mapping": [],
+		"score": 0,
+		"ekar_answer": true,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"mung beans",
+			"peas"
+		],
+		"target": [
+			"milk",
+			"cow"
+		],
+		"mapping": [],
+		"score": 0,
+		"ekar_answer": false,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"mung beans",
+			"peas"
+		],
+		"target": [
+			"swallow",
+			"bird's nest"
+		],
+		"mapping": [],
+		"score": 0,
+		"ekar_answer": false,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"netherlands",
+			"japan"
+		],
+		"target": [
+			"china",
+			"india"
+		],
+		"mapping": [
+			"netherlands --> china",
+			"japan --> india"
+		],
+		"score": 2.083,
+		"ekar_answer": false,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"netherlands",
+			"japan"
+		],
+		"target": [
+			"germany",
+			"united kingdom"
+		],
+		"mapping": [
+			"netherlands --> germany",
+			"japan --> united kingdom"
+		],
+		"score": 0.912,
+		"ekar_answer": true,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"netherlands",
+			"japan"
+		],
+		"target": [
+			"america",
+			"canada"
+		],
+		"mapping": [
+			"netherlands --> america",
+			"japan --> canada"
+		],
+		"score": 1.646,
+		"ekar_answer": false,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"netherlands",
+			"japan"
+		],
+		"target": [
+			"sweden",
+			"spain"
+		],
+		"mapping": [
+			"netherlands --> sweden",
+			"japan --> spain"
+		],
+		"score": 0.84,
+		"ekar_answer": false,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"golf",
+			"baseball"
+		],
+		"target": [
+			"volleyball",
+			"football"
+		],
+		"mapping": [
+			"golf --> volleyball",
+			"baseball --> football"
+		],
+		"score": 1.489,
+		"ekar_answer": false,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"golf",
+			"baseball"
+		],
+		"target": [
+			"billiards",
+			"shot put"
+		],
+		"mapping": [],
+		"score": 0,
+		"ekar_answer": false,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"golf",
+			"baseball"
+		],
+		"target": [
+			"table tennis",
+			"tennis"
+		],
+		"mapping": [
+			"golf --> table tennis",
+			"baseball --> tennis"
+		],
+		"score": 1.073,
+		"ekar_answer": true,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"golf",
+			"baseball"
+		],
+		"target": [
+			"basketball",
+			"water polo"
+		],
+		"mapping": [
+			"golf --> basketball",
+			"baseball --> water polo"
+		],
+		"score": 0.221,
+		"ekar_answer": false,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"peace",
+			"war"
+		],
+		"target": [
+			"xiaosheng",
+			"laosheng"
+		],
+		"mapping": [
+			"peace --> xiaosheng",
+			"war --> laosheng"
+		],
+		"score": 0.349,
+		"ekar_answer": false,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"peace",
+			"war"
+		],
+		"target": [
+			"oil painting",
+			"sketch"
+		],
+		"mapping": [
+			"peace --> oil painting",
+			"war --> sketch"
+		],
+		"score": 0.357,
+		"ekar_answer": false,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"peace",
+			"war"
+		],
+		"target": [
+			"heredity",
+			"variation"
+		],
+		"mapping": [
+			"peace --> heredity",
+			"war --> variation"
+		],
+		"score": 1.54,
+		"ekar_answer": false,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"peace",
+			"war"
+		],
+		"target": [
+			"neat",
+			"messy"
+		],
+		"mapping": [
+			"peace --> neat",
+			"war --> messy"
+		],
+		"score": 2.348,
+		"ekar_answer": true,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"air",
+			"windmill"
+		],
+		"target": [
+			"sea water",
+			"ship"
+		],
+		"mapping": [
+			"air --> sea water",
+			"windmill --> ship"
+		],
+		"score": 0.666,
+		"ekar_answer": false,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"air",
+			"windmill"
+		],
+		"target": [
+			"river water",
+			"generator"
+		],
+		"mapping": [],
+		"score": 0,
+		"ekar_answer": true,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"air",
+			"windmill"
+		],
+		"target": [
+			"coal",
+			"combustion"
+		],
+		"mapping": [
+			"air --> coal",
+			"windmill --> combustion"
+		],
+		"score": 0.704,
+		"ekar_answer": false,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"air",
+			"windmill"
+		],
+		"target": [
+			"oilfield",
+			"drilling"
+		],
+		"mapping": [],
+		"score": 0,
+		"ekar_answer": false,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"camel",
+			"desert"
+		],
+		"target": [
+			"penguins",
+			"the antarctic"
+		],
+		"mapping": [
+			"camel --> penguins",
+			"desert --> the antarctic"
+		],
+		"score": 3.801,
+		"ekar_answer": false,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"camel",
+			"desert"
+		],
+		"target": [
+			"whale",
+			"ocean"
+		],
+		"mapping": [
+			"camel --> whale",
+			"desert --> ocean"
+		],
+		"score": 4.367,
+		"ekar_answer": true,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"camel",
+			"desert"
+		],
+		"target": [
+			"panda",
+			"china"
+		],
+		"mapping": [
+			"camel --> panda",
+			"desert --> china"
+		],
+		"score": 3.044,
+		"ekar_answer": false,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"camel",
+			"desert"
+		],
+		"target": [
+			"birds",
+			"sky"
+		],
+		"mapping": [
+			"camel --> birds",
+			"desert --> sky"
+		],
+		"score": 3.41,
+		"ekar_answer": false,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"criminal",
+			"prison"
+		],
+		"target": [
+			"books",
+			"bookcases"
+		],
+		"mapping": [
+			"criminal --> books",
+			"prison --> bookcases"
+		],
+		"score": 4.185,
+		"ekar_answer": false,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"criminal",
+			"prison"
+		],
+		"target": [
+			"teacher",
+			"school"
+		],
+		"mapping": [
+			"criminal --> teacher",
+			"prison --> school"
+		],
+		"score": 4.221,
+		"ekar_answer": false,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"criminal",
+			"prison"
+		],
+		"target": [
+			"athlete",
+			"gym"
+		],
+		"mapping": [
+			"criminal --> athlete",
+			"prison --> gym"
+		],
+		"score": 3.997,
+		"ekar_answer": false,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"criminal",
+			"prison"
+		],
+		"target": [
+			"patient",
+			"hospital"
+		],
+		"mapping": [
+			"criminal --> patient",
+			"prison --> hospital"
+		],
+		"score": 4.772,
+		"ekar_answer": true,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"clan",
+			"tribe"
+		],
+		"target": [
+			"market economy",
+			"commodity economy"
+		],
+		"mapping": [
+			"clan --> market economy",
+			"tribe --> commodity economy"
+		],
+		"score": 1.392,
+		"ekar_answer": false,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"clan",
+			"tribe"
+		],
+		"target": [
+			"short stories",
+			"fiction"
+		],
+		"mapping": [
+			"clan --> short stories",
+			"tribe --> fiction"
+		],
+		"score": 1.843,
+		"ekar_answer": false,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"clan",
+			"tribe"
+		],
+		"target": [
+			"hydrogen chloride",
+			"hydrochloric acid"
+		],
+		"mapping": [
+			"clan --> hydrogen chloride",
+			"tribe --> hydrochloric acid"
+		],
+		"score": 1.407,
+		"ekar_answer": true,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"clan",
+			"tribe"
+		],
+		"target": [
+			"missile",
+			"helicopter"
+		],
+		"mapping": [],
+		"score": 0,
+		"ekar_answer": false,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"dictionary",
+			"words"
+		],
+		"target": [
+			"map",
+			"location"
+		],
+		"mapping": [
+			"dictionary --> map",
+			"words --> location"
+		],
+		"score": 3.664,
+		"ekar_answer": true,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"dictionary",
+			"words"
+		],
+		"target": [
+			"braille",
+			"reading"
+		],
+		"mapping": [
+			"dictionary --> braille",
+			"words --> reading"
+		],
+		"score": 1.064,
+		"ekar_answer": false,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"dictionary",
+			"words"
+		],
+		"target": [
+			"movie",
+			"lines"
+		],
+		"mapping": [
+			"dictionary --> movie",
+			"words --> lines"
+		],
+		"score": 2.903,
+		"ekar_answer": false,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"dictionary",
+			"words"
+		],
+		"target": [
+			"computer",
+			"games"
+		],
+		"mapping": [
+			"dictionary --> computer",
+			"words --> games"
+		],
+		"score": 2.654,
+		"ekar_answer": false,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"ultrasound",
+			"mechanical waves"
+		],
+		"target": [
+			"limit",
+			"constant"
+		],
+		"mapping": [],
+		"score": 0,
+		"ekar_answer": false,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"ultrasound",
+			"mechanical waves"
+		],
+		"target": [
+			"steamship",
+			"ship"
+		],
+		"mapping": [],
+		"score": 0,
+		"ekar_answer": true,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"ultrasound",
+			"mechanical waves"
+		],
+		"target": [
+			"simple equations",
+			"linear equations"
+		],
+		"mapping": [],
+		"score": 0,
+		"ekar_answer": false,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"ultrasound",
+			"mechanical waves"
+		],
+		"target": [
+			"good offices",
+			"conciliation"
+		],
+		"mapping": [
+			"ultrasound --> good offices",
+			"mechanical waves --> conciliation"
+		],
+		"score": 0.452,
+		"ekar_answer": false,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"struggle",
+			"success"
+		],
+		"target": [
+			"heavy snow",
+			"closing the mountain"
+		],
+		"mapping": [
+			"struggle --> heavy snow",
+			"success --> closing the mountain"
+		],
+		"score": 0.344,
+		"ekar_answer": false,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"struggle",
+			"success"
+		],
+		"target": [
+			"learning",
+			"understanding"
+		],
+		"mapping": [
+			"struggle --> learning",
+			"success --> understanding"
+		],
+		"score": 2.84,
+		"ekar_answer": true,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"struggle",
+			"success"
+		],
+		"target": [
+			"wealth",
+			"poverty"
+		],
+		"mapping": [
+			"struggle --> wealth",
+			"success --> poverty"
+		],
+		"score": 2.743,
+		"ekar_answer": false,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"struggle",
+			"success"
+		],
+		"target": [
+			"exam",
+			"grades"
+		],
+		"mapping": [
+			"struggle --> exam",
+			"success --> grades"
+		],
+		"score": 2.259,
+		"ekar_answer": false,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"soy sauce",
+			"salt"
+		],
+		"target": [
+			"animal",
+			"panda"
+		],
+		"mapping": [
+			"soy sauce --> animal",
+			"salt --> panda"
+		],
+		"score": 0.831,
+		"ekar_answer": false,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"soy sauce",
+			"salt"
+		],
+		"target": [
+			"double soft wagon",
+			"wheelbarrow"
+		],
+		"mapping": [
+			"soy sauce --> double soft wagon",
+			"salt --> wheelbarrow"
+		],
+		"score": 0.234,
+		"ekar_answer": false,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"soy sauce",
+			"salt"
+		],
+		"target": [
+			"chicken essence",
+			"monosodium glutamate"
+		],
+		"mapping": [],
+		"score": 0,
+		"ekar_answer": true,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"soy sauce",
+			"salt"
+		],
+		"target": [
+			"room",
+			"lobby"
+		],
+		"mapping": [
+			"soy sauce --> room",
+			"salt --> lobby"
+		],
+		"score": 2.016,
+		"ekar_answer": false,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"fallacy",
+			"conclusion"
+		],
+		"target": [
+			"dispute",
+			"entanglement"
+		],
+		"mapping": [
+			"fallacy --> dispute",
+			"conclusion --> entanglement"
+		],
+		"score": 0.581,
+		"ekar_answer": false,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"fallacy",
+			"conclusion"
+		],
+		"target": [
+			"acquaintance",
+			"sense"
+		],
+		"mapping": [
+			"fallacy --> acquaintance",
+			"conclusion --> sense"
+		],
+		"score": 0.203,
+		"ekar_answer": false,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"fallacy",
+			"conclusion"
+		],
+		"target": [
+			"admit",
+			"deny"
+		],
+		"mapping": [],
+		"score": 0,
+		"ekar_answer": false,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"fallacy",
+			"conclusion"
+		],
+		"target": [
+			"veto",
+			"vote"
+		],
+		"mapping": [
+			"fallacy --> veto",
+			"conclusion --> vote"
+		],
+		"score": 0.913,
+		"ekar_answer": true,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"woodcarving",
+			"wood"
+		],
+		"target": [
+			"diatoms",
+			"seawater"
+		],
+		"mapping": [],
+		"score": 0,
+		"ekar_answer": false,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"woodcarving",
+			"wood"
+		],
+		"target": [
+			"fruit plate",
+			"fruit"
+		],
+		"mapping": [],
+		"score": 0,
+		"ekar_answer": false,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"woodcarving",
+			"wood"
+		],
+		"target": [
+			"toon",
+			"spring"
+		],
+		"mapping": [
+			"woodcarving --> toon",
+			"wood --> spring"
+		],
+		"score": 0.335,
+		"ekar_answer": false,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"woodcarving",
+			"wood"
+		],
+		"target": [
+			"rice noodles",
+			"rice"
+		],
+		"mapping": [],
+		"score": 0,
+		"ekar_answer": true,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"expert",
+			"official"
+		],
+		"target": [
+			"vegetable farmer",
+			"farmer"
+		],
+		"mapping": [],
+		"score": 0,
+		"ekar_answer": false,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"expert",
+			"official"
+		],
+		"target": [
+			"morning sun",
+			"setting sun"
+		],
+		"mapping": [],
+		"score": 0,
+		"ekar_answer": false,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"expert",
+			"official"
+		],
+		"target": [
+			"juvenile",
+			"singer"
+		],
+		"mapping": [
+			"expert --> juvenile",
+			"official --> singer"
+		],
+		"score": 0.275,
+		"ekar_answer": true,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"expert",
+			"official"
+		],
+		"target": [
+			"green mountains",
+			"clear water"
+		],
+		"mapping": [],
+		"score": 0,
+		"ekar_answer": false,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"understand",
+			"comprehension"
+		],
+		"target": [
+			"walking",
+			"wandering"
+		],
+		"mapping": [
+			"understand --> walking",
+			"comprehension --> wandering"
+		],
+		"score": 0.278,
+		"ekar_answer": false,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"understand",
+			"comprehension"
+		],
+		"target": [
+			"depressed",
+			"lost"
+		],
+		"mapping": [
+			"understand --> depressed",
+			"comprehension --> lost"
+		],
+		"score": 0.478,
+		"ekar_answer": false,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"understand",
+			"comprehension"
+		],
+		"target": [
+			"frankness",
+			"express"
+		],
+		"mapping": [],
+		"score": 0,
+		"ekar_answer": false,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"understand",
+			"comprehension"
+		],
+		"target": [
+			"quest",
+			"obsession"
+		],
+		"mapping": [
+			"understand --> quest",
+			"comprehension --> obsession"
+		],
+		"score": 0.69,
+		"ekar_answer": true,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"jiaozuo",
+			"yuntai mountain"
+		],
+		"target": [
+			"hong kong",
+			"bauhinia"
+		],
+		"mapping": [],
+		"score": 0,
+		"ekar_answer": false,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"jiaozuo",
+			"yuntai mountain"
+		],
+		"target": [
+			"huashan",
+			"weinan"
+		],
+		"mapping": [
+			"jiaozuo --> huashan",
+			"yuntai mountain --> weinan"
+		],
+		"score": 0.481,
+		"ekar_answer": false,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"jiaozuo",
+			"yuntai mountain"
+		],
+		"target": [
+			"yunnan",
+			"erhai lake"
+		],
+		"mapping": [
+			"jiaozuo --> yunnan",
+			"yuntai mountain --> erhai lake"
+		],
+		"score": 1.644,
+		"ekar_answer": false,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"jiaozuo",
+			"yuntai mountain"
+		],
+		"target": [
+			"hangzhou",
+			"west lake"
+		],
+		"mapping": [
+			"jiaozuo --> hangzhou",
+			"yuntai mountain --> west lake"
+		],
+		"score": 1.247,
+		"ekar_answer": true,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"china",
+			"panda"
+		],
+		"target": [
+			"america",
+			"bald eagle"
+		],
+		"mapping": [
+			"china --> america",
+			"panda --> bald eagle"
+		],
+		"score": 3.966,
+		"ekar_answer": false,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"china",
+			"panda"
+		],
+		"target": [
+			"south africa",
+			"penguins"
+		],
+		"mapping": [
+			"china --> south africa",
+			"panda --> penguins"
+		],
+		"score": 2.169,
+		"ekar_answer": false,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"china",
+			"panda"
+		],
+		"target": [
+			"australia",
+			"koala"
+		],
+		"mapping": [
+			"china --> australia",
+			"panda --> koala"
+		],
+		"score": 4.305,
+		"ekar_answer": true,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"china",
+			"panda"
+		],
+		"target": [
+			"uk",
+			"lion"
+		],
+		"mapping": [
+			"china --> uk",
+			"panda --> lion"
+		],
+		"score": 0.578,
+		"ekar_answer": false,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"humanities",
+			"physics"
+		],
+		"target": [
+			"tea",
+			"black tea"
+		],
+		"mapping": [
+			"humanities --> tea",
+			"physics --> black tea"
+		],
+		"score": 0.279,
+		"ekar_answer": false,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"humanities",
+			"physics"
+		],
+		"target": [
+			"northerners",
+			"hubei people"
+		],
+		"mapping": [
+			"humanities --> northerners",
+			"physics --> hubei people"
+		],
+		"score": 0.236,
+		"ekar_answer": true,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"humanities",
+			"physics"
+		],
+		"target": [
+			"industry",
+			"heavy industry"
+		],
+		"mapping": [
+			"humanities --> industry",
+			"physics --> heavy industry"
+		],
+		"score": 0.242,
+		"ekar_answer": false,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"humanities",
+			"physics"
+		],
+		"target": [
+			"mints",
+			"milk candy"
+		],
+		"mapping": [],
+		"score": 0,
+		"ekar_answer": false,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"sowing",
+			"crops"
+		],
+		"target": [
+			"cooking",
+			"gourmet"
+		],
+		"mapping": [],
+		"score": 0,
+		"ekar_answer": true,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"sowing",
+			"crops"
+		],
+		"target": [
+			"fill in",
+			"form"
+		],
+		"mapping": [],
+		"score": 0,
+		"ekar_answer": false,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"sowing",
+			"crops"
+		],
+		"target": [
+			"taste",
+			"green tea"
+		],
+		"mapping": [],
+		"score": 0,
+		"ekar_answer": false,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"sowing",
+			"crops"
+		],
+		"target": [
+			"copy",
+			"article"
+		],
+		"mapping": [
+			"sowing --> copy",
+			"crops --> article"
+		],
+		"score": 0.238,
+		"ekar_answer": false,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"rice",
+			"rice porridge"
+		],
+		"target": [
+			"spider",
+			"spider web"
+		],
+		"mapping": [
+			"rice --> spider",
+			"rice porridge --> spider web"
+		],
+		"score": 1.157,
+		"ekar_answer": false,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"rice",
+			"rice porridge"
+		],
+		"target": [
+			"glass",
+			"glass water"
+		],
+		"mapping": [],
+		"score": 0,
+		"ekar_answer": false,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"rice",
+			"rice porridge"
+		],
+		"target": [
+			"ponytail",
+			"ponytail braids"
+		],
+		"mapping": [],
+		"score": 0,
+		"ekar_answer": false,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"rice",
+			"rice porridge"
+		],
+		"target": [
+			"books",
+			"library"
+		],
+		"mapping": [
+			"rice --> books",
+			"rice porridge --> library"
+		],
+		"score": 1.194,
+		"ekar_answer": true,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"wood",
+			"table"
+		],
+		"target": [
+			"curtains",
+			"windows"
+		],
+		"mapping": [
+			"wood --> curtains",
+			"table --> windows"
+		],
+		"score": 2.303,
+		"ekar_answer": false,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"wood",
+			"table"
+		],
+		"target": [
+			"wire",
+			"table lamp"
+		],
+		"mapping": [],
+		"score": 0,
+		"ekar_answer": false,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"wood",
+			"table"
+		],
+		"target": [
+			"leather",
+			"leather shoes"
+		],
+		"mapping": [
+			"wood --> leather",
+			"table --> leather shoes"
+		],
+		"score": 1.971,
+		"ekar_answer": true,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"wood",
+			"table"
+		],
+		"target": [
+			"steel",
+			"computer"
+		],
+		"mapping": [
+			"wood --> steel",
+			"table --> computer"
+		],
+		"score": 2.971,
+		"ekar_answer": false,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"painting",
+			"landscape"
+		],
+		"target": [
+			"work",
+			"hero"
+		],
+		"mapping": [
+			"painting --> work",
+			"landscape --> hero"
+		],
+		"score": 1.762,
+		"ekar_answer": true,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"painting",
+			"landscape"
+		],
+		"target": [
+			"opera",
+			"film"
+		],
+		"mapping": [
+			"painting --> opera",
+			"landscape --> film"
+		],
+		"score": 2.668,
+		"ekar_answer": false,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"painting",
+			"landscape"
+		],
+		"target": [
+			"express",
+			"emotion"
+		],
+		"mapping": [],
+		"score": 0,
+		"ekar_answer": false,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"painting",
+			"landscape"
+		],
+		"target": [
+			"blueprint",
+			"design"
+		],
+		"mapping": [
+			"painting --> blueprint",
+			"landscape --> design"
+		],
+		"score": 2.372,
+		"ekar_answer": false,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"flute",
+			"musician"
+		],
+		"target": [
+			"broom",
+			"cleaner"
+		],
+		"mapping": [
+			"flute --> broom",
+			"musician --> cleaner"
+		],
+		"score": 1.0,
+		"ekar_answer": true,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"flute",
+			"musician"
+		],
+		"target": [
+			"package",
+			"courier"
+		],
+		"mapping": [
+			"flute --> package",
+			"musician --> courier"
+		],
+		"score": 0.996,
+		"ekar_answer": false,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"flute",
+			"musician"
+		],
+		"target": [
+			"credibility",
+			"investor"
+		],
+		"mapping": [],
+		"score": 0,
+		"ekar_answer": false,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"flute",
+			"musician"
+		],
+		"target": [
+			"employees",
+			"entrepreneurs"
+		],
+		"mapping": [
+			"flute --> employees",
+			"musician --> entrepreneurs"
+		],
+		"score": 0.799,
+		"ekar_answer": false,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"medications",
+			"curing"
+		],
+		"target": [
+			"skateboard",
+			"sports"
+		],
+		"mapping": [],
+		"score": 0,
+		"ekar_answer": true,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"medications",
+			"curing"
+		],
+		"target": [
+			"food",
+			"hunger"
+		],
+		"mapping": [
+			"medications --> food",
+			"curing --> hunger"
+		],
+		"score": 1.387,
+		"ekar_answer": false,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"medications",
+			"curing"
+		],
+		"target": [
+			"broom",
+			"sanitation"
+		],
+		"mapping": [],
+		"score": 0,
+		"ekar_answer": false,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"medications",
+			"curing"
+		],
+		"target": [
+			"news",
+			"interview"
+		],
+		"mapping": [
+			"medications --> news",
+			"curing --> interview"
+		],
+		"score": 1.228,
+		"ekar_answer": false,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"panda",
+			"china"
+		],
+		"target": [
+			"yak",
+			"kenya"
+		],
+		"mapping": [],
+		"score": 0,
+		"ekar_answer": false,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"panda",
+			"china"
+		],
+		"target": [
+			"lion",
+			"mongolia"
+		],
+		"mapping": [],
+		"score": 0,
+		"ekar_answer": false,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"panda",
+			"china"
+		],
+		"target": [
+			"koala",
+			"australia"
+		],
+		"mapping": [
+			"panda --> koala",
+			"china --> australia"
+		],
+		"score": 4.305,
+		"ekar_answer": true,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"panda",
+			"china"
+		],
+		"target": [
+			"camel",
+			"vietnam"
+		],
+		"mapping": [],
+		"score": 0,
+		"ekar_answer": false,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"black",
+			"color"
+		],
+		"target": [
+			"rice",
+			"grain"
+		],
+		"mapping": [
+			"black --> rice",
+			"color --> grain"
+		],
+		"score": 3.527,
+		"ekar_answer": true,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"black",
+			"color"
+		],
+		"target": [
+			"grass",
+			"trees"
+		],
+		"mapping": [
+			"black --> grass",
+			"color --> trees"
+		],
+		"score": 2.654,
+		"ekar_answer": false,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"black",
+			"color"
+		],
+		"target": [
+			"careless",
+			"confidence"
+		],
+		"mapping": [
+			"black --> careless",
+			"color --> confidence"
+		],
+		"score": 0.946,
+		"ekar_answer": false,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"black",
+			"color"
+		],
+		"target": [
+			"fish",
+			"lake"
+		],
+		"mapping": [
+			"black --> fish",
+			"color --> lake"
+		],
+		"score": 2.321,
+		"ekar_answer": false,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"mineral water",
+			"pure water"
+		],
+		"target": [
+			"chinese chess",
+			"military chess"
+		],
+		"mapping": [],
+		"score": 0,
+		"ekar_answer": true,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"mineral water",
+			"pure water"
+		],
+		"target": [
+			"mount tai",
+			"high mountain"
+		],
+		"mapping": [
+			"mineral water --> mount tai",
+			"pure water --> high mountain"
+		],
+		"score": 0.434,
+		"ekar_answer": false,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"mineral water",
+			"pure water"
+		],
+		"target": [
+			"soldier",
+			"doctor"
+		],
+		"mapping": [],
+		"score": 0,
+		"ekar_answer": false,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"mineral water",
+			"pure water"
+		],
+		"target": [
+			"the first month of the chinese lunar year",
+			"january"
+		],
+		"mapping": [],
+		"score": 0,
+		"ekar_answer": false,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"current",
+			"ampere"
+		],
+		"target": [
+			"volume",
+			"cubic"
+		],
+		"mapping": [
+			"current --> volume",
+			"ampere --> cubic"
+		],
+		"score": 2.325,
+		"ekar_answer": false,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"current",
+			"ampere"
+		],
+		"target": [
+			"kinetic energy",
+			"joules"
+		],
+		"mapping": [
+			"current --> kinetic energy",
+			"ampere --> joules"
+		],
+		"score": 2.186,
+		"ekar_answer": true,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"current",
+			"ampere"
+		],
+		"target": [
+			"mass",
+			"kilogram"
+		],
+		"mapping": [
+			"current --> mass",
+			"ampere --> kilogram"
+		],
+		"score": 2.699,
+		"ekar_answer": false,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"current",
+			"ampere"
+		],
+		"target": [
+			"resistance",
+			"volts"
+		],
+		"mapping": [
+			"current --> resistance",
+			"ampere --> volts"
+		],
+		"score": 0.837,
+		"ekar_answer": false,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"chinese characters",
+			"symbols"
+		],
+		"target": [
+			"dolphin",
+			"sea fish"
+		],
+		"mapping": [],
+		"score": 0,
+		"ekar_answer": false,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"chinese characters",
+			"symbols"
+		],
+		"target": [
+			"rice",
+			"grain"
+		],
+		"mapping": [
+			"chinese characters --> rice",
+			"symbols --> grain"
+		],
+		"score": 0.49,
+		"ekar_answer": true,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"chinese characters",
+			"symbols"
+		],
+		"target": [
+			"executives",
+			"female"
+		],
+		"mapping": [],
+		"score": 0,
+		"ekar_answer": false,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"chinese characters",
+			"symbols"
+		],
+		"target": [
+			"law",
+			"study of chinese ancient civilization"
+		],
+		"mapping": [
+			"chinese characters --> law",
+			"symbols --> study of chinese ancient civilization"
+		],
+		"score": 0.267,
+		"ekar_answer": false,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"baking powder",
+			"steamed bread"
+		],
+		"target": [
+			"grain",
+			"feed"
+		],
+		"mapping": [
+			"baking powder --> grain",
+			"steamed bread --> feed"
+		],
+		"score": 1.294,
+		"ekar_answer": false,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"baking powder",
+			"steamed bread"
+		],
+		"target": [
+			"foaming agent",
+			"sponge"
+		],
+		"mapping": [
+			"baking powder --> foaming agent",
+			"steamed bread --> sponge"
+		],
+		"score": 1.379,
+		"ekar_answer": true,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"baking powder",
+			"steamed bread"
+		],
+		"target": [
+			"alcohol",
+			"china-baijiu"
+		],
+		"mapping": [
+			"baking powder --> alcohol",
+			"steamed bread --> china-baijiu"
+		],
+		"score": 0.791,
+		"ekar_answer": false,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"baking powder",
+			"steamed bread"
+		],
+		"target": [
+			"steel",
+			"automobile"
+		],
+		"mapping": [
+			"baking powder --> steel",
+			"steamed bread --> automobile"
+		],
+		"score": 1.289,
+		"ekar_answer": false,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"wealthy",
+			"poverty alleviation"
+		],
+		"target": [
+			"drying",
+			"dehumidifying"
+		],
+		"mapping": [],
+		"score": 0,
+		"ekar_answer": true,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"wealthy",
+			"poverty alleviation"
+		],
+		"target": [
+			"ignorance",
+			"education"
+		],
+		"mapping": [
+			"wealthy --> ignorance",
+			"poverty alleviation --> education"
+		],
+		"score": 0.352,
+		"ekar_answer": false,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"wealthy",
+			"poverty alleviation"
+		],
+		"target": [
+			"backwardness",
+			"advancing"
+		],
+		"mapping": [],
+		"score": 0,
+		"ekar_answer": false,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"wealthy",
+			"poverty alleviation"
+		],
+		"target": [
+			"health",
+			"defend"
+		],
+		"mapping": [],
+		"score": 0,
+		"ekar_answer": false,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"business",
+			"taxation"
+		],
+		"target": [
+			"borrowing books",
+			"returning"
+		],
+		"mapping": [
+			"business --> borrowing books",
+			"taxation --> returning"
+		],
+		"score": 0.218,
+		"ekar_answer": true,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"business",
+			"taxation"
+		],
+		"target": [
+			"rating",
+			"vote"
+		],
+		"mapping": [
+			"business --> rating",
+			"taxation --> vote"
+		],
+		"score": 1.291,
+		"ekar_answer": false,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"business",
+			"taxation"
+		],
+		"target": [
+			"ball game",
+			"sports"
+		],
+		"mapping": [
+			"business --> ball game",
+			"taxation --> sports"
+		],
+		"score": 0.693,
+		"ekar_answer": false,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"business",
+			"taxation"
+		],
+		"target": [
+			"registration",
+			"check in"
+		],
+		"mapping": [
+			"business --> registration",
+			"taxation --> check in"
+		],
+		"score": 0.243,
+		"ekar_answer": false,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"illness",
+			"depression"
+		],
+		"target": [
+			"profit",
+			"quality"
+		],
+		"mapping": [
+			"illness --> profit",
+			"depression --> quality"
+		],
+		"score": 2.076,
+		"ekar_answer": false,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"illness",
+			"depression"
+		],
+		"target": [
+			"cold",
+			"chilly"
+		],
+		"mapping": [
+			"illness --> cold",
+			"depression --> chilly"
+		],
+		"score": 2.143,
+		"ekar_answer": true,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"illness",
+			"depression"
+		],
+		"target": [
+			"calligraphy",
+			"elegant"
+		],
+		"mapping": [
+			"illness --> calligraphy",
+			"depression --> elegant"
+		],
+		"score": 0.528,
+		"ekar_answer": false,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"illness",
+			"depression"
+		],
+		"target": [
+			"infestation",
+			"reduced production"
+		],
+		"mapping": [
+			"illness --> infestation",
+			"depression --> reduced production"
+		],
+		"score": 0.423,
+		"ekar_answer": false,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"youth",
+			"adulthood"
+		],
+		"target": [
+			"boy",
+			"teenager"
+		],
+		"mapping": [
+			"youth --> boy",
+			"adulthood --> teenager"
+		],
+		"score": 1.848,
+		"ekar_answer": false,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"youth",
+			"adulthood"
+		],
+		"target": [
+			"girls",
+			"women"
+		],
+		"mapping": [
+			"youth --> girls",
+			"adulthood --> women"
+		],
+		"score": 2.144,
+		"ekar_answer": true,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"youth",
+			"adulthood"
+		],
+		"target": [
+			"mrs.",
+			"lady"
+		],
+		"mapping": [
+			"youth --> mrs.",
+			"adulthood --> lady"
+		],
+		"score": 0.876,
+		"ekar_answer": false,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"youth",
+			"adulthood"
+		],
+		"target": [
+			"kids",
+			"children"
+		],
+		"mapping": [
+			"youth --> kids",
+			"adulthood --> children"
+		],
+		"score": 1.566,
+		"ekar_answer": false,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"air",
+			"human beings"
+		],
+		"target": [
+			"smog",
+			"storm"
+		],
+		"mapping": [
+			"air --> smog",
+			"human beings --> storm"
+		],
+		"score": 1.207,
+		"ekar_answer": false,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"air",
+			"human beings"
+		],
+		"target": [
+			"freedom",
+			"thought"
+		],
+		"mapping": [
+			"air --> freedom",
+			"human beings --> thought"
+		],
+		"score": 1.942,
+		"ekar_answer": true,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"air",
+			"human beings"
+		],
+		"target": [
+			"bright moon",
+			"human brain"
+		],
+		"mapping": [],
+		"score": 0,
+		"ekar_answer": false,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"air",
+			"human beings"
+		],
+		"target": [
+			"vacuum",
+			"flexible"
+		],
+		"mapping": [],
+		"score": 0,
+		"ekar_answer": false,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"students",
+			"honest"
+		],
+		"target": [
+			"parents",
+			"discipline"
+		],
+		"mapping": [
+			"students --> parents",
+			"honest --> discipline"
+		],
+		"score": 0.505,
+		"ekar_answer": false,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"students",
+			"honest"
+		],
+		"target": [
+			"summer",
+			"hot"
+		],
+		"mapping": [
+			"students --> summer",
+			"honest --> hot"
+		],
+		"score": 0.566,
+		"ekar_answer": false,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"students",
+			"honest"
+		],
+		"target": [
+			"army",
+			"war"
+		],
+		"mapping": [
+			"students --> army",
+			"honest --> war"
+		],
+		"score": 0.682,
+		"ekar_answer": false,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"students",
+			"honest"
+		],
+		"target": [
+			"law",
+			"justice"
+		],
+		"mapping": [
+			"students --> law",
+			"honest --> justice"
+		],
+		"score": 0.834,
+		"ekar_answer": true,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"bird",
+			"egg"
+		],
+		"target": [
+			"fish",
+			"shrimp"
+		],
+		"mapping": [
+			"bird --> fish",
+			"egg --> shrimp"
+		],
+		"score": 2.599,
+		"ekar_answer": false,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"bird",
+			"egg"
+		],
+		"target": [
+			"tree",
+			"seedling"
+		],
+		"mapping": [
+			"bird --> tree",
+			"egg --> seedling"
+		],
+		"score": 2.088,
+		"ekar_answer": false,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"bird",
+			"egg"
+		],
+		"target": [
+			"frog",
+			"egg"
+		],
+		"mapping": [
+			"bird --> frog",
+			"egg --> egg"
+		],
+		"score": 3.662,
+		"ekar_answer": true,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"bird",
+			"egg"
+		],
+		"target": [
+			"sweet",
+			"honey"
+		],
+		"mapping": [
+			"bird --> sweet",
+			"egg --> honey"
+		],
+		"score": 2.57,
+		"ekar_answer": false,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"contract",
+			"signinature"
+		],
+		"target": [
+			"application",
+			"accept"
+		],
+		"mapping": [],
+		"score": 0,
+		"ekar_answer": false,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"contract",
+			"signinature"
+		],
+		"target": [
+			"file",
+			"archive"
+		],
+		"mapping": [],
+		"score": 0.336,
+		"ekar_answer": false,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"contract",
+			"signinature"
+		],
+		"target": [
+			"marriage",
+			"getting married"
+		],
+		"mapping": [],
+		"score": 0,
+		"ekar_answer": false,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"contract",
+			"signinature"
+		],
+		"target": [
+			"graduation certificate",
+			"stamp"
+		],
+		"mapping": [],
+		"score": 0.541,
+		"ekar_answer": true,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"atm",
+			"bank clerk"
+		],
+		"target": [
+			"radio",
+			"announcer"
+		],
+		"mapping": [
+			"atm --> radio",
+			"bank clerk --> announcer"
+		],
+		"score": 0.495,
+		"ekar_answer": false,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"atm",
+			"bank clerk"
+		],
+		"target": [
+			"vending machine",
+			"salesperson"
+		],
+		"mapping": [],
+		"score": 0,
+		"ekar_answer": true,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"atm",
+			"bank clerk"
+		],
+		"target": [
+			"learning machine",
+			"counsellor"
+		],
+		"mapping": [],
+		"score": 0,
+		"ekar_answer": false,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"atm",
+			"bank clerk"
+		],
+		"target": [
+			"card reader",
+			"conductor"
+		],
+		"mapping": [
+			"atm --> card reader",
+			"bank clerk --> conductor"
+		],
+		"score": 0.21,
+		"ekar_answer": false,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"hammer",
+			"nail"
+		],
+		"target": [
+			"mouse",
+			"computer"
+		],
+		"mapping": [
+			"hammer --> mouse",
+			"nail --> computer"
+		],
+		"score": 3.481,
+		"ekar_answer": false,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"hammer",
+			"nail"
+		],
+		"target": [
+			"bowl",
+			"eat"
+		],
+		"mapping": [
+			"hammer --> bowl",
+			"nail --> eat"
+		],
+		"score": 1.387,
+		"ekar_answer": false,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"hammer",
+			"nail"
+		],
+		"target": [
+			"roller",
+			"ground"
+		],
+		"mapping": [
+			"hammer --> roller",
+			"nail --> ground"
+		],
+		"score": 1.694,
+		"ekar_answer": true,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"hammer",
+			"nail"
+		],
+		"target": [
+			"engine",
+			"gasoline"
+		],
+		"mapping": [
+			"hammer --> engine",
+			"nail --> gasoline"
+		],
+		"score": 2.394,
+		"ekar_answer": false,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"thirst",
+			"teacup"
+		],
+		"target": [
+			"hunger",
+			"bread"
+		],
+		"mapping": [
+			"thirst --> hunger",
+			"teacup --> bread"
+		],
+		"score": 0.821,
+		"ekar_answer": false,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"thirst",
+			"teacup"
+		],
+		"target": [
+			"cold",
+			"wardrobe"
+		],
+		"mapping": [
+			"thirst --> cold",
+			"teacup --> wardrobe"
+		],
+		"score": 0.281,
+		"ekar_answer": true,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"thirst",
+			"teacup"
+		],
+		"target": [
+			"missing",
+			"sms"
+		],
+		"mapping": [],
+		"score": 0,
+		"ekar_answer": false,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"thirst",
+			"teacup"
+		],
+		"target": [
+			"poverty",
+			"wealth"
+		],
+		"mapping": [],
+		"score": 0,
+		"ekar_answer": false,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"gasoline",
+			"car"
+		],
+		"target": [
+			"food",
+			"stomach"
+		],
+		"mapping": [
+			"gasoline --> food",
+			"car --> stomach"
+		],
+		"score": 3.552,
+		"ekar_answer": false,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"gasoline",
+			"car"
+		],
+		"target": [
+			"water",
+			"drink"
+		],
+		"mapping": [
+			"gasoline --> water",
+			"car --> drink"
+		],
+		"score": 3.265,
+		"ekar_answer": false,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"gasoline",
+			"car"
+		],
+		"target": [
+			"solar energy",
+			"sun"
+		],
+		"mapping": [
+			"gasoline --> solar energy",
+			"car --> sun"
+		],
+		"score": 2.687,
+		"ekar_answer": false,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"gasoline",
+			"car"
+		],
+		"target": [
+			"wind",
+			"kite"
+		],
+		"mapping": [
+			"gasoline --> wind",
+			"car --> kite"
+		],
+		"score": 3.703,
+		"ekar_answer": true,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"insomnia",
+			"drowsiness"
+		],
+		"target": [
+			"hunger",
+			"appetite"
+		],
+		"mapping": [],
+		"score": 0,
+		"ekar_answer": false,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"insomnia",
+			"drowsiness"
+		],
+		"target": [
+			"nutrition",
+			"dry"
+		],
+		"mapping": [
+			"insomnia --> nutrition",
+			"drowsiness --> dry"
+		],
+		"score": 0.548,
+		"ekar_answer": false,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"insomnia",
+			"drowsiness"
+		],
+		"target": [
+			"asphyxiation",
+			"oxygen"
+		],
+		"mapping": [
+			"insomnia --> asphyxiation",
+			"drowsiness --> oxygen"
+		],
+		"score": 0.288,
+		"ekar_answer": true,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"insomnia",
+			"drowsiness"
+		],
+		"target": [
+			"numbness",
+			"sadness"
+		],
+		"mapping": [],
+		"score": 0,
+		"ekar_answer": false,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"pilot",
+			"airplane"
+		],
+		"target": [
+			"teacher",
+			"classroom"
+		],
+		"mapping": [
+			"pilot --> teacher",
+			"airplane --> classroom"
+		],
+		"score": 3.144,
+		"ekar_answer": true,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"pilot",
+			"airplane"
+		],
+		"target": [
+			"navy",
+			"sea"
+		],
+		"mapping": [
+			"pilot --> navy",
+			"airplane --> sea"
+		],
+		"score": 2.461,
+		"ekar_answer": false,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"pilot",
+			"airplane"
+		],
+		"target": [
+			"wife",
+			"family"
+		],
+		"mapping": [
+			"pilot --> wife",
+			"airplane --> family"
+		],
+		"score": 2.525,
+		"ekar_answer": false,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"pilot",
+			"airplane"
+		],
+		"target": [
+			"emperor",
+			"imperial palace"
+		],
+		"mapping": [
+			"pilot --> emperor",
+			"airplane --> imperial palace"
+		],
+		"score": 0.729,
+		"ekar_answer": false,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"butterfly",
+			"cricket"
+		],
+		"target": [
+			"mulberries",
+			"flowers"
+		],
+		"mapping": [],
+		"score": 0,
+		"ekar_answer": false,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"butterfly",
+			"cricket"
+		],
+		"target": [
+			"begonia",
+			"sea cucumber"
+		],
+		"mapping": [],
+		"score": 0,
+		"ekar_answer": false,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"butterfly",
+			"cricket"
+		],
+		"target": [
+			"parrot",
+			"seagull"
+		],
+		"mapping": [],
+		"score": 0,
+		"ekar_answer": true,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"butterfly",
+			"cricket"
+		],
+		"target": [
+			"star",
+			"sun"
+		],
+		"mapping": [],
+		"score": 0,
+		"ekar_answer": false,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"swan",
+			"plastic"
+		],
+		"target": [
+			"dubai",
+			"tokyo"
+		],
+		"mapping": [],
+		"score": 0,
+		"ekar_answer": false,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"swan",
+			"plastic"
+		],
+		"target": [
+			"coral",
+			"seaweed"
+		],
+		"mapping": [
+			"swan --> coral",
+			"plastic --> seaweed"
+		],
+		"score": 1.0,
+		"ekar_answer": false,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"swan",
+			"plastic"
+		],
+		"target": [
+			"lynx",
+			"fox"
+		],
+		"mapping": [],
+		"score": 0,
+		"ekar_answer": false,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"swan",
+			"plastic"
+		],
+		"target": [
+			"watermelon",
+			"glass"
+		],
+		"mapping": [],
+		"score": 0,
+		"ekar_answer": true,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"word",
+			"express"
+		],
+		"target": [
+			"kangxi",
+			"qianlong"
+		],
+		"mapping": [],
+		"score": 0,
+		"ekar_answer": false,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"word",
+			"express"
+		],
+		"target": [
+			"ambition",
+			"leadership"
+		],
+		"mapping": [
+			"word --> ambition",
+			"express --> leadership"
+		],
+		"score": 0.68,
+		"ekar_answer": false,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"word",
+			"express"
+		],
+		"target": [
+			"argumentative paper",
+			"argumentation"
+		],
+		"mapping": [
+			"word --> argumentative paper",
+			"express --> argumentation"
+		],
+		"score": 0.475,
+		"ekar_answer": true,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"word",
+			"express"
+		],
+		"target": [
+			"organization",
+			"civil servants"
+		],
+		"mapping": [
+			"word --> organization",
+			"express --> civil servants"
+		],
+		"score": 0.217,
+		"ekar_answer": false,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"dilemma",
+			"facing"
+		],
+		"target": [
+			"problem",
+			"solve"
+		],
+		"mapping": [],
+		"score": 0,
+		"ekar_answer": true,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"dilemma",
+			"facing"
+		],
+		"target": [
+			"life",
+			"believe"
+		],
+		"mapping": [
+			"dilemma --> life",
+			"facing --> believe"
+		],
+		"score": 0.218,
+		"ekar_answer": false,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"dilemma",
+			"facing"
+		],
+		"target": [
+			"climbing",
+			"mountain peak"
+		],
+		"mapping": [],
+		"score": 0,
+		"ekar_answer": false,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"dilemma",
+			"facing"
+		],
+		"target": [
+			"society",
+			"harmony"
+		],
+		"mapping": [
+			"dilemma --> society",
+			"facing --> harmony"
+		],
+		"score": 0.28,
+		"ekar_answer": false,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"chopping knife",
+			"food"
+		],
+		"target": [
+			"bullets",
+			"guns"
+		],
+		"mapping": [
+			"chopping knife --> bullets",
+			"food --> guns"
+		],
+		"score": 0.248,
+		"ekar_answer": false,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"chopping knife",
+			"food"
+		],
+		"target": [
+			"towel",
+			"body"
+		],
+		"mapping": [
+			"chopping knife --> towel",
+			"food --> body"
+		],
+		"score": 0.601,
+		"ekar_answer": true,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"chopping knife",
+			"food"
+		],
+		"target": [
+			"pencils",
+			"books"
+		],
+		"mapping": [],
+		"score": 0,
+		"ekar_answer": false,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"chopping knife",
+			"food"
+		],
+		"target": [
+			"curtains",
+			"windows"
+		],
+		"mapping": [
+			"chopping knife --> curtains",
+			"food --> windows"
+		],
+		"score": 0.235,
+		"ekar_answer": false,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"book",
+			"paper"
+		],
+		"target": [
+			"pen",
+			"paper"
+		],
+		"mapping": [
+			"book --> pen",
+			"paper --> paper"
+		],
+		"score": 3.124,
+		"ekar_answer": false,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"book",
+			"paper"
+		],
+		"target": [
+			"stationery",
+			"pencil-box"
+		],
+		"mapping": [
+			"book --> stationery",
+			"paper --> pencil-box"
+		],
+		"score": 1.085,
+		"ekar_answer": false,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"book",
+			"paper"
+		],
+		"target": [
+			"dishes",
+			"radish"
+		],
+		"mapping": [
+			"book --> dishes",
+			"paper --> radish"
+		],
+		"score": 1.133,
+		"ekar_answer": true,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"book",
+			"paper"
+		],
+		"target": [
+			"aircraft",
+			"cannon"
+		],
+		"mapping": [
+			"book --> aircraft",
+			"paper --> cannon"
+		],
+		"score": 2.189,
+		"ekar_answer": false,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"volcano",
+			"lava"
+		],
+		"target": [
+			"wheat",
+			"bread"
+		],
+		"mapping": [
+			"volcano --> wheat",
+			"lava --> bread"
+		],
+		"score": 3.281,
+		"ekar_answer": false,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"volcano",
+			"lava"
+		],
+		"target": [
+			"automobile",
+			"exhaust"
+		],
+		"mapping": [
+			"volcano --> automobile",
+			"lava --> exhaust"
+		],
+		"score": 1.391,
+		"ekar_answer": true,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"volcano",
+			"lava"
+		],
+		"target": [
+			"ocean",
+			"island"
+		],
+		"mapping": [
+			"volcano --> ocean",
+			"lava --> island"
+		],
+		"score": 3.249,
+		"ekar_answer": false,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"volcano",
+			"lava"
+		],
+		"target": [
+			"groundwater",
+			"fountain"
+		],
+		"mapping": [
+			"volcano --> groundwater",
+			"lava --> fountain"
+		],
+		"score": 0.207,
+		"ekar_answer": false,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"man",
+			"athlete"
+		],
+		"target": [
+			"soldier",
+			"police"
+		],
+		"mapping": [
+			"man --> soldier",
+			"athlete --> police"
+		],
+		"score": 1.137,
+		"ekar_answer": false,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"man",
+			"athlete"
+		],
+		"target": [
+			"businessman",
+			"father"
+		],
+		"mapping": [
+			"man --> businessman",
+			"athlete --> father"
+		],
+		"score": 1.0,
+		"ekar_answer": true,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"man",
+			"athlete"
+		],
+		"target": [
+			"student",
+			"college student"
+		],
+		"mapping": [
+			"man --> student",
+			"athlete --> college student"
+		],
+		"score": 2.333,
+		"ekar_answer": false,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"man",
+			"athlete"
+		],
+		"target": [
+			"woman",
+			"miss manners"
+		],
+		"mapping": [
+			"man --> woman",
+			"athlete --> miss manners"
+		],
+		"score": 1.0,
+		"ekar_answer": false,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"denominator",
+			"divisor"
+		],
+		"target": [
+			"inside corner",
+			"outside corner"
+		],
+		"mapping": [],
+		"score": 0,
+		"ekar_answer": false,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"denominator",
+			"divisor"
+		],
+		"target": [
+			"addition and subtraction",
+			"multiplication and division"
+		],
+		"mapping": [
+			"denominator --> addition and subtraction",
+			"divisor --> multiplication and division"
+		],
+		"score": 0.627,
+		"ekar_answer": false,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"denominator",
+			"divisor"
+		],
+		"target": [
+			"abscissa",
+			"ordinate"
+		],
+		"mapping": [
+			"denominator --> abscissa",
+			"divisor --> ordinate"
+		],
+		"score": 0.566,
+		"ekar_answer": false,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"denominator",
+			"divisor"
+		],
+		"target": [
+			"percent",
+			"percentage"
+		],
+		"mapping": [
+			"denominator --> percent",
+			"divisor --> percentage"
+		],
+		"score": 1.329,
+		"ekar_answer": true,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"pen",
+			"ink"
+		],
+		"target": [
+			"toothbrush",
+			"toothpaste"
+		],
+		"mapping": [
+			"pen --> toothbrush",
+			"ink --> toothpaste"
+		],
+		"score": 2.577,
+		"ekar_answer": true,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"pen",
+			"ink"
+		],
+		"target": [
+			"mobile phone",
+			"computer"
+		],
+		"mapping": [
+			"pen --> mobile phone",
+			"ink --> computer"
+		],
+		"score": 2.359,
+		"ekar_answer": false,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"pen",
+			"ink"
+		],
+		"target": [
+			"dictionary",
+			"newspaper"
+		],
+		"mapping": [
+			"pen --> dictionary",
+			"ink --> newspaper"
+		],
+		"score": 0.71,
+		"ekar_answer": false,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"pen",
+			"ink"
+		],
+		"target": [
+			"mural",
+			"table lamp"
+		],
+		"mapping": [
+			"pen --> mural",
+			"ink --> table lamp"
+		],
+		"score": 0.419,
+		"ekar_answer": false,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"plant",
+			"flower"
+		],
+		"target": [
+			"automobile",
+			"vehicle"
+		],
+		"mapping": [
+			"plant --> automobile",
+			"flower --> vehicle"
+		],
+		"score": 2.537,
+		"ekar_answer": false,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"plant",
+			"flower"
+		],
+		"target": [
+			"population",
+			"people"
+		],
+		"mapping": [
+			"plant --> population",
+			"flower --> people"
+		],
+		"score": 3.208,
+		"ekar_answer": false,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"plant",
+			"flower"
+		],
+		"target": [
+			"mountain peak",
+			"mountain"
+		],
+		"mapping": [
+			"plant --> mountain peak",
+			"flower --> mountain"
+		],
+		"score": 1.196,
+		"ekar_answer": false,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"plant",
+			"flower"
+		],
+		"target": [
+			"grain",
+			"rice"
+		],
+		"mapping": [
+			"plant --> grain",
+			"flower --> rice"
+		],
+		"score": 3.387,
+		"ekar_answer": true,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"yangtze river",
+			"china"
+		],
+		"target": [
+			"nile",
+			"africa"
+		],
+		"mapping": [
+			"yangtze river --> nile",
+			"china --> africa"
+		],
+		"score": 2.422,
+		"ekar_answer": false,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"yangtze river",
+			"china"
+		],
+		"target": [
+			"mississippi river",
+			"united states"
+		],
+		"mapping": [
+			"yangtze river --> mississippi river",
+			"china --> united states"
+		],
+		"score": 3.318,
+		"ekar_answer": false,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"yangtze river",
+			"china"
+		],
+		"target": [
+			"volga",
+			"russia"
+		],
+		"mapping": [
+			"yangtze river --> volga",
+			"china --> russia"
+		],
+		"score": 0.796,
+		"ekar_answer": true,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"yangtze river",
+			"china"
+		],
+		"target": [
+			"panama canal",
+			"panama"
+		],
+		"mapping": [
+			"yangtze river --> panama canal",
+			"china --> panama"
+		],
+		"score": 2.898,
+		"ekar_answer": false,
+		"clean_nouns": null
+	}
+]

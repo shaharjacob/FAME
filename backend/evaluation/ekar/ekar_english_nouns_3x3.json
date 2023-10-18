@@ -1,0 +1,2522 @@
+[
+	{
+		"base": [
+			"white pigeon",
+			"female pigeon",
+			"pigeon"
+		],
+		"target": [
+			"persimmon",
+			"sweet cake",
+			"cake"
+		],
+		"depth": {
+			"beam": 20,
+			"dfs": 4
+		},
+		"ekar_answer": false,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"white pigeon",
+			"female pigeon",
+			"pigeon"
+		],
+		"target": [
+			"peach blossom",
+			"pear blossom",
+			"flower"
+		],
+		"depth": {
+			"beam": 20,
+			"dfs": 4
+		},
+		"ekar_answer": false,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"white pigeon",
+			"female pigeon",
+			"pigeon"
+		],
+		"target": [
+			"retail",
+			"online sales",
+			"buy"
+		],
+		"depth": {
+			"beam": 20,
+			"dfs": 4
+		},
+		"ekar_answer": false,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"white pigeon",
+			"female pigeon",
+			"pigeon"
+		],
+		"target": [
+			"bucket",
+			"iron bucket",
+			"bucket"
+		],
+		"depth": {
+			"beam": 20,
+			"dfs": 4
+		},
+		"ekar_answer": true,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"soldier",
+			"doctor",
+			"military doctor"
+		],
+		"target": [
+			"driver",
+			"police",
+			"traffic police"
+		],
+		"depth": {
+			"beam": 20,
+			"dfs": 4
+		},
+		"ekar_answer": false,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"soldier",
+			"doctor",
+			"military doctor"
+		],
+		"target": [
+			"dance",
+			"rap",
+			"errenzhuan"
+		],
+		"depth": {
+			"beam": 20,
+			"dfs": 4
+		},
+		"ekar_answer": false,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"soldier",
+			"doctor",
+			"military doctor"
+		],
+		"target": [
+			"subject",
+			"research",
+			"scientific research"
+		],
+		"depth": {
+			"beam": 20,
+			"dfs": 4
+		},
+		"ekar_answer": false,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"soldier",
+			"doctor",
+			"military doctor"
+		],
+		"target": [
+			"car",
+			"electric vehicle",
+			"electric car"
+		],
+		"depth": {
+			"beam": 20,
+			"dfs": 4
+		},
+		"ekar_answer": true,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"cultural relics",
+			"unearthed",
+			"identification"
+		],
+		"target": [
+			"oolong tea",
+			"package",
+			"sales"
+		],
+		"depth": {
+			"beam": 20,
+			"dfs": 4
+		},
+		"ekar_answer": true,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"cultural relics",
+			"unearthed",
+			"identification"
+		],
+		"target": [
+			"projector",
+			"toggle",
+			"play"
+		],
+		"depth": {
+			"beam": 20,
+			"dfs": 4
+		},
+		"ekar_answer": false,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"cultural relics",
+			"unearthed",
+			"identification"
+		],
+		"target": [
+			"thermometer",
+			"display",
+			"measure"
+		],
+		"depth": {
+			"beam": 20,
+			"dfs": 4
+		},
+		"ekar_answer": false,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"cultural relics",
+			"unearthed",
+			"identification"
+		],
+		"target": [
+			"parachute",
+			"acceleration",
+			"landing"
+		],
+		"depth": {
+			"beam": 20,
+			"dfs": 4
+		},
+		"ekar_answer": false,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"potatoes",
+			"crisps",
+			"starch"
+		],
+		"target": [
+			"milk",
+			"milk powder",
+			"protein"
+		],
+		"depth": {
+			"beam": 20,
+			"dfs": 4
+		},
+		"ekar_answer": true,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"potatoes",
+			"crisps",
+			"starch"
+		],
+		"target": [
+			"sorghum",
+			"liquor",
+			"alcohol"
+		],
+		"depth": {
+			"beam": 20,
+			"dfs": 4
+		},
+		"ekar_answer": false,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"potatoes",
+			"crisps",
+			"starch"
+		],
+		"target": [
+			"cotton",
+			"towel",
+			"cotton thread"
+		],
+		"depth": {
+			"beam": 20,
+			"dfs": 4
+		},
+		"ekar_answer": false,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"potatoes",
+			"crisps",
+			"starch"
+		],
+		"target": [
+			"petroleum",
+			"gasoline",
+			"kerosene"
+		],
+		"depth": {
+			"beam": 20,
+			"dfs": 4
+		},
+		"ekar_answer": false,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"paper",
+			"book",
+			"knowledge"
+		],
+		"target": [
+			"sweater",
+			"clothes",
+			"warm"
+		],
+		"depth": {
+			"beam": 20,
+			"dfs": 4
+		},
+		"ekar_answer": false,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"paper",
+			"book",
+			"knowledge"
+		],
+		"target": [
+			"screw",
+			"gear",
+			"tool"
+		],
+		"depth": {
+			"beam": 20,
+			"dfs": 4
+		},
+		"ekar_answer": false,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"paper",
+			"book",
+			"knowledge"
+		],
+		"target": [
+			"droplets",
+			"ocean",
+			"resources"
+		],
+		"depth": {
+			"beam": 20,
+			"dfs": 4
+		},
+		"ekar_answer": true,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"paper",
+			"book",
+			"knowledge"
+		],
+		"target": [
+			"computer",
+			"network card",
+			"information"
+		],
+		"depth": {
+			"beam": 20,
+			"dfs": 4
+		},
+		"ekar_answer": false,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"tactics",
+			"war",
+			"victory or defeat"
+		],
+		"target": [
+			"blood type",
+			"race",
+			"fat and thin"
+		],
+		"depth": {
+			"beam": 20,
+			"dfs": 4
+		},
+		"ekar_answer": false,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"tactics",
+			"war",
+			"victory or defeat"
+		],
+		"target": [
+			"complaint",
+			"case",
+			"win or lose"
+		],
+		"depth": {
+			"beam": 20,
+			"dfs": 4
+		},
+		"ekar_answer": false,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"tactics",
+			"war",
+			"victory or defeat"
+		],
+		"target": [
+			"strategy",
+			"campaign",
+			"success or failure"
+		],
+		"depth": {
+			"beam": 20,
+			"dfs": 4
+		},
+		"ekar_answer": true,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"tactics",
+			"war",
+			"victory or defeat"
+		],
+		"target": [
+			"experience",
+			"ability",
+			"high and low"
+		],
+		"depth": {
+			"beam": 20,
+			"dfs": 4
+		},
+		"ekar_answer": false,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"yellow",
+			"red",
+			"white"
+		],
+		"target": [
+			"sad",
+			"happy",
+			"angry"
+		],
+		"depth": {
+			"beam": 20,
+			"dfs": 4
+		},
+		"ekar_answer": true,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"yellow",
+			"red",
+			"white"
+		],
+		"target": [
+			"female doctor",
+			"male doctor",
+			"doctor"
+		],
+		"depth": {
+			"beam": 20,
+			"dfs": 4
+		},
+		"ekar_answer": false,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"yellow",
+			"red",
+			"white"
+		],
+		"target": [
+			"science",
+			"non-science",
+			"pseudo-science"
+		],
+		"depth": {
+			"beam": 20,
+			"dfs": 4
+		},
+		"ekar_answer": false,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"yellow",
+			"red",
+			"white"
+		],
+		"target": [
+			"left hand",
+			"right hand",
+			"raise hand"
+		],
+		"depth": {
+			"beam": 20,
+			"dfs": 4
+		},
+		"ekar_answer": false,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"probability",
+			"possibility",
+			"logic"
+		],
+		"target": [
+			"siamese",
+			"twin",
+			"biology"
+		],
+		"depth": {
+			"beam": 20,
+			"dfs": 4
+		},
+		"ekar_answer": true,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"probability",
+			"possibility",
+			"logic"
+		],
+		"target": [
+			"reporting",
+			"coverage",
+			"physics"
+		],
+		"depth": {
+			"beam": 20,
+			"dfs": 4
+		},
+		"ekar_answer": false,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"probability",
+			"possibility",
+			"logic"
+		],
+		"target": [
+			"rejection",
+			"acceptance",
+			"sociology"
+		],
+		"depth": {
+			"beam": 20,
+			"dfs": 4
+		},
+		"ekar_answer": false,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"probability",
+			"possibility",
+			"logic"
+		],
+		"target": [
+			"exhibition",
+			"strategy",
+			"economics"
+		],
+		"depth": {
+			"beam": 20,
+			"dfs": 4
+		},
+		"ekar_answer": false,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"electric vehicle",
+			"motorcycle",
+			"ambulance"
+		],
+		"target": [
+			"table tennis",
+			"bowling",
+			"badminton"
+		],
+		"depth": {
+			"beam": 20,
+			"dfs": 4
+		},
+		"ekar_answer": false,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"electric vehicle",
+			"motorcycle",
+			"ambulance"
+		],
+		"target": [
+			"wine",
+			"champagne",
+			"health wine"
+		],
+		"depth": {
+			"beam": 20,
+			"dfs": 4
+		},
+		"ekar_answer": true,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"electric vehicle",
+			"motorcycle",
+			"ambulance"
+		],
+		"target": [
+			"velvet",
+			"cleaning velvet",
+			"flannel"
+		],
+		"depth": {
+			"beam": 20,
+			"dfs": 4
+		},
+		"ekar_answer": false,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"electric vehicle",
+			"motorcycle",
+			"ambulance"
+		],
+		"target": [
+			"fraternity department",
+			"club",
+			"literature department"
+		],
+		"depth": {
+			"beam": 20,
+			"dfs": 4
+		},
+		"ekar_answer": false,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"archaeology",
+			"cultural relics",
+			"museums"
+		],
+		"target": [
+			"training",
+			"employee",
+			"society"
+		],
+		"depth": {
+			"beam": 20,
+			"dfs": 4
+		},
+		"ekar_answer": false,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"archaeology",
+			"cultural relics",
+			"museums"
+		],
+		"target": [
+			"cultivation",
+			"crop",
+			"land"
+		],
+		"depth": {
+			"beam": 20,
+			"dfs": 4
+		},
+		"ekar_answer": false,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"archaeology",
+			"cultural relics",
+			"museums"
+		],
+		"target": [
+			"trade",
+			"commodity",
+			"factory"
+		],
+		"depth": {
+			"beam": 20,
+			"dfs": 4
+		},
+		"ekar_answer": false,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"archaeology",
+			"cultural relics",
+			"museums"
+		],
+		"target": [
+			"education",
+			"talent",
+			"enterprise"
+		],
+		"depth": {
+			"beam": 20,
+			"dfs": 4
+		},
+		"ekar_answer": true,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"textbook",
+			"student",
+			"classroom"
+		],
+		"target": [
+			"coach",
+			"athlete",
+			"field"
+		],
+		"depth": {
+			"beam": 20,
+			"dfs": 4
+		},
+		"ekar_answer": false,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"textbook",
+			"student",
+			"classroom"
+		],
+		"target": [
+			"law",
+			"judge",
+			"court"
+		],
+		"depth": {
+			"beam": 20,
+			"dfs": 4
+		},
+		"ekar_answer": false,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"textbook",
+			"student",
+			"classroom"
+		],
+		"target": [
+			"cassock",
+			"monk",
+			"monastery"
+		],
+		"depth": {
+			"beam": 20,
+			"dfs": 4
+		},
+		"ekar_answer": false,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"textbook",
+			"student",
+			"classroom"
+		],
+		"target": [
+			"weapon",
+			"soldier",
+			"battlefield"
+		],
+		"depth": {
+			"beam": 20,
+			"dfs": 4
+		},
+		"ekar_answer": true,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"electric car",
+			"electric vehicle",
+			"car"
+		],
+		"target": [
+			"space shuttle",
+			"spaceship",
+			"aircraft"
+		],
+		"depth": {
+			"beam": 20,
+			"dfs": 4
+		},
+		"ekar_answer": false,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"electric car",
+			"electric vehicle",
+			"car"
+		],
+		"target": [
+			"medic",
+			"doctor",
+			"soldier"
+		],
+		"depth": {
+			"beam": 20,
+			"dfs": 4
+		},
+		"ekar_answer": true,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"electric car",
+			"electric vehicle",
+			"car"
+		],
+		"target": [
+			"graduate student",
+			"research",
+			"student"
+		],
+		"depth": {
+			"beam": 20,
+			"dfs": 4
+		},
+		"ekar_answer": false,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"electric car",
+			"electric vehicle",
+			"car"
+		],
+		"target": [
+			"judge",
+			"law",
+			"official"
+		],
+		"depth": {
+			"beam": 20,
+			"dfs": 4
+		},
+		"ekar_answer": false,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"wood",
+			"paper",
+			"book"
+		],
+		"target": [
+			"sorghum",
+			"wheat",
+			"automobile"
+		],
+		"depth": {
+			"beam": 20,
+			"dfs": 4
+		},
+		"ekar_answer": false,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"wood",
+			"paper",
+			"book"
+		],
+		"target": [
+			"steel",
+			"bridge",
+			"railroad"
+		],
+		"depth": {
+			"beam": 20,
+			"dfs": 4
+		},
+		"ekar_answer": false,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"wood",
+			"paper",
+			"book"
+		],
+		"target": [
+			"wheat",
+			"flour",
+			"bread"
+		],
+		"depth": {
+			"beam": 20,
+			"dfs": 4
+		},
+		"ekar_answer": true,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"wood",
+			"paper",
+			"book"
+		],
+		"target": [
+			"paddy",
+			"rice",
+			"subsistence"
+		],
+		"depth": {
+			"beam": 20,
+			"dfs": 4
+		},
+		"ekar_answer": false,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"music",
+			"rock",
+			"entertainment"
+		],
+		"target": [
+			"social contact",
+			"wechat",
+			"immediacy"
+		],
+		"depth": {
+			"beam": 20,
+			"dfs": 4
+		},
+		"ekar_answer": true,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"music",
+			"rock",
+			"entertainment"
+		],
+		"target": [
+			"news",
+			"review",
+			"objectivity"
+		],
+		"depth": {
+			"beam": 20,
+			"dfs": 4
+		},
+		"ekar_answer": false,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"music",
+			"rock",
+			"entertainment"
+		],
+		"target": [
+			"hospital",
+			"doctor",
+			"authoritativeness"
+		],
+		"depth": {
+			"beam": 20,
+			"dfs": 4
+		},
+		"ekar_answer": false,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"music",
+			"rock",
+			"entertainment"
+		],
+		"target": [
+			"driver",
+			"driving",
+			"reliability"
+		],
+		"depth": {
+			"beam": 20,
+			"dfs": 4
+		},
+		"ekar_answer": false,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"einstein",
+			"physics",
+			"theory of relativity"
+		],
+		"target": [
+			"darwin",
+			"theory of evolution",
+			"biology"
+		],
+		"depth": {
+			"beam": 20,
+			"dfs": 4
+		},
+		"ekar_answer": false,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"einstein",
+			"physics",
+			"theory of relativity"
+		],
+		"target": [
+			"hume",
+			"philosophy",
+			"agnosticism"
+		],
+		"depth": {
+			"beam": 20,
+			"dfs": 4
+		},
+		"ekar_answer": true,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"einstein",
+			"physics",
+			"theory of relativity"
+		],
+		"target": [
+			"separation of five powers",
+			"politics",
+			"sun yat-sen"
+		],
+		"depth": {
+			"beam": 20,
+			"dfs": 4
+		},
+		"ekar_answer": false,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"einstein",
+			"physics",
+			"theory of relativity"
+		],
+		"target": [
+			"americans",
+			"science of administration",
+			"wilson"
+		],
+		"depth": {
+			"beam": 20,
+			"dfs": 4
+		},
+		"ekar_answer": false,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"radio",
+			"tv",
+			"newspaper"
+		],
+		"target": [
+			"wei qing",
+			"huo qubing",
+			"the han dynasty"
+		],
+		"depth": {
+			"beam": 20,
+			"dfs": 4
+		},
+		"ekar_answer": false,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"radio",
+			"tv",
+			"newspaper"
+		],
+		"target": [
+			"steamed",
+			"braised",
+			"deep-fried"
+		],
+		"depth": {
+			"beam": 20,
+			"dfs": 4
+		},
+		"ekar_answer": true,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"radio",
+			"tv",
+			"newspaper"
+		],
+		"target": [
+			"stocks",
+			"funds",
+			"paper"
+		],
+		"depth": {
+			"beam": 20,
+			"dfs": 4
+		},
+		"ekar_answer": false,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"radio",
+			"tv",
+			"newspaper"
+		],
+		"target": [
+			"star",
+			"comet",
+			"halley"
+		],
+		"depth": {
+			"beam": 20,
+			"dfs": 4
+		},
+		"ekar_answer": false,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"hong kong",
+			"macau",
+			"hong kong and macau"
+		],
+		"target": [
+			"guangdong",
+			"guangxi",
+			"guangdong and guangxi"
+		],
+		"depth": {
+			"beam": 20,
+			"dfs": 4
+		},
+		"ekar_answer": true,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"hong kong",
+			"macau",
+			"hong kong and macau"
+		],
+		"target": [
+			"ocean",
+			"island",
+			"sea island"
+		],
+		"depth": {
+			"beam": 20,
+			"dfs": 4
+		},
+		"ekar_answer": false,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"hong kong",
+			"macau",
+			"hong kong and macau"
+		],
+		"target": [
+			"shanghai",
+			"nanjing",
+			"shanghai-nanjing expressway"
+		],
+		"depth": {
+			"beam": 20,
+			"dfs": 4
+		},
+		"ekar_answer": false,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"hong kong",
+			"macau",
+			"hong kong and macau"
+		],
+		"target": [
+			"technology",
+			"ethics",
+			"science and technology ethics"
+		],
+		"depth": {
+			"beam": 20,
+			"dfs": 4
+		},
+		"ekar_answer": false,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"zhejiang",
+			"hainan",
+			"china"
+		],
+		"target": [
+			"new york",
+			"tokyo",
+			"united states"
+		],
+		"depth": {
+			"beam": 20,
+			"dfs": 4
+		},
+		"ekar_answer": false,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"zhejiang",
+			"hainan",
+			"china"
+		],
+		"target": [
+			"china",
+			"singapore",
+			"asia"
+		],
+		"depth": {
+			"beam": 20,
+			"dfs": 4
+		},
+		"ekar_answer": true,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"zhejiang",
+			"hainan",
+			"china"
+		],
+		"target": [
+			"rainbow",
+			"rosy cloud",
+			"phenomenon"
+		],
+		"depth": {
+			"beam": 20,
+			"dfs": 4
+		},
+		"ekar_answer": false,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"zhejiang",
+			"hainan",
+			"china"
+		],
+		"target": [
+			"united kingdom",
+			"canada",
+			"americas"
+		],
+		"depth": {
+			"beam": 20,
+			"dfs": 4
+		},
+		"ekar_answer": false,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"power",
+			"supervision",
+			"corruption"
+		],
+		"target": [
+			"driving",
+			"drinking",
+			"accidents"
+		],
+		"depth": {
+			"beam": 20,
+			"dfs": 4
+		},
+		"ekar_answer": false,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"power",
+			"supervision",
+			"corruption"
+		],
+		"target": [
+			"ideal",
+			"action",
+			"daydream"
+		],
+		"depth": {
+			"beam": 20,
+			"dfs": 4
+		},
+		"ekar_answer": true,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"power",
+			"supervision",
+			"corruption"
+		],
+		"target": [
+			"public opinion",
+			"guidance",
+			"harmony"
+		],
+		"depth": {
+			"beam": 20,
+			"dfs": 4
+		},
+		"ekar_answer": false,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"power",
+			"supervision",
+			"corruption"
+		],
+		"target": [
+			"disaster",
+			"rescue",
+			"recovery"
+		],
+		"depth": {
+			"beam": 20,
+			"dfs": 4
+		},
+		"ekar_answer": false,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"baiyangdian",
+			"fishing boat",
+			"scull"
+		],
+		"target": [
+			"library",
+			"books",
+			"title page"
+		],
+		"depth": {
+			"beam": 20,
+			"dfs": 4
+		},
+		"ekar_answer": true,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"baiyangdian",
+			"fishing boat",
+			"scull"
+		],
+		"target": [
+			"company",
+			"general manager",
+			"manage"
+		],
+		"depth": {
+			"beam": 20,
+			"dfs": 4
+		},
+		"ekar_answer": false,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"baiyangdian",
+			"fishing boat",
+			"scull"
+		],
+		"target": [
+			"hengshui lake",
+			"water",
+			"reed"
+		],
+		"depth": {
+			"beam": 20,
+			"dfs": 4
+		},
+		"ekar_answer": false,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"baiyangdian",
+			"fishing boat",
+			"scull"
+		],
+		"target": [
+			"security",
+			"police",
+			"police uniforms"
+		],
+		"depth": {
+			"beam": 20,
+			"dfs": 4
+		},
+		"ekar_answer": false,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"energy",
+			"nuclear energy",
+			"nuclear weapon"
+		],
+		"target": [
+			"material",
+			"wood",
+			"furniture"
+		],
+		"depth": {
+			"beam": 20,
+			"dfs": 4
+		},
+		"ekar_answer": true,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"energy",
+			"nuclear energy",
+			"nuclear weapon"
+		],
+		"target": [
+			"sports",
+			"swimming",
+			"swimsuit"
+		],
+		"depth": {
+			"beam": 20,
+			"dfs": 4
+		},
+		"ekar_answer": false,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"energy",
+			"nuclear energy",
+			"nuclear weapon"
+		],
+		"target": [
+			"network",
+			"website",
+			"netizen"
+		],
+		"depth": {
+			"beam": 20,
+			"dfs": 4
+		},
+		"ekar_answer": false,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"energy",
+			"nuclear energy",
+			"nuclear weapon"
+		],
+		"target": [
+			"phone",
+			"timer",
+			"alarm clock"
+		],
+		"depth": {
+			"beam": 20,
+			"dfs": 4
+		},
+		"ekar_answer": false,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"flour",
+			"egg",
+			"cake"
+		],
+		"target": [
+			"banana",
+			"watermelon",
+			"fruit"
+		],
+		"depth": {
+			"beam": 20,
+			"dfs": 4
+		},
+		"ekar_answer": false,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"flour",
+			"egg",
+			"cake"
+		],
+		"target": [
+			"paper",
+			"printer",
+			"file"
+		],
+		"depth": {
+			"beam": 20,
+			"dfs": 4
+		},
+		"ekar_answer": false,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"flour",
+			"egg",
+			"cake"
+		],
+		"target": [
+			"chrysanthemum",
+			"cornel",
+			"chongyang festival"
+		],
+		"depth": {
+			"beam": 20,
+			"dfs": 4
+		},
+		"ekar_answer": false,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"flour",
+			"egg",
+			"cake"
+		],
+		"target": [
+			"cement",
+			"rebar",
+			"house"
+		],
+		"depth": {
+			"beam": 20,
+			"dfs": 4
+		},
+		"ekar_answer": true,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"geography",
+			"physical geography",
+			"economic geography"
+		],
+		"target": [
+			"city",
+			"residential area",
+			"commercial area"
+		],
+		"depth": {
+			"beam": 20,
+			"dfs": 4
+		},
+		"ekar_answer": false,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"geography",
+			"physical geography",
+			"economic geography"
+		],
+		"target": [
+			"satellite",
+			"remote sensing",
+			"radar"
+		],
+		"depth": {
+			"beam": 20,
+			"dfs": 4
+		},
+		"ekar_answer": false,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"geography",
+			"physical geography",
+			"economic geography"
+		],
+		"target": [
+			"candy",
+			"fruit candy",
+			"sesame candy"
+		],
+		"depth": {
+			"beam": 20,
+			"dfs": 4
+		},
+		"ekar_answer": true,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"geography",
+			"physical geography",
+			"economic geography"
+		],
+		"target": [
+			"unit",
+			"kilometer",
+			"km"
+		],
+		"depth": {
+			"beam": 20,
+			"dfs": 4
+		},
+		"ekar_answer": false,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"art dealer",
+			"broker",
+			"commission"
+		],
+		"target": [
+			"shareholder",
+			"investor",
+			"dividend"
+		],
+		"depth": {
+			"beam": 20,
+			"dfs": 4
+		},
+		"ekar_answer": false,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"art dealer",
+			"broker",
+			"commission"
+		],
+		"target": [
+			"actor",
+			"performer",
+			"remuneration"
+		],
+		"depth": {
+			"beam": 20,
+			"dfs": 4
+		},
+		"ekar_answer": true,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"art dealer",
+			"broker",
+			"commission"
+		],
+		"target": [
+			"attorney",
+			"practitioner",
+			"litigation fee"
+		],
+		"depth": {
+			"beam": 20,
+			"dfs": 4
+		},
+		"ekar_answer": false,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"art dealer",
+			"broker",
+			"commission"
+		],
+		"target": [
+			"teacher",
+			"scholar",
+			"hours class fees\""
+		],
+		"depth": {
+			"beam": 20,
+			"dfs": 4
+		},
+		"ekar_answer": false,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"contradiction",
+			"conflict",
+			"war"
+		],
+		"target": [
+			"contact",
+			"communication",
+			"integration"
+		],
+		"depth": {
+			"beam": 20,
+			"dfs": 4
+		},
+		"ekar_answer": true,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"contradiction",
+			"conflict",
+			"war"
+		],
+		"target": [
+			"subtle",
+			"low",
+			"small"
+		],
+		"depth": {
+			"beam": 20,
+			"dfs": 4
+		},
+		"ekar_answer": false,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"contradiction",
+			"conflict",
+			"war"
+		],
+		"target": [
+			"quarrel",
+			"dispute",
+			"brawl"
+		],
+		"depth": {
+			"beam": 20,
+			"dfs": 4
+		},
+		"ekar_answer": false,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"contradiction",
+			"conflict",
+			"war"
+		],
+		"target": [
+			"no cause",
+			"no reason",
+			"unreasonable"
+		],
+		"depth": {
+			"beam": 20,
+			"dfs": 4
+		},
+		"ekar_answer": false,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"grape wine",
+			"famous wine",
+			"alcohol"
+		],
+		"target": [
+			"bazooka",
+			"rocket",
+			"combat power"
+		],
+		"depth": {
+			"beam": 20,
+			"dfs": 4
+		},
+		"ekar_answer": false,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"grape wine",
+			"famous wine",
+			"alcohol"
+		],
+		"target": [
+			"convertible",
+			"sports car",
+			"engine"
+		],
+		"depth": {
+			"beam": 20,
+			"dfs": 4
+		},
+		"ekar_answer": true,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"grape wine",
+			"famous wine",
+			"alcohol"
+		],
+		"target": [
+			"astronaut",
+			"personnel",
+			"driver"
+		],
+		"depth": {
+			"beam": 20,
+			"dfs": 4
+		},
+		"ekar_answer": false,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"grape wine",
+			"famous wine",
+			"alcohol"
+		],
+		"target": [
+			"roses",
+			"flowers",
+			"peony"
+		],
+		"depth": {
+			"beam": 20,
+			"dfs": 4
+		},
+		"ekar_answer": false,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"artist",
+			"paints",
+			"drawing"
+		],
+		"target": [
+			"musician",
+			"piano",
+			"playing"
+		],
+		"depth": {
+			"beam": 20,
+			"dfs": 4
+		},
+		"ekar_answer": true,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"artist",
+			"paints",
+			"drawing"
+		],
+		"target": [
+			"litterateur",
+			"bookstore",
+			"reading"
+		],
+		"depth": {
+			"beam": 20,
+			"dfs": 4
+		},
+		"ekar_answer": false,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"artist",
+			"paints",
+			"drawing"
+		],
+		"target": [
+			"scientists",
+			"data",
+			"experiments"
+		],
+		"depth": {
+			"beam": 20,
+			"dfs": 4
+		},
+		"ekar_answer": false,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"artist",
+			"paints",
+			"drawing"
+		],
+		"target": [
+			"navigator",
+			"sea",
+			"sailing"
+		],
+		"depth": {
+			"beam": 20,
+			"dfs": 4
+		},
+		"ekar_answer": false,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"province",
+			"hebei",
+			"shijiazhuang"
+		],
+		"target": [
+			"fruit",
+			"peach",
+			"peach pit"
+		],
+		"depth": {
+			"beam": 20,
+			"dfs": 4
+		},
+		"ekar_answer": true,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"province",
+			"hebei",
+			"shijiazhuang"
+		],
+		"target": [
+			"asia",
+			"china",
+			"beijing"
+		],
+		"depth": {
+			"beam": 20,
+			"dfs": 4
+		},
+		"ekar_answer": false,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"province",
+			"hebei",
+			"shijiazhuang"
+		],
+		"target": [
+			"insect",
+			"bee",
+			"honey"
+		],
+		"depth": {
+			"beam": 20,
+			"dfs": 4
+		},
+		"ekar_answer": false,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"province",
+			"hebei",
+			"shijiazhuang"
+		],
+		"target": [
+			"enterprise",
+			"private enterprise",
+			"huawei"
+		],
+		"depth": {
+			"beam": 20,
+			"dfs": 4
+		},
+		"ekar_answer": false,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"word of mouth",
+			"box office",
+			"movie"
+		],
+		"target": [
+			"quality",
+			"price",
+			"goods"
+		],
+		"depth": {
+			"beam": 20,
+			"dfs": 4
+		},
+		"ekar_answer": true,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"word of mouth",
+			"box office",
+			"movie"
+		],
+		"target": [
+			"fairness",
+			"justice",
+			"lawyer"
+		],
+		"depth": {
+			"beam": 20,
+			"dfs": 4
+		},
+		"ekar_answer": false,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"word of mouth",
+			"box office",
+			"movie"
+		],
+		"target": [
+			"good review",
+			"bad review",
+			"service"
+		],
+		"depth": {
+			"beam": 20,
+			"dfs": 4
+		},
+		"ekar_answer": false,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"word of mouth",
+			"box office",
+			"movie"
+		],
+		"target": [
+			"appearance",
+			"character",
+			"temperament"
+		],
+		"depth": {
+			"beam": 20,
+			"dfs": 4
+		},
+		"ekar_answer": false,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"displacement",
+			"fuel consumption",
+			"cost"
+		],
+		"target": [
+			"heat",
+			"taste",
+			"food"
+		],
+		"depth": {
+			"beam": 20,
+			"dfs": 4
+		},
+		"ekar_answer": false,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"displacement",
+			"fuel consumption",
+			"cost"
+		],
+		"target": [
+			"distance",
+			"weight",
+			"postage"
+		],
+		"depth": {
+			"beam": 20,
+			"dfs": 4
+		},
+		"ekar_answer": true,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"displacement",
+			"fuel consumption",
+			"cost"
+		],
+		"target": [
+			"latitude",
+			"climate",
+			"ecology"
+		],
+		"depth": {
+			"beam": 20,
+			"dfs": 4
+		},
+		"ekar_answer": false,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"displacement",
+			"fuel consumption",
+			"cost"
+		],
+		"target": [
+			"nutrition",
+			"freshness",
+			"healthy"
+		],
+		"depth": {
+			"beam": 20,
+			"dfs": 4
+		},
+		"ekar_answer": false,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"conception",
+			"writing",
+			"publishing"
+		],
+		"target": [
+			"ignition",
+			"burning",
+			"extinguishing"
+		],
+		"depth": {
+			"beam": 20,
+			"dfs": 4
+		},
+		"ekar_answer": false,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"conception",
+			"writing",
+			"publishing"
+		],
+		"target": [
+			"sowing",
+			"plowing",
+			"harvesting"
+		],
+		"depth": {
+			"beam": 20,
+			"dfs": 4
+		},
+		"ekar_answer": false,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"conception",
+			"writing",
+			"publishing"
+		],
+		"target": [
+			"reform",
+			"experiment",
+			"innovate"
+		],
+		"depth": {
+			"beam": 20,
+			"dfs": 4
+		},
+		"ekar_answer": false,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"conception",
+			"writing",
+			"publishing"
+		],
+		"target": [
+			"design",
+			"production",
+			"sales"
+		],
+		"depth": {
+			"beam": 20,
+			"dfs": 4
+		},
+		"ekar_answer": true,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"child",
+			"girl",
+			"minor"
+		],
+		"target": [
+			"house",
+			"bridge",
+			"architecture"
+		],
+		"depth": {
+			"beam": 20,
+			"dfs": 4
+		},
+		"ekar_answer": false,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"child",
+			"girl",
+			"minor"
+		],
+		"target": [
+			"little dog",
+			"puppy",
+			"dog"
+		],
+		"depth": {
+			"beam": 20,
+			"dfs": 4
+		},
+		"ekar_answer": true,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"child",
+			"girl",
+			"minor"
+		],
+		"target": [
+			"seasoning",
+			"soy sauce",
+			"condiment"
+		],
+		"depth": {
+			"beam": 20,
+			"dfs": 4
+		},
+		"ekar_answer": false,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"child",
+			"girl",
+			"minor"
+		],
+		"target": [
+			"vegetable oil",
+			"coconut oil",
+			"rapeseed oil"
+		],
+		"depth": {
+			"beam": 20,
+			"dfs": 4
+		},
+		"ekar_answer": false,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"gas stove",
+			"housewife",
+			"cooking"
+		],
+		"target": [
+			"workshop",
+			"engineer",
+			"products"
+		],
+		"depth": {
+			"beam": 20,
+			"dfs": 4
+		},
+		"ekar_answer": false,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"gas stove",
+			"housewife",
+			"cooking"
+		],
+		"target": [
+			"alchemy",
+			"taoist",
+			"cultivation"
+		],
+		"depth": {
+			"beam": 20,
+			"dfs": 4
+		},
+		"ekar_answer": false,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"gas stove",
+			"housewife",
+			"cooking"
+		],
+		"target": [
+			"scissors",
+			"barber",
+			"hairdressing"
+		],
+		"depth": {
+			"beam": 20,
+			"dfs": 4
+		},
+		"ekar_answer": true,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"gas stove",
+			"housewife",
+			"cooking"
+		],
+		"target": [
+			"road",
+			"cleaner",
+			"cleaning"
+		],
+		"depth": {
+			"beam": 20,
+			"dfs": 4
+		},
+		"ekar_answer": false,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"civil law",
+			"law",
+			"judge"
+		],
+		"target": [
+			"banyan tree",
+			"plant",
+			"gardener"
+		],
+		"depth": {
+			"beam": 20,
+			"dfs": 4
+		},
+		"ekar_answer": true,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"civil law",
+			"law",
+			"judge"
+		],
+		"target": [
+			"cow",
+			"dairy cow",
+			"herder"
+		],
+		"depth": {
+			"beam": 20,
+			"dfs": 4
+		},
+		"ekar_answer": false,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"civil law",
+			"law",
+			"judge"
+		],
+		"target": [
+			"sun",
+			"moon",
+			"milky way"
+		],
+		"depth": {
+			"beam": 20,
+			"dfs": 4
+		},
+		"ekar_answer": false,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"civil law",
+			"law",
+			"judge"
+		],
+		"target": [
+			"student",
+			"middle school student",
+			"teacher"
+		],
+		"depth": {
+			"beam": 20,
+			"dfs": 4
+		},
+		"ekar_answer": false,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"siberian tiger",
+			"panda",
+			"mammal"
+		],
+		"target": [
+			"painting",
+			"chinese painting",
+			"talent"
+		],
+		"depth": {
+			"beam": 20,
+			"dfs": 4
+		},
+		"ekar_answer": false,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"siberian tiger",
+			"panda",
+			"mammal"
+		],
+		"target": [
+			"pitch",
+			"timbre",
+			"music"
+		],
+		"depth": {
+			"beam": 20,
+			"dfs": 4
+		},
+		"ekar_answer": false,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"siberian tiger",
+			"panda",
+			"mammal"
+		],
+		"target": [
+			"sales",
+			"salesperson",
+			"sales channel"
+		],
+		"depth": {
+			"beam": 20,
+			"dfs": 4
+		},
+		"ekar_answer": false,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"siberian tiger",
+			"panda",
+			"mammal"
+		],
+		"target": [
+			"lao",
+			"algerian",
+			"language"
+		],
+		"depth": {
+			"beam": 20,
+			"dfs": 4
+		},
+		"ekar_answer": true,
+		"clean_nouns": null
+	}
+]

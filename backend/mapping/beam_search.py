@@ -102,7 +102,7 @@ def beam_search_wrapper(
     cache = {"scores": {}, "mappings": set(), "relations": set()}
     best_results = mapping.get_best_pair_mapping(unmutables, available_pairs, cache)
 
-    if args.get("use_base_mapping", False):
+    if args["use_base_mapping"]:
         actual_base = [v.split('-->')[0].strip() for v in args["use_base_mapping"]]
         actual_target = [v.split('-->')[1].strip() for v in args["use_base_mapping"]]
         solutions = [

@@ -1,0 +1,722 @@
+[
+	{
+		"base": [
+			"country",
+			"government",
+			"administration"
+		],
+		"target": [
+			"company",
+			"managment department",
+			"manager"
+		],
+		"depth": {
+			"beam": 20,
+			"dfs": 4
+		},
+		"ekar_answer": false,
+		"clean_nouns": false
+	},
+	{
+		"base": [
+			"country",
+			"government",
+			"administration"
+		],
+		"target": [
+			"field army",
+			"operation department",
+			"give advice"
+		],
+		"depth": {
+			"beam": 20,
+			"dfs": 4
+		},
+		"ekar_answer": true,
+		"clean_nouns": false
+	},
+	{
+		"base": [
+			"country",
+			"government",
+			"administration"
+		],
+		"target": [
+			"board of directors",
+			"managment department",
+			"staff"
+		],
+		"depth": {
+			"beam": 20,
+			"dfs": 4
+		},
+		"ekar_answer": false,
+		"clean_nouns": false
+	},
+	{
+		"base": [
+			"country",
+			"government",
+			"administration"
+		],
+		"target": [
+			"commander-in-chief",
+			"officer",
+			"order"
+		],
+		"depth": {
+			"beam": 20,
+			"dfs": 4
+		},
+		"ekar_answer": false,
+		"clean_nouns": false
+	},
+	{
+		"base": [
+			"skin",
+			"organ",
+			"regulate body temperature"
+		],
+		"target": [
+			"tax invoices",
+			"vouchers",
+			"distribution of income"
+		],
+		"depth": {
+			"beam": 20,
+			"dfs": 4
+		},
+		"ekar_answer": false,
+		"clean_nouns": false
+	},
+	{
+		"base": [
+			"skin",
+			"organ",
+			"regulate body temperature"
+		],
+		"target": [
+			"hotel",
+			"venue",
+			"receiving guests"
+		],
+		"depth": {
+			"beam": 20,
+			"dfs": 4
+		},
+		"ekar_answer": true,
+		"clean_nouns": false
+	},
+	{
+		"base": [
+			"skin",
+			"organ",
+			"regulate body temperature"
+		],
+		"target": [
+			"engine",
+			"car",
+			"providing power"
+		],
+		"depth": {
+			"beam": 20,
+			"dfs": 4
+		},
+		"ekar_answer": false,
+		"clean_nouns": false
+	},
+	{
+		"base": [
+			"skin",
+			"organ",
+			"regulate body temperature"
+		],
+		"target": [
+			"surgery",
+			"hospital",
+			"treating disease"
+		],
+		"depth": {
+			"beam": 20,
+			"dfs": 4
+		},
+		"ekar_answer": false,
+		"clean_nouns": false
+	},
+	{
+		"base": [
+			"comics",
+			"detective comics",
+			"comic strips"
+		],
+		"target": [
+			"visible light",
+			"red light",
+			"purple light"
+		],
+		"depth": {
+			"beam": 20,
+			"dfs": 4
+		},
+		"ekar_answer": false,
+		"clean_nouns": false
+	},
+	{
+		"base": [
+			"comics",
+			"detective comics",
+			"comic strips"
+		],
+		"target": [
+			"cultural relics",
+			"collections of cultural relics",
+			"prehistoric artifacts"
+		],
+		"depth": {
+			"beam": 20,
+			"dfs": 4
+		},
+		"ekar_answer": true,
+		"clean_nouns": false
+	},
+	{
+		"base": [
+			"comics",
+			"detective comics",
+			"comic strips"
+		],
+		"target": [
+			"atmosphere",
+			"troposphere",
+			"mesosphere"
+		],
+		"depth": {
+			"beam": 20,
+			"dfs": 4
+		},
+		"ekar_answer": false,
+		"clean_nouns": false
+	},
+	{
+		"base": [
+			"comics",
+			"detective comics",
+			"comic strips"
+		],
+		"target": [
+			"ion",
+			"cation",
+			"anion"
+		],
+		"depth": {
+			"beam": 20,
+			"dfs": 4
+		},
+		"ekar_answer": false,
+		"clean_nouns": false
+	},
+	{
+		"base": [
+			"shackle",
+			"get rid of",
+			"freedom"
+		],
+		"target": [
+			"tension",
+			"relieve",
+			"relax"
+		],
+		"depth": {
+			"beam": 20,
+			"dfs": 4
+		},
+		"ekar_answer": true,
+		"clean_nouns": false
+	},
+	{
+		"base": [
+			"shackle",
+			"get rid of",
+			"freedom"
+		],
+		"target": [
+			"rainy day",
+			"change",
+			"rainbow"
+		],
+		"depth": {
+			"beam": 20,
+			"dfs": 4
+		},
+		"ekar_answer": false,
+		"clean_nouns": false
+	},
+	{
+		"base": [
+			"shackle",
+			"get rid of",
+			"freedom"
+		],
+		"target": [
+			"gravity",
+			"get rid of",
+			"overweight"
+		],
+		"depth": {
+			"beam": 20,
+			"dfs": 4
+		},
+		"ekar_answer": false,
+		"clean_nouns": false
+	},
+	{
+		"base": [
+			"shackle",
+			"get rid of",
+			"freedom"
+		],
+		"target": [
+			"goods",
+			"sell",
+			"circulation"
+		],
+		"depth": {
+			"beam": 20,
+			"dfs": 4
+		},
+		"ekar_answer": false,
+		"clean_nouns": false
+	},
+	{
+		"base": [
+			"preparing lesson",
+			"teaching",
+			"reviewing"
+		],
+		"target": [
+			"registration",
+			"diagnosis",
+			"treatment"
+		],
+		"depth": {
+			"beam": 20,
+			"dfs": 4
+		},
+		"ekar_answer": false,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"preparing lesson",
+			"teaching",
+			"reviewing"
+		],
+		"target": [
+			"weigh",
+			"select",
+			"pay"
+		],
+		"depth": {
+			"beam": 20,
+			"dfs": 4
+		},
+		"ekar_answer": false,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"preparing lesson",
+			"teaching",
+			"reviewing"
+		],
+		"target": [
+			"set questions",
+			"answer questions",
+			"collect test papers"
+		],
+		"depth": {
+			"beam": 20,
+			"dfs": 4
+		},
+		"ekar_answer": false,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"preparing lesson",
+			"teaching",
+			"reviewing"
+		],
+		"target": [
+			"case filing",
+			"investigating",
+			"adjudicating"
+		],
+		"depth": {
+			"beam": 20,
+			"dfs": 4
+		},
+		"ekar_answer": true,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"talent",
+			"excellent",
+			"promote"
+		],
+		"target": [
+			"draught",
+			"agriculture",
+			"irrigate"
+		],
+		"depth": {
+			"beam": 20,
+			"dfs": 4
+		},
+		"ekar_answer": false,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"talent",
+			"excellent",
+			"promote"
+		],
+		"target": [
+			"environment",
+			"unbalanced",
+			"plan"
+		],
+		"depth": {
+			"beam": 20,
+			"dfs": 4
+		},
+		"ekar_answer": false,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"talent",
+			"excellent",
+			"promote"
+		],
+		"target": [
+			"society",
+			"harmonic",
+			"build"
+		],
+		"depth": {
+			"beam": 20,
+			"dfs": 4
+		},
+		"ekar_answer": true,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"talent",
+			"excellent",
+			"promote"
+		],
+		"target": [
+			"stubbornness",
+			"criticism",
+			"education"
+		],
+		"depth": {
+			"beam": 20,
+			"dfs": 4
+		},
+		"ekar_answer": false,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"teapot",
+			"purple clay",
+			"carve"
+		],
+		"target": [
+			"wire",
+			"metal",
+			"production"
+		],
+		"depth": {
+			"beam": 20,
+			"dfs": 4
+		},
+		"ekar_answer": false,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"teapot",
+			"purple clay",
+			"carve"
+		],
+		"target": [
+			"road",
+			"asphalt",
+			"pave"
+		],
+		"depth": {
+			"beam": 20,
+			"dfs": 4
+		},
+		"ekar_answer": true,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"teapot",
+			"purple clay",
+			"carve"
+		],
+		"target": [
+			"door",
+			"wood",
+			"oil color"
+		],
+		"depth": {
+			"beam": 20,
+			"dfs": 4
+		},
+		"ekar_answer": false,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"teapot",
+			"purple clay",
+			"carve"
+		],
+		"target": [
+			"jacket",
+			"cloth",
+			"made"
+		],
+		"depth": {
+			"beam": 20,
+			"dfs": 4
+		},
+		"ekar_answer": false,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"size",
+			"weight",
+			"object"
+		],
+		"target": [
+			"fast and slow",
+			"slow and rush",
+			"time"
+		],
+		"depth": {
+			"beam": 20,
+			"dfs": 4
+		},
+		"ekar_answer": false,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"size",
+			"weight",
+			"object"
+		],
+		"target": [
+			"true and false",
+			"more and less",
+			"data"
+		],
+		"depth": {
+			"beam": 20,
+			"dfs": 4
+		},
+		"ekar_answer": true,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"size",
+			"weight",
+			"object"
+		],
+		"target": [
+			"ancient and modern",
+			"spring and autumn",
+			"history"
+		],
+		"depth": {
+			"beam": 20,
+			"dfs": 4
+		},
+		"ekar_answer": false,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"size",
+			"weight",
+			"object"
+		],
+		"target": [
+			"right and wrong",
+			"true or false",
+			"answer"
+		],
+		"depth": {
+			"beam": 20,
+			"dfs": 4
+		},
+		"ekar_answer": false,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"car",
+			"gasoline",
+			"run"
+		],
+		"target": [
+			"light",
+			"current",
+			"glow"
+		],
+		"depth": {
+			"beam": 20,
+			"dfs": 4
+		},
+		"ekar_answer": true,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"car",
+			"gasoline",
+			"run"
+		],
+		"target": [
+			"aircraft",
+			"runway",
+			"take off"
+		],
+		"depth": {
+			"beam": 20,
+			"dfs": 4
+		},
+		"ekar_answer": false,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"car",
+			"gasoline",
+			"run"
+		],
+		"target": [
+			"train",
+			"rail",
+			"speed"
+		],
+		"depth": {
+			"beam": 20,
+			"dfs": 4
+		},
+		"ekar_answer": false,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"car",
+			"gasoline",
+			"run"
+		],
+		"target": [
+			"tv",
+			"wire",
+			"display"
+		],
+		"depth": {
+			"beam": 20,
+			"dfs": 4
+		},
+		"ekar_answer": false,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"housing",
+			"real estate",
+			"mortgage"
+		],
+		"target": [
+			"stock",
+			"property",
+			"appreciation"
+		],
+		"depth": {
+			"beam": 20,
+			"dfs": 4
+		},
+		"ekar_answer": false,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"housing",
+			"real estate",
+			"mortgage"
+		],
+		"target": [
+			"apple",
+			"fruit",
+			"edible"
+		],
+		"depth": {
+			"beam": 20,
+			"dfs": 4
+		},
+		"ekar_answer": true,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"housing",
+			"real estate",
+			"mortgage"
+		],
+		"target": [
+			"ship",
+			"ocean",
+			"running"
+		],
+		"depth": {
+			"beam": 20,
+			"dfs": 4
+		},
+		"ekar_answer": false,
+		"clean_nouns": null
+	},
+	{
+		"base": [
+			"housing",
+			"real estate",
+			"mortgage"
+		],
+		"target": [
+			"traditional chinese medicine",
+			"panax notoginseng",
+			"antithrombotic"
+		],
+		"depth": {
+			"beam": 20,
+			"dfs": 4
+		},
+		"ekar_answer": false,
+		"clean_nouns": null
+	}
+]

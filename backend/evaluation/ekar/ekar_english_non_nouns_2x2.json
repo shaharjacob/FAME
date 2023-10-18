@@ -1,0 +1,514 @@
+[
+	{
+		"base": [
+			"look forward to",
+			"expect"
+		],
+		"target": [
+			"wisdom",
+			"language"
+		],
+		"depth": {
+			"beam": 20,
+			"dfs": 4
+		},
+		"ekar_answer": false,
+		"clean_nouns": false
+	},
+	{
+		"base": [
+			"look forward to",
+			"expect"
+		],
+		"target": [
+			"be overfastidious in wording",
+			"be excessively particular about wordings"
+		],
+		"depth": {
+			"beam": 20,
+			"dfs": 4
+		},
+		"ekar_answer": true,
+		"clean_nouns": false
+	},
+	{
+		"base": [
+			"look forward to",
+			"expect"
+		],
+		"target": [
+			"intelligence quotient",
+			"emotional intelligence"
+		],
+		"depth": {
+			"beam": 20,
+			"dfs": 4
+		},
+		"ekar_answer": false,
+		"clean_nouns": false
+	},
+	{
+		"base": [
+			"look forward to",
+			"expect"
+		],
+		"target": [
+			"ascent",
+			"sprint"
+		],
+		"depth": {
+			"beam": 20,
+			"dfs": 4
+		},
+		"ekar_answer": false,
+		"clean_nouns": false
+	},
+	{
+		"base": [
+			"australia",
+			"riding on the back of a sheep"
+		],
+		"target": [
+			"saudi arabia",
+			"rich in oil"
+		],
+		"depth": {
+			"beam": 20,
+			"dfs": 4
+		},
+		"ekar_answer": false,
+		"clean_nouns": false
+	},
+	{
+		"base": [
+			"australia",
+			"riding on the back of a sheep"
+		],
+		"target": [
+			"china",
+			"the largest population"
+		],
+		"depth": {
+			"beam": 20,
+			"dfs": 4
+		},
+		"ekar_answer": false,
+		"clean_nouns": false
+	},
+	{
+		"base": [
+			"australia",
+			"riding on the back of a sheep"
+		],
+		"target": [
+			"united states",
+			"on wheels"
+		],
+		"depth": {
+			"beam": 20,
+			"dfs": 4
+		},
+		"ekar_answer": true,
+		"clean_nouns": false
+	},
+	{
+		"base": [
+			"australia",
+			"riding on the back of a sheep"
+		],
+		"target": [
+			"russia",
+			"the gas station of the world"
+		],
+		"depth": {
+			"beam": 20,
+			"dfs": 4
+		},
+		"ekar_answer": false,
+		"clean_nouns": false
+	},
+	{
+		"base": [
+			"three-dimensional war",
+			"digital war"
+		],
+		"target": [
+			"democratic management",
+			"autocratic management"
+		],
+		"depth": {
+			"beam": 20,
+			"dfs": 4
+		},
+		"ekar_answer": false,
+		"clean_nouns": false
+	},
+	{
+		"base": [
+			"three-dimensional war",
+			"digital war"
+		],
+		"target": [
+			"windbreaks",
+			"ornamental trees"
+		],
+		"depth": {
+			"beam": 20,
+			"dfs": 4
+		},
+		"ekar_answer": false,
+		"clean_nouns": false
+	},
+	{
+		"base": [
+			"three-dimensional war",
+			"digital war"
+		],
+		"target": [
+			"aerobic exercise",
+			"medical slimming"
+		],
+		"depth": {
+			"beam": 20,
+			"dfs": 4
+		},
+		"ekar_answer": false,
+		"clean_nouns": false
+	},
+	{
+		"base": [
+			"three-dimensional war",
+			"digital war"
+		],
+		"target": [
+			"performance rewards",
+			"material rewards"
+		],
+		"depth": {
+			"beam": 20,
+			"dfs": 4
+		},
+		"ekar_answer": true,
+		"clean_nouns": false
+	},
+	{
+		"base": [
+			"admission",
+			"graduation"
+		],
+		"target": [
+			"visit",
+			"take medicine"
+		],
+		"depth": {
+			"beam": 20,
+			"dfs": 4
+		},
+		"ekar_answer": false,
+		"clean_nouns": false
+	},
+	{
+		"base": [
+			"admission",
+			"graduation"
+		],
+		"target": [
+			"promotion",
+			"job-hopping"
+		],
+		"depth": {
+			"beam": 20,
+			"dfs": 4
+		},
+		"ekar_answer": false,
+		"clean_nouns": false
+	},
+	{
+		"base": [
+			"admission",
+			"graduation"
+		],
+		"target": [
+			"resignation",
+			"entrepreneurship"
+		],
+		"depth": {
+			"beam": 20,
+			"dfs": 4
+		},
+		"ekar_answer": false,
+		"clean_nouns": false
+	},
+	{
+		"base": [
+			"admission",
+			"graduation"
+		],
+		"target": [
+			"become a monk",
+			"resume secular life"
+		],
+		"depth": {
+			"beam": 20,
+			"dfs": 4
+		},
+		"ekar_answer": true,
+		"clean_nouns": false
+	},
+	{
+		"base": [
+			"plastic film mulch",
+			"increased temperature and water retention"
+		],
+		"target": [
+			"field management",
+			"frost and pest"
+		],
+		"depth": {
+			"beam": 20,
+			"dfs": 4
+		},
+		"ekar_answer": false,
+		"clean_nouns": false
+	},
+	{
+		"base": [
+			"plastic film mulch",
+			"increased temperature and water retention"
+		],
+		"target": [
+			"clinical trials",
+			"adverse reactions"
+		],
+		"depth": {
+			"beam": 20,
+			"dfs": 4
+		},
+		"ekar_answer": false,
+		"clean_nouns": false
+	},
+	{
+		"base": [
+			"plastic film mulch",
+			"increased temperature and water retention"
+		],
+		"target": [
+			"weather forecast",
+			"satellite cloud image"
+		],
+		"depth": {
+			"beam": 20,
+			"dfs": 4
+		},
+		"ekar_answer": false,
+		"clean_nouns": false
+	},
+	{
+		"base": [
+			"plastic film mulch",
+			"increased temperature and water retention"
+		],
+		"target": [
+			"rectify the market",
+			"purify the atmosphere"
+		],
+		"depth": {
+			"beam": 20,
+			"dfs": 4
+		},
+		"ekar_answer": true,
+		"clean_nouns": false
+	},
+	{
+		"base": [
+			"selection",
+			"choice"
+		],
+		"target": [
+			"hobbies",
+			"addiction"
+		],
+		"depth": {
+			"beam": 20,
+			"dfs": 4
+		},
+		"ekar_answer": false,
+		"clean_nouns": false
+	},
+	{
+		"base": [
+			"selection",
+			"choice"
+		],
+		"target": [
+			"decision-making",
+			"policy-making"
+		],
+		"depth": {
+			"beam": 20,
+			"dfs": 4
+		},
+		"ekar_answer": true,
+		"clean_nouns": false
+	},
+	{
+		"base": [
+			"selection",
+			"choice"
+		],
+		"target": [
+			"on time",
+			"in time"
+		],
+		"depth": {
+			"beam": 20,
+			"dfs": 4
+		},
+		"ekar_answer": false,
+		"clean_nouns": false
+	},
+	{
+		"base": [
+			"selection",
+			"choice"
+		],
+		"target": [
+			"participate",
+			"join"
+		],
+		"depth": {
+			"beam": 20,
+			"dfs": 4
+		},
+		"ekar_answer": false,
+		"clean_nouns": false
+	},
+	{
+		"base": [
+			"traffic lights",
+			"switch cabinet"
+		],
+		"target": [
+			"jack",
+			"100 feet"
+		],
+		"depth": {
+			"beam": 20,
+			"dfs": 4
+		},
+		"ekar_answer": false,
+		"clean_nouns": false
+	},
+	{
+		"base": [
+			"traffic lights",
+			"switch cabinet"
+		],
+		"target": [
+			"hand-cranked bed",
+			"foot-pedalled bicycle"
+		],
+		"depth": {
+			"beam": 20,
+			"dfs": 4
+		},
+		"ekar_answer": false,
+		"clean_nouns": false
+	},
+	{
+		"base": [
+			"traffic lights",
+			"switch cabinet"
+		],
+		"target": [
+			"heating furnace",
+			"cooling tank"
+		],
+		"depth": {
+			"beam": 20,
+			"dfs": 4
+		},
+		"ekar_answer": false,
+		"clean_nouns": false
+	},
+	{
+		"base": [
+			"traffic lights",
+			"switch cabinet"
+		],
+		"target": [
+			"loading and unloading truck",
+			"recorder"
+		],
+		"depth": {
+			"beam": 20,
+			"dfs": 4
+		},
+		"ekar_answer": true,
+		"clean_nouns": false
+	},
+	{
+		"base": [
+			"dilemma",
+			"facing"
+		],
+		"target": [
+			"problem",
+			"solve"
+		],
+		"depth": {
+			"beam": 20,
+			"dfs": 4
+		},
+		"ekar_answer": true,
+		"clean_nouns": false
+	},
+	{
+		"base": [
+			"dilemma",
+			"facing"
+		],
+		"target": [
+			"life",
+			"believe"
+		],
+		"depth": {
+			"beam": 20,
+			"dfs": 4
+		},
+		"ekar_answer": false,
+		"clean_nouns": false
+	},
+	{
+		"base": [
+			"dilemma",
+			"facing"
+		],
+		"target": [
+			"climbing",
+			"mountain peak"
+		],
+		"depth": {
+			"beam": 20,
+			"dfs": 4
+		},
+		"ekar_answer": false,
+		"clean_nouns": false
+	},
+	{
+		"base": [
+			"dilemma",
+			"facing"
+		],
+		"target": [
+			"society",
+			"harmony"
+		],
+		"depth": {
+			"beam": 20,
+			"dfs": 4
+		},
+		"ekar_answer": false,
+		"clean_nouns": false
+	}
+]
