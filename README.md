@@ -1,10 +1,10 @@
 <p align="center">
   <img src="https://github.com/shaharjacob/FAME/blob/main/images/hyadata.png?raw=true" width="300px" alt="hyadata"/>
   
-  <div align="center">
+  <!-- <div align="center">
     Structure mapping automation based on sentence embadding<br/>
     Amazon Web Services: <a href="http://3.16.56.220:3000/">http://3.16.56.220:3000/</a>  
-  </div>
+  </div> -->
 </p>
 
 <p align="center">
